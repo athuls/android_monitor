@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers
+END
+Adder.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/Adder.java
+END
+AdderPrinter.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/AdderPrinter.java
+END
+SequentialNumbers.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/SequentialNumbers.java
+END
+Numbers.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/Numbers.java
+END
+Number.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/Number.salsa
+END
+Number.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/Number.java
+END
+Numbers.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/Numbers.salsa
+END
+SequentialNumbers.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/SequentialNumbers.salsa
+END
+AdderPrinter.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/AdderPrinter.salsa
+END
+Adder.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/Adder.salsa
+END
+Incrementer.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/Incrementer.java
+END
+Printer.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/Printer.java
+END
+UniqueNumbers.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/563/software/salsa/examples/numbers/UniqueNumbers.java
+END
+UniqueNumbers.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/UniqueNumbers.salsa
+END
+Printer.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/Printer.salsa
+END
+Incrementer.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/48/software/salsa/examples/numbers/Incrementer.salsa
+END

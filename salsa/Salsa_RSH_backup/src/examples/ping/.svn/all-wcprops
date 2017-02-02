@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/wcl/!svn/ver/48/software/salsa/examples/ping
+END
+Ping.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/ping/Ping.salsa
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/ping/readme.txt
+END
+EchoAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/563/software/salsa/examples/ping/EchoAgent.java
+END
+EchoAgent.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/examples/ping/EchoAgent.salsa
+END
+Ping.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/563/software/salsa/examples/ping/Ping.java
+END

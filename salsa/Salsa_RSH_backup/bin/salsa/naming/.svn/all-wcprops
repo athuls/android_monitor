@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming
+END
+UAL.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/UAL.java
+END
+NamingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/NamingService.java
+END
+URI.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/URI.java
+END
+MalformedUALException.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/MalformedUALException.java
+END
+MalformedUANException.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/MalformedUANException.java
+END
+HOST.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/HOST.java
+END
+UAN.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/wcl/!svn/ver/48/software/salsa/salsa/naming/UAN.java
+END

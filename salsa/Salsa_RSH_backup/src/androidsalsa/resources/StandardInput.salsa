@@ -1,0 +1,39 @@
+module androidsalsa.resources;
+
+import salsa.resources.InputService;
+import androidsalsa.resources.AndroidProxy;
+import java.util.Vector;
+
+public behavior StandardInput implements InputService{
+    boolean batteryStatusUpdateRunning = false;
+    Vector battery_update_receivers = new Vector();
+
+    public StandardInput(){ }
+    public String readLine() { return null; }
+    public int read() { return -2; }
+    public long skip(long n) { return -1; }
+
+/*
+    public int read3() { return -3; }
+
+    //to be called by Actors to register:
+    //those actors must have a battery_status_update() method to be called when updates received.
+    public void registerBatteryStatus(String n) { 
+       if (!batteryStatusUpdateRunning){
+          AndroidProxy.startBatteryStatusBroadcast(this);
+          batteryStatusUpdateRunning = true;
+       }
+
+       if (!battery_update_receivers.contains(n))
+          battery_update_receivers.add(n);
+    }
+
+    //called by Android Proxy to inform registered:
+    public void broadcastBatteryStatus(String status_update){
+       for(int i=0; i<battery_update_receivers.size(); i++){
+          UniversalActor ref=(UniversalActor)UniversalActor.getReferenceByName((String)battery_update_receivers.get(i));       
+          ref<-update(status_update); 
+       }
+    }
+ */   
+}

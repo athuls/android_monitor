@@ -1,0 +1,12 @@
+<project name="Salsa1.1.5" default="jar" basedir=".">
+	<property name="src.dir" value="src"/>
+	<property name="classes.dir" value="bin"/>
+	<property name="jar.name" value="salsa1.1.5.jar"/>
+	<target name="jar" depends="compile">
+		<jar jarfile="${jar.name}" basedir="${classes.dir}"></jar>
+	</target>
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+	</target>
+</project>

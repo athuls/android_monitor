@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/wcl/!svn/ver/283/software/salsa/examples/Heat
+END
+Heat.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/563/software/salsa/examples/Heat/Heat.java
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/Heat/readme.txt
+END
+DistributedHeat.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/examples/Heat/DistributedHeat.salsa
+END
+HeatWorker.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/563/software/salsa/examples/Heat/HeatWorker.java
+END
+cluster.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/wcl/!svn/ver/48/software/salsa/examples/Heat/cluster.txt
+END
+HeatWorker.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/563/software/salsa/examples/Heat/HeatWorker.salsa
+END
+DistributedHeat.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/563/software/salsa/examples/Heat/DistributedHeat.java
+END
+heat-salsa.map
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/48/software/salsa/examples/Heat/heat-salsa.map
+END
+Heat.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/Heat/Heat.salsa
+END

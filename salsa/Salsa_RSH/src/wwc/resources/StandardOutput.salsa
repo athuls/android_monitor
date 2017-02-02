@@ -1,0 +1,95 @@
+module wwc.resources;
+
+/*
+ *    Modified by REZA SHIFTEHFAR
+ */
+
+import salsa.resources.OutputService;
+import java.util.Vector;
+
+public behavior StandardOutput implements OutputService{
+    boolean batteryStatusUpdateRunning = false;
+    boolean energyProfilerRunning = false;        
+    Vector receivers_battery = new Vector();
+    Vector receivers_energy = new Vector();
+
+	public StandardOutput() {
+	}
+
+	public void print(Object p)		{ System.out.print(p); }
+	public void print(boolean p)		{ System.out.print(p); }	
+	public void print(char p)		{ System.out.print(p); }
+	public void print(byte p)		{ System.out.print(p); }
+	public void print(short p)		{ System.out.print(p); }
+	public void print(int p)		{ System.out.print(p); }
+	public void print(long p)		{ System.out.print(p); }
+	public void print(float p)		{ System.out.print(p); }
+	public void print(double p)		{ System.out.print(p); }
+
+	public void println(Object p)		{ System.out.println(p); }
+	public void println(boolean p)		{ System.out.println(p); }
+	public void println(char p)		{ System.out.println(p); }
+	public void println(byte p)		{ System.out.println(p); }
+	public void println(short p)		{ System.out.println(p); }
+	public void println(int p)		{ System.out.println(p); }
+	public void println(long p)		{ System.out.println(p); }
+	public void println(float p)		{ System.out.println(p); }
+	public void println(double p)		{ System.out.println(p); }
+	public void println()			{ System.out.println(); }
+
+
+    //to be called by Actors to register with BatteryStatusUpdater:
+    //those actors must have a battery_status_update() method to be called when updates received.
+    public void registerBatteryStatusReceiver(UniversalActor r) { 
+       if (!batteryStatusUpdateRunning){
+//          AndroidProxy.startBatteryStatusBroadcast(this);
+          batteryStatusUpdateRunning = true;
+       }
+
+       if( !receivers_battery.contains(r) )
+          receivers_battery.add(r);
+
+    }
+
+    //called by Android Proxy to inform registered about battery update:
+    public void broadcastBatteryStatus(boolean isCharging, boolean usbCharge, boolean acCharge,
+                                       int batteryLevel, int voltage, int temp ) {
+       for(int i=0; i<receivers_battery.size(); i++){          
+          ( (UniversalActor) receivers_battery.get(i) )<-battery_status_update(isCharging, usbCharge, acCharge, batteryLevel, voltage, temp ):priority;
+       }
+    }
+
+
+
+    //to be called by Actors to register with EnergyProfiler:
+    //those actors must have a energy_status_update() method to be called when updates received.
+    public void registerEnergyProfilerReceiver(UniversalActor r) { 
+       if (!energyProfilerRunning){
+//          AndroidProxy.startEnergyProfilerUpdateBroadcast(this);
+          energyProfilerRunning = true;
+       }
+
+       if( !receivers_energy.contains(r) )
+          receivers_energy.add(r);
+
+    }
+
+    //called by Android Proxy to inform registered about Energy updates:
+    public void broadcastEnergyProfilerUpdate(String reporting_title, String reporting_time_interval,
+                                              double battery_temp, double battery_voltage, double battery_charge,
+                                              double battery_perc, double instant_power, double avg_power,
+                                              double current, double total_energy,
+                                              String[] apps_name, double[] apps_energy_perc,
+                                              long[] apps_duration, double[] apps_energy_value,
+                                              String[] apps_comm_name, double[] apps_comm_energy_perc,
+                                              long[] apps_comm_duration, double[] apps_comm_energy_value ) { 
+
+       for(int i=0; i< receivers_energy.size(); i++){          
+          ( (UniversalActor) receivers_energy.get(i) )<-energy_status_update( 
+                                                      reporting_title, reporting_time_interval, battery_temp, battery_voltage,  battery_charge, 
+                                                      battery_perc, instant_power, avg_power, current, total_energy, 
+                                                      apps_name, apps_energy_perc, apps_duration, apps_energy_value,
+                                                      apps_comm_name, apps_comm_energy_perc, apps_comm_duration, apps_comm_energy_value):priority;
+       }
+    }   	
+}

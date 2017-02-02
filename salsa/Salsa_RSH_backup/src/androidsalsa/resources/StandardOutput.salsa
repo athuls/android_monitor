@@ -1,0 +1,131 @@
+module androidsalsa.resources;
+
+import salsa.resources.OutputService;
+import androidsalsa.resources.AndroidProxy;
+import java.util.Vector;
+import java.util.ArrayList;
+
+public behavior StandardOutput implements OutputService{
+    boolean energyProfilerRunning = false;        
+
+    private String   reporting_title         = "Empty";
+    private double   battery_temp            = -1.0;
+    private double   battery_voltage         = -1.0;
+    private double   battery_charge          = -1.0;    
+    private double   battery_perc            = -1.0;  
+    private double   instant_power           = -1.0;
+    private double   avg_power               = -1.0;
+    private double   current_amp             = -1.0; 
+    private double   total_energy            = -1.0;
+    private String[] apps_name               = null;
+    private double[] apps_energy_perc        = null;
+    private long[]   apps_duration           = null;
+    private double[] apps_energy_value       = null;
+    private String[] apps_comm_name          = null;
+    private double[] apps_comm_energy_perc   = null;
+    private long[]   apps_comm_duration      = null;
+    private double[] apps_comm_energy_value  = null;
+
+
+	public StandardOutput() {
+	}
+
+	public void print(Object p)         { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(boolean p)        { AndroidProxy.postText( String.valueOf(p) ); }	
+	public void print(char p)           { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(byte p)           { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(short p)          { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(int p)            { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(long p)           { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(float p)          { AndroidProxy.postText( String.valueOf(p) ); }
+	public void print(double p)         { AndroidProxy.postText( String.valueOf(p) ); }
+
+	public void println(Object p)		{ AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(boolean p)		{ AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(char p)         { AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(byte p)         { AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(short p)		{ AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(int p)          { AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(long p)         { AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(float p)		{ AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println(double p)		{ AndroidProxy.postText( String.valueOf(p) + "\n" ); }
+	public void println()               { AndroidProxy.postText( "\n" ); }
+
+    public void startEnergyProfiler() {     
+       if (!energyProfilerRunning){
+         AndroidProxy.startEnergyProfilerUpdateBroadcast(this);
+         energyProfilerRunning = true;
+       }       
+
+    }
+
+    //called by Android Proxy to inform registered about Energy updates:
+    public void broadcastEnergyProfilerUpdate(String reporting_title, String reporting_time_interval,
+                                              double battery_temp, double battery_voltage, double battery_charge,
+                                              double battery_perc, double instant_power, double avg_power,
+                                              double current_amp, double total_energy,
+                                              String[] apps_name, double[] apps_energy_perc,
+                                              long[] apps_duration, double[] apps_energy_value,
+                                              String[] apps_comm_name, double[] apps_comm_energy_perc,
+                                              long[] apps_comm_duration, double[] apps_comm_energy_value ) { 
+        this.reporting_title = reporting_title;
+        this.battery_temp = battery_temp;
+        this.battery_voltage = battery_voltage;
+        this.battery_charge = battery_charge;    
+        this.battery_perc = battery_perc;
+        this.instant_power = instant_power;
+        this.avg_power = avg_power;
+        this.current_amp = current_amp; 
+        this.total_energy = total_energy;
+        this.apps_name = apps_name;
+        this.apps_energy_perc = apps_energy_perc;
+        this.apps_duration = apps_duration;
+        this.apps_energy_value = apps_energy_value;
+        this.apps_comm_name = apps_comm_name;
+        this.apps_comm_energy_perc = apps_comm_energy_perc;
+        this.apps_comm_duration = apps_comm_duration;
+        this.apps_comm_energy_value = apps_comm_energy_value;        
+    }
+
+    /*
+     * The return value is an ArrayList containing following data in the same order:
+     *      private String   reporting_title;
+     *      private double   battery_temp;
+     *      private double   battery_voltage;
+     *      private double   battery_charge;    
+     *      private double   battery_perc;
+     *      private double   instant_power;
+     *      private double   avg_power;
+     *      private double   current_amp; 
+     *      private double   total_energy;
+     *      private String[] apps_name;
+     *      private double[] apps_energy_perc;
+     *      private long[]   apps_duration;
+     *      private double[] apps_energy_value;
+     *      private String[] apps_comm_name;
+     *      private double[] apps_comm_energy_perc;
+     *      private long[]   apps_comm_duration;
+     *      private double[] apps_comm_energy_value;
+     */
+    public ArrayList getMobileEnergyStatus(){   
+       ArrayList result = new ArrayList();
+       result.add(reporting_title);
+       result.add(battery_temp);
+       result.add(battery_voltage);
+       result.add(battery_charge);    
+       result.add(battery_perc);
+       result.add(instant_power);
+       result.add(avg_power);
+       result.add(current_amp); 
+       result.add(total_energy);
+       result.add(apps_name);
+       result.add(apps_energy_perc);
+       result.add(apps_duration);
+       result.add(apps_energy_value);
+       result.add(apps_comm_name);
+       result.add(apps_comm_energy_perc);
+       result.add(apps_comm_duration);
+       result.add(apps_comm_energy_value);       
+       return result;
+    }    
+}

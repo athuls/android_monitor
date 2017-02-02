@@ -1,0 +1,114 @@
+53a54,59
+> import java.util.HashMap;
+> import java.util.concurrent.locks.Lock;
+> import java.util.concurrent.locks.ReentrantLock;
+> import java.util.*;
+> import java.util.logging.Logger;
+> import java.util.logging.Level;
+77,80d82
+< 	/**
+< 	 * 
+< 	 */
+< 	private static final long serialVersionUID = -6261981838647487410L;
+86a89,91
+> 	private static HashMap<String, Integer> activeActorList = new HashMap<String, Integer>();
+> 	private static Lock actorListLock = new ReentrantLock();
+> 
+213a219,238
+> 	private static Logger logger = Logger.getLogger("ProgressLog");
+> 	public static HashMap<String, Integer> getActiveActors()
+> 	{
+> 		HashMap<String, Integer> actorsMap = new HashMap<String, Integer>();
+> 		actorListLock.lock();
+> 		try {
+> 			Iterator<String> it = activeActorList.keySet().iterator();
+> 			while(it.hasNext())
+> 			{
+> 				String key = it.next();
+> 				actorsMap.put(key, activeActorList.get(key));
+> 			}
+> 		}
+> 		finally {	
+> 			actorListLock.unlock();
+> 		}
+> 		
+> 		return actorsMap;
+> 	}
+> 
+420,424c445
+<   /**
+< 	 * 
+< 	 */
+< 	private static final long serialVersionUID = -2124451019579817012L;
+< /*****
+---
+>   /*****
+823a845,873
+> 			ActorReference actorRef = currentMessage.getTarget();
+> 			String id = null;
+> 			if(actorRef != null)
+> 			{
+> 				id = actorRef.getID();
+> 			}
+> 
+> 			String targetName = this.getClass().getName();
+> 			if(id != null && !id.contains("StandardOutput") && !id.contains("StandardError") && !id.contains("StandardInput"))
+> 			{
+> 				//System.out.println(this.getClass().getName() + " AND3 " + currentMessage.getMethodName() + " AND4 ");
+> 				logger.log(Level.INFO, "Scheduled in: " + targetName);		
+> 				actorListLock.lock();
+> 				try {
+> 					if(activeActorList.containsKey(targetName))
+> 					{
+> 						Integer count = activeActorList.get(targetName);
+> 						activeActorList.put(targetName, ++count);
+> 					}
+> 					else
+> 					{
+> 						activeActorList.put(targetName, 1);
+> 					}
+> 				}
+> 				finally {
+> 					actorListLock.unlock();
+> 				}
+> 			}
+> 
+827a878,907
+> 			
+> 			//if(activeActorList.containsKey(targetName))
+> 			//{
+> 			/*
+> 			if(id != null && !id.contains("StandardOutput") && !id.contains("StandardError") && !id.contains("StandardInput"))
+> 			{
+> 				logger.log(Level.INFO, "Scheduled out: " + targetName);
+> 				actorListLock.lock();
+> 				boolean keyExists = false;
+> 				try{
+> 					keyExists = activeActorList.containsKey(targetName);
+> 					Integer currentTargetCount = activeActorList.get(targetName);
+> 					activeActorList.put(targetName, --currentTargetCount);
+> 					if(currentTargetCount == 0)
+> 					{
+> 						activeActorList.remove(targetName);
+> 					}
+> 				}
+> 				catch(Exception e)
+> 				{
+> 					System.out.println(keyExists + " Target is "  + targetName + " " + e.toString());
+> 					// throw e;
+> 				}
+> 				finally {
+> 					actorListLock.unlock();
+> 				}
+> 			}
+> 			//}
+> 			*/
+> 
+875c955
+< //System.out.println( "UniversalActor, delay found!!" );
+---
+> 
+879d958
+< //System.out.println( "UniversalActor, before sleep" );
+881d959
+< //System.out.println( "UniversalActor, after sleep" );							

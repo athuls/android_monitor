@@ -1,0 +1,73 @@
+10
+
+dir
+562
+https://subversion.cs.rpi.edu/svn/wcl/software/salsa/examples
+https://subversion.cs.rpi.edu/svn/wcl
+
+
+
+2010-10-04T22:07:41.647986Z
+283
+huangw5@LAB.CS.RPI.EDU
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d4fd7ada-4b69-dd11-bbfc-00b0d041e3d9
+
+Heat
+dir
+
+addressbook
+dir
+
+cell
+dir
+
+chat
+dir
+
+fibonacci
+dir
+
+heat_v2
+dir
+
+helloworld
+dir
+
+messenger
+dir
+
+migration
+dir
+
+multicast
+dir
+
+nqueens
+dir
+
+numbers
+dir
+
+ping
+dir
+
+ticker
+dir
+
+trap
+dir
+
