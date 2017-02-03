@@ -1,0 +1,36 @@
+module demo3;
+
+/*
+   Actors with this behavior simply create a migrate actor with the specified UAN and first UAL    
+   and then migrate to the second UAL.
+*/
+behavior Migrate {
+    static final long serialVersionUID = 7174092198983685607L;
+
+   void print() {
+
+      standardOutput<-println( "Migrate actor just migrated here." );
+   }
+
+   void act( String[] args ) {
+
+         if (args.length != 3) {
+                 standardOutput<-println( "Usage: java migration.Migrate  <UAN> <srcUAL> <destUAL> " );
+
+                 return;
+        }
+
+        UAN uan = new UAN(args[0]);
+        UAL ual = new UAL(args[1]);
+        
+        Migrate  migrateActor = new Migrate() at (uan, ual);
+      
+        migrateActor<-print() @ 
+        migrateActor<-migrate( args[2] ) @ 
+        migrateActor<-print(); 
+         
+   }     
+    
+}   
+ 
+ 

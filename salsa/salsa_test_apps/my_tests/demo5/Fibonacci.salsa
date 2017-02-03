@@ -1,0 +1,46 @@
+
+module demo5;
+
+behavior Fibonacci {
+    
+	int n;              //Fibonnaci number to be calculated
+  long initialTime;   //Starting Time
+
+    
+	Fibonacci(int n) {
+		this.n = n;
+	}
+  
+  void endTimer(){
+     long finalTime = System.currentTimeMillis();
+     long runningTime = finalTime - initialTime;
+     standardOutput<-println("Running time for Fibonacci problem is "
+                             +runningTime+" ms.");
+  }
+
+	int add(int x, int y) {
+		return x + y;
+	}
+
+	int compute() {
+		if (n == 0) 		return 0;
+		else if (n <= 2) 	return 1;
+		else {
+			Fibonacci fib1 = new Fibonacci(n-1);
+			Fibonacci fib2 = new Fibonacci(n-2);
+
+			token x = fib1<-compute();
+			token y = fib2<-compute();
+
+			add(x, y) @ currentContinuation;
+		}
+	}
+
+	void act(String args[]) {
+		n = Integer.parseInt(args[0]);
+
+    initialTime = System.currentTimeMillis();         
+
+		compute() @ standardOutput<-println(token)@endTimer();
+	}
+}

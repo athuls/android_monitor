@@ -1,0 +1,8 @@
+rm demo$1/*.java
+rm demo$1/*.class
+java salsac.SalsaCompiler demo$1/*.salsa
+javac demo$1/*.java
+jar cf demo$1.jar demo$1/
+
+#To run demo8:
+#java -cp $CLASSPATH:. demo8.Trap

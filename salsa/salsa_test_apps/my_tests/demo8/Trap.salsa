@@ -1,0 +1,112 @@
+module demo8;
+
+import java.io.*;
+import java.util.*;
+
+/* Trap.salsa -- Parallel Trapezoidal Rule
+ *
+ * Input: Optinal. a and b, the left and right endpoints of the integral.n the number of trapezoids.
+ * Output:  Estimate of the integral from a to b of f(x)
+ *    using the trapezoidal rule and n trapezoids.
+ *
+ * Algorithm:
+ *    1.  Each actor calculates "its" interval of
+ *        integration.
+ *    2.  Each actor estimates the integral of f(x)
+ *        over its interval using the trapezoidal rule.
+ *    3a. Each actor sends its results to the main actor.
+ *    3b. The main actor sums the calculations received from
+ *        the individual actors and prints the result.
+ *
+ * Note:  f(x) is hardwired.
+ *
+ */
+
+behavior Trap{
+  int         noActors = 2;    // The number of actors   
+  double       a = 0.0;        // Left endpoint             
+  double       b = 1.0;        // Right endpoint            
+  int          n = 1024;         // Number of trapezoids      
+  long initialTime;              // Starting Time
+  String nameServer = "192.168.1.138";        // Name Server
+  String theatersFile = "./demo8/theatersFile.txt";    // File containing the theaters          
+
+  void act(String args[]){
+      double test = -1.0;
+      DistributeWork()@displayResults(token)@endTimer()@displayResults(test)@currentContinuation;
+  }      
+
+  Double DistributeWork(){
+    double h = (b-a)/n; // Trapezoid base length    
+    int local_n = n/noActors;   // Number of trapezoids for  
+    double   local_a;   // Left endpoint my process 
+    double   local_b;   // Right endpoint my process
+
+    //create actors and assign data
+    TrapWorker[] workers = new TrapWorker[noActors];
+    for (int i=0; i<noActors; i++){                                   
+      workers[i] = new TrapWorker();
+    }
+
+    // read available theaters
+    Vector theaters = new Vector();
+    String theater;
+    try {
+      BufferedReader in = new BufferedReader(new FileReader(theatersFile));
+      while ((theater = in.readLine())!= null){
+        theaters.add(theater);
+      }
+      in.close(); 
+    } catch (IOException ioe){
+      standardOutput<-println("[error] Can't open the file "+theatersFile+" for reading.");
+    }
+
+    // migrate actors to theaters
+    for (int i=0; i<noActors; i++){
+      standardOutput<-println("Sending actor "+
+        "uan://"+nameServer+":3030/a"+i+" to "+
+        "rmsp://"+theaters.get(i%theaters.size())+"/a"+i);
+      
+    workers[i] = new TrapWorker() at  
+        (new UAN("uan://"+nameServer+":3030/a"+i), 
+         new UAL("rmsp://"+theaters.get(i%theaters.size())+"/a"+i)
+        );
+    }
+
+    //start computation
+    standardOutput<-println(">>>>>>Starting the computation");
+    initialTime = System.currentTimeMillis();         
+    join{                  
+      for (int i=0;i<noActors;i++){
+
+        /* Length of each actor's interval of
+         * integration = local_n*h.  So my interval
+         * starts at: */
+    
+        local_a = a + i * local_n * h;
+        local_b = local_a + local_n * h;
+        workers[i]<-trap(local_a, local_b, local_n, h);
+      }                       
+    }@addUpIntegrals(token)@currentContinuation;
+  }
+
+  void endTimer(){
+       long finalTime = System.currentTimeMillis();
+       long runningTime = finalTime - initialTime;
+       standardOutput<-println("Running time for Trapezoidal" + 
+       " approximation is "+runningTime+" ms.");
+  }
+
+  double addUpIntegrals(Object[] results){
+    //rceives the integral calculated from each actor's work
+    double total = 0.0;
+    for (int i = 0; i<results.length; i++){
+        total += ((Double)results[i]).doubleValue();
+    }
+    return total;
+  }
+
+  void displayResults(double result){
+    standardOutput<-println("With n = "+n+" trapezoids, our estimate of the integral on ("+a+","+b+")="+result+ " with error "+ (result - 1.0e0));
+  }
+}
