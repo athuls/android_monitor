@@ -33,11 +33,8 @@ import salsa.resources.ActorService;
 
 import java.util.logging.Logger;
 import java.util.logging.Level;
-import java.lang.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class HelloWorld extends UniversalActor  {
+public class AllHelloWorld extends UniversalActor  {
 	public static void main(String args[]) {
 		UAN uan = null;
 		UAL ual = null;
@@ -72,7 +69,7 @@ public class HelloWorld extends UniversalActor  {
 			ual = new UAL( ServiceFactory.getTheater().getLocation() + System.getProperty("identifier"));
 		}
 		RunTime.receivedMessage();
-		HelloWorld instance = (HelloWorld)new HelloWorld(uan, ual,null).construct();
+		AllHelloWorld instance = (AllHelloWorld)new AllHelloWorld(uan, ual,null).construct();
 		gc.WeakReference instanceRef=new gc.WeakReference(uan,ual);
 		{
 			Object[] _arguments = { args };
@@ -85,18 +82,18 @@ public class HelloWorld extends UniversalActor  {
 		RunTime.finishedProcessingMessage();
 	}
 
-	public static ActorReference getReferenceByName(UAN uan)	{ return new HelloWorld(false, uan); }
-	public static ActorReference getReferenceByName(String uan)	{ return HelloWorld.getReferenceByName(new UAN(uan)); }
-	public static ActorReference getReferenceByLocation(UAL ual)	{ return new HelloWorld(false, ual); }
+	public static ActorReference getReferenceByName(UAN uan)	{ return new AllHelloWorld(false, uan); }
+	public static ActorReference getReferenceByName(String uan)	{ return AllHelloWorld.getReferenceByName(new UAN(uan)); }
+	public static ActorReference getReferenceByLocation(UAL ual)	{ return new AllHelloWorld(false, ual); }
 
-	public static ActorReference getReferenceByLocation(String ual)	{ return HelloWorld.getReferenceByLocation(new UAL(ual)); }
-	public HelloWorld(boolean o, UAN __uan)	{ super(false,__uan); }
-	public HelloWorld(boolean o, UAL __ual)	{ super(false,__ual); }
-	public HelloWorld(UAN __uan,UniversalActor.State sourceActor)	{ this(__uan, null, sourceActor); }
-	public HelloWorld(UAL __ual,UniversalActor.State sourceActor)	{ this(null, __ual, sourceActor); }
-	public HelloWorld(UniversalActor.State sourceActor)		{ this(null, null, sourceActor);  }
-	public HelloWorld()		{  }
-	public HelloWorld(UAN __uan, UAL __ual, Object obj) {
+	public static ActorReference getReferenceByLocation(String ual)	{ return AllHelloWorld.getReferenceByLocation(new UAL(ual)); }
+	public AllHelloWorld(boolean o, UAN __uan)	{ super(false,__uan); }
+	public AllHelloWorld(boolean o, UAL __ual)	{ super(false,__ual); }
+	public AllHelloWorld(UAN __uan,UniversalActor.State sourceActor)	{ this(__uan, null, sourceActor); }
+	public AllHelloWorld(UAL __ual,UniversalActor.State sourceActor)	{ this(null, __ual, sourceActor); }
+	public AllHelloWorld(UniversalActor.State sourceActor)		{ this(null, null, sourceActor);  }
+	public AllHelloWorld()		{  }
+	public AllHelloWorld(UAN __uan, UAL __ual, Object obj) {
 		//decide the type of sourceActor
 		//if obj is null, the actor must be the startup actor.
 		//if obj is an actorReference, this actor is created by a remote actor
@@ -119,7 +116,7 @@ public class HelloWorld extends UniversalActor  {
 			      setSource(sourceActor.getUAN(), sourceActor.getUAL());
 			      activateGC();
 			    }
-			    createRemotely(__uan, __ual, "demo1.HelloWorld", sourceRef);
+			    createRemotely(__uan, __ual, "demo1.AllHelloWorld", sourceRef);
 			  }
 
 			  // local creation
@@ -184,14 +181,22 @@ public class HelloWorld extends UniversalActor  {
 	}
 
 	public class State extends UniversalActor .State {
-		public HelloWorld self;
+		public AllHelloWorld self;
 		public void updateSelf(ActorReference actorReference) {
-			((HelloWorld)actorReference).setUAL(getUAL());
-			((HelloWorld)actorReference).setUAN(getUAN());
-			self = new HelloWorld(false,getUAL());
+			((AllHelloWorld)actorReference).setUAL(getUAL());
+			((AllHelloWorld)actorReference).setUAN(getUAN());
+			self = new AllHelloWorld(false,getUAL());
 			self.setUAN(getUAN());
 			self.setUAL(getUAL());
 			self.activateGC();
+		}
+
+		public void preAct(String[] arguments) {
+			getActorMemory().getInverseList().removeInverseReference("rmsp://me",1);
+			{
+				Object[] __args={arguments};
+				self.send( new Message(self,self, "act", __args, null,null,false) );
+			}
 		}
 
 		public State() {
@@ -200,7 +205,7 @@ public class HelloWorld extends UniversalActor  {
 
 		public State(UAN __uan, UAL __ual) {
 			super(__uan, __ual);
-			addClassName( "demo1.HelloWorld$State" );
+			addClassName( "demo1.AllHelloWorld$State" );
 			addMethodsForClasses();
 		}
 
@@ -261,14 +266,13 @@ public class HelloWorld extends UniversalActor  {
 			}
 		}
 
+		int iter;
+		Logger logger = Logger.getLogger("ProgressLog");
 		public void hello() {
-			SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
-			Date resultdate = new Date(System.currentTimeMillis());
-			String time = sdf.format(resultdate);
 			{
-				// standardOutput<-print("["+time+"] "+"Hello ")
+				// standardOutput<-print("Hello ")
 				{
-					Object _arguments[] = { "["+time+"] "+"Hello " };
+					Object _arguments[] = { "Hello " };
 					Message message = new Message( self, standardOutput, "print", _arguments, null, null );
 					__messages.add( message );
 				}
@@ -276,30 +280,63 @@ public class HelloWorld extends UniversalActor  {
 		}
 		public void world() {
 			{
-				// standardOutput<-println("World1!")
+				// standardOutput<-println("World!")
 				{
-					Object _arguments[] = { "World1!" };
+					Object _arguments[] = { "World!" };
 					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 					__messages.add( message );
 				}
 			}
 		}
-		public void helloworld() {
+		public void dummy(int count, int iterCount, int total) {
+			logger.log(Level.INFO, "Iteration: "+count+" out of "+total);
+			if (total==(count*(iterCount+1))) {{
+				logger.log(Level.INFO, "DONE");
+			}
+}		}
+		public void pump(HelloWorld world, int count, int iterCount, int total) {
 			{
 				Token token_2_0 = new Token();
-				// hello()
+				// join block
+				token_2_0.setJoinDirector();
 				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "hello", _arguments, null, token_2_0 );
+					// world<-helloworld()
+					{
+						Object _arguments[] = {  };
+						Message message = new Message( self, world, "helloworld", _arguments, null, token_2_0 );
+						Object[] _propertyInfo = { new Integer(count*1000) };
+						message.setProperty( "delay", _propertyInfo );
+						__messages.add( message );
+					}
+				}
+				addJoinToken(token_2_0);
+				// dummy(count, iterCount, total)
+				{
+					Object _arguments[] = { count, iterCount, total };
+					Message message = new Message( self, self, "dummy", _arguments, token_2_0, null );
 					__messages.add( message );
 				}
-				// world()
-				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "world", _arguments, token_2_0, currentMessage.getContinuationToken() );
-					__messages.add( message );
+			}
+		}
+		public void act(String arguments[]) {
+			iter = Integer.parseInt(arguments[0]);
+			HelloWorld[] worlds = new HelloWorld[iter];
+			for (int i = 0; i<iter; i++){
+				worlds[i] = ((HelloWorld)new HelloWorld(this).construct());
+			}
+			int count = 0;
+			while (count<iter*3) {
+				count++;
+				for (int i = 0; i<iter; i++){
+					{
+						// pump(worlds[i], count, i, iter*3*iter)
+						{
+							Object _arguments[] = { worlds[i], count, i, iter*3*iter };
+							Message message = new Message( self, self, "pump", _arguments, null, null );
+							__messages.add( message );
+						}
+					}
 				}
-				throw new CurrentContinuationException();
 			}
 		}
 	}

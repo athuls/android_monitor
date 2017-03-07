@@ -1,0 +1,52 @@
+module demo1;
+
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
+behavior AllHelloWorld {
+
+    private int iter;
+    private static Logger logger = Logger.getLogger("ProgressLog");
+
+    void hello(){
+        standardOutput <- print("Hello ");
+    }
+    void world(){
+        standardOutput <- println("World!");
+    }
+
+    void dummy(int count, int iterCount, int total)
+    {
+        logger.log(Level.INFO, "Iteration: " + count + " out of " + total);
+        if(total == (count * (iterCount + 1)))
+        {
+                logger.log(Level.INFO, "DONE");
+        }
+    }
+
+    void pump(HelloWorld world, int count, int iterCount, int total){
+        join{
+                world <- helloworld():delay(new Integer(count * 1000));
+        } @ dummy(count, iterCount, total);
+    }
+
+    void act(String arguments[]){
+        iter = Integer.parseInt(arguments[0]);
+        HelloWorld[] worlds = new HelloWorld[iter];
+
+        for(int i = 0; i < iter; i++)
+        {
+                worlds[i] = new HelloWorld();
+        }
+
+        int count = 0;
+        while(count < iter * 3)
+        {
+                count++;
+                for(int i = 0; i < iter; i++)
+                {
+                        pump(worlds[i], count, i, iter * 3 * iter);
+                }
+        }
+    }
+}

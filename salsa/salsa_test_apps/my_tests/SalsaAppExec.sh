@@ -1,0 +1,10 @@
+#!/bin/bash
+while(true)
+do
+# Update the path to SALSA jar file, IP address of nameserver workstation and mobile device
+java -cp salsa_RSH_2.jar:. -Duan=uan://128.174.11.96:3030 -Dual=rmsp://10.194.148.228:4040 demo1.AllHelloWorld 25 &
+PID=$!
+sleep 120
+kill $PID
+echo "Ran one instance"
+done
