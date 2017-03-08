@@ -26,7 +26,7 @@ behavior AllHelloWorld {
 
     void pump(HelloWorld world, int count, int iterCount, int total){
         join{
-                world <- helloworld():delay(new Integer(count * 1000));
+                world <- helloworld():delay(1000);
         } @ dummy(count, iterCount, total);
     }
 
@@ -46,7 +46,7 @@ behavior AllHelloWorld {
                 count++;
                 for(int i = 0; i < iter; i++)
                 {
-                        pump(worlds[i], count, i, iter * 3 * iter);
+                        pump(worlds[i], count, i, iter * 3 * iter):delay(100);
                 }
         }
     }
