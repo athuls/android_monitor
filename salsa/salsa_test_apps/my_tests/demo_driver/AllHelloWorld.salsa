@@ -78,7 +78,7 @@ behavior AllHelloWorld {
 		count++;
 		for(int i = 0; i < iter; i++)
 		{
-			pump(worlds[i], nqueens, argNqueens, fib, argFibonacci, count, i, iter * 3 * iter);
+			pump(worlds[i], nqueens, argNqueens, fib, argFibonacci, count, i, iter * 3 * iter):delay(100);
 		}
 	}
     }
