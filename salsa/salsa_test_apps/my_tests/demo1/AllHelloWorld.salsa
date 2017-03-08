@@ -41,17 +41,12 @@ behavior AllHelloWorld {
         }
 
         int count = 0;
-        //while(count < iter * 3)
-	while(true)
+        while(count < iter * 3)
         {
                 count++;
                 for(int i = 0; i < iter; i++)
                 {
-			//join {
-				worlds[i] <- helloworld():delay(1000);
-			//} @ dummy(count, i, iter * 3 * iter);
-
-                        //pump(worlds[i], count, i, iter * 3 * iter):delay(100);
+                        pump(worlds[i], count, i, iter * 3 * iter);
                 }
         }
     }
