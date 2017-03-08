@@ -73,7 +73,7 @@ behavior AllHelloWorld {
 	}
 
 	int count = 0;
-	while(true)
+	while(count < iter * 3)
 	{
 		count++;
 		for(int i = 0; i < iter; i++)
