@@ -1,0 +1,85 @@
+module demo_driver;
+
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
+behavior AllHelloWorld {
+   
+    private int iter;
+    private static Logger logger = Logger.getLogger("ProgressLog");
+
+    void hello(){
+        standardOutput <- print("Hello ");
+    }
+    void world(){
+        standardOutput <- println("World!");
+    }
+
+    void dummy(int count, int iterCount, int total)
+    {
+	logger.log(Level.INFO, "Iteration: " + count + " out of " + total);
+	if(total == (count * (iterCount + 1)))
+	{
+		logger.log(Level.INFO, "DONE");
+	}
+    }       
+
+    void pump(HelloWorld1 world, Nqueens nqueen, String[] argNqueens, Fibonacci fib, String[] argFibonacci, int count, int iterCount, int total){
+	join{
+		world <- helloworld():delay(new Integer(count * 1000));
+		nqueen <- act(argNqueens):delay(new Integer(count * 1150));
+	} @
+	join {
+		world <- helloworld():delay(new Integer(count * 1300));
+		nqueen <- act(argNqueens):delay(new Integer(count * 1450));
+		fib <- act(argFibonacci):delay(new Integer(count * 1600));
+	} @ 
+	join {
+		world <- helloworld():delay(new Integer(count * 1750));
+		fib <- act(argFibonacci):delay(new Integer(count * 1900));
+	} @ 
+	join {
+		nqueen <- act(argNqueens):delay(new Integer(count * 2050));
+		fib <- act(argFibonacci):delay(new Integer(count * 2200));
+	} @ 
+	join {
+		fib <- act(argFibonacci):delay(new Integer(count * 2350));
+	} @ 
+	join {
+		nqueen <- act(argNqueens):delay(new Integer(count * 2500));
+	} @ 
+	join {
+		world <- helloworld():delay(new Integer(count * 2650));
+	} @ dummy(count, iterCount, total);
+    }
+
+    void act(String arguments[]){
+	iter = Integer.parseInt(arguments[0]);
+	int queensInput = Integer.parseInt(arguments[1]);
+	int fibInput = Integer.parseInt(arguments[2]);
+	HelloWorld1[] worlds = new HelloWorld1[iter];
+
+	Integer queensArg = queensInput;
+	Integer fibArg = fibInput;
+	
+	String argNqueens[] = new String[] {queensArg.toString(), queensArg.toString()};
+	String argFibonacci[] = new String[] {fibArg.toString()};
+	Nqueens nqueens = new Nqueens();
+	Fibonacci fib = new Fibonacci(iter * 2);
+	
+	for(int i = 0; i < iter; i++)
+	{
+		worlds[i] = new HelloWorld1();
+	}
+
+	int count = 0;
+	while(true)
+	{
+		count++;
+		for(int i = 0; i < iter; i++)
+		{
+			pump(worlds[i], nqueens, argNqueens, fib, argFibonacci, count, i, iter * 3 * iter);
+		}
+	}
+    }
+}

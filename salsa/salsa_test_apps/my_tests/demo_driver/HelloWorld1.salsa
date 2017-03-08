@@ -1,0 +1,17 @@
+module demo_driver;
+
+behavior HelloWorld1 {
+    void hello(){
+        standardOutput <- print("Hello ");
+    }
+
+    void world(){
+        standardOutput <- println("World1!");
+    }
+
+    void helloworld(){
+	hello()@
+	world()@
+	currentContinuation;
+    }
+}
