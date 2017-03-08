@@ -20,6 +20,7 @@ behavior AllHelloWorld {
         logger.log(Level.INFO, "Iteration: " + count + " out of " + total);
         if(total == (count * (iterCount + 1)))
         {
+		standardOutput <- println("Done");
                 logger.log(Level.INFO, "DONE");
         }
     }
@@ -46,9 +47,9 @@ behavior AllHelloWorld {
                 count++;
                 for(int i = 0; i < iter; i++)
                 {
-			join {
+			//join {
 				worlds[i] <- helloworld():delay(1000);
-			} @ dummy(count, i, iter * 3 * iter);
+			//} @ dummy(count, i, iter * 3 * iter);
 
                         //pump(worlds[i], count, i, iter * 3 * iter):delay(100);
                 }
