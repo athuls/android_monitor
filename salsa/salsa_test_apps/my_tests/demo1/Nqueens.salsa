@@ -1,4 +1,4 @@
-module demo_driver;
+module demo1;
 
 behavior Nqueens {
 
