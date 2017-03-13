@@ -1,0 +1,5881 @@
+[Mar 13,2017 08:56:35] Battery level is 0.64 and no active actors
+[Mar 13,2017 08:56:36] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 08:56:37] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:38] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:40] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:56:41] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:56:42] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:43] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 08:56:44] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:56:46] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 08:56:47] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:56:48] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:56:49] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:56:50] Battery level is 0.64 and no active actors
+[Mar 13,2017 08:56:51] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:56:52] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:54] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:55] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:56] Battery level is 0.64 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:57] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:58] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:56:59] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:00] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 08:57:01] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 08:57:02] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:03] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:04] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:05] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 08:57:06] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:07] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:08] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:09] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:10] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:11] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 08:57:12] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:13] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:15] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:16] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:17] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:18] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:19] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:20] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:21] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:22] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:23] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:24] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:25] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:26] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 08:57:27] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:57:28] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 08:57:29] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:30] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:57:31] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:57:33] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:34] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:35] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 08:57:36] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:37] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:38] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:39] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:40] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:57:41] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:42] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:57:43] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:44] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:45] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:46] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:47] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:49] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:50] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:51] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:52] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:57:53] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 08:57:54] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:55] Battery level is 0.63 and no active actors
+[Mar 13,2017 08:57:56] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:57] Battery level is 0.63 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:57:58] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:57:59] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:00] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:58:01] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:03] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 08:58:04] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:05] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:07] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:58:08] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 08:58:09] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:10] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 08:58:11] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:12] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:58:13] Battery level is 0.62 and no active actors
+[Mar 13,2017 08:58:14] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:15] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:16] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:17] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:18] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:19] Battery level is 0.62 and no active actors
+[Mar 13,2017 08:58:21] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:22] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:23] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:24] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:58:25] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:26] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:58:27] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:29] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:30] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 08:58:31] Battery level is 0.62 and no active actors
+[Mar 13,2017 08:58:32] Battery level is 0.62 and no active actors
+[Mar 13,2017 08:58:33] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:35] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:37] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:39] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 08:58:40] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:41] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:42] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:43] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:44] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:58:45] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 08:58:46] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:47] Battery level is 0.62 and no active actors
+[Mar 13,2017 08:58:48] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:58:49] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:51] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:53] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:54] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:58:55] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:56] Battery level is 0.62 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:58:57] Battery level is 0.61 and no active actors
+[Mar 13,2017 08:58:59] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:01] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:59:02] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 08:59:03] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:05] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 08:59:06] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:07] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:59:08] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:59:09] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 08:59:10] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 08:59:11] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:14] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 08:59:15] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 08:59:16] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:17] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 08:59:18] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:21] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:23] Battery level is 0.61 and no active actors
+[Mar 13,2017 08:59:25] Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:27] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:29] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 08:59:31] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:33] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:35] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:36] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 08:59:37] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:59:38] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:39] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:40] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:42] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:43] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:45] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 08:59:46] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:47] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:59:48] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 08:59:49] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:59:50] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 08:59:51] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 08:59:53] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:55] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 08:59:57] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 08:59:58] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 08:59:59] Battery level is 0.6 and no active actors
+[Mar 13,2017 09:00:01] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:00:02] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:03] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:04] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:06] Battery level is 0.6 and no active actors
+[Mar 13,2017 09:00:07] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:08] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:00:09] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:10] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:00:12] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:13] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:00:15] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:16] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:17] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:00:19] Battery level is 0.6 and no active actors
+[Mar 13,2017 09:00:20] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:23] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:25] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:28] Battery level is 0.6 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:29] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:00:32] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:33] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:36] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:37] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:00:40] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:42] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:43] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:00:44] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:00:45] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:46] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:00:47] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:48] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:00:49] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:00:50] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:00:51] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:00:52] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:00:53] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:00:55] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:00:56] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:00:57] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:00:58] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:01:00] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:01] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:02] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:03] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:01:04] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:01:05] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:06] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:08] Battery level is 0.59 and no active actors
+[Mar 13,2017 09:01:09] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:01:10] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:12] Battery level is 0.59 and no active actors
+[Mar 13,2017 09:01:13] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:14] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:15] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:16] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:17] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:01:18] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:01:19] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:20] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:22] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:23] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:01:24] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:25] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:01:26] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:27] Battery level is 0.59 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:01:29] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:30] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:31] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:32] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:34] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:37] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:39] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:01:41] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:42] Battery level is 0.58 and no active actors
+[Mar 13,2017 09:01:44] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:45] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:46] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:01:47] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:01:48] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:01:49] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:01:50] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:51] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:53] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:55] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:56] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:57] Battery level is 0.58 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:58] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:01:59] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:00] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:02:03] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:04] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:06] Battery level is 0.57 and no active actors
+[Mar 13,2017 09:02:07] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:02:08] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:09] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:10] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:02:11] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:12] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:02:13] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:14] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:02:17] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:18] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:02:19] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:02:21] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:22] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:24] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:25] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:02:26] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:02:27] Battery level is 0.57 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:28] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:02:33] Battery level is 0.56 and no active actors
+[Mar 13,2017 09:02:34] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:02:35] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:02:36] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:37] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:38] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:39] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:02:40] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:02:41] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:42] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:43] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:45] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:47] Battery level is 0.56 and no active actors
+[Mar 13,2017 09:02:48] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:49] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:51] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:02:52] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:02:53] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:02:54] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:55] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:56] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:02:57] Battery level is 0.56 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:02:59] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:00] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:01] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:02] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:03:03] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:03:04] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:03:05] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:06] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:07] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:08] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:09] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:10] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:11] Battery level is 0.55 and no active actors
+[Mar 13,2017 09:03:12] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:13] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:15] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:16] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:17] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:18] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:03:19] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:03:21] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:22] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:23] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:24] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:25] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:26] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:27] Battery level is 0.55 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:28] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:29] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:30] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:03:31] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:03:33] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:35] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:37] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:40] Battery level is 0.54 and no active actors
+[Mar 13,2017 09:03:41] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:42] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:03:43] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:03:44] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:45] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:46] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:47] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:48] Battery level is 0.54 and no active actors
+[Mar 13,2017 09:03:49] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:51] Battery level is 0.54 and no active actors
+[Mar 13,2017 09:03:52] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:53] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:03:54] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:03:55] Battery level is 0.54 and no active actors
+[Mar 13,2017 09:03:56] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:03:57] Battery level is 0.54 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:03:58] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:04:00] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:01] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:04:02] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:03] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:04:04] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:05] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:04:06] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:04:07] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:04:08] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:04:09] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:04:10] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:11] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:12] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:13] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:14] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:15] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:16] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:17] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:18] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:04:19] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:20] Battery level is 0.53 and no active actors
+[Mar 13,2017 09:04:21] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:23] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:24] Battery level is 0.53 and no active actors
+[Mar 13,2017 09:04:25] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:26] Battery level is 0.53 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:04:27] Battery level is 0.53 and no active actors
+[Mar 13,2017 09:04:28] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:04:29] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:30] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:04:31] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:04:32] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:33] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:35] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:36] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:04:37] Battery level is 0.52 and no active actors
+[Mar 13,2017 09:04:38] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:40] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:41] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:04:42] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:43] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:04:44] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:45] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:46] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:47] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:48] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:49] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:50] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:51] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:52] Battery level is 0.52 and no active actors
+[Mar 13,2017 09:04:53] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:04:54] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:04:55] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:04:56] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:04:57] Battery level is 0.52 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:04:58] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:04:59] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:05:00] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:01] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:02] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:04] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:05] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:06] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:08] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:09] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:10] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:11] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:12] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:13] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:14] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:15] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:16] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:05:17] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:18] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:05:19] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:20] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:05:21] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:23] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:24] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:25] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:05:26] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:27] Battery level is 0.51 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:05:28] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:29] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:05:32] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:33] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:34] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:36] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:37] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:39] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:40] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:05:43] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:44] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:45] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:05:46] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:48] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:50] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:51] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:52] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:53] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:54] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:55] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:05:56] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:57] Battery level is 0.5 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:05:58] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:05:59] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:06:01] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:02] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:03] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:04] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:05] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:06:06] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:08] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:06:09] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:10] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:06:11] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:06:12] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:06:14] Battery level is 0.49 and no active actors
+[Mar 13,2017 09:06:15] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:06:16] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:06:17] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:06:18] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:20] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:06:21] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:22] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:06:23] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:06:24] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:25] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:06:26] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:06:27] Battery level is 0.49 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:28] Battery level is 0.48 and no active actors
+[Mar 13,2017 09:06:29] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:30] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:31] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:32] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:33] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:34] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:35] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:36] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:37] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:38] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:39] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:40] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:43] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:45] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:46] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:06:47] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:48] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:06:49] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:51] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:06:52] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:06:53] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:54] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:06:55] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:06:56] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:06:57] Battery level is 0.48 and no active actors
+[Mar 13,2017 09:06:58] Battery level is 0.48 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:06:59] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:00] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:07:02] Battery level is 0.47 and no active actors
+[Mar 13,2017 09:07:03] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:04] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:05] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:08] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:10] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:11] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:12] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:07:14] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:15] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:07:16] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:07:17] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:07:18] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:21] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:22] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:07:23] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:24] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:25] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:27] Battery level is 0.47 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:28] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:29] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:07:30] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:33] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:34] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:35] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:36] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:37] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:07:38] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:40] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:07:41] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:42] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:07:43] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:44] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:07:45] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:46] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:07:47] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:48] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:07:49] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:50] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:07:51] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:52] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:07:53] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:07:54] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:07:55] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:07:58] Battery level is 0.46 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:07:59] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:08:00] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:02] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:08:03] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:08:04] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:08:05] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:08:06] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:09] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:10] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:08:11] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:12] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:08:13] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:14] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:08:15] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:16] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:08:17] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:18] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:19] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:20] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:08:21] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:22] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:23] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:08:25] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:26] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:27] Battery level is 0.45 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:28] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:29] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:31] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:32] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:33] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:34] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:35] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:08:37] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:38] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:08:39] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:40] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:08:41] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:08:42] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:08:43] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:44] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:08:45] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:08:46] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:48] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:49] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:50] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:51] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:52] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:53] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:54] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:55] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:08:56] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:08:57] Battery level is 0.44 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:08:58] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:08:59] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:01] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:09:02] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:09:03] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:09:04] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:05] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:09:06] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:08] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:09] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:09:10] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:12] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:13] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:09:14] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:09:16] Battery level is 0.43 and no active actors
+[Mar 13,2017 09:09:17] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:09:18] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:09:19] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:09:23] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:24] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:09:25] Battery level is 0.43 and no active actors
+[Mar 13,2017 09:09:26] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:09:27] Battery level is 0.43 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:28] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:09:31] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:32] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:09:33] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:09:34] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:09:35] Battery level is 0.42 and no active actors
+[Mar 13,2017 09:09:36] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:09:38] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:09:40] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:09:41] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:09:42] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:09:43] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:09:45] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:09:47] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:48] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:09:49] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:50] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:09:51] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:52] Battery level is 0.42 and no active actors
+[Mar 13,2017 09:09:53] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:54] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:55] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:09:56] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:09:57] Battery level is 0.42 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:00] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:01] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:02] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:03] Battery level is 0.41 and no active actors
+[Mar 13,2017 09:10:04] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:05] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:06] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:10:07] Battery level is 0.41 and no active actors
+[Mar 13,2017 09:10:08] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:10:09] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:11] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:10:13] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:14] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:10:16] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:18] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:21] Battery level is 0.41 and no active actors
+[Mar 13,2017 09:10:23] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:24] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:10:25] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:27] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:29] Battery level is 0.41 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:30] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:32] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:33] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:10:34] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:36] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:10:37] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:38] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:39] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:40] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:41] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:42] Battery level is 0.4 and no active actors
+[Mar 13,2017 09:10:43] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:44] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:45] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:10:47] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:10:48] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:10:49] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:10:50] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:10:51] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:10:53] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:54] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:55] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:56] Battery level is 0.4 and no active actors
+[Mar 13,2017 09:10:58] Battery level is 0.4 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:10:59] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:11:00] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:11:01] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:11:02] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:03] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:11:07] Battery level is 0.39 and no active actors
+[Mar 13,2017 09:11:09] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:10] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:11:12] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:13] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:14] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:15] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:16] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:11:18] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:19] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:20] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:11:21] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:11:22] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:11:23] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:24] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:11:25] Battery level is 0.39 and no active actors
+[Mar 13,2017 09:11:26] Battery level is 0.39 and no active actors
+[Mar 13,2017 09:11:27] Battery level is 0.39 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:11:28] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:11:31] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:32] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:35] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:36] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:11:37] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:38] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:11:39] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:40] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:11:41] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:42] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:11:44] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:11:45] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:46] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:11:47] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:48] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:49] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:50] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:51] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:11:52] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:53] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:11:54] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:11:55] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:11:56] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:11:57] Battery level is 0.38 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:11:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:12:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:22] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:12:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:12:25] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:12:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:12:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:12:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:12:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:12:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:12:36] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:12:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:41] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:12:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:12:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:12:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:12:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:12:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:12:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:12:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:12:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:12:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:12:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:00] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:13:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:13:03] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:13:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:13:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:13:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:13:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:13:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:16] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:13:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:13:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:13:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:13:26] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:13:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:13:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:13:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:13:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:37] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:13:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:13:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:13:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:13:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:13:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:13:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:13:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:13:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:13:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:13:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:13:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:13:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:13:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:14:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:14:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:14:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:14:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:14:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:14:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:14:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:14:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:14:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:14:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:14:20] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:14:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:14:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:14:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:14:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:14:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:14:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:14:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:14:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:14:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:14:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:14:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:14:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:14:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:14:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:14:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:14:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:14:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:14:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:14:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:14:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:14:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:14:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:15:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:15:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:15:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:15:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:15:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:15:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:15:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:15:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:15:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:15:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:15:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:15:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:15:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:15:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:15:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:15:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:15:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:15:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:15:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:15:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:15:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:15:45] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:15:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:15:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:15:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:15:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:15:58] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:15:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:16:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:16:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:16:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:16:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:16:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:16:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:16:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:16:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:16:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:16:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:16:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:16:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:16:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:16:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:16:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:16:51] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:16:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:16:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:16:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:16:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:16:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:16:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:17:01] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:17:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:17:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:17:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:17:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:17:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:17:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:17:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:17:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:17:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:17:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:17:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:17:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:17:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:17:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:17:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:17:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:17:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:17:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:17:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:17:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:17:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:17:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:48] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:17:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:17:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:55] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:17:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:17:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:18:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:18:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:07] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:18:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:18:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:18:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:16] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:18:17] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:18:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:18:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:18:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:18:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:18:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:18:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:18:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:18:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:18:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:18:38] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:18:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:18:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:18:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:18:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:18:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:18:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:18:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:18:52] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:18:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:18:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:18:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:18:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:18:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:18:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:02] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:19:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:04] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:19:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:19:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:19:10] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:19:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:19:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:19:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:19:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:19:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:19:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:19:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:19:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:19:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:31] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:19:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:19:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:19:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:19:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:19:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:19:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:19:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:19:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:19:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:19:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:19:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:19:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:19:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:20:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:20:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:20:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:04] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:20:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:20:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:20:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:10] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:20:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:20:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:20:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:20:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:20:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:20:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:20:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:20:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:20:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:20:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:20:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:20:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:20:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:20:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:20:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:20:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:20:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:20:55] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:20:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:20:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:20:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:21:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:21:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:21:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:21:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:21:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:21:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:13] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:21:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:21:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:21:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:21:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:45] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:21:46] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:21:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:21:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:21:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:21:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:21:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:21:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:21:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:01] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:22:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:22:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:22] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:22:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:22:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:22:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:22:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:22:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:22:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:22:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:22:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:22:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:22:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:22:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:22:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:22:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:22:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:22:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:22:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:23:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:23:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:23:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:23:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:23:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:23:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:23:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:23:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:23:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:23:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:23:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:23:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:23:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:23:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:23:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:23:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:23:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:23:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:23:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:23:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:23:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:23:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:24:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:05] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:24:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:24:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:12] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:24:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:24:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:24:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:24:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:24:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:24:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:24:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:38] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:24:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:24:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:24:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:24:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:24:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:24:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:24:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:24:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:24:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:24:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:24:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:24:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:24:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:24:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:24:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:02] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:25:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:05] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:25:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:25:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:25:15] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:25:16] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:25:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:25:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:25:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:25:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:24] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 11, 
+
+
+[Mar 13,2017 09:25:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:25:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:25:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:30] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 15, 
+
+
+[Mar 13,2017 09:25:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:32] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:25:34] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:25:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:25:43] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:25:44] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:25:47] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:25:48] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:25:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:25:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:25:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 13, 
+
+
+[Mar 13,2017 09:25:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:25:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:25:59] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:26:00] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:26:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 4, 
+
+
+[Mar 13,2017 09:26:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:09] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:10] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 8, 
+
+
+[Mar 13,2017 09:26:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:16] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:26:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:20] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:22] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 10, 
+
+
+[Mar 13,2017 09:26:23] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:25] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:26] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 9, 
+
+
+[Mar 13,2017 09:26:27] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:28] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:26:29] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:31] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:33] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 5, 
+
+
+[Mar 13,2017 09:26:34] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:26:35] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:36] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:37] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:39] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:26:40] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:41] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:42] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:43] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:45] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:46] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 6, 
+
+
+[Mar 13,2017 09:26:47] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:26:49] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:50] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:51] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:52] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:53] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:54] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 14, 
+
+
+[Mar 13,2017 09:26:55] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:56] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:26:57] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:26:58] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 12, 
+
+
+[Mar 13,2017 09:27:00] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:27:01] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:03] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 2, 
+
+
+[Mar 13,2017 09:27:04] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:06] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 7, 
+
+
+[Mar 13,2017 09:27:07] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 3, 
+
+
+[Mar 13,2017 09:27:08] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:09] Battery level is 0.37 and no active actors
+[Mar 13,2017 09:27:11] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:12] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:13] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:14] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:15] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:17] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:18] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:19] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+[Mar 13,2017 09:27:21] Battery level is 0.37 actor counts- 
+demo1.Nqueens$State: 1, 
+
+
+                                                                                                                                                                                                                                                                                                                                         
