@@ -15,7 +15,7 @@ ratio of variances
 > qf(0.95,48,48)
 [1] 1.61537
 
-F-value computed, is smaller than the value in table. Accept homogeneity of variances.
+>> F-value computed, is smaller than the value in table. Accept homogeneity of variances.
 
 2) Control vs. NQueens heavy
 > t.test(df$V2,cleaned_df_control$V2, var.equal=TRUE, paired=FALSE)
