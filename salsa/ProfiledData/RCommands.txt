@@ -1,3 +1,19 @@
+// Timewise plots
+df = read.table("ScriptOutputs/nqueens_heavy_timewise", header=FALSE)
 plot(df_heavy$V1, df_heavy$V2, col="red", xlab="Time in seconds", ylab="Battery percentage fraction")
+df_control = read.table("ScriptOutputs/control_timewise", header=FALSE)
 points(df_heavy$V1, df_control$V2[1:154], col="green")
-legend("topright", inset=0.2, title="Type of run", c("Control", "(Heavy) NQueens runs"), fill=c("green", "red"), horiz=TRUE)
+df_light = read.table("ScriptOutputs/nqueens_light_timewise", header=FALSE)
+points(df_heavy$V1, df_light$V2[1:154], col="blue")
+legend("topright", inset=0.2, title="Type of run", c("Control", "(Heavy) NQueens runs", "(Light) NQueens runs"), fill=c("green", "red", "blue"), horiz=TRUE)
+
+
+// Battery wise plots
+df = read.table("ScriptOutputs/nqueens_heavy_batterywise", header=FALSE)
+df_light = read.table("ScriptOutputs/nqueens_light_batterywise", header=FALSE)
+cleaned_df_light = df_light[-c(1,12),]
+plot(df$V1, df$V2, type="o", col="red", xlab="Battery Fraction", ylab="Time for 0.01 battery drop in seconds")
+lines(df$V1, cleaned_df_control$V2, col="green")
+lines(df$V1, cleaned_df_light$V2, col="blue")
+legend("topright", inset=0.2, title="Type of run", c("Control", "(Heavy) NQueens runs", "(Light) NQueens runs"), fill=c("green", "red", "blue"), horiz=TRUE)
+
