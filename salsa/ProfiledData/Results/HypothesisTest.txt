@@ -1,0 +1,50 @@
+1) Homogeneous variance?
+> var.test(df$V2, cleaned_df_control$V2)
+
+	F test to compare two variances
+
+data:  df$V2 and cleaned_df_control$V2
+F = 0.14081, num df = 48, denom df = 48, p-value = 2.792e-10
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.07942534 0.24962293
+sample estimates:
+ratio of variances 
+         0.1408062 
+
+> qf(0.95,48,48)
+[1] 1.61537
+
+>> F-value computed, is smaller than the value in table. Accept homogeneity of variances.
+
+2) Control vs. NQueens heavy
+> t.test(df$V2,cleaned_df_control$V2, var.equal=TRUE, paired=FALSE)
+
+	Two Sample t-test
+
+data:  df$V2 and cleaned_df_control$V2
+t = -4.9379, df = 96, p-value = 3.329e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -176.42143  -75.25204
+sample estimates:
+mean of x mean of y 
+ 82.71429 208.55102 
+
+>> Reject similarity of means as null hypothesis, because of low p-value
+
+3) Control vs. NQueens light 
+> t.test(cleaned_df_light$V2,cleaned_df_control$V2, var.equal=TRUE, paired=FALSE)
+
+	Two Sample t-test
+
+data:  cleaned_df_light$V2 and cleaned_df_control$V2
+t = -0.018449, df = 96, p-value = 0.9853
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -53.18789  52.20830
+sample estimates:
+mean of x mean of y 
+ 208.0612  208.5510 
+
+>> Accept similarity of means as null hypothesis, because of high p-value
