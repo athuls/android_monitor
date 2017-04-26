@@ -1,5 +1,6 @@
 # param 1: log file to be processed
 # param 2: time interval in seconds
+# param 3: number of samples per second
 
 import sys
 import json
@@ -19,19 +20,22 @@ with open(sys.argv[1]) as fp:
             actor_counts.append(num)
 
 interval = int(sys.argv[2])
+samples_per_sec = int(sys.argv[3])
 size = len(actor_counts)
+
+full_int = interval * samples_per_sec
 
 histos = []
 
-for i in range(0, size, interval):
+for i in range(0, size, full_int):
     maxi = 0
-    for j in range(i, min(i+interval, size)):
-        #print actor_counts[j]
+    print i
+    for j in range(i, min(i+full_int, size)):
         if(actor_counts[j] > maxi):
             maxi = actor_counts[j]
     #print maxi
     histogram = [0] * (maxi+1)
-    for j in range(i, min(i+interval, size)):
+    for j in range(i, min(i+full_int, size)):
         num_actors = actor_counts[j]
         histogram[num_actors] += 1
     histos.append(histogram)
