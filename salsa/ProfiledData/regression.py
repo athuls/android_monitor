@@ -70,3 +70,5 @@ for i in range(0, len(regs)):
 
     a = 0.5*(y_st + y_end)*x
     areas.append(a)
+
+print areas
