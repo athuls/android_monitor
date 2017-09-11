@@ -1,0 +1,15 @@
+1) We have different forms of distances depending on the nature of histograms that we are generating. Like cross-bin distance, sparse bin then how to improve distance accuracy, etc. 
+2) So plot the histograms and visualize them, so we can see how these histograms look like and accordingly determine right distance metric.
+3) For each histogram, divide by the total number of data points or actor counts in order to get fraction/percentage in each bin 
+4) For the larger bins, the number of actors difference in those bins should be weighted more than the difference in smaller bins
+5) Implement the histogram difference comparison as an interface. Start with basic one for bin-to-bin comparison
+6) Why do some of the histogram bin frequency outputs have negative values? 
+7) Can we change the size of each bin from being a single actor count in the histogram, to a bin with rangge of actor counts? That way you increase the robustness of our distance comparison but reduce the discriminative measure
+
+Possible distances: 
+1) KL-divergence if the histograms are normalized to provide probability distributions 
+2) 
+
+
+-------------------
+1) Send script for normalizing bin ranges

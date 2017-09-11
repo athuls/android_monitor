@@ -1,0 +1,15 @@
+1) Nqueens_heavy_perActor_cleaned: 
+Mean = 22820.38
+Std. dev. = 10641.24
+
+2) Nqueens_heavy_perActor: 
+Mean = 32335.47
+Std. dev. = 67432.86
+
+3) Nqueens_heavy_perActor_2: 
+Mean = 3660
+Std. dev. = 3472.143
+
+4) Nqueens_heavy_perActor_2_cleaned:
+Mean = 2407.19
+Std. dev. = 696.0028
