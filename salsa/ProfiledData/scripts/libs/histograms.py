@@ -19,9 +19,9 @@ def generate_histograms(fileName, interval, samples_per_sec):
 		matchObj = re.match(r'\[(.*)\] Battery level is (\d+\.\d+)', line, re.I)
 		if matchObj:
 			current_datetime = datetime.strptime(matchObj.group(1), "%b %d,%Y %H:%M:%S")
-			if previous_datetime is not None:
-				if (current_datetime - previous_datetime).total_seconds() > timedelta(seconds=1).total_seconds():
-					print (current_datetime - previous_datetime).total_seconds() 
+			#if previous_datetime is not None:
+			#	if (current_datetime - previous_datetime).total_seconds() > timedelta(seconds=1).total_seconds():
+			#		print (current_datetime - previous_datetime).total_seconds() 
 			previous_datetime = current_datetime
 		#############Debugging##########
 			
