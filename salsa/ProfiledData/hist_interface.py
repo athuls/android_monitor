@@ -10,12 +10,13 @@ def getHistosFromFile(filename):
 def normalize_histos(dict_hists):
     maxi = 0
     for i in range(0, len(dict_hists)):
-        if(len(dict_hists[i])-1 > maxi):
-                maxi = len(dict_hists[i])-1
+        for key in dict_hists[i]:
+            if(key > maxi):
+                maxi = key
     for i in range(0, len(dict_hists)):
-        while(len(dict_hists[i]) - 1 < maxi):
-            newIndex = len(dict_hists[i])
-            dict_hists[i][newIndex] = 0
+        for j in range(0, maxi+1):
+            if(j not in dict_hists[i]):
+                dict_hists[i][j] = 0
     return dict_hists
 
 def simple_difference(hist_1, hist_2):

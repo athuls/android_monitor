@@ -5,7 +5,11 @@ from hist_interface import *
 
 filename = sys.argv[1]
 
-hists = normalize_histos(getHistosFromFile(filename))
+hists = getHistosFromFile(filename)
+
+for i in range(0, len(hists)):
+    hists[i] = {int(k):int(v) for k,v in hists[i].items()}
+hists = normalize_histos(hists)
 
 print hists[0]
 print hists[1]
