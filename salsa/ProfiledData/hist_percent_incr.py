@@ -1,6 +1,7 @@
 # Similar to histograms.py, but each histogram is created on percent drop
 # param 1: log file to be processed
 # param 2: # of parts to divide each histogram into
+# ex: python histograms.py log_heavy_clean.txt 5
 
 import sys
 import json
@@ -20,17 +21,20 @@ def countsToHists(counts1, counts2):
         else:
             hist[val] = 1
 
+    index_1 = 0
+    index_2 = 0
     for i in range(0, divs):
         histograms.append(dict(hist))
-        for j in range(i, i+int1):
+        for j in range(index_1, index_1+int1):
             hist[counts1[j]] -= 1
 
-        for j in range(i, i+int2):
+        for j in range(index_2, index_2+int2):
             if counts2[j] in hist:
                 hist[counts2[j]] += 1
             else:
                 hist[counts2[j]] = 1
-
+        index_1 += int1
+        index_2 += int2
     return histograms
 
 
@@ -84,5 +88,5 @@ histograms.append(hist)
 
 with open('hist_percent_incr.txt', 'w') as outfile:
     for hists in histograms:
-        outfile.write(str(hists))
+        outfile.write(json.dumps(hists))
         outfile.write("\n")

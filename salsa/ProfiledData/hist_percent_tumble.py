@@ -1,5 +1,6 @@
 # Similar to histograms.py, but each histogram is created on percent drop
 # param 1: log file to be processed
+# ex: python histograms.py log_heavy_clean.txt
 import sys
 import json
 
@@ -48,5 +49,5 @@ for act_counts in vals_per_drop:
 
 with open('hist_percent_tumble.txt', 'w') as outfile:
     for hists in histograms:
-        outfile.write(str(hists))
+        outfile.write(json.dumps(hists))
         outfile.write("\n")
