@@ -11,7 +11,7 @@ for i in range(0, len(hists)):
     hists[i] = {int(k):int(v) for k,v in hists[i].items()}
 hists = normalize_histos(hists)
 
-print hists[0]
-print hists[1]
-
-print simple_difference(hists[0], hists[1])
+for i in range(0, len(hists)-1):
+	print simple_difference(hists[i], hists[i+1])
+	#print hists[0]
+	#print hists[1]

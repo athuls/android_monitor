@@ -3,6 +3,7 @@
 # param 2: # of parts to divide each histogram into
 # ex: python histograms.py log_heavy_clean.txt 5
 
+import os
 import sys
 import json
 
@@ -86,7 +87,10 @@ for val in vals_per_drop[-1]:
 
 histograms.append(hist)
 
-with open('hist_percent_incr.txt', 'w') as outfile:
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, '../scripts_output/histogram/hist_percent_incr.txt')
+
+with open(filename, 'w') as outfile:
     for hists in histograms:
         outfile.write(json.dumps(hists))
         outfile.write("\n")

@@ -4,6 +4,7 @@
 
 import json
 import re
+import os
 from datetime import datetime, timedelta
 
 def generate_histograms(fileName, interval, samples_per_sec):
@@ -57,7 +58,11 @@ def generate_histograms(fileName, interval, samples_per_sec):
 	for hi in histos:
 	    dict_hists.append(dict(enumerate(hi)))
 	
-	with open('histograms.txt', 'w') as outfile:
+	dir = os.path.dirname(__file__)
+	filename = os.path.join(dir, '../../scripts_output/histogram/histograms.txt')
+	
+
+	with open(filename, 'w') as outfile:
 	    for hists in dict_hists:
 	        outfile.write(str(hists))
 	        outfile.write("\n")
