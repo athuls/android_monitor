@@ -9,7 +9,8 @@ from histogram import hist_percent_incr_batteryfrac as batt
 class TestHistogramProfiling(unittest.TestCase):
 
     def test_endtoend(self):
-        histpowerdata = batt.generatePlotDataForHistProfile('testlog.txt', 3)
+        #histpowerdata = batt.generatePlotDataForHistProfile('testlog.txt', 3)
+        histpowerdata = batt.generatePlotDataForHistProfile('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_light.txt', 5)
         histchanges = [x[0] for x in histpowerdata]
         powerchanges = [x[1] for x in histpowerdata]
         self.assertEqual(len(histchanges),3)

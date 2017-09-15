@@ -14,6 +14,9 @@ from .interface_test import *
 import matplotlib.pyplot as plt
 import csv
 
+from pydoc import help
+from scipy.stats.stats import pearsonr
+
 def countsToHists(counts1, counts2, divs):
     int1 = len(counts1) // divs
     int2 = len(counts2) // divs
@@ -123,9 +126,10 @@ def generatePlotDataForHistProfile(filename, divs):
     #        y.append(float(row[1]))
     histchange = [x[0] for x in histpowerprof]
     powerchange = [x[1] for x in histpowerprof]
+    print(pearsonr(histchange,powerchange))
     plt.plot(histchange, powerchange, 'bo')
-    plt.xlabel('x')
-    plt.ylabel('y')
+    plt.xlabel('Histogram distance measure from a reference')
+    plt.ylabel('Corresponding change in power consumption')
     print('Plotting data is ready')
-    #plt.show()
+    plt.show()
     return histpowerprof

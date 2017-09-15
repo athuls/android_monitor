@@ -17,9 +17,16 @@ def generateHistogramPowerInfo(filename):
     hists = normalize_histos(hists)
 
     histpowerprof = []
-    for i in range(0, len(hists)-1):
-        powerChange = abs(float(batteryFrac[i]) - float(batteryFrac[i+1]))
-        histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], hists[i+1]), powerchange=powerChange))
+    powerreference = float(batteryFrac[0])
+    histreference = hists[0]
+
+    #for i in range(0, len(hists)-1):
+    for i in range(1, len(hists)-1):
+        #powerChange = abs(float(batteryFrac[i]) - float(batteryFrac[i+1]))
+        #powerChange = float(batteryFrac[i]) - float(batteryFrac[i+1])
+        powerChange = float(batteryFrac[i]) - powerreference
+        #histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], hists[i+1]), powerchange=powerChange))
+        histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], histreference), powerchange=powerChange))
         #print hists[0]
         #print hists[1]
     return histpowerprof
