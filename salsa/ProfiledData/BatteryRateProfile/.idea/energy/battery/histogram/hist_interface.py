@@ -1,10 +1,17 @@
 import sys
 import json
+import collections
+
+HistInfo = collections.namedtuple('HistInfo', ['hist','batteryfrac'])
+
 def getHistosFromFile(filename):
     data = []
     f = open(filename, 'r')
     for line in f:
-        data.append(json.loads(line.strip('\n')))
+        extractLine = line.strip('\n')
+        hist,power = extractLine.split('\t')
+        data.append(HistInfo(hist=json.loads(hist), batteryfrac=power))
+    f.close()
     return data
 
 def normalize_histos(dict_hists):

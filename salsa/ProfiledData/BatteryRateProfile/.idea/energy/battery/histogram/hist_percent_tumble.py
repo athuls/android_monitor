@@ -3,6 +3,7 @@
 # ex: python histograms.py log_heavy_clean.txt
 import sys
 import json
+import os
 
 
 vals_per_drop = []
@@ -44,10 +45,10 @@ for act_counts in vals_per_drop:
             hist[val] = 1
     histograms.append(hist)
 
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, '../output/histogram/hist_percent_tumble.txt')
 
-
-
-with open('hist_percent_tumble.txt', 'w') as outfile:
+with open(filename, 'w') as outfile:
     for hists in histograms:
         outfile.write(json.dumps(hists))
         outfile.write("\n")

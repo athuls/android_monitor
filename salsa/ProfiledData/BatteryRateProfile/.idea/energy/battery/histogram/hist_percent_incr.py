@@ -10,8 +10,8 @@ import json
 divs = int(sys.argv[2])
 
 def countsToHists(counts1, counts2):
-    int1 = len(counts1) / divs
-    int2 = len(counts2) / divs
+    int1 = len(counts1) // divs
+    int2 = len(counts2) // divs
 
     histograms = []
 
@@ -37,10 +37,6 @@ def countsToHists(counts1, counts2):
         index_1 += int1
         index_2 += int2
     return histograms
-
-
-
-
 
 vals_per_drop = []
 
@@ -73,12 +69,12 @@ histograms = []
 
 # skipping the first index, since it might not be full percent drop
 for ind in range(1, len(vals_per_drop)-1):
-
     histograms += countsToHists(vals_per_drop[ind], vals_per_drop[ind+1])
 
 
 # append last histogram individually, since not handled by function
 hist = {}
+print(vals_per_drop[-1])
 for val in vals_per_drop[-1]:
     if(val in hist):
         hist[val] += 1
@@ -88,7 +84,7 @@ for val in vals_per_drop[-1]:
 histograms.append(hist)
 
 dir = os.path.dirname(__file__)
-filename = os.path.join(dir, '../scripts_output/histogram/hist_percent_incr.txt')
+filename = os.path.join(dir, '../output/histogram/hist_percent_incr.txt')
 
 with open(filename, 'w') as outfile:
     for hists in histograms:
