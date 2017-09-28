@@ -1,0 +1,135 @@
+Battery level is 0.62 and no active actors
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 2,
+demo1.Fibonacci$State: 79,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 3,
+demo1.Fibonacci$State: 208,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 3,
+demo1.Fibonacci$State: 428,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 5,
+demo1.Fibonacci$State: 843,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 6,
+demo1.Fibonacci$State: 1211,
+
+
+Battery level is 0.61 and no active actors
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 and no active actors
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.62 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.61 and no active actors
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.61 actor counts-
+demo1.Fibonacci$State: 1,
+demo1.Nqueens$State: 1,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 2,
+demo1.Fibonacci$State: 137,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 3,
+demo1.Fibonacci$State: 322,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 4,
+demo1.Fibonacci$State: 423,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 5,
+demo1.Fibonacci$State: 843,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 7,
+demo1.Fibonacci$State: 1361,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 7,
+demo1.Fibonacci$State: 1509,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 9,
+demo1.Fibonacci$State: 2672,
+
+
+Battery level is 0.61 and no active actors
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 2,
+demo1.Fibonacci$State: 105,
+
+
+Battery level is 0.61 actor counts-
+demo1.Nqueens$State: 3,
+demo1.Fibonacci$State: 361,
+
+
+Battery level is 0.61 actor counts- 
+demo1.Nqueens$State: 4,
+demo1.Fibonacci$State: 586,
