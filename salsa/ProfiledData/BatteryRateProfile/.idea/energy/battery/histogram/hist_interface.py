@@ -29,9 +29,17 @@ def normalize_histos(dict_hists):
 def simple_difference(hist_1, hist_2):
     total = 0
     val = 0
-    print(hist_1)
+
+    # Get max key
+    maxkey = 0
+    for key in hist_1:
+        if(key > maxkey):
+            maxkey = key
+
     for key in hist_1:
         #val += abs(hist_1[key] - hist_2[key])
+        #val += abs(hist_1[key] - hist_2[key]) * (key + 1)
         val += hist_1[key] - hist_2[key]
+        #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
         total += 1.0
     return val / total
