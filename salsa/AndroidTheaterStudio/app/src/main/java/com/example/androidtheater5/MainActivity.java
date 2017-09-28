@@ -11,6 +11,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
 import com.example.androidtheater5.AndroidTheaterService;
+import demo1.Nqueens;
+import demo1.Fibonacci;
 import demo1.HelloWorld;
 import salsa.language.UniversalActor;
 
@@ -30,14 +32,35 @@ public class MainActivity extends Activity{
 
 	private Handler handler = new Handler();
 
-	private Runnable runnableCode = new Runnable(){
+	private Runnable runnableBattery = new Runnable(){
 		@Override
 		public void run() {
 			SampleBattery();
-			handler.postDelayed(runnableCode, 1000);
+			handler.postDelayed(runnableBattery, 1000);
 		}
 	};
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			String[] args = {"12", "12", "10"};
+			Nqueens.main(args);
 
+			String[] args2 = {"50"};
+			//Fibonacci.main(args2);
+			handler.postDelayed(runnableNqueens, 1000);
+		}
+
+	};
+
+	private Runnable runnableFib = new Runnable(){
+		@Override
+		public void run() {
+			String[] args = {"50"};
+			Fibonacci.main(args);
+			handler.postDelayed(runnableFib, 1000);
+		}
+
+	};
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +76,10 @@ public class MainActivity extends Activity{
 		}
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
-		handler.post(runnableCode);
+		handler.post(runnableNqueens);
+		handler.post(runnableFib);
+		handler.post(runnableBattery);
+
 	}
 
 	@Override
@@ -61,7 +87,7 @@ public class MainActivity extends Activity{
 		// The activity is about to become visible.
 		super.onStart();
 		debugPrint( "onStart() is called" );
-		//HelloWorld.main(null);
+
 	}
 
 	@Override
