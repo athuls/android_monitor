@@ -42,25 +42,24 @@ public class MainActivity extends Activity{
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
-			String[] args = {"12", "12", "10"};
+			String[] args = {"9", "9", "5"};
 			Nqueens.main(args);
-
-			String[] args2 = {"50"};
-			//Fibonacci.main(args2);
+			String[] args2 = {"5"};
+			Fibonacci.main(args2);
 			handler.postDelayed(runnableNqueens, 1000);
 		}
 
 	};
 
-	private Runnable runnableFib = new Runnable(){
-		@Override
-		public void run() {
-			String[] args = {"50"};
-			Fibonacci.main(args);
-			handler.postDelayed(runnableFib, 1000);
-		}
-
-	};
+//	private Runnable runnableFib = new Runnable(){
+//		@Override
+//		public void run() {
+//			String[] args = {"5"};
+//			Fibonacci.main(args);
+//			handler.postDelayed(runnableFib, 1000);
+//		}
+//
+//	};
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -77,7 +76,7 @@ public class MainActivity extends Activity{
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
 		handler.post(runnableNqueens);
-		handler.post(runnableFib);
+		//handler.post(runnableFib);
 		handler.post(runnableBattery);
 
 	}
