@@ -1,16 +1,18 @@
 import sys
 import json
 import collections
+from math import pow, sqrt
 
-HistInfo = collections.namedtuple('HistInfo', ['hist','batteryfrac'])
+HistInfo = collections.namedtuple('HistInfo', ['hist','batteryfrac','size'])
 
 def getHistosFromFile(filename):
     data = []
     f = open(filename, 'r')
     for line in f:
         extractLine = line.strip('\n')
-        hist,power = extractLine.split('\t')
-        data.append(HistInfo(hist=json.loads(hist), batteryfrac=power))
+        #hist,power = extractLine.split('\t')
+        hist,power,size = extractLine.split('\t')
+        data.append(HistInfo(hist=json.loads(hist), batteryfrac=power, size=size))
     f.close()
     return data
 
@@ -39,7 +41,23 @@ def simple_difference(hist_1, hist_2):
     for key in hist_1:
         #val += abs(hist_1[key] - hist_2[key])
         #val += abs(hist_1[key] - hist_2[key]) * (key + 1)
-        val += hist_1[key] - hist_2[key]
+        #val += hist_1[key] - hist_2[key]
+        val += hist_1[key] - 0
+        #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
+        total += 1.0
+    return val / total
+
+def simple_variance(hist_1, hist_2):
+    total = 0
+    val = 0
+
+    # Get mean
+    mean = simple_difference(hist_1, hist_2)
+    for key in hist_1:
+        #val += abs(hist_1[key] - hist_2[key])
+        #val += abs(hist_1[key] - hist_2[key]) * (key + 1)
+        #val += hist_1[key] - hist_2[key]
+        val += pow(hist_1[key] - mean, 2)
         #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
         total += 1.0
     return val / total

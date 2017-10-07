@@ -11,13 +11,11 @@ import sys
 import json
 import collections
 from .interface_test import *
-import matplotlib.pyplot as plt
 import csv
 
 from pydoc import help
-from scipy.stats.stats import pearsonr
 
-def countsToHists(counts1, counts2, divs):
+def countsToHists(counts1, counts2, divs, ind):
     int1 = len(counts1) // divs
     int2 = len(counts2) // divs
 
@@ -52,13 +50,13 @@ def countsToHists(counts1, counts2, divs):
 
         batteryFrac = ((drop1Total - drop1WindowSize)/drop1Total) + (drop2WindowSize/drop2Total)
         batteryPower = batteryFrac/(drop1Total - drop1WindowSize + drop2WindowSize)
-        histograms.append(HistInfo(hist=dict(hist),batteryfrac=batteryPower))
+        print(batteryFrac, batteryPower)
+        histograms.append(HistInfo(hist=dict(hist),batteryfrac=batteryPower, size=ind))
         index_1 += int1
         index_2 += int2
     return histograms
 
 def generatePlotDataForHistProfile(filename, divs):
-    HistInfo = collections.namedtuple('HistInfo', ['hist','batteryfrac'])
     vals_per_drop = []
 
     curr = []
@@ -90,7 +88,7 @@ def generatePlotDataForHistProfile(filename, divs):
 
     # skipping the first index, since it might not be full percent drop
     for ind in range(1, len(vals_per_drop)-1):
-        histograms += countsToHists(vals_per_drop[ind], vals_per_drop[ind+1], divs)
+        histograms += countsToHists(vals_per_drop[ind], vals_per_drop[ind+1], divs, ind)
 
 
     # append last histogram individually, since not handled by function
@@ -101,7 +99,7 @@ def generatePlotDataForHistProfile(filename, divs):
         else:
             hist[val] = 1
 
-    histograms.append(HistInfo(hist=hist, batteryfrac=1/len(vals_per_drop[-1])))
+    histograms.append(HistInfo(hist=hist, batteryfrac=1/len(vals_per_drop[-1]), size=len(vals_per_drop[-1])))
 
     dir = os.path.dirname(__file__)
     filename = os.path.join(dir, '../output/histogram/hist_percent_incr.txt')
@@ -110,26 +108,10 @@ def generatePlotDataForHistProfile(filename, divs):
         for hists in histograms:
             outfile.write(json.dumps(hists.hist))
             outfile.write("\t"+str(hists.batteryfrac))
+            outfile.write("\t"+str(hists.size))
             outfile.write("\n")
 
 
     # Now that we have histogram information, generate battery drops
     histpowerprof = generateHistogramPowerInfo(filename)
-
-    # Plot the generated output file
-    #x = []
-    #y = []
-    #with open(filename, 'r') as outputfile:
-    #    plots = csv.reader(outputfile, delimiter='\t')
-    #    for row in plots:
-    #        x.append(float(row[0]))
-    #        y.append(float(row[1]))
-    histchange = [x[0] for x in histpowerprof]
-    powerchange = [x[1] for x in histpowerprof]
-    print(pearsonr(histchange,powerchange))
-    plt.plot(histchange, powerchange, 'bo')
-    plt.xlabel('Histogram distance measure from a reference')
-    plt.ylabel('Corresponding change in power consumption')
-    print('Plotting data is ready')
-    plt.show()
     return histpowerprof

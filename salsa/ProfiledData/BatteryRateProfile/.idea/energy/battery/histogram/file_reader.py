@@ -27,7 +27,7 @@ def parseLog(filename, actors):
                 if(curr_bat == None): # first iteration
                     curr_bat = bat
                 if(bat < curr_bat):
-                    print "drop"
+                    print("drop")
                     for key in curr:
                         vals_per_drop[key].append(curr[key])
                         curr[key] = []
@@ -49,7 +49,7 @@ def parseLog(filename, actors):
                     comma_ind = lines[k].find(',', ind)
                     # print lines[st][ind + 8 : comma_ind]
                     num = int(lines[k][ind + 8 : comma_ind])
-                    print actor, num
+                    print(actor, num)
 
                     found[actor] = num
                     k += 1
@@ -62,6 +62,6 @@ def parseLog(filename, actors):
         for key in curr:
             vals_per_drop[key].append(curr[key])
             curr[key] = []
-        print vals_per_drop
+        print(vals_per_drop)
 
 parseLog("../mobile_logs/log_mult.txt", ["demo1.Nqueens", "demo1.Fibonacci"])

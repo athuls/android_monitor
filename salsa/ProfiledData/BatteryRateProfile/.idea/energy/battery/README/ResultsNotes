@@ -1,3 +1,13 @@
 1) The correlation is strongest when the histogram difference doesn't try to amortize the cost between dominant frequency bins and treats them as the same. So its not the number of actors in a sampled datapoint but the entire histogram in an interval that causes a battery drop to behave the way it does. (Not really sure?)
 
 2) We maintain the top 5 histograms in terms of being expensive energy wise. Now when we see a pattern of execution coming up, we offload that pattern to remote. For this we need to continuously evaluate the pattern and figure incrementally if we are approaching a pattern that is expensive energy wise. 
+For this, we can run NQueens, alternating between heavy and light runs. We can then use the execution profile to detect if heavy run is approaching. Basically classify "hot" regions power wise, and when execution profile approach hot regions, immediately offload. 
+
+3) For battery fraction, do we divide the number of actors in our histogram window by the total number of actors in our battery drop interval? We then assume a proportional relationship between number of actors and energy drop (which is ok?) 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What all can we do? : 
+1) Get an actors energy
+2) Get energy of running groups of actors
+3) Security angle? 
+4) Switch modes when energy is a lot depending on profile?
