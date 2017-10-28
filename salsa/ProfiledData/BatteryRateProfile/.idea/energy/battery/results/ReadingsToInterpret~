@@ -1,0 +1,75 @@
+1) Maximum vs. minimum drop for NQueens light run: 
+Total battery drops: 51%
+119 : drop1Total - drop1WindowSize + drop2WindowSize
+505 : drop1Total - drop1WindowSize + drop2WindowSize
+
+179 : drop1Total
+475: drop1Total
+
+175: drop1WindowSize
+475: drop1WindowSize
+
+118: drop2Total
+505: drop2Total
+
+115: drop2WindowSize
+505: drop2WindowSize
+
+Total power fraction: 
+0.99692264 in 119 seconds: 0.008377501
+1 in 505 seconds: 0.001980198
+
+Battery Percentage where max and min battery power drop occurred: 
+max- 41 (window occurs at around 10% in the 51% drop, so at the bottom when battery is running out)
+min- 2 (window occurs at around 49% in the 51% drop, so at the top when battery was full)
+
+2) Max vs minimum drop for NQueens heavy run: 
+Total battery drops: 49%
+30 : drop1Total - drop1WindowSize + drop2WindowSize
+203 : drop1Total - drop1WindowSize + drop2WindowSize
+
+200 : drop1Total
+88: drop1Total
+
+200: drop1WindowSize
+85: drop1WindowSize
+
+30: drop2Total
+200: drop2Total
+
+30: drop2WindowSize
+200: drop2WindowSize
+
+Total power fraction: 
+1 in 30 seconds: 0.033333333
+1.034090909 in 203 seconds: 0.005094044
+
+Battery Percentage where max and min battery power drop occurred: 
+max- 9 (window occurs at around 40% in the 49% drop, so close to the top when battery is draining)
+min- 8 (window occurs at around 41% in the 49% drop, so close to the top when battery is draining)
+
+3) Max vs minimum drop for NQueens heavy_2 run: 
+Total battery drops: 27%
+20 : drop1Total - drop1WindowSize + drop2WindowSize
+56 : drop1Total - drop1WindowSize + drop2WindowSize
+
+50 : drop1Total
+58: drop1Total
+
+50: drop1WindowSize
+22: drop1WindowSize
+
+20: drop2Total
+50: drop2Total
+
+20: drop2WindowSize
+20: drop2WindowSize
+
+Total power fraction: 
+1 in 20 seconds: 0.05
+1.0206896551724138 in 56 seconds: 0.018226600985221674
+
+Battery Percentage where max and min battery power drop occurred: 
+max- 2 (window occurs at around 25% in the 27% drop, so close to the top when battery is draining)
+min- 1 (window occurs at around 26% in the 27% drop, so close to the top when battery is draining)
+

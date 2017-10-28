@@ -16,10 +16,11 @@ class SplitFixedWindowsTumbling:
     def __init__(self, filename, windowsize, outputfile):
         self.filename = filename
         self.window_size = int(windowsize)
+        print(self.window_size)
         self.outputfile = outputfile
 
     def getBatteryFracs(self, counts1, prevWindowCounts):
-        print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
+        #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
         effective_counts = prevWindowCounts + counts1
 
         # We have already accounted for the first window
@@ -36,7 +37,7 @@ class SplitFixedWindowsTumbling:
             self.batteryFrac.append(const_power)
 
         remaining_window_size = len(effective_counts) % self.window_size
-        print("remaining window size:", remaining_window_size)
+        #print("remaining window size:", remaining_window_size)
         # Capture the remaining actor counts in current battery
         # drop interval
         remaining_window = []
@@ -65,13 +66,18 @@ class SplitFixedWindowsTumbling:
             else:
                 hist[val] = 1
 
+            current_bins += 1
             # Start a new window
             if(current_bins == self.window_size):
+                count_test = 0
+                for key in hist:
+                    count_test += hist[key]
+                if(count_test != self.window_size):
+                    print("Something is WRONG, window size not as expected")
                 self.histograms.append(dict(hist))
                 current_windows += 1
                 current_bins = 0
                 hist = {}
-            current_bins += 1
 
         remaining_window_size = len(effective_counts) % self.window_size
 
@@ -126,10 +132,13 @@ class SplitFixedWindowsTumbling:
                 outfile.write(json.dumps(self.histograms[i]))
                 powerVal = self.batteryFrac[i] / self.window_size
                 outfile.write("\t" + str(json.dumps(powerVal)))
+
+                # Write dummy size value
+                outfile.write("\t" + str(0))
                 outfile.write("\n")
 
 
-dir = os.path.dirname(__file__)
-filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-newSplittingInstance = SplitFixedWindowsTumbling('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_light.txt',3, filename)
-newSplittingInstance.extract_windows()
+# dir = os.path.dirname(__file__)
+# filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
+# newSplittingInstance = SplitFixedWindowsTumbling('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_light.txt',3, filename)
+# newSplittingInstance.extract_windows()

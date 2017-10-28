@@ -28,6 +28,17 @@ def normalize_histos(dict_hists):
                 dict_hists[i][j] = 0
     return dict_hists
 
+def simple_window_size(hist_1, hist_2):
+    val = 0
+
+    for key in hist_1:
+        #val += abs(hist_1[key] - hist_2[key])
+        #val += abs(hist_1[key] - hist_2[key]) * (key + 1)
+        #val += hist_1[key] - hist_2[key]
+        val += hist_1[key]
+        #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
+    return val
+
 def simple_difference(hist_1, hist_2):
     total = 0
     val = 0
@@ -39,13 +50,16 @@ def simple_difference(hist_1, hist_2):
             maxkey = key
 
     for key in hist_1:
-        #val += abs(hist_1[key] - hist_2[key])
-        #val += abs(hist_1[key] - hist_2[key]) * (key + 1)
-        #val += hist_1[key] - hist_2[key]
-        val += hist_1[key] - 0
-        #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
-        total += 1.0
-    return val / total
+        # val += abs(hist_1[key] - hist_2[key])
+        # if(key != 0):
+            val += key * (hist_1[key] - hist_2[key])
+        #     val += abs(hist_1[key] - hist_2[key]) * (key)
+            #val += hist_1[key] - hist_2[key]
+            #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
+            total += 1.0
+    #return val / total
+    print(val, total)
+    return val/total
 
 def simple_variance(hist_1, hist_2):
     total = 0

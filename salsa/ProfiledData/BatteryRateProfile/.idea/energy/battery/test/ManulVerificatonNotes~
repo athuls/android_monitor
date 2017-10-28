@@ -1,0 +1,122 @@
+Variable window size: 
+drop1Total = 446
+drop1WindowSize=89
+drop2Total = 475
+drop2WIndowSize = 95
+Histogram = {"0": 440, "1": 12}
+Histogram difference = 
+
+drop1Total = 446
+drop1WindowSize=178
+drop2Total = 475
+drop2WIndowSize = 190
+Histogram = {"0": 448, "1": 10}
+
+drop1Total = 446
+drop1WindowSize=267
+drop2Total = 475
+drop2WIndowSize = 285
+Histogram = {"0": 451, "1": 13}
+
+
+drop1Total = 446
+drop1WindowSize=356
+drop2Total = 475
+drop2WIndowSize = 380
+Histogram = {"0": 458, "1": 12}
+
+
+drop1Total = 446
+drop1WindowSize=445
+drop2Total = 475
+drop2WIndowSize = 475
+Histogram = {"0": 467, "1": 9}
+
+
+drop1Total = 475
+drop1WindowSize=95
+drop2Total = 505
+drop2WIndowSize = 101
+Histogram = {"0": 468, "1": 13}
+
+drop1Total = 475
+drop1WindowSize=190
+drop2Total = 505
+drop2WIndowSize = 202
+Histogram = {"0": 473, "1": 14}
+
+drop1Total = 475
+drop1WindowSize=285
+drop2Total = 505
+drop2WIndowSize = 303
+{"0": 480, "1": 13}
+
+
+drop1Total = 475
+drop1WindowSize=380
+drop2Total = 505
+drop2WIndowSize = 404
+{"0": 489, "1": 10}
+
+
+drop1Total = 475
+drop1WindowSize=475
+drop2Total = 505
+drop2WIndowSize = 505
+{"0": 493, "1": 12}
+
+
+drop1Total = 505
+drop1WindowSize=101
+drop2Total = 386
+drop2WIndowSize = 77
+{"0": 470, "1": 11}
+
+
+drop1Total = 505
+drop1WindowSize=202
+drop2Total = 386
+drop2WIndowSize = 154
+{"0": 450, "1": 7}
+
+
+drop1Total = 505
+drop1WindowSize=303
+drop2Total = 386
+drop2WIndowSize = 231
+{"0": 427, "1": 6}
+
+
+drop1Total = 505
+drop1WindowSize=404
+drop2Total = 386
+drop2WIndowSize = 308
+{"0": 403, "1": 6}
+
+
+drop1Total = 505
+drop1WindowSize=505
+drop2Total = 386
+drop2WIndowSize = 385
+{"0": 376, "1": 9}
+
+
+1.0004484304932735 0.002213381483392198
+1.000896860986547 0.0021853643252981374
+1.0013452914798207 0.002158071748878924
+1.0017937219730941 0.0021314760041980726
+1.0022421524663676 0.0021055507404755622
+1.0 0.002079002079002079
+1.0 0.002053388090349076
+1.0 0.002028397565922921
+1.0 0.002004008016032064
+1.0 0.0019801980198019802
+0.9994818652849742 0.0020779248758523374
+0.9989637305699481 0.0021859162594528407
+0.9984455958549223 0.0023058789742607905
+0.9979274611398963 0.002439920442884832
+0.9974093264248705 0.0025906735751295338
+
+
+0.002213381483392198, 0.0021853643252981374, 0.002158071748878924, 0.0021314760041980726, 0.0021055507404755622, 0.002079002079002079, 0.002053388090349076, 0.002028397565922921, 0.002004008016032064, 0.0019801980198019802, 0.0020779248758523374, 0.0021859162594528407, 0.0023058789742607905, 0.002439920442884832, 0.0025906735751295338
+
