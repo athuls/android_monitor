@@ -2,6 +2,7 @@ from .hist_interface import *
 
 import collections
 from .histogram_to_list import *
+from itertools import groupby
 import matplotlib.pyplot as plt
 import plotly as py
 py.tools.set_credentials_file(username='sandur2', api_key='67gqBp1eOw7nzF3kO7RU')
@@ -30,6 +31,7 @@ def generateHistogramPowerInfo(filename):
     minSize=0
     maxi = 0
     mini=0
+    histdifferences = []
 
     for i in range(0, len(hists)-1):
         #print(hists[i])
@@ -38,7 +40,9 @@ def generateHistogramPowerInfo(filename):
         powerChange = float(batteryFrac[i]) - powerreference
         # powerChange = float(batteryFrac[i]) - 0
         #histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], hists[i+1]), powerchange=powerChange, size=sizes[i]))
-        histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], histreference), powerchange=powerChange, size=sizes[i]))
+        histchange = simple_difference(hists[i], histreference)
+        histdifferences.append(histchange)
+        histpowerprof.append(HistPowerProfile(histchange=histchange, powerchange=powerChange, size=sizes[i]))
         if(abs(powerChange) > maxpower):
             maxpower = abs(powerChange)
             maxDistHist = hists[i]
@@ -50,7 +54,10 @@ def generateHistogramPowerInfo(filename):
             minSize=sizes[i]
             mini=i
     print("Maximum histogram\n")
-    #print(histreference)
+    #print([len(list(group)) for key, group in groupby(histdifferences)])
+    histdifferencessorted = sorted(histdifferences)
+    for i in range(1, len(histdifferencessorted)):
+        print(histdifferencessorted[i] - histdifferencessorted[i-1])
     #histreference_as_list = convertToList(histreference)
     maxHist_as_list = convertToList(maxDistHist)
     #print(maxDistHist)

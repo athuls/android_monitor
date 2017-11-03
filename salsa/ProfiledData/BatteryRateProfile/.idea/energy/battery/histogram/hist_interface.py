@@ -58,7 +58,6 @@ def simple_difference(hist_1, hist_2):
             #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
             total += 1.0
     #return val / total
-    print(val, total)
     return val/total
 
 def simple_variance(hist_1, hist_2):

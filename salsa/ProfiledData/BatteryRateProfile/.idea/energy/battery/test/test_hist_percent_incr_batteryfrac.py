@@ -17,7 +17,7 @@ class TestHistogramProfiling(unittest.TestCase):
     # This is not for testing, it is run to plot graphs for inferring
     # results from running variable window size approach
     # def test_runforvariablewindowoutput(self):
-    #     histpowerdata = batt.generatePlotDataForHistProfile('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_heavy.txt', 5)
+    #     histpowerdata = batt.generatePlotDataForHistProfile('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_heavy.txt', 3)
     #
     #     # Plot the generated output file
     #     histchange = [x[0] for x in histpowerdata]
@@ -29,7 +29,7 @@ class TestHistogramProfiling(unittest.TestCase):
     #     #plt.plot(histchange, sizechange, 'ro')
     #     plt.xlabel('Histogram distance measure from a reference')
     #     plt.ylabel('Corresponding change in power consumption')
-    #     plt.title('NQueens-heavy_2, window of 5: Variable window size incremental')
+    #     plt.title('NQueens-heavy, window of 3: Variable window size incremental')
     #     plt.xlabel('Histogram distance measure from a reference')
     #     plt.ylabel('Corresponding change in power consumption')
     #     plt.show()
@@ -50,7 +50,7 @@ class TestHistogramProfiling(unittest.TestCase):
         sizechange = [x[2] for x in histpowerprof]
         print(pearsonr(histchange,powerchange))
         plt.plot(histchange,powerchange, 'bo')
-        plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
+        plt.title('NQueens-heavy, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
         plt.xlabel('Histogram distance measure from a reference')
         plt.ylabel('Corresponding change in power consumption')
         print('Plotting data is ready')
