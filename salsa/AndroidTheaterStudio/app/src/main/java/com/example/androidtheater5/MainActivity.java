@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
 import com.example.androidtheater5.AndroidTheaterService;
 import demo1.Nqueens;
+import demo1.Nqueens2;
 import demo1.Fibonacci;
 import demo1.HelloWorld;
 import salsa.language.UniversalActor;
@@ -32,21 +33,72 @@ public class MainActivity extends Activity{
 
 	private Handler handler = new Handler();
 
-	private Runnable runnableBattery = new Runnable(){
+	//public static final Object LOCK = new Object();
+
+	public int count = 0;
+	public boolean isLight = false;
+	public boolean isBreak = false;
+	public String[] light = {"9","9", "8"};
+	public String[] heavy = {"12","12", "10"};
+
+
+//	private Runnable runnableBattery = new Runnable(){
+//		@Override
+//		public void run() {
+//			synchronized (LOCK) {
+//				try {
+//					Thread t = new Thread(runnableSampleBattery);
+//					t.start();
+//					LOCK.wait();
+//					handler.postDelayed(runnableBattery, 1000);
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//
+//
+//		}
+//	};
+
+	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
 			SampleBattery();
-			handler.postDelayed(runnableBattery, 1000);
+			count = (count+1)%600;
+			if(count == 0) {
+				isLight = !isLight;
+				isBreak = true;
+			}
+			if(count == 30 && isBreak){
+				isBreak = false;
+				count = 0;
+			}
+			handler.postDelayed(runnableSampleBattery, 1000);
 		}
 	};
+
+
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
-			String[] args = {"9", "9", "5"};
-			Nqueens.main(args);
-			String[] args2 = {"5"};
-			Fibonacci.main(args2);
-			handler.postDelayed(runnableNqueens, 1000);
+			String[] args;
+			if(isLight && !isBreak){
+				args = light;
+				Nqueens.main(args);
+			}else if(!isBreak){
+				args = heavy;
+				Nqueens2.main(args);
+			}
+
+
+//			String[] args2 = {"10"};
+//			Fibonacci.main(args2);
+//			HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
+//			debugPrint("runnable: " + hashList.toString());
+
+			handler.postDelayed(runnableNqueens, 750);
+
+
 		}
 
 	};
@@ -54,7 +106,7 @@ public class MainActivity extends Activity{
 //	private Runnable runnableFib = new Runnable(){
 //		@Override
 //		public void run() {
-//			String[] args = {"5"};
+//			String[] args = {"10"};
 //			Fibonacci.main(args);
 //			handler.postDelayed(runnableFib, 1000);
 //		}
@@ -76,8 +128,9 @@ public class MainActivity extends Activity{
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
 		handler.post(runnableNqueens);
+		handler.post(runnableSampleBattery);
 		//handler.post(runnableFib);
-		handler.post(runnableBattery);
+		//handler.post(runnableBattery);
 
 	}
 
@@ -129,8 +182,10 @@ public class MainActivity extends Activity{
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
-		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-		//debugPrint("Battery level is " + batteryPct);
+		HashMap<String, Integer> hashList = UniversalActor.getActiveActors("main activity");
+//		debugPrint(hashList.toString());
+		Integer hashListSize = hashList.size();
+//		debugPrint(hashListSize.toString());
 
 		if(hashList.isEmpty()) {
 			appendLog("Battery level is " + batteryPct + " and no active actors");
