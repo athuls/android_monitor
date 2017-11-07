@@ -38,7 +38,7 @@ public class MainActivity extends Activity{
 	public int count = 0;
 	public boolean isLight = false;
 	public boolean isBreak = false;
-	public String[] light = {"9","9", "8"};
+	public String[] light = {"7","7", "7"};
 	public String[] heavy = {"12","12", "10"};
 
 
@@ -64,7 +64,7 @@ public class MainActivity extends Activity{
 		@Override
 		public void run() {
 			SampleBattery();
-			count = (count+1)%600;
+			count = (count+1)%1800;
 			if(count == 0) {
 				isLight = !isLight;
 				isBreak = true;
