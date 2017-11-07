@@ -8,10 +8,12 @@
 import os
 import sys
 import json
+import matplotlib.pyplot as plt
 
 class SplitFixedWindowsTumbling:
     histograms = []
     batteryFrac = []
+    temp_batteryPercent = []
 
     def __init__(self, filename, windowsize, outputfile):
         self.filename = filename
@@ -19,6 +21,8 @@ class SplitFixedWindowsTumbling:
         print(self.window_size)
         self.outputfile = outputfile
 
+    # Just uses window size as a fraction of time over battery drop interval size.
+    # Does not use actor count information
     def getBatteryFracs(self, counts1, prevWindowCounts):
         #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
         effective_counts = prevWindowCounts + counts1
@@ -46,6 +50,46 @@ class SplitFixedWindowsTumbling:
             self.batteryFrac.append(remaining_window_battery_frac)
             remaining_window_start_ind = len(effective_counts) - remaining_window_size
             for ind in range(remaining_window_start_ind, len(effective_counts)):
+                remaining_window.append(effective_counts[ind])
+
+        return remaining_window
+
+    # Accounts for actor counts in windows for computing battery drops
+    def getBatteryFracsActorBased(self, counts1, prevWindowCounts):
+        #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
+        effective_counts = prevWindowCounts + counts1
+
+        intervalTotalActorCount = sum(counts1)
+        prevWindowActorCount = sum(prevWindowCounts)
+
+        possible_windows = (len(effective_counts) // self.window_size)
+
+        # remaining_counts1 is used to get updated list of interval counts
+        # to process, if previous window counts are non-empty
+        remaining_counts1 = counts1
+        if(len(prevWindowCounts) > 0):
+            # We have already accounted for the first window
+            possible_windows -= 1
+            size_in_interval = self.window_size - len(prevWindowCounts)
+            fractionInFirstWindow = sum(counts1[0:size_in_interval])/intervalTotalActorCount
+            firstWindowFrac = self.batteryFrac[-1] + fractionInFirstWindow
+            self.batteryFrac[-1] = firstWindowFrac
+            remaining_counts1 = counts1[size_in_interval:len(counts1)]
+
+        for i in range(0, possible_windows):
+            windowPowerFrac = sum(remaining_counts1[i * self.window_size:(i+1) * self.window_size])/intervalTotalActorCount
+            self.batteryFrac.append(windowPowerFrac)
+
+        remaining_window_size = len(effective_counts) % self.window_size
+        #print("remaining window size:", remaining_window_size)
+        # Capture the remaining actor counts in current battery
+        # drop interval
+        remaining_window = []
+        if(remaining_window_size != 0):
+            startIndx = len(effective_counts) - remaining_window_size
+            remaining_window_battery_frac = sum(effective_counts[startIndx:len(effective_counts)])/intervalTotalActorCount
+            self.batteryFrac.append(remaining_window_battery_frac)
+            for ind in range(startIndx, len(effective_counts)):
                 remaining_window.append(effective_counts[ind])
 
         return remaining_window
@@ -99,6 +143,7 @@ class SplitFixedWindowsTumbling:
                 bat_ind = line.find(text)
                 if(bat_ind != -1):
                     bat = float(line[bat_ind+len(text):].split(' ')[0])
+                    self.temp_batteryPercent.append(bat)
                     if(curr_bat == None): # first iteration
                         curr_bat = bat
                     if(bat < curr_bat):
@@ -116,14 +161,22 @@ class SplitFixedWindowsTumbling:
                     curr.append(num)
         return vals_per_drop
 
+    def temp_plotBatterDrops(self):
+        plt.plot(self.temp_batteryPercent, 'bo')
+        plt.title('BatteryDrop')
+        plt.xlabel('Time')
+        plt.ylabel('Battery drops')
+        plt.show()
+
     def extract_windows(self):
         battery_drops = self.read_file()
+        self.temp_plotBatterDrops()
         # skipping the first index and last index, since they might not be full percent drop
         pending_window = []
         pending_batteryFrac = []
         for ind in range(1, len(battery_drops)-1):
             pending_window = self.splitIntoWindows(battery_drops[ind], pending_window)
-            pending_batteryFrac = self.getBatteryFracs(battery_drops[ind], pending_batteryFrac)
+            pending_batteryFrac = self.getBatteryFracsActorBased(battery_drops[ind], pending_batteryFrac)
         self.write_results()
 
     def write_results(self):
