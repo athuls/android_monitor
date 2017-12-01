@@ -13,6 +13,8 @@ import collections
 from .interface_test import *
 import csv
 
+import matplotlib.pyplot as plt
+
 from pydoc import help
 
 def countsToHists(counts1, counts2, divs, ind):
@@ -83,7 +85,7 @@ def countsToHists(counts1, counts2, divs, ind):
         #################################################################
 
         #print(batteryFrac, batteryPower)
-        histograms.append(HistInfo(hist=dict(hist),batteryfrac=batteryPower, size=(drop1Total - drop1WindowSize + drop2WindowSize)))
+        histograms.append(HistInfo(hist=dict(hist),batteryfrac=batteryFrac, size=(drop1Total - drop1WindowSize + drop2WindowSize)))
         index_1 += int1
         index_2 += int2
     return histograms
@@ -94,12 +96,15 @@ def generatePlotDataForHistProfile(filename, divs):
     curr = []
     curr_bat = None
 
+    batt_vals = []
+
     with open(filename) as fp:
         for line in fp:
             text = "Battery level is "
             bat_ind = line.find(text)
             if(bat_ind != -1):
                 bat = float(line[bat_ind+len(text):].split(' ')[0])
+                batt_vals.append(bat)
                 if(curr_bat == None): # first iteration
                     curr_bat = bat
                 if(bat < curr_bat):
@@ -115,8 +120,61 @@ def generatePlotDataForHistProfile(filename, divs):
                 comma_ind = line.find(',', ind)
                 num = int(line[ind + 8 : comma_ind])
                 curr.append(num)
+    print(len(batt_vals))
+    print(batt_vals)
+
+    curr_inds = [0]
+    curr_vals = [batt_vals[0]]
+    colors = ['b', 'g', 'r', 'c', 'm']
+
+    labeled = [False] * 5
+
+    for i in range(1, len(batt_vals)):
+        if batt_vals[i] != curr_vals[-1]:
+            # Plotting
+            l = len(curr_inds)
+            lab = ""
+            if l > 500:
+                c = 4
+                if not labeled[0]:
+                    labeled[0] = True
+                    lab = "> 500 sec"
+            elif l > 400:
+                c = 3
+                if not labeled[1]:
+                    labeled[1] = True
+                    lab = "400 to 500 sec"
+            elif l > 300:
+                c = 2
+                if not labeled[2]:
+                    labeled[2] = True
+                    lab = "300 to 400 sec"
+            elif l > 200:
+                c = 1
+                if not labeled[3]:
+                    labeled[3] = True
+                    lab = "200 to 300 sec"
+            else:
+                c = 0
+                if not labeled[4]:
+                    labeled[4] = True
+                    lab = "< 200 sec"
+            plt.plot(curr_inds, curr_vals, colors[c], label=lab)
+            curr_inds = [i]
+            curr_vals = [batt_vals[i]]
+
+        else:
+            curr_vals.append(batt_vals[i])
+            curr_inds.append(i)
+
+
+
+    #plt.plot([i for i in range(0, len(batt_vals))], batt_vals)
+    plt.legend()
+    plt.show()
 
     histograms = []
+    print(vals_per_drop)
 
     # skipping the first index, since it might not be full percent drop
     for ind in range(1, len(vals_per_drop)-1):

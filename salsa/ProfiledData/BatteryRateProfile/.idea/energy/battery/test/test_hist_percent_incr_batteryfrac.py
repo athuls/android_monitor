@@ -11,50 +11,108 @@ sys.path.append(moduledirname)
 from histogram import hist_percent_incr_batteryfrac as batt
 from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
+from histogram import hist_percent_incr_batteryfrac_mult as batt2
+
 
 class TestHistogramProfiling(unittest.TestCase):
 
     # This is not for testing, it is run to plot graphs for inferring
     # results from running variable window size approach
-    # def test_runforvariablewindowoutput(self):
-    #     histpowerdata = batt.generatePlotDataForHistProfile('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/Nqueens_heavy.txt', 3)
+    # def test_runforvariablewindowoutputalternating(self):
+    #     histpowerdata = batt2.generatePlotDataForHistProfileMultipleActors('../mobile_logs/log_alt_long.txt', 3)
     #
-    #     # Plot the generated output file
-    #     histchange = [x[0] for x in histpowerdata]
-    #     powerchange = [x[1] for x in histpowerdata]
-    #     sizechange = [x[2] for x in histpowerdata]
-    #     print(pearsonr(histchange,powerchange))
-    #     #print(pearsonr(histchange,sizechange))
-    #     plt.plot(histchange, powerchange, 'bo')
-    #     #plt.plot(histchange, sizechange, 'ro')
-    #     plt.xlabel('Histogram distance measure from a reference')
-    #     plt.ylabel('Corresponding change in power consumption')
-    #     plt.title('NQueens-heavy, window of 3: Variable window size incremental')
-    #     plt.xlabel('Histogram distance measure from a reference')
-    #     plt.ylabel('Corresponding change in power consumption')
+    #     # demo1.Nqueens2 is the heavier run
+    #     for i in range(0, len(histpowerdata["demo1.Nqueens"])):
+    #         histchange1= histpowerdata["demo1.Nqueens"][i][0]
+    #         histchange2= histpowerdata["demo1.Nqueens2"][i][0]
+    #         print(histpowerdata["demo1.Nqueens"][i][1])
+    #         if histchange1 != 0:
+    #             plt.plot(histchange1, histpowerdata["demo1.Nqueens"][i][1], 'bo', c="red")
+    #         elif histchange2 != 0:
+    #             plt.plot(histchange2, histpowerdata["demo1.Nqueens2"][i][1], 'bo', c="blue")
+    #
     #     plt.show()
+
+
+        # Plot the generated output file
+        # histchange = [x[0] for x in histpowerdata]
+        # powerchange = [x[1] for x in histpowerdata]
+        # sizechange = [x[2] for x in histpowerdata]
+        # print(pearsonr(histchange,powerchange))
+        # #print(pearsonr(histchange,sizechange))
+        # plt.plot(histchange, powerchange, 'bo')
+        # #plt.plot(histchange, sizechange, 'ro')
+        # plt.xlabel('Histogram distance measure from a reference')
+        # plt.ylabel('Corresponding change in power consumption')
+        # plt.title('NQueens-heavy_2, window of 5: Variable window size incremental')
+        # plt.xlabel('Histogram distance measure from a reference')
+        # plt.ylabel('Corresponding change in power consumption')
+        # plt.show()
+        # pairs = [(x[0], x[1]) for x in histpowerdata]
+
+    # This is not for testing, it is run to plot graphs for inferring
+    # results from running variable window size approach
+    def test_runforvariablewindowoutput(self):
+        histpowerdata = batt.generatePlotDataForHistProfile('../mobile_logs/log_alt_long.txt', 3)
+
+        # Plot the generated output file
+        histchange = [x[0] for x in histpowerdata]
+        powerchange = [x[1] for x in histpowerdata]
+        sizechange = [x[2] for x in histpowerdata]
+        print(pearsonr(histchange,powerchange))
+        #print(pearsonr(histchange,sizechange))
+        plt.plot(histchange, powerchange, 'bo')
+        #plt.plot(histchange, sizechange, 'ro')
+        plt.xlabel('Histogram distance measure from a reference')
+        plt.ylabel('Corresponding change in power consumption')
+        plt.title('NQueens-heavy_2, window of 5: Variable window size incremental')
+        plt.xlabel('Histogram distance measure from a reference')
+        plt.ylabel('Corresponding change in power consumption')
+        plt.show()
+
+
 
     # This is not for testing, it is run to plot graphs for inferring
     # results from running fixed window size approach
-    def test_runforfixedwindowoutput(self):
-        dir = os.path.dirname(__file__)
-        filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('/home/athuls89/Desktop/OSL/osl/MobileCloud/android_monitor/salsa/ProfiledData/BatteryRateProfile/.idea/energy/battery/mobile_logs/log_alt.txt',3, filename)
-        newSplittingInstance.extract_windows()
-        histpowerprof = interface.generateHistogramPowerInfo(filename)
+    # def test_runforfixedwindowoutput(self):
+    #     dir = os.path.dirname(__file__)
+    #     filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
+    #     newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', 3, filename)
+    #     newSplittingInstance.extract_windows()
+    #     histpowerprof = interface.generateHistogramPowerInfo(filename)
+    #
+    #     # Plot the generated output file
+    #     histchange = [x[0] for x in histpowerprof]
+    #     print(histchange)
+    #     powerchange = [x[1] for x in histpowerprof]
+    #     sizechange = [x[2] for x in histpowerprof]
+    #     print(pearsonr(histchange,powerchange))
+    #     plt.plot(histchange,powerchange, 'bo')
+    #     plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
+    #     plt.xlabel('Histogram distance measure from a reference')
+    #     plt.ylabel('Corresponding change in power consumption')
+    #     print('Plotting data is ready')
+    #
+    #     pairs = [(x[0], x[1]) for x in histpowerprof]
+    #
+    #     for p in pairs:
+    #         print(p)
 
-        # Plot the generated output file
-        histchange = [x[0] for x in histpowerprof]
-        print(histchange)
-        powerchange = [x[1] for x in histpowerprof]
-        sizechange = [x[2] for x in histpowerprof]
-        print(pearsonr(histchange,powerchange))
-        plt.plot(histchange,powerchange, 'bo')
-        plt.title('NQueens-heavy, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
-        plt.xlabel('Histogram distance measure from a reference')
-        plt.ylabel('Corresponding change in power consumption')
-        print('Plotting data is ready')
-        plt.show()
+        # plt.figure()
+        # plt.plot(histchange[0:-5], powerchange[5:], 'bo')
+        # plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
+        # plt.xlabel('Histogram distance measure from a reference')
+        # plt.ylabel('Corresponding change in power consumption')
+        # print('Plotting data is ready')
+        #
+        # plt.figure()
+        # plt.plot(histchange[0:-1], powerchange[1:], 'bo')
+        # plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
+        # plt.xlabel('Histogram distance measure from a reference')
+        # plt.ylabel('Corresponding change in power consumption')
+        # print('Plotting data is ready')
+
+        # plt.show()
 
     # # Test for variable interval histogram generation
     # def test_variablewindowsize(self):
