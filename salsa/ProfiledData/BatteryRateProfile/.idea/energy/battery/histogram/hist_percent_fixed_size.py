@@ -20,6 +20,7 @@ class SplitFixedWindowsTumbling:
         self.window_size = int(windowsize)
         print(self.window_size)
         self.outputfile = outputfile
+        self.battery_drops = None
 
     # Just uses window size as a fraction of time over battery drop interval size.
     # Does not use actor count information
@@ -169,7 +170,7 @@ class SplitFixedWindowsTumbling:
         plt.show()
 
     def extract_windows(self):
-        battery_drops = self.read_file()
+        battery_drops = self.battery_drops = self.read_file()
         self.temp_plotBatterDrops()
         # skipping the first index and last index, since they might not be full percent drop
         pending_window = []

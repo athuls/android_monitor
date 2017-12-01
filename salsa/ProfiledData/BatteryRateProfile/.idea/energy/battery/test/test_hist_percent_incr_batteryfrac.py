@@ -100,17 +100,26 @@ class TestHistogramProfiling(unittest.TestCase):
         m = min(powerchange)
         sections = m / 4
 
+        drop_times = [len(ls) for ls in newSplittingInstance.battery_drops]
+        curr = 0
+        total = 0
 
         for i in range(0, len(histchange)):
             #plt.plot()
-            if powerchange[i] > sections:
+            if drop_times[curr] < 60:
+                plt.scatter([histchange[i]], [powerchange[i]], c='m')
+            elif drop_times[curr] < 70:
                 plt.scatter([histchange[i]], [powerchange[i]], c='r')
-            elif powerchange[i] > 2*sections:
+            elif drop_times[curr] < 80:
                 plt.scatter([histchange[i]], [powerchange[i]], c='g')
-            elif powerchange[i] > 3*sections:
+            elif powerchange[i] < 90:
                 plt.scatter([histchange[i]], [powerchange[i]], c='b')
             else:
                 plt.scatter([histchange[i]], [powerchange[i]], c='y')
+
+            if total + drop_times[curr] == i:
+                total += drop_times[curr]
+                curr += 1
 
 
 
