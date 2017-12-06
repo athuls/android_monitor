@@ -37,8 +37,8 @@ def generateHistogramPowerInfo(filename):
         #print(hists[i])
         # powerChange = abs(float(batteryFrac[i]) - float(batteryFrac[i+1]))
         #powerChange = float(batteryFrac[i]) - float(batteryFrac[i+1])
-        powerChange = float(batteryFrac[i]) - powerreference
-        # powerChange = float(batteryFrac[i]) - 0
+        #powerChange = float(batteryFrac[i]) - powerreference
+        powerChange = float(batteryFrac[i]) - 0
         #histpowerprof.append(HistPowerProfile(histchange=simple_difference(hists[i], hists[i+1]), powerchange=powerChange, size=sizes[i]))
         histchange = simple_difference(hists[i], histreference)
         histdifferences.append(histchange)
@@ -63,7 +63,7 @@ def generateHistogramPowerInfo(filename):
     #print(maxDistHist)
     # print("[max power] Battery drop interval", maxSize)
     # print("max hist interval index " + str(maxi))
-    minHist_as_list = convertToList(minDistHist)
+    #minHist_as_list = convertToList(minDistHist)
     #print(minDistHist)
     # print("[min power] Battery drop interval", minSize)
     # print("min hist interval index " + str(mini))
@@ -78,12 +78,12 @@ def generateHistogramPowerInfo(filename):
     #################################################################
 
     #plt.hist([histreference_as_list, maxHist_as_list, minHist_as_list])
-    plt.hist([maxHist_as_list, minHist_as_list])
-    plt.xlabel('Value')
-    plt.ylabel('Frequency')
-    fig = plt.gcf()
+    #plt.hist([maxHist_as_list, minHist_as_list])
+    #plt.xlabel('Value')
+    #plt.ylabel('Frequency')
+    #fig = plt.gcf()
     #plot_url = py.plotly.plot_mpl(fig, filename='mpl-basic-histogram')
-    plt.show()
+    #plt.show()
 
     #print(minDistHist)
     #print(minpower)

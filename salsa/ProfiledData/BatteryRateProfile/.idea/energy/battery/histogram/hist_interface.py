@@ -52,7 +52,7 @@ def simple_difference(hist_1, hist_2):
     for key in hist_1:
         # val += abs(hist_1[key] - hist_2[key])
         # if(key != 0):
-            val += key * (hist_1[key] - hist_2[key])
+            val += key * hist_1[key]
         #     val += abs(hist_1[key] - hist_2[key]) * (key)
             #val += hist_1[key] - hist_2[key]
             #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))

@@ -77,13 +77,12 @@ class TestHistogramProfiling(unittest.TestCase):
     def test_runforfixedwindowoutput(self):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', 3, filename)
+        in_window_size = 5
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/log_fib.txt', in_window_size, filename)
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
         # Plot the generated output file
-
-
         histchange = [x[0] for x in histpowerprof]
         powerchange = [x[1] for x in histpowerprof]
         sizechange = [x[2] for x in histpowerprof]
@@ -105,26 +104,63 @@ class TestHistogramProfiling(unittest.TestCase):
         total = 0
 
         for i in range(0, len(histchange)):
-            #plt.plot()
-            if drop_times[curr] < 60:
-                plt.scatter([histchange[i]], [powerchange[i]], c='m')
-            elif drop_times[curr] < 70:
-                plt.scatter([histchange[i]], [powerchange[i]], c='r')
-            elif drop_times[curr] < 80:
-                plt.scatter([histchange[i]], [powerchange[i]], c='g')
-            elif powerchange[i] < 90:
-                plt.scatter([histchange[i]], [powerchange[i]], c='b')
-            else:
-                plt.scatter([histchange[i]], [powerchange[i]], c='y')
+            if(histchange[i] <= 1.8 and powerchange[i] <= 0.1):
+                #plt.plot()
+                if float(sizechange[i]) < 125:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='blue')
+                elif float(sizechange[i]) < 250:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='green')
+                elif float(sizechange[i]) < 375:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='pink')
+                elif float(sizechange[i]) < 500:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='orange')
+                elif float(sizechange[i]) < 625:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='red')
+                elif float(sizechange[i]) < 750:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='purple')
+                    # print("")
+                elif float(sizechange[i]) < 875:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='gold')
+                    # print("")
+                elif float(sizechange[i]) < 1000:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='brown')
+                else:
+                    plt.scatter([histchange[i]], [powerchange[i]], c='black')
 
-            if total + drop_times[curr] == i:
-                total += drop_times[curr]
-                curr += 1
-
-
+                print(sizechange[i])
+                if total + drop_times[curr] == i:
+                    total += drop_times[curr]
+                    curr += 1
 
         plt.show()
 
+        # for i in range(0, len(histchange)):
+        #     #plt.plot()
+        #     if drop_times[curr] < 60:
+        #         # plt.scatter([histchange[i]], [powerchange[i]], c='m')
+        #         print("")
+        #     elif drop_times[curr] < 70:
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='r')
+        #         print("")
+        #     elif drop_times[curr] < 80:
+        #         # plt.scatter([histchange[i]], [powerchange[i]], c='g')
+        #         print("")
+        #     elif drop_times[curr] < 85:
+        #         plt.scatter([histchange[i]], [powerchange[i]], c='g')
+        #         # print("")
+        #     elif drop_times[curr] < 88:
+        #         plt.scatter([histchange[i]], [powerchange[i]], c='r')
+        #         # print("")
+        #     elif drop_times[curr] < 90:
+        #         # plt.scatter([histchange[i]], [powerchange[i]], c='r')
+        #         print("")
+        #     else:
+        #         plt.scatter([histchange[i]], [powerchange[i]], c='y')
+        #
+        #     print(in_window_size, total + drop_times[curr], i)
+        #     if total + drop_times[curr] == i:
+        #         total += drop_times[curr]
+        #         curr += 1
 
         # plt.figure()
         # plt.plot(histchange[0:-1], powerchange[1:], 'bo')

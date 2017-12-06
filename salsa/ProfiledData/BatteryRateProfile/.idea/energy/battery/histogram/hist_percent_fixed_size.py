@@ -9,6 +9,9 @@ import os
 import sys
 import json
 import matplotlib.pyplot as plt
+import collections
+
+HistWithBatteryDrop = collections.namedtuple('HistWithBatteryDrop', ['power','intervalsize'])
 
 class SplitFixedWindowsTumbling:
     histograms = []
@@ -60,6 +63,8 @@ class SplitFixedWindowsTumbling:
         #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
         effective_counts = prevWindowCounts + counts1
 
+        len_battery_interval = len(counts1)
+
         intervalTotalActorCount = sum(counts1)
         prevWindowActorCount = sum(prevWindowCounts)
 
@@ -73,13 +78,15 @@ class SplitFixedWindowsTumbling:
             possible_windows -= 1
             size_in_interval = self.window_size - len(prevWindowCounts)
             fractionInFirstWindow = sum(counts1[0:size_in_interval])/intervalTotalActorCount
-            firstWindowFrac = self.batteryFrac[-1] + fractionInFirstWindow
-            self.batteryFrac[-1] = firstWindowFrac
+            firstWindowFrac = self.batteryFrac[-1].power + fractionInFirstWindow
+            self.batteryFrac[-1]._replace(power=firstWindowFrac)
+            self.batteryFrac[-1]._replace(intervalsize=intervalTotalActorCount)
             remaining_counts1 = counts1[size_in_interval:len(counts1)]
 
         for i in range(0, possible_windows):
             windowPowerFrac = sum(remaining_counts1[i * self.window_size:(i+1) * self.window_size])/intervalTotalActorCount
-            self.batteryFrac.append(windowPowerFrac)
+            # self.batteryFrac.append(windowPowerFrac)
+            self.batteryFrac.append(HistWithBatteryDrop(power=windowPowerFrac, intervalsize=intervalTotalActorCount))
 
         remaining_window_size = len(effective_counts) % self.window_size
         #print("remaining window size:", remaining_window_size)
@@ -89,7 +96,8 @@ class SplitFixedWindowsTumbling:
         if(remaining_window_size != 0):
             startIndx = len(effective_counts) - remaining_window_size
             remaining_window_battery_frac = sum(effective_counts[startIndx:len(effective_counts)])/intervalTotalActorCount
-            self.batteryFrac.append(remaining_window_battery_frac)
+            # self.batteryFrac.append(remaining_window_battery_frac)
+            self.batteryFrac.append(HistWithBatteryDrop(power=remaining_window_battery_frac, intervalsize=intervalTotalActorCount))
             for ind in range(startIndx, len(effective_counts)):
                 remaining_window.append(effective_counts[ind])
 
@@ -171,24 +179,26 @@ class SplitFixedWindowsTumbling:
 
     def extract_windows(self):
         battery_drops = self.battery_drops = self.read_file()
-        self.temp_plotBatterDrops()
+        #self.temp_plotBatterDrops()
         # skipping the first index and last index, since they might not be full percent drop
         pending_window = []
         pending_batteryFrac = []
         for ind in range(1, len(battery_drops)-1):
-            pending_window = self.splitIntoWindows(battery_drops[ind], pending_window)
-            pending_batteryFrac = self.getBatteryFracsActorBased(battery_drops[ind], pending_batteryFrac)
+            total_actor_count = sum(battery_drops[ind])
+            if(total_actor_count != 0):
+                pending_window = self.splitIntoWindows(battery_drops[ind], pending_window)
+                pending_batteryFrac = self.getBatteryFracsActorBased(battery_drops[ind], pending_batteryFrac)
         self.write_results()
 
     def write_results(self):
         with open(self.outputfile, 'w+') as outfile:
             for i in range(0, len(self.histograms)):
                 outfile.write(json.dumps(self.histograms[i]))
-                powerVal = self.batteryFrac[i] / self.window_size
+                powerVal = self.batteryFrac[i].power / self.window_size
                 outfile.write("\t" + str(json.dumps(powerVal)))
-
+                outfile.write("\t" + str(json.dumps(self.batteryFrac[i].intervalsize)))
                 # Write dummy size value
-                outfile.write("\t" + str(0))
+                #outfile.write("\t" + str(0))
                 outfile.write("\n")
 
 
