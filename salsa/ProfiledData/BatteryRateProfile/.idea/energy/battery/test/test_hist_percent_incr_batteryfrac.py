@@ -4,6 +4,7 @@ import os
 import filecmp
 from scipy.stats.stats import pearsonr
 import matplotlib.pyplot as plt
+import numpy as np
 dir = os.path.dirname(__file__)
 moduledirname = os.path.join(dir, '../../battery')
 sys.path.append(moduledirname)
@@ -12,7 +13,6 @@ from histogram import hist_percent_incr_batteryfrac as batt
 from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
 from histogram import hist_percent_incr_batteryfrac_mult as batt2
-
 
 class TestHistogramProfiling(unittest.TestCase):
 
@@ -78,7 +78,7 @@ class TestHistogramProfiling(unittest.TestCase):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
         in_window_size = 5
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/log_fib.txt', in_window_size, filename)
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename)
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -86,7 +86,7 @@ class TestHistogramProfiling(unittest.TestCase):
         histchange = [x[0] for x in histpowerprof]
         powerchange = [x[1] for x in histpowerprof]
         sizechange = [x[2] for x in histpowerprof]
-        print(pearsonr(histchange,powerchange))
+        # print(pearsonr(histchange,powerchange))
 
 
         #plt.plot(histchange, powerchange, 'bo')
@@ -94,7 +94,7 @@ class TestHistogramProfiling(unittest.TestCase):
         plt.xlabel('Histogram distance measure from a reference')
         plt.ylabel('Corresponding change in power consumption')
         print('Plotting data is ready')
-        print(powerchange)
+        # print(powerchange)
 
         m = min(powerchange)
         sections = m / 4
@@ -104,34 +104,39 @@ class TestHistogramProfiling(unittest.TestCase):
         total = 0
 
         for i in range(0, len(histchange)):
-            if(histchange[i] <= 1.8 and powerchange[i] <= 0.1):
-                #plt.plot()
-                if float(sizechange[i]) < 125:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='blue')
-                elif float(sizechange[i]) < 250:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='green')
-                elif float(sizechange[i]) < 375:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='pink')
-                elif float(sizechange[i]) < 500:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='orange')
-                elif float(sizechange[i]) < 625:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='red')
-                elif float(sizechange[i]) < 750:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='purple')
-                    # print("")
-                elif float(sizechange[i]) < 875:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='gold')
-                    # print("")
-                elif float(sizechange[i]) < 1000:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='brown')
-                else:
-                    plt.scatter([histchange[i]], [powerchange[i]], c='black')
+            print(histchange[i])
+            # if(histchange[i] <= 2.2 and powerchange[i] <= 0.1):
+            #plt.plot()
+            if float(sizechange[i]) < 125:
+                plt.scatter([histchange[i]], [powerchange[i]], c='blue')
+            elif float(sizechange[i]) < 250:
+                plt.scatter([histchange[i]], [powerchange[i]], c='green')
+            elif float(sizechange[i]) < 375:
+                plt.scatter([histchange[i]], [powerchange[i]], c='pink')
+            elif float(sizechange[i]) < 500:
+                plt.scatter([histchange[i]], [powerchange[i]], c='orange')
+            elif float(sizechange[i]) < 625:
+                plt.scatter([histchange[i]], [powerchange[i]], c='red')
+            elif float(sizechange[i]) < 750:
+                plt.scatter([histchange[i]], [powerchange[i]], c='purple')
+                # print("")
+            elif float(sizechange[i]) < 875:
+                plt.scatter([histchange[i]], [powerchange[i]], c='gold')
+                # print("")
+            elif float(sizechange[i]) < 1000:
+                plt.scatter([histchange[i]], [powerchange[i]], c='brown')
+            else:
+                plt.scatter([histchange[i]], [powerchange[i]], c='black')
 
-                print(sizechange[i])
+                # print(sizechange[i])
                 if total + drop_times[curr] == i:
                     total += drop_times[curr]
                     curr += 1
-
+                    
+        m, b = np.polyfit(histchange, powerchange, 1)
+        print(m,b)
+        x = np.array([min(histchange), max(histchange)])
+        plt.plot(x, m*x + b, '-')
         plt.show()
 
         # for i in range(0, len(histchange)):

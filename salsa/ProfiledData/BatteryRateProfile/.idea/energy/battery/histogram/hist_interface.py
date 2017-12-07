@@ -18,15 +18,29 @@ def getHistosFromFile(filename):
 
 def normalize_histos(dict_hists):
     maxi = 0
+    sum_actors = []
     for i in range(0, len(dict_hists)):
+        sum_actors_hist = 0
         for key in dict_hists[i]:
+            sum_actors_hist += dict_hists[i][key]
             if(key > maxi):
                 maxi = key
+        sum_actors.append(sum_actors_hist)
+
     for i in range(0, len(dict_hists)):
         for j in range(0, maxi+1):
             if(j not in dict_hists[i]):
                 dict_hists[i][j] = 0
-    return dict_hists
+
+    # Now we convert the frequencies to probabilities for #actors
+    dict_hists_temp = []
+    for i in range(0, len(dict_hists)):
+        hist_temp = {}
+        for j in range(0, maxi+1):
+            hist_temp[j] = dict_hists[i][j]/sum_actors[i]
+        dict_hists_temp.append(dict(hist_temp))
+
+    return dict_hists_temp
 
 def simple_window_size(hist_1, hist_2):
     val = 0
@@ -57,8 +71,8 @@ def simple_difference(hist_1, hist_2):
             #val += hist_1[key] - hist_2[key]
             #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
             total += 1.0
-    #return val / total
-    return val/total
+    #return val/total
+    return val
 
 def simple_variance(hist_1, hist_2):
     total = 0
