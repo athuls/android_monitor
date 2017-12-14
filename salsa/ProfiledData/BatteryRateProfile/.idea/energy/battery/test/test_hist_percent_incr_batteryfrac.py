@@ -103,41 +103,74 @@ class TestHistogramProfiling(unittest.TestCase):
         curr = 0
         total = 0
 
-        for i in range(0, len(histchange)):
-            print(histchange[i])
-            # if(histchange[i] <= 2.2 and powerchange[i] <= 0.1):
-            #plt.plot()
-            if float(sizechange[i]) < 125:
-                plt.scatter([histchange[i]], [powerchange[i]], c='blue')
-            elif float(sizechange[i]) < 250:
-                plt.scatter([histchange[i]], [powerchange[i]], c='green')
-            elif float(sizechange[i]) < 375:
-                plt.scatter([histchange[i]], [powerchange[i]], c='pink')
-            elif float(sizechange[i]) < 500:
-                plt.scatter([histchange[i]], [powerchange[i]], c='orange')
-            elif float(sizechange[i]) < 625:
-                plt.scatter([histchange[i]], [powerchange[i]], c='red')
-            elif float(sizechange[i]) < 750:
-                plt.scatter([histchange[i]], [powerchange[i]], c='purple')
-                # print("")
-            elif float(sizechange[i]) < 875:
-                plt.scatter([histchange[i]], [powerchange[i]], c='gold')
-                # print("")
-            elif float(sizechange[i]) < 1000:
-                plt.scatter([histchange[i]], [powerchange[i]], c='brown')
-            else:
-                plt.scatter([histchange[i]], [powerchange[i]], c='black')
 
-                # print(sizechange[i])
-                if total + drop_times[curr] == i:
-                    total += drop_times[curr]
-                    curr += 1
-                    
-        m, b = np.polyfit(histchange, powerchange, 1)
+        norms = [histchange[i]/float(sizechange[i]) for i in range(len(histchange))]
+
+        plt.scatter(norms, powerchange)
+        m, b = np.polyfit(norms, powerchange, 1)
         print(m,b)
-        x = np.array([min(histchange), max(histchange)])
-        plt.plot(x, m*x + b, '-')
         plt.show()
+
+        # lines_x = [ [] for i in range(0,9)]
+        # lines_y = [ [] for i in range(0,9)]
+        # colors = ['blue', 'green', 'pink', 'orange', 'red', 'purple', 'gold', 'brown', 'black']
+        #
+
+        # for i in range(0, len(histchange)):
+        #     print(histchange[i])
+        #     print(curr)
+        #     if(histchange[i] <= 2.2 and powerchange[i] <= 0.1):
+        #     plt.plot()
+        #     if float(sizechange[i]) < 125:
+        #         lines_x[0].append(histchange[i])
+        #         lines_y[0].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='blue')
+        #     elif float(sizechange[i]) < 250:
+        #         lines_x[1].append(histchange[i])
+        #         lines_y[1].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='green')
+        #     elif float(sizechange[i]) < 375:
+        #         lines_x[2].append(histchange[i])
+        #         lines_y[2].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='pink')
+        #     elif float(sizechange[i]) < 500:
+        #         lines_x[3].append(histchange[i])
+        #         lines_y[3].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='orange')
+        #     elif float(sizechange[i]) < 625:
+        #         lines_x[4].append(histchange[i])
+        #         lines_y[4].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='red')
+        #     elif float(sizechange[i]) < 750:
+        #         lines_x[5].append(histchange[i])
+        #         lines_y[5].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='purple')
+        #     elif float(sizechange[i]) < 875:
+        #         lines_x[6].append(histchange[i])
+        #         lines_y[6].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='gold')
+        #     elif float(sizechange[i]) < 1000:
+        #         lines_x[7].append(histchange[i])
+        #         lines_y[7].append(powerchange[i])
+        #         #plt.scatter([histchange[i]], [powerchange[i]], c='brown')
+        #     else:
+        #         lines_x[8].append(histchange[i])
+        #         lines_y[8].append(powerchange[i])
+        #         plt.scatter([histchange[i]], [powerchange[i]], c='black')
+        #
+        #
+        # for i in range(0,9):
+        #     if len(lines_x[i]) > 0:
+        #         plt.scatter(lines_x[i], lines_y[i], c=colors[i])
+        #         m, b = np.polyfit(lines_x[i], lines_y[i], 1)
+        #         print(m,b)
+        #
+        #
+        # # m, b = np.polyfit(histchange, powerchange, 1)
+        # # print(m,b)
+        # # x = np.array([min(histchange), max(histchange)])
+        # # plt.plot(x, m*x + b, '-')
+        # plt.show()
 
         # for i in range(0, len(histchange)):
         #     #plt.plot()
