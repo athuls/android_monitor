@@ -18,12 +18,14 @@ class SplitFixedWindowsTumbling:
     batteryFrac = []
     temp_batteryPercent = []
 
-    def __init__(self, filename, windowsize, outputfile):
+    def __init__(self, filename, windowsize, outputfile, range=(-1,1.0)):
         self.filename = filename
         self.window_size = int(windowsize)
         print(self.window_size)
         self.outputfile = outputfile
         self.battery_drops = None
+        self.low = range[0]
+        self.high = range[1]
 
     # Just uses window size as a fraction of time over battery drop interval size.
     # Does not use actor count information
@@ -148,10 +150,16 @@ class SplitFixedWindowsTumbling:
         vals_per_drop = []
         with open(self.filename) as fp:
             for line in fp:
+                print("curr_bat", curr_bat)
                 text = "Battery level is "
                 bat_ind = line.find(text)
                 if(bat_ind != -1):
                     bat = float(line[bat_ind+len(text):].split(' ')[0])
+                    if bat >= self.high:
+                        continue
+                    if bat <= self.low:
+                        break
+
                     self.temp_batteryPercent.append(bat)
                     if(curr_bat == None): # first iteration
                         curr_bat = bat
@@ -168,6 +176,9 @@ class SplitFixedWindowsTumbling:
                     comma_ind = line.find(',', ind)
                     num = int(line[ind + 8 : comma_ind])
                     curr.append(num)
+        vals_per_drop.append(curr)
+        print("vals", vals_per_drop)
+        print(len(vals_per_drop))
         return vals_per_drop
 
     def temp_plotBatterDrops(self):

@@ -77,8 +77,8 @@ class TestHistogramProfiling(unittest.TestCase):
     def test_runforfixedwindowoutput(self):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        in_window_size = 5
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename)
+        in_window_size = 1
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.55,.60))
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -88,6 +88,8 @@ class TestHistogramProfiling(unittest.TestCase):
         sizechange = [x[2] for x in histpowerprof]
         # print(pearsonr(histchange,powerchange))
 
+
+        print("Total power calculated: ", sum(powerchange)*in_window_size)
 
         #plt.plot(histchange, powerchange, 'bo')
         plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
