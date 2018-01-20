@@ -85,6 +85,8 @@ class TestHistogramProfiling(unittest.TestCase):
         # Plot the generated output file
         histchange = [x[0] for x in histpowerprof]
         powerchange = [x[1] for x in histpowerprof]
+        totalpower = sum(powerchange)
+        print("Total power is " + str(totalpower))
         sizechange = [x[2] for x in histpowerprof]
         # print(pearsonr(histchange,powerchange))
 
@@ -104,11 +106,11 @@ class TestHistogramProfiling(unittest.TestCase):
         curr = 0
         total = 0
 
-
         norms = [histchange[i]/float(sizechange[i]) for i in range(len(histchange))]
 
         plt.scatter(norms, powerchange)
         m, b = np.polyfit(norms, powerchange, 1)
+
         print(m,b)
         plt.show()
 

@@ -21,7 +21,6 @@ class SplitFixedWindowsTumbling:
     def __init__(self, filename, windowsize, outputfile, range=(-1,1.0)):
         self.filename = filename
         self.window_size = int(windowsize)
-        print(self.window_size)
         self.outputfile = outputfile
         self.battery_drops = None
         self.low = range[0]
@@ -62,6 +61,7 @@ class SplitFixedWindowsTumbling:
 
     # Accounts for actor counts in windows for computing battery drops
     def getBatteryFracsActorBased(self, counts1, prevWindowCounts):
+        sumInInterval = 0
         #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
         effective_counts = prevWindowCounts + counts1
 
@@ -81,12 +81,14 @@ class SplitFixedWindowsTumbling:
             size_in_interval = self.window_size - len(prevWindowCounts)
             fractionInFirstWindow = sum(counts1[0:size_in_interval])/intervalTotalActorCount
             firstWindowFrac = self.batteryFrac[-1].power + fractionInFirstWindow
+            sumInInterval += firstWindowFrac
             self.batteryFrac[-1]._replace(power=firstWindowFrac)
             self.batteryFrac[-1]._replace(intervalsize=intervalTotalActorCount)
             remaining_counts1 = counts1[size_in_interval:len(counts1)]
 
         for i in range(0, possible_windows):
             windowPowerFrac = sum(remaining_counts1[i * self.window_size:(i+1) * self.window_size])/intervalTotalActorCount
+            sumInInterval += windowPowerFrac
             # self.batteryFrac.append(windowPowerFrac)
             self.batteryFrac.append(HistWithBatteryDrop(power=windowPowerFrac, intervalsize=intervalTotalActorCount))
 
@@ -102,6 +104,8 @@ class SplitFixedWindowsTumbling:
             self.batteryFrac.append(HistWithBatteryDrop(power=remaining_window_battery_frac, intervalsize=intervalTotalActorCount))
             for ind in range(startIndx, len(effective_counts)):
                 remaining_window.append(effective_counts[ind])
+
+        print("Interval power is " + str(sumInInterval))
 
         return remaining_window
 

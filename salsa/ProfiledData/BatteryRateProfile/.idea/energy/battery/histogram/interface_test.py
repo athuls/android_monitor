@@ -57,8 +57,8 @@ def generateHistogramPowerInfo(filename):
     print("Maximum histogram\n")
     #print([len(list(group)) for key, group in groupby(histdifferences)])
     histdifferencessorted = sorted(histdifferences)
-    for i in range(1, len(histdifferencessorted)):
-        print(histdifferencessorted[i] - histdifferencessorted[i-1])
+    # for i in range(1, len(histdifferencessorted)):
+    #     print(histdifferencessorted[i] - histdifferencessorted[i-1])
     #histreference_as_list = convertToList(histreference)
     maxHist_as_list = convertToList(maxDistHist)
     #print(maxDistHist)
@@ -85,9 +85,4 @@ def generateHistogramPowerInfo(filename):
     #fig = plt.gcf()
     #plot_url = py.plotly.plot_mpl(fig, filename='mpl-basic-histogram')
     #plt.show()
-
-    #print(minDistHist)
-    #print(minpower)
-    #print(maxDistHist)
-    #print(maxpower)
     return histpowerprof
