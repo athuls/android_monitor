@@ -17,7 +17,6 @@ def generateHistogramPowerInfo(filename):
     batteryFrac = [x[1] for x in histsInfo]
     sizes = [x[2] for x in histsInfo]
 
-
     for i in range(0, len(hists)):
         hists[i] = {int(k):int(v) for k,v in hists[i].items()}
     hists = normalize_histos(hists)
@@ -26,7 +25,7 @@ def generateHistogramPowerInfo(filename):
     histreference = hists[0]
     maxpower=0
     maxDistHist=None
-    minpower = float(batteryFrac[30])
+    minpower = float(batteryFrac[0])
     minDistHist=None
     maxSize=0
     minSize=0
