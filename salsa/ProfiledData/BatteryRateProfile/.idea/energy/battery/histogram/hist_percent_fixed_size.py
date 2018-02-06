@@ -10,7 +10,11 @@ import sys
 import json
 import matplotlib.pyplot as plt
 import collections
+from numpy import *
 
+# TODO: We are losing accuracy for power as soon as we add the power values into this tuple
+# This is due to floating point precision and causes the observed error in actual and estimated
+# battery drop interval sizes
 HistWithBatteryDrop = collections.namedtuple('HistWithBatteryDrop', ['power','intervalsize'])
 
 class SplitFixedWindowsTumbling:
@@ -21,11 +25,14 @@ class SplitFixedWindowsTumbling:
     def __init__(self, filename, windowsize, outputfile, range=(-1,1.0)):
         self.filename = filename
         self.window_size = int(windowsize)
-        print(self.window_size)
         self.outputfile = outputfile
         self.battery_drops = None
         self.low = range[0]
         self.high = range[1]
+        self.final_residue = 0
+
+        # Stores the individual window power values for battery estimate validaton purposes
+        self.validation_drop_list = []
 
     # Just uses window size as a fraction of time over battery drop interval size.
     # Does not use actor count information
@@ -62,6 +69,7 @@ class SplitFixedWindowsTumbling:
 
     # Accounts for actor counts in windows for computing battery drops
     def getBatteryFracsActorBased(self, counts1, prevWindowCounts):
+        sumInInterval = 0
         #print("Window size and prev window count ", len(counts1), len(prevWindowCounts))
         effective_counts = prevWindowCounts + counts1
 
@@ -83,15 +91,17 @@ class SplitFixedWindowsTumbling:
             firstWindowFrac = self.batteryFrac[-1].power + fractionInFirstWindow
             self.batteryFrac[-1]._replace(power=firstWindowFrac)
             self.batteryFrac[-1]._replace(intervalsize=intervalTotalActorCount)
+            # self.validation_drop_list.append(self.batteryFrac[-1][0])
             remaining_counts1 = counts1[size_in_interval:len(counts1)]
 
         for i in range(0, possible_windows):
             windowPowerFrac = sum(remaining_counts1[i * self.window_size:(i+1) * self.window_size])/intervalTotalActorCount
             # self.batteryFrac.append(windowPowerFrac)
             self.batteryFrac.append(HistWithBatteryDrop(power=windowPowerFrac, intervalsize=intervalTotalActorCount))
+            # self.validation_drop_list.append(self.batteryFrac[-1][0])
 
         remaining_window_size = len(effective_counts) % self.window_size
-        #print("remaining window size:", remaining_window_size)
+
         # Capture the remaining actor counts in current battery
         # drop interval
         remaining_window = []
@@ -99,6 +109,7 @@ class SplitFixedWindowsTumbling:
             startIndx = len(effective_counts) - remaining_window_size
             remaining_window_battery_frac = sum(effective_counts[startIndx:len(effective_counts)])/intervalTotalActorCount
             # self.batteryFrac.append(remaining_window_battery_frac)
+            self.final_residue = remaining_window_battery_frac * self.window_size
             self.batteryFrac.append(HistWithBatteryDrop(power=remaining_window_battery_frac, intervalsize=intervalTotalActorCount))
             for ind in range(startIndx, len(effective_counts)):
                 remaining_window.append(effective_counts[ind])
@@ -150,7 +161,6 @@ class SplitFixedWindowsTumbling:
         vals_per_drop = []
         with open(self.filename) as fp:
             for line in fp:
-                print("curr_bat", curr_bat)
                 text = "Battery level is "
                 bat_ind = line.find(text)
                 if(bat_ind != -1):
@@ -177,8 +187,6 @@ class SplitFixedWindowsTumbling:
                     num = int(line[ind + 8 : comma_ind])
                     curr.append(num)
         vals_per_drop.append(curr)
-        print("vals", vals_per_drop)
-        print(len(vals_per_drop))
         return vals_per_drop
 
     def temp_plotBatterDrops(self):
@@ -194,6 +202,7 @@ class SplitFixedWindowsTumbling:
         # skipping the first index and last index, since they might not be full percent drop
         pending_window = []
         pending_batteryFrac = []
+        print("Actual battery drop length or energy " + str(len(battery_drops) - 2))
         for ind in range(1, len(battery_drops)-1):
             total_actor_count = sum(battery_drops[ind])
             if(total_actor_count != 0):
@@ -207,7 +216,7 @@ class SplitFixedWindowsTumbling:
                 outfile.write(json.dumps(self.histograms[i]))
                 powerVal = self.batteryFrac[i].power / self.window_size
                 outfile.write("\t" + str(json.dumps(powerVal)))
-                outfile.write("\t" + str(json.dumps(self.batteryFrac[i].intervalsize)))
+                outfile.write("\t" + str(json.dumps(int(self.batteryFrac[i].intervalsize))))
                 # Write dummy size value
                 #outfile.write("\t" + str(0))
                 outfile.write("\n")

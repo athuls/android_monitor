@@ -37,6 +37,7 @@ def normalize_histos(dict_hists):
     for i in range(0, len(dict_hists)):
         hist_temp = {}
         for j in range(0, maxi+1):
+            # print(sum_actors[i])
             hist_temp[j] = dict_hists[i][j]/sum_actors[i]
         dict_hists_temp.append(dict(hist_temp))
 

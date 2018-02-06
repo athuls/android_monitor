@@ -240,11 +240,13 @@ class TestHistogramProfiling(unittest.TestCase):
         # Plot the generated output file
         histchange = [x[0] for x in histpowerprof]
         powerchange = [x[1] for x in histpowerprof]
+        totalpower = sum(powerchange)
+        print("Total power is " + str(totalpower))
         sizechange = [x[2] for x in histpowerprof]
         # print(pearsonr(histchange,powerchange))
 
 
-        print("Total power calculated: ", sum(powerchange)*in_window_size)
+        print("Total energy calculated: ", sum(powerchange)*in_window_size)
 
         #plt.plot(histchange, powerchange, 'bo')
         plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
