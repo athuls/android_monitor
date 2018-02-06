@@ -14,6 +14,121 @@ from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
 from histogram import hist_percent_incr_batteryfrac_mult as batt2
 
+def predict(histchange, powerchange, sizechange, m, b):
+    errors = []
+    for i in range(0, len(histchange)):
+        if sizechange[i] == 0:
+            errors.append("no size change")
+            continue
+        prediction = (m * histchange[i] + b)/float(sizechange[i])
+        if powerchange[i] != 0:
+            errors.append("REL: " + str(abs(prediction - powerchange[i])/powerchange[i]))
+        else:
+            errors.append("ABS: " + str(abs(prediction - powerchange[i])))
+
+
+
+    # errors = []
+    # for i in range(0, len(histchange)):
+    #     if float(sizechange[i]) < 125 and slopes[0]:
+    #         prediction = slopes[0] * histchange[i] + intercepts[0]
+    #     elif float(sizechange[i]) < 250 and slopes[1]:
+    #         prediction = slopes[1] * histchange[i] + intercepts[1]
+    #     elif float(sizechange[i]) < 375 and slopes[2]:
+    #         prediction = slopes[2] * histchange[i] + intercepts[2]
+    #     elif float(sizechange[i]) < 500 and slopes[3]:
+    #         prediction = slopes[3] * histchange[i] + intercepts[3]
+    #     elif float(sizechange[i]) < 625 and slopes[4]:
+    #         prediction = slopes[4] * histchange[i] + intercepts[4]
+    #     elif float(sizechange[i]) < 750 and slopes[5]:
+    #         prediction = slopes[5] * histchange[i] + intercepts[5]
+    #     elif float(sizechange[i]) < 875 and slopes[6]:
+    #         prediction = slopes[6] * histchange[i] + intercepts[6]
+    #     elif float(sizechange[i]) < 1000 and slopes[7]:
+    #         prediction = slopes[7] * histchange[i] + intercepts[7]
+    #     elif slopes[8]:
+    #         prediction = slopes[8] * histchange[i] + intercepts[8]
+    #     else:
+    #         prediction = None
+    #     if not prediction:
+    #         errors.append("No prediction")
+    #     if powerchange[i] == 0:
+    #         errors.append("powerchange 0, abs error printed: "+str(prediction))
+    #     else:
+    #         val = (prediction, powerchange[i], abs(prediction - powerchange[i])/powerchange[i])
+    #
+    #         errors.append(val)
+
+    return errors
+
+def get_predictors(histchange, powerchange, sizechange):
+    powernorm = [powerchange[i]*float(sizechange[i]) for i in range(len(powerchange))]
+
+    plt.scatter(histchange, powernorm)
+    m, b = np.polyfit(histchange, powernorm, 1)
+    print(m,b)
+    plt.show()
+    return m, b
+
+
+    # lines_x = [ [] for i in range(0,9)]
+    # lines_y = [ [] for i in range(0,9)]
+    # slopes = [ None for i in range(0,9)]
+    # intercepts = [ None for i in range(0,9)]
+    #
+    # colors = ['blue', 'green', 'pink', 'orange', 'red', 'purple', 'gold', 'brown', 'black']
+    #
+    # for i in range(0, len(histchange)):
+    #     if float(sizechange[i]) < 125:
+    #         lines_x[0].append(histchange[i])
+    #         lines_y[0].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='blue')
+    #     elif float(sizechange[i]) < 250:
+    #         lines_x[1].append(histchange[i])
+    #         lines_y[1].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='green')
+    #     elif float(sizechange[i]) < 375:
+    #         lines_x[2].append(histchange[i])
+    #         lines_y[2].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='pink')
+    #     elif float(sizechange[i]) < 500:
+    #         lines_x[3].append(histchange[i])
+    #         lines_y[3].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='orange')
+    #     elif float(sizechange[i]) < 625:
+    #         lines_x[4].append(histchange[i])
+    #         lines_y[4].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='red')
+    #     elif float(sizechange[i]) < 750:
+    #         lines_x[5].append(histchange[i])
+    #         lines_y[5].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='purple')
+    #     elif float(sizechange[i]) < 875:
+    #         lines_x[6].append(histchange[i])
+    #         lines_y[6].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='gold')
+    #     elif float(sizechange[i]) < 1000:
+    #         lines_x[7].append(histchange[i])
+    #         lines_y[7].append(powerchange[i])
+    #         #plt.scatter([histchange[i]], [powerchange[i]], c='brown')
+    #     else:
+    #         lines_x[8].append(histchange[i])
+    #         lines_y[8].append(powerchange[i])
+    #         plt.scatter([histchange[i]], [powerchange[i]], c='black')
+    #
+    #
+    # for i in range(0,9):
+    #     if len(lines_x[i]) > 0:
+    #         plt.scatter(lines_x[i], lines_y[i], c=colors[i])
+    #         slopes[i], intercepts[i] = np.polyfit(lines_x[i], lines_y[i], 1)
+    # plt.show()
+    # return slopes, intercepts
+
+
+
+
+
+
 class TestHistogramProfiling(unittest.TestCase):
 
     # This is not for testing, it is run to plot graphs for inferring
@@ -69,6 +184,46 @@ class TestHistogramProfiling(unittest.TestCase):
     #     plt.xlabel('Histogram distance measure from a reference')
     #     plt.ylabel('Corresponding change in power consumption')
     #     plt.show()
+    def test_predictor(self):
+        ### READ INITIAL DATA
+        dir = os.path.dirname(__file__)
+        filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
+        in_window_size = 1
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
+        newSplittingInstance.extract_windows()
+        histpowerprof = interface.generateHistogramPowerInfo(filename)
+
+        ### INITIAL DATA
+        histchange = [x[0] for x in histpowerprof]
+        powerchange = [x[1] for x in histpowerprof]
+        sizechange = [x[2] for x in histpowerprof]
+
+
+        plt.title('NQueens-heavy_2, window of 3: Fixed window size tumbling (key weighted mean for each histogram)')
+        plt.xlabel('Histogram distance measure from a reference')
+        plt.ylabel('Corresponding change in power consumption')
+        print('Plotting data is ready')
+
+        m, b = get_predictors(histchange, powerchange, sizechange)
+
+
+        newSplittingInstance2 = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.20,.30))
+        newSplittingInstance2.extract_windows()
+        histpowerprof2 = interface.generateHistogramPowerInfo(filename)
+
+        histchange2 = [x[0] for x in histpowerprof2]
+        powerchange2 = [x[1] for x in histpowerprof2]
+        sizechange2 = [x[2] for x in histpowerprof2]
+
+
+        errors = predict(histchange2, powerchange2, sizechange2, m, b)
+
+        print ("ERROR VALS:")
+        for e in errors:
+            print(e)
+
+
+
 
 
 
@@ -78,7 +233,7 @@ class TestHistogramProfiling(unittest.TestCase):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
         in_window_size = 1
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.55,.60))
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -98,73 +253,74 @@ class TestHistogramProfiling(unittest.TestCase):
         print('Plotting data is ready')
         # print(powerchange)
 
-        m = min(powerchange)
-        sections = m / 4
-        drop_times = [len(ls) for ls in newSplittingInstance.battery_drops]
-        curr = 0
-        total = 0
 
 
-        norms = [histchange[i]/float(sizechange[i]) for i in range(len(histchange))]
 
-        plt.scatter(norms, powerchange)
-        m, b = np.polyfit(norms, powerchange, 1)
+        powernorm = [powerchange[i]*float(sizechange[i]) for i in range(len(histchange))]
+
+        plt.scatter(histchange, powernorm)
+        m, b = np.polyfit(histchange, powernorm, 1)
         print(m,b)
         plt.show()
 
-        # lines_x = [ [] for i in range(0,9)]
-        # lines_y = [ [] for i in range(0,9)]
-        # colors = ['blue', 'green', 'pink', 'orange', 'red', 'purple', 'gold', 'brown', 'black']
-        #
+        lines_x = [ [] for i in range(0,9)]
+        lines_y = [ [] for i in range(0,9)]
+        colors = ['blue', 'green', 'pink', 'orange', 'red', 'purple', 'gold', 'brown', 'black']
 
-        # for i in range(0, len(histchange)):
+
+        for i in range(0, len(histchange)):
         #     print(histchange[i])
         #     print(curr)
         #     if(histchange[i] <= 2.2 and powerchange[i] <= 0.1):
         #     plt.plot()
-        #     if float(sizechange[i]) < 125:
-        #         lines_x[0].append(histchange[i])
-        #         lines_y[0].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='blue')
-        #     elif float(sizechange[i]) < 250:
-        #         lines_x[1].append(histchange[i])
-        #         lines_y[1].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='green')
-        #     elif float(sizechange[i]) < 375:
-        #         lines_x[2].append(histchange[i])
-        #         lines_y[2].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='pink')
-        #     elif float(sizechange[i]) < 500:
-        #         lines_x[3].append(histchange[i])
-        #         lines_y[3].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='orange')
-        #     elif float(sizechange[i]) < 625:
-        #         lines_x[4].append(histchange[i])
-        #         lines_y[4].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='red')
-        #     elif float(sizechange[i]) < 750:
-        #         lines_x[5].append(histchange[i])
-        #         lines_y[5].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='purple')
-        #     elif float(sizechange[i]) < 875:
-        #         lines_x[6].append(histchange[i])
-        #         lines_y[6].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='gold')
-        #     elif float(sizechange[i]) < 1000:
-        #         lines_x[7].append(histchange[i])
-        #         lines_y[7].append(powerchange[i])
-        #         #plt.scatter([histchange[i]], [powerchange[i]], c='brown')
-        #     else:
-        #         lines_x[8].append(histchange[i])
-        #         lines_y[8].append(powerchange[i])
-        #         plt.scatter([histchange[i]], [powerchange[i]], c='black')
+            if float(sizechange[i]) < 125:
+                lines_x[0].append(histchange[i])
+                lines_y[0].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='blue')
+            elif float(sizechange[i]) < 250:
+                lines_x[1].append(histchange[i])
+                lines_y[1].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='green')
+            elif float(sizechange[i]) < 375:
+                lines_x[2].append(histchange[i])
+                lines_y[2].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='pink')
+            elif float(sizechange[i]) < 500:
+                lines_x[3].append(histchange[i])
+                lines_y[3].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='orange')
+            elif float(sizechange[i]) < 625:
+                lines_x[4].append(histchange[i])
+                lines_y[4].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='red')
+            elif float(sizechange[i]) < 750:
+                lines_x[5].append(histchange[i])
+                lines_y[5].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='purple')
+            elif float(sizechange[i]) < 875:
+                lines_x[6].append(histchange[i])
+                lines_y[6].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='gold')
+            elif float(sizechange[i]) < 1000:
+                lines_x[7].append(histchange[i])
+                lines_y[7].append(powerchange[i])
+                #plt.scatter([histchange[i]], [powerchange[i]], c='brown')
+            else:
+                lines_x[8].append(histchange[i])
+                lines_y[8].append(powerchange[i])
+                plt.scatter([histchange[i]], [powerchange[i]], c='black')
+
         #
-        #
-        # for i in range(0,9):
-        #     if len(lines_x[i]) > 0:
-        #         plt.scatter(lines_x[i], lines_y[i], c=colors[i])
-        #         m, b = np.polyfit(lines_x[i], lines_y[i], 1)
-        #         print(m,b)
+        slopes = []
+        intercepts = []
+
+        for i in range(0,9):
+            if len(lines_x[i]) > 0:
+                plt.scatter(lines_x[i], lines_y[i], c=colors[i])
+                m, b = np.polyfit(lines_x[i], lines_y[i], 1)
+                print(m,b)
+        plt.show()
+
         #
         #
         # # m, b = np.polyfit(histchange, powerchange, 1)
@@ -240,4 +396,5 @@ class TestHistogramProfiling(unittest.TestCase):
     #     self.assertTrue(filecmp.cmp('ActualLog_FixedWindowSize.txt', 'ExpectedOutput_FixedWindowSize.txt'))
 
 if __name__ == '__main__':
+    #unittest.main()
     unittest.main()
