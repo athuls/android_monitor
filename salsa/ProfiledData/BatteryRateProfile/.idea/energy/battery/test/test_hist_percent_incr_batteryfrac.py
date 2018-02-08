@@ -21,8 +21,10 @@ def predict(histchange, powerchange, sizechange, m, b):
             errors.append("no size change")
             continue
         prediction = (m * histchange[i] + b)/float(sizechange[i])
+        # prediction = (m * histchange[i] + b)
         if powerchange[i] != 0:
-            errors.append("REL: " + str(abs(prediction - powerchange[i])/powerchange[i]))
+            # errors.append("REL: " + str(abs(prediction - powerchange[i])/powerchange[i]))
+            errors.append(abs(prediction - powerchange[i])/powerchange[i])
         else:
             errors.append("ABS: " + str(abs(prediction - powerchange[i])))
 
@@ -63,7 +65,7 @@ def predict(histchange, powerchange, sizechange, m, b):
 
 def get_predictors(histchange, powerchange, sizechange):
     powernorm = [powerchange[i]*float(sizechange[i]) for i in range(len(powerchange))]
-
+    # powernorm = [powerchange[i]*1 for i in range(len(powerchange))]
     plt.scatter(histchange, powernorm)
     m, b = np.polyfit(histchange, powernorm, 1)
     print(m,b)
@@ -188,8 +190,11 @@ class TestHistogramProfiling(unittest.TestCase):
         ### READ INITIAL DATA
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        in_window_size = 1
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
+        in_window_size = 3
+        actor_name='demo1.Nqueen'
+        # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
+        # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(0.55,0.6))
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -207,7 +212,7 @@ class TestHistogramProfiling(unittest.TestCase):
         m, b = get_predictors(histchange, powerchange, sizechange)
 
 
-        newSplittingInstance2 = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.20,.30))
+        newSplittingInstance2 = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.55,.6))
         newSplittingInstance2.extract_windows()
         histpowerprof2 = interface.generateHistogramPowerInfo(filename)
 
@@ -219,9 +224,15 @@ class TestHistogramProfiling(unittest.TestCase):
         errors = predict(histchange2, powerchange2, sizechange2, m, b)
 
         print ("ERROR VALS:")
+        x = 0
+        errors_plot = []
         for e in errors:
             print(e)
-
+            x += 1
+            errors_plot.append(e)
+        print(np.mean(errors_plot), np.std(errors_plot))
+        plt.scatter(range(0,x), errors_plot)
+        plt.show()
 
 
     # This is not for testing, it is run to plot graphs for inferring
@@ -229,7 +240,7 @@ class TestHistogramProfiling(unittest.TestCase):
     def test_runforfixedwindowoutput(self):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        in_window_size = 3
+        in_window_size = 5
         actor_name = ""
         # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', actor_name, in_window_size, filename, range=(.15,.65))
         newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', actor_name, in_window_size, filename)

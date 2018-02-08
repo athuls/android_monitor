@@ -268,7 +268,7 @@ class SplitFixedWindowsTumbling:
                         curr.append(num)
         vals_per_drop.append(curr)
         self.actor_names_with_counts.append(actor_counts_list)
-        self.traverse_actor_names()
+        # self.traverse_actor_names()
         return vals_per_drop
 
     def traverse_actor_names(self):
