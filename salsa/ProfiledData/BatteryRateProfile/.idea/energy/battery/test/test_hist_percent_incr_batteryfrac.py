@@ -224,16 +224,15 @@ class TestHistogramProfiling(unittest.TestCase):
 
 
 
-
-
-
     # This is not for testing, it is run to plot graphs for inferring
     # results from running fixed window size approach
     def test_runforfixedwindowoutput(self):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-        in_window_size = 1
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
+        in_window_size = 3
+        actor_name = ""
+        # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', actor_name, in_window_size, filename, range=(.15,.65))
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', actor_name, in_window_size, filename)
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
