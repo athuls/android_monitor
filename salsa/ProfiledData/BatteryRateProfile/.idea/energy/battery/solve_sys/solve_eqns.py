@@ -112,7 +112,7 @@ def calc_eqns():
     # right side of linear system
     c = np.zeros(len(eqns))
     for j in range(len(c)):
-        c[j] = 1.0 / eqns[j][1]
+        c[j] = 1000 / eqns[j][1]
 
     # solve the system
     x, res, rank, s = np.linalg.lstsq(M,c)
