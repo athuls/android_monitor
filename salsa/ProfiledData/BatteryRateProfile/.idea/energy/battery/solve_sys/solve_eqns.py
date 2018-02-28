@@ -43,6 +43,29 @@ from histogram import interface_test as interface
 #     plt.show()
 #     return m, b
 
+def create_eqns(sizechange, histchange):
+    eqns = []
+    eqn = {}
+    tm = 0
+    prev = None
+
+
+    # currently, tm represents the time, but that calculation might not be correct
+    for i in range(0, len(histchange)):
+        if sizechange[i] != prev:
+            prev = sizechange[i]
+            if i != 0:
+                eqns.append((eqn, tm))
+                eqn = {}
+                tm = 0
+        if histchange[i] in eqn:
+            eqn[histchange[i]] += 1
+        else:
+            eqn[histchange[i]] = 1
+        tm += 1
+
+    return eqns
+
 
 def calc_eqns():
     dir = os.path.dirname(__file__)
@@ -60,26 +83,42 @@ def calc_eqns():
     powerchange = [x[1] for x in histpowerprof] # power
     sizechange = [x[2] for x in histpowerprof] # num total actors in interval
 
-    eqns = []
-    eqn = {}
-    tm = 0
-    prev = None
 
-    for i in range(0, len(histchange)):
-        print(histchange[i])
-        if sizechange[i] != prev:
-            prev = sizechange[i]
-            if i != 0:
-                eqns.append((eqn, tm))
-                eqn = {}
-                tm = 0
-        if histchange[i] in eqn:
-            eqn[histchange[i]] += 1
-        else:
-            eqn[histchange[i]] = 1
-        tm += 1
+    # create all the equations from the sizechange and histchange data
+    eqns = create_eqns(sizechange, histchange)
 
+
+
+    # initialize the matrix
+
+    loads = set()
     for pair in eqns:
-        print(pair)
+        for key in pair[0]:
+            loads.add(key)
+    loads = sorted(loads)
+
+    M = np.zeros((len(eqns), len(loads)))
+
+
+    # Add data to the matrix
+    for i in range(len(eqns)):
+        const_dict = eqns[0][0]
+        for j in range(len(loads)):
+            if loads[j] in const_dict:
+                M[i][j] = loads[j] * const_dict[loads[j]]
+            else:
+                M[i][j] = 0
+
+    # right side of linear system
+    c = np.zeros(len(eqns))
+    for j in range(len(c)):
+        c[j] = 1.0 / eqns[j][1]
+
+    # solve the system
+    x, res, rank, s = np.linalg.lstsq(M,c)
+    print(x)
+
+
+
 
 calc_eqns()
