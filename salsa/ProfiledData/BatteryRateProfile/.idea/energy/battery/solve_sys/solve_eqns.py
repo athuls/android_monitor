@@ -102,7 +102,7 @@ def calc_eqns():
 
     # Add data to the matrix
     for i in range(len(eqns)):
-        const_dict = eqns[0][0]
+        const_dict = eqns[i][0]
         for j in range(len(loads)):
             if loads[j] in const_dict:
                 M[i][j] = loads[j] * const_dict[loads[j]]
