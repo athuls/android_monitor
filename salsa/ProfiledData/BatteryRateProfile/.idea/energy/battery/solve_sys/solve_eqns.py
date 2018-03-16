@@ -13,6 +13,11 @@ sys.path.append(moduledirname)
 from histogram import hist_percent_incr_batteryfrac as batt
 from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
+
+# from sknn.mlp import Regressor, Layer
+import tensorflow as tf
+
+
 #
 # def predict(histchange, powerchange, sizechange, m, b):
 #     errors = []
@@ -71,10 +76,10 @@ def calc_eqns():
     dir = os.path.dirname(__file__)
     filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
     in_window_size = 3
-    actor_name='demo1.Nqueen'
+    actor_name='demo1.Nqueens'
     # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
     # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
-    newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(0.40,0.6))
+    newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename)
     newSplittingInstance.extract_windows()
     histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -86,16 +91,23 @@ def calc_eqns():
 
     # create all the equations from the sizechange and histchange data
     eqns = create_eqns(sizechange, histchange)
+    #eqns = [({1 : 2, 3 : 1, 4 : 1}, 3), ({1 : 2, 3 : 1}, 8)]
 
+    for e in eqns:
+        print(e)
 
 
     # initialize the matrix
 
     loads = set()
+    count = 0
     for pair in eqns:
         for key in pair[0]:
+            count += 1
             loads.add(key)
     loads = sorted(loads)
+    print(len(loads))
+
 
     M = np.zeros((len(eqns), len(loads)))
 
@@ -108,17 +120,109 @@ def calc_eqns():
                 M[i][j] = loads[j] * const_dict[loads[j]]
             else:
                 M[i][j] = 0
-
-    # right side of linear system
+    # print(M)
+    # # right side of linear system
     c = np.zeros(len(eqns))
     for j in range(len(c)):
-        c[j] = 1000 / eqns[j][1]
+        c[j] = eqns[j][1]
 
+    print(M)
+    print(c)
     # solve the system
-    x, res, rank, s = np.linalg.lstsq(M,c)
-    print(x)
+    # x, res, rank, s = np.linalg.lstsq(M,c)
+    # print(x)
+
+    return M, c
+
+
+# Answer for nqueens
+# [  1.09594154   2.88503623   3.71927777  -1.48925566  10.57336939
+#    1.91006365   2.23769466  12.14960698   2.09156284  -7.82088665
+#   -2.91121207   0.73506705  16.5699962    7.53777839   2.05335134
+#   -3.50175638  -0.16120979   3.00514738  -2.75026329  -5.03038861
+#  -13.02197047  -1.15272535   1.75750494  -0.89161274  -0.81428029
+#   -7.72688371   2.56652909  -7.38764943  -0.27128653  -8.15615503
+#   -0.20174837 -19.06524896  14.66686926   0.11864814 -12.87241584
+#   -0.72420079   0.30015075   1.26873283 -17.63163686  -0.74602315
+#    4.23297345  -0.88327187   1.2630644   -0.59011749   4.64110987
+#   -5.59660922  -3.12377514   1.83287542  12.71159752  -0.60936807
+#    0.94627536  -1.26180539  -1.58626963]
+
+# Answer for Fibonacci
+# [  0.76935249  11.48459212 -12.11332409  20.2810882   28.61148258
+# -41.57984684 -33.70531468]
+
+def nn():
+    M, c = calc_eqns()
+
+    num_train = 20
+
+    training_X = M[0:num_train]
+    training_Y = c[0:num_train]
+
+    features1 = {'Loads': training_X}
+    labels1 = training_Y
+
+    train = tf.data.Dataset.from_tensor_slices((dict(features1), labels1))
+
+
+    testing_X  = M[num_train:]
+    testing_Y = c[num_train:]
+
+    features2 = {'Loads': testing_X}
+    labels2 = testing_Y
+
+    test = tf.data.Dataset.from_tensor_slices((dict(features2), labels2))
+
+
+    def input_train():
+        return (
+            # Shuffling with a buffer larger than the data set ensures
+            # that the examples are well mixed.
+            train.shuffle(len(M)).batch(5)
+            # Repeat forever
+            .repeat().make_one_shot_iterator().get_next())
+    def input_test():
+        return (test.shuffle(len(testing_Y)).batch(len(testing_Y))
+            .make_one_shot_iterator().get_next())
+
+    feature_columns = [
+        tf.feature_column.numeric_column(key="Loads", shape=(len(M[0])))
+    ]
+
+    # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
+    # defined above as input.
+    model = tf.estimator.DNNRegressor(
+      hidden_units=[40, 40, 40], feature_columns=feature_columns,
+      optimizer=tf.train.ProximalAdagradOptimizer(
+        learning_rate=0.01,
+        l1_regularization_strength=0.001
+      )
+    )
+
+    # Train the model.
+    STEPS = 50000
+    model.train(input_fn=input_train, steps=STEPS)
+
+    print("TRAINING COMPLETE")
+
+    # Evaluate how the model performs on data it has not yet seen.
+    eval_result = model.evaluate(input_fn=input_test, steps=STEPS)
+    model.predict(input_fn=input_test)
+    print(eval_result)
+
+
+    # The evaluation returns a Python dictionary. The "average_loss" key holds the
+    # Mean Squared Error (MSE).
+    average_loss = eval_result["average_loss"]
+
+    # Convert MSE to Root Mean Square Error (RMSE).
+    print("\n" + 80 * "*")
+    print("\nRMS error for the test set: ", average_loss**0.5)
+
+    print()
 
 
 
 
-calc_eqns()
+nn()
