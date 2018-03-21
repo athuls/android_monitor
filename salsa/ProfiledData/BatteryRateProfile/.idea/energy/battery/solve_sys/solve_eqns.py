@@ -54,7 +54,6 @@ def create_eqns(sizechange, histchange):
     tm = 0
     prev = None
 
-
     # currently, tm represents the time, but that calculation might not be correct
     for i in range(0, len(histchange)):
         if sizechange[i] != prev:
@@ -72,14 +71,42 @@ def create_eqns(sizechange, histchange):
     return eqns
 
 
-def calc_eqns():
+def features_labels(eqns):
+    loads = set()
+    count = 0
+    for pair in eqns:
+        for key in pair[0]:
+            count += 1
+            loads.add(key)
+    loads = sorted(loads)
+
+    feats = np.zeros((len(eqns), len(loads)))
+
+    # Add data to the matrix
+    for i in range(len(eqns)):
+        const_dict = eqns[i][0]
+        for j in range(len(loads)):
+            if loads[j] in const_dict:
+                feats[i][j] = loads[j] * const_dict[loads[j]]
+            else:
+                feats[i][j] = 0
+
+    # # right side of linear system
+    labs = np.zeros(len(eqns))
+    for j in range(len(feats)):
+        labs[j] = eqns[j][1]
+
+    return feats, labs
+
+
+def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.20):
     dir = os.path.dirname(__file__)
     filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
     in_window_size = 3
     actor_name='demo1.Nqueens'
     # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
     # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
-    newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename)
+    newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
     newSplittingInstance.extract_windows()
     histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -88,51 +115,35 @@ def calc_eqns():
     powerchange = [x[1] for x in histpowerprof] # power
     sizechange = [x[2] for x in histpowerprof] # num total actors in interval
 
-
     # create all the equations from the sizechange and histchange data
     eqns = create_eqns(sizechange, histchange)
-    #eqns = [({1 : 2, 3 : 1, 4 : 1}, 3), ({1 : 2, 3 : 1}, 8)]
+    trainX, trainY = features_labels(eqns)
 
-    for e in eqns:
-        print(e)
+    if seperate_test: # Nqueens_heavy.txt
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_test, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
+        newSplittingInstance.extract_windows()
+        histpowerprof = interface.generateHistogramPowerInfo(filename)
+
+        ### INITIAL DATA
+        histchange = [x[0] for x in histpowerprof] # load values
+        powerchange = [x[1] for x in histpowerprof] # power
+        sizechange = [x[2] for x in histpowerprof] # num total actors in interval
+
+        # create all the equations from the sizechange and histchange data
+        eqns2 = create_eqns(sizechange, histchange)
+        testX, testY = features_labels(eqns2)
+    else:
+        test_ind = len(trainX) - int(test_prop * len(trainX))
+
+        testX = trainX[test_ind:]
+        testY = trainY[test_ind:]
+        trainX = trainX[0:test_ind]
+        trainY = trainY[0:test_ind]
 
 
-    # initialize the matrix
-
-    loads = set()
-    count = 0
-    for pair in eqns:
-        for key in pair[0]:
-            count += 1
-            loads.add(key)
-    loads = sorted(loads)
-    print(len(loads))
 
 
-    M = np.zeros((len(eqns), len(loads)))
-
-
-    # Add data to the matrix
-    for i in range(len(eqns)):
-        const_dict = eqns[i][0]
-        for j in range(len(loads)):
-            if loads[j] in const_dict:
-                M[i][j] = loads[j] * const_dict[loads[j]]
-            else:
-                M[i][j] = 0
-    # print(M)
-    # # right side of linear system
-    c = np.zeros(len(eqns))
-    for j in range(len(c)):
-        c[j] = eqns[j][1]
-
-    print(M)
-    print(c)
-    # solve the system
-    # x, res, rank, s = np.linalg.lstsq(M,c)
-    # print(x)
-
-    return M, c
+    return (trainX, trainY), (testX, testY)
 
 
 # Answer for nqueens
@@ -153,12 +164,11 @@ def calc_eqns():
 # -41.57984684 -33.70531468]
 
 def nn():
-    M, c = calc_eqns()
+    training, testing = calc_eqns(seperate_test=True, filename_train='Nqueens_heavy.txt', filename_test='Nqueens_heavy_2.txt')
 
-    num_train = 20
+    training_X = training[0]
+    training_Y = training[1]
 
-    training_X = M[0:num_train]
-    training_Y = c[0:num_train]
 
     features1 = {'Loads': training_X}
     labels1 = training_Y
@@ -166,8 +176,9 @@ def nn():
     train = tf.data.Dataset.from_tensor_slices((dict(features1), labels1))
 
 
-    testing_X  = M[num_train:]
-    testing_Y = c[num_train:]
+    testing_X  = testing[0]
+    testing_Y = testing[1]
+
 
     features2 = {'Loads': testing_X}
     labels2 = testing_Y
@@ -176,18 +187,15 @@ def nn():
 
 
     def input_train():
-        return (
-            # Shuffling with a buffer larger than the data set ensures
-            # that the examples are well mixed.
-            train.shuffle(len(M)).batch(5)
-            # Repeat forever
-            .repeat().make_one_shot_iterator().get_next())
+        return train.shuffle(len(training_X)).batch(5).repeat().make_one_shot_iterator().get_next()
+
+
     def input_test():
-        return (test.shuffle(len(testing_Y)).batch(len(testing_Y))
-            .make_one_shot_iterator().get_next())
+        return test.batch(len(testing_Y)).make_one_shot_iterator().get_next()
+
 
     feature_columns = [
-        tf.feature_column.numeric_column(key="Loads", shape=(len(M[0])))
+        tf.feature_column.numeric_column(key="Loads", shape=(len(testing_X[0])))
     ]
 
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
@@ -207,8 +215,21 @@ def nn():
     print("TRAINING COMPLETE")
 
     # Evaluate how the model performs on data it has not yet seen.
-    eval_result = model.evaluate(input_fn=input_test, steps=STEPS)
-    model.predict(input_fn=input_test)
+    eval_result = model.evaluate(input_fn=input_test)
+    predictions = list(model.predict(input_fn=input_test))
+
+    total = 0
+    total2 = 0
+
+    for i in range(len(testing_Y)):
+        print("Prediction:", predictions[i]["predictions"][0], "Actual:", testing_Y[i])
+        e = abs(predictions[i]["predictions"][0] - testing_Y[i])
+        print("Error: ", e)
+        total += (e**2)
+        total2 += e
+
+    print(total2/len(testing_Y))
+    print("RMSE: ", (total/len(testing_Y))**0.5)
     print(eval_result)
 
 
@@ -217,7 +238,7 @@ def nn():
     average_loss = eval_result["average_loss"]
 
     # Convert MSE to Root Mean Square Error (RMSE).
-    print("\n" + 80 * "*")
+    # print("\n" + 80 * "*")
     print("\nRMS error for the test set: ", average_loss**0.5)
 
     print()
