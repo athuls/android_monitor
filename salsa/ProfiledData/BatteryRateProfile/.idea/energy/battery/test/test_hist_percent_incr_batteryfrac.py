@@ -186,6 +186,7 @@ class TestHistogramProfiling(unittest.TestCase):
     #     plt.xlabel('Histogram distance measure from a reference')
     #     plt.ylabel('Corresponding change in power consumption')
     #     plt.show()
+
     def test_predictor(self):
         ### READ INITIAL DATA
         dir = os.path.dirname(__file__)
@@ -194,7 +195,7 @@ class TestHistogramProfiling(unittest.TestCase):
         actor_name='demo1.Nqueen'
         # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
         # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(0.55,0.6))
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(0.3,0.4))
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
 
@@ -219,7 +220,6 @@ class TestHistogramProfiling(unittest.TestCase):
         histchange2 = [x[0] for x in histpowerprof2]
         powerchange2 = [x[1] for x in histpowerprof2]
         sizechange2 = [x[2] for x in histpowerprof2]
-
 
         errors = predict(histchange2, powerchange2, sizechange2, m, b)
 

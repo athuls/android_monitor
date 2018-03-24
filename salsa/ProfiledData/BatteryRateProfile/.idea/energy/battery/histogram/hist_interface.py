@@ -87,5 +87,5 @@ def simple_variance(hist_1, hist_2):
         #val += hist_1[key] - hist_2[key]
         val += pow(hist_1[key] - mean, 2)
         #val += ((hist_1[key] - hist_2[key]) * (key/(maxkey)))
-        total += 1.0
-    return val / total
+        total += hist_1[key]
+    return sqrt(val / total)
