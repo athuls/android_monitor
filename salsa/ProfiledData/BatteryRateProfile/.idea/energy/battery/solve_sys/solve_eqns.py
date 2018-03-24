@@ -123,7 +123,6 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_test, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
         newSplittingInstance.extract_windows()
         histpowerprof = interface.generateHistogramPowerInfo(filename)
-
         ### INITIAL DATA
         histchange = [x[0] for x in histpowerprof] # load values
         powerchange = [x[1] for x in histpowerprof] # power
@@ -134,7 +133,6 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         testX, testY = features_labels(eqns2)
     else:
         test_ind = len(trainX) - int(test_prop * len(trainX))
-
         testX = trainX[test_ind:]
         testY = trainY[test_ind:]
         trainX = trainX[0:test_ind]
@@ -163,12 +161,10 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
 # [  0.76935249  11.48459212 -12.11332409  20.2810882   28.61148258
 # -41.57984684 -33.70531468]
 
-def nn():
-    training, testing = calc_eqns(seperate_test=True, filename_train='Nqueens_heavy.txt', filename_test='Nqueens_heavy_2.txt')
 
+def nn(training, testing):
     training_X = training[0]
     training_Y = training[1]
-
 
     features1 = {'Loads': training_X}
     labels1 = training_Y
@@ -216,20 +212,20 @@ def nn():
 
     # Evaluate how the model performs on data it has not yet seen.
     eval_result = model.evaluate(input_fn=input_test)
-    predictions = list(model.predict(input_fn=input_test))
+    # predictions = list(model.predict(input_fn=input_test))
 
     total = 0
-    total2 = 0
-
-    for i in range(len(testing_Y)):
-        print("Prediction:", predictions[i]["predictions"][0], "Actual:", testing_Y[i])
-        e = abs(predictions[i]["predictions"][0] - testing_Y[i])
-        print("Error: ", e)
-        total += (e**2)
-        total2 += e
-
-    print(total2/len(testing_Y))
-    print("RMSE: ", (total/len(testing_Y))**0.5)
+    # total2 = 0
+    #
+    # for i in range(len(testing_Y)):
+    #     print("Prediction:", predictions[i]["predictions"][0], "Actual:", testing_Y[i])
+    #     e = abs(predictions[i]["predictions"][0] - testing_Y[i])
+    #     print("Error: ", e)
+    #     total += (e**2)
+    #     total2 += e
+    #
+    # print(total2/len(testing_Y))
+    # print("RMSE: ", (total/len(testing_Y))**0.5)
     print(eval_result)
 
 
@@ -243,7 +239,28 @@ def nn():
 
     print()
 
+    return average_loss**0.5
 
 
 
-nn()
+
+
+
+training, testing = calc_eqns(seperate_test=True, filename_train='Nqueens_heavy.txt', filename_test='Nqueens_heavy_2.txt')
+
+iterations = 10
+losses = np.zeros(iterations)
+
+
+for i in range(0, iterations):
+    print(i)
+    losses[i] = nn(training, testing)
+print(losses)
+print("Average RMS Error across 100 runs:", np.mean(losses))
+print("Standard dev of error:", np.std(losses))
+print(np.std(np.array(training[1])))
+
+# [1.32422645 1.43184578 1.32821157 1.71247008 1.08057032 1.14648146
+#  1.31131855 1.34220509 0.99544878 1.76144671]
+# Average RMS Error across 100 runs: 1.3434224791553036
+# Standard dev of error: 0.23438297406826605
