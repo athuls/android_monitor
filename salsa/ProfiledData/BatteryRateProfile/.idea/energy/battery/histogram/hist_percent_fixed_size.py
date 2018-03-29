@@ -261,7 +261,7 @@ class SplitFixedWindowsTumbling:
                     actor_count_map = {}
                 elif(ind != -1):
                     comma_ind = line.find(',', ind)
-                    actor_name = str(line[0:ind - 1])
+                    actor_name = str(line[0:ind])
                     num = int(line[ind + 8 : comma_ind])
                     actor_count_map[actor_name] = num
                     if actor_name == self.actor_name:
