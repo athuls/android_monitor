@@ -21,7 +21,7 @@ def generateHistogramPowerInfo(filename):
         hists[i] = {int(k):int(v) for k,v in hists[i].items()}
     hists = normalize_histos(hists)
     histpowerprof = []
-    powerreference = float(batteryFrac[0])
+    powerreference = float(batteryFrac[1])
     histreference = hists[0]
     maxpower=0
     maxDistHist=None
