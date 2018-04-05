@@ -192,7 +192,7 @@ class TestHistogramProfiling(unittest.TestCase):
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
         in_window_size = 3
-        actor_name='demo1.Nqueen'
+        actor_name='demo1.Nqueens'
         # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
         # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
         newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(0.3,0.4))
