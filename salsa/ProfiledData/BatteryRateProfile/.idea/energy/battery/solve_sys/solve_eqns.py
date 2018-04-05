@@ -14,6 +14,7 @@ from histogram import hist_percent_incr_batteryfrac as batt
 from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
 
+
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
@@ -48,100 +49,195 @@ import tensorflow as tf
 #     plt.show()
 #     return m, b
 
-def create_eqns(sizechange, histchange):
-    eqns = []
-    eqn = {}
-    tm = 0
-    prev = None
+def create_histos(actor_names, full_data):
+    eqns = {}
+    times = []
+    for a in actor_names:
+        eqns[a] = []
+    for eq in full_data:
+        time = len(eq)
+        curr_eqn = {}
+        for a in actor_names:
+            curr_eqn[a] = {}
+        for d in eq:
+            for key in actor_names:
+                if key in d:
+                    if d[key] in curr_eqn[key]:
+                        curr_eqn[key][d[key]] += 1
+                    else:
+                        curr_eqn[key][d[key]] = 1
+                else:
+                    if 0 in curr_eqn[key]:
+                        curr_eqn[key][0] += 1
+                    else:
+                        curr_eqn[key][0] = 1
+        for key in curr_eqn:
+            eqns[key].append(curr_eqn[key])
+        times.append(time)
 
-    # currently, tm represents the time, but that calculation might not be correct
-    for i in range(0, len(histchange)):
-        if sizechange[i] != prev:
-            prev = sizechange[i]
-            if i != 0:
-                eqns.append((eqn, tm))
-                eqn = {}
-                tm = 0
-        if histchange[i] in eqn:
-            eqn[histchange[i]] += 1
-        else:
-            eqn[histchange[i]] = 1
-        tm += 1
+    return eqns, times
 
-    return eqns
+def getTrainingTestingSeperateData(actor_names, eqns, eqns_test):
+    return 0
 
+def getTrainingTesting(actor_names, eqns, times, test_prop=0.20):
+    X_vals = {}
+    some_actor = None
+    for a in actor_names:
+        some_actor = a
+        loads = set()
+        curr = eqns[a]
+        for pair in curr:
+            for key in pair:
+                loads.add(key)
 
-def features_labels(eqns):
-    loads = set()
-    count = 0
-    for pair in eqns:
-        for key in pair[0]:
-            count += 1
-            loads.add(key)
-    loads = sorted(loads)
-
-    feats = np.zeros((len(eqns), len(loads)))
-
-    # Add data to the matrix
-    for i in range(len(eqns)):
-        const_dict = eqns[i][0]
-        for j in range(len(loads)):
-            if loads[j] in const_dict:
-                feats[i][j] = loads[j] * const_dict[loads[j]]
-            else:
-                feats[i][j] = 0
-
+        loads = sorted(loads)
+        feats = np.zeros((len(curr), len(loads)))
+        # Add data to the matrix
+        for i in range(len(curr)):
+            const_dict = curr[i]
+            for j in range(len(loads)):
+                if loads[j] in const_dict:
+                    feats[i][j] = loads[j] * const_dict[loads[j]]
+                else:
+                    feats[i][j] = 0
+        X_vals[a] = feats
     # # right side of linear system
-    labs = np.zeros(len(eqns))
-    for j in range(len(feats)):
-        labs[j] = eqns[j][1]
+    Y_vals = np.asarray(times)
 
-    return feats, labs
+
+    test_ind = int(len(times) * (1-test_prop))
+    X_training = {}
+    X_testing = {}
+    for key in X_vals:
+        X_training[key] = X_vals[key][0:test_ind]
+        X_testing[key] = X_vals[key][test_ind:]
+
+    Y_training = Y_vals[0:test_ind]
+    Y_testing = Y_vals[test_ind:]
+
+    return (X_training, Y_training), (X_testing, Y_testing)
+
+
+
+
+
+# def create_eqns(sizechange, histchange):
+#     eqns = []
+#     eqn = {}
+#     tm = 0
+#     prev = None
+#
+#     # currently, tm represents the time, but that calculation might not be correct
+#     for i in range(0, len(histchange)):
+#         if sizechange[i] != prev:
+#             prev = sizechange[i]
+#             if i != 0:
+#                 eqns.append((eqn, tm))
+#                 eqn = {}
+#                 tm = 0
+#         if histchange[i] in eqn:
+#             eqn[histchange[i]] += 1
+#         else:
+#             eqn[histchange[i]] = 1
+#         tm += 1
+#
+#     return eqns
+#
+#
+#
+# def features_labels(eqns):
+#     loads = set()
+#     count = 0
+#     for pair in eqns:
+#         for key in pair[0]:
+#             count += 1
+#             loads.add(key)
+#     loads = sorted(loads)
+#
+#     feats = np.zeros((len(eqns), len(loads)))
+#     # Add data to the matrix
+#     for i in range(len(eqns)):
+#         const_dict = eqns[i][0]
+#         for j in range(len(loads)):
+#             if loads[j] in const_dict:
+#                 feats[i][j] = loads[j] * const_dict[loads[j]]
+#             else:
+#                 feats[i][j] = 0
+#
+#     # # right side of linear system
+#     labs = np.zeros(len(eqns))
+#     for j in range(len(feats)):
+#         labs[j] = eqns[j][1]
+#
+#     return feats, labs
 
 
 def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.20):
-    dir = os.path.dirname(__file__)
-    filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size.txt')
-    in_window_size = 3
-    actor_name='demo1.Nqueens'
-    # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling('../mobile_logs/Nqueens_heavy.txt', in_window_size, filename, range=(.50,.60))
-    # newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/Nqueens_heavy.txt', actorname=actor_name, windowsize=in_window_size, outputfile=filename, range=(.4,.5))
-    newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
-    newSplittingInstance.extract_windows()
-    histpowerprof = interface.generateHistogramPowerInfo(filename)
 
-    ### INITIAL DATA
-    histchange = [x[0] for x in histpowerprof] # load values
-    powerchange = [x[1] for x in histpowerprof] # power
-    sizechange = [x[2] for x in histpowerprof] # num total actors in interval
+    if not seperate_test:
+        dir = os.path.dirname(__file__)
+        filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size_train.txt')
+        in_window_size = 3
+        actor_name='demo1.Nqueens'
+
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
+        newSplittingInstance.extract_windows()
+
+        actors = newSplittingInstance.get_actor_names()
+
+        actor_counts_intervals = newSplittingInstance.get_counts()
+        histos, times = create_histos(actors, actor_counts_intervals)
+        train, test = getTrainingTesting(actors, histos, times)
+
+    else:
+        assert 0 == 1
+    # print(train[0])
+    # print(train[1])
+    # print(test[0])
+    # print(test[1])
+
+
+    # histpowerprof = interface.generateHistogramPowerInfo(filename)
+    #
+    # ### INITIAL DATA
+    # histchange = [x[0] for x in histpowerprof] # load values
+    # powerchange = [x[1] for x in histpowerprof] # power
+    # sizechange = [x[2] for x in histpowerprof] # num total actors in interval
 
     # create all the equations from the sizechange and histchange data
-    eqns = create_eqns(sizechange, histchange)
-    trainX, trainY = features_labels(eqns)
-
-    if seperate_test: # Nqueens_heavy.txt
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_test, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
-        newSplittingInstance.extract_windows()
-        histpowerprof = interface.generateHistogramPowerInfo(filename)
-        ### INITIAL DATA
-        histchange = [x[0] for x in histpowerprof] # load values
-        powerchange = [x[1] for x in histpowerprof] # power
-        sizechange = [x[2] for x in histpowerprof] # num total actors in interval
-
-        # create all the equations from the sizechange and histchange data
-        eqns2 = create_eqns(sizechange, histchange)
-        testX, testY = features_labels(eqns2)
-    else:
-        test_ind = len(trainX) - int(test_prop * len(trainX))
-        testX = trainX[test_ind:]
-        testY = trainY[test_ind:]
-        trainX = trainX[0:test_ind]
-        trainY = trainY[0:test_ind]
 
 
+    # if seperate_test: # Nqueens_heavy.txt
+    #     newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_test, actorname=actor_name, windowsize=in_window_size, outputfile=filename2)
+    #     newSplittingInstance.histograms = []
+    #     newSplittingInstance.batteryFrac = []
+    #     newSplittingInstance.temp_batteryPercent = []
+    #     newSplittingInstance.extract_windows()
+    #
+    #     histpowerprof = interface.generateHistogramPowerInfo(filename2)
+    #     ### INITIAL DATA
+    #     histchange = [x[0] for x in histpowerprof] # load values
+    #     powerchange = [x[1] for x in histpowerprof] # power
+    #     sizechange = [x[2] for x in histpowerprof] # num total actors in interval
+    #
+    #     # create all the equations from the sizechange and histchange data
+    #     eqns2 = create_eqns(sizechange, histchange)
+    #     testX, testY = features_labels(eqns2)
+    # else:
+    #     test_ind = len(trainX) - int(test_prop * len(trainX))
+    #     testX = trainX[test_ind:]
+    #     testY = trainY[test_ind:]
+    #     trainX = trainX[0:test_ind]
+    #     trainY = trainY[0:test_ind]
+
+    # print(train[0])
+    # print(train[1])
+    # print(test[0])
+    # print(test[1])
 
 
-    return (trainX, trainY), (testX, testY)
+    return train, test
 
 
 # Answer for nqueens
@@ -166,7 +262,7 @@ def nn(training, testing):
     training_X = training[0]
     training_Y = training[1]
 
-    features1 = {'Loads': training_X}
+    features1 = training_X
     labels1 = training_Y
 
     train = tf.data.Dataset.from_tensor_slices((dict(features1), labels1))
@@ -175,24 +271,24 @@ def nn(training, testing):
     testing_X  = testing[0]
     testing_Y = testing[1]
 
-
-    features2 = {'Loads': testing_X}
+    features2 = testing_X
     labels2 = testing_Y
 
     test = tf.data.Dataset.from_tensor_slices((dict(features2), labels2))
 
 
     def input_train():
-        return train.shuffle(len(training_X)).batch(5).repeat().make_one_shot_iterator().get_next()
-
+        return train.shuffle(len(training_Y)).batch(5).repeat().make_one_shot_iterator().get_next()
 
     def input_test():
         return test.batch(len(testing_Y)).make_one_shot_iterator().get_next()
 
+    feature_columns = []
+    for actor in testing_X:
+        feature_columns.append(tf.feature_column.numeric_column(key=actor, shape=( len(testing_X[actor][0]) ) ))
 
-    feature_columns = [
-        tf.feature_column.numeric_column(key="Loads", shape=(len(testing_X[0])))
-    ]
+    # print("testing", len(testing_X[0]))
+    # print("training", len(training_X[0]))
 
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
@@ -246,9 +342,9 @@ def nn(training, testing):
 
 
 
-training, testing = calc_eqns(seperate_test=True, filename_train='Nqueens_heavy.txt', filename_test='Nqueens_heavy_2.txt')
+training, testing = calc_eqns(seperate_test=False, filename_train='log_mult.txt', filename_test='Nqueens_heavy_2.txt')
 
-iterations = 10
+iterations = 1
 losses = np.zeros(iterations)
 
 
