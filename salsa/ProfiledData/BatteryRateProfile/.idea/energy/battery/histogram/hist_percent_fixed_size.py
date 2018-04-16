@@ -241,11 +241,13 @@ class SplitFixedWindowsTumbling:
 
                     self.temp_batteryPercent.append(bat)
 
-                    # Add the current actor map everytime you hit battery log
-                    actor_counts_list.append(dict(actor_count_map))
-                    actor_count_map = {}
-                    if(curr_bat == None): # first iteration
+
+                    if(curr_bat == None): # first iteration, don't add last actor_count_map
                         curr_bat = bat
+                    else:
+                        # Add the current actor map everytime you hit battery log
+                        actor_counts_list.append(dict(actor_count_map))
+                        actor_count_map = {}
                     if(bat < curr_bat):
                         vals_per_drop.append(curr)
                         curr = []
@@ -268,8 +270,20 @@ class SplitFixedWindowsTumbling:
                         curr.append(num)
         vals_per_drop.append(curr)
         self.actor_names_with_counts.append(actor_counts_list)
+        # print(self.actor_names_with_counts)
         # self.traverse_actor_names()
         return vals_per_drop
+
+    def get_counts(self):
+        return self.actor_names_with_counts
+
+    def get_actor_names(self):
+        s = set()
+        for hash_list in self.actor_names_with_counts:
+            for hash_item in hash_list:
+                for key in hash_item:
+                    s.add(key)
+        return list(s)
 
     def traverse_actor_names(self):
         print('Starting traversal')

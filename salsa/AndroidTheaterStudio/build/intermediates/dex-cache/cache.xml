@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/home/reza/My_Software/salsa/AndroidTheaterStudio/app/libs/salsa1.1.5.jar"
+        jar="/Users/rohansubramaniam/Documents/Research/android_monitor/salsa/AndroidTheaterStudio/app/libs/salsa1.1.5.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="b91c1618c30d744070de3c4717d5792a47d71d3e">
-        <dex dex="/home/reza/My_Software/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/salsa1.1.5_8c527f27837dc5d79e393c31fa2cfc7056f5b60b.jar" />
+        sha1="7d23fbbd6f058fcb7c1bf2909340204705564034">
+        <dex dex="/Users/rohansubramaniam/Documents/Research/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/salsa1.1.5_a99e7dbb30fafd3079c31b7b4f6426da8b180077.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/reza/My_Software/salsa/AndroidTheaterStudio/app/libs/demo1.jar"
+        jar="/Users/rohansubramaniam/Documents/Research/android_monitor/salsa/AndroidTheaterStudio/app/libs/demo1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="5da49eb04ab811df8d8e32bcc492e7d0fa8194ac">
-        <dex dex="/home/reza/My_Software/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/demo1_0a9bbad07cc4896f5ee4658fc71b42dd0a203f3c.jar" />
+        sha1="d579f0c10756ea142283f40ff3cffa3868b5ae7b">
+        <dex dex="/Users/rohansubramaniam/Documents/Research/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/demo1_a7c04e6f4a5082aca5678f25729d7e1522bf660d.jar" />
     </item>
 
 </items>

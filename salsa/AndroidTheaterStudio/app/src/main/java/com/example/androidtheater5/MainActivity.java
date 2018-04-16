@@ -82,13 +82,13 @@ public class MainActivity extends Activity{
 		@Override
 		public void run() {
 			String[] args;
-			if(isLight && !isBreak){
-				args = light;
-				Nqueens.main(args);
-			}else if(!isBreak){
-				args = heavy;
-				Nqueens2.main(args);
-			}
+			//if(isLight && !isBreak){
+			args = light;
+			Nqueens.main(args);
+//			}else if(!isBreak){
+//				args = heavy;
+//				Nqueens2.main(args);
+//			}
 
 
 //			String[] args2 = {"10"};
@@ -103,15 +103,15 @@ public class MainActivity extends Activity{
 
 	};
 
-//	private Runnable runnableFib = new Runnable(){
-//		@Override
-//		public void run() {
-//			String[] args = {"10"};
-//			Fibonacci.main(args);
-//			handler.postDelayed(runnableFib, 1000);
-//		}
-//
-//	};
+	private Runnable runnableFib = new Runnable(){
+		@Override
+		public void run() {
+			String[] args = {"10"};
+			Fibonacci.main(args);
+			handler.postDelayed(runnableFib, 1000);
+		}
+
+	};
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -129,7 +129,7 @@ public class MainActivity extends Activity{
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
 		handler.post(runnableNqueens);
 		handler.post(runnableSampleBattery);
-		//handler.post(runnableFib);
+		handler.post(runnableFib);
 		//handler.post(runnableBattery);
 
 	}
