@@ -181,7 +181,11 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         in_window_size = 3
         actor_name='demo1.Nqueens'
 
+
         newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
+        newSplittingInstance.histograms = []
+        newSplittingInstance.batteryFrac = []
+        newSplittingInstance.temp_batteryPercent = []
         newSplittingInstance.extract_windows()
 
         actors = newSplittingInstance.get_actor_names()
@@ -310,7 +314,7 @@ def nn(training, testing):
     eval_result = model.evaluate(input_fn=input_test)
     # predictions = list(model.predict(input_fn=input_test))
 
-    total = 0
+    # total = 0
     # total2 = 0
     #
     # for i in range(len(testing_Y)):
@@ -342,9 +346,9 @@ def nn(training, testing):
 
 
 
-training, testing = calc_eqns(seperate_test=False, filename_train='log_mult.txt', filename_test='Nqueens_heavy_2.txt')
+training, testing = calc_eqns(seperate_test=False, filename_train='log_nums.txt')
 
-iterations = 1
+iterations = 5
 losses = np.zeros(iterations)
 
 
@@ -352,11 +356,6 @@ for i in range(0, iterations):
     print(i)
     losses[i] = nn(training, testing)
 print(losses)
-print("Average RMS Error across 100 runs:", np.mean(losses))
+print("Average RMS Error across", iterations, ", runs:", np.mean(losses))
 print("Standard dev of error:", np.std(losses))
 print(np.std(np.array(training[1])))
-
-# [1.32422645 1.43184578 1.32821157 1.71247008 1.08057032 1.14648146
-#  1.31131855 1.34220509 0.99544878 1.76144671]
-# Average RMS Error across 100 runs: 1.3434224791553036
-# Standard dev of error: 0.23438297406826605
