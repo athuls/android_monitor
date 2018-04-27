@@ -1,0 +1,30 @@
+Test data results
+Fibonacci
+mean: 32.17
+std: 41.43
+
+NQueens heavy
+mean: 3.19 
+std: 2.86
+
+NQueens light
+mean: 44.57
+std: 48.23
+
+NQueens heavy 2
+mean: 5.04
+std: 4.61
+
+
+Training data results
+NQueens heavy
+mean: 0.00066
+std: 0.00087
+
+Fibonacci
+mean: 20.93
+std: 39.68
+
+NQueens light
+mean: 23.65
+std: 28.18
