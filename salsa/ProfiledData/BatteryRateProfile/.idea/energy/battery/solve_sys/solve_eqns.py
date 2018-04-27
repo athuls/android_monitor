@@ -19,35 +19,6 @@ from histogram import interface_test as interface
 import tensorflow as tf
 
 
-#
-# def predict(histchange, powerchange, sizechange, m, b):
-#     errors = []
-#     for i in range(0, len(histchange)):
-#         if sizechange[i] == 0:
-#             errors.append("no size change")
-#             continue
-#         prediction = (m * histchange[i] + b)/float(sizechange[i])
-#         # prediction = (m * histchange[i] + b)
-#         if powerchange[i] != 0:
-#             # errors.append("REL: " + str(abs(prediction - powerchange[i])/powerchange[i]))
-#             errors.append(abs(prediction - powerchange[i])/powerchange[i])
-#         else:
-#             errors.append("ABS: " + str(abs(prediction - powerchange[i])))
-#
-#     return errors
-#
-# def get_predictors(histchange, powerchange, sizechange):
-#     powernorm = [powerchange[i]*float(sizechange[i]) for i in range(len(powerchange))]
-#     print("Powernorm")
-#     for i in range(len(powernorm)):
-#         s = "WRONG" if abs(histchange[i] - powernorm[i]) > 0.3 else "correct"
-#         print(s, histchange[i], powernorm[i], sizechange[i])
-#     # powernorm = [powerchange[i]*1 for i in range(len(powerchange))]
-#     plt.scatter(histchange, powernorm)
-#     m, b = np.polyfit(histchange, powernorm, 1)
-#     print(m,b)
-#     plt.show()
-#     return m, b
 
 def create_histos(actor_names, full_data):
     eqns = {}
@@ -82,25 +53,19 @@ def getTrainingTestingSeperateData(actor_names, eqns, eqns_test):
 
 def getTrainingTesting(actor_names, eqns, times, test_prop=0.20):
     X_vals = {}
-    some_actor = None
     for a in actor_names:
-        some_actor = a
-        loads = set()
         curr = eqns[a]
-        for pair in curr:
-            for key in pair:
-                loads.add(key)
-
-        loads = sorted(loads)
-        feats = np.zeros((len(curr), len(loads)))
+        LEN = 25
+        feats = np.zeros((len(curr), LEN))
         # Add data to the matrix
         for i in range(len(curr)):
             const_dict = curr[i]
-            for j in range(len(loads)):
-                if loads[j] in const_dict:
-                    feats[i][j] = loads[j] * const_dict[loads[j]]
+            for key in const_dict:
+                if key >= LEN - 1:
+                    feats[i][24] += const_dict[key]
                 else:
-                    feats[i][j] = 0
+                    feats[i][key] += const_dict[key]
+
         X_vals[a] = feats
     # # right side of linear system
     Y_vals = np.asarray(times)
@@ -122,57 +87,6 @@ def getTrainingTesting(actor_names, eqns, times, test_prop=0.20):
 
 
 
-# def create_eqns(sizechange, histchange):
-#     eqns = []
-#     eqn = {}
-#     tm = 0
-#     prev = None
-#
-#     # currently, tm represents the time, but that calculation might not be correct
-#     for i in range(0, len(histchange)):
-#         if sizechange[i] != prev:
-#             prev = sizechange[i]
-#             if i != 0:
-#                 eqns.append((eqn, tm))
-#                 eqn = {}
-#                 tm = 0
-#         if histchange[i] in eqn:
-#             eqn[histchange[i]] += 1
-#         else:
-#             eqn[histchange[i]] = 1
-#         tm += 1
-#
-#     return eqns
-#
-#
-#
-# def features_labels(eqns):
-#     loads = set()
-#     count = 0
-#     for pair in eqns:
-#         for key in pair[0]:
-#             count += 1
-#             loads.add(key)
-#     loads = sorted(loads)
-#
-#     feats = np.zeros((len(eqns), len(loads)))
-#     # Add data to the matrix
-#     for i in range(len(eqns)):
-#         const_dict = eqns[i][0]
-#         for j in range(len(loads)):
-#             if loads[j] in const_dict:
-#                 feats[i][j] = loads[j] * const_dict[loads[j]]
-#             else:
-#                 feats[i][j] = 0
-#
-#     # # right side of linear system
-#     labs = np.zeros(len(eqns))
-#     for j in range(len(feats)):
-#         labs[j] = eqns[j][1]
-#
-#     return feats, labs
-
-
 def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.20):
 
     if not seperate_test:
@@ -192,74 +106,13 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
 
         actor_counts_intervals = newSplittingInstance.get_counts()
         histos, times = create_histos(actors, actor_counts_intervals)
-        train, test = getTrainingTesting(actors, histos, times)
+        train, test = getTrainingTesting(actors, histos, times, test_prop=test_prop)
 
     else:
+        print("Not yet written")
         assert 0 == 1
-    # print(train[0])
-    # print(train[1])
-    # print(test[0])
-    # print(test[1])
-
-
-    # histpowerprof = interface.generateHistogramPowerInfo(filename)
-    #
-    # ### INITIAL DATA
-    # histchange = [x[0] for x in histpowerprof] # load values
-    # powerchange = [x[1] for x in histpowerprof] # power
-    # sizechange = [x[2] for x in histpowerprof] # num total actors in interval
-
-    # create all the equations from the sizechange and histchange data
-
-
-    # if seperate_test: # Nqueens_heavy.txt
-    #     newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_test, actorname=actor_name, windowsize=in_window_size, outputfile=filename2)
-    #     newSplittingInstance.histograms = []
-    #     newSplittingInstance.batteryFrac = []
-    #     newSplittingInstance.temp_batteryPercent = []
-    #     newSplittingInstance.extract_windows()
-    #
-    #     histpowerprof = interface.generateHistogramPowerInfo(filename2)
-    #     ### INITIAL DATA
-    #     histchange = [x[0] for x in histpowerprof] # load values
-    #     powerchange = [x[1] for x in histpowerprof] # power
-    #     sizechange = [x[2] for x in histpowerprof] # num total actors in interval
-    #
-    #     # create all the equations from the sizechange and histchange data
-    #     eqns2 = create_eqns(sizechange, histchange)
-    #     testX, testY = features_labels(eqns2)
-    # else:
-    #     test_ind = len(trainX) - int(test_prop * len(trainX))
-    #     testX = trainX[test_ind:]
-    #     testY = trainY[test_ind:]
-    #     trainX = trainX[0:test_ind]
-    #     trainY = trainY[0:test_ind]
-
-    # print(train[0])
-    # print(train[1])
-    # print(test[0])
-    # print(test[1])
-
 
     return train, test
-
-
-# Answer for nqueens
-# [  1.09594154   2.88503623   3.71927777  -1.48925566  10.57336939
-#    1.91006365   2.23769466  12.14960698   2.09156284  -7.82088665
-#   -2.91121207   0.73506705  16.5699962    7.53777839   2.05335134
-#   -3.50175638  -0.16120979   3.00514738  -2.75026329  -5.03038861
-#  -13.02197047  -1.15272535   1.75750494  -0.89161274  -0.81428029
-#   -7.72688371   2.56652909  -7.38764943  -0.27128653  -8.15615503
-#   -0.20174837 -19.06524896  14.66686926   0.11864814 -12.87241584
-#   -0.72420079   0.30015075   1.26873283 -17.63163686  -0.74602315
-#    4.23297345  -0.88327187   1.2630644   -0.59011749   4.64110987
-#   -5.59660922  -3.12377514   1.83287542  12.71159752  -0.60936807
-#    0.94627536  -1.26180539  -1.58626963]
-
-# Answer for Fibonacci
-# [  0.76935249  11.48459212 -12.11332409  20.2810882   28.61148258
-# -41.57984684 -33.70531468]
 
 
 def nn(training, testing):
@@ -268,6 +121,7 @@ def nn(training, testing):
 
     features1 = training_X
     labels1 = training_Y
+
 
     train = tf.data.Dataset.from_tensor_slices((dict(features1), labels1))
 
@@ -297,35 +151,62 @@ def nn(training, testing):
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
     model = tf.estimator.DNNRegressor(
-      hidden_units=[40, 40, 40], feature_columns=feature_columns,
+      hidden_units=[40, 40], feature_columns=feature_columns,
       optimizer=tf.train.ProximalAdagradOptimizer(
         learning_rate=0.01,
         l1_regularization_strength=0.001
-      )
+      ),
+      model_dir=None
     )
 
+
+
     # Train the model.
-    STEPS = 50000
+    STEPS = 200
     model.train(input_fn=input_train, steps=STEPS)
+
+
+
+
+    feature_spec = {}
+    for actor in testing_X:
+        feature_spec[actor] = tf.FixedLenFeature([25], tf.int64)
+
+    # def serving_input_receiver_fn():
+    #     return tf.estimator.export.build_parsing_serving_input_receiver_fn(
+    #         feature_spec,
+    #         default_batch_size=None
+    #     )
+    #
+    #
+    # model.export_savedmodel("savedmodel", serving_input_receiver_fn())
 
     print("TRAINING COMPLETE")
 
     # Evaluate how the model performs on data it has not yet seen.
     eval_result = model.evaluate(input_fn=input_test)
-    # predictions = list(model.predict(input_fn=input_test))
+    predictions = list(model.predict(input_fn=input_test))
 
-    # total = 0
-    # total2 = 0
-    #
-    # for i in range(len(testing_Y)):
-    #     print("Prediction:", predictions[i]["predictions"][0], "Actual:", testing_Y[i])
-    #     e = abs(predictions[i]["predictions"][0] - testing_Y[i])
-    #     print("Error: ", e)
-    #     total += (e**2)
-    #     total2 += e
+    total = 0
+    total2 = 0
+
+    losses = np.zeros(len(testing_Y))
+
+    for i in range(len(testing_Y)):
+        print("Prediction:", predictions[i]["predictions"][0], "Actual:", testing_Y[i])
+        e = abs(predictions[i]["predictions"][0] - testing_Y[i])
+        print("Error: ", e)
+        losses[i] = e
+        total += (e**2)
+        total2 += e
+    print("\n\n")
+    print("mean of losses: ", np.mean(losses))
+    print("STD of losses: ", np.std(losses))
+    print("\n\n")
+
     #
     # print(total2/len(testing_Y))
-    # print("RMSE: ", (total/len(testing_Y))**0.5)
+    print("RMSE: ", (total/len(testing_Y))**0.5)
     print(eval_result)
 
 
@@ -346,16 +227,18 @@ def nn(training, testing):
 
 
 
-training, testing = calc_eqns(seperate_test=False, filename_train='log_nums.txt')
+training, testing = calc_eqns(seperate_test=False, filename_train='Nqueens_heavy.txt', test_prop=0.20)
+for key in training[0]:
+    print(len(training[0][key]))
 
-iterations = 5
+iterations = 1
 losses = np.zeros(iterations)
 
 
 for i in range(0, iterations):
     print(i)
     losses[i] = nn(training, testing)
+
 print(losses)
 print("Average RMS Error across", iterations, ", runs:", np.mean(losses))
 print("Standard dev of error:", np.std(losses))
-print(np.std(np.array(training[1])))
