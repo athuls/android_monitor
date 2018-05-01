@@ -14,6 +14,9 @@ from histogram import hist_percent_incr_batteryfrac as batt
 from histogram import hist_percent_fixed_size as fixed_size
 from histogram import interface_test as interface
 
+from tensorflow.python.framework import dtypes
+from tensorflow.python.ops import array_ops
+from tensorflow.python.ops import parsing_ops
 
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
@@ -134,6 +137,7 @@ def nn(training, testing):
 
     test = tf.data.Dataset.from_tensor_slices((dict(features2), labels2))
 
+    print(testing_X)
 
     def input_train():
         return train.shuffle(len(training_Y)).batch(5).repeat().make_one_shot_iterator().get_next()
@@ -156,7 +160,7 @@ def nn(training, testing):
         learning_rate=0.01,
         l1_regularization_strength=0.001
       ),
-      model_dir=None
+      model_dir="model_foldr"
     )
 
 
@@ -170,16 +174,29 @@ def nn(training, testing):
 
     feature_spec = {}
     for actor in testing_X:
-        feature_spec[actor] = tf.FixedLenFeature([25], tf.int64)
+        feature_spec[actor] = tf.FixedLenFeature(25, tf.int64)
 
     # def serving_input_receiver_fn():
-    #     return tf.estimator.export.build_parsing_serving_input_receiver_fn(
-    #         feature_spec,
-    #         default_batch_size=None
-    #     )
+    #     serialized_tf_example = array_ops.placeholder(dtype=dtypes.string,
+    #                                               shape=[None],
+    #                                               name='input_example_tensor')
+    #     receiver_tensors = {'examples': serialized_tf_example}
+    #     features = parsing_ops.parse_example(serialized_tf_example, feature_spec)
+    #     print(features)
+    #     return tf.estimator.export.ServingInputReceiver(features, receiver_tensors)
+
+    # def serving_input_receiver_fn():
+    #   """Build the serving inputs."""
+    #   # The outer dimension (None) allows us to batch up inputs for
+    #   # efficiency. However, it also means that if we want a prediction
+    #   # for a single instance, we'll need to wrap it in an outer list.
+    #   inputs = {"demo1.Nqueens": tf.placeholder(shape=25, dtype=tf.int64)}
+    #   inputs1 = {"demo1.Nqueens": tf.FixedLenFeature(25, tf.int64)}
+    #
+    #   return tf.estimator.export.ServingInputReceiver(input1, inputs)
     #
     #
-    # model.export_savedmodel("savedmodel", serving_input_receiver_fn())
+    # model.export_savedmodel("savedmodel", serving_input_receiver_fn)
 
     print("TRAINING COMPLETE")
 
