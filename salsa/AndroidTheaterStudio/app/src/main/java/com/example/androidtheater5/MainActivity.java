@@ -21,9 +21,14 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import android.os.Handler;
 import java.util.logging.Logger;
+
+import android.content.res.AssetManager;
+import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+
 
 public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
@@ -39,7 +44,13 @@ public class MainActivity extends Activity{
 	public boolean isLight = false;
 	public boolean isBreak = false;
 	public String[] light = {"7","7", "7"};
-	public String[] heavy = {"12","12", "10"};
+	public String[] heavy = {"13","13", "10"};
+
+	public TensorFlowInferenceInterface nqueenPredict;
+	public double[] feature = new double[25];
+	public long[] shape = {1, feature.length};
+
+
 
 
 //	private Runnable runnableBattery = new Runnable(){
@@ -64,15 +75,15 @@ public class MainActivity extends Activity{
 		@Override
 		public void run() {
 			SampleBattery();
-			count = (count+1)%1800;
-			if(count == 0) {
-				isLight = !isLight;
-				isBreak = true;
-			}
-			if(count == 30 && isBreak){
-				isBreak = false;
-				count = 0;
-			}
+//			count = (count+1)%1800;
+//			if(count == 0) {
+//				isLight = !isLight;
+//				isBreak = true;
+//			}
+//			if(count == 30 && isBreak){
+//				isBreak = false;
+//				count = 0;
+//			}
 			handler.postDelayed(runnableSampleBattery, 1000);
 		}
 	};
@@ -81,24 +92,8 @@ public class MainActivity extends Activity{
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
-			String[] args;
-			//if(isLight && !isBreak){
-			args = light;
-			Nqueens.main(args);
-//			}else if(!isBreak){
-//				args = heavy;
-//				Nqueens2.main(args);
-//			}
-
-
-//			String[] args2 = {"10"};
-//			Fibonacci.main(args2);
-//			HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-//			debugPrint("runnable: " + hashList.toString());
-
+			Nqueens.main(heavy);
 			handler.postDelayed(runnableNqueens, 750);
-
-
 		}
 
 	};
@@ -125,11 +120,13 @@ public class MainActivity extends Activity{
 			scrollView.addView( textView );
 			AndroidProxy.setTextViewContext( (Activity)this, textView );
 		}
+		AssetManager assetMgr = this.getAssets();
+		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
 		handler.post(runnableNqueens);
 		handler.post(runnableSampleBattery);
-		handler.post(runnableFib);
+//		handler.post(runnableFib);
 		//handler.post(runnableBattery);
 
 	}
@@ -138,6 +135,7 @@ public class MainActivity extends Activity{
 	protected void onStart() {
 		// The activity is about to become visible.
 		super.onStart();
+		AssetManager assetMgr = this.getAssets();
 		debugPrint( "onStart() is called" );
 
 	}
@@ -189,14 +187,34 @@ public class MainActivity extends Activity{
 
 		if(hashList.isEmpty()) {
 			appendLog("Battery level is " + batteryPct + " and no active actors");
+			feature[0] += 1;
 		}
 		else {
 			appendLog("Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
+//				int count = hashList.get(actor).intValue();
+//				if(count < 25){
+//					feature[count] += 1;
+//				}else{
+//					feature[25] += 1;
+//				}
 			}
 			appendLog("\n");
 		}
+//		count += 1;
+//		if(count % 3 == 0){
+//			nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
+//			String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
+//			nqueenPredict.run(output_node);
+//
+//			float [] output =  new float[1];
+//			nqueenPredict.fetch("dnn/logits/BiasAdd:0", output);
+////			debugPrint(Arrays.toString(output));
+//
+//			feature = new double[25];
+//			count = 0;
+//		}
 	}
 
 	protected void showTextOnUI( String str ) {
