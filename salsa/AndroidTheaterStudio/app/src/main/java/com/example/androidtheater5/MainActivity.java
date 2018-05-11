@@ -11,6 +11,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
 import com.example.androidtheater5.AndroidTheaterService;
+import com.google.common.primitives.Doubles;
+
 import demo1.Nqueens;
 import demo1.Nqueens2;
 import demo1.Fibonacci;
@@ -24,6 +26,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import android.os.Handler;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import android.content.res.AssetManager;
@@ -37,6 +43,8 @@ public class MainActivity extends Activity{
 	private TextView textView = null;
 
 	private Handler handler = new Handler();
+
+	private Set<List<Double>> computedLoadCache = new HashSet<>();
 
 	//public static final Object LOCK = new Object();
 
@@ -158,6 +166,7 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onStop() {
 		super.onStop();
+		appendLog("Number of predictions is " + count);
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint( "onStop() is called" );
 	}
@@ -166,7 +175,8 @@ public class MainActivity extends Activity{
 	protected void onDestroy() {
 		// The activity is about to be destroyed.
 		super.onDestroy();
-		debugPrint( "onDestroy() is called" );
+		appendLog("Number of predictions is " + count);
+		debugPrint("onDestroy() is called");
 	}
 	
 	protected void debugPrint( String str ) {
@@ -193,28 +203,37 @@ public class MainActivity extends Activity{
 			appendLog("Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
-//				int count = hashList.get(actor).intValue();
-//				if(count < 25){
-//					feature[count] += 1;
-//				}else{
-//					feature[25] += 1;
-//				}
+				/////////////////////// PREDICTION MODE ///////////////////////
+				int count = hashList.get(actor).intValue();
+				if(count < 25){
+					feature[count] += 1;
+				}else{
+					feature[25] += 1;
+				}
+				/////////////////////// PREDICTION MODE ///////////////////////
 			}
 			appendLog("\n");
 		}
-//		count += 1;
-//		if(count % 3 == 0){
-//			nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
-//			String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
-//			nqueenPredict.run(output_node);
-//
-//			float [] output =  new float[1];
-//			nqueenPredict.fetch("dnn/logits/BiasAdd:0", output);
-////			debugPrint(Arrays.toString(output));
-//
-//			feature = new double[25];
-//			count = 0;
-//		}
+
+		/////////////////////// PREDICTION MODE ///////////////////////
+		count += 1;
+		if(count % 3 == 0){
+			List<Double> featureList = Doubles.asList(feature);
+			if(!computedLoadCache.contains(featureList)) {
+				nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
+				String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
+				nqueenPredict.run(output_node);
+
+				float [] output =  new float[1];
+				nqueenPredict.fetch("dnn/logits/BiasAdd:0", output);
+				// debugPrint(Arrays.toString(output));
+
+				computedLoadCache.add(featureList);
+				feature = new double[25];
+				count = 0;
+			}
+		}
+		/////////////////////// PREDICTION MODE ///////////////////////
 	}
 
 	protected void showTextOnUI( String str ) {
