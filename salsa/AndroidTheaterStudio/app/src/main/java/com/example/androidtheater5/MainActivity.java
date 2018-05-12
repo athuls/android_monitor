@@ -58,6 +58,8 @@ public class MainActivity extends Activity{
 	public double[] feature = new double[25];
 	public long[] shape = {1, feature.length};
 
+	public long predictCount = 0;
+	public long possiblePred = 0;
 
 
 
@@ -217,8 +219,15 @@ public class MainActivity extends Activity{
 
 		/////////////////////// PREDICTION MODE ///////////////////////
 		count += 1;
+		if(count % 10 == 0){
+			appendLog("Number of predictions is " + predictCount);
+			debugPrint("Number of predictions is " + predictCount);
+			appendLog("Possible predictions is " + possiblePred);
+			debugPrint("Possible predictions is " + possiblePred);
+		}
 		if(count % 3 == 0){
 			List<Double> featureList = Doubles.asList(feature);
+			possiblePred++;
 			if(!computedLoadCache.contains(featureList)) {
 				nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
 				String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
@@ -230,9 +239,11 @@ public class MainActivity extends Activity{
 
 				computedLoadCache.add(featureList);
 				feature = new double[25];
-				count = 0;
+				predictCount += 1;
 			}
 		}
+
+
 		/////////////////////// PREDICTION MODE ///////////////////////
 	}
 
