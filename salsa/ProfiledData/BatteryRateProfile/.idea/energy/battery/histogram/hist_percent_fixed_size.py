@@ -22,9 +22,9 @@ class SplitFixedWindowsTumbling:
     batteryFrac = []
     temp_batteryPercent = []
 
-    def __init__(self, filename, actorname, windowsize, outputfile, range=(-1,1.0)):
+    def __init__(self, filename, actornamelist, windowsize, outputfile, range=(-1,1.0)):
         self.filename = filename
-        self.actor_name = actorname
+        self._actor_name_list = actornamelist
         self.actor_names_with_counts = []
         self.prob_multiactor_req_type = []
         self.window_size = int(windowsize)
@@ -266,7 +266,7 @@ class SplitFixedWindowsTumbling:
                     actor_name = str(line[0:ind])
                     num = int(line[ind + 8 : comma_ind])
                     actor_count_map[actor_name] = num
-                    if actor_name == self.actor_name:
+                    if actor_name in self._actor_name_list:
                         curr.append(num)
         vals_per_drop.append(curr)
         self.actor_names_with_counts.append(actor_counts_list)

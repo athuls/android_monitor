@@ -23,58 +23,61 @@ import tensorflow as tf
 
 
 
-def create_histos(actor_names, full_data):
-    eqns = {}
-    times = []
+def create_sys_of_eqns(actor_names, full_data):
+    sys_eqns_lhs = {}
+    sys_eqns_rhs = []
     for a in actor_names:
-        eqns[a] = []
-    for eq in full_data:
-        time = len(eq)
+        sys_eqns_lhs[a] = []
+    for batteryDropInterval in full_data:
+        batteryDropIntervalLength = len(batteryDropInterval)
         curr_eqn = {}
         for a in actor_names:
             curr_eqn[a] = {}
-        for d in eq:
-            for key in actor_names:
-                if key in d:
-                    if d[key] in curr_eqn[key]:
-                        curr_eqn[key][d[key]] += 1
+        for sample in batteryDropInterval:
+            for actor_name in actor_names:
+                if actor_name in sample:
+                    if sample[actor_name] in curr_eqn[actor_name]:
+                        curr_eqn[actor_name][sample[actor_name]] += 1
                     else:
-                        curr_eqn[key][d[key]] = 1
+                        curr_eqn[actor_name][sample[actor_name]] = 1
                 else:
-                    if 0 in curr_eqn[key]:
-                        curr_eqn[key][0] += 1
+                    if 0 in curr_eqn[actor_name]:
+                        curr_eqn[actor_name][0] += 1
                     else:
-                        curr_eqn[key][0] = 1
-        for key in curr_eqn:
-            eqns[key].append(curr_eqn[key])
-        times.append(time)
+                        curr_eqn[actor_name][0] = 1
+        for actor_name in curr_eqn:
+            sys_eqns_lhs[actor_name].append(curr_eqn[actor_name])
+        sys_eqns_rhs.append(batteryDropIntervalLength)
 
-    return eqns, times
+    return sys_eqns_lhs, sys_eqns_rhs
 
 def getTrainingTestingSeperateData(actor_names, eqns, eqns_test):
     return 0
 
-def getTrainingTesting(actor_names, eqns, times, test_prop=0.20):
+def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.20):
     X_vals = {}
-    for a in actor_names:
-        curr = eqns[a]
+    for actor_name in actor_names:
+        current_eqn = sys_eqns_lhs[actor_name]
         LEN = 25
-        feats = np.zeros((len(curr), LEN))
+        feats = np.zeros((len(current_eqn), LEN))
+
         # Add data to the matrix
-        for i in range(len(curr)):
-            const_dict = curr[i]
+        for i in range(len(current_eqn)):
+            const_dict = current_eqn[i]
             for key in const_dict:
                 if key >= LEN - 1:
                     feats[i][24] += const_dict[key]
                 else:
                     feats[i][key] += const_dict[key]
 
-        X_vals[a] = feats
+        X_vals[actor_name] = feats
+
     # # right side of linear system
-    Y_vals = np.asarray(times)
+    Y_vals = np.asarray(sys_eqns_rhs)
 
+    print("lenght is " + str(len(Y_vals)))
 
-    test_ind = int(len(times) * (1-test_prop))
+    test_ind = int(len(sys_eqns_rhs) * (1 - test_prop))
     X_training = {}
     X_testing = {}
     for key in X_vals:
@@ -84,10 +87,50 @@ def getTrainingTesting(actor_names, eqns, times, test_prop=0.20):
     Y_training = Y_vals[0:test_ind]
     Y_testing = Y_vals[test_ind:]
 
+    # Capture training data
+    # First add the header row for training dataset
+    train_f = open("train_f.txt", "w")
+    count = 0
+    for actor_name_f in X_training:
+        for val in X_training[actor_name_f][0]:
+            train_f.write(actor_name_f + "_" + str(count) + ",")
+            count += 1
+        count = 0
+    train_f.write("BatteryDropTime\n")
+
+    # Now add training values
+    data_point_idx = 0
+    for actor_name_f in X_training:
+        for data_point in X_training[actor_name_f]:
+            for feat_val in data_point:
+                train_f.write(str(feat_val) + ",")
+            train_f.write(str(Y_training[data_point_idx]) + "\n")
+            data_point_idx += 1
+        data_point_idx = 0
+        
+
+    # Capture test data
+    # First add the header row for test dataset
+    test_f = open("test_f.txt", "w")
+    count = 0
+    for actor_name_f in X_testing:
+        for val in X_testing[actor_name_f][0]:
+            test_f.write(actor_name_f + "_" + str(count) + ",")
+            count += 1
+        count = 0
+    test_f.write("BatteryDropTime\n")
+
+    # Now add training values
+    data_point_idx = 0
+    for actor_name_f in X_testing:
+        for data_point in X_testing[actor_name_f]:
+            for feat_val in data_point:
+                test_f.write(str(feat_val) + ",")
+            test_f.write(str(Y_testing[data_point_idx]) + "\n")
+            data_point_idx += 1
+        data_point_idx = 0
+
     return (X_training, Y_training), (X_testing, Y_testing)
-
-
-
 
 
 def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.20):
@@ -96,10 +139,9 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size_train.txt')
         in_window_size = 3
-        actor_name='demo1.Nqueens'
+        actor_name_list='examples.numbers.Number,examples.numbers.AdderPrinter,examples.numbers.SequentialNumbers'
 
-
-        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actorname=actor_name, windowsize=in_window_size, outputfile=filename)
+        newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actornamelist=actor_name_list, windowsize=in_window_size, outputfile=filename)
         newSplittingInstance.histograms = []
         newSplittingInstance.batteryFrac = []
         newSplittingInstance.temp_batteryPercent = []
@@ -108,7 +150,7 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         actors = newSplittingInstance.get_actor_names()
 
         actor_counts_intervals = newSplittingInstance.get_counts()
-        histos, times = create_histos(actors, actor_counts_intervals)
+        histos, times = create_sys_of_eqns(actors, actor_counts_intervals)
         train, test = getTrainingTesting(actors, histos, times, test_prop=test_prop)
 
     else:
@@ -244,7 +286,7 @@ def nn(training, testing):
 
 
 
-training, testing = calc_eqns(seperate_test=False, filename_train='Nqueens_heavy.txt', test_prop=0.20)
+training, testing = calc_eqns(seperate_test=False, filename_train='log_nums.txt', test_prop=0.20)
 for key in training[0]:
     print(len(training[0][key]))
 
