@@ -21,7 +21,11 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-
+g_train_file_name='Nqueens_light.txt'
+g_actor_list_name='demo1.Nqueens'
+g_train_out_file="nqueens_light_train_f.txt"
+g_test_out_file="nqueens_light_test_f.txt"
+LEN = 24
 
 def create_sys_of_eqns(actor_names, full_data):
     sys_eqns_lhs = {}
@@ -58,24 +62,24 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.20):
     X_vals = {}
     for actor_name in actor_names:
         current_eqn = sys_eqns_lhs[actor_name]
-        LEN = 25
         feats = np.zeros((len(current_eqn), LEN))
 
         # Add data to the matrix
         for i in range(len(current_eqn)):
             const_dict = current_eqn[i]
             for key in const_dict:
-                if key >= LEN - 1:
-                    feats[i][24] += const_dict[key]
-                else:
-                    feats[i][key] += const_dict[key]
+                if key >= LEN:
+                    feats[i][LEN-1] += const_dict[key]
+                # We are dropping features where the actor count is 0
+                elif key > 0:
+                    feats[i][key - 1] += const_dict[key]
 
         X_vals[actor_name] = feats
 
     # # right side of linear system
     Y_vals = np.asarray(sys_eqns_rhs)
 
-    print("lenght is " + str(len(Y_vals)))
+    print("length is " + str(len(Y_vals)))
 
     test_ind = int(len(sys_eqns_rhs) * (1 - test_prop))
     X_training = {}
@@ -89,46 +93,78 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.20):
 
     # Capture training data
     # First add the header row for training dataset
-    train_f = open("train_f.txt", "w")
-    count = 0
+    train_f = open(g_train_out_file, "w")
+    count = 1
     for actor_name_f in X_training:
         for val in X_training[actor_name_f][0]:
             train_f.write(actor_name_f + "_" + str(count) + ",")
             count += 1
-        count = 0
+        count = 1
     train_f.write("BatteryDropTime\n")
 
     # Now add training values
     data_point_idx = 0
+    data_set = []
+    data_set_points = []
     for actor_name_f in X_training:
         for data_point in X_training[actor_name_f]:
+            if(len(data_set) > data_point_idx):
+                data_set_points=data_set[data_point_idx]
+
             for feat_val in data_point:
-                train_f.write(str(feat_val) + ",")
-            train_f.write(str(Y_training[data_point_idx]) + "\n")
+                data_set_points.append(feat_val)
+#                train_f.write(str(feat_val) + ",")
+#            train_f.write(str(Y_training[data_point_idx]) + "\n")
+            if(len(data_set) <= data_point_idx):
+                data_set.append(data_set_points)
+                data_set_points=[]
             data_point_idx += 1
+
         data_point_idx = 0
-        
+
+    for data_set_iter in data_set:
+        for data_point_iter in data_set_iter:
+            train_f.write(str(data_point_iter) + ",")
+        train_f.write(str(Y_training[data_point_idx]) + "\n")
+        data_point_idx += 1
 
     # Capture test data
     # First add the header row for test dataset
-    test_f = open("test_f.txt", "w")
-    count = 0
+    test_f = open(g_test_out_file, "w")
+    count = 1
     for actor_name_f in X_testing:
         for val in X_testing[actor_name_f][0]:
             test_f.write(actor_name_f + "_" + str(count) + ",")
             count += 1
-        count = 0
+        count = 1
     test_f.write("BatteryDropTime\n")
 
-    # Now add training values
+    # Now add test values
     data_point_idx = 0
+    data_set = []
+    data_set_points = []
     for actor_name_f in X_testing:
         for data_point in X_testing[actor_name_f]:
+            if(len(data_set) > data_point_idx):
+                data_set_points=data_set[data_point_idx]
+
             for feat_val in data_point:
-                test_f.write(str(feat_val) + ",")
-            test_f.write(str(Y_testing[data_point_idx]) + "\n")
+                data_set_points.append(feat_val)
+            #                train_f.write(str(feat_val) + ",")
+            #            train_f.write(str(Y_training[data_point_idx]) + "\n")
+            if(len(data_set) <= data_point_idx):
+                data_set.append(data_set_points)
+                data_set_points=[]
             data_point_idx += 1
+
         data_point_idx = 0
+
+    for data_set_iter in data_set:
+        for data_point_iter in data_set_iter:
+            test_f.write(str(data_point_iter) + ",")
+        test_f.write(str(Y_testing[data_point_idx]) + "\n")
+        data_point_idx += 1
+
 
     return (X_training, Y_training), (X_testing, Y_testing)
 
@@ -139,7 +175,8 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         dir = os.path.dirname(__file__)
         filename = os.path.join(dir, '../output/histogram/hist_percent_fixed_size_train.txt')
         in_window_size = 3
-        actor_name_list='examples.numbers.Number,examples.numbers.AdderPrinter,examples.numbers.SequentialNumbers'
+        # actor_name_list='examples.numbers.Number,examples.numbers.AdderPrinter,examples.numbers.SequentialNumbers'
+        actor_name_list=g_actor_list_name
 
         newSplittingInstance = fixed_size.SplitFixedWindowsTumbling(filename='../mobile_logs/'+filename_train, actornamelist=actor_name_list, windowsize=in_window_size, outputfile=filename)
         newSplittingInstance.histograms = []
@@ -197,12 +234,12 @@ def nn(training, testing):
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
     model = tf.estimator.DNNRegressor(
-      hidden_units=[40, 40], feature_columns=feature_columns,
+      hidden_units=[20,20], feature_columns=feature_columns,
       optimizer=tf.train.ProximalAdagradOptimizer(
         learning_rate=0.01,
         l1_regularization_strength=0.001
-      ),
-      model_dir="model_foldr"
+      )
+      #, model_dir="model_foldr"
     )
 
 
@@ -216,7 +253,7 @@ def nn(training, testing):
 
     feature_spec = {}
     for actor in testing_X:
-        feature_spec[actor] = tf.FixedLenFeature(25, tf.int64)
+        feature_spec[actor] = tf.FixedLenFeature(LEN, tf.int64)
 
     # def serving_input_receiver_fn():
     #     serialized_tf_example = array_ops.placeholder(dtype=dtypes.string,
@@ -232,8 +269,8 @@ def nn(training, testing):
     #   # The outer dimension (None) allows us to batch up inputs for
     #   # efficiency. However, it also means that if we want a prediction
     #   # for a single instance, we'll need to wrap it in an outer list.
-    #   inputs = {"demo1.Nqueens": tf.placeholder(shape=25, dtype=tf.int64)}
-    #   inputs1 = {"demo1.Nqueens": tf.FixedLenFeature(25, tf.int64)}
+    #   inputs = {"demo1.Nqueens": tf.placeholder(shape=LEN, dtype=tf.int64)}
+    #   inputs1 = {"demo1.Nqueens": tf.FixedLenFeature(LEN, tf.int64)}
     #
     #   return tf.estimator.export.ServingInputReceiver(input1, inputs)
     #
@@ -286,7 +323,7 @@ def nn(training, testing):
 
 
 
-training, testing = calc_eqns(seperate_test=False, filename_train='log_nums.txt', test_prop=0.20)
+training, testing = calc_eqns(seperate_test=False, filename_train=g_train_file_name, test_prop=0.20)
 for key in training[0]:
     print(len(training[0][key]))
 
