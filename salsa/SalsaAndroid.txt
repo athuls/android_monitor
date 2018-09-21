@@ -1,0 +1,55 @@
+I   Prerequisites:
+    1) Java installation (https://help.ubuntu.com/community/Java)
+    2) SALSA resources (https://wcl.cs.rpi.edu/salsa/)
+    3) Android SDK (https://developer.android.com/studio/index.html)
+
+II  RESOURCES PROVIDED:
+    1) SALSA source zip file (Salsa_RSH.zip)
+    2) SALSA jar file (salsa_RSH_2.jar) 
+    3) Android theater source zip file (AndroidTheaterStudio.zip)
+    4) SALSA demo applications zip file (my_tests.zip)
+    5) Android theater APK file (AndroidTheater_RSH.apk)
+
+III READING:
+    1) You will be running a universal naming service and theaters (that act as actor hosts) in order to deploy SALSA applications on Android. To understand what universal naming service and theaters are, along with how SALSA actors can be deployed remotely, please read chapter 4 at https://wcl.cs.rpi.edu/salsa/tutorial/salsa112v.pdf
+
+IV  INSTALLATION STEPS:
+    1) Before proceeding, you should be able to run a simple HelloWorld application in SALSA, on your workstation, using the steps described at https://wcl.cs.rpi.edu/salsa/demos/instructions.html
+    2) Obtain the salsa jar file either by downloading it from SALSA website, downloading it from resources provided or rebuilding it (see section V for rebuilding steps). 
+    3) Set CLASSPATH variable to the path containing the salsa_RSH_2.jar file.
+    3) You can either use the provided AndroidTheater application APK to directly run the SALSA host on Android or follow steps in section VI below to generate a custom APK file. The following steps assume you have the Android APK file to deploy to your mobile.  
+    4) Connect your phone to workstation via USB and enable debugging on Android phone (Settings -> Status -> About Phone -> Tap on "Build number" 7 times). Then go to Status -> Developer options and enable "Android debugging"
+    5) Go to folder where the android theater APK is located and run the following commands: 
+       - adb -d install -r AndroidTheater_RSH.apk
+       - adb -d shell am start -n com.example.androidtheater5/.MainActivity
+    6) Find the Android phone IP address (Settings -> About phone -> Status -> IP address). Note that the theater is configured to listen on port 4040. 
+    7) From the workstation, run the name server on the workstation by running the following command:  
+       - java -cp "./*:$CLASSPATH:." wwc.naming.WWCNamingServer -p 3030 > ./namesever_temp.txt
+    8) From the workstation, run the SALSA application on the mobile using the following command: 
+       - java -cp salsa_RSH_2.jar:. -Duan=uan://<workstationIP>:3030 -Dual=rmsp://<mobileIP>:4040 demo1.HelloWorld 
+
+V   REBUILD SALSA JAR FILE:
+    1) Extract contents of Salsa_RSH.zip
+    2) Go to the home folder
+    3) Do any modifications or instrumentation as needed. 
+    4) Run the following: 
+       - ./buildsalsa
+       - ./buildjar
+
+VI  REBUILD ANDROID THEATER APP
+    1) Extract contents of AndroidTheaterStudio.zip
+    2) Open the project in Android studio
+    3) If needed, replace the demo1.jar file in app/libs folder with a different demo jar file generated from steps in section VII
+    4) Rebuild the application in Android studio
+    5) Rebuild the APK file which will be available at app/build/outputs/apk
+
+VII UPDATE DEMO SALSA JAR FILE
+    1) Extract contents of my_tests.zip
+    2) Go to the home folder of my_tests
+    3) Run the buildjar script to compile SALSA files in demo folders
+    3) Run the following to generate a jar file for corresponding demo application:
+       - jar cf demo1.jar demo1
+       - Check the program works by running "java -cp $CLASSPATH:demo1.jar demo1.HelloWorld"
+
+VIII TROUBLESHOOTING
+<TODO>
