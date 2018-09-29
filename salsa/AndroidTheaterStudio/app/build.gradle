@@ -21,5 +21,6 @@ dependencies {
     compile files('libs/demo1.jar')
     compile files('libs/salsa1.1.5.jar')
     compile 'org.tensorflow:tensorflow-android:+'
-    compile group: 'com.google.guava', name: 'guava', version: '15.0'
+    compile 'com.google.guava:guava:15.0'
+    compile files('libs/trap.jar')
 }

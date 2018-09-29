@@ -10,27 +10,24 @@ import android.util.Log;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
-import com.example.androidtheater5.AndroidTheaterService;
-import com.google.common.primitives.Doubles;
 
-import demo1.Nqueens;
-import demo1.Nqueens2;
-import demo1.Fibonacci;
-import demo1.HelloWorld;
+//import demo1.Nqueens;
+//import demo1.Nqueens2;
+//import demo1.Fibonacci;
+import demo_test.Trap;
+
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 import android.os.Handler;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
 
 import android.content.res.AssetManager;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
@@ -99,24 +96,38 @@ public class MainActivity extends Activity{
 	};
 
 
-	private Runnable runnableNqueens = new Runnable(){
+//	private Runnable runnableNqueens = new Runnable(){
+//		@Override
+//		public void run() {
+//			Nqueens.main(heavy);
+//			handler.postDelayed(runnableNqueens, 750);
+//		}
+//
+//	};
+//
+//	private Runnable runnableFib = new Runnable(){
+//		@Override
+//		public void run() {
+//			String[] args = {"10"};
+//			Fibonacci.main(args);
+//			handler.postDelayed(runnableFib, 1000);
+//		}
+//
+//	};
+
+	private Runnable runnableTrap = new Runnable(){
 		@Override
 		public void run() {
-			Nqueens.main(heavy);
-			handler.postDelayed(runnableNqueens, 750);
+			// Trap program
+			String[] args = {"0", "1", "1024", "2", "10.195.15.219", "localhost:4040"};
+			Trap.main(args);
+
+			handler.postDelayed(runnableTrap, 2500);
 		}
 
 	};
 
-	private Runnable runnableFib = new Runnable(){
-		@Override
-		public void run() {
-			String[] args = {"10"};
-			Fibonacci.main(args);
-			handler.postDelayed(runnableFib, 1000);
-		}
 
-	};
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -134,10 +145,8 @@ public class MainActivity extends Activity{
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
-		handler.post(runnableNqueens);
+		handler.post(runnableTrap);
 		handler.post(runnableSampleBattery);
-//		handler.post(runnableFib);
-		//handler.post(runnableBattery);
 
 	}
 
@@ -206,42 +215,42 @@ public class MainActivity extends Activity{
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
-				int count = hashList.get(actor).intValue();
-				if(count < 25){
-					feature[count] += 1;
-				}else{
-					feature[25] += 1;
-				}
+//				int count = hashList.get(actor).intValue();
+//				if(count < 25){
+//					feature[count] += 1;
+//				}else{
+//					feature[25] += 1;
+//				}
 				/////////////////////// PREDICTION MODE ///////////////////////
 			}
 			appendLog("\n");
 		}
 
 		/////////////////////// PREDICTION MODE ///////////////////////
-		count += 1;
-		if(count % 10 == 0){
-			appendLog("Number of predictions is " + predictCount);
-			debugPrint("Number of predictions is " + predictCount);
-			appendLog("Possible predictions is " + possiblePred);
-			debugPrint("Possible predictions is " + possiblePred);
-		}
-		if(count % 3 == 0){
-			List<Double> featureList = Doubles.asList(feature);
-			possiblePred++;
-			if(!computedLoadCache.contains(featureList)) {
-				nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
-				String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
-				nqueenPredict.run(output_node);
-
-				float [] output =  new float[1];
-				nqueenPredict.fetch("dnn/logits/BiasAdd:0", output);
-				// debugPrint(Arrays.toString(output));
-
-				computedLoadCache.add(featureList);
-				feature = new double[25];
-				predictCount += 1;
-			}
-		}
+//		count += 1;
+//		if(count % 10 == 0){
+//			appendLog("Number of predictions is " + predictCount);
+//			debugPrint("Number of predictions is " + predictCount);
+//			appendLog("Possible predictions is " + possiblePred);
+//			debugPrint("Possible predictions is " + possiblePred);
+//		}
+//		if(count % 3 == 0){
+//			List<Double> featureList = Doubles.asList(feature);
+//			possiblePred++;
+//			if(!computedLoadCache.contains(featureList)) {
+//				nqueenPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
+//				String [] output_node = new String[]{"dnn/logits/BiasAdd:0"};
+//				nqueenPredict.run(output_node);
+//
+//				float [] output =  new float[1];
+//				nqueenPredict.fetch("dnn/logits/BiasAdd:0", output);
+//				// debugPrint(Arrays.toString(output));
+//
+//				computedLoadCache.add(featureList);
+//				feature = new double[25];
+//				predictCount += 1;
+//			}
+//		}
 
 
 		/////////////////////// PREDICTION MODE ///////////////////////
