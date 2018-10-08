@@ -195,6 +195,9 @@ public class MainActivity extends Activity{
 		@Override
 		public void run() {
 			// ExSort program
+			// The first argument is the nameserver URL.
+			// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
+			// with the IP address of the ANdroid phone
 			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
 			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
 			Exp_Starter.main(args);
