@@ -16,8 +16,8 @@ behavior DistributedHeat{
     int y=120;
     int actors = 2;
     long initialTime;
-    String nameServer = "n1.ns.cs.rpi.edu";
-    String theatersFile = "cluster.txt";
+    String nameServer = "localhost";
+    String theatersList = "localhost:4040";
     String fileName = "heat-salsa.map";
                 
     double[][] createInitialData(){
@@ -54,7 +54,7 @@ behavior DistributedHeat{
         }
     }
                     
-    double[][] doWork(double[][] data, int iterations, int noActors, String nameServer, String theatersFile){
+    double[][] doWork(double[][] data, int iterations, int noActors, String nameServer, String theatersList){
 	  
 	// divide number of rows into actors
 	int rowsPerActor = x/noActors;
@@ -82,10 +82,11 @@ behavior DistributedHeat{
 	}
 
 	// read available theaters
-	Vector theaters = new Vector();
+	// Vector theaters = new Vector();
+	List theaters;
 	String theater;
 
-	try {
+	/* try {
 	    BufferedReader in = new BufferedReader(new FileReader(theatersFile));
 	    while ((theater = in.readLine())!= null){
 		theaters.add(theater);
@@ -93,7 +94,8 @@ behavior DistributedHeat{
 	    in.close(); 
 	} catch (IOException ioe){
 	    standardOutput<-println("[error] Can't open the file "+fileName+" for writing.");
-	}
+	}*/ 
+	theaters = Arrays.asList(theatersList.split(","));
 
 	// migrate actors to theaters
 	for (int a=0; a<noActors; a++){
@@ -161,13 +163,13 @@ behavior DistributedHeat{
       if(argc>=3) y=Integer.parseInt(args[2]);
       if(argc>=4) actors=Integer.parseInt(args[3]);
       if(argc>=5) nameServer=args[4];
-      if(argc>=6) theatersFile = args[5];
+      if(argc>=6) theatersList = args[5];
       if(argc>=7) fileName=args[6];
 
       x+=2; y+=2;
 
       createInitialData() @ 
-      doWork(token, new Integer(iterations), new Integer(actors), nameServer, theatersFile) 
+      doWork(token, new Integer(iterations), new Integer(actors), nameServer, theatersList) 
       @produceFile(token, fileName)
       @standardOutput<-println("Computation is done");
 

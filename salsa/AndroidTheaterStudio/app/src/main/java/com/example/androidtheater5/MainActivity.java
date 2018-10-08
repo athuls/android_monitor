@@ -15,6 +15,9 @@ import androidsalsa.resources.AndroidProxy;
 //import demo1.Nqueens2;
 //import demo1.Fibonacci;
 import demo_test.Trap;
+import examples.Heat.DistributedHeat;
+import examples.exsort.Exp_Starter;
+import examples.ping.Ping;
 
 import salsa.language.UniversalActor;
 
@@ -115,14 +118,88 @@ public class MainActivity extends Activity{
 //
 //	};
 
-	private Runnable runnableTrap = new Runnable(){
+//	private Runnable runnableTrap = new Runnable(){
+//		@Override
+//		public void run() {
+//			// Trap program
+//			String[] args = {"0", "1", "1024", "2", "10.195.15.219", "localhost:4040"};
+//			Trap.main(args);
+//
+//			handler.postDelayed(runnableTrap, 2500);
+//		}
+//
+//	};
+
+//	private Runnable runnableHeat = new Runnable(){
+//		@Override
+//		public void run() {
+//			// Heat program
+//			// Create an output file first
+//			String outputFile = "sdcard/log.txt";
+//			File logFile = new File(outputFile);
+//			if (!logFile.exists())
+//			{
+//				try
+//				{
+//					logFile.createNewFile();
+//				}
+//				catch (IOException e)
+//				{
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//
+//			String[] args = {"100", "120", "120", "2", "128.174.244.87", "localhost:4040,128.174.244.87:5050", outputFile};
+//			DistributedHeat.main(args);
+//
+////			handler.postDelayed(runnableHeat, 2500);
+//		}
+//
+//	};
+
+	private Runnable runnablePing = new Runnable(){
 		@Override
 		public void run() {
-			// Trap program
-			String[] args = {"0", "1", "1024", "2", "10.195.15.219", "localhost:4040"};
-			Trap.main(args);
+			// Heat program
+			// Create an output file first
+			String outputFile = "sdcard/log.txt";
+			File logFile = new File(outputFile);
+			if (!logFile.exists())
+			{
+				try
+				{
+					logFile.createNewFile();
+				}
+				catch (IOException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 
-			handler.postDelayed(runnableTrap, 2500);
+			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
+			System.setProperty( "uan", "uan://osl-server1.cs.illinois.edu:3030/myping" );
+			System.setProperty( "ual", "rmsp://10.194.206.182:4040/mypingloc" );
+			System.clearProperty("netif");
+			System.clearProperty("port");
+			System.clearProperty("nodie");
+			Ping.main(args);
+
+//			handler.postDelayed(runnableHeat, 2500);
+		}
+
+	};
+
+	private Runnable runnableExsort = new Runnable(){
+		@Override
+		public void run() {
+			// ExSort program
+			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
+			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
+			Exp_Starter.main(args);
+
+			handler.postDelayed(runnableExsort, 3000);
 		}
 
 	};
@@ -145,9 +222,8 @@ public class MainActivity extends Activity{
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
-		handler.post(runnableTrap);
+		handler.post(runnableExsort);
 		handler.post(runnableSampleBattery);
-
 	}
 
 	@Override
@@ -201,7 +277,7 @@ public class MainActivity extends Activity{
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
-		HashMap<String, Integer> hashList = UniversalActor.getActiveActors("main activity");
+		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 //		debugPrint(hashList.toString());
 		Integer hashListSize = hashList.size();
 //		debugPrint(hashListSize.toString());

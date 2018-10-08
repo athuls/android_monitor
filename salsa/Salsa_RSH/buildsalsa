@@ -1,1 +1,1 @@
-java -cp ./salsa1.1.5.jar:. salsac.SalsaCompiler `find src/androidsalsa/ src/wwc/resources/ | grep "salsa$"`
+java -cp ./salsa1.1.5.jar:. salsac.SalsaCompiler `find src/androidsalsa/ src/examples/ src/wwc/resources/ | grep "salsa$"`

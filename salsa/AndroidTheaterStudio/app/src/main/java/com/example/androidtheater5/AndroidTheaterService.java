@@ -51,11 +51,11 @@ public class AndroidTheaterService extends Service {
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );
 	    System.setProperty( "output", STDOUT_CLASS );
-	    
+//	    ServiceFactory.isApplet();
+
         RunTime.receivedUniversalActor();
         theater = ServiceFactory.getTheater();
-        
-        debugPrint( "Theater listening on: " + theater.getLocation() ); 
+        debugPrint("Theater listening on: " + theater.getLocation());
 	}
 	
 	protected void debugPrint( String str ) {

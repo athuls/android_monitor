@@ -865,7 +865,6 @@ public abstract class State extends Thread implements Actor, java.io.Serializabl
                         if(id != null && !id.contains("StandardOutput") && !id.contains("StandardError") && !id.contains("StandardInput"))
                         {
                                 //System.out.println(this.getClass().getName() + " AND3 " + currentMessage.getMethodName() + " AND4 ");
-                                logger.log(Level.INFO, "Scheduled in: " + targetName);
                                 actorListLock.lock();
                                 try {
                                         if(activeActorList.containsKey(targetName))

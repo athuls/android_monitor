@@ -271,8 +271,8 @@ public class DistributedHeat extends UniversalActor  {
 		int y = 120;
 		int actors = 2;
 		long initialTime;
-		String nameServer = "n1.ns.cs.rpi.edu";
-		String theatersFile = "cluster.txt";
+		String nameServer = "localhost";
+		String theatersList = "localhost:4040";
 		String fileName = "heat-salsa.map";
 		public double[][] createInitialData() {
 			double[][] data = new double[x][];
@@ -313,7 +313,7 @@ continue;					}
 			}
 
 		}
-		public double[][] doWork(double[][] data, int iterations, int noActors, String nameServer, String theatersFile) {
+		public double[][] doWork(double[][] data, int iterations, int noActors, String nameServer, String theatersList) {
 			int rowsPerActor = x/noActors;
 			HeatWorker[] workers = new HeatWorker[noActors];
 			for (int a = 0; a<noActors; a++){
@@ -352,26 +352,9 @@ continue;					}
 					}
 				}
 }			}
-			Vector theaters = new Vector();
+			List theaters;
 			String theater;
-			try {
-				BufferedReader in = new BufferedReader(new FileReader(theatersFile));
-				while ((theater=in.readLine())!=null) {
-					theaters.add(theater);
-				}
-				in.close();
-			}
-			catch (IOException ioe) {
-				{
-					// standardOutput<-println("[error] Can't open the file "+fileName+" for writing.")
-					{
-						Object _arguments[] = { "[error] Can't open the file "+fileName+" for writing." };
-						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
-						__messages.add( message );
-					}
-				}
-			}
-
+			theaters = Arrays.asList(theatersList.split(","));
 			for (int a = 0; a<noActors; a++){
 				{
 					// standardOutput<-println("Sending actor "+"uan://"+nameServer+":3030/a"+a+" to "+"rmsp://"+theaters.get(a%theaters.size())+"/a"+a)
@@ -479,7 +462,7 @@ continue;					}
 }			if (argc>=3) {y = Integer.parseInt(args[2]);
 }			if (argc>=4) {actors = Integer.parseInt(args[3]);
 }			if (argc>=5) {nameServer = args[4];
-}			if (argc>=6) {theatersFile = args[5];
+}			if (argc>=6) {theatersList = args[5];
 }			if (argc>=7) {fileName = args[6];
 }			x += 2;
 			y += 2;
@@ -493,9 +476,9 @@ continue;					}
 					Message message = new Message( self, self, "createInitialData", _arguments, null, token_2_0 );
 					__messages.add( message );
 				}
-				// doWork(token, new Integer(iterations), new Integer(actors), nameServer, theatersFile)
+				// doWork(token, new Integer(iterations), new Integer(actors), nameServer, theatersList)
 				{
-					Object _arguments[] = { token_2_0, new Integer(iterations), new Integer(actors), nameServer, theatersFile };
+					Object _arguments[] = { token_2_0, new Integer(iterations), new Integer(actors), nameServer, theatersList };
 					Message message = new Message( self, self, "doWork", _arguments, token_2_0, token_2_1 );
 					__messages.add( message );
 				}

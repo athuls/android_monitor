@@ -82,7 +82,6 @@ public class WWCTransportService implements TransportService {
   public void migrate(Actor state, UAL target){}
 
   public void send(Message message, ActorReference target) {
-    System.err.println("Atul Message: " + message.toString() + " Atul target: " + target.toString());
     UAL targetUAL=target.getUAL();
     String targetHost=targetUAL.getHost()+":"+targetUAL.getPort();
     OutgoingSocketHandler channel=null;
@@ -105,7 +104,6 @@ public class WWCTransportService implements TransportService {
   }
 
   public void send(SystemMessage message, ActorReference target) {
-    System.err.println("Atul SystemMessage: " + message.toString() + " Atul target: " + target.toString());
     UAL targetUAL=target.getUAL();
     String targetHost=targetUAL.getHost()+":"+targetUAL.getPort();
     OutgoingSocketHandler channel=null;
