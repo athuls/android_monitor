@@ -18,7 +18,7 @@ import demo_test.Trap;
 import examples.Heat.DistributedHeat;
 import examples.exsort.Exp_Starter;
 import examples.ping.Ping;
-
+import examples.nqueens.Nqueens;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
@@ -98,16 +98,15 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			Nqueens.main(heavy);
+			handler.postDelayed(runnableNqueens, 750);
+		}
 
-//	private Runnable runnableNqueens = new Runnable(){
-//		@Override
-//		public void run() {
-//			Nqueens.main(heavy);
-//			handler.postDelayed(runnableNqueens, 750);
-//		}
-//
-//	};
-//
+	};
+
 //	private Runnable runnableFib = new Runnable(){
 //		@Override
 //		public void run() {
@@ -198,8 +197,8 @@ public class MainActivity extends Activity{
 			// The first argument is the nameserver URL.
 			// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
 			// with the IP address of the ANdroid phone
-			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
-			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
+			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://192.17.150.98:4040/", "rmsp://192.17.150.98:4040/",
+			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://192.17.150.98:4040/"};
 			Exp_Starter.main(args);
 
 			handler.postDelayed(runnableExsort, 3000);
@@ -226,6 +225,7 @@ public class MainActivity extends Activity{
 
 		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
 		handler.post(runnableExsort);
+		handler.post(runnableNqueens);
 		handler.post(runnableSampleBattery);
 	}
 
