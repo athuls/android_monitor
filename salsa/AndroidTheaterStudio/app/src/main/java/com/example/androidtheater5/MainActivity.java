@@ -160,32 +160,23 @@ public class MainActivity extends Activity{
 	private Runnable runnablePing = new Runnable(){
 		@Override
 		public void run() {
-			// Heat program
-			// Create an output file first
-			String outputFile = "sdcard/log.txt";
-			File logFile = new File(outputFile);
-			if (!logFile.exists())
-			{
-				try
-				{
-					logFile.createNewFile();
-				}
-				catch (IOException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
+			// Ping program
+			// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+			String[] args = {"HCSB_full.txt", "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
 
-			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
+			// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 			System.setProperty( "uan", "uan://osl-server1.cs.illinois.edu:3030/myping" );
-			System.setProperty( "ual", "rmsp://10.194.206.182:4040/mypingloc" );
+
+			// Note that the IP address is the IP address of the smartphone
+			System.setProperty( "ual", "rmsp://192.17.148.55:4040/mypingloc" );
+
+
 			System.clearProperty("netif");
 			System.clearProperty("port");
 			System.clearProperty("nodie");
 			Ping.main(args);
 
-//			handler.postDelayed(runnableHeat, 2500);
+			handler.postDelayed(runnablePing, 6000);
 		}
 
 	};
@@ -223,9 +214,9 @@ public class MainActivity extends Activity{
 		AssetManager assetMgr = this.getAssets();
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
-		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
-		handler.post(runnableExsort);
-		handler.post(runnableNqueens);
+		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+		handler.post(runnablePing);
+//		handler.post(runnableNqueens);
 		handler.post(runnableSampleBattery);
 	}
 
