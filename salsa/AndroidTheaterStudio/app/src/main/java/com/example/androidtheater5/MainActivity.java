@@ -102,7 +102,7 @@ public class MainActivity extends Activity{
 		@Override
 		public void run() {
 			Nqueens.main(heavy);
-			handler.postDelayed(runnableNqueens, 750);
+			handler.postDelayed(runnableNqueens, 800);
 		}
 
 	};
@@ -168,7 +168,7 @@ public class MainActivity extends Activity{
 			System.setProperty( "uan", "uan://osl-server1.cs.illinois.edu:3030/myping" );
 
 			// Note that the IP address is the IP address of the smartphone
-			System.setProperty( "ual", "rmsp://192.17.148.55:4040/mypingloc" );
+			System.setProperty( "ual", "rmsp://10.194.206.182:4040/mypingloc" );
 
 
 			System.clearProperty("netif");
@@ -176,7 +176,7 @@ public class MainActivity extends Activity{
 			System.clearProperty("nodie");
 			Ping.main(args);
 
-			handler.postDelayed(runnablePing, 6000);
+			handler.postDelayed(runnablePing, 5500);
 		}
 
 	};
@@ -216,7 +216,7 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 		handler.post(runnablePing);
-//		handler.post(runnableNqueens);
+		handler.post(runnableNqueens);
 		handler.post(runnableSampleBattery);
 	}
 
