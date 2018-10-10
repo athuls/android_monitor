@@ -189,7 +189,7 @@ public class MainActivity extends Activity{
 			// Face detection program
 			// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/",
-					"rmsp://10.194.206.182:4040/", "1", "1", "img_00.jpg", "img_01.jpg", "img_02.jpg", "img_03.jpg",
+					"rmsp://10.194.206.182:4040/", "2", "2", "img_00.jpg", "img_01.jpg", "img_02.jpg", "img_03.jpg",
 					"img_04.jpg", "img_05.jpg", "img_08.jpg", "report_on", "rmsp://10.194.206.182:4040/"};
 
 			System.clearProperty("netif");
