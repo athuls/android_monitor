@@ -170,13 +170,12 @@ public class MainActivity extends Activity{
 			// Note that the IP address is the IP address of the smartphone
 			System.setProperty( "ual", "rmsp://10.194.206.182:4040/mypingloc" );
 
-
 			System.clearProperty("netif");
 			System.clearProperty("port");
 			System.clearProperty("nodie");
 			Ping.main(args);
 
-			handler.postDelayed(runnablePing, 5500);
+			handler.postDelayed(runnablePing, 1000);
 		}
 
 	};
@@ -188,8 +187,8 @@ public class MainActivity extends Activity{
 			// The first argument is the nameserver URL.
 			// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
 			// with the IP address of the ANdroid phone
-			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://192.17.150.98:4040/", "rmsp://192.17.150.98:4040/",
-			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://192.17.150.98:4040/"};
+			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
+			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
 			Exp_Starter.main(args);
 
 			handler.postDelayed(runnableExsort, 3000);
@@ -217,6 +216,7 @@ public class MainActivity extends Activity{
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 		handler.post(runnablePing);
 		handler.post(runnableNqueens);
+		handler.post(runnableExsort);
 		handler.post(runnableSampleBattery);
 	}
 
