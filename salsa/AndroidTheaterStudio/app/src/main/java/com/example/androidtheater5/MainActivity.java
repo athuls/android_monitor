@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.StrictMode;
 import android.util.Log;
 import android.widget.ScrollView;
@@ -25,6 +27,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import android.os.Handler;
 
@@ -35,6 +38,7 @@ import java.util.Set;
 import android.content.res.AssetManager;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
+import java.util.Calendar;
 
 public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
@@ -61,7 +65,10 @@ public class MainActivity extends Activity{
 	public long predictCount = 0;
 	public long possiblePred = 0;
 
-
+	private Handler nqueensHandler;
+	private Handler batteryHandler;
+	private Handler pingHandler;
+	private Handler exsortHandler;
 
 //	private Runnable runnableBattery = new Runnable(){
 //		@Override
@@ -94,18 +101,69 @@ public class MainActivity extends Activity{
 //				isBreak = false;
 //				count = 0;
 //			}
-			handler.postDelayed(runnableSampleBattery, 1000);
+			batteryHandler.postDelayed(runnableSampleBattery, 1000);
+		}
+	};
+
+//	private Runnable runnableNqueens = new Runnable(){
+//		@Override
+//		public void run() {
+//			Nqueens.main(heavy);
+//			handler.postDelayed(runnableNqueens, 800);
+//		}
+//
+//	};
+
+	private Runnable nqueensWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			nqueensHandler = new Handler();
+			nqueensHandler.post(runnableNqueens);
+			Looper.loop();
+		}
+	};
+
+	private Runnable batteryWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			batteryHandler = new Handler();
+			batteryHandler.post(runnableSampleBattery);
+			Looper.loop();
+		}
+	};
+
+	private Runnable exsortWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			exsortHandler = new Handler();
+			exsortHandler.post(runnableExsort);
+			Looper.loop();
+		}
+	};
+
+	private Runnable pingWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			pingHandler = new Handler();
+			pingHandler.post(runnablePing);
+			Looper.loop();
 		}
 	};
 
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
+
 			Nqueens.main(heavy);
-			handler.postDelayed(runnableNqueens, 800);
+			nqueensHandler.postDelayed(runnableNqueens, 500);
 		}
 
 	};
+
 
 //	private Runnable runnableFib = new Runnable(){
 //		@Override
@@ -175,7 +233,7 @@ public class MainActivity extends Activity{
 			System.clearProperty("nodie");
 			Ping.main(args);
 
-			handler.postDelayed(runnablePing, 1000);
+			pingHandler.postDelayed(runnablePing, 1000);
 		}
 
 	};
@@ -189,9 +247,9 @@ public class MainActivity extends Activity{
 			// with the IP address of the ANdroid phone
 			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
 			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
-			Exp_Starter.main(args);
+			Exp_Starter.main(args	);
 
-			handler.postDelayed(runnableExsort, 3000);
+			exsortHandler.postDelayed(runnableExsort, 3000);
 		}
 
 	};
@@ -208,16 +266,23 @@ public class MainActivity extends Activity{
 			scrollView = new ScrollView( this );
 			textView = new TextView( this );
 			scrollView.addView( textView );
-			AndroidProxy.setTextViewContext( (Activity)this, textView );
+			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
-		handler.post(runnablePing);
-		handler.post(runnableNqueens);
-		handler.post(runnableExsort);
-		handler.post(runnableSampleBattery);
+//		handler.post(runnablePing);
+//		handler.post(runnableNqueens);
+//		handler.post(runnableExsort);
+
+		new Thread(nqueensWorker).start();
+
+
+//		handler.post(runnableSampleBattery);
+
+		new Thread(batteryWorker).start();
+
 	}
 
 	@Override
@@ -276,12 +341,15 @@ public class MainActivity extends Activity{
 		Integer hashListSize = hashList.size();
 //		debugPrint(hashListSize.toString());
 
+		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
-			appendLog("Battery level is " + batteryPct + " and no active actors");
+			System.err.println("I am in sample battery1");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
 			feature[0] += 1;
 		}
 		else {
-			appendLog("Battery level is " + batteryPct + " actor counts- ");
+			System.err.println("I am in sample battery2");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
