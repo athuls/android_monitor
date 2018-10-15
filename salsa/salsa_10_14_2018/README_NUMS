@@ -1,0 +1,16 @@
+NOTE THAT THE start_wwcservices.sh AND kill_wwcservices.sh  SCRIPTS IN THIS FOLDER WORK ONLY IF YOU ARE USING THE OSL SERVER: osl-server1.cs.illinois.edu
+IT WOULD NEED MODIFICATIONS IF YOU USE A DIFFERENT MACHINE FOR NAMESERVER AND SALSA THEATERS ON LAPTOP SIDE
+
+To run Numbers application: 
+1) Log in to OSL server
+2) Checkout this folder on the OSL server
+3) Run "sh start_wwcservices.sh" to start the nameserver
+4) Change the mobile IP address at this line: https://github.com/athuls/android_monitor/blob/a03af631f371e0f5781ede7e16fe9a0ce4aae0fe/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L73
+4) Deploy the app on phone via Android Studio to get the logs
+5) You can also change time period for Numbers application at following lines:
+   - https://github.com/athuls/android_monitor/blob/a03af631f371e0f5781ede7e16fe9a0ce4aae0fe/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L136
+   - https://github.com/athuls/android_monitor/blob/a03af631f371e0f5781ede7e16fe9a0ce4aae0fe/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L154
+   - https://github.com/athuls/android_monitor/blob/a03af631f371e0f5781ede7e16fe9a0ce4aae0fe/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L172
+
+To verify app is running correctly: 
+- You should see different number sequences on the phone app display. Be wary of any exceptions or error messages that pop up on phone display or android studio's logcat output
