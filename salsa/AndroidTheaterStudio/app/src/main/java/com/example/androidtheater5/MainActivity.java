@@ -33,6 +33,7 @@ import android.os.Handler;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import android.content.res.AssetManager;
@@ -69,6 +70,12 @@ public class MainActivity extends Activity{
 	private Handler batteryHandler;
 	private Handler pingHandler;
 	private Handler exsortHandler;
+
+	public static Object theaterSyncToken = new Object();
+	public static Object theater2SyncToken = new Object();
+	private Object oneAppSyncToken = new Object();
+
+	private String mobileIpAddress = "192.17.148.132";
 
 //	private Runnable runnableBattery = new Runnable(){
 //		@Override
@@ -154,17 +161,6 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable runnableNqueens = new Runnable(){
-		@Override
-		public void run() {
-
-			Nqueens.main(heavy);
-			nqueensHandler.postDelayed(runnableNqueens, 500);
-		}
-
-	};
-
-
 //	private Runnable runnableFib = new Runnable(){
 //		@Override
 //		public void run() {
@@ -215,25 +211,47 @@ public class MainActivity extends Activity{
 //
 //	};
 
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+				Nqueens.main(heavy);
+			}
+
+			nqueensHandler.postDelayed(runnableNqueens, 800);
+		}
+
+	};
+
 	private Runnable runnablePing = new Runnable(){
 		@Override
 		public void run() {
-			// Ping program
-			// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-			String[] args = {"HCSB_full.txt", "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
 
-			// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-			System.setProperty( "uan", "uan://osl-server1.cs.illinois.edu:3030/myping" );
+			waitUntilTheaterStarted();
 
-			// Note that the IP address is the IP address of the smartphone
-			System.setProperty( "ual", "rmsp://10.194.206.182:4040/mypingloc" );
+			synchronized (oneAppSyncToken) {
+				// Ping program
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				String[] args = {"HCSB_full.txt", "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
 
-			System.clearProperty("netif");
-			System.clearProperty("port");
-			System.clearProperty("nodie");
-			Ping.main(args);
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping");
 
-			pingHandler.postDelayed(runnablePing, 1000);
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc");
+
+				System.clearProperty("netif");
+				System.clearProperty("port");
+				System.clearProperty("nodie");
+				Ping.main(args);
+			}
+
+			pingHandler.postDelayed(runnablePing, 2000);
 		}
 
 	};
@@ -241,24 +259,62 @@ public class MainActivity extends Activity{
 	private Runnable runnableExsort = new Runnable(){
 		@Override
 		public void run() {
-			// ExSort program
-			// The first argument is the nameserver URL.
-			// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
-			// with the IP address of the ANdroid phone
-			String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://10.194.206.182:4040/", "rmsp://10.194.206.182:4040/",
-			"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://10.194.206.182:4040/"};
-			Exp_Starter.main(args	);
 
-			exsortHandler.postDelayed(runnableExsort, 3000);
+			waitUntilTheaterStarted();
+
+			synchronized (oneAppSyncToken) {
+				// ExSort program
+
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myexsort");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://"+mobileIpAddress+":4040/myexsortloc");
+
+
+				// The first argument is the nameserver URL.
+				// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
+				// with the IP address of the ANdroid phone
+				String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://"+mobileIpAddress+":4040/", "rmsp://"+mobileIpAddress+":4040/",
+						"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://"+mobileIpAddress+":4040/"};
+				Exp_Starter.main(args);
+			}
+
+			exsortHandler.postDelayed(runnableExsort, 5000);
 		}
 
 	};
 
 
+	private void waitUntilTheaterStarted() {
+		synchronized (MainActivity.theaterSyncToken) {
+			try {
+				if(!AndroidTheaterService.theaterCreated) {
+					MainActivity.theaterSyncToken.wait();
+				}
+			} catch (InterruptedException e) {
+				System.err.println("Something went wrong waiting for theater to start "  + e);
+			}
+
+		}
+
+//		synchronized (MainActivity.theater2SyncToken) {
+//			try {
+//				if(!AndroidTheaterService2.theaterCreated) {
+//					MainActivity.theater2SyncToken.wait();
+//				}
+//			} catch (InterruptedException e) {
+//				System.err.println("Something went wrong waiting for theater to start "  + e);
+//			}
+//
+//		}
+	}
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		debugPrint( "onCreate() is called" );
+		System.setProperty( "output", "androidsalsa.resources.StandardOutput" );
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
@@ -272,16 +328,29 @@ public class MainActivity extends Activity{
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+//		startService(new Intent(MainActivity.this, AndroidTheaterService2.class));
+
 //		handler.post(runnablePing);
 //		handler.post(runnableNqueens);
 //		handler.post(runnableExsort);
 
-		new Thread(nqueensWorker).start();
+//		synchronized (MainActivity.theaterSyncToken) {
+//			try {
+//				MainActivity.theaterSyncToken.wait();
+//			} catch (InterruptedException e) {
+//				System.err.println("Something went wrong waiting for theater to start "  + e);
+//			}
+//
+//		}
 
+		new Thread(nqueensWorker).start();
+		new Thread(pingWorker).start();
+		new Thread(exsortWorker).start();
 
 //		handler.post(runnableSampleBattery);
 
 		new Thread(batteryWorker).start();
+
 
 	}
 
@@ -290,8 +359,7 @@ public class MainActivity extends Activity{
 		// The activity is about to become visible.
 		super.onStart();
 		AssetManager assetMgr = this.getAssets();
-		debugPrint( "onStart() is called" );
-
+		debugPrint("onStart() is called");
 	}
 
 	@Override
@@ -343,12 +411,10 @@ public class MainActivity extends Activity{
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
-			System.err.println("I am in sample battery1");
 			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
 			feature[0] += 1;
 		}
 		else {
-			System.err.println("I am in sample battery2");
 			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
