@@ -12,15 +12,6 @@ import android.util.Log;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
-
-//import demo1.Nqueens;
-//import demo1.Nqueens2;
-//import demo1.Fibonacci;
-import demo_test.Trap;
-import examples.Heat.DistributedHeat;
-import examples.exsort.Exp_Starter;
-import examples.ping.Ping;
-import examples.nqueens.Nqueens;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
@@ -33,13 +24,13 @@ import android.os.Handler;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 
 import android.content.res.AssetManager;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
 import java.util.Calendar;
+import examples.facedetection.Exp_Starter;
 
 public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
@@ -67,7 +58,7 @@ public class MainActivity extends Activity{
 	public long possiblePred = 0;
 
 	private Handler batteryHandler;
-	private Handler exsortHandler;
+	private Handler faceDetectorHandler;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -92,17 +83,17 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable exsortWorker = new Runnable() {
+	private Runnable faceDetectorWorker = new Runnable() {
 		@Override
 		public void run() {
 			Looper.prepare();
-			exsortHandler = new Handler();
-			exsortHandler.post(runnableExsort);
+			faceDetectorHandler = new Handler();
+			faceDetectorHandler.post(runnableFaceDetector);
 			Looper.loop();
 		}
 	};
 
-	private Runnable runnableExsort = new Runnable(){
+	private Runnable runnableFaceDetector = new Runnable(){
 		@Override
 		public void run() {
 
@@ -112,21 +103,22 @@ public class MainActivity extends Activity{
 				// ExSort program
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myexsort");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myfacedetector");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://"+mobileIpAddress+":4040/myexsortloc");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myfacedetectorloc");
 
 
-				// The first argument is the nameserver URL.
-				// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
-				// with the IP address of the ANdroid phone
-				String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://"+mobileIpAddress+":4040/", "rmsp://"+mobileIpAddress+":4040/",
-						"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://"+mobileIpAddress+":4040/"};
+				// Face detection program
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://"+mobileIpAddress+":4040/",
+						"rmsp://"+mobileIpAddress+":4040/", "2", "2", "img_00.jpg", "img_01.jpg", "img_02.jpg", "img_03.jpg",
+						"img_04.jpg", "img_05.jpg", "img_08.jpg", "report_on", "rmsp://"+mobileIpAddress+":4040/"};
+
 				Exp_Starter.main(args);
 			}
 
-			exsortHandler.postDelayed(runnableExsort, 4000);
+			faceDetectorHandler.postDelayed(runnableFaceDetector, 4000);
 		}
 
 	};
@@ -171,7 +163,7 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		new Thread(exsortWorker).start();
+		new Thread(faceDetectorWorker).start();
 
 		new Thread(batteryWorker).start();
 

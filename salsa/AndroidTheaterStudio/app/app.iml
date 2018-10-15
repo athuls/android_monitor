@@ -94,6 +94,7 @@
     <orderEntry type="library" exported="" name="heat" level="project" />
     <orderEntry type="library" exported="" name="JJIL-J2SE" level="project" />
     <orderEntry type="library" exported="" name="JJILCore" level="project" />
+    <orderEntry type="library" exported="" name="JJIL-Android" level="project" />
     <orderEntry type="library" exported="" name="salsa_heat" level="project" />
     <orderEntry type="library" exported="" name="trap" level="project" />
     <orderEntry type="library" exported="" name="tensorflow-android-1.12.0-rc0" level="project" />
