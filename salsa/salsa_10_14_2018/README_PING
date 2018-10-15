@@ -5,9 +5,9 @@ To run Ping application:
 1) Log in to OSL server
 2) Checkout this folder on the OSL server
 3) Run "sh start_wwcservices.sh" to start the nameserver and EchoAgent on OSL server
-4) Change the mobile IP address at this line: 
+4) Change the mobile IP address at this line: (https://github.com/athuls/android_monitor/blob/8d146770ad8edcaf20aef2251c9c7888201bac5e/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L75) 
 4) Deploy the app on phone via Android Studio to get the logs
-5) Depending on the message sending avg time between Ping agent and EchoAgent (you can get this information on phone app display), change the time period at this line:  
+5) Depending on the message sending avg time between Ping agent and EchoAgent (you can get this information on phone app display), change the time period at this line: (https://github.com/athuls/android_monitor/blob/8d146770ad8edcaf20aef2251c9c7888201bac5e/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L128) 
 
 To verify app is running correctly: 
 - You should messages that look similar to the following on the phone app display: 
