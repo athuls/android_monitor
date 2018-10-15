@@ -13,14 +13,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
 
-//import demo1.Nqueens;
-//import demo1.Nqueens2;
-//import demo1.Fibonacci;
-import demo_test.Trap;
-import examples.Heat.DistributedHeat;
-import examples.exsort.Exp_Starter;
-import examples.ping.Ping;
-import examples.nqueens.Nqueens;
+import examples.numbers.Numbers;
+import examples.numbers.UniqueNumbers;
+import examples.numbers.SequentialNumbers;
+
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
@@ -66,7 +62,9 @@ public class MainActivity extends Activity{
 	public long predictCount = 0;
 	public long possiblePred = 0;
 
-	private Handler nqueensHandler;
+	private Handler numsHandler;
+	private Handler seqNumsHandler;
+	private Handler uniqNumsHandler;
 	private Handler batteryHandler;
 
 	public static Object theaterSyncToken = new Object();
@@ -82,12 +80,32 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable nqueensWorker = new Runnable() {
+	private Runnable numbersWorker = new Runnable() {
 		@Override
 		public void run() {
 			Looper.prepare();
-			nqueensHandler = new Handler();
-			nqueensHandler.post(runnableNqueens);
+			numsHandler = new Handler();
+			numsHandler.post(runnableNumbers);
+			Looper.loop();
+		}
+	};
+
+	private Runnable seqNumbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			seqNumsHandler = new Handler();
+			seqNumsHandler.post(runnableSeqNumbers);
+			Looper.loop();
+		}
+	};
+
+	private Runnable uniqNumbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			uniqNumsHandler = new Handler();
+			uniqNumsHandler.post(runnableUniqNumbers);
 			Looper.loop();
 		}
 	};
@@ -102,22 +120,61 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable runnableNqueens = new Runnable(){
+	private Runnable runnableNumbers = new Runnable(){
 		@Override
 		public void run() {
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-				Nqueens.main(heavy);
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc");
+				String[] args = {""};
+				Numbers.main(args);
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 400);
+			numsHandler.postDelayed(runnableNumbers, 400);
 		}
 
 	};
+
+	private Runnable runnableSeqNumbers = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myseqnumbers");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myseqnumbersloc");
+				String[] args = {""};
+				SequentialNumbers.main(args);
+			}
+
+			seqNumsHandler.postDelayed(runnableSeqNumbers, 400);
+		}
+
+	};
+
+	private Runnable runnableUniqNumbers = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myuniqnumbers");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myuniqnumbersloc");
+				String[] args = {""};
+				UniqueNumbers.main(args);
+			}
+
+			uniqNumsHandler.postDelayed(runnableUniqNumbers, 400);
+		}
+
+	};
+
+
 
 	private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
@@ -158,7 +215,9 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		new Thread(nqueensWorker).start();
+		new Thread(numbersWorker).start();
+		new Thread(seqNumbersWorker).start();
+		new Thread(uniqNumbersWorker).start();
 		new Thread(batteryWorker).start();
 
 
