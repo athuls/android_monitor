@@ -68,7 +68,6 @@ public class MainActivity extends Activity{
 
 	private Handler nqueensHandler;
 	private Handler batteryHandler;
-	private Handler exsortHandler;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -103,16 +102,6 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable exsortWorker = new Runnable() {
-		@Override
-		public void run() {
-			Looper.prepare();
-			exsortHandler = new Handler();
-			exsortHandler.post(runnableExsort);
-			Looper.loop();
-		}
-	};
-
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
@@ -125,40 +114,10 @@ public class MainActivity extends Activity{
 				Nqueens.main(heavy);
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 700);
+			nqueensHandler.postDelayed(runnableNqueens, 400);
 		}
 
 	};
-
-	private Runnable runnableExsort = new Runnable(){
-		@Override
-		public void run() {
-
-			waitUntilTheaterStarted();
-
-			synchronized (oneAppSyncToken) {
-				// ExSort program
-
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myexsort");
-
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://"+mobileIpAddress+":4040/myexsortloc");
-
-
-				// The first argument is the nameserver URL.
-				// The second, third and final arguments contain the URLs for the Android theater. So the IP address in the URL should be replaced
-				// with the IP address of the ANdroid phone
-				String[] args = {"uan://osl-server1.cs.illinois.edu:3030/", "rmsp://"+mobileIpAddress+":4040/", "rmsp://"+mobileIpAddress+":4040/",
-						"2", "10", "big.txt", "big_out.txt", "report_on", "rmsp://"+mobileIpAddress+":4040/"};
-				Exp_Starter.main(args);
-			}
-
-			exsortHandler.postDelayed(runnableExsort, 4000);
-		}
-
-	};
-
 
 	private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
@@ -200,8 +159,6 @@ public class MainActivity extends Activity{
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 		new Thread(nqueensWorker).start();
-		new Thread(exsortWorker).start();
-
 		new Thread(batteryWorker).start();
 
 
