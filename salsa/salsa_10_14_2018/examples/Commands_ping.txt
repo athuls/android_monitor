@@ -1,0 +1,3 @@
+java -cp salsa_heat.jar:. -Duan=uan://osl-server1.cs.illinois.edu:3030/myecho -Dnetif=eth0 -Dnodie examples.ping.EchoAgent 
+
+java -cp salsa_heat.jar:. -Duan=uan://osl-server1.cs.illinois.edu:3030/myping -Dual=rmsp://10.194.206.182:4040/mypingloc -Dnetif=eth0 examples.ping.Ping uan://osl-server1.cs.illinois.edu:3030/myecho uan://osl-server1.cs.illinois.edu:3030/myping &

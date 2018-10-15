@@ -75,7 +75,7 @@ public class MainActivity extends Activity{
 	public static Object theater2SyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 
-	private String mobileIpAddress = "192.17.148.132";
+	private String mobileIpAddress = "10.194.206.182";
 
 //	private Runnable runnableBattery = new Runnable(){
 //		@Override
@@ -161,56 +161,6 @@ public class MainActivity extends Activity{
 		}
 	};
 
-//	private Runnable runnableFib = new Runnable(){
-//		@Override
-//		public void run() {
-//			String[] args = {"10"};
-//			Fibonacci.main(args);
-//			handler.postDelayed(runnableFib, 1000);
-//		}
-//
-//	};
-
-//	private Runnable runnableTrap = new Runnable(){
-//		@Override
-//		public void run() {
-//			// Trap program
-//			String[] args = {"0", "1", "1024", "2", "10.195.15.219", "localhost:4040"};
-//			Trap.main(args);
-//
-//			handler.postDelayed(runnableTrap, 2500);
-//		}
-//
-//	};
-
-//	private Runnable runnableHeat = new Runnable(){
-//		@Override
-//		public void run() {
-//			// Heat program
-//			// Create an output file first
-//			String outputFile = "sdcard/log.txt";
-//			File logFile = new File(outputFile);
-//			if (!logFile.exists())
-//			{
-//				try
-//				{
-//					logFile.createNewFile();
-//				}
-//				catch (IOException e)
-//				{
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			}
-//
-//			String[] args = {"100", "120", "120", "2", "128.174.244.87", "localhost:4040,128.174.244.87:5050", outputFile};
-//			DistributedHeat.main(args);
-//
-////			handler.postDelayed(runnableHeat, 2500);
-//		}
-//
-//	};
-
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
@@ -223,7 +173,7 @@ public class MainActivity extends Activity{
 				Nqueens.main(heavy);
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 800);
+			nqueensHandler.postDelayed(runnableNqueens, 1000);
 		}
 
 	};
@@ -251,7 +201,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler.postDelayed(runnablePing, 2000);
+			pingHandler.postDelayed(runnablePing, 1000);
 		}
 
 	};
@@ -298,23 +248,12 @@ public class MainActivity extends Activity{
 
 		}
 
-//		synchronized (MainActivity.theater2SyncToken) {
-//			try {
-//				if(!AndroidTheaterService2.theaterCreated) {
-//					MainActivity.theater2SyncToken.wait();
-//				}
-//			} catch (InterruptedException e) {
-//				System.err.println("Something went wrong waiting for theater to start "  + e);
-//			}
-//
-//		}
 	}
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		debugPrint( "onCreate() is called" );
-		System.setProperty( "output", "androidsalsa.resources.StandardOutput" );
+		debugPrint("onCreate() is called");
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
@@ -325,29 +264,20 @@ public class MainActivity extends Activity{
 			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
+		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
+
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
+		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
+		System.setProperty( "nodie", "theater" );
+		System.setProperty( "port", AndroidTheaterService.THEATER_PORT );
+		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
+
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
-//		startService(new Intent(MainActivity.this, AndroidTheaterService2.class));
-
-//		handler.post(runnablePing);
-//		handler.post(runnableNqueens);
-//		handler.post(runnableExsort);
-
-//		synchronized (MainActivity.theaterSyncToken) {
-//			try {
-//				MainActivity.theaterSyncToken.wait();
-//			} catch (InterruptedException e) {
-//				System.err.println("Something went wrong waiting for theater to start "  + e);
-//			}
-//
-//		}
 
 		new Thread(nqueensWorker).start();
 		new Thread(pingWorker).start();
 		new Thread(exsortWorker).start();
-
-//		handler.post(runnableSampleBattery);
 
 		new Thread(batteryWorker).start();
 
@@ -380,7 +310,6 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onStop() {
 		super.onStop();
-		appendLog("Number of predictions is " + count);
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint( "onStop() is called" );
 	}
@@ -389,7 +318,6 @@ public class MainActivity extends Activity{
 	protected void onDestroy() {
 		// The activity is about to be destroyed.
 		super.onDestroy();
-		appendLog("Number of predictions is " + count);
 		debugPrint("onDestroy() is called");
 	}
 	
@@ -405,9 +333,7 @@ public class MainActivity extends Activity{
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-//		debugPrint(hashList.toString());
 		Integer hashListSize = hashList.size();
-//		debugPrint(hashListSize.toString());
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {

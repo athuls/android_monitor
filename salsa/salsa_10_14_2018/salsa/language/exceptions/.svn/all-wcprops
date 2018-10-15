@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/wcl/!svn/ver/48/software/salsa/salsa/language/exceptions
+END
+CurrentContinuationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wcl/!svn/ver/48/software/salsa/salsa/language/exceptions/CurrentContinuationException.java
+END
+SalsaWrapperException.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wcl/!svn/ver/48/software/salsa/salsa/language/exceptions/SalsaWrapperException.java
+END
+RunTimeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wcl/!svn/ver/48/software/salsa/salsa/language/exceptions/RunTimeException.java
+END
+SalsaException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wcl/!svn/ver/48/software/salsa/salsa/language/exceptions/SalsaException.java
+END

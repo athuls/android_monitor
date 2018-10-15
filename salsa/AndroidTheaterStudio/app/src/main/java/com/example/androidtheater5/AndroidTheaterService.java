@@ -10,9 +10,9 @@ import android.util.Log;
 
 public class AndroidTheaterService extends Service {
 	private final String TAG = "SalsaTheaterService";
-	private final String NETWORK_INTERFACE = "tun0";
-	private final String THEATER_PORT = "4040";
-	private final String STDOUT_CLASS = "androidsalsa.resources.StandardOutput";
+	public static final String NETWORK_INTERFACE = "wlan0";
+	public static final String THEATER_PORT = "4040";
+	public static final String STDOUT_CLASS = "androidsalsa.resources.StandardOutput";
 	
 	private TheaterService theater;
 
@@ -21,7 +21,7 @@ public class AndroidTheaterService extends Service {
     /** Called when the activity is first created. */
 	@Override
 	public void onCreate() {
-		debugPrint( "onCreate() is called" );
+		debugPrint("AndroidTheaterService onCreate() is called" );
 		super.onCreate();
 		createTheater();
 	}
@@ -50,7 +50,8 @@ public class AndroidTheaterService extends Service {
 	
 	protected void createTheater() {
 		// We run a global GC service
-		System.setProperty("nogc", "theater");
+//		System.setProperty("nogc", "theater");
+		System.clearProperty("nogc");
 	    System.setProperty( "nodie", "theater" );
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );
