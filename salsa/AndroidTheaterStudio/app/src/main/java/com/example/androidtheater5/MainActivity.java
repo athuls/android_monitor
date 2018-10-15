@@ -68,58 +68,20 @@ public class MainActivity extends Activity{
 
 	private Handler nqueensHandler;
 	private Handler batteryHandler;
-	private Handler pingHandler;
 	private Handler exsortHandler;
 
 	public static Object theaterSyncToken = new Object();
-	public static Object theater2SyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 
 	private String mobileIpAddress = "10.194.206.182";
-
-//	private Runnable runnableBattery = new Runnable(){
-//		@Override
-//		public void run() {
-//			synchronized (LOCK) {
-//				try {
-//					Thread t = new Thread(runnableSampleBattery);
-//					t.start();
-//					LOCK.wait();
-//					handler.postDelayed(runnableBattery, 1000);
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//
-//
-//		}
-//	};
 
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
 			SampleBattery();
-//			count = (count+1)%1800;
-//			if(count == 0) {
-//				isLight = !isLight;
-//				isBreak = true;
-//			}
-//			if(count == 30 && isBreak){
-//				isBreak = false;
-//				count = 0;
-//			}
 			batteryHandler.postDelayed(runnableSampleBattery, 1000);
 		}
 	};
-
-//	private Runnable runnableNqueens = new Runnable(){
-//		@Override
-//		public void run() {
-//			Nqueens.main(heavy);
-//			handler.postDelayed(runnableNqueens, 800);
-//		}
-//
-//	};
 
 	private Runnable nqueensWorker = new Runnable() {
 		@Override
@@ -151,16 +113,6 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable pingWorker = new Runnable() {
-		@Override
-		public void run() {
-			Looper.prepare();
-			pingHandler = new Handler();
-			pingHandler.post(runnablePing);
-			Looper.loop();
-		}
-	};
-
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
@@ -173,35 +125,7 @@ public class MainActivity extends Activity{
 				Nqueens.main(heavy);
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 1000);
-		}
-
-	};
-
-	private Runnable runnablePing = new Runnable(){
-		@Override
-		public void run() {
-
-			waitUntilTheaterStarted();
-
-			synchronized (oneAppSyncToken) {
-				// Ping program
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {"HCSB_full.txt", "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
-
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping");
-
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc");
-
-				System.clearProperty("netif");
-				System.clearProperty("port");
-				System.clearProperty("nodie");
-				Ping.main(args);
-			}
-
-			pingHandler.postDelayed(runnablePing, 1000);
+			nqueensHandler.postDelayed(runnableNqueens, 700);
 		}
 
 	};
@@ -230,7 +154,7 @@ public class MainActivity extends Activity{
 				Exp_Starter.main(args);
 			}
 
-			exsortHandler.postDelayed(runnableExsort, 5000);
+			exsortHandler.postDelayed(runnableExsort, 4000);
 		}
 
 	};
@@ -276,7 +200,6 @@ public class MainActivity extends Activity{
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 		new Thread(nqueensWorker).start();
-		new Thread(pingWorker).start();
 		new Thread(exsortWorker).start();
 
 		new Thread(batteryWorker).start();
