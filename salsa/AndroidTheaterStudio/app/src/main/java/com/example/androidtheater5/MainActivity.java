@@ -66,7 +66,6 @@ public class MainActivity extends Activity{
 	public long predictCount = 0;
 	public long possiblePred = 0;
 
-	private Handler nqueensHandler;
 	private Handler batteryHandler;
 	private Handler exsortHandler;
 
@@ -80,16 +79,6 @@ public class MainActivity extends Activity{
 		public void run() {
 			SampleBattery();
 			batteryHandler.postDelayed(runnableSampleBattery, 1000);
-		}
-	};
-
-	private Runnable nqueensWorker = new Runnable() {
-		@Override
-		public void run() {
-			Looper.prepare();
-			nqueensHandler = new Handler();
-			nqueensHandler.post(runnableNqueens);
-			Looper.loop();
 		}
 	};
 
@@ -111,23 +100,6 @@ public class MainActivity extends Activity{
 			exsortHandler.post(runnableExsort);
 			Looper.loop();
 		}
-	};
-
-	private Runnable runnableNqueens = new Runnable(){
-		@Override
-		public void run() {
-			synchronized (oneAppSyncToken) {
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
-
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-				Nqueens.main(heavy);
-			}
-
-			nqueensHandler.postDelayed(runnableNqueens, 700);
-		}
-
 	};
 
 	private Runnable runnableExsort = new Runnable(){
@@ -199,7 +171,6 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		new Thread(nqueensWorker).start();
 		new Thread(exsortWorker).start();
 
 		new Thread(batteryWorker).start();

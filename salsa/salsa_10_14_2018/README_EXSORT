@@ -1,18 +1,16 @@
 NOTE THAT THE start_wwcservices.sh AND kill_wwcservices.sh  SCRIPTS IN THIS FOLDER WORK ONLY IF YOU ARE USING THE OSL SERVER: osl-server1.cs.illinois.edu
 IT WOULD NEED MODIFICATIONS IF YOU USE A DIFFERENT MACHINE FOR NAMESERVER AND SALSA THEATERS ON LAPTOP SIDE
 
-To run NQueens + ExSort application: 
+To run ExSort application: 
 1) Log in to OSL server
 2) Checkout this folder on the OSL server
 3) Run "sh start_wwcservices.sh" to start the nameserver
 4) Change the mobile IP address at this line: (https://github.com/athuls/android_monitor/blob/f83c213ed0f54a4cc5d5bdf1c5dd355e68a00ee1/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L76) 
 4) Deploy the app on phone via Android Studio to get the logs
-5) You can also change time period for Nqueens application at this line:https://github.com/athuls/android_monitor/blob/f83c213ed0f54a4cc5d5bdf1c5dd355e68a00ee1/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L128
-6) You can also change time period for ExSort (depending on time that ExSort takes) at this link: https://github.com/athuls/android_monitor/blob/f83c213ed0f54a4cc5d5bdf1c5dd355e68a00ee1/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L157
+5) You can change time period for ExSort (depending on time that ExSort takes) at this link: https://github.com/athuls/android_monitor/blob/f83c213ed0f54a4cc5d5bdf1c5dd355e68a00ee1/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L157
 
 To verify app is running correctly: 
 - You should messages that look similar to the following on the phone app display: 
-  "73712"
   "PHONE_APP: Phone App. Manager Finished."
   "Exp_Starter:: Total Phone_app runtime is: 1762"
   "Exp_Starter:: Phone_App_Manager has finished with the result of: SUCCESS"
