@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="demo1">
+  <library name="JJIL-Android">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/demo1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/JJIL-Android.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
