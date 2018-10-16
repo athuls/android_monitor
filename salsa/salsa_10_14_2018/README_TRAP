@@ -5,6 +5,7 @@ To run Trap application:
 1) Log in to OSL server
 2) Checkout this folder on the OSL server
 3) Run "sh start_wwcservices.sh" to start the nameserver
+   Note that you can restart all the services by running "sh kill_wwcservices.sh" and then running the start script again. 
 4) Change the mobile IP address at this line: https://github.com/athuls/android_monitor/blob/737801f9a19bf1fd4f6161b069c9e0f16dc01c09/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L67 
 4) Deploy the app on phone via Android Studio to get the logs
 5) You can change time period for Trap (depending on time that it takes) at this link: https://github.com/athuls/android_monitor/blob/737801f9a19bf1fd4f6161b069c9e0f16dc01c09/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L118
