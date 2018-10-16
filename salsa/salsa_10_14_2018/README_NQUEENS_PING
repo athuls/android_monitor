@@ -5,6 +5,7 @@ To run NQueens + Ping application:
 1) Log in to OSL server
 2) Checkout this folder on the OSL server
 3) Run "sh start_wwcservices.sh" to start the nameserver and EchoAgent on OSL server
+   Note that you can restart all the services by running "sh kill_wwcservices.sh" and then running the start script again. 
 4) Change the mobile IP address at this line: (https://github.com/athuls/android_monitor/blob/f16f7f26eb6f1f09775470330591177c98a01f9c/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L76) 
 4) Deploy the app on phone via Android Studio to get the logs
 5) Depending on the message sending avg time between Ping agent and EchoAgent (you can get this information on phone app display), change the time period at this line: (https://github.com/athuls/android_monitor/blob/f16f7f26eb6f1f09775470330591177c98a01f9c/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L156) 
