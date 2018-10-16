@@ -1,14 +1,14 @@
 NOTE THAT THE start_wwcservices.sh AND kill_wwcservices.sh  SCRIPTS IN THIS FOLDER WORK ONLY IF YOU ARE USING THE OSL SERVER: osl-server1.cs.illinois.edu
 IT WOULD NEED MODIFICATIONS IF YOU USE A DIFFERENT MACHINE FOR NAMESERVER AND SALSA THEATERS ON LAPTOP SIDE
 
-To run NQueens application: 
+To run Fibonacci application: 
 1) Log in to OSL server
 2) Checkout this folder on the OSL server
 3) Run "sh start_wwcservices.sh" to start the nameserver
 4) Change the mobile IP address at this line:https://github.com/athuls/android_monitor/blob/71dd15fa588b526b119bb6320c090b27ec598078/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L75 
 4) Deploy the app on phone via Android Studio to get the logs
-5) You can also change time period for Nqueens application at this line: https://github.com/athuls/android_monitor/blob/71dd15fa588b526b119bb6320c090b27ec598078/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L105
+5) You can also change time period for Fibonacci application at this line: https://github.com/athuls/android_monitor/blob/71dd15fa588b526b119bb6320c090b27ec598078/salsa/AndroidTheaterStudio/app/src/main/java/com/example/androidtheater5/MainActivity.java#L105
 
 To verify app is running correctly: 
 - You should messages that look similar to the following on the phone app display: 
-  "73712"
+  "89"

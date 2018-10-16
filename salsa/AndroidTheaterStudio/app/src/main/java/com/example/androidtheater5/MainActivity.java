@@ -104,7 +104,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myfibonacci");
-				String[] args = {"13"};
+				String[] args = {"11"};
 				Fibonacci.main(args);
 			}
 
