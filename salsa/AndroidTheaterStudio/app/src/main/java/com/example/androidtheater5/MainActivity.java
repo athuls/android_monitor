@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
 
 import examples.fibonacci.Fibonacci;
+import examples.nqueens.Nqueens;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
@@ -60,6 +61,7 @@ public class MainActivity extends Activity{
 	public long possiblePred = 0;
 
 	private Handler fibonacciHandler;
+	private Handler nqueensHandler;
 	private Handler batteryHandler;
 
 	public static Object theaterSyncToken = new Object();
@@ -85,6 +87,16 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	private Runnable nqueensWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			nqueensHandler = new Handler();
+			nqueensHandler.post(runnableNqueens);
+			Looper.loop();
+		}
+	};
+
 	private Runnable batteryWorker = new Runnable() {
 		@Override
 		public void run() {
@@ -103,12 +115,29 @@ public class MainActivity extends Activity{
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myfibonacci");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myfibonacci");
-				String[] args = {"11"};
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myfibonacciloc");
+				String[] args = {"10"};
 				Fibonacci.main(args);
 			}
 
-			fibonacciHandler.postDelayed(runnableFibonacci, 800);
+			fibonacciHandler.postDelayed(runnableFibonacci, 1100);
+		}
+
+	};
+
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynqueensloc");
+				Nqueens.main(heavy);
+			}
+
+			nqueensHandler.postDelayed(runnableNqueens, 800);
 		}
 
 	};
@@ -153,6 +182,7 @@ public class MainActivity extends Activity{
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 		new Thread(fibonacciWorker).start();
+		new Thread(nqueensWorker).start();
 		new Thread(batteryWorker).start();
 
 
