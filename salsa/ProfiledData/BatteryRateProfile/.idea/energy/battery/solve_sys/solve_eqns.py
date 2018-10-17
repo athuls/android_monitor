@@ -21,10 +21,10 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_trap.txt'
-g_actor_list_name='demo_test.Trap'
-g_train_out_file="trap_train_f.txt"
-g_test_out_file="trap_test_f.txt"
+g_train_file_name='log_nqueens.txt'
+g_actor_list_name='examples.nqueens.Nqueens'
+g_train_out_file="nqueens_train_f.txt"
+g_test_out_file="nqueens_test_f.txt"
 LEN = 24
 
 def create_sys_of_eqns(actor_names, full_data):

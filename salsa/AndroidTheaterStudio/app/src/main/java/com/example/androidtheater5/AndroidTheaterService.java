@@ -50,8 +50,6 @@ public class AndroidTheaterService extends Service {
 	
 	protected void createTheater() {
 		// We run a global GC service
-//		System.setProperty("nogc", "theater");
-		System.clearProperty("nogc");
 	    System.setProperty( "nodie", "theater" );
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );

@@ -72,7 +72,7 @@ public class MainActivity extends Activity{
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 
-	private String mobileIpAddress = "10.194.206.182";
+	private String mobileIpAddress = "10.193.157.251";
 
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
@@ -114,7 +114,7 @@ public class MainActivity extends Activity{
 				Nqueens.main(heavy);
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 400);
+			nqueensHandler.postDelayed(runnableNqueens, 1000);
 		}
 
 	};
@@ -153,12 +153,12 @@ public class MainActivity extends Activity{
 
 		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty( "nodie", "theater" );
-		System.setProperty( "port", AndroidTheaterService.THEATER_PORT );
+		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+//		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		new Thread(nqueensWorker).start();
+//		new Thread(nqueensWorker).start();
 		new Thread(batteryWorker).start();
 
 
@@ -212,7 +212,8 @@ public class MainActivity extends Activity{
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
-		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
+//		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
+		HashMap<String, Integer> hashList = new HashMap<>();
 		Integer hashListSize = hashList.size();
 
 		Date currentTime = Calendar.getInstance().getTime();
