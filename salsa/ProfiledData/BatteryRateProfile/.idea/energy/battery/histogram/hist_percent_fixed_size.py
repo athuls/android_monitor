@@ -26,6 +26,7 @@ class SplitFixedWindowsTumbling:
         self.filename = filename
         self._actor_name_list = actornamelist
         self.actor_names_with_counts = []
+        self.log_time_stamps = []
         self.prob_multiactor_req_type = []
         self.window_size = int(windowsize)
         self.outputfile = outputfile
@@ -239,6 +240,8 @@ class SplitFixedWindowsTumbling:
                     if bat <= self.low:
                         break
 
+                    self.log_time_stamps.append(line[1:bat_ind-2])
+
                     self.temp_batteryPercent.append(bat)
 
 
@@ -276,6 +279,9 @@ class SplitFixedWindowsTumbling:
 
     def get_counts(self):
         return self.actor_names_with_counts
+
+    def get_timestamp_logs(self):
+        return self.log_time_stamps
 
     def get_actor_names(self):
         s = set()

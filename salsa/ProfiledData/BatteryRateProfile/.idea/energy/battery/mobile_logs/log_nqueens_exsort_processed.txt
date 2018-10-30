@@ -1,0 +1,3913 @@
+[Fri Oct 19 18:22:50 PDT 2018] Battery level is 1.0 and no active actors
+[Fri Oct 19 18:22:51 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:22:52 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:22:53 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:22:54 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:22:55 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:22:56 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:22:57 PDT 2018] Battery level is 1.0 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:22:58 PDT 2018] Battery level is 1.0 and no active actors
+[Fri Oct 19 18:22:59 PDT 2018] Battery level is 1.0 and no active actors
+[Fri Oct 19 18:23:00 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:01 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:02 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:03 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:23:04 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:05 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:06 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:07 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:23:09 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:10 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:11 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:12 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:23:13 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:23:14 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:15 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:16 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:17 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:18 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:19 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:20 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:21 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:23:22 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:23 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:24 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:23:25 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:26 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:27 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:28 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:29 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:30 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:31 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:32 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:23:33 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:34 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:35 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:23:36 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:37 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 7, 
+
+
+[Fri Oct 19 18:23:38 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:39 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:23:40 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:41 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:42 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:23:44 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:23:45 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:46 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:23:47 PDT 2018] Battery level is 1.0 and no active actors
+[Fri Oct 19 18:23:48 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:49 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:50 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:51 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:52 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:53 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:54 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:23:55 PDT 2018] Battery level is 1.0 and no active actors
+[Fri Oct 19 18:23:56 PDT 2018] Battery level is 1.0 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:23:57 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:23:58 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:23:59 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:00 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:01 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:02 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:03 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:24:04 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:05 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:06 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:07 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:08 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:09 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:10 PDT 2018] Battery level is 1.0 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:24:11 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:12 PDT 2018] Battery level is 0.99 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:13 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:14 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:15 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:24:16 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:17 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:18 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:19 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:20 PDT 2018] Battery level is 0.99 actor counts- 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:24:21 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:22 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:23 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:24 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:26 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:27 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:28 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:29 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:30 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:31 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:32 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:33 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:24:34 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:35 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:36 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:37 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:38 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:39 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:40 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:41 PDT 2018] Battery level is 0.99 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:42 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:43 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:44 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:45 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:46 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:47 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:48 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:49 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:50 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:51 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:52 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:24:53 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:54 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:55 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:24:56 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:24:57 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:24:58 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:24:59 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:25:00 PDT 2018] Battery level is 0.98 and no active actors
+[Fri Oct 19 18:25:01 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:02 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:25:03 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:04 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:05 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:06 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:25:07 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:09 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:10 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:11 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:12 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:25:13 PDT 2018] Battery level is 0.98 and no active actors
+[Fri Oct 19 18:25:14 PDT 2018] Battery level is 0.98 actor counts- 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:25:15 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:16 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:17 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:18 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:19 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:20 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:21 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:22 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:23 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:25:24 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:25 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:26 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:27 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:25:28 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:29 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:25:30 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:31 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:32 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:33 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:25:34 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:35 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:36 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:37 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 9, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:25:38 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:39 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:40 PDT 2018] Battery level is 0.98 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:25:41 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:25:42 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:44 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:45 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:46 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:25:47 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:25:48 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:25:49 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:50 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:51 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:52 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:25:53 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:25:54 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:25:55 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:56 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:25:57 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:25:58 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 8, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:25:59 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:26:00 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:26:01 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:02 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:03 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:04 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:06 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 5, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:26:07 PDT 2018] Battery level is 0.97 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:26:08 PDT 2018] Battery level is 0.97 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:26:09 PDT 2018] Battery level is 0.97 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:26:10 PDT 2018] Battery level is 0.97 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:26:11 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:26:12 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:26:13 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:14 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:26:15 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:16 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:17 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:18 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:26:19 PDT 2018] Battery level is 0.97 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:20 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:26:21 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:26:22 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:23 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:24 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:25 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:26 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:27 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:29 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:30 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:31 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:26:32 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:33 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:34 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:35 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:36 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:37 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:26:38 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:26:39 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:40 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:41 PDT 2018] Battery level is 0.97 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:26:42 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:26:43 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:44 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:45 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:26:46 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:47 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:49 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:50 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:26:51 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:52 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:26:53 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:54 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:26:55 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:56 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:57 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:26:58 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:26:59 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:27:00 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:01 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:27:02 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:27:03 PDT 2018] Battery level is 0.96 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:04 PDT 2018] Battery level is 0.96 and no active actors
+[Fri Oct 19 18:27:05 PDT 2018] Battery level is 0.96 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:06 PDT 2018] Battery level is 0.96 actor counts- 
+examples.nqueens.Nqueens$State: 19, 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:07 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:08 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:09 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:10 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:11 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:27:12 PDT 2018] Battery level is 0.96 and no active actors
+[Fri Oct 19 18:27:13 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:14 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:15 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:16 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:17 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:18 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:19 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:20 PDT 2018] Battery level is 0.96 actor counts- 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:27:21 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:22 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:23 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:24 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:25 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:26 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:27 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:28 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:27:30 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:31 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:32 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:33 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:34 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:35 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:27:36 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:37 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:38 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:27:39 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:40 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:27:41 PDT 2018] Battery level is 0.96 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:42 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:43 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:27:44 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:45 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:27:46 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:27:47 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:27:48 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:49 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:50 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:27:51 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:52 PDT 2018] Battery level is 0.95 and no active actors
+[Fri Oct 19 18:27:53 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:54 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:55 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:56 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:27:57 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:27:58 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:27:59 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:00 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:01 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:28:02 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:03 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:04 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:05 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:28:06 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:07 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:28:08 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:28:09 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:28:10 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:11 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:28:12 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:28:13 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:28:14 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:15 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:16 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:18 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:19 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:20 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:21 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:22 PDT 2018] Battery level is 0.95 actor counts- 
+examples.nqueens.Nqueens$State: 10, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:28:23 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:24 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:25 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:26 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:28:27 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:28 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:29 PDT 2018] Battery level is 0.95 and no active actors
+[Fri Oct 19 18:28:30 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:31 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:28:32 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:33 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:34 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:35 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:36 PDT 2018] Battery level is 0.95 and no active actors
+[Fri Oct 19 18:28:37 PDT 2018] Battery level is 0.95 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:38 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:39 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:40 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:41 PDT 2018] Battery level is 0.95 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:42 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:43 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:44 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:28:45 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:28:46 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:47 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:48 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:28:49 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:28:51 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:28:52 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:28:53 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:28:54 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:55 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:56 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:57 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:28:58 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:00 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:29:01 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:02 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:29:03 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:29:04 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:29:05 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:06 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:29:07 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 11, 
+examples.exsort.Reporter_Actor$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:29:08 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:29:09 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:10 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:29:11 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:29:13 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:14 PDT 2018] Battery level is 0.94 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:15 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:29:16 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:17 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:18 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:20 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 3, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:29:21 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 7, 
+
+
+[Fri Oct 19 18:29:22 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:29:23 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:29:25 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:26 PDT 2018] Battery level is 0.94 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:29:43 PDT 2018] Battery level is 0.93 and no active actors
+[Fri Oct 19 18:29:44 PDT 2018] Battery level is 0.93 actor counts- 
+examples.nqueens.Nqueens$State: 11, 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:45 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:46 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:47 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:48 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:29:49 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:29:50 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:51 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:29:52 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:53 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:54 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:55 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:56 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:29:57 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:29:58 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:29:59 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:00 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:30:01 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:30:02 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:03 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:04 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:05 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:06 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:07 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:08 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:09 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:10 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:11 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:12 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:30:13 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:30:14 PDT 2018] Battery level is 0.93 and no active actors
+[Fri Oct 19 18:30:15 PDT 2018] Battery level is 0.93 and no active actors
+[Fri Oct 19 18:30:16 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:17 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:18 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:20 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:30:21 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:30:22 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:23 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:24 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:25 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 7, 
+
+
+[Fri Oct 19 18:30:26 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:30:27 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:28 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:29 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:30:30 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:30:31 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:30:32 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:33 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:30:34 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:35 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:36 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:37 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:38 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:30:39 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:40 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:41 PDT 2018] Battery level is 0.93 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:30:42 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:43 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:30:44 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:45 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:46 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:47 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:30:48 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:49 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:50 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:51 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:30:52 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:30:53 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:54 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:30:55 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:30:56 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:30:57 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:58 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:30:59 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:31:00 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:01 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:02 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:03 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:04 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:05 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:06 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:07 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:08 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:31:09 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:31:10 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:31:11 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:31:12 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:13 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:14 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:15 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:16 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:17 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:18 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:20 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:21 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:22 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:23 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:24 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:25 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:31:26 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:27 PDT 2018] Battery level is 0.92 and no active actors
+[Fri Oct 19 18:31:28 PDT 2018] Battery level is 0.92 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:29 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:30 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:31 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:32 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:31:33 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:34 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:35 PDT 2018] Battery level is 0.92 and no active actors
+[Fri Oct 19 18:31:36 PDT 2018] Battery level is 0.92 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:31:37 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:38 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:39 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:31:40 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:31:41 PDT 2018] Battery level is 0.92 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:31:42 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:43 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:31:44 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:45 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:31:46 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:47 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:48 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:49 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:50 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:51 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:31:52 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:53 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:54 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:31:55 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:31:57 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:31:58 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:31:59 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 7, 
+
+
+[Fri Oct 19 18:32:00 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:01 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:02 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:32:03 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:32:04 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:32:05 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:06 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:07 PDT 2018] Battery level is 0.91 actor counts- 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:32:08 PDT 2018] Battery level is 0.91 and no active actors
+[Fri Oct 19 18:32:09 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:10 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:11 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:12 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:13 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:14 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:32:15 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:16 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:17 PDT 2018] Battery level is 0.91 and no active actors
+[Fri Oct 19 18:32:18 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:32:19 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:20 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:21 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:22 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:32:23 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:32:25 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:32:26 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:32:27 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:28 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:29 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:30 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:31 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:32 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:33 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:34 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:32:35 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:36 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:37 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:38 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:39 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:40 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:32:41 PDT 2018] Battery level is 0.91 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:42 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:43 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:32:44 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:32:45 PDT 2018] Battery level is 0.9 and no active actors
+[Fri Oct 19 18:32:46 PDT 2018] Battery level is 0.9 actor counts- 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:32:47 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:32:48 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:49 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:50 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:51 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:32:52 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:32:53 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:55 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:32:56 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:32:57 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:58 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:32:59 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:33:00 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:01 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:02 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:03 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:33:04 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:05 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:33:06 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:33:07 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:08 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:33:09 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 5, 
+
+
+[Fri Oct 19 18:33:10 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:11 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:12 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:13 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:15 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:33:16 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:33:17 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:33:18 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:19 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:20 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:21 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:22 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:23 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:33:24 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:33:25 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:26 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:33:27 PDT 2018] Battery level is 0.9 and no active actors
+[Fri Oct 19 18:33:28 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:29 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:30 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:33:31 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:32 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:33 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:34 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:35 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:36 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:33:37 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:38 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:39 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:40 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:41 PDT 2018] Battery level is 0.9 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:42 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:43 PDT 2018] Battery level is 0.89 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:44 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:45 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:46 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:33:47 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:48 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:49 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:51 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:52 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:33:53 PDT 2018] Battery level is 0.89 and no active actors
+[Fri Oct 19 18:33:54 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:33:55 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:56 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:33:57 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:33:58 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:33:59 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:00 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:01 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:34:02 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:03 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:34:04 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:34:05 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:06 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:07 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:08 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:09 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:34:10 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:11 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:12 PDT 2018] Battery level is 0.89 and no active actors
+[Fri Oct 19 18:34:13 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:34:14 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:15 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:16 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:17 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:34:18 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:19 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:20 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:34:21 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:34:23 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:34:24 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:25 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:26 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:34:27 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 8, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:34:28 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:29 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:30 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:31 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:32 PDT 2018] Battery level is 0.89 actor counts- 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:34:33 PDT 2018] Battery level is 0.89 and no active actors
+[Fri Oct 19 18:34:34 PDT 2018] Battery level is 0.89 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:35 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:36 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:37 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:38 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:39 PDT 2018] Battery level is 0.89 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:34:40 PDT 2018] Battery level is 0.89 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:41 PDT 2018] Battery level is 0.89 and no active actors
+[Fri Oct 19 18:34:42 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:43 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:44 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:45 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:46 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 7, 
+
+
+[Fri Oct 19 18:34:47 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:48 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:49 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:34:50 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:51 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:34:52 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:34:53 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:54 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 8, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:55 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:56 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:34:57 PDT 2018] Battery level is 0.88 and no active actors
+[Fri Oct 19 18:34:58 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:34:59 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:00 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:35:01 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:02 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:03 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:04 PDT 2018] Battery level is 0.88 and no active actors
+[Fri Oct 19 18:35:05 PDT 2018] Battery level is 0.88 and no active actors
+[Fri Oct 19 18:35:07 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 3, 
+
+
+[Fri Oct 19 18:35:08 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:09 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:35:10 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:11 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:35:12 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:13 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:14 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:15 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:35:16 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:35:17 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:18 PDT 2018] Battery level is 0.88 and no active actors
+[Fri Oct 19 18:35:19 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:35:20 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:21 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:22 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:23 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:24 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:25 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:26 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:35:27 PDT 2018] Battery level is 0.88 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:35:28 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:29 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:30 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:31 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:32 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:33 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:34 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:35:35 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:35:36 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:35:37 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:35:38 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:35:39 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:40 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:41 PDT 2018] Battery level is 0.88 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:35:42 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:35:43 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:44 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:45 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:46 PDT 2018] Battery level is 0.87 and no active actors
+[Fri Oct 19 18:35:47 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:49 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:50 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:35:51 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:35:52 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:35:53 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:35:54 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:55 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:35:56 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:35:57 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:35:58 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:35:59 PDT 2018] Battery level is 0.87 actor counts- 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:00 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:36:01 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:02 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:36:03 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:04 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:36:05 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:36:06 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:36:07 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:08 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:36:09 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:10 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:36:11 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:12 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:13 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:14 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:36:15 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:16 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:17 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:18 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:36:19 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:20 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:21 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:22 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:23 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:24 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:25 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:26 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:36:27 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:28 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:29 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:30 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:31 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:32 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:36:33 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:34 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:35 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:37 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:36:38 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:39 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:40 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:41 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:42 PDT 2018] Battery level is 0.87 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:43 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:44 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:45 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:46 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:47 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:48 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:36:49 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:36:50 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:51 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:36:52 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:36:53 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:36:54 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:55 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:36:56 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 8, 
+
+
+[Fri Oct 19 18:36:57 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:36:58 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:36:59 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:37:00 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:01 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:02 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:37:04 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:37:05 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:06 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:37:07 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:37:08 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:09 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:10 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:37:11 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:37:12 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:37:13 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 9, 
+
+
+[Fri Oct 19 18:37:14 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 8, 
+
+
+[Fri Oct 19 18:37:15 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 8, 
+
+
+[Fri Oct 19 18:37:16 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 7, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:37:17 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:18 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:19 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:20 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:37:21 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:37:22 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:23 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:24 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:25 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:26 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:27 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:28 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:29 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:37:30 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:31 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:32 PDT 2018] Battery level is 0.86 and no active actors
+[Fri Oct 19 18:37:33 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:34 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:35 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:36 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:38 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:39 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:37:40 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:41 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:42 PDT 2018] Battery level is 0.86 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:43 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:44 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:37:45 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:46 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:37:47 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:48 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:37:49 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:37:50 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:51 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:52 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:53 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:37:54 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:37:55 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:56 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:37:57 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+
+
+[Fri Oct 19 18:37:58 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:37:59 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:38:00 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:38:02 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.Exp_Starter$State: 1, 
+examples.exsort.ExternalSort$State: 3, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:38:03 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:38:04 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:38:05 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+
+
+[Fri Oct 19 18:38:07 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 9, 
+
+
+[Fri Oct 19 18:38:08 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:38:09 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+
+
+[Fri Oct 19 18:38:10 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 7, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:38:11 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 8, 
+examples.nqueens.Nqueens$State: 6, 
+
+
+[Fri Oct 19 18:38:12 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:38:13 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:38:14 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:15 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 4, 
+
+
+[Fri Oct 19 18:38:16 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:17 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:18 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:38:19 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 10, 
+
+
+[Fri Oct 19 18:38:20 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:38:22 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:38:23 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 1, 
+examples.exsort.Reporter_Actor$State: 1, 
+
+
+[Fri Oct 19 18:38:24 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:38:25 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:38:26 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:38:27 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 5, 
+examples.nqueens.Nqueens$State: 11, 
+
+
+[Fri Oct 19 18:38:28 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 3, 
+
+
+[Fri Oct 19 18:38:29 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.nqueens.Nqueens$State: 1, 
+
+
+[Fri Oct 19 18:38:31 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+examples.nqueens.Nqueens$State: 2, 
+
+
+[Fri Oct 19 18:38:32 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:33 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:34 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+
+
+[Fri Oct 19 18:38:35 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 2, 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.Phone_App_Manager$State: 1, 
+
+
+[Fri Oct 19 18:38:38 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 4, 
+
+
+[Fri Oct 19 18:38:39 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 12, 
+
+
+[Fri Oct 19 18:38:40 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+examples.nqueens.Nqueens$State: 18, 
+
+
+[Fri Oct 19 18:38:42 PDT 2018] Battery level is 0.85 actor counts- 
+examples.exsort.ExternalSort$State: 6, 
+
+
+[Fri Oct 19 18:40:59 PDT 2018] Battery level is 0.83 actor counts- 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 14, 
+examples.exsort.Phone_App_Manager$State: 2, 
+examples.exsort.Exp_Starter$State: 1, 
+
+
+[Fri Oct 19 18:42:24 PDT 2018] Battery level is 0.83 actor counts- 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 14, 
+examples.exsort.Phone_App_Manager$State: 1, 
+examples.exsort.Exp_Starter$State: 2, 
+
+
+[Fri Oct 19 18:42:31 PDT 2018] Battery level is 0.83 actor counts- 
+examples.exsort.Reporter_Actor$State: 1, 
+examples.exsort.ExternalSort$State: 14, 

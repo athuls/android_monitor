@@ -111,6 +111,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+				System.setProperty("nogc", "theater");
 				Nqueens.main(heavy);
 			}
 
@@ -153,12 +154,13 @@ public class MainActivity extends Activity{
 
 		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty( "nodie", "theater" );
+		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-//		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-//		new Thread(nqueensWorker).start();
+		new Thread(nqueensWorker).start();
 		new Thread(batteryWorker).start();
 
 
@@ -212,9 +214,7 @@ public class MainActivity extends Activity{
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
-//		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-		HashMap<String, Integer> hashList = new HashMap<>();
-		Integer hashListSize = hashList.size();
+		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {

@@ -6,6 +6,8 @@ from scipy.stats.stats import pearsonr
 import matplotlib.pyplot as plt
 import numpy as np
 
+import datetime
+
 dir = os.path.dirname(__file__)
 moduledirname = os.path.join(dir, '../../battery')
 sys.path.append(moduledirname)
@@ -21,19 +23,31 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_nqueens.txt'
-g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="nqueens_train_f.txt"
-g_test_out_file="nqueens_test_f.txt"
+g_train_file_name='log_nqueens_ping.txt'
+g_actor_list_name='examples.nqueens.Nqueens,examples.ping.Ping'
+g_train_out_file="nqueens_ping_train_f.txt"
+g_test_out_file="nqueens_ping_test_f.txt"
 LEN = 24
+g_time_format = "%a %b %d %H:%M:%S PDT %Y"
 
-def create_sys_of_eqns(actor_names, full_data):
+def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
     sys_eqns_lhs = {}
     sys_eqns_rhs = []
+    curr_timestamp_marker = 0
+    check = 0
     for a in actor_names:
         sys_eqns_lhs[a] = []
     for batteryDropInterval in full_data:
-        batteryDropIntervalLength = len(batteryDropInterval)
+        check += len(batteryDropInterval)
+
+        # Get the time duration for a battery drop interval
+        interval_end_time = datetime.datetime.strptime(timestamp_logs[curr_timestamp_marker + len(batteryDropInterval) - 1], g_time_format)
+        interval_start_time = datetime.datetime.strptime(timestamp_logs[curr_timestamp_marker], g_time_format)
+        time_diff = interval_end_time - interval_start_time
+        batteryDropIntervalLength = datetime.timedelta.total_seconds(time_diff)
+        curr_timestamp_marker = curr_timestamp_marker + len(batteryDropInterval)
+        # batteryDropIntervalLength = len(batteryDropInterval)
+
         curr_eqn = {}
         for a in actor_names:
             curr_eqn[a] = {}
@@ -187,7 +201,8 @@ def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_pro
         actors = newSplittingInstance.get_actor_names()
 
         actor_counts_intervals = newSplittingInstance.get_counts()
-        histos, times = create_sys_of_eqns(actors, actor_counts_intervals)
+        timestamp_logs = newSplittingInstance.get_timestamp_logs()
+        histos, times = create_sys_of_eqns(actors, actor_counts_intervals, timestamp_logs)
         train, test = getTrainingTesting(actors, histos, times, test_prop=test_prop)
 
     else:
@@ -234,15 +249,13 @@ def nn(training, testing):
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
     model = tf.estimator.DNNRegressor(
-      hidden_units=[10,10], feature_columns=feature_columns,
+      hidden_units=[25,25], feature_columns=feature_columns,
       optimizer=tf.train.ProximalAdagradOptimizer(
         learning_rate=0.01,
         l1_regularization_strength=0.001
       )
       #, model_dir="model_foldr"
     )
-
-
 
     # Train the model.
     STEPS = 200

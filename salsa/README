@@ -1,3 +1,7 @@
 10/15/2018
 
 salsa_heat folder contains the latest source files/binaries for running nameserver/theaters and the echo agent for ping application
+
+
+10/18/2018
+log_scripts contains the scripts to run on logs to clean up any battery drop entries that do not have enough samples. This needs to be run before generating training/test files from BatteryRateProfile project
