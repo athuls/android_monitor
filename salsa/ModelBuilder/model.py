@@ -35,7 +35,7 @@ class ModelFactory(object):
             return SVC(probability = True)
         elif algorithm == 'randomForest':
             return RandomForestClassifier(random_state=42, oob_score=True)
-        elif algorithm == 'svr':
+        elif algorithm == 'svm_regression':
             return SVR()
         elif algorithm == 'randomForestRegressor':
             return RandomForestRegressor(random_state=42, oob_score=True)
@@ -233,7 +233,7 @@ def dictionaryEncoder(y, label_dict):
     y=[label_dict[label] for label in y]
     return y
 
-def loadData(filename, x_end_index=None, label_index=None, label_dict=None):
+def loadData(filename, x_end_index=None, label_index=None, label_dict=None, regression = False):
     """
     Function to load data from cPickle, npy or csv files into a numpy array.
     label_func: Function to convert character label to numeric labels
@@ -280,11 +280,14 @@ def loadData(filename, x_end_index=None, label_index=None, label_dict=None):
         f.close()
         y = dictionaryEncoder(y, label_dict)
 
-    # Not needed for regression tasks
-    # else:
-        # encoder = LabelEncoder()
-        # encoder.fit(y)
-        # y = encoder.transform(y)
+    # Label encoding not needed for regression tasks
+    elif not regression:
+        encoder = LabelEncoder()
+        encoder.fit(y)
+        y = encoder.transform(y)
+    else:
+        pass
+
     x = np.nan_to_num(np.array(x,dtype = np.float32))
     y = np.nan_to_num(np.array(y,dtype = np.float32))
     
@@ -360,23 +363,13 @@ def run(args, optional_args):
                  labels in such a case. Default None.
 
     """
-    method = ModelFactory()
-    train_inp = args['train_input']
-    if optional_args['param_dict']:
-        param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
+    if args['algorithm'].endswith('regression'):
+        regression = True
     else:
-        param_dict = None
-    
-    print "Loading Data...."
-    
-    clf = CVClassifierWrapper(method.factory(args['algorithm']), optional_args['scoring'], 
-                                 optional_args['refit'], param_dict)
-    
-	
-	
-    x, y = loadData(train_inp, x_end_index=optional_args['x_end_index'],
+        regression = False
+    x, y = loadData(args['train_input'], x_end_index=optional_args['x_end_index'],
                         label_index=optional_args['label_index'],
-                        label_dict=optional_args['label_dict'])
+                        label_dict=optional_args['label_dict'], regression = regression)
 
     
     x_test = None
@@ -387,12 +380,30 @@ def run(args, optional_args):
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = test_size,
                                                                         random_state=42)
 
-
+	#Moving this to inside CV
     x_train, scaler = prepData(x_train)
     x_train = np.nan_to_num(x_train)
     if x_test is None:
-        x_test, _ = prepData(x_test, scaler)
-        x_test = np.nan_to_num(x_test)
+	    x_test, _ = prepData(x_test, scaler)
+	    x_test = np.nan_to_num(x_test)
+
+    print "Mean and Variance:"
+    print scaler.mean_
+    print scaler.var_
+    method = ModelFactory()
+    if optional_args['param_dict']:
+        param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
+		#if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp'
+    else:
+        param_dict = None
+    
+    print "Loading Data...."
+    
+    clf = CVClassifierWrapper(method.factory(args['algorithm']), optional_args['scoring'], 
+                                 optional_args['refit'], param_dict)
+    
+	
+
 
     if optional_args['eval_params']:
         model = evaluate_params(clf, x_train, y_train, param_dict)
@@ -416,8 +427,6 @@ def run(args, optional_args):
             f.close()
 	
 	    # Sanity check the model written to pickle file
-	    verify_model(optional_args, args, x_train, y_train)
-	    print("\n")
 	    verify_model(optional_args, args, x_train, y_train)
 
 def verify_model(optional_args, args, Xtest, Ytest):
