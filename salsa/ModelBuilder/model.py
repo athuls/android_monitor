@@ -37,7 +37,7 @@ class ModelFactory(object):
             return RandomForestClassifier(random_state=42, oob_score=True)
         elif algorithm == 'svm_regression':
             return SVR()
-        elif algorithm == 'randomForestRegressor':
+        elif algorithm == 'randomForest_regression':
             return RandomForestRegressor(random_state=42, oob_score=True)
         elif algorithm == 'gbm_regression':
             return GradientBoostingRegressor(random_state=42)
@@ -387,9 +387,10 @@ def run(args, optional_args):
 	    x_test, _ = prepData(x_test, scaler)
 	    x_test = np.nan_to_num(x_test)
 
-    print "Mean and Variance:"
-    print scaler.mean_
-    print scaler.var_
+    print "Mean:\n" 
+    print ','.join(map(str,scaler.mean_))
+    print "Variance:\n"
+    print ','.join(map(str,scaler.var_))
     method = ModelFactory()
     if optional_args['param_dict']:
         param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
