@@ -1,0 +1,16 @@
+Packages to Install
+python2.7
+python3.6
+sklearn
+numpy
+scipy
+----for PMML script-----
+nyoka
+jpmml-evaluator
+jpmml-model
+jpmml-android
+----for PMML script-----
+
+
+model.py <model-file>
+transformToPMML.sh- generate .pmml file from model saved by model.py
