@@ -394,7 +394,8 @@ def run(args, optional_args):
     method = ModelFactory()
     if optional_args['param_dict']:
         param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
-		#if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp'
+        if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp':
+            param_dict['num_features'] = [x_train.shape[1]]
     else:
         param_dict = None
     
