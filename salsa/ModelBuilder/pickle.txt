@@ -1,0 +1,15 @@
+(lp0
+S'sweet'
+p1
+aS'box'
+p2
+aS'cat'
+p3
+a.(lp0
+S'back'
+p1
+aS'spear'
+p2
+aS'log'
+p3
+a.
