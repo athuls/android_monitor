@@ -1,3 +1,5 @@
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.pipeline import make_pipeline
 from sklearn.svm import SVC, SVR
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor, RandomForestClassifier, RandomForestRegressor
 from sklearn.preprocessing import StandardScaler, LabelEncoder
@@ -82,6 +84,14 @@ class CVClassifierWrapper(object):
         self.parameters = parameters
         self.scorers_ = {'accuracy': accuracy_score, 'f1_score': f1_score, 'neg_mean_absolute_error': mean_absolute_error,
 				                    'neg_mean_squared_error': mean_squared_error}
+    
+
+    def pipeline_param_dict(self):
+        prefix = self.classifier.__class__.__name__.lower() + '__'
+        params = self.parameters.keys()
+        for param in params:
+            self.parameters[prefix + param] = self.parameters.pop(param)
+        print self.parameters
 
     def run_cv(self, x, y, outer_folds = 4, inner_folds = 3):
         print x.shape, y.shape
@@ -91,49 +101,57 @@ class CVClassifierWrapper(object):
             print "Need atleast outer or inner_folds >0"
             exit()
 
+        if not self.parameters:
+            num_folds = max(inner_folds, outer_folds)
+            for tr_index, ts_index in KFold(n_splits = num_folds, shuffle = True).split(x,y):
+                scaler = StandardScaler().fit(x[tr_index])
+                x_train = scaler.transform(x[tr_index])
+                x_test = scaler.transform(x[ts_index])
+                self.classifier.fit(x_train, y[tr_index])
+                predictions = self.classifier.predict(x_test)
+                test_score = self.scorers_[self.scoring](predictions, y[ts_index])
+                test_accs.append(test_score)
+            print "\n\n CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
+            self.classifier.fit(x,y)
+            return self.classifier
+
+        self.pipeline_param_dict()
         if inner_folds == 0 or outer_folds == 0:
             num_folds = max(inner_folds, outer_folds)
-            if self.parameters:
-                grid = GridSearchCV(self.classifier, cv = KFold(n_splits=num_folds, shuffle=True),
+            
+            grid = GridSearchCV(make_pipeline(StandardScaler(), self.classifier), cv = KFold(n_splits=num_folds, shuffle=True),
                                         param_grid=self.parameters, verbose=100,
                                         n_jobs=1, scoring=self.scoring, refit=self.refit)
-                grid.fit(x,y)
+            grid.fit(x,y)
 
 		# The best score is negative because the scoring function is being maximized during grid search
-                print "CV Results: {0}\n\n".format(grid.best_score_)
-                return grid.best_estimator_
+            print "CV Results: {0}\n\n".format(grid.best_score_)
+            scaler = StandardScaler().fit(x)
+            print "Mean:\n", ','.join(map(str,scaler.mean_))
+            print "Scale:\n", ','.join(map(str,scaler.scale_))
+            return grid.best_estimator_
 
-            else:
-                outer_folds = num_folds
         for tr_index, ts_index in KFold(n_splits = outer_folds, shuffle=True).split(x,y):
 					# , random_state=42).split(x,y):
-            if self.parameters:
-                grid = GridSearchCV(self.classifier, cv = inner_folds, 
+            
+            grid = GridSearchCV(make_pipeline(StandardScaler(),self.classifier), cv = inner_folds, 
                                        param_grid=self.parameters, verbose=100,
                                        n_jobs=1, scoring=self.scoring, refit=self.refit)
-
-                grid.fit(x[tr_index], y[tr_index])
-                best_model = grid.best_estimator_
-                predictions = best_model.predict(x[ts_index])
-                test_score = self.scorers_[self.scoring](predictions, y[ts_index])
+            scaler = StandardScaler().fit(x[tr_index])
+            grid.fit(x[tr_index], y[tr_index])
+            best_model = grid.best_estimator_
+            predictions = best_model.predict(scaler.transform(x[ts_index]))
+            test_score = self.scorers_[self.scoring](predictions, y[ts_index])
 		#test_score = best_model.score(x[ts_index],y[ts_index])
 		
 		# The test score should be positive because it is just the mean squared error on test set
-		print "[CustomDebug] {0} is test score and {1} is the best score from grid\n".format(test_score, grid.best_score_)
-                models.append(best_model)
-                test_accs.append(test_score)
-
-            else:
-                self.classifier.fit(x[tr_index], y[tr_index])
-		predictions = self.classifier.predict(x[ts_index])
-                test_score = self.scorers_[self.scoring](predictions, y[ts_index])
-                test_accs.append(test_score)
-
-        #we did only CV not nested CV because there was no parameter grid
-        if not self.parameters:
-            self.classifier.fit(x,y)
-            print "CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
-            return self.classifier
+            print "[CustomDebug] {0} is test score and {1} is the best score from grid\n".format(test_score, grid.best_score_)
+            models.append(best_model)
+            test_accs.append(test_score)
+            
+        scaler = StandardScaler().fit(x)
+        print "Mean:\n", ','.join(map(str,scaler.mean_))
+        print "Scale:\n", ','.join(map(str,scaler.scale_))
 
         best_test_acc = max(test_accs)
         best_test_model = models[test_accs.index(best_test_acc)]
@@ -215,6 +233,23 @@ def evaluate_params(clf, x, y, param_dict):
 def cross_validation_split(n_splits, shuffle):
     return StratifiedKFold(n_splits=n_splits,shuffle=shuffle, random_state=42)
 
+class PrepData(BaseEstimator, TransformerMixin):
+    """
+    Wrapper around StandardScaler to be used in sklearn pipeline and store
+    scaler object for future use.
+    """
+    def __init__(self):
+        self.scaler = StandardScaler()
+
+    def transform(self, X, *_):
+        if hasattr(self.scaler, scale_):
+            return self.scaler.transform(X)
+        else:
+            raise Exception('Fit PrepData first before transforming')
+
+    def fit(self, X):
+        if hasattr(self.scaler, scale_):
+            self.scaler.fit(X)
 
 def prepData(x,scaler=None):
     """
@@ -381,16 +416,16 @@ def run(args, optional_args):
                                                                         random_state=42)
 
 	#Moving this to inside CV
-    x_train, scaler = prepData(x_train)
-    x_train = np.nan_to_num(x_train)
-    if x_test is None:
-	    x_test, _ = prepData(x_test, scaler)
-	    x_test = np.nan_to_num(x_test)
+    #x_train, scaler = prepData(x_train)
+    #x_train = np.nan_to_num(x_train)
+    #if x_test is not None:
+    #	    x_test, _ = prepData(x_test, scaler)
+    #	    x_test = np.nan_to_num(x_test)
 
-    print "Mean:\n" 
-    print ','.join(map(str,scaler.mean_))
-    print "Variance:\n"
-    print ','.join(map(str,scaler.var_))
+    #print "Mean:\n" 
+    #print ','.join(map(str,scaler.mean_))
+    #print "Variance:\n"
+    #print ','.join(map(str,scaler.var_))
     method = ModelFactory()
     if optional_args['param_dict']:
         param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
@@ -432,6 +467,7 @@ def run(args, optional_args):
 	    verify_model(optional_args, args, x_train, y_train)
 
 def verify_model(optional_args, args, Xtest, Ytest):
+    #TODO: find function to load keras models and use that to verify them
     pickle_model = None
     if optional_args['output_file'] and args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
         with open(optional_args['output_file'], 'rb') as file:
