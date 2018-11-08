@@ -112,7 +112,8 @@ class CVClassifierWrapper(object):
                 test_score = self.scorers_[self.scoring](predictions, y[ts_index])
                 test_accs.append(test_score)
             print "\n\n CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
-            self.classifier.fit(x,y)
+            scaler = StandardScaler().fit(x)
+            self.classifier.fit(scaler.transform(x),y)
             return self.classifier
 
         self.pipeline_param_dict()
@@ -137,6 +138,7 @@ class CVClassifierWrapper(object):
             grid = GridSearchCV(make_pipeline(StandardScaler(),self.classifier), cv = inner_folds, 
                                        param_grid=self.parameters, verbose=100,
                                        n_jobs=1, scoring=self.scoring, refit=self.refit)
+
             scaler = StandardScaler().fit(x[tr_index])
             grid.fit(x[tr_index], y[tr_index])
             best_model = grid.best_estimator_
@@ -415,28 +417,21 @@ def run(args, optional_args):
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = test_size,
                                                                         random_state=42)
 
-	#Moving this to inside CV
-    #x_train, scaler = prepData(x_train)
-    #x_train = np.nan_to_num(x_train)
-    #if x_test is not None:
-    #	    x_test, _ = prepData(x_test, scaler)
-    #	    x_test = np.nan_to_num(x_test)
-
-    #print "Mean:\n" 
-    #print ','.join(map(str,scaler.mean_))
-    #print "Variance:\n"
-    #print ','.join(map(str,scaler.var_))
-    method = ModelFactory()
+    method = ModelFactory().factory(args['algorithm'])
     if optional_args['param_dict']:
         param_dict = cpkl.load(open(optional_args['param_dict'],'r'))
-        if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp':
+        build_fn = getattr(method, 'build_fn', None)
+        print build_fn
+        if build_fn and 'num_features' in build_fn.__code__.co_varnames[:build_fn.__code__.co_argcount]:
+        #if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp':
+            print "\n\n ++++UPDATING MLP DICT++++ \n\n"
             param_dict['num_features'] = [x_train.shape[1]]
     else:
         param_dict = None
     
     print "Loading Data...."
     
-    clf = CVClassifierWrapper(method.factory(args['algorithm']), optional_args['scoring'], 
+    clf = CVClassifierWrapper(method, optional_args['scoring'], 
                                  optional_args['refit'], param_dict)
     
 	
@@ -466,15 +461,45 @@ def run(args, optional_args):
 	    # Sanity check the model written to pickle file
 	    verify_model(optional_args, args, x_train, y_train)
 
+def load_keras_model(modelfile, labels=None):
+    """
+    Read keras classifier/regeressor models from json file
+    and model weights file with the same name and .h5 extension.
+    modelfile- model json filename
+    labels- list or numpy array of all labels(can be just the raw y values too) 
+            for a classifier. If None (default), then the model is assumed
+            to be a regressor.
+    """
+    def build_fn():
+        model = keras.models.model_from_json(open(modelfile, 'r').read())
+        model.load_weights('.'.join(modelfile.split('.')[:-1])+'.h5')
+        return model
+    if labels:
+        kmodel = KerasClassifier(build_fn = build_fn)
+        kmodel.model = build_fn()
+        kmodel.classes_ = np.searchsorted(labels, labels)
+    else:
+        kmodel = KerasRegressor(build_fn = build_fn)
+        kmodel.model = build_fn()
+    return kmodel
+
+
 def verify_model(optional_args, args, Xtest, Ytest):
     #TODO: find function to load keras models and use that to verify them
-    pickle_model = None
-    if optional_args['output_file'] and args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
+    model = None
+    if not optional_args['output_file']:
+        print "No model was stored to disk. Cannot Verify"
+        exit()
+
+    if args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
         with open(optional_args['output_file'], 'rb') as file:
-	    pickle_model = cpkl.load(file) 
-	Ypredict = pickle_model.predict(Xtest)
+	    model = cpkl.load(file) 
+	Ypredict = model.predict(Xtest)
 	for test_i in range(0, len(Ytest)):
 		print("Expected: {0:.2f} and Actual: {1:.2f}".format(Ytest[test_i], Ypredict[test_i]))
+    else:
+        model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
+
 
 if __name__=="__main__":
     print "starting script"
