@@ -451,13 +451,13 @@ def run(args, optional_args):
 def verify_model(optional_args, args, x_train_verify, y_train_verify):
     #TODO: find function to load keras models and use that to verify them
     pickle_model = None
-    scaler = StandardScaler().fit(x_train_verify)
-    normalized_xtrain = scaler.transform(x_train_verify)
+    # scaler = StandardScaler().fit(x_train_verify)
+    # normalized_xtrain = scaler.transform(x_train_verify)
 
     if optional_args['output_file'] and args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
         with open(optional_args['output_file'], 'rb') as file:
 	    pickle_model = cpkl.load(file) 
-	y_predict_verify = pickle_model.predict(normalized_xtrain)
+	y_predict_verify = pickle_model.predict(x_train_verify)
 	for test_i in range(0, len(y_train_verify)):
 		print("Expected: {0:.2f} and Actual: {1:.2f}".format(y_train_verify[test_i], y_predict_verify[test_i]))
 
