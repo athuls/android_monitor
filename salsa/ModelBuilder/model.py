@@ -125,7 +125,7 @@ class CVClassifierWrapper(object):
                                         n_jobs=1, scoring=self.scoring, refit=self.refit)
             grid.fit(x,y)
 
-		# The best score is negative because the scoring function is being maximized during grid search
+	    # The best score is negative because the scoring function is being maximized during grid search
             print "CV Results: {0}\n\n".format(grid.best_score_)
             scaler = StandardScaler().fit(x)
             print "Mean:\n", ','.join(map(str,scaler.mean_))
@@ -138,11 +138,9 @@ class CVClassifierWrapper(object):
             grid = GridSearchCV(make_pipeline(StandardScaler(),self.classifier), cv = inner_folds, 
                                        param_grid=self.parameters, verbose=100,
                                        n_jobs=1, scoring=self.scoring, refit=self.refit)
-
-            scaler = StandardScaler().fit(x[tr_index])
             grid.fit(x[tr_index], y[tr_index])
             best_model = grid.best_estimator_
-            predictions = best_model.predict(scaler.transform(x[ts_index]))
+            predictions = best_model.predict(x[ts_index])
             test_score = self.scorers_[self.scoring](predictions, y[ts_index])
 		#test_score = best_model.score(x[ts_index],y[ts_index])
 		
@@ -234,24 +232,6 @@ def evaluate_params(clf, x, y, param_dict):
 
 def cross_validation_split(n_splits, shuffle):
     return StratifiedKFold(n_splits=n_splits,shuffle=shuffle, random_state=42)
-
-class PrepData(BaseEstimator, TransformerMixin):
-    """
-    Wrapper around StandardScaler to be used in sklearn pipeline and store
-    scaler object for future use.
-    """
-    def __init__(self):
-        self.scaler = StandardScaler()
-
-    def transform(self, X, *_):
-        if hasattr(self.scaler, scale_):
-            return self.scaler.transform(X)
-        else:
-            raise Exception('Fit PrepData first before transforming')
-
-    def fit(self, X):
-        if hasattr(self.scaler, scale_):
-            self.scaler.fit(X)
 
 def prepData(x,scaler=None):
     """
@@ -457,10 +437,11 @@ def run(args, optional_args):
             f = open(optional_args['output_file'], 'w')
             cpkl.dump(model, f, -1)
             f.close()
-	
+
 	    # Sanity check the model written to pickle file
 	    verify_model(optional_args, args, x_train, y_train)
 
+<<<<<<< HEAD
 def load_keras_model(modelfile, labels=None):
     """
     Read keras classifier/regeressor models from json file
@@ -500,6 +481,20 @@ def verify_model(optional_args, args, Xtest, Ytest):
     else:
         model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
 
+=======
+def verify_model(optional_args, args, x_train_verify, y_train_verify):
+    #TODO: find function to load keras models and use that to verify them
+    pickle_model = None
+    # scaler = StandardScaler().fit(x_train_verify)
+    # normalized_xtrain = scaler.transform(x_train_verify)
+
+    if optional_args['output_file'] and args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
+        with open(optional_args['output_file'], 'rb') as file:
+	    pickle_model = cpkl.load(file) 
+	y_predict_verify = pickle_model.predict(x_train_verify)
+	for test_i in range(0, len(y_train_verify)):
+		print("Expected: {0:.2f} and Actual: {1:.2f}".format(y_train_verify[test_i], y_predict_verify[test_i]))
+>>>>>>> ff9d8cd739fd79ff30f85f6fdb5b5651f125b83a
 
 if __name__=="__main__":
     print "starting script"
