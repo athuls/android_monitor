@@ -131,6 +131,7 @@ class CVClassifierWrapper(object):
             scaler = StandardScaler().fit(x)
             print "Mean:\n", ','.join(map(str,scaler.mean_))
             print "Scale:\n", ','.join(map(str,scaler.scale_))
+	    print grid.best_estimator_
             return grid.best_estimator_
 
         for tr_index, ts_index in KFold(n_splits = outer_folds, shuffle=True).split(x,y):
@@ -143,9 +144,9 @@ class CVClassifierWrapper(object):
             best_model = grid.best_estimator_
             predictions = best_model.predict(x[ts_index])
             test_score = self.scorers_[self.scoring](predictions, y[ts_index])
-		#test_score = best_model.score(x[ts_index],y[ts_index])
+	    #test_score = best_model.score(x[ts_index],y[ts_index])
 		
-		# The test score should be positive because it is just the mean squared error on test set
+	    # The test score should be positive because it is just the mean squared error on test set
             print "[CustomDebug] {0} is test score and {1} is the best score from grid\n".format(test_score, grid.best_score_)
             models.append(best_model)
             test_accs.append(test_score)
@@ -159,9 +160,6 @@ class CVClassifierWrapper(object):
         print "\n\n Nested CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
         return best_test_model
 
-
-
-    
 def create_mlp(num_features=96,num_classes=20,encoding_dims=[2000], 
                  regs=[0.00001],init='uniform',optimizer='adam',
                  regressor = True):
@@ -433,11 +431,13 @@ def run(args, optional_args):
 	    model.steps[1][1].model.save(optional_args['output_file']+'.h5')
         else:
             f = open(optional_args['output_file'], 'w')
-	    cpkl.dump(model.steps[1][1], f, -1)
+	    print model.steps[-1][-1]
+            # cpkl.dump(model.steps[-1][-1], f, -1)
+            cpkl.dump(model.steps[-1][-1], f, 0)
             f.close()
 
-    # Sanity check the model written to pickle file
-    verify_model(optional_args, args, x_train, y_train)
+	# Sanity check the model written to pickle file
+        verify_model(optional_args, args, x_train, y_train)
 
 def load_keras_model(modelfile, labels=None):
     """
@@ -472,12 +472,14 @@ def verify_model(optional_args, args, Xtest, Ytest):
     if args['algorithm'] == 'mlp':
         model = load_keras_model(optional_args['output_file']+'.json', Ytest)
     elif args['algorithm'] == 'mlp_regression':
-        model = load_keras_model(optional_args['output_file']+'.json')
+        model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
     else:
         with open(optional_args['output_file'], 'rb') as file:
             model = cpkl.load(file) 
     
-    Ypredict = model.predict(Xtest)
+    scaler_obj = StandardScaler().fit(Xtest)
+    normalized_xtest = scaler_obj.transform(Xtest)
+    Ypredict = model.predict(normalized_xtest)
     for test_i in range(0, len(Ytest)):
         print("Expected: {0} and Actual: {1}".format(Ytest[test_i], Ypredict[test_i]))
 
