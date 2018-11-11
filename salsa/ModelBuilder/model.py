@@ -403,7 +403,6 @@ def run(args, optional_args):
         print build_fn
         if build_fn and 'num_features' in build_fn.__code__.co_varnames[:build_fn.__code__.co_argcount]:
         #if args['algorithm'] == 'mlp_regression' or args['algorithm'] == 'mlp':
-            print "\n\n ++++UPDATING MLP DICT++++ \n\n"
             param_dict['num_features'] = [x_train.shape[1]]
     else:
         param_dict = None
@@ -474,12 +473,14 @@ def verify_model(optional_args, args, Xtest, Ytest):
         print "No model was stored to disk. Cannot Verify"
         exit()
 
-    if args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
-        with open(optional_args['output_file'], 'rb') as file:
-	    model = cpkl.load(file) 
+    if args['algorithm'] == 'mlp':
+        model = load_keras_model(optional_args['output_file']+'.json', Ytest)
+    elif args['algorithm'] == 'mlp_regression':
+        model = load_keras_model(optional_args['output_file']+'.json')
     else:
-        model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
-
+        with open(optional_args['output_file'], 'rb') as file:
+            model = cpkl.load(file) 
+    
     print type(Xtest)
     scaler_obj = StandardScaler().fit(Xtest)
     normalized_xtest = scaler_obj.transform(Xtest)
