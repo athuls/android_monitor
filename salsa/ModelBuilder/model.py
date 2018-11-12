@@ -327,7 +327,6 @@ def parse_config(config_file):
     #Reading required section
     try:
         args['train_input'] = config.get('Required', 'train_input')
-        #args['test_size'] = config.getint('Required', 'test_size')
         args['algorithm'] = config.get('Required', 'algorithm')
         args['outer_folds'] = config.getint('Required', 'outer_folds')
         args['inner_folds'] = config.getint('Required', 'inner_folds')
@@ -434,8 +433,7 @@ def run(args, optional_args):
         else:
             f = open(optional_args['output_file'], 'w')
 	    print model.steps[-1][-1]
-            # cpkl.dump(model.steps[-1][-1], f, -1)
-            cpkl.dump(model.steps[-1][-1], f, 0)
+            cpkl.dump(model.steps[-1][-1], f, -1)
             f.close()
 
 	# Sanity check the model written to pickle file
