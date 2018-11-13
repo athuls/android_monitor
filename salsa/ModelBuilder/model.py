@@ -156,7 +156,7 @@ class CVClassifierWrapper(object):
 
         best_test_acc = max(test_accs)
         best_test_model = models[test_accs.index(best_test_acc)]
-        print "\n\n Nested CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
+        print "\n\n Nested CV Results- RMSE: {0} STD in RMSE: {1}\n\n".format(np.mean(np.sqrt(test_accs)), np.std(np.sqrt(test_accs)))
         return best_test_model
 
 def create_mlp(num_features=96,num_classes=20,encoding_dims=[2000], 
