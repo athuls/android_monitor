@@ -437,8 +437,6 @@ def run(args, optional_args):
             f.close()
 
 	# Sanity check the model written to pickle file
-
-
         verify_model(optional_args, args, x_train, y_train)
 
 def load_keras_model(modelfile, labels=None):
