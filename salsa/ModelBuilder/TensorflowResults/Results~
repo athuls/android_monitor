@@ -1,0 +1,128 @@
+GAM in R:
+Nqueens
+14.800094594,14.404468057,14.477126787
+
+Fib
+12.357248885,12.944122218,13.842438369
+
+Fib_Nqueens
+27.403149454,27.739902667,42.788260072,25.043795639
+>> cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+> cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V37,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+>> Erorr due to sparsity: Error in gam(formula, data = data[trainrows, ], method = method, gamma = gamma) : Model has more coefficients than data 
+
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V37,k=3,bs="tp")+s(V38,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+>> Error in smooth.construct.tp.smooth.spec(object, dk$data, dk$knots) : A term has fewer unique covariate combinations than specified maximum degrees of freedom
+
+Exsort
+6.645569953,5.5668483,4.677820005,4.834170043
+1,25,49, 73-78
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+
+Trap
+1351.356244445,10714.854175396,1594.756033129
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+1-5,25-31
+
+Nums
+28.664177993, 103.454198078,280.997858711,280.997858711
+169,145,121,(8,7,6,4,77,78,98,99,100 - no spline), 97, 73-76,49,25,5,3,2,1, 170, 171, 172
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+
+Ping
+12.911088258,13.346759906,12.663024915
+
+Nqueens+exsort
+15.681077769,16.125817809,19.456906229
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+102-nospline, 97-100, 49, 73,25-36,1
+
+Nqueens+ping
+15.015095737,16.010637089,10.833457435
+25,26,1-11,nospline:V27,16-21,12-14
+
+Face detection
+8.885617592,8.463167256,8.758955417
+1,73,49,25-29,no spline: 31, 
+
+DNN:
+Nqueens
+6.491398563259655
+6.853951432424737
+6.5351880626280385
+
+Fib
+12.606628345718386,9.932088662153147,10.644078975483417,11.940718132161011
+
+Fib_Nqueens:
+8.789753879056827,8.4867616672198,8.877399388878928
+
+Exsort
+3.2668175960888486,3.619293983697606,3.323172165824903,5.285477791286019
+
+Numbers:
+7.487602923518527,7.63593371324658,8.658703397810205
+
+Ping
+9.743861687040301,11.215549873276876,11.102814573569988
+
+NQueens_Exsort
+17.199943116559737,16.75170434280261,18.94886323040539
+
+
+Nqueens_Ping
+8.861027423884655,7.413501649953765,7.850057672179419
+
+
+Face detection
+6.491908098398855,8.932370294311976,7.879410976722047,6.9984164490397
+
+Trap
+19.437153018908628,18.954776952946123,20.528274761831927
+
+Configurations
+# Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
+    # defined above as input.
+    model = tf.estimator.DNNRegressor(
+      hidden_units=[15, 30, 15], feature_columns=feature_columns,
+        optimizer=tf.train.ProximalAdagradOptimizer(
+        learning_rate=0.01
+        # , l1_regularization_strength=0.001
+      )
+      #, model_dir="model_foldr"
+    )
+
+
+# Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
+    # defined above as input.
+    model = tf.estimator.DNNRegressor(
+      hidden_units=[20,50,40], feature_columns=feature_columns,
+        optimizer=tf.train.ProximalAdagradOptimizer(
+        learning_rate=0.01
+        # , l1_regularization_strength=0.001
+      )
+      #, model_dir="model_foldr"
+    )
+
+    # Train the model.
+    STEPS = 200
+    model.train(input_fn=input_train, steps=STEPS)
+
+    # Train the model.
+    STEPS = 200
+
+FOR TRAP APPLICATION
+    # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
+    # defined above as input.
+    model = tf.estimator.DNNRegressor(
+      hidden_units=[20,50,20,30,11,32], feature_columns=feature_columns,
+        optimizer=tf.train.ProximalAdagradOptimizer(
+        learning_rate=0.01
+        # , l1_regularization_strength=0.001
+      )
+      #, model_dir="model_foldr"
+    )
+
+    # Train the model.
+    STEPS = 200
+    model.train(input_fn=input_train, steps=STEPS)
