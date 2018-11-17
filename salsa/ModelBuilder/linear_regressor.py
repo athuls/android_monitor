@@ -2,7 +2,7 @@
 from sklearn import linear_model
 from sklearn import datasets
 from sklearn.model_selection import cross_val_score, cross_validate, KFold, LeaveOneOut
-from pygam import LinearGAM
+# from pygam import LinearGAM
 import numpy as np
 import sys
 
@@ -22,20 +22,21 @@ for line in file_ptr:
 	y.append(line.split(',')[label_index].strip('"'))
 
 X_digits = np.array(x)
+print(X_digits)
 X_digits = np.nan_to_num(np.array(X_digits,dtype=np.float32))
 Y_digits = np.array(y)
 Y_digits = np.nan_to_num(np.array(Y_digits,dtype=np.float32))
 
-workload_data=np.loadtxt(sys.argv[1], dtype='float',comments='#', delimiter=",",converters=None, skiprows=1,usecols=None, unpack=False,ndmin=0)
-#loo = cross_validation.LeaveOneOut(len(Y_digits))
-loo = LeaveOneOut(len(Y_digits))
-print(workload_data)
-
+# workload_data=np.loadtxt(sys.argv[1], dtype='float',comments='#', delimiter=",",converters=None, skiprows=1,usecols=None, unpack=False,ndmin=0)
+# loo = cross_validation.LeaveOneOut(len(Y_digits))
+# loo = LeaveOneOut(len(Y_digits))
+#print(workload_data)
 
 regr = linear_model.LinearRegression()
 # lasso = linear_model.RANSACRegressor()
 
-scores = cross_val_score(regr, X_digits, Y_digits, scoring='neg_mean_squared_error', cv=loo, return_train_score=True)
+scores = cross_val_score(regr, X_digits, Y_digits, scoring='neg_mean_squared_error', cv=KFold(n_splits=8,shuffle=True))
+# scores = cross_validate(regr, X_digits, Y_digits, scoring='neg_mean_squared_error', cv=KFold(n_splits=20, shuffle=True), return_train_score=True)
 #scores = cross_validate(regr, X_digits, Y_digits, scoring='neg_mean_squared_error', cv=3, return_train_score=True)
 #scores = cross_validate(regr, X_digits, Y_digits, scoring='neg_mean_squared_error', cv=KFold(n_splits=20, shuffle=True), return_train_score=True)
 
@@ -50,6 +51,7 @@ scores = cross_val_score(regr, X_digits, Y_digits, scoring='neg_mean_squared_err
 
 # This will print the mean of the list of errors that were output and 
 # provide your metric for evaluation
-#print scores.mean()
-# print scores
-print("CV Results: " + str(scores['test_score'].mean()))
+print scores
+print np.mean(np.sqrt(abs(scores)))
+print np.std(np.sqrt(abs(scores)))
+# print("CV Results: " + str(scores['test_score'].mean()))

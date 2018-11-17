@@ -1,0 +1,376 @@
+require(mgcv)
+df_nqueens<-read.csv("Applications/overall_nqueens.txt", header=FALSE,sep=",")
+df_nqueens
+df_nq_m <- as.matrix(df_nqueens)
+df_nq_m
+gam
+gam_nq <- gam(V25~V1+V2+V3, data=df_nq_m)
+gam_nq <- gam(V25~V1+V2+V3, data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1)+s(V2)+s(V3), data=df_nqueens)
+gam_nq <- gam(V25~s(V1,k=3)+s(V2,k=3)+s(V3,k=3), data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp"), data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens)
+gam_nq
+gam_rss<-c(crossprod(gam_nq$residuals))
+gam_mse<-gam_rss/length(gam_nq$residuals)
+gam_rmse<-sqrt(gam_mse)
+gam_rmse
+savehistory(file="gam_val_commands_R")
+require(sp)
+CVgam
+library(gamclass)
+CVgam
+CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1,seed=29)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1,seed=29)
+cv_gam_nq$residuals
+cv_gam_nq$residual
+cv_gam_nq
+gam_rss<-c(crossprod(cv_gam_nq$resid))
+gam_mse<-gam_rss/length(cv_gam_nq$resid)
+gam_rmse<-sqrt(gam_mse)
+gam_rmse
+length(df_nqueens)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1,seed=29)
+gam_mse
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=4,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=10,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=10,debug.level=0,method="glm.fit",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=10,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=20,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+        set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        res <- residuals(elev.gam)
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(y)
+    res<-y-hat
+    cvscale<-sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                  scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+        set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        print(hat[testrows])
+        res <- residuals(elev.gam)
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(hat)
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+        set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        print(hat[testrows])
+        print("done with a fold")
+        res <- residuals(elev.gam)
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(hat)
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+        set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        print(hat[testrows])
+        print("done with a fold")
+        res <- residuals(elev.gam)
+print(res)
+print("done with residuals")
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(hat)
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+set.seed(sample(1:10000,1,replace=F))
+        set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        res <- residuals(elev.gam)
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(hat)
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+CVgam <-
+function (formula, data, nfold = 10, debug.level = 0, method = "GCV.Cp",
+              printit = TRUE, cvparts = NULL, gamma = 1, seed = 29)
+{
+    if (is.null(cvparts)) {
+set.seed(sample(1:10000,1,replace=F))
+        # set.seed(seed)
+        cvparts <- sample(1:nfold, nrow(data), replace = TRUE)
+    }
+    folds <- unique(cvparts)
+    khat <- hat <- numeric(nrow(data))
+    scale.gam <- summary(gam(formula, data = data, method = method))$scale
+    for (i in folds) {
+        trainrows <- cvparts != i
+        testrows <- cvparts == i
+        elev.gam <- gam(formula, data = data[trainrows, ], method = method,
+                        gamma = gamma)
+        hat[testrows] <- predict(elev.gam, newdata = data[testrows,
+                                           ], select = TRUE)
+        res <- residuals(elev.gam)
+    }
+    y <- eval(formula[[2]], envir = as.data.frame(data))
+    print(hat)
+    res <- y - hat
+    cvscale <- sum(res^2)/length(res)
+    prntvec <- c(GAMscale = scale.gam, `CV-mse-GAM ` = cvscale)
+    if (printit)
+        print(round(prntvec, 4))
+    invisible(list(fitted = hat, resid = res, cvscale = cvscale,
+                   scale.gam = scale.gam))
+}
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_fib <- read.csv("Applications/overall_fib.txt", sep=",",header=FALSE)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=15,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens, nfold=15,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_fib <- read.csv("Applications/overall_fib.txt", sep=",",header=FALSE)
+cv_gam_fib<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_fib, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_fib_nqueens <- read.csv("Applications/overall_fib_nqueens.txt", sep=",",header=FALSE)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V37,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="cr")+s(V2,k=3,bs="cr")+s(V3,k=3,bs="cr")+s(V4,k=3,bs="cr")+s(V5,k=3,bs="cr")+s(V6,k=3,bs="cr")+s(V7,k=3,bs="cr")+s(V8,k=3,bs="cr")+s(V9,k=3,bs="cr")+s(V10,k=3,bs="cr")+s(V11,k=3,bs="cr")+s(V12,k=3,bs="cr")+s(V12,k=3,bs="cr")+s(V13,k=3,bs="cr")+s(V14,k=3,bs="cr")+s(V15,k=3,bs="cr")+s(V16,k=3,bs="cr")+s(V17,k=3,bs="cr")+s(V18,k=3,bs="cr")+s(V19,k=3,bs="cr")+s(V20,k=3,bs="cr")+s(V21,k=3,bs="cr")+s(V22,k=3,bs="cr")+s(V23,k=3,bs="cr")+s(V24,k=3,bs="cr")+s(V25,k=3,bs="cr")+s(V26,k=3,bs="cr")+s(V27,k=3,bs="cr")+s(V28,k=3,bs="cr")+s(V29,k=3,bs="cr")+s(V30,k=3,bs="cr")+s(V31,k=3,bs="cr")+s(V32,k=3,bs="cr")+s(V33,k=3,bs="cr")+s(V34,k=3,bs="cr"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)k=3,bs="cr"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="cr")+s(V2,k=3,bs="cr")+s(V3,k=3,bs="cr")+s(V4,k=3,bs="cr")+s(V5,k=3,bs="cr")+s(V6,k=3,bs="cr")+s(V7,k=3,bs="cr")+s(V8,k=3,bs="cr")+s(V9,k=3,bs="cr")+s(V10,k=3,bs="cr")+s(V11,k=3,bs="cr")+s(V12,k=3,bs="cr")+s(V12,k=3,bs="cr")+s(V13,k=3,bs="cr")+s(V14,k=3,bs="cr")+s(V15,k=3,bs="cr")+s(V16,k=3,bs="cr")+s(V17,k=3,bs="cr")+s(V18,k=3,bs="cr")+s(V19,k=3,bs="cr")+s(V20,k=3,bs="cr")+s(V21,k=3,bs="cr")+s(V22,k=3,bs="cr")+s(V23,k=3,bs="cr")+s(V24,k=3,bs="cr")+s(V25,k=3,bs="cr")+s(V26,k=3,bs="cr")+s(V27,k=3,bs="cr")+s(V28,k=3,bs="cr")+s(V29,k=3,bs="cr")+s(V30,k=3,bs="cr")+s(V31,k=3,bs="cr")+s(V32,k=3,bs="cr")+s(V33,k=3,bs="cr")+s(V34,k=3,bs="cr"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)[A[A
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp"), data=df_fib_nqueens, nfold=5,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp"), data=df_fib_nqueens, nfold=9,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_exsort <- read.csv("Applications/overall_exsort.txt", sep=",",header=FALSE)
+df_exsort
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_fib_nqueens
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V37,k=3,bs="tp")+s(V38,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V37,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_fib_nq<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V12,k=3,bs="tp")+s(V13,k=3,bs="tp")+s(V14,k=3,bs="tp")+s(V15,k=3,bs="tp")+s(V16,k=3,bs="tp")+s(V17,k=3,bs="tp")+s(V18,k=3,bs="tp")+s(V19,k=3,bs="tp")+s(V20,k=3,bs="tp")+s(V21,k=3,bs="tp")+s(V22,k=3,bs="tp")+s(V23,k=3,bs="tp")+s(V24,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_exsort <- read.csv("Applications/overall_exsort.txt", sep=",",header=FALSE)
+df_exsort
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_fib_nqueens, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=3,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=5,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=5,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=7,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_exsort<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V77,k=3,bs="tp")+s(V78,k=3,bs="tp"), data=df_exsort, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_trap<-read.csv("Applications/overall_trap.txt", header=FALSE,sep=",")
+df_trap
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_trap, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp"), data=df_trap, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+V31, data=df_trap, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=6,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_trap<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+V5+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+V31, data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_nums<-read.csv("Applications/overall_nums.txt", header=FALSE,sep=",")
+df_nums
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+s(V5,k=3,bs="tp")+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp"), data=df_trap, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+s(V5,k=3,bs="tp")+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+s(V5,k=3,bs="tp")+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp")+s(V172,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp")+s(V172,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+V75+V76+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp")+s(V172,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")++s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp")+s(V172,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp")+s(V172,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp")+s(V171,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+V75+V76+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+V76+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nums<-CVgam(formula=V193~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+V4+V5+V6+V7+V8+V77+V78+V98+V99+V100+s(V25,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V74,k=3,bs="tp")+s(V75,k=3,bs="tp")+s(V76,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V121,k=3,bs="tp")+s(V145,k=3,bs="tp")+s(V169,k=3,bs="tp")+s(V170,k=3,bs="tp"), data=df_nums, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_ping<-read.csv("Applications/overall_ping.txt", header=FALSE,sep=",")
+df_ping
+cv_gam_ping<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp"), data=df_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_ping<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+V3, data=df_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_ping<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+V3, data=df_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_ping<-CVgam(formula=V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+V3, data=df_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_nq_exsort<-read.csv("Applications/overall_nqueens_exsort.txt", header=FALSE,sep=",")
+df_nq_exsort
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+s(V29,k=3,bs="tp")+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+s(V30,k=3,bs="tp")+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+s(V36,k=3,bs="tp")+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_exsort<-CVgam(formula=V121~s(V1,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+V28+V29+V30+s(V31,k=3,bs="tp")+s(V32,k=3,bs="tp")+s(V33,k=3,bs="tp")+s(V34,k=3,bs="tp")+s(V35,k=3,bs="tp")+V36+s(V73,k=3,bs="tp")+V49+s(V97,k=3,bs="tp")+s(V98,k=3,bs="tp")+s(V99,k=3,bs="tp")+s(V100,k=3,bs="tp")+V102, data=df_nq_exsort, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_nq_ping<-read.csv("Applications/overall_nqueens_ping.txt", header=FALSE,sep=",")
+df_nq_ping
+cv_gam_nq_ping<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V25,k=3,bs="tp")+V27+V16+V17+V18+V19+V20+V21+V12+V13+V14, data=df_nq_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_ping<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V25,k=3,bs="tp")+V27+V16+V17+V18+V19+V20+V21+V12+V13+V14, data=df_nq_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_nq_ping<-CVgam(formula=V49~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V25,k=3,bs="tp")+V27+V16+V17+V18+V19+V20+V21+V12+V13+V14, data=df_nq_ping, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+df_face_det<-read.csv("Applications/overall_face_det.txt", header=FALSE,sep=",")
+df_face_det
+cv_gam_face_det<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+V31, data=df_face_det, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_face_det<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+V31, data=df_face_det, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+cv_gam_face_det<-CVgam(formula=V97~s(V1,k=3,bs="tp")+s(V73,k=3,bs="tp")+s(V49,k=3,bs="tp")+s(V25,k=3,bs="tp")+s(V26,k=3,bs="tp")+s(V27,k=3,bs="tp")+s(V28,k=3,bs="tp")+s(V29,k=3,bs="tp")+V31, data=df_face_det, nfold=8,debug.level=0,method="GCV.Cp",printit=TRUE,cvparts=NULL,gamma=1)
+savehistory(file="GAM_results_commands")

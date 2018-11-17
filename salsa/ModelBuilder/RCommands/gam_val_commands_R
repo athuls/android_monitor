@@ -1,0 +1,21 @@
+require(mgcv)
+df_nqueens<-read.csv("Applications/overall_nqueens.txt", header=FALSE,sep=",")
+df_nqueens
+df_nq_m <- as.matrix(df_nqueens)
+df_nq_m
+gam
+gam_nq <- gam(V25~V1+V2+V3, data=df_nq_m)
+gam_nq <- gam(V25~V1+V2+V3, data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1)+s(V2)+s(V3), data=df_nqueens)
+gam_nq <- gam(V25~s(V1,k=3)+s(V2,k=3)+s(V3,k=3), data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp"), data=df_nqueens)
+gam_nq
+gam_nq <- gam(V25~s(V1,k=3,bs="tp")+s(V2,k=3,bs="tp")+s(V3,k=3,bs="tp")+s(V4,k=3,bs="tp")+s(V5,k=3,bs="tp")+s(V6,k=3,bs="tp")+s(V7,k=3,bs="tp")+s(V8,k=3,bs="tp")+s(V9,k=3,bs="tp")+s(V10,k=3,bs="tp")+s(V11,k=3,bs="tp")+s(V12,k=3,bs="tp"), data=df_nqueens)
+gam_nq
+gam_rss<-c(crossprod(gam_nq$residuals))
+gam_mse<-gam_rss/length(gam_nq$residuals)
+gam_rmse<-sqrt(gam_mse)
+gam_rmse
+savehistory(file="gam_val_commands_R")
