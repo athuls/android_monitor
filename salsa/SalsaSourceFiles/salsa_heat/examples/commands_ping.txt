@@ -1,0 +1,5 @@
+sh kill_wwcservices.sh
+sh start_wwcservices.sh
+java -cp salsa_heat.jar:. -Duan=uan://osl-server1.cs.illinois.edu:3030/myecho examples.ping.EchoAgent rmsp://10.194.206.182:4040/ &
+java -cp salsa_heat.jar:. examples.ping.Ping uan://osl-server1.cs.illinois.edu:3030/myecho
+

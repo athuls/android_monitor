@@ -1,0 +1,1 @@
+java -cp salsa_heat.jar:. -Duan=uan://osl-server1.cs.illinois.edu:3030/myhello -Dnodie -Dnetif=eth0 -Dual=rmsp://10.194.206.182:4040/myhelloloc examples.helloworld.HelloWorld

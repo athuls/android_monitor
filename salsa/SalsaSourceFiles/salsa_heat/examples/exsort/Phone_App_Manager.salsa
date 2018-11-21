@@ -1,0 +1,122 @@
+module examples.exsort;
+
+/* Phone_App_Manager for Experiment 22 SIMILAR TO 20
+ * This is the app running on the phone.
+ * 
+ * Written by Reza Shiftehfar
+ */
+
+import  java.util.ArrayList;
+
+behavior Phone_App_Manager {
+  static final long serialVersionUID = 1L;
+
+  String name_server;    //the uan address of the name server     e.g. uan://192.168.1.138:3030/
+  String phone_theater;  //the rmsp address of the current phone_theater (local as it is where the current code is running)
+  String execution_theater; //the rmsp address of the theater where solver will be created for execution at e.g. rmsp://192.168.1.138:4040/
+                         // In case of local mobile, reenter phone_theater address. 
+  String input_filename; //The name of the text file to be read (note that file must be accessible in the local directory for the app to work)
+  String output_filename; //The name of the temporary output file  
+  boolean isReporting;   //specifies whether to report the details to output or not
+  String report_theater; //the rmsp address of the reporting theater e.g. rmsp://192.168.1.138:4040/
+  int iterations;        //how many times the read-write cycle to be repeated
+  
+  String  status;        //holds the status of phone_app_manager 
+  Reporter_Actor reporter_actor;
+
+  private int no_instances;
+  private long startTime, finalTime, total_run_time;
+
+  private ArrayList workers = new ArrayList();
+  private Exp_Starter exp_starter = null;
+
+  public Phone_App_Manager(){
+    total_run_time    = -1;
+    finalTime         = -1;
+    startTime         = -1;  
+    this.no_instances =  0;
+    iterations        =  0;
+  }
+
+
+  void start_app(Exp_Starter exp_st, String args[]) {
+  //void start_app(String args[]) {
+      this.setStatus("RUNNING");
+      exp_starter = exp_st;
+
+      standardOutput<-println("PHONE_APP: App started.") @
+      standardOutput<-println("PHONE_APP: Experiment 33 Ver. 3"); 
+
+      int argc = args.length;
+      if (argc!=9) { 
+          standardOutput<-println("PHONE_APP: Correct call requires following arguments: [name_server] [phone_theater] [execution location] [no simultaneous instances]"+
+                                              " [no_iterations] [input_fileName] [output_fileName] [report_on/report_off] [report_theater]"); 
+          this.setStatus("FAILED: Wrong number of initial calling arguments.");
+      }       
+
+      name_server = args[0];
+      phone_theater =  args[1];  // this is the local location where this current phone_app_manager actor is started.
+      execution_theater = args[2];  //note that in case of local execution, this has to be the same as args[1] (the current location of this actor)   
+      no_instances  = Integer.parseInt(args[3]);
+      iterations    = Integer.parseInt(args[4]);
+
+      input_filename = args[5];
+      output_filename = args[6];
+
+      if (args[argc-2].equalsIgnoreCase("report_on")) { isReporting = true;}
+      else { isReporting = false;}
+       
+      report_theater = args[argc-1]; 
+      reporter_actor = new Reporter_Actor() at ( new UAN( name_server+"reporter"), new UAL( report_theater+"reporter") );
+
+      standardOutput<-println("PHONE_APP: I/O App. started...");
+      this.report("Starting Pure I/O application Experiment for Text file "+input_filename);
+      startTime= System.currentTimeMillis(); 
+
+      //create all instances:
+      for(int i=0; i< no_instances; i++){
+          ExternalSort es = new ExternalSort(reporter_actor, isReporting) at ( new UAN(name_server+"ExternalSort"+i), new UAL(execution_theater+"ExternalSort"+i) );
+          workers.add(es);
+      }
+
+      //Ask all instances to start:
+      for(int i=0; i<workers.size(); i++){
+	  // Each worker creates its own output file to read/write so they don't interfere with each other writing to the 
+   	  // same output file
+          workers.get(i)<-start_up(self, input_filename, output_filename+i, iterations);
+      }
+
+  }  //end of start_app
+
+
+
+  //wrap_up() is called when all images are processed:
+  void wrap_up(){
+      this.endTimer();
+      this.setStatus("SUCCESS");
+      this.report("PHONE_APP: Phone App. Manager Finished.");
+      standardOutput<-println("PHONE_APP: Phone App. Manager Finished."); 
+
+      //Report (runtime,status) to exp_started:
+      exp_starter<-wrap_up(total_run_time, status);   
+  }
+
+
+
+  void report(String msg){
+    if (isReporting)
+      reporter_actor <- report( msg );
+  }
+
+
+  void setStatus(String m){  status = m; }
+  public String getStatus(){ return status; }
+
+  void endTimer(){
+     finalTime = System.currentTimeMillis();
+     total_run_time = finalTime - startTime; 
+  }
+
+  public void dummy(){}
+  public void dummy_collectToken(Object[] res){ }
+}

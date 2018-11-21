@@ -51,6 +51,7 @@ scores = cross_val_score(regr, X_digits, Y_digits, scoring='neg_mean_squared_err
 
 # This will print the mean of the list of errors that were output and 
 # provide your metric for evaluation
+
 print scores
 print np.mean(np.sqrt(abs(scores)))
 print np.std(np.sqrt(abs(scores)))

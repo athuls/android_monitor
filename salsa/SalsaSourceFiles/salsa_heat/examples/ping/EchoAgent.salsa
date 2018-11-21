@@ -1,0 +1,23 @@
+module examples.ping;
+
+behavior EchoAgent implements ActorService{
+   String pingAgentName;
+
+   void echo(Ping p) {
+	standardOutput<-println("Echo received");
+	p<-pong();
+	}
+
+   void hello(String pingMessage) {
+	standardOutput<-println("Hello from ping with message length " + pingMessage.length());
+	Ping pingAgent = (Ping)Ping.getReferenceByName(new UAN(pingAgentName));
+	pingAgent<-pong("Pong right back at you Ping");
+   }
+
+   void act(String args[]) {
+	try{
+	  //migrate(args[1]);
+	  pingAgentName = args[0];
+	} catch (Exception e) {standardOutput <- println("Usage: java -Duan=uan_addr -Dual=ual_addr examples.ping.EchoAgent <target_ual>");}
+   }
+}

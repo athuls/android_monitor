@@ -1,0 +1,25 @@
+module examples.facedetection;
+
+behavior Elasticity_Manager_Timer implements ActorService{
+  static final long serialVersionUID = 5L;
+
+  private Elasticity_Manager elasticity_manager;
+  private boolean timer_ended;
+
+  public Elasticity_Manager_Timer(String elast_man_UAN) {   
+     elasticity_manager = (Elasticity_Manager)Elasticity_Manager.getReferenceByName(elast_man_UAN);
+     timer_ended = false;
+  }
+
+  public void start_triggering(int interval){
+     if (timer_ended) { return; }
+
+     token loopToken = elasticity_manager <- manage();
+     self<-start_triggering(interval):delayWaitfor(new Integer(interval),loopToken);
+  }
+
+  public void stop_triggering(){
+     timer_ended = true;
+  }
+
+}

@@ -1,0 +1,3 @@
+WWCNamingServer listening on port: 3030
+Bind  to rmsp://127.0.0.1:47066/UAL/1485572918790/1, from /192.168.1.143:39781
+Query  Get rmsp://127.0.0.1:47066/UAL/1485572918790/1, from /192.168.1.143:39781
