@@ -18,11 +18,12 @@ android {
 }
 
 dependencies {
-    compile 'org.tensorflow:tensorflow-android:+'
+    compile 'org.tensorflow:tensorflow-android:1.6.0'
     compile 'com.google.guava:guava:15.0'
     compile files('libs/trap.jar')
     compile files('libs/heat.jar')
     compile files('libs/JJIL-J2SE.jar')
     compile files('libs/JJILCore.jar')
     compile files('libs/salsa_heat.jar')
+    compile files('libs/mltk-0.1.0-SNAPSHOT.jar')
 }

@@ -1,0 +1,2145 @@
+node {
+  name: "Placeholder1"
+  op: "Placeholder"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+  attr {
+    key: "shape"
+    value {
+      shape {
+        dim {
+          size: -1
+        }
+        dim {
+          size: 24
+        }
+      }
+    }
+  }
+}
+node {
+  name: "Placeholder2"
+  op: "Placeholder"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+  attr {
+    key: "shape"
+    value {
+      shape {
+        dim {
+          size: -1
+        }
+        dim {
+          size: 24
+        }
+      }
+    }
+  }
+}
+node {
+  name: "Placeholder3"
+  op: "Placeholder"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+  attr {
+    key: "shape"
+    value {
+      shape {
+        dim {
+          size: -1
+        }
+        dim {
+          size: 24
+        }
+      }
+    }
+  }
+}
+node {
+  name: "Placeholder4"
+  op: "Placeholder"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+  attr {
+    key: "shape"
+    value {
+      shape {
+        dim {
+          size: -1
+        }
+        dim {
+          size: 24
+        }
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/ToFloat"
+  op: "Cast"
+  input: "Placeholder1"
+  attr {
+    key: "DstT"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "SrcT"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Shape"
+  op: "Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/ToFloat"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "out_type"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice"
+  op: "StridedSlice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack_1"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice/stack_2"
+  attr {
+    key: "Index"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "begin_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "ellipsis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "end_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "new_axis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "shrink_axis_mask"
+    value {
+      i: 1
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape/shape/1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 24
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape/shape"
+  op: "Pack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/strided_slice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape/shape/1"
+  attr {
+    key: "N"
+    value {
+      i: 2
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "axis"
+    value {
+      i: 0
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape"
+  op: "Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/ToFloat"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape/shape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tshape"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/ToFloat"
+  op: "Cast"
+  input: "Placeholder2"
+  attr {
+    key: "DstT"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "SrcT"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Shape"
+  op: "Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/ToFloat"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "out_type"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice"
+  op: "StridedSlice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack_1"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice/stack_2"
+  attr {
+    key: "Index"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "begin_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "ellipsis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "end_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "new_axis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "shrink_axis_mask"
+    value {
+      i: 1
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape/shape/1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 24
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape/shape"
+  op: "Pack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/strided_slice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape/shape/1"
+  attr {
+    key: "N"
+    value {
+      i: 2
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "axis"
+    value {
+      i: 0
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape"
+  op: "Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/ToFloat"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape/shape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tshape"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/ToFloat"
+  op: "Cast"
+  input: "Placeholder3"
+  attr {
+    key: "DstT"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "SrcT"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Shape"
+  op: "Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/ToFloat"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "out_type"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice"
+  op: "StridedSlice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack_1"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice/stack_2"
+  attr {
+    key: "Index"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "begin_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "ellipsis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "end_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "new_axis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "shrink_axis_mask"
+    value {
+      i: 1
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape/shape/1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 24
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape/shape"
+  op: "Pack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/strided_slice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape/shape/1"
+  attr {
+    key: "N"
+    value {
+      i: 2
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "axis"
+    value {
+      i: 0
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape"
+  op: "Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/ToFloat"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape/shape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tshape"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/ToFloat"
+  op: "Cast"
+  input: "Placeholder4"
+  attr {
+    key: "DstT"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "SrcT"
+    value {
+      type: DT_DOUBLE
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Shape"
+  op: "Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/ToFloat"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "out_type"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice"
+  op: "StridedSlice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Shape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack_1"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice/stack_2"
+  attr {
+    key: "Index"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "begin_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "ellipsis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "end_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "new_axis_mask"
+    value {
+      i: 0
+    }
+  }
+  attr {
+    key: "shrink_axis_mask"
+    value {
+      i: 1
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape/shape/1"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 24
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape/shape"
+  op: "Pack"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/strided_slice"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape/shape/1"
+  attr {
+    key: "N"
+    value {
+      i: 2
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "axis"
+    value {
+      i: 0
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape"
+  op: "Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/ToFloat"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape/shape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tshape"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/concat/axis"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 1
+      }
+    }
+  }
+}
+node {
+  name: "dnn/input_from_feature_columns/input_layer/concat"
+  op: "ConcatV2"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Exp_Starter/Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.ExternalSort/Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Phone_App_Manager/Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/examples.exsort.Reporter_Actor/Reshape"
+  input: "dnn/input_from_feature_columns/input_layer/concat/axis"
+  attr {
+    key: "N"
+    value {
+      i: 4
+    }
+  }
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tidx"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/kernel/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 96
+          }
+          dim {
+            size: 15
+          }
+        }
+        tensor_content: "\027\343b<\2441\207\275\000\000\000\000\216\230g>Iu\217=A:\227\274\000\000\000\000\241\rg>PP\210=#Su\276,\202\203=m\330A\276\354\237\227=\326sg>\341\375\022\276<\301\217=jhK>|\275\275=\031cY\276H>\206=\204\036^>\357\324Y\276B\242=\276\006>V>v\001K\276\200\355\205\274\364_/\275\234\025\232=\312]\334\274Y\350\340<DP\324=\336f(>\220\354\317\275\362\3331\276XM\325=\030eE>\272$->^\375\220\275\262\276>\274\354dW\275\002\002*;q5W\276\277\005-\276\010\005\375\275r\026Y\276f\0334>\207\333D\27684=\275`B\275\274\214\037\314=\030$\313<\023\177\032\276\000mc>|\210\265=\266\250\017\276,\245e\275b\223N>\250\330\271<\331\222m=\324\225\336=\327N\345\275(\346\261= 3\240\274\220\351\\\275X\207\341=\354\346\"<\036iC\276\356\251f\276d\247Y>\364\014?\276\323\317\335\2754\025\372\2758\304\362=\350\251;\275F\267[>|\301I\275VS\016>l\201\360=\037\357%\276\254\331c>\250\275\212=\002\307_\276\310\312\n>\374a\244=\362\002G>\2264\023\276\000\000\000\000\200\362\033\276\026\350\002>\000\000\000\000\nb\266\275\000\000\000\000\306\250+>\303\037v\275\204\006\001>\356/\010>\253\216\021\276\240\250)\275\000O\337=\374|6>\360|\002=\320\347\316=>xM\274\301\261\375\274\276N\034>\244+\245=\005\2736\276\372\037=\276\347\004F\276<\241\245=hg\r=\246\nW\276\304L\273=j\020+>{?K\276\214\313\245\275\001\335H\276\217jH\276~R\255\275\330\024\236=\243\026\036<\026Y\022>h\275E><4\266=\360 W>\210\350\275=@\325\356\275\332\261&\276\352?B>.\354-\276(\307\252=t\347d>h\372\010=1l+\276\326\227*>f\262*\276\000\000\000\000d\342)>D\006\303=QH0\276\343\020\336<\310f\313<\250\246\227=\034;.>\372g\022>h\000\017<\202{\024\276\342*\251\275\260\177\244\275\230\226\221<\210\313N\275Xr\377\275\312&\021>\250tZ\275\213\221\023\276\000\000\000\000\245\036\321\274c\375\362\274\002\232;\276eLF\276\362\373\314\275\304\322\325\275\0104\005\276<\000#<\000\000\000\000\355\2730\276\000\000\000\000B\321@\276\310\225\016=\276\0162;r\310f>$b&\275\260\237\357=`\326@\275O#^\276,-\005>\000\000\000\000R\212\342<y\217n=;\242K:\000\000\000\000\270\217b\276\350\377\214<2\257R>\322\377#\276=\231\372\274\210\033\002>\3300\245=|\014\362=8\002\203\275\202\275\363\275J\303\000>\270\374\245<.\"\320\271;N@\276\364\024L>z\003(>\010!\355\275h\345\316\275\230\323\201=6S\371\275\260Y\257=\005lg\276\356\006 \276\037S\010\276\0344\335=h.\211=x\020\005\275\340|\333=\264L\272\273hf\317=F\032U>\252\324C>2\323\035\274X\262W\275\202N\036>\\\205\316\275\353\030U\276\260(1\275/\250*\276\367TX\276X\303\263=\021re\2760\221\346=\210:\302\275x\253\216<U\200+\276/\272W\276\222\020\n>d\255\242=\362\007\314\275\250&\022\274\254Ew\275\344\225V\276\354\r(>zt9\276\361C[\276t\347;>0\372\257=\220\347\020=\270a\272<\310\027\020\276\226a\"\276\332\3276>`~\232=Zi\375\275d\253\023\275\230\032\246<\0306\236\275\302Z2>\026\311R>\030h\t>\340\245\274=8\270\022<:\242\253\275\210[\222\275L\342/>$I\366=\200\366P\276 \344\001=1L6\274:U/>$\237\370=\242\216\000>:\246\r>>\200=>s\020\332<x\026\307=\254\345%>\344\014\316=(\026\232=\0302U=B|\\>\335d\037\276X\222\001>v\004\034\276\204\013\337=\330w\013\276DZ\371=\002^\305\275\203\226*\276\264\t,\275\360\262\235\274X\3344>R\354\226\275\350\376\004\275\024n\234\275b\003\t>\262+\366\275\362\267\027>X\354\320=V0?\276l^G\275\362D\247\275i\004z\275\330\220\257\275\234\356\365=?_\000\276\000\000\000\000\330z+=\006E\021> \216\214\275\235X/\276D\016g>\322\357\375;\370~\'>\364\313\366\274\000\276@>\244\222\362=\340S\234=6B6>\224\244\330=,=\027\276\030\250\212<V}$>\370\213\324=\350f\275=2|\016\276\350\257\255<\376r\267\275\303\'\035\276\260\0139=H\362b>\004\317\360\275:BC\274*\212i\275\310\177^>\376\\\026>\246\"\022\276h\326%=\000aB>\016C;\276\026\026<\276x\037)=\335\323Q\276\320i5=\222\365\031>\004F\376\275\320\300!>\365\220\341\275\264\037\306=\332\334\354<\026\232L>\272&\244\275\000\000\000\000\250\023;>\212\315\007\276.z\n>>J\001\276u\322/\274\300FN\274\364\014\336\274\373\035?\276\305\013N\276\200\246\275=\314\326\201=0\337\">(\221F\276l51\275~\354U\276\006\320\312\275\026\226\t\276)xk\275<\210\240\275\276\362\207>\274J\227>\244t7\275>\260\362=\334\275`\276\242\263E>\354\224\265\275\241\254\266<G\031\033=\312\257[\276c\343[>\340\035,\275\2536\027>\364\207\370\275^\"\240>6\0071\276t\350\270=Il<\276\270\tw\275\000\000\000\000?\345\013\276\354\320&\275\246\252};\311^\205>YO\325\275\037Ih>X\311\035=\206R\246\275\300\0323=\031\364E>\372\217:\275\267\366t=\177#x\275\004\204\224>\010|\300=\232\275Q>\034\030\222=\020\205\037\275`t\202>\300q\001\276Vu\220>.\331\222\272\341\\;>\260\267X\276BU\213>\325\201\315\275}l\230>\010\356J\276\241\231\220=\022]\321\275Xg\014\275\374W5\2769\331\217\275\202\0371>\324\242\234\275V\213\264=\220\246=>\233\027\370=\373\317N\276\325\201\010>H\373\007\273\331%i>XZ!>}\376M>\030b\007\276\342n\234<\306\257\t\276\240r->f\3200>\350?\272<\357\277X>\324\363\205=\037\216Z=x\204\353\275\214\010#>\323!K\276=\235\201>\271]\005\276\206\230\250>D-O>\023\332C=`\262\022\276\260\005\250=\032\016\n\2760\374!\276\2752\022;\314=0\276\330\332B>\320\236\315=)y/=\030\016\274=\267M<=@\244\030=\306h\350={\2762\276\312\370\350=\006a:>\340\305d>\365\204\354=\010F\r\276\307\260w=\010\375=\276\346\232\016>.:\217\275\022\376W>\234U\274\275\246=0<\000\000\000\000DG\220=\256\262v\274\337\265\316\274\316\317c>\203\227f=\373\245\002\276\000\000\000\000h\253\274<\204\0278>\0323\236\275-\246c\276o\217\261=\274\236\271=\242@\316;\366\021k=\316\255\032;\000\000\000\000\026\323\324\275\360\354\211=\340\025\226=\311O\362=LK\370\275\213\236\204\275\034\021\341=^\210,\274t\215\021\275\014\275\374\275t\377E\273\362\221,>P\204\036=\000\000\000\000\247\234b\274\374\376Y\276\210\331\271=8\244T\275\226$\363\275T\201\323=\306\247\357\275\331n\324\274\360\264I>@\204\024=\314\315\t>\010\301\013\275\332T=\276\000\000\000\000\376y\001>\320\230\313\275\252D\340\275\330KA=\344+\254\275\264\302\355\275\302\305\227\275\210\203\005>\214F\376\275\234K\010>\226\"S\276\264\357S>\3729g>,>\214\275`1\005\276\316\301\362\275(\363\031\275\271\230\010\276\010Z\211=\nqU>\236\036\034\276\240\206d=]\023\013\276\356_R>\321\375_\276D\332\005>,\305Z>\323{\327\275\000t\003\276\350P\n>\300\217\220=\260\023\000\276F\251\251\275\216\264\211\275b\320\016>\212\240L>\212\227T>\204\254_\275\\G\021\275\016,\323<6\243\010>\304E\322\275\200$d=-7\323<D\325\253=\034\320\313=\210\330\334<\023\236$\276\000\000\000\000\330\265v=\n\321!\274U\266\374\274P\330?\276\020m\034=\000Y\225=\030~k\274\360O\034=0\274<>:\210)>`\023\205\2758md\275VT\034>\230r\225\274\000\240\327=.\220\331\275*c\013>\000\000\000\000\266_\303\275\023\n(\276\214\3321\2764\374:>\310s\001>$M\320=D\177G\275\220\202\211\275x\244\277=g4\376\274J>\022\276d\225\237\275\272\266C>\306.#\276\002<V9\212\327a\276V\014>>\226M?>\234Wz=*\273\271\275`\305\264\274\333\352l\274\032\036\020>l\251\367\275t\267\005>\326\342\232\2752G\367\275\030\270W\275(\314U>\211\353\027;\010\202\255=xWe\275p\004F>\302\035\263\275\340\314\273\274\022\\S\276\323\302\340\275\010r\266=\215{\033<\262^\373<d\337+\275\355g3\2769\243\020\276\000\314\321=w*\330\273 \316\001>\334\240e>\260\255\315=X\004\r\274W\256b<\213\276k=fX\030>\330\034\r\275j\')>\277\221L\276.\260/\276\260O\206\275\346\010&\276\260\'V>.\207\\>$\013\033>\024U\326\275\212\005&\276\350\323\321=\262\003X\276\321\031\353\274\\\215\260=\206aH>\372\034S>b\222\014>\010%.=\314\347\217\275\300Se=G\227\031\276X\276\021\276\370\'e=\320\221\313=\n\014B>X\214F\276&>\331<h\"I>$*\236=\330B\357\275\336\2424>D\341\371=\244o\215\275\226N\313\275\000\000\000\000\310\311\276<~\256V>\014\255\215=\376\220\001\276\302s\026\2766\357X\276$*\263=\332d\t>[p:\276.\0339>\334=\017\275\233\021\"\276\352V\255\275\240\034B\275\266fa>fo&>\3424G<I\246|\272\242\203\332\275\334l\000\276\240B\025\276|\357#\276NC\t>\220\2415=*| >\250@\203<\246\2700\274N\351]>Z}2\274DH\032\276j\031\255\275\314\360\345=\310@\002\275fH~\275\020/N\2762\332@>\000M<\276!\330\031\276L\2072\275o\211S\276\020\251\266=(\0262\276\203\314$\273\330\331S=h\215O\276\334\347\202=\034\027-\276F\215\206\275\247\351Y\276$\364\350=\230\233\227<K\032d>\357\244q>\027\335\220=\370\324Z\276\317\227\013\276\033R_\276S\026k\276H\262\304<X\363>\276_H\351\275\224P\240=E\370I>\212]\003\276\240\341S>\330b\301\274\250\030\001\274\000\000\000\000\024\010\034\276O\330\335\275\320\253\346=\236\343C>0\231\025>(O\356\275d)_\275\030x\'\276\311\024V\276\026\302\265\275\273\335A\276\236C\373\275D\347\300=\000\000\000\000\260\030e>\304\361\223=F\216N>S\215P\276\014\023\022>\337U\022\276\200\217\311=\344\337\027\276L\337m=\342\007\347\275\361x\324\274\257\035\027\276\020\300\">\330\321:>Xd\"\276<\337\002\2760\300\363\275\221\034\352\275[\033R\276 \205\211\274\370\232\373=R\240>>\264\032\216\275P\262\262\275\332%\034\276\344<d>\2508\214<-6\317\274\250N\215\275\246w\\>\224\355J\275\200\215\017\275K\264f\276\000\000\000\000\222\344\020>\321\r\343\275\000\000\000\000\"\035\303\275\200I\260\275Abg\276\246-\004>F\330z<\010\020V\276\234=.\276\3328K\274\242o\017>\212\357\243\275\3359\363;\274vc\276\030\n\024=\247\017J<\234\302\372\275\246\226\351\273i\337v\275\207\361\326\274\377\306)\276*V.>\000?%\274x\377c\276\350G\023<l\213\303=@G[>\227\nW\276\344H\301=\274\366`>0$-\276G\373R\276\360#\022\275$2\276\275\350\322\313\2754k\245\275$\277\320=\324\3247\275$\253s\275h\271?\276\3532:\2760Y\375\275\320j\321=\004~\207=B\013E>bH1\276\360TJ>\306Y\302\272x*G>N\363>\276\310\036T><ab\275\263\322\003\276\347N\376<\000\000\000\000\010:\355=&\364e\276F\333@\274b{\021>\212\034d\274\230l&\275^J$<\234S\036\2768-\206\275\000\000\000\000\230\006\177\275\241\026O\276\3007C\275\305GS\276\244I\252=L\256\016\2768\316\237<\254&E\275\000\000\000\000\200g[=\211\374:\276\010\r\243=\230>F\275\000\000\000\000F\317\324\275\244\222\335=\332\317\357\2752\2449\276\000\000\000\000\3500\234<\230A\274\274\210f<=\276\231O\276V\231F\276\"\'(\276\351\246T\276\310?\272<\304\365(\276r\275\013\276\210\227\331=\"\022g\276\376\301f\276P\357\014=\357kE\276\035\nm=\246X\261\275 s\036>\250\270E\276$\027\002>\322\004<>\344&\346\274|w\020>\224\320\234=,1\275\275\2601D>\006\264,>\270V7>\253\253\\\274\203\247\\\276\301\366\342<$\274*\275|7M>0\226]>\360,\254=\270\r\242=\224\266\343=\271j!\274\240\245\034\274\2303\004\275\266\253G\276\030\024\022>\252\t?>\220Nc\275 uZ=W\211(\274\354\024\241\2756)\230\275l\343U\276\230\021\377=BSO\274lg\304\275\360\rQ\276\002\202@>\304\3304\276z\360\003>\226\025\t>P0\022=\250!\252=,\267\267=\334,?\276\240I>>zW\257\275\030\256G>\307\334\327\275V\272\216\275\220\201\332=\\\305\363;\272\312~\275\356@M\276\210\304L\276\242?\032>1\343w=pe\276=\262!W\2764C\325=\240w\006>\216\271n\274\360\366\316=u\243\227\273\236\013$>,\250\201=p\014\201\275\204\252\210=\340\363b=\000\000\000\000\235\311)\276\356\370S>\326\312\254\275\200\242^>\250\312\376\275\226\244\272\275\314\265`\275Ce\020\276\026/H\276\342\374?>\342\320E>\230\214$>\0008\t\276P\220F>\260\352\232\275\020=\026\275R\366\033\276!\212g\276p\264\026>\275\267\374<\330S\274=f\377A\276\202<\302\275L\346\343=\031\304*\276\364A\366=\264\247\315=\220\351\000\275\250$7\275*\023\265\275\036\207\031\276\314\247\330=\314\337a\275\010\020\220<\000/\026\276L\024%>\274Y<\275\246\302?>\352\001\317\275\322\263#\2766\246F>\220\204d>X\274\256<\366I\007>|\376\267=\020\303\020>\340*\372=\2640G\276b\243\000\276\376VB\2765\362\331;\000\346\220\275\252\374\246\275P\020\242=j\017\034\276vg\030>\250\251K=v`&>8\254\253\274P\t\025\2768\230\311=.\315\006>yVf=\214\214\343=\341\263c\276\021\233K\276\356\2545\276\\n\025>\007\3331\276\300E\206=\340\262(=9pL\276\266\222\024>\262:\006\276\270\364\000\275G\356\034\276`\303\273\275\252\353\016>H\247\267<f0\243\275V$\"\276\377r/;\205\233o\275@\247G>\270\325\246<Tf\357\275\350\002:\274\230hE\276\354\003\264\275\226Pg>\366\0138>\236\254=\276\030\351\327=\034y\024>\010\222\236<\252\024\016>\030N\233\274\324\206\353=\205\330\374\274\224\201\305\275\210\014T=\2047\361=\0010Y\276\354Z\351=\310<\250=\330\310\270\275\365\332\'\274\324\326\017\276\010\025b=\346s.>\322L\310\275\270\233\207\275\330J\251\274V=(<:\223\377\274\031\364\035\276\350\331\025\275k\342X;\006#->\270H&>\000\323\214\275\374\037\n\275\342\235\207>\3753\007\276\306\003]>\212}\354<I\207l>?F\342\275\374&\222\275(8]=\021s!>`\3728=@< >\035f\010>\254\\ >\r68\276\342\250\021\276eZe\276@\276\273=\000\000\000\0008^\360=\3400>=\020\351\361=\330\336P>\230R\311<\004\372\216=.t\316\275\306\\\020>\323oR\276\234\2219\276\330\005\036=\230\342\364\275\006p\004\276\031\316k\274(\252\212=8\031$\276\332\010(\276\025}y=\324\323\201=\000\000\000\000\210\031@\275\3400\r\276B\210_>\230\323\375=\232+b\276\270\276*>4\245\003>\2737\032\274\365\250\'<b\205\021\276^\201\t>{:[\276\257\\\320\275\274\263\325\274`\235\347=\234\306\330=\366\034,>p\334J\276\370\"\t\276\220\344\316=\276\342\324:\000\000\000\000\324\006\002\275.V\361\275\004\013\275=\261\301s=\200\356\332=\230V1\276\224\204\'\276Jn\330\275F\223A\276\000b#\276D2H>\301\322.\276\242\005 >\256\337M\276\000p\357=\217\177\347\274\326\027:>\000\266a\275$\\\032>\000\000\000\000\332\007H\276p\250\224=|\274\321=\017\247b\276]Yv<\004\022\036>\351\322\033\276lp\022\275F\035\221\275<\243\312=\366\210V>\373f\350\275\375\034\363;\226\262\324\275$JZ\276\205\206[\276\256Wg>\000\000\000\0006\267\231\275`<\n>\354\017\324=x\326\351=07(\275x\2755=\334\217\352=2\314]\276\210\037>\276\336\364h=<\226Y>\346\226\004\276\364N\024>p\264O>*1$>[\301\321\274\253!\034\276R\274\003\276\306\336%>r\213H><\3631\276\000s\341=\354\262\366=\016\014\212\275\330\307\003\276\010\0305\275X\233\231=\320^\303\275h.\345<\030h\253\274G\233l:\320\260U>X\007\033\276\263^\377\2740\230&=In)\276<A\200\275\342\300\270\275#\357h<;2\354\275\375/\323\274\3362\024>\213\032[\276\374\367,\276\034\215A>\354f<>\310\206\006=`\201?>\270\221@=\344\346\241\275\244\331\341=\262\331\030>X]\031>\"T:>\244zZ\275\302N\246\275&\002C>\316\223B>K\210+\276$^\324=\036\247\361\275\360\301\313\274\022\010\216\275\350+.=\210\037\021=2\265W>\000\000\000\000S(\344\275r*#\276AY]\276\240\253\034>\264\241\n>\265\225D;\254\346)>\032\005\325\273{\342\346\275\374\200\276=\350\240_=\276xJ>\034\037\200=\234\373`\275\314\315\207\275tb\217=\302c6>\240\233Q=\240\224\222\274x\030\375=\2269\331;v1\n>H\363\307=\246K%>kW\346\275,\252\261=*j,\276\310\262\026>\354\257\232=ftZ>\241\313s=2y\033\276\020F\345=R\374\275\275\000\000\000\000~\365\006\276\250|\300\274h\375\032\276hA\244=X3-\276\254}U\275\372=\032\2767*\267;\010\363\n>\214\001\017>\364}\352<\035\013`\276d/M\276\010\346?=\374\031\324\275\350\234V=\370Y\205<\212o\213\275\240\277\006\276,L:\276\004^\306\275\030\364Z\276\354\274\255\275\202\251(\276\376]8>x\317\310<d\214D\276\270#\016<\010m\271<\352@!\276\360\342O>\344TQ\276R\022@\276C\031\004\276\256\001\227\275\000\000\000\000\010\2559\276\2005\356=\372\302L>0HS=\344\377<>Ur\360\274\210p\217<Z0\035>b\301p=\230\260\003>\025\222H\276\016}1\276\000\000\000\000\035:\010\276\326Vr\275\032P\246\271\334.\014>8\305\224=\270\341\201\274\332\355\350\274*T\357\275Hs&=\370\352\370=\364\211T>(\020A=>\321\177=\240V\363\275\352\321a>\216\356\222\2758,e=\232\034\035\276!\313J\276\250*\t=\354\214\247=x\253,\275\214\030M>\364\322H>f)\304\275V\260\240\275\032\205\341\275:\014\031>\364\201\334=\230\262\324<\242\333#>\366\373\'<\000\000\000\000:\303\030>\334\336N\276d\340\264\275 t\300=\262S`\274N\257Z\276PB_>\210\345\234\274rL\350\275n\277\000>\027\227\'\276V\322\222\275A\362x=W\367b\274\304\007(\275\254\311\321\275|<\247\275\"\350\211\273 \351N=(?\206=\222\330S>0\222\342=xoF\275\322\201\010\273\300\306>\276\260m\314=\020\242\027>\374\336\251\275\260\351\n=\0003B>|\336\266\275\334\316\335=\320O\025\275\320\350\032>\244\246\356=\230\220\353=\330\277[>z\2014\276\020(\255=05\307=~\224\272\275\370\2400>\210m\217<`\305?>&cr=\306a\343\275\310Q\363=\342(\212;T\341\371=\370k\304<\266C.\276L\030K\275\264(&>\030*\n>\324A_\276P-\252\274\364\264Z>5$\352<\224\335\005>Rw\251\2758\357\360=4q^\275\024\311\206\275\316\320\356\275\237\270\360;\315QD\276\330=A=\251\032\244;\352\337\017\2762\2659>\314\356`>\203\310h\274l\245&>\374\342\321\275\276\244\257;\000]\001=d\275X\274"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/kernel/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_0/kernel/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_0/kernel/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/bias/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 15
+          }
+        }
+        tensor_content: "\000\000\000\000\303\275\250=\000\000\000\000U\265\342=d\347\006=b\214\353=\000\000\000\000\341\276\323=\000\000\000\000\036\227\224\274\000\000\000\000\254\222!\274\352\014\326=\000\000\000\000\301\n\317="
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/bias/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_0/bias/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_0/bias/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/kernel"
+  op: "Identity"
+  input: "dnn/hiddenlayer_0/kernel/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/MatMul"
+  op: "MatMul"
+  input: "dnn/input_from_feature_columns/input_layer/concat"
+  input: "dnn/hiddenlayer_0/kernel"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "transpose_a"
+    value {
+      b: false
+    }
+  }
+  attr {
+    key: "transpose_b"
+    value {
+      b: false
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/bias"
+  op: "Identity"
+  input: "dnn/hiddenlayer_0/bias/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/BiasAdd"
+  op: "BiasAdd"
+  input: "dnn/hiddenlayer_0/MatMul"
+  input: "dnn/hiddenlayer_0/bias"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "data_format"
+    value {
+      s: "NHWC"
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_0/Relu"
+  op: "Relu"
+  input: "dnn/hiddenlayer_0/BiasAdd"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/kernel/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 15
+          }
+          dim {
+            size: 30
+          }
+        }
+        tensor_content: "\254\241\220>\254J\257>\310\016\224=\3748\207=r\360\212>\200\250(=\304\325i\275\320E\231=\302l\367\27486\n>\004Z\031>\252-\177\276\365A\325\274\330A1\274>\"\201>\020\030_\276*\201,\276\020$\200>X\343\016=\"t\240>\337\266R\276w\2320\276\260\335U\275\024Kl>\334\325\005>4\350k=\367Re\276\224\342\354\275\275\323e\274\250\025o>P:\232>\034j\343=\"19>!t\010\276BVG>\372\337V\276F\227\234=5\200\377\274\270\3719>Yk[\276In\201\276r\314\222\275e\337\357>\341`:=~E\247\276\272\005\313\275\202\274\373\2755\267\r\276\221J\267\275D\326\261>\030}\314\275p\376\334=\361\275_>\324\266\276\276y+\267\275JX\355\275\3163~\276Y\324\030>\246C\224\276\305\204\324\275\010\377\231>H\261L>\344\271m>\244\301\214>\320KX=\024cK>\356H\230\276\014\275\302\273h\365\246\276\330\204\324=b\"\267\276\\\006\265=\220\343\r\275\200|\314=\260\260\242>hN\037=\\f\344=\324{M>\350J$>8\341\304\274h\227\236<\304\370\222=,?7>@\2051>h\006l\276\312KM\276j]\202>8\324\234\275X\343\244\274\004)t>\202~Q>\3268\335>F\3360\276\332w@>:|F>_\264\341\275\036\2026>\r\363\227\274^\257\351\275\260hB>\325O\224>6\264\317>\014\024\203=4\376j\276G`\245>A\014/>\2353\035\276x\001A>\246\364\263>c\220h\275\277\231\251>w7\260>\nZ\326>\222\245f>\260\211\225\275\240\"\356\275\323u\177\275\000Q\361=\320\013g\276\213\r\320\2748\310\302>\232[\234\275x\226>>`\243}>Z<\211>\017\337\240\276\255P\260>_\221\215\275+sF\276\365\276\266\276v\340\273=\245,s=X\344\252\276\000\240\240>(\340\351=\261\027`\276\213\t\252>\304-\273>\023\222\337=\374\356C>\257V\223>\336\327\255>\235\247\204\275\021*\350=\337H\213\275\270\205H\275&\025\204>E\360\222>\307Q\252\276\204/\357\275\020\233\232\275\277r\\>\300\270\203>b\000\331>\260+\263>\321P\277=\245\235J>\023\312\222>\360zv>C\376\372=\314\215\240>!\254\272=5\242\325>!\330G>\315\302k>\314\207\276\273\013\263:>\002\036<<\347b\036=\367\210s<\261\035\223>cB<\275b \320>\2054\333=O\"O\274\030\033e>[ \323=k\020\215>E\340J\276\374>\023\275:\373\200>\2708L>\326\256\257\276P0,>\030\353\230>q\250\221\276\324\006\263\275<\302\036>(U\262\276\204\330\177>\010XL\275\354\256\256>\000\341\226=\250\004\315=/\037\257\276\030\263\254\274\374\324\225=\270\243=>\256n\221\2760\250X=\004\000\200=J}?\276j\361\234>\2748\226>\210?\002\2768\021\016=n\344Z\276X{V\276\010`\231>\010\377>>\242x\000>\207\371\036>\355\022o\276\302R\367<AY\224\276\2411\275>\201Z\'\276M\231\376\275x\235\377=\236\031\270>wW\342\275c\r\213>\346\301\243\275$\215\315=\203\242\270\276\250\357\255\276j\246\036\276\350}l>\375!~>\000\000\000\000\374\324\333>\314\317\235\276@\303\202>P\202\234\276\242\205\301\276\304;\200=\0229\207>qO\037=\000\000\000\000.~\\=\230\223>>R$\211\276\362\027\027\276K\322\023\276\010(c>@\322\214\275\000\000\000\000\0224\255>\030\314\020>8\201`=v\251\263>\335\304\362\273\374;T\276\354\035G>V\365\236\276\230\366;\275,[[>\340F\241=X\236\265<\010u\201>\250*R\276\365\216\332;(\213\003=\320\325\231>@+\215\276K\2257\276\\\304\233\275`d\233\275p\336@>\300\037s>0=`>\nHP\276o\377\236>N|\257>\327\000\022\276\344;\n>\177\237c>\311l\361=\260\247E\275\003T\212\276\365\255\372\274:\003\201\276\351\375\220\276\214\346\217\2765\346\n>\200N\275\275Q\325\034\276\211\\$\276\246\0101;\215\211\206\276\236\235\217\276\250\315\232>\252\225i=`\366\331=c\233U<\244\310H\276\006_\205\276\036\374J\274\371V\262\276p\245\236\275\000\000\000\000H\277\263>\300\325C\275HY\203>H\264\300\2756\215\263>p\2152>\023\031\246\276\233\004\216\276(T\264>\276\221\254\276\246\277\261>\252\363\355\275\020\215\212\275\010}\256=Mt\260\276h\270\340=\230!S=E1f\276\030\t\"=\354\026Z>\2206\220=\324\257\023>6\225\211>\310\231\222\275\256\021\365:\010\"\300<\360\254\326\2750{)>\010\032\030>\237|\325\275\\\341\266>j\266Z\276\247\326?>\257\340&\276 )M>\337H\333\274\036X\237\276\227-o\276\234g4>\205\346#\276\356\210\205>z\023\374\275|@H>*%\227\275\230~\231=\000\000\000\0006\321\227=\242\307;>,\255\017>\016\n\250\275z\0278\276@\343u\276\026\354f\275\3044^>l\315\t>\276\215\225>\024\r\377\275hRi\275j\364\376\275\243\362\241>\202?Z>\346\026\314>a\336w>w\213:>\343\375\000\275\370\022\333>\016\002\265> \307\302\275Q\302\204\275\006YM\275{\222\032\2764\004)>xW\254>\300\371\237><\227\366\273?Q\233\275\210\004\330>V\231g\274*\271x\276\216\266\275>\313\366\252>\257\242`\276\214\032\000\275 n&\276\006\264\024\276\325\340\205>\233\205\363\272\362\010\236\276\025\340\336=P#(\275l\310\227\276p\016\217\275\005\361\223\276\252\334\257>\310\227w>\211\374\202\276*\224\264\276p\3377>\300{\214;\034\024\201=\276N\321\273fI\014\276`\026\257>S\243\263\276\334\371\213\276HP\243>\320\304\032>\270\326Q>t\325|\276@[y>\320\301p>l\266\005>\304\261\262>\304]\206>\360\0217>\234,\335\275\030\330>\275\204/\246>+\267(:\273\307\363\275\242\262\335>+T\227>V>\327>]\256\322=\226/\260\274\226\023\346\274s\201\356=\'b\213\276\326\317\027=\246Sd\274\204\237\370=\344\027&\275y^#>\261mu\276\267\353\255\276\325\001->\272\032\326>AE\315>h`\233\275\201Lo<\222NK>\177\205\220=?\215\030\276\274\300\205>\310,\374\275\2061^\276\217\002\376=\2078&\276\315\323\016\275"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/kernel/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_1/kernel/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_1/kernel/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/bias/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 30
+          }
+        }
+        tensor_content: "\2048\241=$z\321=\311\301\271=\340\220\314=\233\224\265=\237]C=ED\241=$\310\217=\000\000\000\000\004i\274=\225M\215\274\014\332\257=\360\037\306=?k\303=\203/e\274K9 < \215\312\274z\001\336=r\000\260=\000\000\000\000&\363\267=\241\343S=\342S\212=\023<\034\275\007\212\205\274\000\000\000\000\250LH\275\361/\263=\000\000\000\000\352$\'\275"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/bias/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_1/bias/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_1/bias/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/kernel"
+  op: "Identity"
+  input: "dnn/hiddenlayer_1/kernel/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/MatMul"
+  op: "MatMul"
+  input: "dnn/hiddenlayer_0/Relu"
+  input: "dnn/hiddenlayer_1/kernel"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "transpose_a"
+    value {
+      b: false
+    }
+  }
+  attr {
+    key: "transpose_b"
+    value {
+      b: false
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/bias"
+  op: "Identity"
+  input: "dnn/hiddenlayer_1/bias/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/BiasAdd"
+  op: "BiasAdd"
+  input: "dnn/hiddenlayer_1/MatMul"
+  input: "dnn/hiddenlayer_1/bias"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "data_format"
+    value {
+      s: "NHWC"
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_1/Relu"
+  op: "Relu"
+  input: "dnn/hiddenlayer_1/BiasAdd"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/kernel/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 30
+          }
+          dim {
+            size: 15
+          }
+        }
+        tensor_content: "\222v$>`\242\010>\031n\032\275\204\242\351>8o\006>\332A*\275M\036\211>\260\256\256>\363\274\251<\014#\337\275-\225\'>P\002\207\275\260\300\232>s\266\235\276JB\237\276\265ud\276t\027\376=*\202b>j\327\336>8v\036=\001\3511\276R\206t\276\223\261\242\276>\216k\276s\262A\276\"\000\251>\270i9>\224\036\241>\367&e>\352\252]\276e.\236\276t\310\356\275\203\205\231=\200\216v=\232\372O=\366^\362\275\267@O>\344\220\004\276C]\225>\000\000\000\000\372\355\241>\256\315\214\276\222\237\245>\354\252H>\274\236\003>\017\315\265<\344\232\205>b>\331\276\240I\330\275\231\322W=\361A\244=\366\211<=*c\232=\2121\234>v\310\222\276\333\006\220=\3719L\276g\264\242>\324\026\030>lB\241;\007A\202\275\004`\212=\261W\330\275\224\374w\276\2074\245\275\210E\315>A\317\337=a\020p\275\362$\227>e\243\260\276\020\035\002>\304]\005\276KL\255><:\273=\347G\376<4\301\236\275\",w\276x\330\315\276\2152;>6\277\253\276v\n\345=\340\032\251>t)\005>=\232\226=\364y\317\275\266)\272>J\256\372\275\312R\320=t&?\276|\005\335=\354\352\254=V\320\352\275\273\315)\276\010\226\301>\004\024\234\276\035\311\212>\007\304\237\276\207E9\276^\322j\276~\277\256\276 \031\221\275\0328~=\371\370\336>(\202\003\275\245\237\252\276\234\3475>\333e\227\276\202\303\236\275dx\271>\350\231\263\275\355\342\257>\224\267\337\275\231\037R\276\320cg\276\212\031 \276v\026\220\275K\376\031\276\366[~<+\334\301\276(\231\311\274D\370\245=\2702\332=-\207\364\274l\355+>p7X>\014$\271=\371_\247\276\200R1\275\364\355^>p\245?>\350\033\270\274(K\223=d\350\246\275\027\251\255\276\305P\260\276\341r\177\276\000\000\000\000\014\371\323\276\036{;\276?\035\210\276\272\250\240>\360T\200=\230\3523=u\226r>\033\367\236\276N\356\364;\177z\220\276/\026\217>\255Tw\275r\253\265>y\021\207>\222\025\230\276\025\375\207>]<G\275=J\257>7[\232>C\332N>\254\220\254>Q\327.\276\000\000\000\000\275c\033>@\336:>\327\355\006>\306K\303=\013S\221\276l\350\014>\270\201\025\2764ai>\302+H>\216\004\222\276y\237\314>\307\037\261\275\260\263i<\354l\252\276P\244\256\276nH\325>\220\342e=\350\373\270>b\350\"\276\\\357L>\253r\205\275\224\266\326=ocz>\214\324\246>\207\213I\275\367\331?\276\030\331y>O~\313=\025\375\242=\022\340\371\275\"\272\266>\017)\004\276\016\275\246>9\262=\276\360\353\204\276T\273\371=\3144\232=\233\216\252\276\353\253\203>\204\230y\276\227\212\305>\236Y\214<\354\306@>.T\216>\201\027\353<\351\326\204=|\270d\276\245\003\334>T\325\205\276\211@\320\274\326\"5=D\263\372=\327\327\n;{\320\216=!\035\227\276\240\363*>\033\372\307\275\231&3>\002\303\213\275@\017\225\276r8\374\275\332\334\t\276\216\313[=;\003s<\224\017\316\275\342-\245>\324\014\254\276aO\275\276tw.>\370\253\235\276\275>$\276S\366\021\276\204\350\263\276(\024\205<xLl>\304\222m\276<C\253\275 \251 >\020\256\226>E\362\033\276\300\303\235\272\316\270\231>\357?\213>\031y\323\275\023\314\210\276\275\330\030=\231I\205\2752\251\236\276}\337\275\276\014G\201\275\236)2\275\314\0108>,q\372<\023.\300\276M\033>\276\207\317j>\355l\257\276\347\212}\276\371P\201\275\273\364H\276\020\337\274>\020\274X>\206[\305\275N\334j>XB\300\274p^\243>H.`>\005\254\222>l\257\207>\336\267\200>\255\253\032>\3430+\276\023\316\216>3\217\245>\232\001v>[S\251\275;\242\363\275\240L\242\275d\245\325\272\317\035\035\276\245\341\225>\214\220\345= ^\257>\323a(>\200\225\270=\347\251\243\276(|9\275y\355\266\276\344\316\317\2750z\021=\354Wx>\"\323r=\3204\035=\036\371\r\276\216\367\204>\260\307\027\275\270\265\205\276C\'Q\276`r\002\276\000\000\000\000\312\334\352\275i\317h\276\246\372\206>\002\302[>\354\236q>Ah\037>LO5>\350\263\203>QY\221\275\036\027#\276\276\266\206>~|\223\2766\036&\275n\234\262\276\374\305\322;U\375\256=\2308\213\276\350\344\360\274J\355\260\274\326\201\214>\205%\206>\'\326\270\276\301r\207\275\360\213\312\275(Y\360=w\250\027\276\000L \275\315\326\200>+J\354\275\263\033\225\276x\255\364\275\204:v>P\375\373\275U\352}\2751\324\231\276\'\344E<\036\215}=\'\005\003\276\033\370\240\276\333\232u\274RV\246>\244\237\235=U\234\341>\371\365\227\276\000\026\007>J\320\277=\270\316\300=?NA\276R\253\204\276\211\231\330=\247/\313\275\316l8\276&\335]>\026\n\244\276\223h0\276\221\350.>\313\377e\276\\\270{\275\271>\005>\300\036>>?\347Y>\260\003\267>%\306\205>)\321\367=\235Z\032=I\234\254\2760\251\325=V\311\021>8\224\204;\220\206\\\275\033\235H\276\030\375\226>\037[\'\276\316H\360<\237SA\276\335\023\317\274$\224\265>\324@5>\314rM>\010\3037=p\375\204\275\220+\211\275t<E> \271Y=\333T\246\276|\244\215\275\2078\250\276\270\253\256=@\257i>\230\300\265=\360\271\3609\243\263l\275\026,\347=\274_\001\275Do\031\276\326\202\320=v\332\221\276\270\231P=\\-\322<\030\301\250>v9\276\274\\\376\266=\3209?\276\007B\002\276o\220\036\276Z\303\274\276\310\373\024>\255.\250=\233\030\351>o%7\276\340m\255>\030\026\205\276\030@\025\276\226\206\243\276\254]\360\275\201R\311>\350\302F>P\244\\>aa\020>\350\234m>4\304f>\246\251c\273\357\346\205\276\323\310m\275\037\312\360;\254|\036>P\022->:\321\256>\244\261\337=X\232\301<C\263\033\276\254\364\226\276\370(b>\204\237\221\275Hf_>FQ\201=\201\"\030\276\254T\247>\177\275\222\276aa\367;\254\225\205=~\325\274\276\013\023\n\275NH\271<fI\233\276(\255,\276T&5>\217ta>L\357\247=L \212>"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/kernel/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_2/kernel/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_2/kernel/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/bias/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 15
+          }
+        }
+        tensor_content: "\016c*\275\000\000\000\000\372Tr\275\'?\232=\350\372\270\274\341\353\245=\331Z\201\274\334\264y\274\n\371\222\274\000\000\000\0002\271\234=\000\000\000\000;t\231=\013\024\020\275\000\000\000\000"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/bias/part_0/read"
+  op: "Identity"
+  input: "dnn/hiddenlayer_2/bias/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/hiddenlayer_2/bias/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/kernel"
+  op: "Identity"
+  input: "dnn/hiddenlayer_2/kernel/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/MatMul"
+  op: "MatMul"
+  input: "dnn/hiddenlayer_1/Relu"
+  input: "dnn/hiddenlayer_2/kernel"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "transpose_a"
+    value {
+      b: false
+    }
+  }
+  attr {
+    key: "transpose_b"
+    value {
+      b: false
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/bias"
+  op: "Identity"
+  input: "dnn/hiddenlayer_2/bias/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/BiasAdd"
+  op: "BiasAdd"
+  input: "dnn/hiddenlayer_2/MatMul"
+  input: "dnn/hiddenlayer_2/bias"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "data_format"
+    value {
+      s: "NHWC"
+    }
+  }
+}
+node {
+  name: "dnn/hiddenlayer_2/Relu"
+  op: "Relu"
+  input: "dnn/hiddenlayer_2/BiasAdd"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/logits/kernel/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 15
+          }
+          dim {
+            size: 1
+          }
+        }
+        tensor_content: "8\273\034\276\257s\242\276T\305\326\276\270\t%?B\251W\276\263\334\210>\020\241\316\276!\375\362\275Bx\305\274\030.\274=[a\347>\217\234\022\277\253\357\034?\032\201\022\277\207\223\267\276"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/logits/kernel/part_0/read"
+  op: "Identity"
+  input: "dnn/logits/kernel/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/logits/kernel/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/logits/bias/part_0"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        float_val: 0.07195891439914703
+      }
+    }
+  }
+}
+node {
+  name: "dnn/logits/bias/part_0/read"
+  op: "Identity"
+  input: "dnn/logits/bias/part_0"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_class"
+    value {
+      list {
+        s: "loc:@dnn/logits/bias/part_0"
+      }
+    }
+  }
+}
+node {
+  name: "dnn/logits/kernel"
+  op: "Identity"
+  input: "dnn/logits/kernel/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/logits/MatMul"
+  op: "MatMul"
+  input: "dnn/hiddenlayer_2/Relu"
+  input: "dnn/logits/kernel"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "transpose_a"
+    value {
+      b: false
+    }
+  }
+  attr {
+    key: "transpose_b"
+    value {
+      b: false
+    }
+  }
+}
+node {
+  name: "dnn/logits/bias"
+  op: "Identity"
+  input: "dnn/logits/bias/part_0/read"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "dnn/logits/BiasAdd"
+  op: "BiasAdd"
+  input: "dnn/logits/MatMul"
+  input: "dnn/logits/bias"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "data_format"
+    value {
+      s: "NHWC"
+    }
+  }
+}
+library {
+  function {
+    signature {
+      name: "_make_dataset_70d71bed"
+      output_arg {
+        name: "RepeatDataset"
+        type: DT_VARIANT
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "TensorSliceDataset/tensors/component_0"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_DOUBLE
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_DOUBLE
+            tensor_shape {
+              dim {
+                size: 27
+              }
+              dim {
+                size: 24
+              }
+            }
+            tensor_content: "\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\034@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\024@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\"@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "TensorSliceDataset/tensors/component_1"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_DOUBLE
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_DOUBLE
+            tensor_shape {
+              dim {
+                size: 27
+              }
+              dim {
+                size: 24
+              }
+            }
+            tensor_content: "\000\000\000\000\000\000,@\000\000\000\000\000\000\020@\000\000\000\000\000\000&@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000 @\000\000\000\000\000\000.@\000\000\000\000\000\000*@\000\000\000\000\000\000$@\000\000\000\000\000\000\020@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000&@\000\000\000\000\000\0003@\000\000\000\000\000\000,@\000\000\000\000\000\000$@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000$@\000\000\000\000\000\0008@\000\000\000\000\000\000\034@\000\000\000\000\000\000\"@\000\000\000\000\000\000\360?\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\0005@\000\000\000\000\000\000.@\000\000\000\000\000\0001@\000\000\000\000\000\000\020@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\0003@\000\000\000\000\000\000(@\000\000\000\000\000\0002@\000\000\000\000\000\000\024@\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000=@\000\000\000\000\000\000\360?\000\000\000\000\000\000*@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\020@\000\000\000\000\000\000>@\000\000\000\000\000\000\010@\000\000\000\000\000\000\020@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000(@\000\000\000\000\000\0008@\000\000\000\000\000\000\024@\000\000\000\000\000\000$@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\0006@\000\000\000\000\000\000.@\000\000\000\000\000\0002@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000 @\000\000\000\000\000\0004@\000\000\000\000\000\000(@\000\000\000\000\000\000*@\000\000\000\000\000\000\360?\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000.@\000\000\000\000\000\000,@\000\000\000\000\000\0002@\000\000\000\000\000\000 @\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\034@\000\000\000\000\000\0003@\000\000\000\000\000\0001@\000\000\000\000\000\000 @\000\000\000\000\000\000\020@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000$@\000\000\000\000\000\0000@\000\000\000\000\000\0002@\000\000\000\000\000\000&@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000,@\000\000\000\000\000\000.@\000\000\000\000\000\000:@\000\000\000\000\000\000\020@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\020@\000\000\000\000\000\0005@\000\000\000\000\000\000\030@\000\000\000\000\000\0001@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000>@\000\000\000\000\000\000\020@\000\000\000\000\000\000(@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000(@\000\000\000\000\000\000$@\000\000\000\000\000\0007@\000\000\000\000\000\000\034@\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000.@\000\000\000\000\000\000\020@\000\000\000\000\000\000(@\000\000\000\000\000\000\000@\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\020@\000\000\000\000\000\200@@\000\000\000\000\000\000\000\000\000\000\000\000\000\000&@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\"@\000\000\000\000\000\200A@\000\000\000\000\000\000\034@\000\000\000\000\000\0002@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000A@\000\000\000\000\000\000\030@\000\000\000\000\000\0009@\000\000\000\000\000\000\000@\000\000\000\000\000\000\020@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000(@\000\000\000\000\000\200B@\000\000\000\000\000\0007@\000\000\000\000\000\000=@\000\000\000\000\000\000\000@\000\000\000\000\000\000\034@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\"@\000\000\000\000\000\000;@\000\000\000\000\000\000(@\000\000\000\000\000\0007@\000\000\000\000\000\000\020@\000\000\000\000\000\000\034@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000:@\000\000\000\000\000\200@@\000\000\000\000\000\200@@\000\000\000\000\000\000(@\000\000\000\000\000\000\020@\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000(@\000\000\000\000\000\000A@\000\000\000\000\000\0006@\000\000\000\000\000\000\"@\000\000\000\000\000\000\030@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000$@\000\000\000\000\000\200D@\000\000\000\000\000\0007@\000\000\000\000\000\0008@\000\000\000\000\000\000\030@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\020@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "TensorSliceDataset/tensors/component_2"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_DOUBLE
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_DOUBLE
+            tensor_shape {
+              dim {
+                size: 27
+              }
+              dim {
+                size: 24
+              }
+            }
+            tensor_content: "\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\024@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\"@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000&@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000&@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "TensorSliceDataset/tensors/component_3"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_DOUBLE
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_DOUBLE
+            tensor_shape {
+              dim {
+                size: 27
+              }
+              dim {
+                size: 24
+              }
+            }
+            tensor_content: "\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\010@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\024@\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\360?\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "TensorSliceDataset/tensors/component_4"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_DOUBLE
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_DOUBLE
+            tensor_shape {
+              dim {
+                size: 27
+              }
+            }
+            tensor_content: "\000\000\000\000\000\000=@\000\000\000\000\000\200M@\000\000\000\000\000\000N@\000\000\000\000\000\200M@\000\000\000\000\000\000M@\000\000\000\000\000\000N@\000\000\000\000\000\200M@\000\000\000\000\000\000M@\000\000\000\000\000\000N@\000\000\000\000\000\200M@\000\000\000\000\000\200M@\000\000\000\000\000\200M@\000\000\000\000\000\000N@\000\000\000\000\000\000M@\000\000\000\000\000\200M@\000\000\000\000\000\000N@\000\000\000\000\000\000M@\000\000\000\000\000\000N@\000\000\000\000\000\000M@\000\000\000\000\000\000N@\000\000\000\000\000@V@\000\000\000\000\000@V@\000\000\000\000\000\300]@\000\000\000\000\000@V@\000\000\000\000\000\300]@\000\000\000\000\000\200V@\000\000\000\000\000\300]@"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "TensorSliceDataset"
+      op: "TensorSliceDataset"
+      input: "TensorSliceDataset/tensors/component_0:output:0"
+      input: "TensorSliceDataset/tensors/component_1:output:0"
+      input: "TensorSliceDataset/tensors/component_2:output:0"
+      input: "TensorSliceDataset/tensors/component_3:output:0"
+      input: "TensorSliceDataset/tensors/component_4:output:0"
+      attr {
+        key: "Toutput_types"
+        value {
+          list {
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+          }
+        }
+      }
+      attr {
+        key: "output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+            }
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ShuffleDataset/buffer_size"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 27
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ShuffleDataset/seed"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ShuffleDataset/seed2"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ShuffleDataset"
+      op: "ShuffleDataset"
+      input: "TensorSliceDataset:handle:0"
+      input: "ShuffleDataset/buffer_size:output:0"
+      input: "ShuffleDataset/seed:output:0"
+      input: "ShuffleDataset/seed2:output:0"
+      attr {
+        key: "output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: 24
+              }
+            }
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "output_types"
+        value {
+          list {
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+          }
+        }
+      }
+      attr {
+        key: "reshuffle_each_iteration"
+        value {
+          b: true
+        }
+      }
+    }
+    node_def {
+      name: "BatchDataset/batch_size"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 5
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BatchDataset"
+      op: "BatchDataset"
+      input: "ShuffleDataset:handle:0"
+      input: "BatchDataset/batch_size:output:0"
+      attr {
+        key: "output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "output_types"
+        value {
+          list {
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+          }
+        }
+      }
+    }
+    node_def {
+      name: "RepeatDataset/count"
+      op: "Const"
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: -1
+          }
+        }
+      }
+    }
+    node_def {
+      name: "RepeatDataset"
+      op: "RepeatDataset"
+      input: "BatchDataset:handle:0"
+      input: "RepeatDataset/count:output:0"
+      attr {
+        key: "output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 24
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "output_types"
+        value {
+          list {
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+            type: DT_DOUBLE
+          }
+        }
+      }
+    }
+    ret {
+      key: "RepeatDataset"
+      value: "RepeatDataset:handle:0"
+    }
+  }
+}
+versions {
+}
