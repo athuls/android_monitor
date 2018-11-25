@@ -138,11 +138,8 @@ class CVClassifierWrapper(object):
             grid = GridSearchCV(make_pipeline(StandardScaler(),self.classifier), cv = inner_folds, 
                                        param_grid=self.parameters, verbose=100,
                                        n_jobs=1, scoring=self.scoring, refit=self.refit)
-
-            scaler = StandardScaler().fit(x[tr_index])
             grid.fit(x[tr_index], y[tr_index])
             best_model = grid.best_estimator_
-            scaler = StandardScaler().fit(x[tr_index])
             predictions = best_model.predict(x[ts_index])
             test_score = self.scorers_[self.scoring](predictions, y[ts_index])
 		#test_score = best_model.score(x[ts_index],y[ts_index])
