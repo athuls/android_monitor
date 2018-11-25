@@ -114,7 +114,8 @@ class CVClassifierWrapper(object):
             print "\n\n CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
             scaler = StandardScaler().fit(x)
             self.classifier.fit(scaler.transform(x),y)
-            return self.classifier
+	    print self.classifier.predict(scaler.transform(x))
+	    return make_pipeline(scaler, self.classifier)
 
         self.pipeline_param_dict()
         if inner_folds == 0 or outer_folds == 0:
@@ -161,9 +162,9 @@ class CVClassifierWrapper(object):
 
 
     
-def create_mlp(num_features=3000,num_classes=20,encoding_dims=[2000], 
+def create_mlp(num_features=96,num_classes=20,encoding_dims=[2000], 
                  regs=[0.00001],init='uniform',optimizer='adam',
-                 regressor = False):
+                 regressor = True):
     
     model = Sequential() 
     model.add(Dense(encoding_dims[0], input_shape=(num_features,),activation = 'relu'))
@@ -384,7 +385,7 @@ def run(args, optional_args):
         regression = True
     else:
         regression = False
-    x, y = loadData(args['train_input'], x_end_index=optional_args['x_end_index'],
+    x_train, y_train = loadData(args['train_input'], x_end_index=optional_args['x_end_index'],
                         label_index=optional_args['label_index'],
                         label_dict=optional_args['label_dict'], regression = regression)
 
@@ -392,9 +393,7 @@ def run(args, optional_args):
     x_test = None
     if optional_args['test_size']:
         test_size = float(optional_args['test_size'])
-        
-
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = test_size,
+        x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size = test_size,
                                                                         random_state=42)
 
     method = ModelFactory().factory(args['algorithm'])
@@ -427,19 +426,19 @@ def run(args, optional_args):
         print "Test score: "+str(test_score)
 
     if optional_args['output_file']:
-        if args['algorithm'] == 'mlp' or args['algorithm'] == 'mlp_regression':
-            json_string = model.model.to_json()
+	if model.steps[1][1].__class__.__name__ in ['KerasClassifier', 'KerasRegressor']:
+	    json_string = model.steps[1][1].model.to_json()
             f = open(optional_args['output_file']+'.json', 'w')
             f.write(json_string)
             f.close()
-            model.model.save(optional_args['output_file']+'.h5')
+	    model.steps[1][1].model.save(optional_args['output_file']+'.h5')
         else:
             f = open(optional_args['output_file'], 'w')
-            cpkl.dump(model, f, -1)
+	    cpkl.dump(model.steps[1][1], f, -1)
             f.close()
 
-	    # Sanity check the model written to pickle file
-	    verify_model(optional_args, args, x_train, y_train)
+    # Sanity check the model written to pickle file
+    verify_model(optional_args, args, x_train, y_train)
 
 def load_keras_model(modelfile, labels=None):
     """
@@ -454,7 +453,7 @@ def load_keras_model(modelfile, labels=None):
         model = keras.models.model_from_json(open(modelfile, 'r').read())
         model.load_weights('.'.join(modelfile.split('.')[:-1])+'.h5')
         return model
-    if labels:
+    if labels is not None:
         kmodel = KerasClassifier(build_fn = build_fn)
         kmodel.model = build_fn()
         kmodel.classes_ = np.searchsorted(labels, labels)
@@ -474,12 +473,13 @@ def verify_model(optional_args, args, Xtest, Ytest):
     if args['algorithm'] != 'mlp' and args['algorithm'] != 'mlp_regression':
         with open(optional_args['output_file'], 'rb') as file:
 	    model = cpkl.load(file) 
-	Ypredict = model.predict(Xtest)
-	for test_i in range(0, len(Ytest)):
-		print("Expected: {0:.2f} and Actual: {1:.2f}".format(Ytest[test_i], Ypredict[test_i]))
     else:
         model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
 
+    Ypredict = model.predict(Xtest)
+    print Ypredict
+    for test_i in range(0, len(Ytest)):
+        print("Expected: {0} and Actual: {1}".format(Ytest[test_i], Ypredict[test_i]))
 
 if __name__=="__main__":
     print "starting script"
