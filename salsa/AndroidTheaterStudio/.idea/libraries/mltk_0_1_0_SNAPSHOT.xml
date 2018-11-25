@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="JJIL-J2SE">
+  <library name="mltk-0.1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/JJIL-J2SE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/mltk-0.1.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
