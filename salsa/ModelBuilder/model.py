@@ -472,7 +472,7 @@ def verify_model(optional_args, args, Xtest, Ytest):
     if args['algorithm'] == 'mlp':
         model = load_keras_model(optional_args['output_file']+'.json', Ytest)
     elif args['algorithm'] == 'mlp_regression':
-        model = load_keras_model(optional_args['output_file']+'.json', (args['algorithm'].endswith('regression'))*Ytest)
+        model = load_keras_model(optional_args['output_file']+'.json')
     else:
         with open(optional_args['output_file'], 'rb') as file:
             model = cpkl.load(file) 
