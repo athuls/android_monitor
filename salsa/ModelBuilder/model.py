@@ -131,7 +131,6 @@ class CVClassifierWrapper(object):
             scaler = StandardScaler().fit(x)
             print "Mean:\n", ','.join(map(str,scaler.mean_))
             print "Scale:\n", ','.join(map(str,scaler.scale_))
-	    print grid.best_estimator_
             return grid.best_estimator_
 
         for tr_index, ts_index in KFold(n_splits = outer_folds, shuffle=True).split(x,y):
