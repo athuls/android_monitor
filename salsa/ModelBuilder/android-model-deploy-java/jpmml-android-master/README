@@ -1,0 +1,2 @@
+adb logcat | grep -F "`adb shell ps | grep com.example.package | cut -c10-15`"
+
