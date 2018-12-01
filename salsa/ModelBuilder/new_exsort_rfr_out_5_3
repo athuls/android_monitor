@@ -1,0 +1,1070 @@
+starting script
+Loading Data....
+96 -1
+(34, 96)
+(34, 96) (34,)
+Fitting 5 folds for each of 96 candidates, totalling 480 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-4.12892857143, total=   0.1s
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-4.96035714286, total=   0.1s
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:    0.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-11.2282142857, total=   0.1s
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:    0.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-2.96535714286, total=   0.1s
+[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:    0.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-2.1925, total=   0.1s
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    0.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-3.48, total=   0.2s
+[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:    0.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-4.84382857143, total=   0.1s
+[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:    0.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-10.7216, total=   0.1s
+[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:    0.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-2.96874285714, total=   0.2s
+[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:    0.9s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-3.38766666667, total=   0.1s
+[Parallel(n_jobs=1)]: Done  10 out of  10 | elapsed:    1.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-3.28894285714, total=   0.3s
+[Parallel(n_jobs=1)]: Done  11 out of  11 | elapsed:    1.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-5.8716, total=   0.3s
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:    1.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-11.2033, total=   0.3s
+[Parallel(n_jobs=1)]: Done  13 out of  13 | elapsed:    2.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-3.36222857143, total=   0.4s
+[Parallel(n_jobs=1)]: Done  14 out of  14 | elapsed:    2.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-3.02383333333, total=   0.3s
+[Parallel(n_jobs=1)]: Done  15 out of  15 | elapsed:    2.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-3.15831111111, total=   0.5s
+[Parallel(n_jobs=1)]: Done  16 out of  16 | elapsed:    3.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-5.84701587302, total=   0.4s
+[Parallel(n_jobs=1)]: Done  17 out of  17 | elapsed:    3.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-11.2668698413, total=   0.4s
+[Parallel(n_jobs=1)]: Done  18 out of  18 | elapsed:    4.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-3.28241269841, total=   0.4s
+[Parallel(n_jobs=1)]: Done  19 out of  19 | elapsed:    4.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-3.13628888889, total=   0.5s
+[Parallel(n_jobs=1)]: Done  20 out of  20 | elapsed:    5.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-3.80717055444, total=   0.1s
+[Parallel(n_jobs=1)]: Done  21 out of  21 | elapsed:    5.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-4.97416239011, total=   0.1s
+[Parallel(n_jobs=1)]: Done  22 out of  22 | elapsed:    5.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-11.471595932, total=   0.1s
+[Parallel(n_jobs=1)]: Done  23 out of  23 | elapsed:    5.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-3.2871111628, total=   0.1s
+[Parallel(n_jobs=1)]: Done  24 out of  24 | elapsed:    5.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-2.35138659212, total=   0.1s
+[Parallel(n_jobs=1)]: Done  25 out of  25 | elapsed:    5.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-3.60126135577, total=   0.2s
+[Parallel(n_jobs=1)]: Done  26 out of  26 | elapsed:    5.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-4.94114867608, total=   0.2s
+[Parallel(n_jobs=1)]: Done  27 out of  27 | elapsed:    5.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-9.72098926709, total=   0.2s
+[Parallel(n_jobs=1)]: Done  28 out of  28 | elapsed:    5.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-3.27108695818, total=   0.2s
+[Parallel(n_jobs=1)]: Done  29 out of  29 | elapsed:    6.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-3.45170056241, total=   0.2s
+[Parallel(n_jobs=1)]: Done  30 out of  30 | elapsed:    6.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-3.59795981339, total=   0.3s
+[Parallel(n_jobs=1)]: Done  31 out of  31 | elapsed:    6.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-5.55404061061, total=   0.3s
+[Parallel(n_jobs=1)]: Done  32 out of  32 | elapsed:    6.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-9.75249721694, total=   0.3s
+[Parallel(n_jobs=1)]: Done  33 out of  33 | elapsed:    7.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-3.40751006614, total=   0.3s
+[Parallel(n_jobs=1)]: Done  34 out of  34 | elapsed:    7.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-2.96407837853, total=   0.3s
+[Parallel(n_jobs=1)]: Done  35 out of  35 | elapsed:    7.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-3.47140384533, total=   0.4s
+[Parallel(n_jobs=1)]: Done  36 out of  36 | elapsed:    8.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-5.7534966948, total=   0.5s
+[Parallel(n_jobs=1)]: Done  37 out of  37 | elapsed:    8.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-10.2743031613, total=   0.5s
+[Parallel(n_jobs=1)]: Done  38 out of  38 | elapsed:    9.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-3.25036274341, total=   0.5s
+[Parallel(n_jobs=1)]: Done  39 out of  39 | elapsed:    9.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-3.09548836067, total=   0.5s
+[Parallel(n_jobs=1)]: Done  40 out of  40 | elapsed:   10.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-4.12054955701, total=   0.1s
+[Parallel(n_jobs=1)]: Done  41 out of  41 | elapsed:   10.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-4.66650581368, total=   0.1s
+[Parallel(n_jobs=1)]: Done  42 out of  42 | elapsed:   10.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-10.2753397509, total=   0.1s
+[Parallel(n_jobs=1)]: Done  43 out of  43 | elapsed:   10.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-3.05545491782, total=   0.1s
+[Parallel(n_jobs=1)]: Done  44 out of  44 | elapsed:   10.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-2.00266762629, total=   0.0s
+[Parallel(n_jobs=1)]: Done  45 out of  45 | elapsed:   10.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-3.95806885336, total=   0.1s
+[Parallel(n_jobs=1)]: Done  46 out of  46 | elapsed:   10.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-5.04027085391, total=   0.1s
+[Parallel(n_jobs=1)]: Done  47 out of  47 | elapsed:   10.9s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-9.58996151274, total=   0.1s
+[Parallel(n_jobs=1)]: Done  48 out of  48 | elapsed:   11.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-3.23129274431, total=   0.1s
+[Parallel(n_jobs=1)]: Done  49 out of  49 | elapsed:   11.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-2.52891636891, total=   0.1s
+[Parallel(n_jobs=1)]: Done  50 out of  50 | elapsed:   11.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-3.90169735138, total=   0.2s
+[Parallel(n_jobs=1)]: Done  51 out of  51 | elapsed:   11.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-5.75345665303, total=   0.3s
+[Parallel(n_jobs=1)]: Done  52 out of  52 | elapsed:   11.9s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-9.52511416268, total=   0.3s
+[Parallel(n_jobs=1)]: Done  53 out of  53 | elapsed:   12.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-3.53454517129, total=   0.3s
+[Parallel(n_jobs=1)]: Done  54 out of  54 | elapsed:   12.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-2.50046699244, total=   0.3s
+[Parallel(n_jobs=1)]: Done  55 out of  55 | elapsed:   12.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-3.70555448257, total=   0.5s
+[Parallel(n_jobs=1)]: Done  56 out of  56 | elapsed:   13.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-5.96932088921, total=   0.5s
+[Parallel(n_jobs=1)]: Done  57 out of  57 | elapsed:   13.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-9.90460819297, total=   0.5s
+[Parallel(n_jobs=1)]: Done  58 out of  58 | elapsed:   14.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-3.43682904208, total=   0.5s
+[Parallel(n_jobs=1)]: Done  59 out of  59 | elapsed:   14.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-2.84596583, total=   0.4s
+[Parallel(n_jobs=1)]: Done  60 out of  60 | elapsed:   15.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-3.55252338642, total=   0.1s
+[Parallel(n_jobs=1)]: Done  61 out of  61 | elapsed:   15.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-5.25793561559, total=   0.1s
+[Parallel(n_jobs=1)]: Done  62 out of  62 | elapsed:   15.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-8.80879975491, total=   0.1s
+[Parallel(n_jobs=1)]: Done  63 out of  63 | elapsed:   15.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-3.54006511375, total=   0.1s
+[Parallel(n_jobs=1)]: Done  64 out of  64 | elapsed:   15.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-2.90944962942, total=   0.1s
+[Parallel(n_jobs=1)]: Done  65 out of  65 | elapsed:   15.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-3.71459321001, total=   0.1s
+[Parallel(n_jobs=1)]: Done  66 out of  66 | elapsed:   15.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-5.75536664383, total=   0.2s
+[Parallel(n_jobs=1)]: Done  67 out of  67 | elapsed:   15.9s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-8.53360270032, total=   0.2s
+[Parallel(n_jobs=1)]: Done  68 out of  68 | elapsed:   16.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-3.61875072993, total=   0.2s
+[Parallel(n_jobs=1)]: Done  69 out of  69 | elapsed:   16.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-3.47843472968, total=   0.2s
+[Parallel(n_jobs=1)]: Done  70 out of  70 | elapsed:   16.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-3.72340719019, total=   0.3s
+[Parallel(n_jobs=1)]: Done  71 out of  71 | elapsed:   16.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-6.03784621518, total=   0.3s
+[Parallel(n_jobs=1)]: Done  72 out of  72 | elapsed:   17.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-8.82324439613, total=   0.4s
+[Parallel(n_jobs=1)]: Done  73 out of  73 | elapsed:   17.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-3.99646537734, total=   0.3s
+[Parallel(n_jobs=1)]: Done  74 out of  74 | elapsed:   17.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-3.05502194631, total=   0.3s
+[Parallel(n_jobs=1)]: Done  75 out of  75 | elapsed:   18.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-3.6039257221, total=   0.5s
+[Parallel(n_jobs=1)]: Done  76 out of  76 | elapsed:   18.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-6.04626914526, total=   0.5s
+[Parallel(n_jobs=1)]: Done  77 out of  77 | elapsed:   19.1s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-9.27878894243, total=   0.5s
+[Parallel(n_jobs=1)]: Done  78 out of  78 | elapsed:   19.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-3.74106476104, total=   0.5s
+[Parallel(n_jobs=1)]: Done  79 out of  79 | elapsed:   20.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-3.06262784226, total=   0.5s
+[Parallel(n_jobs=1)]: Done  80 out of  80 | elapsed:   20.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-3.35553114274, total=   0.1s
+[Parallel(n_jobs=1)]: Done  81 out of  81 | elapsed:   20.6s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-5.13423954245, total=   0.1s
+[Parallel(n_jobs=1)]: Done  82 out of  82 | elapsed:   20.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-8.76298772612, total=   0.1s
+[Parallel(n_jobs=1)]: Done  83 out of  83 | elapsed:   20.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-3.73387599038, total=   0.1s
+[Parallel(n_jobs=1)]: Done  84 out of  84 | elapsed:   20.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-3.08876362863, total=   0.1s
+[Parallel(n_jobs=1)]: Done  85 out of  85 | elapsed:   20.9s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-3.66693225336, total=   0.2s
+[Parallel(n_jobs=1)]: Done  86 out of  86 | elapsed:   21.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-5.72860922974, total=   0.2s
+[Parallel(n_jobs=1)]: Done  87 out of  87 | elapsed:   21.2s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-8.71948778645, total=   0.2s
+[Parallel(n_jobs=1)]: Done  88 out of  88 | elapsed:   21.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-3.82887848001, total=   0.2s
+[Parallel(n_jobs=1)]: Done  89 out of  89 | elapsed:   21.5s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-3.33099921292, total=   0.2s
+[Parallel(n_jobs=1)]: Done  90 out of  90 | elapsed:   21.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-3.7107762787, total=   0.3s
+[Parallel(n_jobs=1)]: Done  91 out of  91 | elapsed:   22.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-6.24960725983, total=   0.3s
+[Parallel(n_jobs=1)]: Done  92 out of  92 | elapsed:   22.4s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-8.85759189671, total=   0.3s
+[Parallel(n_jobs=1)]: Done  93 out of  93 | elapsed:   22.7s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-4.00355748747, total=   0.3s
+[Parallel(n_jobs=1)]: Done  94 out of  94 | elapsed:   23.0s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-3.03231636139, total=   0.3s
+[Parallel(n_jobs=1)]: Done  95 out of  95 | elapsed:   23.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-3.56429892482, total=   0.5s
+[Parallel(n_jobs=1)]: Done  96 out of  96 | elapsed:   23.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-6.32207519984, total=   0.5s
+[Parallel(n_jobs=1)]: Done  97 out of  97 | elapsed:   24.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-9.32722771632, total=   0.5s
+[Parallel(n_jobs=1)]: Done  98 out of  98 | elapsed:   24.8s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-3.71320845852, total=   0.5s
+[Parallel(n_jobs=1)]: Done  99 out of  99 | elapsed:   25.3s remaining:    0.0s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-3.05479112503, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-3.29731049501, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-4.85188351264, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-8.92203846321, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-3.58452796705, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-2.7515980017, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-3.89495276324, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-5.5328190416, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-8.63337318809, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-3.4231034842, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-2.90709135864, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-3.98223447498, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-6.11173949134, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-8.65103843061, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-3.75624113161, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-2.88023789219, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-3.85099930078, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-6.25170439158, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-9.02264369917, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-3.60658645217, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-2.99064563946, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-3.89945848302, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-4.78246500476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-8.67371663024, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-4.48602233754, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-3.32430770676, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-4.0545553564, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-5.59499539242, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-8.68835602641, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-3.87898653004, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-3.10178242954, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-4.27493654983, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-5.6887090083, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-8.57500715681, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-3.9463079722, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-3.08963814065, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-4.14152171025, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-5.81090489487, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-8.76738849253, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-3.90702716382, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-3.07882616074, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-3.89945848302, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-4.78246500476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-8.67371663024, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-4.48602233754, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-3.32430770676, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-4.0545553564, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-5.59499539242, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-8.68835602641, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-3.87898653004, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-3.10178242954, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-4.27493654983, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-5.6887090083, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-8.57500715681, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-3.9463079722, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-3.08963814065, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-4.14152171025, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-5.81090489487, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-8.76738849253, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-3.90702716382, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-3.07882616074, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-3.89945848302, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-4.78246500476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-8.67371663024, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-4.48602233754, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-3.32430770676, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-4.0545553564, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-5.59499539242, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-8.68835602641, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-3.87898653004, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-3.10178242954, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-4.27493654983, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-5.6887090083, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-8.57500715681, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-3.9463079722, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-3.08963814065, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-4.14152171025, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-5.81090489487, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-8.76738849253, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-3.90702716382, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-3.07882616074, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-3.40778708603, total=   0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-2.84084672033, total=   0.0s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-3.98057529845, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-5.03840410837, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-8.03940517605, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-3.4050563982, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-2.84171517517, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-4.02137475013, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-5.04052191093, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-7.94174868637, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-3.40311616826, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-2.82352473168, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-3.96505299302, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-5.06621964669, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-7.98342206549, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-3.39886476011, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-2.8910364989, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-3.40778708603, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-2.84084672033, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-3.98057529845, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-5.03840410837, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-8.03940517605, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-3.4050563982, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-2.84171517517, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-4.02137475013, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-5.04052191093, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-7.94174868637, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-3.40311616826, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-2.82352473168, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-3.96505299302, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-5.06621964669, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-7.98342206549, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-3.39886476011, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-2.8910364989, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-3.40778708603, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-2.84084672033, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-3.98057529845, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-5.03840410837, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-8.03940517605, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-3.4050563982, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-2.84171517517, total=   0.1s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-4.02137475013, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-5.04052191093, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-7.94174868637, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-3.40311616826, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-2.82352473168, total=   0.2s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-3.96505299302, total=   0.3s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-5.06621964669, total=   0.4s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-7.98342206549, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-3.39886476011, total=   0.5s
+[CV] max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=sqrt, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-2.8910364989, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-4.99678571429, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-7.28035714286, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-13.2910714286, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-3.59571428571, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=1, score=-3.80125, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-4.72742857143, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-7.85137142857, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-13.3258285714, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-4.0408, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=1, score=-3.06706666667, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-4.5607, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-7.8654, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-13.5295857143, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-4.12752857143, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=1, score=-3.27621666667, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-4.74984761905, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-7.82988571429, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-13.1506857143, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-4.30353650794, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=1, score=-2.95534074074, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-4.67598735968, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-7.63757804098, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-13.0877494908, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-3.73074973331, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=1, score=-3.83315220413, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-4.46323524286, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-8.12827704065, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-13.3852566272, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-4.10803655086, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=1, score=-3.13591746104, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-4.4890463603, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-8.07434518889, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-13.466000234, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-4.06837820383, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=1, score=-3.58452928068, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-4.68146163242, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-8.04688630873, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-12.9064789114, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-4.27858318665, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=1, score=-3.17716850683, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-5.4923327465, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-7.08364636481, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-12.0331230307, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-3.55235262254, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=1, score=-3.35865329492, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-5.23853171966, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-7.62879909615, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-11.8823919465, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-4.36587461709, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=1, score=-3.15987084699, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-5.12145821325, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-7.56211202681, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-11.7764706405, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-4.62142919984, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=1, score=-3.1560146314, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-5.27831887747, total=   0.4s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-7.63141951951, total=   0.4s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-11.4201540187, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-4.72019520721, total=   0.4s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=1, score=-2.95067848472, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-4.81474602365, total=   0.0s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-7.33422196307, total=   0.0s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-13.846872451, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-4.24237794886, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=2, score=-4.29582096325, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-4.22369073631, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-7.67064638387, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-13.4601911924, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-4.19107094898, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=2, score=-3.59171046995, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-4.22592893473, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-8.17812261311, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-13.2914877639, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-4.51967276719, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=2, score=-3.67814464463, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-4.49770156511, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-8.19770576507, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-12.9535854497, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-4.62113965261, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=2, score=-3.22609890223, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-4.89298343001, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-7.37045325767, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-13.9750094982, total=   0.0s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-4.59676343031, total=   0.0s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=2, score=-4.1429868274, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-4.31908398973, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-7.59294442542, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-13.247217842, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-4.26404216634, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=2, score=-3.72155301181, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-4.2769374455, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-7.92042875848, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-13.1471838749, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-4.56349493647, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=2, score=-3.78390076611, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-4.5792356734, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-8.02538614408, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-12.9277125633, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-4.67075811593, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=2, score=-3.29791758885, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-5.47598594717, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-7.21820904919, total=   0.0s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-11.8982726207, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-4.00971781791, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=2, score=-3.63966115754, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-4.91112399352, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-7.32975449606, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-11.5592483771, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-4.27372931399, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=2, score=-3.30854688094, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-4.716406248, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-7.45617233029, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-11.6692865564, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-4.71653362517, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=2, score=-3.29585840972, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-5.01658400647, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-7.48622296049, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-11.6149976258, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-4.76030444951, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=2, score=-3.06063947367, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-5.1591268993, total=   0.0s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-6.88660171579, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-12.1761368925, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-5.57453034413, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=5, score=-3.66180320183, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-4.72672702677, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-6.88645095343, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-11.794229873, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-5.4604056597, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=5, score=-3.717497393, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-4.39566304216, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-7.09792136612, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-11.6105898849, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-5.52193122709, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=5, score=-3.76610966049, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-4.51837550783, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-6.91602073087, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-11.0700400697, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-5.41921602056, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=5, score=-3.77155925353, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-5.1591268993, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-6.88660171579, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-12.1761368925, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-5.57453034413, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=5, score=-3.66180320183, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-4.72672702677, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-6.88645095343, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-11.794229873, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-5.4604056597, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=5, score=-3.717497393, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-4.39566304216, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-7.09792136612, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-11.6105898849, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-5.52193122709, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=5, score=-3.76610966049, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-4.51837550783, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-6.91602073087, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-11.0700400697, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-5.41921602056, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=5, score=-3.77155925353, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-5.1591268993, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-6.88660171579, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-12.1761368925, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-5.57453034413, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=5, score=-3.66180320183, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-4.72672702677, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-6.88645095343, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-11.794229873, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-5.4604056597, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=5, score=-3.717497393, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-4.39566304216, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-7.09792136612, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-11.6105898849, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-5.52193122709, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=5, score=-3.76610966049, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-4.51837550783, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-6.91602073087, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-11.0700400697, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-5.41921602056, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=5, score=-3.77155925353, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.0s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-3.48925198529, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=20, min_samples_leaf=10, score=-2.86894870458, total=   0.1s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-4.01260259239, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-5.05418326886, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-8.03516625937, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-3.45072781657, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=50, min_samples_leaf=10, score=-2.88608884268, total=   0.2s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-4.06288136796, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-5.07737232056, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-7.93844850383, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-3.44220247681, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=100, min_samples_leaf=10, score=-2.87332476091, total=   0.3s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-4.00095833714, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-5.09209296881, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-8.0128781308, total=   0.5s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-3.44480051375, total=   0.4s
+[CV] max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=2, n_estimators=150, min_samples_leaf=10, score=-2.9074554199, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-3.48925198529, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=20, min_samples_leaf=10, score=-2.86894870458, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-4.01260259239, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-5.05418326886, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-8.03516625937, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-3.45072781657, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=50, min_samples_leaf=10, score=-2.88608884268, total=   0.1s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-4.06288136796, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-5.07737232056, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-7.93844850383, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-3.44220247681, total=   0.3s
+[CV] max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=100, min_samples_leaf=10, score=-2.87332476091, total=   0.2s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-4.00095833714, total=   0.4s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-5.09209296881, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-8.0128781308, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-3.44480051375, total=   0.5s
+[CV] max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=5, n_estimators=150, min_samples_leaf=10, score=-2.9074554199, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-3.97573850476, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-5.05136409587, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-8.09854241867, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-3.48925198529, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=20, min_samples_leaf=10, score=-2.86894870458, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-4.01260259239, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-5.05418326886, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-8.03516625937, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-3.45072781657, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=50, min_samples_leaf=10, score=-2.88608884268, total=   0.1s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-4.06288136796, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-5.07737232056, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-7.93844850383, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-3.44220247681, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=100, min_samples_leaf=10, score=-2.87332476091, total=   0.2s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-4.00095833714, total=   0.3s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-5.09209296881, total=   0.4s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-8.0128781308, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-3.44480051375, total=   0.5s
+[CV] max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10 
+[CV]  max_features=auto, min_samples_split=10, n_estimators=150, min_samples_leaf=10, score=-2.9074554199, total=   0.5s
+[Parallel(n_jobs=1)]: Done 480 out of 480 | elapsed:  2.0min finished
+CV Results: -4.69966114705
+
+

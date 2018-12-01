@@ -1,0 +1,5 @@
+build/
+.gradle/
+workspace.xml
+cache.xml
+*.pyc

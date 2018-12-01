@@ -10,16 +10,18 @@ import android.util.Log;
 
 public class AndroidTheaterService extends Service {
 	private final String TAG = "SalsaTheaterService";
-	private final String NETWORK_INTERFACE = "wlan0";
-	private final String THEATER_PORT = "4040";
-	private final String STDOUT_CLASS = "androidsalsa.resources.StandardOutput";
+	public static final String NETWORK_INTERFACE = "wlan0";
+	public static final String THEATER_PORT = "4040";
+	public static final String STDOUT_CLASS = "androidsalsa.resources.StandardOutput";
 	
 	private TheaterService theater;
+
+	public static boolean theaterCreated = false;
 	
     /** Called when the activity is first created. */
 	@Override
 	public void onCreate() {
-		debugPrint( "onCreate() is called" );
+		debugPrint("AndroidTheaterService onCreate() is called" );
 		super.onCreate();
 		createTheater();
 	}
@@ -27,7 +29,7 @@ public class AndroidTheaterService extends Service {
 	@Override
 	public IBinder onBind(Intent arg0) {
 		// TODO Auto-generated method stub
-		debugPrint( "onBind() is called" );
+		debugPrint("onBind() is called");
 		return null;
 	}
 	
@@ -35,7 +37,7 @@ public class AndroidTheaterService extends Service {
 	public void onStart(Intent intent, int startId) {
 		// The activity is about to become visible.
 		debugPrint( "onStart() is called" );		
-		super.onStart( intent, 0);
+		super.onStart(intent, 0);
 	}
 
 	@Override
@@ -47,15 +49,21 @@ public class AndroidTheaterService extends Service {
 	}
 	
 	protected void createTheater() {
+		System.setProperty("nogc", "theater");
 	    System.setProperty( "nodie", "theater" );
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );
-	    System.setProperty( "output", STDOUT_CLASS );
-	    
+	    System.setProperty("output", STDOUT_CLASS);
+//	    ServiceFactory.isApplet();
+
         RunTime.receivedUniversalActor();
         theater = ServiceFactory.getTheater();
-        
-        debugPrint( "Theater listening on: " + theater.getLocation() ); 
+        debugPrint("Theater listening on: " + theater.getLocation());
+
+		synchronized (MainActivity.theaterSyncToken) {
+			AndroidTheaterService.theaterCreated = true;
+			MainActivity.theaterSyncToken.notifyAll();
+		}
 	}
 	
 	protected void debugPrint( String str ) {

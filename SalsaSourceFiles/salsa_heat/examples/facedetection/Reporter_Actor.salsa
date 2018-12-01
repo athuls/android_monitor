@@ -1,0 +1,29 @@
+module examples.facedetection;
+
+
+/* This behavior simply prints out messages sent to it to the
+   standardOutput actor.
+   
+   Written by Reza Shiftehfar
+   r.shiftefar@gmail.com
+*/
+
+behavior Reporter_Actor implements ActorService{
+  static final long serialVersionUID = 2L;
+
+  public Reporter_Actor(){
+       standardOutput<-println( "   Reporter:: REPORTER Actor is RUNNING... " );   
+  }
+
+
+   void report( String msg ) {
+
+       standardOutput<-println( "   Reporter:: "+ msg );
+
+   }
+
+   void dummy() {}
+   void dummy( String msg ) {
+       standardOutput<-println( "   Reporter:: "+ msg );
+   }
+}

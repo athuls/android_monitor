@@ -57,7 +57,7 @@ echo ""
 
 echo "Generating jar file..."
 cd $DIST
-jar cf ../salsa$VERSION.jar `find wwc` `find salsa` `find salsac` `find gc` `find androidsalsa`
+jar cf ../salsa$VERSION.jar `find wwc` `find salsa` `find salsac` `find gc` `find androidsalsa` `find examples`
 cd ..
 
 echo ""

@@ -1,0 +1,461 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions
+END
+BreakStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/BreakStatement.java
+END
+MessageArguments.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MessageArguments.java
+END
+TokenDeclarationStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/TokenDeclarationStatement.java
+END
+Block.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Block.java
+END
+Name.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Name.java
+END
+ArrayInitializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ArrayInitializer.java
+END
+MessageStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MessageStatement.java
+END
+Operator.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Operator.java
+END
+StateVariableAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/StateVariableAttributes.java
+END
+ConstructorDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ConstructorDeclaration.java
+END
+NestedBehaviorAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/NestedBehaviorAttributes.java
+END
+BehaviorDeclarationAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/BehaviorDeclarationAttributes.java
+END
+BindDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/BindDeclaration.java
+END
+LabeledStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/LabeledStatement.java
+END
+SynchronizedStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/SynchronizedStatement.java
+END
+ForInit.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ForInit.java
+END
+FormalParameters.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/FormalParameters.java
+END
+MethodAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MethodAttributes.java
+END
+Expression.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Expression.java
+END
+AllocationExpression.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/AllocationExpression.java
+END
+ResultType.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ResultType.java
+END
+BehaviorBody.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/563/software/salsa/salsac/definitions/BehaviorBody.java
+END
+LocalVariableDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/LocalVariableDeclaration.java
+END
+ForCondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ForCondition.java
+END
+Value.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Value.java
+END
+ConstructorAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ConstructorAttributes.java
+END
+ArrayDimsAndInits.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ArrayDimsAndInits.java
+END
+Literal.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Literal.java
+END
+MessageSend.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MessageSend.java
+END
+ThrowStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ThrowStatement.java
+END
+BehaviorDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/BehaviorDeclaration.java
+END
+BooleanLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/BooleanLiteral.java
+END
+CharacterLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/CharacterLiteral.java
+END
+FloatingPointLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/FloatingPointLiteral.java
+END
+Exceptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Exceptions.java
+END
+ReturnStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ReturnStatement.java
+END
+WhileStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/WhileStatement.java
+END
+Variable.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Variable.java
+END
+SwitchStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/SwitchStatement.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Type.java
+END
+MethodDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MethodDeclaration.java
+END
+TryStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/TryStatement.java
+END
+IntegerLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/IntegerLiteral.java
+END
+AssignmentOperator.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/AssignmentOperator.java
+END
+NestedBehaviorDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/NestedBehaviorDeclaration.java
+END
+NamedTokenStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/NamedTokenStatement.java
+END
+ModuleDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ModuleDeclaration.java
+END
+StateVariableDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/StateVariableDeclaration.java
+END
+NullLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/NullLiteral.java
+END
+ForIncrement.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ForIncrement.java
+END
+ForStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ForStatement.java
+END
+DoStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/DoStatement.java
+END
+JoinBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/JoinBlock.java
+END
+EmptyStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/EmptyStatement.java
+END
+Initializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Initializer.java
+END
+PrimitiveType.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/PrimitiveType.java
+END
+InterfaceDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/InterfaceDeclaration.java
+END
+SwitchLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/SwitchLabel.java
+END
+StringLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/StringLiteral.java
+END
+VariableDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/VariableDeclaration.java
+END
+InterfaceBody.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/InterfaceBody.java
+END
+Arguments.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Arguments.java
+END
+ExplicitConstructorInvocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ExplicitConstructorInvocation.java
+END
+PrimarySuffix.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/PrimarySuffix.java
+END
+IfStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/IfStatement.java
+END
+Prefix.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Prefix.java
+END
+Statement.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Statement.java
+END
+ContinueStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ContinueStatement.java
+END
+CompilationUnit.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/CompilationUnit.java
+END
+StatementExpression.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/StatementExpression.java
+END
+MethodLookahead.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MethodLookahead.java
+END
+MessageProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/MessageProperty.java
+END
+ContinuationStatement.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ContinuationStatement.java
+END
+TokenLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/TokenLiteral.java
+END
+ImportDeclaration.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/ImportDeclaration.java
+END
+Suffix.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/salsac/definitions/Suffix.java
+END

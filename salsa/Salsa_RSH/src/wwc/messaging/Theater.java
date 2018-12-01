@@ -175,9 +175,8 @@ public class Theater implements TheaterService {
                         else {     	
                                 try {
                                         hostName = InetAddress.getLocalHost().getHostAddress();
-					System.err.println("Atul " + "host name could be resolved in getHost:" + hostName); 
                                 } catch (UnknownHostException e) {
-					System.err.println("Atul " + "host name could not be resolved in getHost:" + hostName); 
+					System.err.println("[Custom Debug Error] " + "host name could not be resolved in getHost:" + hostName); 
                                         hostName = "localhost";
                                 }
                         }

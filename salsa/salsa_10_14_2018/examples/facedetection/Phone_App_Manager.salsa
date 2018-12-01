@@ -1,0 +1,154 @@
+module examples.facedetection;
+
+/* Phone_App_Manager for Experiment 22 SIMILAR TO 20
+ * This is the app running on the phone.
+ * For this experiment, the goal is to calculate the number of faces in a photo using:
+ *     - a fixed number of worker actors but processing Large number of photos in parallel --> Same code as Experiment 7
+ *     - But also have an Elasticity Manager that handles profiling, migration/creation
+ * 
+ * Written by Reza Shiftehfar
+ */
+
+import  java.util.ArrayList;
+
+behavior Phone_App_Manager {
+  static final long serialVersionUID = 1L;
+
+  String name_server;    //the uan address of the name server     e.g. uan://192.168.1.138:3030/
+  String phone_theater;  //the rmsp address of the current phone_theater (local as it is where the current code is running)
+  String remote_theater; //the rmsp address of the remote theater where Nqueens_solver will be created/offloaded for remote execution at e.g. rmsp://192.168.1.138:4040/
+  String[] image_names;   //The name of the image files to be processed (note that images must be accessible in the local directory for the app to work)
+  boolean isReporting;   //specifies whether to report the details to output or not
+  String report_theater; //the rmsp address of the reporting theater e.g. rmsp://192.168.1.138:4040/
+  
+  String  status;        //holds the status of phone_app_manager 
+  Reporter_Actor reporter_actor;
+
+  private int no_local_workers;
+  private int no_remote_workers;
+  private long startTime, finalTime, total_run_time;
+
+  private ArrayList face_detector_workers = new ArrayList();
+  private ArrayList                images = new ArrayList();
+  private int finished_face_detector_workers;  //keeps the number of finished Face_Detector workers
+  private Exp_Starter exp_starter = null;
+  // private Elasticity_Manager elasticity_manager = null;
+
+  public Phone_App_Manager(){
+    total_run_time    = -1;
+    finalTime         = -1;
+    startTime         = -1;  
+    this.no_local_workers  = 0;
+    this.no_remote_workers = 0; 
+    finished_face_detector_workers = 0;   
+  }
+
+
+  void start_app(Exp_Starter exp_st, String args[]) {
+      this.setStatus("RUNNING");
+      exp_starter = exp_st;
+
+      standardOutput<-println("PHONE_APP: App started.") @
+      standardOutput<-println("PHONE_APP: Experiment 22 Ver. 3"); 
+
+      int argc = args.length;
+      if (argc<8) { 
+          standardOutput<-println("PHONE_APP: Correct call requires following arguments: [name_server] [phone_theater] [remote_theater] "+
+                                  " [no_local_actors] [no_remote_actors] [image_names] [report_on/report_off] [report_theater]"); 
+          this.setStatus("FAILED: Wrong number of initial calling arguments.");
+      }       
+
+      name_server = args[0];
+      phone_theater =  args[1];  // this is the local location where this current phone_app_manager actor is started.
+      remote_theater = args[2];  //note that in case of local execution, this has to be the same as args[1] (the current location of this actor)   
+      no_local_workers  = Integer.parseInt(args[3]);
+      no_remote_workers = Integer.parseInt(args[4]);
+
+      image_names = new String[argc-7];
+      for(int i=0; i<image_names.length; i++){
+         image_names[i] = args[5+i];
+         images.add(args[5+i]);
+      }
+
+      if (args[argc-2].equalsIgnoreCase("report_on")) { isReporting = true;}
+      else { isReporting = false;}
+       
+      report_theater = args[argc-1]; 
+      reporter_actor = new Reporter_Actor() at ( new UAN( name_server+"reporter"), new UAL( report_theater+"reporter") );
+
+      standardOutput<-println("PHONE_APP: Par. Face Det. Comp. started...");
+      this.report("Starting Parallel Face Detection Experiment");
+      startTime= System.currentTimeMillis(); 
+
+      //start an elasticity_manager service actor on the PHONE: 
+      // elasticity_manager = new Elasticity_Manager(reporter_actor, isReporting, name_server) at ( new UAN(name_server+"elasticityManager") );
+
+      // token res = elasticity_manager<-start_manager();
+      // self<-dummy():waitfor(res);
+
+      //create all local actors:
+      for(int i=0; i< no_local_workers; i++){
+          // Face_Detector fd = new Face_Detector(elasticity_manager, reporter_actor, isReporting) at ( new UAN(name_server+"LocalFaceDetector"+i) );  
+          Face_Detector fd = new Face_Detector(reporter_actor, isReporting) at ( new UAN(name_server+"LocalFaceDetector"+i) );  
+          face_detector_workers.add(fd);
+      }
+      //create all remote actors:
+      for(int i=0; i< no_remote_workers; i++){
+          // Face_Detector fd = new Face_Detector(elasticity_manager, reporter_actor, isReporting) at ( new UAN(name_server+"RemoteFaceDetector"+i), new UAL(remote_theater+"RemoteFaceDetector"+i) );  
+          Face_Detector fd = new Face_Detector(reporter_actor, isReporting) at ( new UAN(name_server+"RemoteFaceDetector"+i), new UAL(remote_theater+"RemoteFaceDetector"+i) );  
+          face_detector_workers.add(fd);
+      }
+
+      //Ask all face detectors to start:
+      for(int i=0; i<face_detector_workers.size(); i++){
+          face_detector_workers.get(i)<-start_up(self);
+      }
+
+  }  //end of start_app
+
+
+  //retrieves an image and send it to the requesing worker:
+  String get_image(){
+     if (images.size()>0){
+        return (String) images.remove(0);
+     } else{
+        finished_face_detector_workers++;
+        if (finished_face_detector_workers==face_detector_workers.size()){
+           self<-wrap_up();
+        }
+        return null;
+     }
+
+  }
+
+  //wrap_up() is called when all images are processed:
+  void wrap_up(){
+      this.endTimer();
+      this.setStatus("SUCCESS");
+      this.report("PHONE_APP: Phone App. Manager Finished.");
+      standardOutput<-println("PHONE_APP: Phone App. Manager Finished."); 
+
+      //Report (runtime,status) to exp_started:
+      // elasticity_manager<-stop_manager()@
+      exp_starter<-wrap_up(total_run_time, status);   
+  }
+
+
+
+  void report(String msg){
+    if (isReporting)
+      reporter_actor <- report( msg );
+  }
+
+
+  void setStatus(String m){  status = m; }
+  public String getStatus(){ return status; }
+
+  void endTimer(){
+     finalTime = System.currentTimeMillis();
+     total_run_time = finalTime - startTime; 
+  }
+
+  public void dummy(){}
+  public void dummy_collectToken(Object[] res){ }
+}

@@ -3,10 +3,16 @@ package com.example.androidtheater5;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.StrictMode;
+import android.provider.Settings;
 import android.util.Log;
+import android.view.WindowManager.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
@@ -15,26 +21,37 @@ import androidsalsa.resources.AndroidProxy;
 //import demo1.Nqueens2;
 //import demo1.Fibonacci;
 import demo_test.Trap;
-
+import examples.Heat.DistributedHeat;
+import examples.exsort.Exp_Starter;
+import examples.ping.Ping;
+import examples.nqueens.Nqueens;
+import examples.testapp.TestApp;
+import examples.numbers.Numbers;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.*;
+import java.util.Date;
 import java.util.HashMap;
 import android.os.Handler;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
+
 
 import android.content.res.AssetManager;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
+import java.util.Calendar;
 
 public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
+	private long time_init = 0;
 
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -49,7 +66,7 @@ public class MainActivity extends Activity{
 	public boolean isLight = false;
 	public boolean isBreak = false;
 	public String[] light = {"7","7", "7"};
-	public String[] heavy = {"13","13", "10"};
+	public String[] heavy = {"13","13","10"};
 
 	public TensorFlowInferenceInterface nqueenPredict;
 	public double[] feature = new double[25];
@@ -58,80 +75,108 @@ public class MainActivity extends Activity{
 	public long predictCount = 0;
 	public long possiblePred = 0;
 
+	private Handler nqueensHandler;
+	private Handler batteryHandler;
+	private Handler screenHandler;
 
+	public static Object theaterSyncToken = new Object();
+	private Object oneAppSyncToken = new Object();
 
-//	private Runnable runnableBattery = new Runnable(){
-//		@Override
-//		public void run() {
-//			synchronized (LOCK) {
-//				try {
-//					Thread t = new Thread(runnableSampleBattery);
-//					t.start();
-//					LOCK.wait();
-//					handler.postDelayed(runnableBattery, 1000);
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//
-//
-//		}
-//	};
+	private String mobileIpAddress = "10.194.109.237";
 
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
 			SampleBattery();
-//			count = (count+1)%1800;
-//			if(count == 0) {
-//				isLight = !isLight;
-//				isBreak = true;
-//			}
-//			if(count == 30 && isBreak){
-//				isBreak = false;
-//				count = 0;
-//			}
-			handler.postDelayed(runnableSampleBattery, 1000);
+			batteryHandler.postDelayed(runnableSampleBattery, 1000);
 		}
 	};
-
-
-//	private Runnable runnableNqueens = new Runnable(){
-//		@Override
-//		public void run() {
-//			Nqueens.main(heavy);
-//			handler.postDelayed(runnableNqueens, 750);
-//		}
-//
-//	};
-//
-//	private Runnable runnableFib = new Runnable(){
-//		@Override
-//		public void run() {
-//			String[] args = {"10"};
-//			Fibonacci.main(args);
-//			handler.postDelayed(runnableFib, 1000);
-//		}
-//
-//	};
-
-	private Runnable runnableTrap = new Runnable(){
+	
+	private Runnable runnableSampleScreen = new Runnable(){
 		@Override
 		public void run() {
-			// Trap program
-			String[] args = {"0", "1", "1024", "2", "10.195.15.219", "localhost:4040"};
-			Trap.main(args);
+			SampleScreen();
+			screenHandler.postDelayed(runnableSampleScreen, 2000);
+		}
+	};
 
-			handler.postDelayed(runnableTrap, 2500);
+
+
+	private Runnable nqueensWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			nqueensHandler = new Handler();
+			nqueensHandler.post(runnableNqueens);
+			Looper.loop();
+		}
+	};
+
+	private Runnable batteryWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			batteryHandler = new Handler();
+			batteryHandler.post(runnableSampleBattery);
+			Looper.loop();
+		}
+	};
+
+	private Runnable screenWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			screenHandler = new Handler();
+			screenHandler.post(runnableSampleScreen);
+			Looper.loop();
+		}
+	};
+
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+				System.setProperty("nogc", "theater");
+				Numbers.main(heavy);
+			}
+			time_init += 2000;
+			if(time_init >= 600000){
+				time_init = 0;
+
+					throw new RuntimeException();
+
+
+
+			}
+			nqueensHandler.postDelayed(runnableNqueens, 2000);
 		}
 
 	};
 
+	private void waitUntilTheaterStarted() {
+		synchronized (MainActivity.theaterSyncToken) {
+			try {
+				if(!AndroidTheaterService.theaterCreated) {
+					MainActivity.theaterSyncToken.wait();
+				}
+			} catch (InterruptedException e) {
+				System.err.println("Something went wrong waiting for theater to start "  + e);
+			}
+
+		}
+
+	}
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		debugPrint( "onCreate() is called" );
+		debugPrint("onCreate() is called");
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
@@ -139,14 +184,29 @@ public class MainActivity extends Activity{
 			scrollView = new ScrollView( this );
 			textView = new TextView( this );
 			scrollView.addView( textView );
-			AndroidProxy.setTextViewContext( (Activity)this, textView );
+			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
+		MyExceptionHandler exp = new MyExceptionHandler(this, this.getApplicationContext());
+		Thread.setDefaultUncaughtExceptionHandler(exp);
+
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
-		startService( new Intent(MainActivity.this, AndroidTheaterService.class) );
-		handler.post(runnableTrap);
-		handler.post(runnableSampleBattery);
+		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
+		System.setProperty( "nodie", "theater" );
+		System.setProperty("nogc", "theater");
+		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
+		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
+
+		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+
+		Thread qn =  new Thread(nqueensWorker);
+		qn.setUncaughtExceptionHandler(exp);
+		qn.start();
+
+		new Thread(batteryWorker).start();
+		new Thread(screenWorker).start();
+
 
 	}
 
@@ -155,8 +215,7 @@ public class MainActivity extends Activity{
 		// The activity is about to become visible.
 		super.onStart();
 		AssetManager assetMgr = this.getAssets();
-		debugPrint( "onStart() is called" );
-
+		debugPrint("onStart() is called");
 	}
 
 	@Override
@@ -177,7 +236,6 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onStop() {
 		super.onStop();
-		appendLog("Number of predictions is " + count);
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint( "onStop() is called" );
 	}
@@ -186,7 +244,6 @@ public class MainActivity extends Activity{
 	protected void onDestroy() {
 		// The activity is about to be destroyed.
 		super.onDestroy();
-		appendLog("Number of predictions is " + count);
 		debugPrint("onDestroy() is called");
 	}
 	
@@ -195,23 +252,60 @@ public class MainActivity extends Activity{
 		showTextOnUI( str + "\n" );
 	}
 
+	protected void SampleScreen() {
+		// Get the context
+		ContentResolver cResolver = this.getContentResolver();
+//Window object, that will store a reference to the current window
+		Window window = this.getWindow();
+		int brightness;
+		try{
+               // To handle the auto
+                Settings.System.putInt(cResolver,
+                Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+ //Get the current system brightness
+                brightness = System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+            } catch (SettingNotFoundException e) {
+                //Throw an error case it couldn't be retrieved
+                Log.e("Error", "Cannot access system brightness");
+                e.printStackTrace();
+            }
+          brightness = 3;
+          System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
+            //Get the current window attributes
+          LayoutParams layoutpars = window.getAttributes();
+            //Set the brightness of this window
+          layoutpars.screenBrightness = brightness / (float)255;
+            //Apply attribute changes to this window
+          window.setAttributes(layoutpars);
+          Thread.sleep(1000);
+          brightness = 255;
+          System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
+            //Get the current window attributes
+          LayoutParams layoutpars = window.getAttributes();
+            //Set the brightness of this window
+          layoutpars.screenBrightness = brightness / (float)255;
+            //Apply attribute changes to this window
+          window.setAttributes(layoutpars);
+
+
+		
+	}
+
 	protected void SampleBattery() {
 		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 		Intent batteryStatus = this.registerReceiver(null, iFilter);
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
-		HashMap<String, Integer> hashList = UniversalActor.getActiveActors("main activity");
-//		debugPrint(hashList.toString());
-		Integer hashListSize = hashList.size();
-//		debugPrint(hashListSize.toString());
+		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 
+		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
-			appendLog("Battery level is " + batteryPct + " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
 			feature[0] += 1;
 		}
 		else {
-			appendLog("Battery level is " + batteryPct + " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////

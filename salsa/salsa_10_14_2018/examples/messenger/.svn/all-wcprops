@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/wcl/!svn/ver/48/software/salsa/examples/messenger
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/examples/messenger/readme.txt
+END
+Sender.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/examples/messenger/Sender.salsa
+END
+Letter.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/examples/messenger/Letter.salsa
+END
+Recipient.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/563/software/salsa/examples/messenger/Recipient.java
+END
+Recipient.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/wcl/!svn/ver/48/software/salsa/examples/messenger/Recipient.salsa
+END
+Letter.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/563/software/salsa/examples/messenger/Letter.java
+END
+Sender.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/563/software/salsa/examples/messenger/Sender.java
+END

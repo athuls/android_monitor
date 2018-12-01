@@ -1,0 +1,257 @@
+module examples.facedetection;
+
+import  java.util.Hashtable;
+import  java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+
+behavior Elasticity_Manager implements ActorService{
+  static final long serialVersionUID = 4L;
+  private final int DEFAULT_MANAGIN_INTERVAL = 1000; //ms
+  private final int DEFAULT_PROFILING_LENGTH = 50;
+
+  private Hashtable uan_ualList;
+  private Hashtable uan_ual_execTimes;
+  private Hashtable class_uans;
+  private Hashtable uan_info;
+  private Hashtable class_bestExecTime;  
+  private Hashtable class_bestExecLocation;  
+  private Reporter_Actor reporter_actor;
+  private boolean  isReporting;
+  private Elasticity_Manager_Timer timer;
+
+  public Elasticity_Manager(Reporter_Actor rep_actor, boolean is_reporting, String name_server) {   
+     uan_ualList = new Hashtable();
+     uan_ual_execTimes = new Hashtable();
+     class_uans = new Hashtable();
+     uan_info = new Hashtable();
+     class_bestExecTime = new Hashtable();
+     class_bestExecLocation = new Hashtable();
+
+     reporter_actor = (Reporter_Actor) rep_actor;
+     isReporting = is_reporting;
+
+     timer = new Elasticity_Manager_Timer( this.getUAN().toString() ) at ( new UAN(name_server+"elasticityManagerTimer") ); 
+
+  }
+
+
+
+  //profile a completed action by a worker actor:
+  void profile_action(String uan, String ual, String worker_class, String action, Long time) {
+     String location = extract_pure_location(ual);
+     String pure_worker_class = extract_pure_class(worker_class);
+
+//     standardOutput<-println( "Elasticity_Manager: Profiling: <"+action+"> "+time  );
+//     report("Elasticity_Manager: Profiled "+uan+" "+ual+"="+location+" "+worker_class+"="+pure_worker_class+" <"+action+"> method finished in: "+time +" ms" );
+
+
+     //check/add the worker actor class to the class_uans table:
+     if (class_uans.containsKey(pure_worker_class)){  //if the worker_class has been seen before:
+         ArrayList tempList = (ArrayList) class_uans.get(pure_worker_class);
+         //add the worker actor if it is not already there:
+         if (!tempList.contains(uan)){ tempList.add(uan); }
+     } else{ //worker_class has not been seen before:
+         ArrayList tempList = new ArrayList();
+         tempList.add(uan);
+         class_uans.put( pure_worker_class, tempList);
+     }
+
+
+     //check/add the worker actor location (UAL) to the uan_ualList table:
+     if (uan_ualList.containsKey(uan)){  //if the UAN has been seen before:
+         ArrayList tempList = (ArrayList) uan_ualList.get(uan);
+         //in order to always put the latest location at the end of the list:
+         if (tempList.contains(location)){ tempList.remove(location); }
+         tempList.add(location);
+     } else{ //UAN has not been seen before:
+         ArrayList tempList = new ArrayList();
+         tempList.add(location);
+         uan_ualList.put( uan, tempList);
+     }
+
+
+     //check/add the time for the (uan-location) key to to the uan_ual_execTimes table:
+     String key = uan+"-"+location;
+     Integer[] values;
+     if (uan_ual_execTimes.containsKey(key)){  //if the key has been seen before:
+         values = (Integer[]) uan_ual_execTimes.get(key);
+     } else{ //UAN has not been seen before:
+         values = new Integer[3];
+         for (int i=0; i<3; i++)
+            values[i] = new Integer(0);
+     }
+     //NOTE THAT WE ARE CONVERTING LONG TIME TO INT TIME: (To be fixed later)
+     values[0] += new Integer(time.intValue()); //add the current time to the previous sum of times
+     values[1] += 1;    //add 1 to the total number of previous recorded times
+     values[2] = new Integer(values[0] / values[1]);  //the new average (note that times are in ms)     
+     uan_ual_execTimes.put( key, values );
+     int curr_avg_exec_time = values[2];
+
+
+     //check/add the general info for the (uan) key to to the uan_info table:
+     uan_info.put( uan, pure_worker_class );
+
+
+     //check/add the general info for the pure_worker_class as key to to the class_info table:
+     String k_class = pure_worker_class;
+     if (class_bestExecTime.containsKey(k_class)){  //if the key exists:
+         Integer best_avg_exec_time = (Integer) class_bestExecTime.get(k_class);
+         if ( curr_avg_exec_time < best_avg_exec_time ) {
+            class_bestExecTime.put( k_class, curr_avg_exec_time);
+            class_bestExecLocation.put( k_class, location);            
+         }
+     } else{ //key has not been seen before:
+         class_bestExecTime.put( k_class, curr_avg_exec_time);
+         class_bestExecLocation.put( k_class, location);            
+     }
+
+
+  }
+
+
+  //A very basic manager: it asks actor to migrate to the location where the class has best performance
+  public boolean manage(){
+
+
+
+//       report("        !!!!!!!!!!!!!!!!!!!!!! ACTOR MANAGER RUNNING !!!!!!!!!!!!!!!!");
+
+
+
+
+     String temp = "";
+
+     //go over all profiled actors:
+     Enumeration e = uan_ualList.keys();
+     while(e.hasMoreElements()) {
+        String actor_uan = (String) e.nextElement();        
+        ArrayList tempList = (ArrayList) uan_ualList.get(actor_uan);
+        String actor_location = (String) tempList.get( tempList.size()-1 );
+        String key = actor_uan+"-"+actor_location; 
+        Integer[] values = (Integer[]) uan_ual_execTimes.get(key);
+        int curr_execTime = values[2];
+
+        String actor_class    = (String) uan_info.get( actor_uan );
+        int bestExecTime_class = (Integer) class_bestExecTime.get( actor_class );
+        String bestExecLocation_class = (String) class_bestExecLocation.get( actor_class );
+
+        //if actor exec time is 5 times higher than its class average, we force it to migrate to best recorded location:
+        if ( (!actor_location.equalsIgnoreCase(bestExecLocation_class)) && (curr_execTime > 5*bestExecTime_class) ){
+             Face_Detector target_actor = (Face_Detector)Face_Detector.getReferenceByName(actor_uan);
+             //note that we still send multiple migrate messages to the actors as the actor might be in the process
+             // of migration or processing another message before getting our first migration request.
+             //however, requesting the same actor to migrate for multiple times has no effect but a small overhead for sending messages.
+             if ( !bestExecLocation_class.equalsIgnoreCase(extract_pure_location(target_actor.getUAL().toString())) ){
+                 target_actor<-migrate(bestExecLocation_class):priority;
+                 report("        !!!!!!!!!!!!!!!!!!!!!! Actors Managed ACTOR NEEDS TO MIGRATE "+actor_uan+" to "+bestExecLocation_class+"!!!!!!!!!!!!!!!!");
+             }
+        }
+
+//        temp += "   "+actor_uan;
+
+    }
+
+//            report("        !!!!!!!!!!!!!!!!!!!!!! Actors Managed:"+temp+"!!!!!!!!!!!!!!!!");
+
+
+     return true;
+  }
+
+ public boolean start_manager(){
+     timer<-start_triggering(DEFAULT_MANAGIN_INTERVAL);   
+
+     standardOutput<-println("Elasticity_Manager: RUNNING");
+     report("Elasticity_Manager is RUNNING: <"+this.getUAN().toString()+"> at "+this.getUAL().toString());
+
+     return true;
+ }
+
+ public void stop_manager(){
+    timer<-stop_triggering();    
+
+/* 
+    //Use these to print out the stored Data structures:
+
+    //print out the class_uans table:
+    Enumeration e = class_uans.keys();
+    while(e.hasMoreElements()) {
+        String c = (String) e.nextElement();
+        ArrayList tempList = (ArrayList) class_uans.get(c);
+        Enumeration e2 = Collections.enumeration( tempList );
+        String s = "";
+        while(e2.hasMoreElements())
+          s = s +" -> " + e2.nextElement();
+        
+        report("Elasticity_Manager class_uans table: <"+c+"> "+s);
+    }
+
+    //print out the uan_ualList table:
+    e = uan_ualList.keys();
+    while(e.hasMoreElements()) {
+        String c = (String) e.nextElement();
+        ArrayList tempList = (ArrayList) uan_ualList.get(c);
+        Enumeration e2 = Collections.enumeration( tempList );
+        String s = "";
+        while(e2.hasMoreElements())
+          s = s +" -> " + e2.nextElement();
+        
+        report("Elasticity_Manager uan_ualList table: <"+c+"> "+s);
+    }
+
+    //print out the uan_ual_execTimes table:
+    e = uan_ual_execTimes.keys();
+    while(e.hasMoreElements()) {
+        String c = (String) e.nextElement();         
+        Integer[] values = (Integer[]) uan_ual_execTimes.get(c);     
+        report("Elasticity_Manager uan_ual_execTimes table: <"+c+"> total_exec_time:"+values[0]+" no.:"+values[1]+" avg_exec_time:"+values[2]+" ms.");
+    }
+
+    //print out the class_bestExecTime  class_bestExecLocation table:
+    e = class_bestExecTime.keys();
+    while(e.hasMoreElements()) {
+        String c = (String) e.nextElement();         
+        Integer value   = (Integer)class_bestExecTime.get(c);     
+        String location = (String) class_bestExecLocation.get(c);     
+        report("Elasticity_Manager class_bestExecTime table: <"+c+"> bext_exec_time:"+value+" ms at "+location);
+    }
+*/
+
+ }
+
+  void report(String msg){
+    if (isReporting)
+      reporter_actor <- report( msg );
+  }  
+
+  private String extract_pure_location(String ual){
+      String result = "";
+      String s = ual.trim();
+       int i = s.indexOf('/');
+       if (i<0)
+         return new String("ERROR in extracting Location");
+       i = s.indexOf('/',i+1);
+       if (i<0)
+         return new String("ERROR in extracting Location");
+       i = s.indexOf('/',i+1);
+       if (i<0)
+         return new String("ERROR in extracting Location");
+          return s.substring(0, i+1);
+  }
+
+  private String extract_pure_class(String c){
+        String result = "";
+        String s = c.trim();
+         int begining = s.indexOf("class");
+       if (begining<0)
+         return new String("ERROR in extracting Location");
+       s = s.substring(begining+6);
+       int last_dot = s.lastIndexOf('.');
+       if (last_dot<0)
+         return s;
+       else
+         return s.substring(last_dot+1);
+  }
+
+
+}

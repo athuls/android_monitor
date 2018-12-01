@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/wcl/!svn/ver/143/software/salsa/wwc/naming
+END
+PUTRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/PUTRequest.java
+END
+WWCNamingServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wcl/!svn/ver/568/software/salsa/wwc/naming/WWCNamingServer.java
+END
+LocationRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/LocationRequest.java
+END
+UANProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/UANProtocol.java
+END
+WWCNamingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wcl/!svn/ver/563/software/salsa/wwc/naming/WWCNamingService.java
+END
+GETRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/GETRequest.java
+END
+DELRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/DELRequest.java
+END
+BadUANPRequestException.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wcl/!svn/ver/48/software/salsa/wwc/naming/BadUANPRequestException.java
+END

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidTheaterStudio.iml" filepath="$PROJECT_DIR$/AndroidTheaterStudio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/salsa_RSH_2/salsa_RSH_2.iml" filepath="$PROJECT_DIR$/salsa_RSH_2/salsa_RSH_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/salsa_heat/salsa_heat.iml" filepath="$PROJECT_DIR$/salsa_heat/salsa_heat.iml" />
     </modules>
   </component>
 </project>

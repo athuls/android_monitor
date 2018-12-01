@@ -1,0 +1,41 @@
+module examples.facedetection;
+
+/* Exp_Starter -- Experiment Starter
+ * This will start the Phone_App_Manager actor on the phone to start the experiment
+ * Written by Reza Shiftehfar
+ */
+
+behavior Exp_Starter {
+
+  String name_server;      //the uan address of the name server                                     e.g. uan://192.168.1.138:3030/
+  String phone_theater;    //the rmsp address of the phone theater where app needs to be started at e.g. rmsp://192.168.1.138:4040/
+  private Phone_App_Manager phone_app_manager = null; 
+
+  void act(String args[]){
+    int argc = args.length;
+    if (argc<2) {
+        standardOutput<-println(" Exp_Starter:: ERROR!!! You need to specify the [name_server] and [phone_theater] as the first two arguments"); 
+        return;
+    }
+    
+    name_server = args[0];
+    phone_theater = args[1];
+
+    standardOutput<-println(" Exp_Starter :: Creating Phone_App_Manager on "+phone_theater+" using nameserver: "+name_server);
+
+    phone_app_manager = new Phone_App_Manager() at ( new UAN(name_server+"phone_app_manager"), new UAL(phone_theater+"phone_app_manager") );   
+    
+    //Starting the phone_app:   
+    standardOutput<-println(" Exp_Starter:: Starting Phone_App_Manager on "+phone_theater+" using nameserver: "+name_server) @     
+    phone_app_manager <- start_app( self, args );
+
+  }
+
+  //Phone_app will call this method when it is finished:
+  void wrap_up(long total_runtime, String status){
+      standardOutput<-println(" Exp_Starter:: Total Phone_app runtime is: "+total_runtime)@
+      standardOutput<-println(" Exp_Starter:: Phone_App_Manager has finished with the resulf of: "+status);
+      phone_app_manager = null;
+  }
+
+}

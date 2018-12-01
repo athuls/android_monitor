@@ -1,0 +1,83 @@
+module examples.facedetection;
+
+import image_detection_RSH.Find_Faces_Android;
+import image_detection_RSH.Find_Faces_JVM;
+import image_detection_RSH.Gray8DetectHaarMultiScale;
+
+behavior Face_Detector{
+  static final long serialVersionUID = 3L;
+
+  private int no_detected_faces;
+  // private Elasticity_Manager elasticity_manager;   
+  private Reporter_Actor reporter_actor;
+  private boolean  isReporting;
+  private Phone_App_Manager phone_app_manager;
+
+  //NOTE:Every Actor needs to record its time and notify elasticity_manager whenever it finishes a certain requested action:
+
+  // public Face_Detector(Elasticity_Manager elast_man, Reporter_Actor rep_actor, boolean is_reporting) {   
+  public Face_Detector(Reporter_Actor rep_actor, boolean is_reporting) {   
+    phone_app_manager = null;
+    no_detected_faces = 0;
+    reporter_actor = (Reporter_Actor) rep_actor;
+    isReporting = is_reporting;
+
+    // elasticity_manager = (Elasticity_Manager) elast_man;
+  }
+
+  void start_up(Phone_App_Manager pam) {
+      phone_app_manager = pam;
+
+      phone_app_manager<-get_image()@
+      self<-process_image(token);
+
+	}
+
+  public void process_image(String image){
+      if ( image ==null ){
+          //no more images left to process
+      }else{
+         long start_time= System.currentTimeMillis(); 
+         //this.report(this.getUAN().toString()+" --> starting processing <"+image +">");
+
+         if (isDalvik()) {
+             Find_Faces_Android ff = new Find_Faces_Android();   
+             // ff.readImage(this.getClass().getResourceAsStream(image));
+             ff.readImage(Face_Detector.class.getResourceAsStream(image));
+             // no_detected_faces += ff.findFaces( 1, 40, this.getClass().getResourceAsStream("HCSB.txt"));                    
+             no_detected_faces += ff.findFaces( 1, 40, Face_Detector.class.getResourceAsStream("HCSB.txt"));                    
+         } else {
+             Find_Faces_JVM ff = new Find_Faces_JVM();
+             ff.readImage(this.getClass().getResourceAsStream(image));
+             no_detected_faces += ff.findFaces( 1, 40, this.getClass().getResourceAsStream("HCSB.txt"));
+         }
+
+         long final_time = System.currentTimeMillis();
+         long total_run_time = final_time - start_time; 
+         // this.notify_elasticity_manager("face_detection", total_run_time);
+         this.report(this.getUAN().toString()+" --> finished processing <"+image+"> in time: "+ total_run_time + 
+		" with number of faces detected being: " + no_detected_faces);
+
+         //Now, get the next image for processing:
+         phone_app_manager<-get_image()@
+         self<-process_image(token);
+      }
+  }
+
+  private boolean isDalvik(){
+    if (System.getProperty("java.vm.name").equalsIgnoreCase("Dalvik"))
+       return true;
+    else
+       return false;
+  }
+
+  // public void notify_elasticity_manager(String action, Long process_time){
+  //     elasticity_manager<-profile_action( this.getUAN().toString(), this.getUAL().toString(), this.getClass().toString(), action, process_time);    
+  // }
+
+  void report(String msg){
+    if (isReporting)
+      reporter_actor <- report( msg );
+  }
+
+}
