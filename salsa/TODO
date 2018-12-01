@@ -1,0 +1,112 @@
+1) Generalized additive model and regression trees
+2) Check thsi for more SALSA implementation figures: http://wcl.cs.rpi.edu/theses/pratikpatel-master.pdf
+3) Think about service interactions b/w actors
+
+Applications to use: Face detector, NQueens, Fibonacci, TrapWorker, HeatWorker, ExternalSort, addressbook, cell, chat, messenger, migration, multicast, numbers, ping, ticker, thread ring, Chameneos Redux, matrix multiply
+1) Compute intensive
+   - NQueens
+   - Face detector
+   - Trap
+2) Network intensive
+   - Heat2 OR
+   - Ping
+3) Memory/IO intensive
+   - Rotate (where is this?)
+   - Virus (where is this?)
+   - ExSort
+4) Compute and network
+   - Heat1 and Heat2
+5) Compute and memory 
+   - ExSort
+6) Service interactions
+
+Questions for Kirill:
+1) Power measurements are done for power drawn vs. battery percentage. How do we get those measurements because it can be a long video with instantaneous power readings
+
+Questions for Agha and Kirill:
+1) Is there a way, depending on sparsity, to determine if training is even requried. Like for fibonacci? 
+
+PENDING WORK
+Implementation:
+1) Need to split face detector into individual actors
+2) Graph for motivating energy fine grained. Show computation/communication energy expenditure. 
+3) Graph for system API calls for resource usage may be more expensive. 
+
+Content: 
+1) Section on data collection and sampling frequency 
+2) Explain how querying power would give you instantaneous power and should be attributed only to actors sampled at that moment. 
+3) Read for introduction: Understanding Human-Smartphone Concerns: A Study of Battery Life 
+4) Related work and motivation for using battery percentage: Power Estimation for Mobile Applications with Profile-Driven Battery Traces (http://delivery.acm.org/10.1145/2650000/2648697/p120-wang.pdf?ip=192.17.151.127&id=2648697&acc=ACTIVE%20SERVICE&key=AAE16B9BF97F192F%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1539411609_9bdfb0c24be1f1cfeea25186de552975)
+5) Why battery percentage: some phones may not have current sensor, and even if it is there, its not accurate. Also battery fuel gauge not available in many devices. Also the ones with the gauges aren't accurate either (https://source.android.com/devices/tech/power/device)
+   - The reason we have power models is because we cannot get absolute energy drain from battery, just relative drain in terms of percentage. That's why power models being built by Morley Mao, etc. 
+   - [VERY RELEVANT PAPER] https://users.aalto.fi/~siekkine/pub/surveypaper.pdf
+6) Page 70 in Reza's thesis on battery discharge and how its affected by battery age, temperature, etc. 
+7) Talk about pre-processing/data cleaning, where intervals without enough samples are discarded.
+8) Quantify whether 1% drop is actually accurate
+   If we eliminate top 20% and bottom 20% if accuracy of model changes drastically, then its due to battery behavior in the corners
+   - Map Andrdoid reported estimate to actual estimate (estimate in middle, and then extrapolate towards the end)
+   - Add absolute percentage into model 
+9) Map battery percentage to cumulative charge for estimate and compare with power meter
+   OR
+   Sample voltage manually after some percentage drop (multimeter), account for changing voltage	
+10) Like RECON, why not resources too? Because we don't know a mapping from f: A -> R where A is actors and R is resources. Even if we had that mapping, there can be multiple actors using the same resource and sharing it. If we just monitored resources and found mapping f(-1): R -> A, that may not be enough either. Because you could have multiple actors using the same resource. Or they could be the same resource being accessed in different states (high power/low power) by the same actor. 
+   - [Why not only component level monitoring for RECON?] RECON uses resource utilization because the way they define segments (it starts and ends based on the start/end of a component), they do not account for the time duration for which a component runs in their power model without resources. The resource utilization incorporates how long a component may have run. Further, they are interested in breaking down the components into their different resource usage phases because it is needed for energy debugging. From offloading perspective, that may not matter, we just need average of actors energy even with changing resource consumption in an execution. E.g. actor running at 20% screen vs. 80% screen would have average estimate of about ~50% with our approach. 
+   - The way we do component level monitoring, we don't need to track each component being scheduled in and out. And turns out our fixed sampling period accounts for a component running for a long duration of time. 
+   - [Why not only resource monitoring for us?] For RECON, the resource overhead was high if you wanted high accuracy with just resource usage. For us, introducing resource monitoring will add more dimensions to our energy model, may be a problem given small sample size. In this case you would need to know a mapping from resources to actors i.e. f:R->A (not possible in black box situations). If we sampled actors running too in each interval, we cannot go down to which actor used what resource unless its also an input to energy model (which is what we end up doing, and further show resource usage is not needed for acceptable accuracy. Resource level granularity in that case isn't needed). A resource can be used my multiple actors like GPS (so even if you had mapping from actors to resource used, it may be many-to-one mapping and you will overestimate energy is both the actors using GPS are running together). Also resource monitoring overhead can be high depending on frequency at which you need to do it based on execution pattern of running application.
+   - Measurement of modern mobile systems [16] has shown that “invisible” components such as the northbridge and southbridge can  account for as much as 50% of the system energy consumption. Therefore, Sesame takes the second group’s approach, which to model the system energy consumption without the models of each component, or integral modeling [17, 18]
+   - GPU is not modelled
+11) Intuition behind intervals with different actors working for energy estimation
+
+Graphs:
+1) Graph with battery and power consumption using power meter
+2) Table with applications and model accuracy
+3) Table with techniques and overhead
+4) Graph with increasing input size and energy estimation accuracy (lower load has lesser accuracy)
+4) Graph with increasing parallelism of workers and energy estimation accuracy (?)
+5) Based on estimate for a group of actors, run them to see if the estimate matches actual. Do this over time for larger and larger time intervals.
+5) Energy cost of uploading raw data to training server
+6) Time to convergence during training of different models
+
+6) Different sampling frequencies for sampling active actors? 
+7) Comparison against different techniques like MAUI?
+
+
+IMMEDIATE TODOS:
+1) Generate results for model accuracy table
+2) Add linear and gam to script
+2) Find a way to run logs on android without GC
+3) Generate logs from phone
+4) Create an app for sensing GPS and run logs
+5) Create an app for service interactions
+6) Compare against MAUI or other other technique 
+7) Fix migration issue with actors
+8) Get SOD and voltage curve. 
+
+Future fixes: 
+1) DNN needs to be sped up in model.py. It is too slow and results not available.
+2) 
+
+
+OSL group slides feedback: 
+1) Put costs and not energy in mJ, for graph of face detector 
+2) Add sharing of components as motivation for fine grained, offload whole app is bad and under-utilization of resources
+3) Message handler is the ideal granularity at which we should estimate energy, not actors
+4) Use mixed diverse workloads for evaluation, possibly including service interactions.
+
+TODO with pratik:
+1) Linear and GAM models with cross validation code
+2) NN accuracy
+3) [DONE] Normalization on validation data during cross validation/grid search needs to be fixed
+2) Translate models to run with Android app for overhead measurement
+3) Data analysis for explaining accuracy values we see in the data
+4) Timing information in model output shows the model generation time? 
+--
+1) Speed up DNNs with CPU acceleration
+2) Recon difference: component vs resource, monsoon power meter for each device (not in the wild which is future work for them), track components running with each component changing starting a new segment.
+3) Debug why DNN (with keras) is getting worse accuracy than linear model?
+4) Add comparative study of different ML models
+
+BUGS: 
+1) There is a difference in predicted values from pmml file and pickle file. This needs to be fixed
+2) The accuracy values for NN are not normalized on tensorflow (within python BatteryRateProfile code). Also not nested CV run for it. It was done manually 
+3) CPU overhead measurements have not included normalization of inputs. That needs to be done before running model on each input
