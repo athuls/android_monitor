@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging
+END
+RMSProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/RMSProtocol.java
+END
+WWCSystem.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/WWCSystem.salsa
+END
+RTheater.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/568/software/salsa/wwc/messaging/RTheater.java
+END
+WWCTransportService.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/WWCTransportService.java
+END
+OutgoingSocketHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/OutgoingSocketHandler.java
+END
+SecurityValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/SecurityValidation.java
+END
+WWCReceptionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/WWCReceptionService.java
+END
+WWCSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wcl/!svn/ver/48/software/salsa/wwc/messaging/WWCSystem.java
+END
+Theater.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wcl/!svn/ver/568/software/salsa/wwc/messaging/Theater.java
+END

@@ -114,8 +114,8 @@ class CVClassifierWrapper(object):
             print "\n\n CV Results: {0} {1}\n\n".format(np.mean(test_accs), np.std(test_accs))
             scaler = StandardScaler().fit(x)
             self.classifier.fit(scaler.transform(x),y)
-	    print self.classifier.predict(scaler.transform(x))
-	    return make_pipeline(scaler, self.classifier)
+            print self.classifier.predict(scaler.transform(x))
+            return make_pipeline(scaler, self.classifier)
 
         self.pipeline_param_dict()
         if inner_folds == 0 or outer_folds == 0:
@@ -131,6 +131,7 @@ class CVClassifierWrapper(object):
             scaler = StandardScaler().fit(x)
             print "Mean:\n", ','.join(map(str,scaler.mean_))
             print "Scale:\n", ','.join(map(str,scaler.scale_))
+	    print grid.best_estimator_
             return grid.best_estimator_
 
         for tr_index, ts_index in KFold(n_splits = outer_folds, shuffle=True).split(x,y):
@@ -389,6 +390,8 @@ def run(args, optional_args):
     x_test = None
     if optional_args['test_size']:
         test_size = float(optional_args['test_size'])
+        
+
         x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size = test_size,
                                                                         random_state=42)
 
@@ -421,12 +424,12 @@ def run(args, optional_args):
         print "Test score: "+str(test_score)
 
     if optional_args['output_file']:
-	if model.steps[1][1].__class__.__name__ in ['KerasClassifier', 'KerasRegressor']:
-	    json_string = model.steps[1][1].model.to_json()
+        if model.steps[1][1].__class__.__name__ in ['KerasClassifier', 'KerasRegressor']:
+            json_string = model.steps[1][1].model.to_json()
             f = open(optional_args['output_file']+'.json', 'w')
             f.write(json_string)
             f.close()
-	    model.steps[1][1].model.save(optional_args['output_file']+'.h5')
+            model.steps[1][1].model.save(optional_args['output_file']+'.h5')
         else:
             f = open(optional_args['output_file'], 'w')
 	    print model.steps[-1][-1]
@@ -474,6 +477,7 @@ def verify_model(optional_args, args, Xtest, Ytest):
         with open(optional_args['output_file'], 'rb') as file:
             model = cpkl.load(file) 
     
+    print type(Xtest)
     scaler_obj = StandardScaler().fit(Xtest)
     normalized_xtest = scaler_obj.transform(Xtest)
     Ypredict = model.predict(normalized_xtest)

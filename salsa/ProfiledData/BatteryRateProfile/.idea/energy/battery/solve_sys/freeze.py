@@ -4,7 +4,6 @@ import tensorflow as tf
 
 # The original freeze_graph function
 # from tensorflow.python.tools.freeze_graph import freeze_graph
-dir(tf.contrib)
 
 dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -61,7 +60,7 @@ def freeze_graph(model_dir, output_node_names):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_dir", type=str, default="model_folder", help="Model folder to export")
+    parser.add_argument("--model_dir", type=str, default="model_foldr", help="Model folder to export")
     parser.add_argument("--output_node_names", type=str, default="dnn/logits/BiasAdd", help="The name of the output nodes, comma separated.")
     args = parser.parse_args()
 

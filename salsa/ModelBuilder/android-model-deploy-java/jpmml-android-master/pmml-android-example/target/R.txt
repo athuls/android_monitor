@@ -1,3 +1,0 @@
-int id loadButton 0x7f040000
-int layout main 0x7f020000
-int string label 0x7f030000

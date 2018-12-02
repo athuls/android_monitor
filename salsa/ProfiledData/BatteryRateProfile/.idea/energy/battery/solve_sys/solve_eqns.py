@@ -5,7 +5,7 @@ import filecmp
 from scipy.stats.stats import pearsonr
 import matplotlib.pyplot as plt
 import numpy as np
-import random
+
 import datetime
 
 dir = os.path.dirname(__file__)
@@ -23,13 +23,12 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_nqueens.txt'
-g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="nqueens_train_f.txt"
-g_test_out_file="nqueens_test_f.txt"
+g_train_file_name='log_nqueens_ping.txt'
+g_actor_list_name='examples.nqueens.Nqueens,examples.ping.Ping'
+g_train_out_file="nqueens_ping_train_f.txt"
+g_test_out_file="nqueens_ping_test_f.txt"
 LEN = 24
 g_time_format = "%a %b %d %H:%M:%S PDT %Y"
-# g_time_format = "%b %d,%Y %H:%M:%S"
 
 def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
     sys_eqns_lhs = {}
@@ -73,7 +72,7 @@ def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
 def getTrainingTestingSeperateData(actor_names, eqns, eqns_test):
     return 0
 
-def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
+def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.20):
     X_vals = {}
     for actor_name in actor_names:
         current_eqn = sys_eqns_lhs[actor_name]
@@ -99,49 +98,12 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
     test_ind = int(len(sys_eqns_rhs) * (1 - test_prop))
     X_training = {}
     X_testing = {}
-
-    ############ Shuffle so that test sets generated each time are different ########
-    # test_data_count = int(len(sys_eqns_rhs) * test_prop)
-    # test_indices = random.sample(range(0, len(sys_eqns_rhs)), test_data_count)
-    # train_indices = []
-    # for i in range(0, len(sys_eqns_rhs)):
-    #     if(not i in test_indices):
-    #         train_indices.append(i)
-    # test_index = 0
-    # train_index = 0
-    # Y_testing = []
-    # Y_training = []
-    # Non-shuffle
     for key in X_vals:
-    # Non-shuffle
-    #     key_test = np.zeros((len(test_indices), LEN))
-    #     test_count = 0
-    #     for test_idx in test_indices:
-    #         key_test[test_count] = X_vals[key][test_idx]
-    #         test_count += 1
-    #     X_testing[key] = key_test
-    #
-    #     key_train = np.zeros((len(train_indices), LEN))
-    #     train_count = 0
-    #     for train_idx in train_indices:
-    #         key_train[train_count] = X_vals[key][train_idx]
-    #         train_count += 1
-    #     X_training[key] = key_train
-    # Non-shuffle
         X_training[key] = X_vals[key][0:test_ind]
         X_testing[key] = X_vals[key][test_ind:]
-    # Non-shuffle
 
-
-    # for test_idx in test_indices:
-    #     Y_testing.append(Y_vals[test_idx])
-    # for train_idx in train_indices:
-    #     Y_training.append(Y_vals[train_idx])
-    # Non-shuffle
     Y_training = Y_vals[0:test_ind]
     Y_testing = Y_vals[test_ind:]
-    # Non-shuffle
-    ##################################
 
     # Capture training data
     # First add the header row for training dataset
@@ -221,7 +183,7 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
     return (X_training, Y_training), (X_testing, Y_testing)
 
 
-def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.1):
+def calc_eqns(seperate_test=False, filename_train="", filename_test="", test_prop=0.20):
 
     if not seperate_test:
         dir = os.path.dirname(__file__)
@@ -279,7 +241,7 @@ def nn(training, testing):
 
     feature_columns = []
     for actor in testing_X:
-        feature_columns.append(tf.feature_column.numeric_column(key=actor, shape=( len(testing_X[actor][0]) )))
+        feature_columns.append(tf.feature_column.numeric_column(key=actor, shape=( len(testing_X[actor][0]) ) ))
 
     # print("testing", len(testing_X[0]))
     # print("training", len(training_X[0]))
@@ -287,17 +249,20 @@ def nn(training, testing):
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
     model = tf.estimator.DNNRegressor(
-      hidden_units=[20,50,20], feature_columns=feature_columns,
-        optimizer=tf.train.ProximalAdagradOptimizer(
-        learning_rate=0.01
-        , l1_regularization_strength=0.001
+      hidden_units=[25,25], feature_columns=feature_columns,
+      optimizer=tf.train.ProximalAdagradOptimizer(
+        learning_rate=0.01,
+        l1_regularization_strength=0.001
       )
-      , model_dir="model_folder"
+      #, model_dir="model_foldr"
     )
 
     # Train the model.
     STEPS = 200
     model.train(input_fn=input_train, steps=STEPS)
+
+
+
 
     feature_spec = {}
     for actor in testing_X:

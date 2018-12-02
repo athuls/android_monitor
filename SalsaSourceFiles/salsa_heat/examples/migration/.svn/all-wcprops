@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/wcl/!svn/ver/48/software/salsa/examples/migration
+END
+RemoteSend.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/563/software/salsa/examples/migration/RemoteSend.java
+END
+Agent.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/48/software/salsa/examples/migration/Agent.salsa
+END
+Migrate.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wcl/!svn/ver/563/software/salsa/examples/migration/Migrate.java
+END
+LargeAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/563/software/salsa/examples/migration/LargeAgent.java
+END
+LargeAgent.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/examples/migration/LargeAgent.salsa
+END
+Migrate.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wcl/!svn/ver/48/software/salsa/examples/migration/Migrate.salsa
+END
+Agent.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wcl/!svn/ver/563/software/salsa/examples/migration/Agent.java
+END
+RemoteSend.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wcl/!svn/ver/48/software/salsa/examples/migration/RemoteSend.salsa
+END

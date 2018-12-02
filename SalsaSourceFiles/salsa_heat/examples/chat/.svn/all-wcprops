@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/wcl/!svn/ver/48/software/salsa/examples/chat
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/chat/readme.txt
+END
+Speaker.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wcl/!svn/ver/563/software/salsa/examples/chat/Speaker.java
+END
+Chat.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/48/software/salsa/examples/chat/Chat.salsa
+END
+Chat.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wcl/!svn/ver/563/software/salsa/examples/chat/Chat.java
+END
+Speaker.salsa
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wcl/!svn/ver/48/software/salsa/examples/chat/Speaker.salsa
+END
