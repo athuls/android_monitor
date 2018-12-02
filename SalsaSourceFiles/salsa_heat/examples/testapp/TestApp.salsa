@@ -37,7 +37,7 @@ behavior TestApp {
             standardOutput<-println("Thread Sleep Error Test");
         }
         try{
-        Thread.sleep(500);
+        Thread.sleep(life);
         }catch (Exception e){
             standardOutput<-println("Thread Sleep Error test 0");
         }
@@ -81,9 +81,9 @@ behavior TestApp {
     void act(String[] args){
 
     try{
-        GenRandom Inst = new GenRandom();
-        Inst<-RandTest();
-        //initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,500);
+       // GenRandom Inst = new GenRandom();
+        //Inst<-RandTest();
+        initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,10000);
         
         
         

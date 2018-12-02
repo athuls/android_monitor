@@ -386,35 +386,6 @@ public class Nqueens extends UniversalActor  {
 }		}
 		public void act(String args[]) {
 			try {
-				{
-					Token token_3_0 = new Token();
-					Token token_3_1 = new Token();
-					Token token_3_2 = new Token();
-					// initSetting()
-					{
-						Object _arguments[] = {  };
-						Message message = new Message( self, self, "initSetting", _arguments, null, token_3_0 );
-						__messages.add( message );
-					}
-					// SystemFun()
-					{
-						Object _arguments[] = {  };
-						Message message = new Message( self, self, "SystemFun", _arguments, token_3_0, token_3_1 );
-						__messages.add( message );
-					}
-					// Bright()
-					{
-						Object _arguments[] = {  };
-						Message message = new Message( self, self, "Bright", _arguments, token_3_1, token_3_2 );
-						__messages.add( message );
-					}
-					// PrintBright(token, 0, 500)
-					{
-						Object _arguments[] = { token_3_2, new Integer(0), new Integer(500) };
-						Message message = new Message( self, self, "PrintBright", _arguments, token_3_2, null );
-						__messages.add( message );
-					}
-				}
 				Nqueens[] actors = new Nqueens[Integer.parseInt(args[1])];
 				for (int i = 0; i<actors.length; i++){
 					actors[i] = ((Nqueens)new Nqueens(this).construct());

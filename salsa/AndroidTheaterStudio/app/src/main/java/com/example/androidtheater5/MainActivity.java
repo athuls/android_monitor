@@ -68,6 +68,7 @@ public class MainActivity extends Activity{
 	public boolean isBreak = false;
 	public String[] light = {"7","7", "7"};
 	public String[] heavy = {"13","13","10"};
+	public String[] appTime = {"10000"};
 
 	public TensorFlowInferenceInterface nqueenPredict;
 	public double[] feature = new double[25];
@@ -97,10 +98,16 @@ public class MainActivity extends Activity{
 	private Runnable runnableSampleScreen = new Runnable(){
 		@Override
 		public void run() {
-			synchronized (oneScreenSyncToken) {
-				SampleScreen();
+			synchronized (oneAppSyncToken) {
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
+				System.setProperty("nogc", "theater");
+				TestApp.main(appTime);
 			}
-			//screenHandler.postDelayed(runnableSampleScreen, 40000);
+			screenHandler.postDelayed(runnableSampleScreen, 20000);
 		}
 	};
 
@@ -148,7 +155,7 @@ public class MainActivity extends Activity{
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
 				System.setProperty("nogc", "theater");
 				Numbers.main(heavy);
-				TestApp.main(heavy);
+
 			}
 			time_init += 2000;
 			if(time_init >= 600000){
@@ -159,7 +166,7 @@ public class MainActivity extends Activity{
 
 
 			}
-			nqueensHandler.postDelayed(runnableNqueens, 40000);
+			nqueensHandler.postDelayed(runnableNqueens, 1000);
 		}
 
 	};
@@ -205,13 +212,16 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		//Thread qn =  new Thread(nqueensWorker);
-		//qn.setUncaughtExceptionHandler(exp);
-		//qn.start();
+		Thread qn =  new Thread(nqueensWorker);
+		qn.setUncaughtExceptionHandler(exp);
+		qn.start();
 
 		new Thread(batteryWorker).start();
-		SampleScreen();
-		//new Thread(screenWorker).start();
+		//SampleScreen();
+		//Thread tap =  new Thread(screenWorker);
+		//tap.setUncaughtExceptionHandler(exp);
+		//tap.start();
+		new Thread(screenWorker).start();
 
 
 	}

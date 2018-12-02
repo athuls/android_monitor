@@ -107,7 +107,7 @@ behavior Nqueens {
 
   void act(String args[]) {
     try{
-    initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,500);
+   // initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,500);
 	Nqueens[] actors=new Nqueens[Integer.parseInt(args[1])];
 	for (int i=0;i<actors.length;i++) {actors[i]=new Nqueens();}
 		int computingLevel=2;
