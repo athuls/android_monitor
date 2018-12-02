@@ -34,7 +34,7 @@
         jumboMode="false"
         optimize="true"
         revision="27.0.3"
-        sha1="a7f06f7ebc1252ce5c723d83593c93b80ef55e56">
+        sha1="b7df71c1f13f19c93c4d335ca524cebdfa34a76f">
         <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/salsa_heat_f2e9b28dd5f6418b273bc46be2b067701aba1d4e.jar" />
     </item>
     <item
