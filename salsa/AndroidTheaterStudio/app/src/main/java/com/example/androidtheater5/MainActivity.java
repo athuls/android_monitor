@@ -53,6 +53,8 @@ import java.util.Calendar;
 public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
 	private long time_init = 0;
+	private float last_battery  = (float)1.00;
+	private int brightness_val = 3;
 
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -221,7 +223,7 @@ public class MainActivity extends Activity{
 		//Thread tap =  new Thread(screenWorker);
 		//tap.setUncaughtExceptionHandler(exp);
 		//tap.start();
-		new Thread(screenWorker).start();
+		//new Thread(screenWorker).start();
 
 
 	}
@@ -329,6 +331,26 @@ public class MainActivity extends Activity{
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
+		// This is where testApp actor will be called when there is a battery percent drop
+		if(Math.abs(last_battery - batteryPct) > 0.01){
+			last_battery = batteryPct;
+			//Switch the brightness level
+			if(brightness_val == 3) brightness_val = 255;
+			else brightness_val = 3;
+			// Call Actor and set its brightness level in appropriate values
+			synchronized (oneAppSyncToken) {
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
+				System.setProperty("nogc", "theater");
+				String[] newBright = {Integer.toString(brightness_val)};
+				TestApp.main(newBright);
+			}
+
+
+		}
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {

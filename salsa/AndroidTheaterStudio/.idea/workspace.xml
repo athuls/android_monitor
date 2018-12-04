@@ -15,10 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/nqueens/Nqueens.salsa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp$State.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/testapp/TestApp.salsa" afterDir="false" />
@@ -77,8 +73,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            <state relative-caret-position="424">
+              <caret line="334" column="53" selection-start-line="334" selection-start-column="53" selection-end-line="334" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -2492,7 +2488,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.49928468" weight="0.32971507" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49367088" weight="0.32943678" />
@@ -2500,15 +2495,15 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Build Variants" order="8" sideWeight="0.5106383" side_tool="true" weight="0.24529722" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19957082" side_tool="true" visible="true" weight="0.34192672" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19957082" side_tool="true" visible="true" weight="0.0651289" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48640916" weight="0.3283582" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4947716" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49146944" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="7" sideWeight="0.80042917" visible="true" weight="0.34192672" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.80042917" visible="true" weight="0.0651289" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.28397712" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.28397712" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.80686694" weight="0.32971507" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.20359713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2831,14 +2826,14 @@
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+        <state relative-caret-position="424">
+          <caret line="334" column="53" selection-start-line="334" selection-start-column="53" selection-end-line="334" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

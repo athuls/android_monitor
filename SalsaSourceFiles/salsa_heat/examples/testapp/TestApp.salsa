@@ -24,10 +24,10 @@ behavior TestApp {
                 Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
      }
       
-     void PrintBright(int val, long initSec, long life){
+     void PrintBright(int val, long initSec, int bright){
         long time_init;
         try{
-        val = 3;
+        val = bright;
         Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
         layoutpars = window.getAttributes();
         layoutpars.screenBrightness = val / (float)255;
@@ -36,21 +36,21 @@ behavior TestApp {
         } catch (Exception e){
             standardOutput<-println("Thread Sleep Error Test");
         }
-        try{
-        Thread.sleep(life);
-        }catch (Exception e){
-            standardOutput<-println("Thread Sleep Error test 0");
-        }
-        try{
-        val = 255;
-        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
-        layoutpars = window.getAttributes();
-        layoutpars.screenBrightness = val / (float)255;
-        window.setAttributes(layoutpars);
-      
-        }catch (Exception e){
-            standardOutput<-println("Thread Sleep Error Test 1");
-        }
+      //  try{
+      // Thread.sleep(life);
+      //  }catch (Exception e){
+      //      standardOutput<-println("Thread Sleep Error test 0");
+      // }
+      //  try{
+      //  val = 255;
+      //  Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+      //  layoutpars = window.getAttributes();
+      //  layoutpars.screenBrightness = val / (float)255;
+      //  window.setAttributes(layoutpars);
+      //
+      // }catch (Exception e){
+      //      standardOutput<-println("Thread Sleep Error Test 1");
+      // }
 
 
      }
@@ -83,7 +83,7 @@ behavior TestApp {
     try{
        // GenRandom Inst = new GenRandom();
         //Inst<-RandTest();
-        initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,10000);
+        initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,Integer.parseInt(args[0]));
         
         
         
