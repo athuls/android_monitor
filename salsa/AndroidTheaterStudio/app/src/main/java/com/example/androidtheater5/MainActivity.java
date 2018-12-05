@@ -335,7 +335,7 @@ public class MainActivity extends Activity{
 		if(Math.abs(last_battery - batteryPct) > 0.01){
 			last_battery = batteryPct;
 			//Switch the brightness level
-			if(brightness_val == 3) brightness_val = 255;
+			if(brightness_val < 50) brightness_val = 255;
 			else brightness_val = 3;
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneAppSyncToken) {
@@ -354,7 +354,7 @@ public class MainActivity extends Activity{
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors"+" Brightness "+ brightness_val);
 			feature[0] += 1;
 		}
 		else {
@@ -370,7 +370,7 @@ public class MainActivity extends Activity{
 //				}
 				/////////////////////// PREDICTION MODE ///////////////////////
 			}
-			appendLog("\n");
+			appendLog(" Brightness "+ brightness_val +"\n");
 		}
 
 		/////////////////////// PREDICTION MODE ///////////////////////
