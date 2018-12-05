@@ -332,7 +332,7 @@ public class MainActivity extends Activity{
 		float batteryPct = level / (float)scale;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 		// This is where testApp actor will be called when there is a battery percent drop
-		if(Math.abs(last_battery - batteryPct) > 0.01){
+/*		if(Math.abs(last_battery - batteryPct) > 0.01){
 			last_battery = batteryPct;
 			//Switch the brightness level
 			if(brightness_val < 50) brightness_val = 255;
@@ -350,14 +350,42 @@ public class MainActivity extends Activity{
 			}
 
 
-		}
+		}*/
 
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
+			if(brightness_val > 10) {
+				brightness_val = 3;
+				synchronized (oneAppSyncToken) {
+					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+					// Note that the IP address is the IP address of the smartphone
+					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
+					System.setProperty("nogc", "theater");
+					String[] newBright = {Integer.toString(brightness_val)};
+					TestApp.main(newBright);
+				}
+			}
 			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors"+" Brightness "+ brightness_val);
 			feature[0] += 1;
+			// Use battery switch to turn on or off the brightness if empty set low
+
 		}
 		else {
+			if(brightness_val < 10) {
+				brightness_val = 255;
+				synchronized (oneAppSyncToken) {
+					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+					// Note that the IP address is the IP address of the smartphone
+					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
+					System.setProperty("nogc", "theater");
+					String[] newBright = {Integer.toString(brightness_val)};
+					TestApp.main(newBright);
+				}
+			}
 			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
