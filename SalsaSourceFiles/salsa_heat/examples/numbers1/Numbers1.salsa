@@ -1,0 +1,56 @@
+module examples.numbers1;
+import java.lang.*;
+import java.util.*;
+
+behavior Numbers1 {
+   
+   
+    void Dummy1(){
+
+	// Number number = new Number(0);
+
+	
+	long val1 = 0;
+	for (int i = 0; i< 500; i++){
+	    // number<-inc()@currentContinuation;
+		Random randomno = new Random();
+    	 val1 = randomno.nextLong();
+	}
+
+	standardOutput<-println(val1);
+
+	// Adder adder = new Adder(number);
+	// Printer printer = new Printer(number);
+
+		// for (int i = 0 ; i<5; i++){
+	   	 // adder<-go();
+	   	 // printer<-go();
+		// }
+		try{
+		// Thread.sleep(15000);
+		long time_init = System.currentTimeMillis();
+		long current_time = 0;
+		long final_time = time_init + 15000;
+		do{
+			current_time = System.currentTimeMillis();
+		}while(final_time > current_time);
+
+		} catch(Exception e){
+			standardOutput<-println("Thread sleep error");
+		}
+		for (int i = 0; i< 500; i++){
+	    // number<-inc()@currentContinuation;
+		Random randomno = new Random();
+    	 val1 = randomno.nextLong();
+	}
+	standardOutput<-println(val1);
+		
+
+    }
+
+    void act(String args[]){
+	
+    Dummy1();
+	standardOutput<-println();
+    }
+}

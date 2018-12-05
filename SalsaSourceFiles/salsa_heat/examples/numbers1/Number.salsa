@@ -1,0 +1,21 @@
+module examples.numbers1;
+import java.util.*;
+behavior Number {
+
+    long number;
+
+    Number(long number){
+	this.number = number;
+    }
+
+    void print(){
+	standardOutput<-print(number+" ");
+    }
+
+    long inc(){
+    Random randomno = new Random();
+    long val1 = randomno.nextLong();
+	number=val1;
+    return number;
+    }
+}

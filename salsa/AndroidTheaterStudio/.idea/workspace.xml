@@ -15,7 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/atul_testsalsa.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/atul_testsalsa.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,10 +75,14 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="334" lean-forward="true" selection-start-line="334" selection-end-line="352" selection-end-column="9" />
+            <state relative-caret-position="371">
+              <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2758#3281#0" expanded="true" />
+                <element signature="e#3280#3281#0" expanded="true" />
+                <element signature="e#3743#3918#0" expanded="true" />
+                <element signature="e#3917#3918#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2104,8 +2120,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService2.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
       </list>
     </option>
@@ -2486,7 +2502,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Build Variants" order="8" sideWeight="0.5106383" side_tool="true" weight="0.24529722" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19456366" side_tool="true" visible="true" weight="0.32971507" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19456366" side_tool="true" visible="true" weight="0.097693354" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48640916" weight="0.3283582" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4947716" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49146944" weight="0.32943678" />
@@ -2495,7 +2511,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.28397712" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8054363" visible="true" weight="0.32971507" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8054363" visible="true" weight="0.097693354" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.20359713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -2595,6 +2611,10 @@
           <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2758#3281#0" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3743#3918#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2639,6 +2659,10 @@
         <state>
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2758#3281#0" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3743#3918#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2675,6 +2699,10 @@
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2758#3281#0" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3743#3918#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2727,7 +2755,6 @@
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/androidsalsa/resources/StandardInput.class" />
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/androidsalsa/resources/StandardInput.salsa" />
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/androidsalsa/resources/StandardError.java" />
-    <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/nqueens/Nqueens.salsa" />
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/ping/EchoAgent.class" />
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/ping/Ping.salsa" />
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-26/android.jar!/android/content/ContextWrapper.class" />
@@ -2807,13 +2834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-516">
@@ -2821,12 +2841,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/nqueens/Nqueens.salsa">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="334" lean-forward="true" selection-start-line="334" selection-end-line="352" selection-end-column="9" />
+        <state relative-caret-position="371">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2758#3281#0" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3743#3918#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
           </folding>
         </state>
       </provider>

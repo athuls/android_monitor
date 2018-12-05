@@ -24,6 +24,7 @@ import androidsalsa.resources.AndroidProxy;
 import demo_test.Trap;
 import examples.Heat.DistributedHeat;
 import examples.exsort.Exp_Starter;
+import examples.numbers1.Numbers1;
 import examples.ping.Ping;
 import examples.nqueens.Nqueens;
 import examples.testapp.TestApp;
@@ -43,7 +44,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
+import java.util.Random;
 
 import android.content.res.AssetManager;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
@@ -72,6 +73,7 @@ public class MainActivity extends Activity{
 	public String[] heavy = {"13","13","10"};
 	public String[] appTime = {"10000"};
 
+	private Random generator = new Random();
 	public TensorFlowInferenceInterface nqueenPredict;
 	public double[] feature = new double[25];
 	public long[] shape = {1, feature.length};
@@ -107,9 +109,11 @@ public class MainActivity extends Activity{
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
 				System.setProperty("nogc", "theater");
-				TestApp.main(appTime);
+				Numbers1.main(heavy);
 			}
-			screenHandler.postDelayed(runnableSampleScreen, 20000);
+
+			int randomDelay = generator.nextInt(5001) + 20000;
+			screenHandler.postDelayed(runnableSampleScreen, randomDelay);
 		}
 	};
 
@@ -159,7 +163,7 @@ public class MainActivity extends Activity{
 				Numbers.main(heavy);
 
 			}
-			time_init += 2000;
+		/*	time_init += 2000;
 			if(time_init >= 600000){
 				time_init = 0;
 
@@ -167,8 +171,9 @@ public class MainActivity extends Activity{
 
 
 
-			}
-			nqueensHandler.postDelayed(runnableNqueens, 1000);
+			}*/
+			int randomDelay = generator.nextInt(5001) + 20000;
+			nqueensHandler.postDelayed(runnableNqueens, randomDelay);
 		}
 
 	};
@@ -220,9 +225,10 @@ public class MainActivity extends Activity{
 
 		new Thread(batteryWorker).start();
 		//SampleScreen();
-		//Thread tap =  new Thread(screenWorker);
+		Thread tap =  new Thread(screenWorker);
+
 		//tap.setUncaughtExceptionHandler(exp);
-		//tap.start();
+		tap.start();
 		//new Thread(screenWorker).start();
 
 
@@ -373,7 +379,7 @@ public class MainActivity extends Activity{
 
 		}
 		else {
-			if(brightness_val < 10) {
+			if(brightness_val < 100) {
 				brightness_val = 255;
 				synchronized (oneAppSyncToken) {
 					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");

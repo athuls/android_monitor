@@ -31,6 +31,8 @@ import salsa.resources.ActorService;
 
 // End SALSA compiler generated import delcarations.
 
+import java.lang.*;
+import java.util.*;
 
 public class Numbers extends UniversalActor  {
 	public static void main(String args[]) {
@@ -265,25 +267,36 @@ public class Numbers extends UniversalActor  {
 		}
 
 		public void Dummy() {
-			Number number = ((Number)new Number(this).construct(0));
-			Adder adder = ((Adder)new Adder(this).construct(number));
-			Printer printer = ((Printer)new Printer(this).construct(number));
-			for (int i = 0; i<10; i++){
+			long val1 = 0;
+			for (int i = 0; i<500; i++){
+				Random randomno = new Random();
+				val1 = randomno.nextLong();
+			}
+			{
+				// standardOutput<-println(val1)
 				{
-					// adder<-go()
-					{
-						Object _arguments[] = {  };
-						Message message = new Message( self, adder, "go", _arguments, null, null );
-						__messages.add( message );
-					}
+					Object _arguments[] = { val1 };
+					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+					__messages.add( message );
 				}
+			}
+			long time_init = System.currentTimeMillis();
+			long current_time = 0;
+			long final_time = time_init+15000;
+do {
+				current_time = System.currentTimeMillis();
+			}
+ while (final_time>current_time);
+			for (int i = 0; i<500; i++){
+				Random randomno = new Random();
+				val1 = randomno.nextLong();
+			}
+			{
+				// standardOutput<-println(val1)
 				{
-					// printer<-go()
-					{
-						Object _arguments[] = {  };
-						Message message = new Message( self, printer, "go", _arguments, null, null );
-						__messages.add( message );
-					}
+					Object _arguments[] = { val1 };
+					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+					__messages.add( message );
 				}
 			}
 		}

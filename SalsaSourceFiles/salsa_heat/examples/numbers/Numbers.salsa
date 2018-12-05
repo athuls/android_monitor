@@ -1,20 +1,45 @@
 module examples.numbers;
-
+import java.lang.*;
+import java.util.*;
 
 behavior Numbers {
    
    
     void Dummy(){
 
-	Number number = new Number(0);
+	// Number number = new Number(0);
 
-	Adder adder = new Adder(number);
-	Printer printer = new Printer(number);
-
-	for (int i = 0 ; i<10; i++){
-	    adder<-go();
-	    printer<-go();
+	
+	long val1 = 0;
+	for (int i = 0; i< 500; i++){
+	    // number<-inc()@currentContinuation;
+		Random randomno = new Random();
+    	 val1 = randomno.nextLong();
 	}
+
+	standardOutput<-println(val1);
+
+	// Adder adder = new Adder(number);
+	// Printer printer = new Printer(number);
+
+		// for (int i = 0 ; i<5; i++){
+	   	 // adder<-go();
+	   	 // printer<-go();
+		// }
+		long time_init = System.currentTimeMillis();
+		long current_time = 0;
+		long final_time = time_init + 15000;
+		do{
+			current_time = System.currentTimeMillis();
+		}while(final_time > current_time);
+		for (int i = 0; i< 500; i++){
+	    // number<-inc()@currentContinuation;
+		Random randomno = new Random();
+    	 val1 = randomno.nextLong();
+	}
+	standardOutput<-println(val1);
+		
+
     }
 
     void act(String args[]){
