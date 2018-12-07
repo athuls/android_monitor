@@ -235,7 +235,7 @@ public class MainActivity extends Activity{
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-		//startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 		//Thread qn =  new Thread(nqueensWorker);
 		//qn.setUncaughtExceptionHandler(exp);

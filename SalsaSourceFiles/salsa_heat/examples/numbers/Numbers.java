@@ -273,9 +273,9 @@ public class Numbers extends UniversalActor  {
 				val1 = randomno.nextLong();
 			}
 			{
-				// standardOutput<-println(val1)
+				// standardOutput<-println("Thread 0 first part done")
 				{
-					Object _arguments[] = { val1 };
+					Object _arguments[] = { "Thread 0 first part done" };
 					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 					__messages.add( message );
 				}
@@ -292,9 +292,9 @@ do {
 				val1 = randomno.nextLong();
 			}
 			{
-				// standardOutput<-println(val1)
+				// standardOutput<-println("Thread 0 Done")
 				{
-					Object _arguments[] = { val1 };
+					Object _arguments[] = { "Thread 0 Done" };
 					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 					__messages.add( message );
 				}

@@ -17,7 +17,7 @@ behavior Numbers {
     	 val1 = randomno.nextLong();
 	}
 
-	standardOutput<-println(val1);
+	standardOutput<-println("Thread 0 first part done");
 
 	// Adder adder = new Adder(number);
 	// Printer printer = new Printer(number);
@@ -37,7 +37,7 @@ behavior Numbers {
 		Random randomno = new Random();
     	 val1 = randomno.nextLong();
 	}
-	standardOutput<-println(val1);
+	standardOutput<-println("Thread 0 Done");
 		
 
     }
