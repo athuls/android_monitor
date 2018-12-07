@@ -80,6 +80,11 @@ public class MainActivity extends Activity{
 
 	public long predictCount = 0;
 	public long possiblePred = 0;
+	public int numbersCount = 0;
+	public int numbers1Count = 0;
+	public int modeCount = 0;
+	private int initialWaitNqueens = 0;
+	private int initialWaitSampleScreen = 0;
 
 	private Handler nqueensHandler;
 	private Handler batteryHandler;
@@ -90,7 +95,6 @@ public class MainActivity extends Activity{
 	private Object oneScreenSyncToken = new Object();
 
 	private String mobileIpAddress = "10.194.109.237";
-
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -112,8 +116,13 @@ public class MainActivity extends Activity{
 				Numbers1.main(heavy);
 			}
 
-			int randomDelay = generator.nextInt(5001) + 20000;
-			screenHandler.postDelayed(runnableSampleScreen, randomDelay);
+			//int randomDelay = generator.nextInt(5001) + 20000;
+			synchronized (oneScreenSyncToken) {
+				if (numbers1Count > 0) {
+					numbers1Count -= 1;
+					screenHandler.postDelayed(runnableSampleScreen, 1000);
+				}
+			}
 		}
 	};
 
@@ -122,10 +131,12 @@ public class MainActivity extends Activity{
 	private Runnable nqueensWorker = new Runnable() {
 		@Override
 		public void run() {
-			Looper.prepare();
-			nqueensHandler = new Handler();
-			nqueensHandler.post(runnableNqueens);
-			Looper.loop();
+			synchronized (oneScreenSyncToken) {
+				Looper.prepare();
+				nqueensHandler = new Handler();
+				nqueensHandler.postDelayed(runnableNqueens, initialWaitNqueens);
+				Looper.loop();
+			}
 		}
 	};
 
@@ -142,10 +153,12 @@ public class MainActivity extends Activity{
 	private Runnable screenWorker = new Runnable() {
 		@Override
 		public void run() {
-			Looper.prepare();
-			screenHandler = new Handler();
-			screenHandler.post(runnableSampleScreen);
-			Looper.loop();
+			synchronized (oneScreenSyncToken) {
+				Looper.prepare();
+				screenHandler = new Handler();
+				screenHandler.postDelayed(runnableSampleScreen, initialWaitSampleScreen);
+				Looper.loop();
+			}
 		}
 	};
 
@@ -172,8 +185,13 @@ public class MainActivity extends Activity{
 
 
 			}*/
-			int randomDelay = generator.nextInt(5001) + 20000;
-			nqueensHandler.postDelayed(runnableNqueens, randomDelay);
+			//int randomDelay = generator.nextInt(5001) + 20000;
+			synchronized (oneScreenSyncToken) {
+				if (numbersCount > 0) {
+					numbersCount -= 1;
+					nqueensHandler.postDelayed(runnableNqueens, 1000);
+				}
+			}
 		}
 
 	};
@@ -217,18 +235,18 @@ public class MainActivity extends Activity{
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+		//startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		Thread qn =  new Thread(nqueensWorker);
-		qn.setUncaughtExceptionHandler(exp);
-		qn.start();
+		//Thread qn =  new Thread(nqueensWorker);
+		//qn.setUncaughtExceptionHandler(exp);
+		//qn.start();
 
 		new Thread(batteryWorker).start();
 		//SampleScreen();
-		Thread tap =  new Thread(screenWorker);
+		//Thread tap =  new Thread(screenWorker);
 
 		//tap.setUncaughtExceptionHandler(exp);
-		tap.start();
+		//tap.start();
 		//new Thread(screenWorker).start();
 
 
@@ -338,10 +356,30 @@ public class MainActivity extends Activity{
 		float batteryPct = level / (float)scale;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 		// This is where testApp actor will be called when there is a battery percent drop
-/*		if(Math.abs(last_battery - batteryPct) > 0.01){
+		if(Math.abs(last_battery - batteryPct) > 0.009999999){
 			last_battery = batteryPct;
+
+			synchronized (oneScreenSyncToken) {
+				numbers1Count = generator.nextInt(20) + 50;
+				numbersCount = generator.nextInt(20) + 50;
+				initialWaitNqueens = generator.nextInt(25) * 1000;
+				modeCount++;
+				if(modeCount % 3 == 0) {
+					initialWaitSampleScreen = initialWaitNqueens;
+				} else if(modeCount % 3 == 1) {
+					initialWaitSampleScreen = (numbersCount - (  generator.nextInt(numbersCount -1))) + initialWaitNqueens;
+				} else {
+					initialWaitSampleScreen = numbersCount + 1 + initialWaitNqueens;
+				}
+
+
+
+				new Thread(nqueensWorker).start();
+				new Thread(screenWorker).start();
+			}
+
 			//Switch the brightness level
-			if(brightness_val < 50) brightness_val = 255;
+			/*if(brightness_val < 50) brightness_val = 255;
 			else brightness_val = 3;
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneAppSyncToken) {
@@ -354,10 +392,12 @@ public class MainActivity extends Activity{
 				String[] newBright = {Integer.toString(brightness_val)};
 				TestApp.main(newBright);
 			}
+*/
 
 
-		}*/
+		}
 
+		// if(initialWait > 0 ) intialWait -= 1;
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
 			if(brightness_val > 10) {

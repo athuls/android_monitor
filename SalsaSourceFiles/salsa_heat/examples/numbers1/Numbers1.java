@@ -283,7 +283,7 @@ public class Numbers1 extends UniversalActor  {
 			try {
 				long time_init = System.currentTimeMillis();
 				long current_time = 0;
-				long final_time = time_init+15000;
+				long final_time = time_init+900;
 do {
 					current_time = System.currentTimeMillis();
 				}

@@ -30,7 +30,7 @@ behavior Numbers1 {
 		// Thread.sleep(15000);
 		long time_init = System.currentTimeMillis();
 		long current_time = 0;
-		long final_time = time_init + 15000;
+		long final_time = time_init + 900;
 		do{
 			current_time = System.currentTimeMillis();
 		}while(final_time > current_time);
