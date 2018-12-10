@@ -3,33 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/trap.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="6a8d74ae1070d83be855f0e4f559b9c8728d480a">
-        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/trap_3b8d31d59f7b2f5e34fc77efd7f25fe69f8ae838.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/salsa_heat.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="32bdee90a17685f9f9750279c5c89e4e1cdc46ab">
-        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/salsa_heat_f2e9b28dd5f6418b273bc46be2b067701aba1d4e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJIL-J2SE.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="3dd7efc96a70d0297521fd3df58a4bd3984391f6">
-        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/JJIL-J2SE_76042a3b2e66557259eca67392b0a3d381fd8637.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/exploded-aar/org.tensorflow/tensorflow-android/1.12.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -39,12 +12,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/trap.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="6a8d74ae1070d83be855f0e4f559b9c8728d480a">
+        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/trap_3b8d31d59f7b2f5e34fc77efd7f25fe69f8ae838.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJILCore.jar"
         jumboMode="false"
         optimize="true"
         revision="27.0.3"
         sha1="740cce42be97067163ff76a1011073a9533aeb94">
         <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/JJILCore_a7e9458d75fa9158ea9dc9ed76c09385bb430453.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/salsa_heat.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="241300017d68cdc2bf5faae74f5c36fb202d85f5">
+        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/salsa_heat_f2e9b28dd5f6418b273bc46be2b067701aba1d4e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -63,6 +54,15 @@
         revision="27.0.3"
         sha1="ed727a8d9f247e2050281cb083f1c77b09dcb5cd">
         <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/guava-15.0_cd1e73be309bfe1d2f3a05063e549eb8eb427435.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJIL-J2SE.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="3dd7efc96a70d0297521fd3df58a4bd3984391f6">
+        <dex dex="/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/build/intermediates/pre-dexed/debug/JJIL-J2SE_76042a3b2e66557259eca67392b0a3d381fd8637.jar" />
     </item>
 
 </items>

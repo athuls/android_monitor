@@ -189,10 +189,10 @@ public class MainActivity extends Activity{
 			}
 			//int randomDelay = generator.nextInt(5001) + 20000;
 			synchronized (oneScreenSyncToken) {
-				if (numbersCount > 0) {
-					numbersCount -= 1;
+				//if (numbersCount > 0) {
+				//	numbersCount -= 1;
 					nqueensHandler.postDelayed(runnableNqueens, 2000);
-				}
+				//}
 			}
 		}
 
