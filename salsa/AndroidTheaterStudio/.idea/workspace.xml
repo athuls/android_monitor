@@ -15,17 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AndroidTheater5/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AndroidTheater5/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
@@ -74,8 +63,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="466" column="22" lean-forward="true" selection-start-line="466" selection-start-column="22" selection-end-line="466" selection-end-column="22" />
+            <state relative-caret-position="411">
+              <caret line="193" column="65" selection-start-line="193" selection-start-column="65" selection-end-line="193" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +75,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -2831,15 +2820,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="466" column="22" lean-forward="true" selection-start-line="466" selection-start-column="22" selection-end-line="466" selection-end-column="22" />
+        <state relative-caret-position="411">
+          <caret line="193" column="65" selection-start-line="193" selection-start-column="65" selection-end-line="193" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

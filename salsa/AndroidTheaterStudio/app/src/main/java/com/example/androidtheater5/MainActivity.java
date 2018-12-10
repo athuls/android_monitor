@@ -178,7 +178,7 @@ public class MainActivity extends Activity{
 				Numbers.main(heavy);
 
 			}
-		/*	time_init += 2000;
+			time_init += 2000;
 			if(time_init >= 600000){
 				time_init = 0;
 
@@ -186,12 +186,12 @@ public class MainActivity extends Activity{
 
 
 
-			}*/
+			}
 			//int randomDelay = generator.nextInt(5001) + 20000;
 			synchronized (oneScreenSyncToken) {
 				if (numbersCount > 0) {
 					numbersCount -= 1;
-					nqueensHandler.postDelayed(runnableNqueens, 1000);
+					nqueensHandler.postDelayed(runnableNqueens, 2000);
 				}
 			}
 		}
