@@ -31,6 +31,13 @@ import salsa.resources.ActorService;
 
 // End SALSA compiler generated import delcarations.
 
+import android.content.Intent;
+import android.view.Window;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.view.WindowManager.LayoutParams;
+import android.provider.Settings;
+import androidsalsa.resources.AndroidProxy;
 import java.lang.*;
 import java.util.*;
 
@@ -266,7 +273,120 @@ public class Numbers extends UniversalActor  {
 			}
 		}
 
+		ContentResolver cResolver;
+		Window window;
+		LayoutParams layoutpars;
+		public void initSetting() {
+			cResolver = AndroidProxy.ContentResolverCall();
+			window = AndroidProxy.WindowCall();
+		}
+		public void SystemFun() {
+			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+		}
+		public void PrintBright(int val, long initSec, int life) {
+			long time_init;
+			Random randomno = new Random();
+			try {
+				val = randomno.nextInt(253)+3;
+				time_init = System.currentTimeMillis()-initSec;
+				val = 3;
+				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+				layoutpars = window.getAttributes();
+				layoutpars.screenBrightness = val/(float)255;
+				window.setAttributes(layoutpars);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Thread Sleep Error")
+					{
+						Object _arguments[] = { "Thread Sleep Error" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+
+			try {
+				Thread.sleep(life);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Thread Sleep Error0")
+					{
+						Object _arguments[] = { "Thread Sleep Error0" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+
+			try {
+				time_init = System.currentTimeMillis()-initSec;
+				val = randomno.nextInt(253)+3;
+				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+				layoutpars = window.getAttributes();
+				layoutpars.screenBrightness = val/(float)255;
+				window.setAttributes(layoutpars);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Thread Sleep Error 1")
+					{
+						Object _arguments[] = { "Thread Sleep Error 1" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+
+		}
+		public int Bright() {
+			try {
+				return Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Brightness error")
+					{
+						Object _arguments[] = { "Brightness error" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+				return -1;
+			}
+
+		}
 		public void Dummy() {
+			{
+				Token token_2_0 = new Token();
+				Token token_2_1 = new Token();
+				Token token_2_2 = new Token();
+				// initSetting()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "initSetting", _arguments, null, token_2_0 );
+					__messages.add( message );
+				}
+				// SystemFun()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "SystemFun", _arguments, token_2_0, token_2_1 );
+					__messages.add( message );
+				}
+				// Bright()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "Bright", _arguments, token_2_1, token_2_2 );
+					__messages.add( message );
+				}
+				// PrintBright(token, 0, 1500)
+				{
+					Object _arguments[] = { token_2_2, new Integer(0), new Integer(1500) };
+					Message message = new Message( self, self, "PrintBright", _arguments, token_2_2, null );
+					__messages.add( message );
+				}
+			}
 			long val1 = 0;
 			for (int i = 0; i<500; i++){
 				Random randomno = new Random();
@@ -282,7 +402,7 @@ public class Numbers extends UniversalActor  {
 			}
 			long time_init = System.currentTimeMillis();
 			long current_time = 0;
-			long final_time = time_init+900;
+			long final_time = time_init+1800;
 do {
 				current_time = System.currentTimeMillis();
 			}

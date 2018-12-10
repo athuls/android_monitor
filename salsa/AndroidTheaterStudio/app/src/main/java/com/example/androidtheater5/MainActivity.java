@@ -55,7 +55,7 @@ public class MainActivity extends Activity{
 	private final String TAG = "AndroidTheater";
 	private long time_init = 0;
 	private float last_battery  = (float)1.00;
-	private int brightness_val = 3;
+	private int brightness_val = 0;
 
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -85,6 +85,8 @@ public class MainActivity extends Activity{
 	public int modeCount = 0;
 	private int initialWaitNqueens = 0;
 	private int initialWaitSampleScreen = 0;
+	private Thread prev_threadNQ;
+	private  Thread prev_threadSc;
 
 	private Handler nqueensHandler;
 	private Handler batteryHandler;
@@ -131,12 +133,12 @@ public class MainActivity extends Activity{
 	private Runnable nqueensWorker = new Runnable() {
 		@Override
 		public void run() {
-			synchronized (oneScreenSyncToken) {
+			//synchronized (oneScreenSyncToken) {
 				Looper.prepare();
 				nqueensHandler = new Handler();
 				nqueensHandler.postDelayed(runnableNqueens, initialWaitNqueens);
 				Looper.loop();
-			}
+			//}
 		}
 	};
 
@@ -153,12 +155,12 @@ public class MainActivity extends Activity{
 	private Runnable screenWorker = new Runnable() {
 		@Override
 		public void run() {
-			synchronized (oneScreenSyncToken) {
+			//synchronized (oneScreenSyncToken) {
 				Looper.prepare();
 				screenHandler = new Handler();
 				screenHandler.postDelayed(runnableSampleScreen, initialWaitSampleScreen);
 				Looper.loop();
-			}
+			//}
 		}
 	};
 
@@ -237,9 +239,9 @@ public class MainActivity extends Activity{
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		//Thread qn =  new Thread(nqueensWorker);
-		//qn.setUncaughtExceptionHandler(exp);
-		//qn.start();
+		Thread qn =  new Thread(nqueensWorker);
+		qn.setUncaughtExceptionHandler(exp);
+		qn.start();
 
 		new Thread(batteryWorker).start();
 		//SampleScreen();
@@ -351,88 +353,106 @@ public class MainActivity extends Activity{
 	protected void SampleBattery() {
 		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 		Intent batteryStatus = this.registerReceiver(null, iFilter);
+		ContentResolver cResolver = this.getContentResolver();
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
+		try {
+			brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+		}catch( Exception e){
+			System.err.println("Error in brightness");
+		}
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 		// This is where testApp actor will be called when there is a battery percent drop
-		if(Math.abs(last_battery - batteryPct) > 0.009999999){
-			last_battery = batteryPct;
-
-			synchronized (oneScreenSyncToken) {
-				numbers1Count = generator.nextInt(20) + 50;
-				numbersCount = generator.nextInt(20) + 50;
-				initialWaitNqueens = generator.nextInt(25) * 1000;
-				modeCount++;
-				if(modeCount % 3 == 0) {
-					initialWaitSampleScreen = initialWaitNqueens;
-				} else if(modeCount % 3 == 1) {
-					initialWaitSampleScreen = (numbersCount - (  generator.nextInt(numbersCount -1))) + initialWaitNqueens;
-				} else {
-					initialWaitSampleScreen = numbersCount + 1 + initialWaitNqueens;
-				}
-
-
-
-				new Thread(nqueensWorker).start();
-				new Thread(screenWorker).start();
-			}
-
-			//Switch the brightness level
-			/*if(brightness_val < 50) brightness_val = 255;
-			else brightness_val = 3;
-			// Call Actor and set its brightness level in appropriate values
-			synchronized (oneAppSyncToken) {
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
-				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
-
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
-				System.setProperty("nogc", "theater");
-				String[] newBright = {Integer.toString(brightness_val)};
-				TestApp.main(newBright);
-			}
-*/
-
-
-		}
+//		if(Math.abs(last_battery - batteryPct) > 0.009){
+//			last_battery = batteryPct;
+//
+//			//synchronized (oneScreenSyncToken) {
+//				//numbers1Count = generator.nextInt(20) + 50;
+//			if(prev_threadSc != null){
+//				prev_threadSc.stop();
+//			}
+//			if (prev_threadNQ != null){
+//				prev_threadNQ.stop();
+//			}
+//				numbers1Count = 30;
+//				//numbersCount = generator.nextInt(20) + 50;
+//				numbersCount = 30;
+//				//initialWaitNqueens = generator.nextInt(25) * 1000;
+//				initialWaitNqueens = 10000;
+//				modeCount++;
+//				if(modeCount /20 == 0) {
+//					initialWaitSampleScreen = initialWaitNqueens;
+//				} else if(modeCount /20 == 1) {
+//					//initialWaitSampleScreen = (numbersCount - (  generator.nextInt(numbersCount -1))) + initialWaitNqueens;
+//					initialWaitSampleScreen = initialWaitNqueens+ numbersCount -15;
+//				} else {
+//					initialWaitSampleScreen = numbersCount + 1 + initialWaitNqueens;
+//				}
+//
+//
+//
+//				prev_threadNQ = new Thread(nqueensWorker);
+//				prev_threadNQ.start();
+//				prev_threadSc =  new Thread(screenWorker);
+//				prev_threadSc.start();
+//			//}
+//
+//			//Switch the brightness level
+//			/*if(brightness_val < 50) brightness_val = 255;
+//			else brightness_val = 3;
+//			// Call Actor and set its brightness level in appropriate values
+//			synchronized (oneAppSyncToken) {
+//				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+//				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+//
+//				// Note that the IP address is the IP address of the smartphone
+//				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
+//				System.setProperty("nogc", "theater");
+//				String[] newBright = {Integer.toString(brightness_val)};
+//				TestApp.main(newBright);
+//			}
+//*/
+//
+//
+//		}
 
 		// if(initialWait > 0 ) intialWait -= 1;
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
-			if(brightness_val > 10) {
-				brightness_val = 3;
-				synchronized (oneAppSyncToken) {
-					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
-					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
-
-					// Note that the IP address is the IP address of the smartphone
-					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
-					System.setProperty("nogc", "theater");
-					String[] newBright = {Integer.toString(brightness_val)};
-					TestApp.main(newBright);
-				}
-			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors"+" Brightness "+ brightness_val);
+//			if(brightness_val > 10) {
+//				brightness_val = 3;
+//				synchronized (oneAppSyncToken) {
+//					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+//					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+//
+//					// Note that the IP address is the IP address of the smartphone
+//					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
+//					System.setProperty("nogc", "theater");
+//					String[] newBright = {Integer.toString(brightness_val)};
+//					TestApp.main(newBright);
+//				}
+//			}
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ brightness_val+ " and no active actors");
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
 		}
 		else {
-			if(brightness_val < 100) {
-				brightness_val = 255;
-				synchronized (oneAppSyncToken) {
-					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
-					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
-
-					// Note that the IP address is the IP address of the smartphone
-					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
-					System.setProperty("nogc", "theater");
-					String[] newBright = {Integer.toString(brightness_val)};
-					TestApp.main(newBright);
-				}
-			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
+//			if(brightness_val < 100) {
+//				brightness_val = 255;
+//				synchronized (oneAppSyncToken) {
+//					System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+//					//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+//
+//					// Note that the IP address is the IP address of the smartphone
+//					System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mydiploc");
+//					System.setProperty("nogc", "theater");
+//					String[] newBright = {Integer.toString(brightness_val)};
+//					TestApp.main(newBright);
+//				}
+//			}
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ brightness_val+ " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
@@ -444,7 +464,7 @@ public class MainActivity extends Activity{
 //				}
 				/////////////////////// PREDICTION MODE ///////////////////////
 			}
-			appendLog(" Brightness "+ brightness_val +"\n");
+			appendLog("\n");
 		}
 
 		/////////////////////// PREDICTION MODE ///////////////////////
