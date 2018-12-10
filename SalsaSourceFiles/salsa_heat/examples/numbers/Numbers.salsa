@@ -74,7 +74,7 @@ behavior Numbers {
    
     void Dummy(){
 
-    initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
+    
 
 	// Number number = new Number(0);
 
@@ -112,7 +112,7 @@ behavior Numbers {
     }
 
     void act(String args[]){
-	
+	initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
     Dummy();
 	standardOutput<-println();
     }
