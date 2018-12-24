@@ -25,5 +25,4 @@ dependencies {
     compile files('libs/JJIL-J2SE.jar')
     compile files('libs/JJILCore.jar')
     compile files('libs/salsa_heat.jar')
-    compile files('libs/mltk-0.1.0-SNAPSHOT.jar')
 }

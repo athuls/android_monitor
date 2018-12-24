@@ -159,7 +159,7 @@ public class MainActivity extends Activity {
                 		}
             		});
 
-			modelHandler.postDelayed(modelRunner, 1000);
+			modelHandler.postDelayed(modelRunner, 300);
 			/*
 	                textView.post(new Runnable() { 
 	                     @Override
@@ -315,7 +315,7 @@ public class MainActivity extends Activity {
 	private Evaluator createEvaluator() throws Exception {
 		AssetManager assetManager = getAssets();
 
-		try(InputStream is = assetManager.open("new_nqueens_rfr_regression_model.pmml.ser")){
+		try(InputStream is = assetManager.open("new_nqueens_gbm_regression_model.pmml.ser")){
 			return EvaluatorUtil.createEvaluator(is);
 		}
 	}
