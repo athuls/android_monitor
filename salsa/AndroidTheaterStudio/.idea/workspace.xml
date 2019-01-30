@@ -15,21 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RandomGenerator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +63,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+            <state relative-caret-position="5479">
+              <caret line="536" column="25" selection-start-line="536" selection-start-column="25" selection-end-line="536" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2842,8 +2828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+        <state relative-caret-position="5479">
+          <caret line="536" column="25" selection-start-line="536" selection-start-column="25" selection-end-line="536" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

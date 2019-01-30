@@ -63,6 +63,7 @@ public class MainActivity extends Activity{
 	private long time_init = 0;
 	private float last_battery  = (float)1.00;
 	private int brightness_val = 0;
+	private long old_net = 0;
 
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -420,9 +421,11 @@ public class MainActivity extends Activity{
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
 		long netVal = 0;
+		long currNetVal = 0;
 		try {
 			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
 			netVal = getNetworkData();
+			currNetVal = netVal - old_net;
 		}catch( Exception e){
 			System.err.println("Error in brightness");
 		}
@@ -497,7 +500,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ netVal+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ currNetVal+ " and no active actors");
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
@@ -516,7 +519,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ netVal+ " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ currNetVal+ " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
@@ -530,6 +533,8 @@ public class MainActivity extends Activity{
 			}
 			appendLog("\n");
 		}
+
+		old_net = netVal;
 
 		/////////////////////// PREDICTION MODE ///////////////////////
 //		count += 1;
