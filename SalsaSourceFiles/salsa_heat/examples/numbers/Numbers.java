@@ -289,7 +289,6 @@ public class Numbers extends UniversalActor  {
 			try {
 				val = randomno.nextInt(253)+3;
 				time_init = System.currentTimeMillis()-initSec;
-				val = 3;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;

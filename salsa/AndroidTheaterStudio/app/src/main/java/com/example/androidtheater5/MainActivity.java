@@ -1,12 +1,17 @@
 package com.example.androidtheater5;
 
 import android.app.Activity;
+import android.app.usage.NetworkStats;
+import android.app.usage.NetworkStatsManager;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.Build;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.StrictMode;
@@ -17,6 +22,7 @@ import android.view.Window;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidsalsa.resources.AndroidProxy;
+
 
 //import demo1.Nqueens;
 //import demo1.Nqueens2;
@@ -35,6 +41,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.lang.*;
 import java.util.Date;
 import java.util.HashMap;
@@ -96,7 +103,62 @@ public class MainActivity extends Activity{
 	private Object oneAppSyncToken = new Object();
 	private Object oneScreenSyncToken = new Object();
 
-	private String mobileIpAddress = "10.194.109.237";
+	private void AskPerm(){
+		Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+		startActivity(intent);
+		return;
+	} // to ask for permission PACKAGE_USAGE_STAT
+	@TargetApi(Build.VERSION_CODES.M)
+	private long getNetworkData(){
+		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
+		NetworkStats.Bucket bucket;
+		try {
+			bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_WIFI,
+					"",
+					System.currentTimeMillis()-1000,
+					System.currentTimeMillis());
+		} catch (Exception e) {
+			return -1;
+		}
+		long rcv_bt = bucket.getRxBytes();
+		long snt_bt = bucket.getTxBytes();
+		return rcv_bt+snt_bt;
+	} // Need to ask Atul
+	private float readUsage() {
+		try {
+			RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
+			String load = reader.readLine();
+
+			String[] toks = load.split(" +");  // Split on one or more spaces
+
+			long idle1 = Long.parseLong(toks[4]);
+			long cpu1 = Long.parseLong(toks[2]) + Long.parseLong(toks[3]) + Long.parseLong(toks[5])
+					+ Long.parseLong(toks[6]) + Long.parseLong(toks[7]) + Long.parseLong(toks[8]);
+
+			try {
+				Thread.sleep(360);
+			} catch (Exception e) {}
+
+			reader.seek(0);
+			load = reader.readLine();
+			reader.close();
+
+			toks = load.split(" +");
+
+			long idle2 = Long.parseLong(toks[4]);
+			long cpu2 = Long.parseLong(toks[2]) + Long.parseLong(toks[3]) + Long.parseLong(toks[5])
+					+ Long.parseLong(toks[6]) + Long.parseLong(toks[7]) + Long.parseLong(toks[8]);
+
+			return (float)(cpu2 - cpu1) / ((cpu2 + idle2) - (cpu1 + idle1));
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+
+		return 0;
+	} // reads usage but waits 360 ms, need to fix that
+
+	private String mobileIpAddress = "130.126.152.33";
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -238,7 +300,7 @@ public class MainActivity extends Activity{
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
-
+		AskPerm();
 		Thread qn =  new Thread(nqueensWorker);
 		qn.setUncaughtExceptionHandler(exp);
 		qn.start();
@@ -357,8 +419,10 @@ public class MainActivity extends Activity{
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		float batteryPct = level / (float)scale;
+		long netVal = 0;
 		try {
-			brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			netVal = getNetworkData();
 		}catch( Exception e){
 			System.err.println("Error in brightness");
 		}
@@ -433,7 +497,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ brightness_val+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ netVal+ " and no active actors");
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
@@ -452,7 +516,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ brightness_val+ " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ netVal+ " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////

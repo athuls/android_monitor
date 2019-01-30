@@ -15,7 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RandomGenerator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterDir="false" />
     </list>
@@ -65,12 +77,10 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+            <state relative-caret-position="298">
+              <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4610#5499#0" expanded="true" />
-                <element signature="e#5498#5499#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,8 +89,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="300">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -100,8 +110,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+            <state relative-caret-position="150">
+              <caret line="10" column="75" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -110,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -2107,9 +2117,9 @@
         <option value="$PROJECT_DIR$/app/libs/salsa_heat.jar!/salsa/language/UniversalActor.class" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService2.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
       </list>
     </option>
@@ -2121,8 +2131,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="3" />
+    <option name="y" value="52" />
     <option name="width" value="1440" />
     <option name="height" value="834" />
   </component>
@@ -2133,6 +2144,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -2191,7 +2203,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2481,7 +2492,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="834" extended-state="0" />
+    <frame x="6" y="23" width="1440" height="834" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.49928468" weight="0.32971507" />
@@ -2490,7 +2501,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Build Variants" order="8" sideWeight="0.5106383" side_tool="true" weight="0.24529722" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.10586552" side_tool="true" visible="true" weight="0.2971506" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.10658083" side_tool="true" visible="true" weight="0.2971506" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48640916" weight="0.3283582" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4947716" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49146944" weight="0.32943678" />
@@ -2499,7 +2510,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.28397712" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.89413446" visible="true" weight="0.2971506" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.89341915" visible="true" weight="0.2971506" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.20359713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -2523,10 +2534,11 @@
       <window_info anchor="right" id="Maven Projects" order="0" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8261803" weight="0.32971507" />
+      <window_info anchor="bottom" id="Application Servers" order="0" />
       <window_info id="Designer" order="4" />
       <window_info anchor="bottom" id="Gradle Console" order="16" side_tool="true" weight="0.32943678" />
       <window_info id="Build Variants" order="8" sideWeight="0.5106383" side_tool="true" weight="0.24529722" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48640916" weight="0.3283582" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -2538,12 +2550,11 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.19384836" side_tool="true" visible="true" weight="0.3093623" />
-      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49367088" weight="0.32943678" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49587232" weight="0.32943678" />
       <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8261803" weight="0.32971507" />
       <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.8061516" visible="true" weight="0.3093623" />
-      <window_info anchor="bottom" id="Application Servers" order="0" />
       <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.4947716" weight="0.32943678" />
       <window_info id="Nl-Palette" order="3" />
       <window_info anchor="right" id="Android Model" order="5" side_tool="true" />
@@ -2552,13 +2563,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.28397712" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.44854155" weight="0.33262485" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49367088" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49587232" weight="0.32943678" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49587232" weight="0.3995749" />
     </layout-to-restore>
   </component>
@@ -2599,8 +2610,6 @@
           <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4610#5499#0" expanded="true" />
-            <element signature="e#5498#5499#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2645,8 +2654,6 @@
         <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4610#5499#0" expanded="true" />
-            <element signature="e#5498#5499#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2683,8 +2690,6 @@
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4610#5499#0" expanded="true" />
-            <element signature="e#5498#5499#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2811,38 +2816,36 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+        <state relative-caret-position="150">
+          <caret line="10" column="75" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+        <state relative-caret-position="298">
+          <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4610#5499#0" expanded="true" />
-            <element signature="e#5498#5499#0" expanded="true" />
           </folding>
         </state>
       </provider>
