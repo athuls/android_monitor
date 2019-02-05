@@ -1,0 +1,20 @@
+[CPUActor1]
+actor_class = CPUActor
+freql = 0
+freqh = 1
+dist = uniform
+dist_args = 10,11
+
+[LCDActor1]
+actor_class = LCDActor
+brightness = uniform
+brightness_args = 3,4
+
+
+[CPUActor2]
+actor_class = CPUActor
+freql = 0
+freqh = 1
+dist = uniform
+dist_args = 5,11
+

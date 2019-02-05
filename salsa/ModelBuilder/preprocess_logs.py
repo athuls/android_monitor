@@ -3,7 +3,7 @@ import os
 import numpy
 import datetime
 
-g_datetime_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
+g_datetime_format = "%a %b %d %H:%M:%S PDT %Y"
 
 fileName = sys.argv[1]
 counts_arr = []
