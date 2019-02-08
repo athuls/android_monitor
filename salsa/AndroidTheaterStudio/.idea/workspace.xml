@@ -15,10 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_tensorflow_tensorflow_android_1_12_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_tensorflow_tensorflow_android_1_13_0_rc0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
@@ -67,8 +63,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="316" column="9" lean-forward="true" selection-start-line="316" selection-start-column="9" selection-end-line="316" selection-end-column="9" />
+            <state relative-caret-position="382">
+              <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4905#5041#0" expanded="true" />
@@ -2880,8 +2876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="316" column="9" lean-forward="true" selection-start-line="316" selection-start-column="9" selection-end-line="316" selection-end-column="9" />
+        <state relative-caret-position="382">
+          <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4905#5041#0" expanded="true" />

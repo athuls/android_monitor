@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.ConnectivityManager;
+import android.net.TrafficStats;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Build;
@@ -136,6 +137,11 @@ public class MainActivity extends Activity{
 		long snt_bt = bucket.getTxBytes();
 		return rcv_bt+snt_bt;
 	} // Need to ask Atul
+	private long getNetworkDataOld(){
+		long totalRxBytes = TrafficStats.getTotalRxBytes();
+		long totalTxBytes = TrafficStats.getTotalTxBytes();
+		return totalRxBytes+totalTxBytes;
+	}
 	private float readUsage() {
 		try {
 			RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
@@ -438,6 +444,7 @@ public class MainActivity extends Activity{
 		try {
 			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
 			netVal = getNetworkData();
+			//netVal = getNetworkDataOld(); // Test for older phones
 			currNetVal = netVal - old_net;
 		}catch( Exception e){
 			System.err.println("Error in brightness");
