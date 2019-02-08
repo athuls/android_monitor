@@ -1,6 +1,7 @@
 package com.example.androidtheater5;
 
 import android.app.Activity;
+import android.app.AppOpsManager;
 import android.app.usage.NetworkStats;
 import android.app.usage.NetworkStatsManager;
 import android.annotation.TargetApi;
@@ -109,6 +110,16 @@ public class MainActivity extends Activity{
 		startActivity(intent);
 		return;
 	} // to ask for permission PACKAGE_USAGE_STAT
+	@TargetApi(Build.VERSION_CODES.M)
+	private boolean CheckPerm(){
+		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
+				android.os.Process.myUid(), getPackageName());
+		if (mode == AppOpsManager.MODE_ALLOWED) {
+			return true;
+		}
+		return false;
+	}
 	@TargetApi(Build.VERSION_CODES.M)
 	private long getNetworkData(){
 		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
@@ -301,7 +312,9 @@ public class MainActivity extends Activity{
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
-		AskPerm();
+		if (CheckPerm() == false ) {
+			AskPerm();
+		}
 		Thread qn =  new Thread(nqueensWorker);
 		qn.setUncaughtExceptionHandler(exp);
 		qn.start();
