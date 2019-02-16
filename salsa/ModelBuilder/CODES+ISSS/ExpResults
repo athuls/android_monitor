@@ -1,0 +1,155 @@
+36.0 Mbps for download
+35.5 Mbps for upload
+
+1.25 MB per string in ping actor and 4 such strings
+- Per actor about 2.2 MB and then later another 2.2 MB
+- 700 ms - 1 second round trip time for message sending b/w Ping and Echo, and response coming back
+
+1.25 MB per string in ping actor and 1 such string
+- Per actor about 0.739 MB and then later around 0.739
+- 250 ms - 350 ms round trip time for message sending b/w Ping and Echo, and response coming back
+
+saturation at around 4.22 MB on mobile side
+
+
+Actually, saturation at around 3.9 MB on mobile side
+
+
+
+
+1 actor (1.254 MB each): 
+- Run 1: 120.0, 52.0, 92.0 seconds
+- Run 2: 300.0, 307.0, 296.0, 361.0, 234.0, 467.0, 602.0
+  Mean: 366.714285714
+
+    
+2 actors (1.254 MB each): 207.0, 214.0, 301.0, 180.0, 302.0, 215.0, 326.0
+                          Mean: 249.285714286
+
+
+3 actors (1.254 MB each): 180.0, 224.0, 180.0, 180.0, 239.0
+  			Mean: 200.6
+
+
+4 actors (1.254 MB each): 229.0, 242.0, 241.0, 240.0, 112.0, 249.0, 241.0, 142.0
+                        Mean: 212
+
+5 actors: 181.0+114.0+307.0+181.0+231.0+189.0+201
+                        Mean: 200.57
+
+6 actors: 
+- Run 1: 118.0+179.0+241.0+141.0 
+         169.75
+- Run 2: 281.0+180.0+147.0+180.0+269.0+273.0+180.0+265.0
+         221.875
+
+
+Mean of actor counts in segments: 
+1 actor:
+22.87367339952071
+14.212072844749951
+
+2 actors:
+21.85197645079899
+13.828030303765885
+
+3 actors:
+20.510155880963627
+12.919375577170744
+
+4 actors:
+17.972249269717626
+11.655251901533722
+
+5 actors:
+16.775478530781168
+10.250775844922414
+
+6 actors:
+14.363291619264315
+7.570424425842252
+
+
+- iperf bandwidth is 114 Mb/sec.
+>> 3.762 MB per actor, after fixing read from file to happen only once
+1 actor:
+Actual: 117+132+203+220+167+158+183+115
+Actual Avg: 161.875
+Expected: 127.0+143.0+216.0+235.0+178.0+170.0+194.0+124.0
+Expected Avg: 173.375
+Expected All: 127.0+143.0+216.0+235.0+178.0+170.0+194.0+235.0+124.0
+Expected All Avg: 180.222222222
+Avg actor count: 0.9333333333333333
+Std: 0.3792820524140929
+Simulator error: -1.74%
+
+
+2 actors:
+Actual: 161+59+162+59+104+101+119+162+147+122
+Actual ERRONEOUS: 161+59+162+59+209+104+101+119+162+147+122
+Actual Avg: 119.6
+Expected: 180.0+66.0+181.0+66.0+234.0+118.0+112.0+132.0+178.0+163.0+136.0
+Expected Avg: 142.363636364
+Expected All: 180.0+66.0+232.0+181.0+66.0+234.0+118.0+112.0+132.0+178.0+163.0+136.0
+Expected All Avg: 149.833333333
+Avg actor count: 2.1926001013684746
+Std: 0.7690186878486808
+Simulator error: 3.81%
+
+3 actors:
+Actual: 93+115+140+154+101+105+101+140+64+156+158
+Actual Avg: 120.636363636
+Expected:  108.0+134.0+163.0+179.0+117+123.0+119.0+163.0+74.0+183.0+180.0
+Expected avg: 140.272727273
+Expected All: 108.0+207.0+134.0+182.0+163.0+179.0+117.0+123.0+181.0+119.0+163.0+74.0+183.0+180.0
+Expected All avg: 150.928571429
+Avg actor count: 3.9671972986010613
+Std: 1.6892968329526534
+Simulator error: 24.24%
+
+4 actors: 
+Actual: 152+154+58+147+130+85+155+73+108
+Actual Avg: 118
+Expected: 180+180+70+173+154+103+183+89+127
+Expected Avg: 139.888888889
+Expected All: 180.0+181.0+180.0+70.0+173.0+154.0+103.0+183.0+89.0+127.0+186.0
+Expected All Avg: 147.818181818
+Avg actor count: 6.978540772532189
+Std: 3.6244832124525668
+Simulator error: 45.94%
+
+5 actors:
+Expected all: 54+187+119+148+154+179+162+136+183+120+169+184
+Expected avg: 149.583
+Avg actor count: 7.774708410067526
+Std: 4.288142171392139
+Simulator error: 24%
+
+----------------------------------------------------------------
+CPU actors
+2 CPU actors: with error is 212% on 200% CPU utilization
+- Expected: 417.0+304.0+301.0+307.0+234.0+302.0
+- Expected Avg: 310.83
+- Actor count: 1.9991922455573505, Std: 0.040185276135162366
+
+4 CPU actors: with error is 416% CPU utilization on 400% CPU utilization
+- Expected: 121.0+300.0+112.0+250.0+120.0+214.0+267.0+121.0+200.0+160.0
+- Expected Avg: 186.5
+- Actor count: 3.998148148148148, Std: 0.08604637152214033
+
+8 CPU actors: with error is 738.875% on 800% CPU utilization
+- Expected: 115.0+181.0+79.0+162.0+180.0+63.0+178.0+120.0+89.0+152.0+120.0+104.0+136.0+121.0+118.0+122.0+121.0+120.0+121.0+59.0+178.0+63.0+116.0
+- ExpectedFinal15: 89.0+152.0+120.0+104.0+136.0+121.0+118.0+122.0+121.0+120.0+121.0+59.0+178.0+63.0+116.0
+- Expected Avg: 116
+- Actor count: 7.997397527651269, Std: 0.14426713391318363
+
+10 CPU actors: with error is 735.8% on 1000% CPU utilization
+-Expected: 171.0+60.0+180.0+47.0+133.0+181.0+35.0+146.0+120+87+93+120+122+119+120
+- Expected Avg: 115.6
+- Actor count: 9.994649545211344, Std: 0.23124861193123927
+
+11 CPU actors: with error is 720.375% on 1100% CPU utilization
+Expected: 
+
+8 cores on the phone
+
