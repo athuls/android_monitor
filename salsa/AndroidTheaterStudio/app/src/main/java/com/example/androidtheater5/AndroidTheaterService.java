@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class AndroidTheaterService extends Service {
 	private final String TAG = "SalsaTheaterService";
-	public static final String NETWORK_INTERFACE = "wlan0";
+	public static final String NETWORK_INTERFACE = "tun0";
 	public static final String THEATER_PORT = "4040";
 	public static final String STDOUT_CLASS = "androidsalsa.resources.StandardOutput";
 	
@@ -49,7 +49,7 @@ public class AndroidTheaterService extends Service {
 	}
 	
 	protected void createTheater() {
-		System.setProperty("nogc", "theater");
+//		System.setProperty("nogc", "theater");
 	    System.setProperty( "nodie", "theater" );
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );

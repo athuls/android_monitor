@@ -95,7 +95,7 @@ public class MainActivity extends Activity{
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 
-	private String mobileIpAddress = "10.193.73.90";
+	private String mobileIpAddress = "192.17.151.223";
 
 	// Training data
 	private ArrayList<double[]> trainingInput;
@@ -172,18 +172,26 @@ public class MainActivity extends Activity{
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
+			waitUntilTheaterStarted();
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-				System.setProperty("nogc", "theater");
-				Nqueens.main(heavy);
+//				System.setProperty("nogc", "theater");
+				String[] nqueens_args = null;
+				if(Math.random() > 0.5) {
+					nqueens_args = heavy;
+				} else {
+					nqueens_args = light;
+				}
+
+				Nqueens.main(nqueens_args);
 			}
 
-//			int randomDelay = generator.nextInt(2001 - 500) + 500;
-			nqueensHandler.postDelayed(runnableNqueens, 1000);
+			int randomDelay = generator.nextInt(3001 - 800) + 800;
+			nqueensHandler.postDelayed(runnableNqueens, randomDelay);
 		}
 
 	};
@@ -197,7 +205,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynumbersloc");
-				System.setProperty("nogc", "theater");
+//				System.setProperty("nogc", "theater");
 				Numbers.main(heavy);
 			}
 
@@ -226,7 +234,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynumbers1loc");
-				System.setProperty("nogc", "theater");
+//				System.setProperty("nogc", "theater");
 				Numbers1.main(heavy);
 			}
 
@@ -274,7 +282,7 @@ public class MainActivity extends Activity{
 			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
-//		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
+		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
 		System.err.println("Before creating TF inference");
 		try {
 			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
@@ -285,7 +293,7 @@ public class MainActivity extends Activity{
 		System.err.println("After creating TF inference");
 		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty("nodie", "theater");
-		System.setProperty("nogc", "theater");
+//		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
@@ -295,7 +303,7 @@ public class MainActivity extends Activity{
 //		new Thread(numbersWorker).start();
 //		new Thread(numbers1Worker).start();
 
-		readInputArgs();
+//		readInputArgs();
 //		createGamModel();
 
 		new Thread(batteryWorker).start();
@@ -454,15 +462,15 @@ public class MainActivity extends Activity{
 
 
 	protected void SampleBattery() {
-//		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-//		Intent batteryStatus = this.registerReceiver(null, iFilter);
-//		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-//		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-//		float batteryPct = level / (float)scale;
-//		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-//
-//		Date currentTime = Calendar.getInstance().getTime();
-//		if(hashList.isEmpty()) {
+		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent batteryStatus = this.registerReceiver(null, iFilter);
+		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+		float batteryPct = level / (float)scale;
+		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
+
+		Date currentTime = Calendar.getInstance().getTime();
+		if(hashList.isEmpty()) {
 
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
 //			if(brightness_val > 10) {
@@ -481,10 +489,10 @@ public class MainActivity extends Activity{
 //			appendLog("Brightness:  " + brightness_val + "\n");
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
 
-//			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
-//			feature[0] += 1;
-//		}
-//		else {
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
+			feature[0] += 1;
+		}
+		else {
 
 
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
@@ -504,9 +512,9 @@ public class MainActivity extends Activity{
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
 
 
-//			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
-//			for (String actor : hashList.keySet()) {
-//				appendLog(actor + ": " + hashList.get(actor) + ", ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
+			for (String actor : hashList.keySet()) {
+				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
 //				int count = hashList.get(actor).intValue();
 //				if(count < 25){
@@ -515,9 +523,10 @@ public class MainActivity extends Activity{
 //					feature[25] += 1;
 //				}
 				/////////////////////// PREDICTION MODE ///////////////////////
-//			}
+			}
 //			appendLog("Brightness:  " + brightness_val + "\n");
-//		}
+			appendLog("\n");
+		}
 
 		/////////////////////// PREDICTION MODE ///////////////////////
 //		count += 1;
@@ -544,21 +553,21 @@ public class MainActivity extends Activity{
 //			/////////////////////////////GAM///////////////////////////////////////////////////////////
 //
 //			/////////////////////////////////////////DNN/////////////////////////////////
-			int obs_count = 0;
-			double mse = 0;
-			double rmse = 0;
-			for(double[] feature : trainingInput) {
-				// long[] shape = {1, feature.length};
-				// modelPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
-				long[] shape = {1, feature.length};
-				modelPredict.feed("Placeholder:0", feature, shape);
-
-				String[] output_node = new String[]{"dnn/logits/BiasAdd:0"};
-				modelPredict.run(output_node);
-				float[] output = new float[1];
-				modelPredict.fetch("dnn/logits/BiasAdd:0", output);
-
-				double actualOutput = output[0];
+//			int obs_count = 0;
+//			double mse = 0;
+//			double rmse = 0;
+//			for(double[] feature : trainingInput) {
+//				// long[] shape = {1, feature.length};
+//				// modelPredict.feed("Placeholder:0", feature, shape); // INPUT_SHAPE is an int[] of expected shape, input is a float[] with the input data
+//				long[] shape = {1, feature.length};
+//				modelPredict.feed("Placeholder:0", feature, shape);
+//
+//				String[] output_node = new String[]{"dnn/logits/BiasAdd:0"};
+//				modelPredict.run(output_node);
+//				float[] output = new float[1];
+//				modelPredict.fetch("dnn/logits/BiasAdd:0", output);
+//
+//				double actualOutput = output[0];
 
 //				///////////////////////////LINEAR MODEL PREDICTION///////////////////////////////////
 ////				double actualOutput = 0;
@@ -570,17 +579,17 @@ public class MainActivity extends Activity{
 ////				actualOutput += linear_coef_nqueens[linear_coef_nqueens.length - 1];
 //				///////////////////////////LINEAR MODEL PREDICTION///////////////////////////////////
 
-				Double expectedOutput = trainingLabels.get(obs_count);
-				mse += Math.pow(actualOutput - expectedOutput, 2);
-				obs_count++;
-			}
+//				Double expectedOutput = trainingLabels.get(obs_count);
+//				mse += Math.pow(actualOutput - expectedOutput, 2);
+//				obs_count++;
+//			}
 
-			mse = mse / (double) obs_count;
-			rmse = Math.pow(mse, 0.5);
-			rmse += (generator.nextDouble() - 0.5);
-			Date currentTime = Calendar.getInstance().getTime();
-
-			debugPrint("["+ currentTime.toString() + "] "+rmse + " is the RMSE while expected is 172\n");
+//			mse = mse / (double) obs_count;
+//			rmse = Math.pow(mse, 0.5);
+//			rmse += (generator.nextDouble() - 0.5);
+//			Date currentTime = Calendar.getInstance().getTime();
+//
+//			debugPrint("["+ currentTime.toString() + "] "+rmse + " is the RMSE while expected is 172\n");
 //			/////////////////////////////////////////DNN/////////////////////////////////
 //		} catch (Exception e) {
 //			e.printStackTrace();

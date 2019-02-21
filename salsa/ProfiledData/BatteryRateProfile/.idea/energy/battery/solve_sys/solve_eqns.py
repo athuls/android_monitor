@@ -23,12 +23,12 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='logs_brightness_resoure_usage.txt'
+g_train_file_name='log_exsort2.txt'
 g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="actor_brightness_resoure_usage_train_f.txt"
-g_test_out_file="actor_brightness_resoure_usage_test_f.txt"
+g_train_out_file="exsort2_train_f.txt"
+g_test_out_file="exsort2_test_f.txt"
 LEN = 24
-g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
+g_time_format = "%a %b %d %H:%M:%S PST %Y"
 # g_time_format = "%b %d,%Y %H:%M:%S"
 
 def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
