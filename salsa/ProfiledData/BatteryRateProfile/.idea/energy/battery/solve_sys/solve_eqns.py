@@ -23,12 +23,12 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_nqueens_ping.txt'
+g_train_file_name='log_nqueens_2state_var_workload_veryshort.txt'
 g_actor_list_name='examples.nqueens.Nqueens,examples.ping.Ping'
-g_train_out_file="nqueens_ping_train_f.txt"
-g_test_out_file="nqueens_ping_test_f.txt"
+g_train_out_file="nqueens_2state_var_wld_veryshort_train_f.txt"
+g_test_out_file="nqueens_2state_var_wld_veryshort_test_f.txt"
 LEN = 24
-g_time_format = "%a %b %d %H:%M:%S PDT %Y"
+g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 
 def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
     sys_eqns_lhs = {}

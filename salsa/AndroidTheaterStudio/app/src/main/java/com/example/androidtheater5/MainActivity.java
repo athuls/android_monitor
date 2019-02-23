@@ -19,6 +19,7 @@ import android.os.Looper;
 import android.os.StrictMode;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.view.Window;
 import android.widget.ScrollView;
@@ -32,7 +33,6 @@ import androidsalsa.resources.AndroidProxy;
 import demo_test.Trap;
 import examples.Heat.DistributedHeat;
 import examples.exsort.Exp_Starter;
-import examples.numbers1.Numbers1;
 import examples.ping.Ping;
 import examples.nqueens.Nqueens;
 import examples.testapp.TestApp;
@@ -106,11 +106,13 @@ public class MainActivity extends Activity{
 	private Object oneAppSyncToken = new Object();
 	private Object oneScreenSyncToken = new Object();
 
+	/* to ask for permission PACKAGE_USAGE_STAT*/
 	private void AskPerm(){
 		Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
 		startActivity(intent);
 		return;
-	} // to ask for permission PACKAGE_USAGE_STAT
+	}
+
 	@TargetApi(Build.VERSION_CODES.M)
 	private boolean CheckPerm(){
 		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
@@ -121,6 +123,7 @@ public class MainActivity extends Activity{
 		}
 		return false;
 	}
+
 	@TargetApi(Build.VERSION_CODES.M)
 	private long getNetworkData(){
 		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
@@ -136,12 +139,14 @@ public class MainActivity extends Activity{
 		long rcv_bt = bucket.getRxBytes();
 		long snt_bt = bucket.getTxBytes();
 		return rcv_bt+snt_bt;
-	} // Need to ask Atul
+	}
+
 	private long getNetworkDataOld(){
 		long totalRxBytes = TrafficStats.getTotalRxBytes();
 		long totalTxBytes = TrafficStats.getTotalTxBytes();
 		return totalRxBytes+totalTxBytes;
 	}
+
 	private float readUsage() {
 		try {
 			RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
@@ -176,7 +181,7 @@ public class MainActivity extends Activity{
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
 
-	private String mobileIpAddress = "130.126.152.33";
+	private String mobileIpAddress = "10.194.109.237";
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -188,23 +193,45 @@ public class MainActivity extends Activity{
 	private Runnable runnableSampleScreen = new Runnable(){
 		@Override
 		public void run() {
-			synchronized (oneAppSyncToken) {
+
+			//Switch the brightness level
+			if(brightness_val < 50) brightness_val = 255;
+			else brightness_val = 255;
+
+			waitUntilTheaterStarted();
+
+			// There are 2 phases of sleeping, one in low energy mode and one in high energy mode
+			int sleep1 = 0, sleep2 = 0;
+
+			// Call Actor and set its brightness level in appropriate values
+			synchronized (oneScreenSyncToken) {
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
-				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
-				System.setProperty("nogc", "theater");
-				Numbers1.main(heavy);
+				// System.setProperty("nogc", "theater");
+
+				// Generate wait time before invoking actor
+				if(Math.random() < 0.3) {
+					// This is low energy mode
+					sleep1 = generator.nextInt(20000);
+					sleep2 = 0;
+				} else {
+					sleep1 = 20000;
+					sleep2 = generator.nextInt(55000);
+				}
+
+				int low_brightness = 70;
+				int high_brightness = 255;
+
+				String[] args = {Integer.toString(low_brightness),
+								Integer.toString(high_brightness),
+								Integer.toString(sleep1),
+								Integer.toString(sleep2)};
+				TestApp.main(args);
 			}
 
-			//int randomDelay = generator.nextInt(5001) + 20000;
-			synchronized (oneScreenSyncToken) {
-				if (numbers1Count > 0) {
-					numbers1Count -= 1;
-					screenHandler.postDelayed(runnableSampleScreen, 1000);
-				}
-			}
+			screenHandler.postDelayed(runnableSampleScreen, sleep1 + sleep2 + 10000);
 		}
 	};
 
@@ -235,18 +262,19 @@ public class MainActivity extends Activity{
 	private Runnable screenWorker = new Runnable() {
 		@Override
 		public void run() {
-			//synchronized (oneScreenSyncToken) {
+			synchronized (oneScreenSyncToken) {
 				Looper.prepare();
 				screenHandler = new Handler();
 				screenHandler.postDelayed(runnableSampleScreen, initialWaitSampleScreen);
 				Looper.loop();
-			//}
+			}
 		}
 	};
 
 	private Runnable runnableNqueens = new Runnable(){
 		@Override
 		public void run() {
+			waitUntilTheaterStarted();
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
@@ -299,10 +327,13 @@ public class MainActivity extends Activity{
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 		if (scrollView == null) {
 			scrollView = new ScrollView( this );
 			textView = new TextView( this );
 			scrollView.addView( textView );
+			scrollView.setKeepScreenOn(true);
 			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
@@ -321,17 +352,13 @@ public class MainActivity extends Activity{
 		if (CheckPerm() == false ) {
 			AskPerm();
 		}
-		Thread qn =  new Thread(nqueensWorker);
-		qn.setUncaughtExceptionHandler(exp);
-		qn.start();
 
 		new Thread(batteryWorker).start();
 		//SampleScreen();
-		//Thread tap =  new Thread(screenWorker);
 
 		//tap.setUncaughtExceptionHandler(exp);
 		//tap.start();
-		//new Thread(screenWorker).start();
+		new Thread(screenWorker).start();
 
 
 	}
@@ -378,17 +405,18 @@ public class MainActivity extends Activity{
 		showTextOnUI( str + "\n" );
 	}
 
+	/* This method is not used, for controlling brightness anymore, use TestApp.salsa */
 	protected void SampleScreen() {
 		// Get the context
 		ContentResolver cResolver = this.getContentResolver();
-//Window object, that will store a reference to the current window
+		//Window object, that will store a reference to the current window
 		Window window = this.getWindow();
 		int brightness;
 		try{
                // To handle the auto
                 Settings.System.putInt(cResolver,
                 Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
- //Get the current system brightness
+ 				//Get the current system brightness
                 brightness = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
             } catch (Settings.SettingNotFoundException e) {
                 //Throw an error case it couldn't be retrieved
@@ -427,9 +455,44 @@ public class MainActivity extends Activity{
 		}catch(Exception e){
 
 		}
+	}
+
+	// This is to set the initial delay before starting NQueens, Screen actors
+	private void setInitialWaitTimes(float batteryPct) {
+		// This is where testApp actor will be called when there is a battery percent drop
+		if(Math.abs(last_battery - batteryPct) > 0.009){
+			last_battery = batteryPct;
+
+			//synchronized (oneScreenSyncToken) {
+				//numbers1Count = generator.nextInt(20) + 50;
+			if(prev_threadSc != null){
+				prev_threadSc.stop();
+			}
+			if (prev_threadNQ != null){
+				prev_threadNQ.stop();
+			}
+				numbers1Count = 30;
+				//numbersCount = generator.nextInt(20) + 50;
+				numbersCount = 30;
+				//initialWaitNqueens = generator.nextInt(25) * 1000;
+				initialWaitNqueens = 10000;
+				modeCount++;
+				if(modeCount /20 == 0) {
+					initialWaitSampleScreen = initialWaitNqueens;
+				} else if(modeCount /20 == 1) {
+					//initialWaitSampleScreen = (numbersCount - (  generator.nextInt(numbersCount -1))) + initialWaitNqueens;
+					initialWaitSampleScreen = initialWaitNqueens+ numbersCount -15;
+				} else {
+					initialWaitSampleScreen = numbersCount + 1 + initialWaitNqueens;
+				}
 
 
-		
+
+				prev_threadNQ = new Thread(nqueensWorker);
+				prev_threadNQ.start();
+				prev_threadSc =  new Thread(screenWorker);
+				prev_threadSc.start();
+			}
 	}
 
 	protected void SampleBattery() {
@@ -442,7 +505,7 @@ public class MainActivity extends Activity{
 		long netVal = 0;
 		long currNetVal = 0;
 		try {
-			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
 			netVal = getNetworkData();
 			//netVal = getNetworkDataOld(); // Test for older phones
 			currNetVal = netVal - old_net;
@@ -450,41 +513,9 @@ public class MainActivity extends Activity{
 			System.err.println("Error in brightness");
 		}
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-		// This is where testApp actor will be called when there is a battery percent drop
-//		if(Math.abs(last_battery - batteryPct) > 0.009){
-//			last_battery = batteryPct;
-//
-//			//synchronized (oneScreenSyncToken) {
-//				//numbers1Count = generator.nextInt(20) + 50;
-//			if(prev_threadSc != null){
-//				prev_threadSc.stop();
-//			}
-//			if (prev_threadNQ != null){
-//				prev_threadNQ.stop();
-//			}
-//				numbers1Count = 30;
-//				//numbersCount = generator.nextInt(20) + 50;
-//				numbersCount = 30;
-//				//initialWaitNqueens = generator.nextInt(25) * 1000;
-//				initialWaitNqueens = 10000;
-//				modeCount++;
-//				if(modeCount /20 == 0) {
-//					initialWaitSampleScreen = initialWaitNqueens;
-//				} else if(modeCount /20 == 1) {
-//					//initialWaitSampleScreen = (numbersCount - (  generator.nextInt(numbersCount -1))) + initialWaitNqueens;
-//					initialWaitSampleScreen = initialWaitNqueens+ numbersCount -15;
-//				} else {
-//					initialWaitSampleScreen = numbersCount + 1 + initialWaitNqueens;
-//				}
-//
-//
-//
-//				prev_threadNQ = new Thread(nqueensWorker);
-//				prev_threadNQ.start();
-//				prev_threadSc =  new Thread(screenWorker);
-//				prev_threadSc.start();
-//			//}
-//
+
+//		setInitialWaitTimes(batteryPct);
+
 //			//Switch the brightness level
 //			/*if(brightness_val < 50) brightness_val = 255;
 //			else brightness_val = 3;
@@ -504,7 +535,6 @@ public class MainActivity extends Activity{
 //
 //		}
 
-		// if(initialWait > 0 ) intialWait -= 1;
 		Date currentTime = Calendar.getInstance().getTime();
 		if(hashList.isEmpty()) {
 //			if(brightness_val > 10) {
@@ -520,7 +550,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ currNetVal+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + " and no active actors");
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
@@ -539,7 +569,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct +" Brightness "+ currNetVal+ " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
