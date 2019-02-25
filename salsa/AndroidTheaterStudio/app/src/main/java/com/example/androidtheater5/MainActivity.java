@@ -1,9 +1,13 @@
 package com.example.androidtheater5;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AppOpsManager;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.os.StrictMode;
@@ -32,6 +36,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
 import android.os.Handler;
@@ -95,7 +100,7 @@ public class MainActivity extends Activity{
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 
-	private String mobileIpAddress = "192.17.151.223";
+	private String mobileIpAddress = "10.194.161.141";
 
 	// Training data
 	private ArrayList<double[]> trainingInput;
@@ -120,6 +125,59 @@ public class MainActivity extends Activity{
 	private boolean switchNumbers1 = false;
 
 	private int brightness_val = 3;
+
+	/* to ask for permission PACKAGE_USAGE_STAT*/
+	private void AskPerm(){
+		Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+		startActivity(intent);
+		return;
+	}
+
+//	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+//	private boolean CheckPerm(){
+//		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+//		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
+//				android.os.Process.myUid(), getPackageName());
+//		if (mode == AppOpsManager.MODE_ALLOWED) {
+//			return true;
+//		}
+//		return false;
+//	}
+
+	// Reads CPU usage
+	private float readCpuUsage() {
+		try {
+			RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
+			String load = reader.readLine();
+
+			String[] toks = load.split(" +");  // Split on one or more spaces
+
+			long idle1 = Long.parseLong(toks[4]);
+			long cpu1 = Long.parseLong(toks[2]) + Long.parseLong(toks[3]) + Long.parseLong(toks[5])
+					+ Long.parseLong(toks[6]) + Long.parseLong(toks[7]) + Long.parseLong(toks[8]);
+
+			try {
+				Thread.sleep(360);
+			} catch (Exception e) {}
+
+			reader.seek(0);
+			load = reader.readLine();
+			reader.close();
+
+			toks = load.split(" +");
+
+			long idle2 = Long.parseLong(toks[4]);
+			long cpu2 = Long.parseLong(toks[2]) + Long.parseLong(toks[3]) + Long.parseLong(toks[5])
+					+ Long.parseLong(toks[6]) + Long.parseLong(toks[7]) + Long.parseLong(toks[8]);
+
+			return (float)(cpu2 - cpu1) / ((cpu2 + idle2) - (cpu1 + idle1));
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+
+		return 0;
+	} // reads usage but waits 360 ms, need to fix that
 
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
@@ -181,17 +239,17 @@ public class MainActivity extends Activity{
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
 //				System.setProperty("nogc", "theater");
 				String[] nqueens_args = null;
-				if(Math.random() > 0.5) {
-					nqueens_args = heavy;
-				} else {
-					nqueens_args = light;
-				}
+//				if(Math.random() > 0.5) {
+//					nqueens_args = heavy;
+//				} else {
+//					nqueens_args = light;
+//				}
 
-				Nqueens.main(nqueens_args);
+				Nqueens.main(heavy);
 			}
 
-			int randomDelay = generator.nextInt(3001 - 800) + 800;
-			nqueensHandler.postDelayed(runnableNqueens, randomDelay);
+//			int randomDelay = generator.nextInt(3001 - 800) + 800;
+			nqueensHandler.postDelayed(runnableNqueens, 1200);
 		}
 
 	};
@@ -275,10 +333,13 @@ public class MainActivity extends Activity{
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 		if (scrollView == null) {
 			scrollView = new ScrollView( this );
 			textView = new TextView( this );
 			scrollView.addView( textView );
+			scrollView.setKeepScreenOn(true);
 			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
@@ -296,6 +357,10 @@ public class MainActivity extends Activity{
 //		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
+
+//		if (CheckPerm() == false ) {
+//			AskPerm();
+//		}
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 		generator = new Random();
@@ -470,6 +535,8 @@ public class MainActivity extends Activity{
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 
 		Date currentTime = Calendar.getInstance().getTime();
+		double cpuUsage = readCpuUsage();
+
 		if(hashList.isEmpty()) {
 
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
@@ -489,7 +556,7 @@ public class MainActivity extends Activity{
 //			appendLog("Brightness:  " + brightness_val + "\n");
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
 
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", CPU usage: " + cpuUsage + " and no active actors");
 			feature[0] += 1;
 		}
 		else {
@@ -512,7 +579,7 @@ public class MainActivity extends Activity{
 			///////////////////////////////////// SCREEN BRIGHTNESS CODE//////////////////////////////////////
 
 
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", CPU usage: " + cpuUsage + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////

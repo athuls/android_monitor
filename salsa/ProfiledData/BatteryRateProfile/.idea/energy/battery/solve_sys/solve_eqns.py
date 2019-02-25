@@ -23,12 +23,12 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_exsort2.txt'
+g_train_file_name='log_nqueens_2state_var_wld.txt'
 g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="exsort2_train_f.txt"
-g_test_out_file="exsort2_test_f.txt"
+g_train_out_file="nqueens_2state_var_wld_train_f.txt"
+g_test_out_file="nqueens_2state_var_wld_test_f.txt"
 LEN = 24
-g_time_format = "%a %b %d %H:%M:%S PST %Y"
+g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 # g_time_format = "%b %d,%Y %H:%M:%S"
 
 def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
@@ -287,7 +287,7 @@ def nn(training, testing):
     # Build a DNNRegressor, with 2x20-unit hidden layers, with the feature columns
     # defined above as input.
     model = tf.estimator.DNNRegressor(
-      hidden_units=[15,30,15], feature_columns=feature_columns,
+      hidden_units=[20,50,20,15], feature_columns=feature_columns,
         optimizer=tf.train.ProximalAdagradOptimizer(
         learning_rate=0.01
         , l1_regularization_strength=0.001
