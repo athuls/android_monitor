@@ -10,24 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-201.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-201.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-201.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-400.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-400.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-400.meta" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.data-00000-of-00001" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.data-00000-of-00001" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.index" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.meta" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/model.ckpt-200.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/checkpoint" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/checkpoint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/graph.pbtxt" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/model_folder/graph.pbtxt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/output/histogram/hist_percent_fixed_size_train.txt" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/output/histogram/hist_percent_fixed_size_train.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/solve_eqns.py" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/energy/battery/solve_sys/solve_eqns.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ProfiledData/BatteryRateProfile/.idea/workspace.xml" />
     </list>
@@ -82,18 +65,18 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29037267">
-              <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
+            <state vertical-scroll-proportion="5.1317368">
+              <caret line="612" column="35" selection-start-line="612" selection-start-column="35" selection-end-line="612" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5276#5412#0" expanded="true" />
-                <element signature="e#5411#5412#0" expanded="true" />
-                <element signature="e#5449#5621#0" expanded="true" />
-                <element signature="e#5620#5621#0" expanded="true" />
-                <element signature="e#6080#6258#0" expanded="true" />
-                <element signature="e#6257#6258#0" expanded="true" />
-                <element signature="e#6297#7076#0" expanded="true" />
-                <element signature="e#7075#7076#0" expanded="true" />
+                <element signature="e#5312#5448#0" expanded="true" />
+                <element signature="e#5447#5448#0" expanded="true" />
+                <element signature="e#5485#5657#0" expanded="true" />
+                <element signature="e#5656#5657#0" expanded="true" />
+                <element signature="e#6116#6294#0" expanded="true" />
+                <element signature="e#6293#6294#0" expanded="true" />
+                <element signature="e#6333#7112#0" expanded="true" />
+                <element signature="e#7111#7112#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,9 +115,11 @@
       <file leaf-file-name="MyExceptionHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="-14.0">
+              <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2136,11 +2121,11 @@
         <option value="$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/ping/Ping.salsa" />
         <option value="$PROJECT_DIR$/app/libs/salsa_heat.jar!/salsa/language/UniversalActor.class" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
       </list>
     </option>
@@ -2754,18 +2739,18 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33262485" sideWeight="0.4402862" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24529722" sideWeight="0.5106383" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2571732" sideWeight="0.42705005" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38150904" sideWeight="0.43290734" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2571732" sideWeight="0.57294995" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38150904" sideWeight="0.56709266" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.4947716" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837406" sideWeight="0.48296058" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837406" sideWeight="0.47881123" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.49146944" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11075612" sideWeight="0.4893617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17784877" sideWeight="0.4893617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.050053246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -2807,7 +2792,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java</url>
-          <line>98</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -2823,14 +2808,14 @@
           <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5276#5412#0" expanded="true" />
-            <element signature="e#5411#5412#0" expanded="true" />
-            <element signature="e#5449#5621#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#6080#6258#0" expanded="true" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6297#7076#0" expanded="true" />
-            <element signature="e#7075#7076#0" expanded="true" />
+            <element signature="e#5312#5448#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5485#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#6116#6294#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+            <element signature="e#6333#7112#0" expanded="true" />
+            <element signature="e#7111#7112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2849,14 +2834,14 @@
           <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5276#5412#0" expanded="true" />
-            <element signature="e#5411#5412#0" expanded="true" />
-            <element signature="e#5449#5621#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#6080#6258#0" expanded="true" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6297#7076#0" expanded="true" />
-            <element signature="e#7075#7076#0" expanded="true" />
+            <element signature="e#5312#5448#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5485#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#6116#6294#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+            <element signature="e#6333#7112#0" expanded="true" />
+            <element signature="e#7111#7112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2902,14 +2887,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5276#5412#0" expanded="true" />
-            <element signature="e#5411#5412#0" expanded="true" />
-            <element signature="e#5449#5621#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#6080#6258#0" expanded="true" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6297#7076#0" expanded="true" />
-            <element signature="e#7075#7076#0" expanded="true" />
+            <element signature="e#5312#5448#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5485#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#6116#6294#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+            <element signature="e#6333#7112#0" expanded="true" />
+            <element signature="e#7111#7112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2950,14 +2935,14 @@
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5276#5412#0" expanded="true" />
-            <element signature="e#5411#5412#0" expanded="true" />
-            <element signature="e#5449#5621#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#6080#6258#0" expanded="true" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6297#7076#0" expanded="true" />
-            <element signature="e#7075#7076#0" expanded="true" />
+            <element signature="e#5312#5448#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5485#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#6116#6294#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+            <element signature="e#6333#7112#0" expanded="true" />
+            <element signature="e#7111#7112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3164,22 +3149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/examples/testapp/TestApp.salsa">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3217,14 +3186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -3236,20 +3197,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29037267">
-          <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5276#5412#0" expanded="true" />
-            <element signature="e#5411#5412#0" expanded="true" />
-            <element signature="e#5449#5621#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#6080#6258#0" expanded="true" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6297#7076#0" expanded="true" />
-            <element signature="e#7075#7076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.1317368">
+          <caret line="612" column="35" selection-start-line="612" selection-start-column="35" selection-end-line="612" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5312#5448#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5485#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#6116#6294#0" expanded="true" />
+            <element signature="e#6293#6294#0" expanded="true" />
+            <element signature="e#6333#7112#0" expanded="true" />
+            <element signature="e#7111#7112#0" expanded="true" />
           </folding>
         </state>
       </provider>

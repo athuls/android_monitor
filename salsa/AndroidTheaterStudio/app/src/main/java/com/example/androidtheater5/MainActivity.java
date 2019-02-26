@@ -2,6 +2,7 @@ package com.example.androidtheater5;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AppOpsManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -249,7 +250,7 @@ public class MainActivity extends Activity{
 			}
 
 //			int randomDelay = generator.nextInt(3001 - 800) + 800;
-			nqueensHandler.postDelayed(runnableNqueens, 1200);
+			nqueensHandler.postDelayed(runnableNqueens, 2000);
 		}
 
 	};
@@ -321,57 +322,65 @@ public class MainActivity extends Activity{
 			} catch (InterruptedException e) {
 				System.err.println("Something went wrong waiting for theater to start "  + e);
 			}
-
 		}
-
 	}
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		debugPrint("onCreate() is called");
-		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		StrictMode.setThreadPolicy(policy);
-		super.onCreate(savedInstanceState);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-		if (scrollView == null) {
-			scrollView = new ScrollView( this );
-			textView = new TextView( this );
-			scrollView.addView( textView );
-			scrollView.setKeepScreenOn(true);
-			AndroidProxy.setTextViewContext((Activity) this, textView);
-		}
-		AssetManager assetMgr = this.getAssets();
-		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
-		System.err.println("Before creating TF inference");
 		try {
-			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.err.println("Exception is " + e.getStackTrace());
-		}
-		System.err.println("After creating TF inference");
-		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
-		System.setProperty("nodie", "theater");
+			debugPrint("onCreate() is called");
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+			super.onCreate(savedInstanceState);
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+			if (scrollView == null) {
+				scrollView = new ScrollView(this);
+				textView = new TextView(this);
+				scrollView.addView(textView);
+				scrollView.setKeepScreenOn(true);
+				AndroidProxy.setTextViewContext((Activity) this, textView);
+			}
+			AssetManager assetMgr = this.getAssets();
+
+			MyExceptionHandler exceptionHandler = new MyExceptionHandler(this, this.getApplicationContext());
+			Thread.setDefaultUncaughtExceptionHandler(exceptionHandler);
+			System.err.println("Before creating TF inference");
+			try {
+				modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.err.println("Exception is " + e.getStackTrace());
+			}
+			System.err.println("After creating TF inference");
+			System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
+			System.setProperty("nodie", "theater");
 //		System.setProperty("nogc", "theater");
-		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
-		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
+			System.setProperty("port", AndroidTheaterService.THEATER_PORT);
+			System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
 //		if (CheckPerm() == false ) {
 //			AskPerm();
 //		}
 
-		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
-		generator = new Random();
-        new Thread(nqueensWorker).start();
-//		new Thread(numbersWorker).start();
-//		new Thread(numbers1Worker).start();
+			startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+			generator = new Random();
+			Thread nq = new Thread(nqueensWorker);
+			nq.setUncaughtExceptionHandler(exceptionHandler);
+			nq.start();
+//			new Thread(numbersWorker).start();
+//			new Thread(numbers1Worker).start();
 
-//		readInputArgs();
-//		createGamModel();
+//			readInputArgs();
+//			createGamModel();
 
-		new Thread(batteryWorker).start();
+			Thread batThread = new Thread(batteryWorker);
+			batThread.setUncaughtExceptionHandler(exceptionHandler);
+			batThread.start();
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 //	private void createGamModel() {
@@ -424,8 +433,18 @@ public class MainActivity extends Activity{
 
 	@Override
 	protected void onDestroy() {
+//		ActivityManager am = (ActivityManager) this.getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
+//		List<ActivityManager.RunningAppProcessInfo> pids = am.getRunningAppProcesses();
+//		for (int i = 0; i < pids.size(); i++) {
+//			ActivityManager.RunningAppProcessInfo info = pids.get(i);
+//			if (info.processName.equalsIgnoreCase(this.getApplicationContext().getPackageName())) {
+//				android.os.Process.killProcess(info.pid);
+//			}
+//		}
+
 		// The activity is about to be destroyed.
 		super.onDestroy();
+
 		debugPrint("onDestroy() is called");
 	}
 	

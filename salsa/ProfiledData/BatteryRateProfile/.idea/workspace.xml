@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="solve_eqns.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="solve_eqns.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/solve_eqns.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="289" column="31" lean-forward="false" selection-start-line="289" selection-start-column="31" selection-end-line="289" selection-end-column="31" />
+              <caret line="195" column="17" lean-forward="true" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1551082964923" expanded="true" signature="10404:12811" ph="..." />
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log_nqueens_ping.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="log_nqueens_ping.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens_ping.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61341">
-              <caret line="2667" column="0" lean-forward="false" selection-start-line="2667" selection-start-column="0" selection-end-line="2667" selection-end-column="0" />
+            <state relative-caret-position="299">
+              <caret line="2679" column="5" lean-forward="true" selection-start-line="2679" selection-start-column="5" selection-end-line="2679" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -531,6 +531,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1493" y="430" width="1861" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -545,7 +546,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29382303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29382303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -862,14 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens_ping.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61341">
-          <caret line="2667" column="0" lean-forward="false" selection-start-line="2667" selection-start-column="0" selection-end-line="2667" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/nqueens_ping_test_f.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -894,7 +887,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/solve_eqns.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="289" column="31" lean-forward="false" selection-start-line="289" selection-start-column="31" selection-end-line="289" selection-end-column="31" />
+          <caret line="195" column="17" lean-forward="true" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <marker date="1551082964923" expanded="true" signature="10404:12811" ph="..." />
@@ -928,6 +921,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5796">
           <caret line="257" column="82" lean-forward="false" selection-start-line="257" selection-start-column="65" selection-end-line="257" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens_ping.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="2679" column="5" lean-forward="true" selection-start-line="2679" selection-start-column="5" selection-end-line="2679" selection-end-column="5" />
           <folding />
         </state>
       </provider>
