@@ -834,14 +834,17 @@ public class MainActivity extends Activity{
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 		if (scrollView == null) {
 			scrollView = new ScrollView( this );
 			textView = new TextView( this );
 			scrollView.addView( textView );
+			scrollView.setKeepScreenOn(true);
 			AndroidProxy.setTextViewContext((Activity) this, textView);
 		}
 		AssetManager assetMgr = this.getAssets();
-//		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
+		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
 		System.err.println("Before creating TF inference");
 		try {
 			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
@@ -852,7 +855,7 @@ public class MainActivity extends Activity{
 		System.err.println("After creating TF inference");
 		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty("nodie", "theater");
-		System.setProperty("nogc", "theater");
+//		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
@@ -878,16 +881,21 @@ public class MainActivity extends Activity{
 //		new Thread(numsWorker10).start();
 
 		read_initial_in();
+
+		// Reduce the size of the network data
+//		int mid_network_data = network_data.length()/2;
+//		network_data = network_data.substring(0, mid_network_data);
+		// Reduce the size of the network data
+
 		new Thread(pingWorker).start();
 		new Thread(pingWorker1).start();
 		new Thread(pingWorker2).start();
-		new Thread(pingWorker3).start();
+//		new Thread(pingWorker3).start();
 //		new Thread(pingWorker4).start();
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
 		new Thread(batteryWorker).start();
 
-		readInputArgs();
 	}
 
 	@Override
