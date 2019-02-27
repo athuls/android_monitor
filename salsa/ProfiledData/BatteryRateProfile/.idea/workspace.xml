@@ -12,36 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="solve_eqns.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solve_eqns.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/solve_eqns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1297">
-              <caret line="227" column="36" lean-forward="true" selection-start-line="227" selection-start-column="36" selection-end-line="227" selection-end-column="36" />
+            <state relative-caret-position="438">
+              <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding>
-                <marker date="1544650918079" expanded="true" signature="10420:12827" ph="..." />
-                <marker date="1544650918079" expanded="true" signature="10543:11667" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1551297347381" expanded="true" signature="12546:12597" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hist_percent_fixed_size.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/histogram/hist_percent_fixed_size.py">
+      <file leaf-file-name="log_nqueens_ping.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens_ping.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="309" column="12" lean-forward="false" selection-start-line="309" selection-start-column="12" selection-end-line="309" selection-end-column="12" />
-              <folding>
-                <element signature="e#263#272#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dip-non-linear_train_f.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/dip-non-linear_train_f.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="506">
+              <caret line="2679" column="5" lean-forward="false" selection-start-line="2679" selection-start-column="5" selection-end-line="2679" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -50,18 +38,49 @@
       <file leaf-file-name="log_nqueens.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289708">
-              <caret line="12596" column="24" lean-forward="false" selection-start-line="12596" selection-start-column="0" selection-end-line="12596" selection-end-column="24" />
+            <state relative-caret-position="284349">
+              <caret line="12363" column="24" lean-forward="false" selection-start-line="12363" selection-start-column="0" selection-end-line="12363" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log_ping_processed.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_ping_processed.txt">
+      <file leaf-file-name="log_exsort_processed.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_exsort_processed.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69897">
-              <caret line="3039" column="10" lean-forward="false" selection-start-line="3039" selection-start-column="9" selection-end-line="3039" selection-end-column="10" />
+            <state relative-caret-position="5819">
+              <caret line="253" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hist_percent_fixed_size.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/histogram/hist_percent_fixed_size.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5681">
+              <caret line="252" column="82" lean-forward="false" selection-start-line="252" selection-start-column="82" selection-end-line="252" selection-end-column="82" />
+              <folding>
+                <marker date="1551219214971" expanded="true" signature="713:14079" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="10436:10445" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13152:13529" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13203:13500" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13299:13500" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13559:14079" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13612:14079" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13665:14079" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="13973:14043" ph="..." />
+                <marker date="1551219214971" expanded="true" signature="14082:14452" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_reader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/energy/battery/histogram/file_reader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -174,8 +193,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,8 +273,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,7 +541,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
+    <frame x="1493" y="430" width="1861" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -532,26 +551,47 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29076397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29076397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28471476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29382303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29076397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28471476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -836,6 +876,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5819">
           <caret line="253" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -843,6 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -855,8 +897,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens_ping.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-651972">
-          <caret line="2667" column="0" lean-forward="true" selection-start-line="2667" selection-start-column="0" selection-end-line="2667" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="2679" column="5" lean-forward="false" selection-start-line="2679" selection-start-column="5" selection-end-line="2679" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,11 +926,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/solve_sys/solve_eqns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1297">
-          <caret line="227" column="36" lean-forward="true" selection-start-line="227" selection-start-column="36" selection-end-line="227" selection-end-column="36" />
+        <state relative-caret-position="438">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding>
-            <marker date="1544650918079" expanded="true" signature="10420:12827" ph="..." />
-            <marker date="1544650918079" expanded="true" signature="10543:11667" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1551297347381" expanded="true" signature="12546:12597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -896,14 +939,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/mobile_logs/log_nqueens.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289708">
-          <caret line="12596" column="24" lean-forward="false" selection-start-line="12596" selection-start-column="0" selection-end-line="12596" selection-end-column="24" />
+        <state relative-caret-position="284349">
+          <caret line="12363" column="24" lean-forward="false" selection-start-line="12363" selection-start-column="0" selection-end-line="12363" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -912,16 +954,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69897">
           <caret line="3039" column="10" lean-forward="false" selection-start-line="3039" selection-start-column="9" selection-end-line="3039" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/energy/battery/histogram/hist_percent_fixed_size.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="309" column="12" lean-forward="false" selection-start-line="309" selection-start-column="12" selection-end-line="309" selection-end-column="12" />
+        <state relative-caret-position="5681">
+          <caret line="252" column="82" lean-forward="false" selection-start-line="252" selection-start-column="82" selection-end-line="252" selection-end-column="82" />
           <folding>
-            <element signature="e#263#272#0" expanded="true" />
+            <marker date="1551219214971" expanded="true" signature="713:14079" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="10436:10445" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13152:13529" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13203:13500" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13299:13500" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13559:14079" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13612:14079" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13665:14079" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="13973:14043" ph="..." />
+            <marker date="1551219214971" expanded="true" signature="14082:14452" ph="..." />
           </folding>
         </state>
       </provider>
