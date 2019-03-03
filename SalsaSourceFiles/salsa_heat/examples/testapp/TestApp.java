@@ -284,7 +284,7 @@ public class TestApp extends UniversalActor  {
 		public void SystemFun() {
 			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
 		}
-		public void PrintBright(int val, long initSec, int bright) {
+		public void PrintBright(int val, int tsleep, int bright) {
 			long time_init;
 			try {
 				val = bright;
@@ -298,6 +298,38 @@ public class TestApp extends UniversalActor  {
 					// standardOutput<-println("Thread Sleep Error Test")
 					{
 						Object _arguments[] = { "Thread Sleep Error Test" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+
+			try {
+				Thread.sleep(tsleep);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Thread Sleep Error test 0")
+					{
+						Object _arguments[] = { "Thread Sleep Error test 0" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+
+			try {
+				val = 10;
+				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+				layoutpars = window.getAttributes();
+				layoutpars.screenBrightness = val/(float)255;
+				window.setAttributes(layoutpars);
+			}
+			catch (Exception e) {
+				{
+					// standardOutput<-println("Thread Sleep Error Test 1")
+					{
+						Object _arguments[] = { "Thread Sleep Error Test 1" };
 						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 						__messages.add( message );
 					}
@@ -360,9 +392,9 @@ public class TestApp extends UniversalActor  {
 						Message message = new Message( self, self, "Bright", _arguments, token_3_1, token_3_2 );
 						__messages.add( message );
 					}
-					// PrintBright(token, 0, Integer.parseInt(args[0]))
+					// PrintBright(token, Integer.parseInt(args[0]), Integer.parseInt(args[1]))
 					{
-						Object _arguments[] = { token_3_2, new Integer(0), Integer.parseInt(args[0]) };
+						Object _arguments[] = { token_3_2, Integer.parseInt(args[0]), Integer.parseInt(args[1]) };
 						Message message = new Message( self, self, "PrintBright", _arguments, token_3_2, null );
 						__messages.add( message );
 					}

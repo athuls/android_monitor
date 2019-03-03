@@ -82,6 +82,7 @@ public class MainActivity extends Activity{
 	public String[] light = {"7","7", "7"};
 	public String[] heavy = {"13","13","10"};
 	public String[] appTime = {"10000"};
+	public String[] nqueensArgs;
 
 	private Random generator = new Random();
 	public TensorFlowInferenceInterface nqueenPredict;
@@ -93,12 +94,17 @@ public class MainActivity extends Activity{
 	public int numbersCount = 0;
 	public int numbers1Count = 0;
 	public int modeCount = 0;
+	private boolean switchVal = Boolean.TRUE;
 	private int initialWaitNqueens = 0;
 	private int initialWaitSampleScreen = 0;
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
+	private long finalTime;
+	private boolean rQueens = Boolean.TRUE;
+
 	private Handler nqueensHandler;
+    private Handler nqueensHandler1;
 	private Handler batteryHandler;
 	private Handler screenHandler;
 
@@ -212,26 +218,34 @@ public class MainActivity extends Activity{
 				// System.setProperty("nogc", "theater");
 
 				// Generate wait time before invoking actor
-				if(Math.random() < 0.3) {
+                int brightnessApp = 10 ;
+                int low_brightness = 150;
+                int high_brightness = 255;
+                double rVal = Math.random();
+				if(rVal > 0.7) {
 					// This is low energy mode
-					sleep1 = generator.nextInt(20000);
-					sleep2 = 0;
-				} else {
-					sleep1 = 20000;
-					sleep2 = generator.nextInt(55000);
+					sleep1 = generator.nextInt(40000);
+					brightnessApp = high_brightness;
+					//sleep2 = 0;
+				} else if( rVal > 0.1) {
+					//sleep1 = 20000;
+                    brightnessApp = low_brightness;
+					sleep1 = generator.nextInt(35000)+10000;
+				}
+				else{
+					brightnessApp = 10;
+					sleep1 = 0;
 				}
 
-				int low_brightness = 70;
-				int high_brightness = 255;
 
-				String[] args = {Integer.toString(low_brightness),
-								Integer.toString(high_brightness),
-								Integer.toString(sleep1),
-								Integer.toString(sleep2)};
+
+				String[] args = {Integer.toString(sleep1),
+								Integer.toString(brightnessApp),
+								};
 				TestApp.main(args);
 			}
 
-			screenHandler.postDelayed(runnableSampleScreen, sleep1 + sleep2 + 10000);
+			screenHandler.postDelayed(runnableSampleScreen, sleep1  + 10000);
 		}
 	};
 
@@ -242,8 +256,8 @@ public class MainActivity extends Activity{
 		public void run() {
 			//synchronized (oneScreenSyncToken) {
 				Looper.prepare();
-				nqueensHandler = new Handler();
-				nqueensHandler.postDelayed(runnableNqueens, initialWaitNqueens);
+				nqueensHandler1 = new Handler();
+				nqueensHandler1.postDelayed(runnableNqueens1, initialWaitNqueens);
 				Looper.loop();
 			//}
 		}
@@ -272,39 +286,103 @@ public class MainActivity extends Activity{
 	};
 
 	private Runnable runnableNqueens = new Runnable(){
-		@Override
-		public void run() {
-			waitUntilTheaterStarted();
-			synchronized (oneAppSyncToken) {
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
-				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+        @Override
+        public void run() {
+            waitUntilTheaterStarted();
+            synchronized (oneAppSyncToken) {
+                // The host name osl-server1.cs.illinois.edu is where the nameserver is running
+                System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+                //System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
 
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-				System.setProperty("nogc", "theater");
-				Numbers.main(heavy);
+                // Note that the IP address is the IP address of the smartphone
+                System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+                System.setProperty("nogc", "theater");
+                Numbers.main(heavy);
 
-			}
-			time_init += 2000;
-			if(time_init >= 600000){
-				time_init = 0;
+            }
+            time_init += 2000;
+            if(time_init >= 600000){
+                time_init = 0;
 
-					throw new RuntimeException();
+                throw new RuntimeException();
 
 
 
-			}
-			//int randomDelay = generator.nextInt(5001) + 20000;
-			synchronized (oneScreenSyncToken) {
-				//if (numbersCount > 0) {
-				//	numbersCount -= 1;
-					nqueensHandler.postDelayed(runnableNqueens, 2000);
-				//}
-			}
-		}
+            }
+            //int randomDelay = generator.nextInt(5001) + 20000;
+            synchronized (oneScreenSyncToken) {
+                //if (numbersCount > 0) {
+                //	numbersCount -= 1;
+                nqueensHandler.postDelayed(runnableNqueens, 2000);
+                //}
+            }
+        }
 
-	};
+    };
+    private Runnable runnableNqueens1 = new Runnable(){
+        @Override
+        public void run() {
+            waitUntilTheaterStarted();
+            synchronized (oneAppSyncToken) {
+                // The host name osl-server1.cs.illinois.edu is where the nameserver is running
+                System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+                //System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+                // Note that the IP address is the IP address of the smartphone
+                System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+                System.setProperty("nogc", "theater");
+
+                if(switchVal){
+                    double Rval = Math.random();
+                    if(Rval > 0.4){
+                        nqueensArgs = heavy;
+                        // Get a time till which it will run
+                        Random r = new Random();
+                        int RTime =  r.nextInt(20)+10;
+                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        switchVal = Boolean.FALSE;
+                        rQueens = Boolean.TRUE;
+                    }
+                    else if (Rval > 0.2){
+                        nqueensArgs = light;
+                        Random r = new Random();
+                        int RTime = r.nextInt(20)+10;
+                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        switchVal = Boolean.FALSE;
+                        rQueens = Boolean.TRUE;
+                    }
+                    else{
+                        Random r = new Random();
+                        int RTime = r.nextInt(20)+10;
+                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        switchVal = Boolean.FALSE;
+                        rQueens = Boolean.FALSE;
+                    }
+                }
+                else{
+                    if(System.currentTimeMillis() < finalTime){
+                        switchVal = Boolean.FALSE;
+                    }
+                    else {
+                        switchVal = Boolean.TRUE;
+                    }
+                    if(rQueens){
+                        Nqueens.main(nqueensArgs);
+                    }
+                }
+
+            }
+
+            //int randomDelay = generator.nextInt(5001) + 20000;
+            synchronized (oneScreenSyncToken) {
+                //if (numbersCount > 0) {
+                //	numbersCount -= 1;
+                nqueensHandler1.postDelayed(runnableNqueens1, 1000);
+                //}
+            }
+        }
+
+    };
 
 	private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
@@ -358,6 +436,7 @@ public class MainActivity extends Activity{
 
 		//tap.setUncaughtExceptionHandler(exp);
 		//tap.start();
+		new Thread(nqueensWorker).start();
 		new Thread(screenWorker).start();
 
 
