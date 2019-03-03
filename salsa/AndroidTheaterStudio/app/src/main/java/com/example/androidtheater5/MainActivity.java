@@ -96,7 +96,7 @@ public class MainActivity extends Activity{
 	public int modeCount = 0;
 	private boolean switchVal = Boolean.TRUE;
 	private int initialWaitNqueens = 0;
-	private int initialWaitSampleScreen = 0;
+	private int initialWaitSampleScreen = 10000;
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
@@ -187,7 +187,7 @@ public class MainActivity extends Activity{
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
 
-	private String mobileIpAddress = "10.194.109.237";
+	private String mobileIpAddress = "10.195.8.44";
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -224,13 +224,13 @@ public class MainActivity extends Activity{
                 double rVal = Math.random();
 				if(rVal > 0.7) {
 					// This is low energy mode
-					sleep1 = generator.nextInt(40000);
+					sleep1 = generator.nextInt(20000);
 					brightnessApp = high_brightness;
 					//sleep2 = 0;
 				} else if( rVal > 0.1) {
 					//sleep1 = 20000;
                     brightnessApp = low_brightness;
-					sleep1 = generator.nextInt(35000)+10000;
+					sleep1 = generator.nextInt(20000)+10000;
 				}
 				else{
 					brightnessApp = 10;
@@ -338,23 +338,23 @@ public class MainActivity extends Activity{
                         nqueensArgs = heavy;
                         // Get a time till which it will run
                         Random r = new Random();
-                        int RTime =  r.nextInt(20)+10;
-                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        int RTime =  generator.nextInt(20000)+10000;
+                        finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.TRUE;
                     }
-                    else if (Rval > 0.2){
+                    else if (Rval > 0.1){
                         nqueensArgs = light;
                         Random r = new Random();
-                        int RTime = r.nextInt(20)+10;
-                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        int RTime = generator.nextInt(20000)+10000;
+                        finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.TRUE;
                     }
                     else{
                         Random r = new Random();
-                        int RTime = r.nextInt(20)+10;
-                        finalTime = System.currentTimeMillis() + RTime*1000;
+                        int RTime = generator.nextInt(20000)+10000;
+                        finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.FALSE;
                     }
@@ -373,13 +373,9 @@ public class MainActivity extends Activity{
 
             }
 
-            //int randomDelay = generator.nextInt(5001) + 20000;
-            synchronized (oneScreenSyncToken) {
-                //if (numbersCount > 0) {
-                //	numbersCount -= 1;
-                nqueensHandler1.postDelayed(runnableNqueens1, 1000);
-                //}
-            }
+
+            nqueensHandler1.postDelayed(runnableNqueens1, 1000);
+
         }
 
     };
@@ -436,8 +432,11 @@ public class MainActivity extends Activity{
 
 		//tap.setUncaughtExceptionHandler(exp);
 		//tap.start();
-		new Thread(nqueensWorker).start();
+
+
 		new Thread(screenWorker).start();
+		new Thread(nqueensWorker).start();
+
 
 
 	}
