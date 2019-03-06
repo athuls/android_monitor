@@ -356,9 +356,9 @@ public class Numbers extends UniversalActor  {
 			}
 
 		}
-		public void Dummy() {
+		public void Dummy(int sleep, int loop) {
 			long val1 = 0;
-			for (int i = 0; i<500; i++){
+			for (int i = 0; i<loop; i++){
 				Random randomno = new Random();
 				val1 = randomno.nextLong();
 			}
@@ -372,12 +372,12 @@ public class Numbers extends UniversalActor  {
 			}
 			long time_init = System.currentTimeMillis();
 			long current_time = 0;
-			long final_time = time_init+1800;
+			long final_time = time_init+sleep;
 do {
 				current_time = System.currentTimeMillis();
 			}
  while (final_time>current_time);
-			for (int i = 0; i<500; i++){
+			for (int i = 0; i<loop; i++){
 				Random randomno = new Random();
 				val1 = randomno.nextLong();
 			}
@@ -392,38 +392,9 @@ do {
 		}
 		public void act(String args[]) {
 			{
-				Token token_2_0 = new Token();
-				Token token_2_1 = new Token();
-				Token token_2_2 = new Token();
-				// initSetting()
+				// Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
 				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "initSetting", _arguments, null, token_2_0 );
-					__messages.add( message );
-				}
-				// SystemFun()
-				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "SystemFun", _arguments, token_2_0, token_2_1 );
-					__messages.add( message );
-				}
-				// Bright()
-				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "Bright", _arguments, token_2_1, token_2_2 );
-					__messages.add( message );
-				}
-				// PrintBright(token, 0, 1500)
-				{
-					Object _arguments[] = { token_2_2, new Integer(0), new Integer(1500) };
-					Message message = new Message( self, self, "PrintBright", _arguments, token_2_2, null );
-					__messages.add( message );
-				}
-			}
-			{
-				// Dummy()
-				{
-					Object _arguments[] = {  };
+					Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
 					Message message = new Message( self, self, "Dummy", _arguments, null, null );
 					__messages.add( message );
 				}

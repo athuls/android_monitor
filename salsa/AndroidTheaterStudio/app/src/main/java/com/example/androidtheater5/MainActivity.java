@@ -104,8 +104,13 @@ public class MainActivity extends Activity{
 	private boolean pswitchVal = Boolean.TRUE;
 	private int initialWaitNqueens = 0;
 	private int initialWaitSampleScreen = 10000;
+	private int initialWaitNumbers = 0;
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
+
+	private String num_heavy = "1000";
+	private String num_light = "200";
+	private String num_arg;
 
 	private long finalTime;
 	private long pfinalTime;
@@ -117,6 +122,7 @@ public class MainActivity extends Activity{
 	private Handler batteryHandler;
 	private Handler screenHandler;
 	private Handler pingHandler;
+	private Handler numbersHandler;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -306,6 +312,18 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	private Runnable numbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			//synchronized (oneScreenSyncToken) {
+			Looper.prepare();
+			numbersHandler = new Handler();
+			numbersHandler.postDelayed(runnableNumbers, initialWaitNumbers);
+			Looper.loop();
+			//}
+		}
+	};
+
 	private Runnable runnableNqueens = new Runnable(){
         @Override
         public void run() {
@@ -340,6 +358,68 @@ public class MainActivity extends Activity{
         }
 
     };
+
+	private Runnable runnableNumbers = new Runnable(){
+		@Override
+		public void run() {
+			waitUntilTheaterStarted();
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+				System.setProperty("nogc", "theater");
+
+				if(switchVal){
+					double Rval = Math.random();
+					if(Rval > 0.4){
+						num_arg = num_heavy;
+						// Get a time till which it will run
+						Random r = new Random();
+						int RTime =  generator.nextInt(20000)+10000;
+						finalTime = System.currentTimeMillis() + RTime;
+						switchVal = Boolean.FALSE;
+						rQueens = Boolean.TRUE;
+					}
+					else if (Rval > 0.1){
+						num_arg = num_light;
+						Random r = new Random();
+						int RTime = generator.nextInt(20000)+10000;
+						finalTime = System.currentTimeMillis() + RTime;
+						switchVal = Boolean.FALSE;
+						rQueens = Boolean.TRUE;
+					}
+					else{
+						num_arg = num_light;
+						Random r = new Random();
+						int RTime = generator.nextInt(20000)+10000;
+						finalTime = System.currentTimeMillis() + RTime;
+						switchVal = Boolean.FALSE;
+						rQueens = Boolean.FALSE;
+					}
+				}
+				String[] args = {num_arg,"500"};
+				if(System.currentTimeMillis() < finalTime){
+					switchVal = Boolean.FALSE;
+				}
+				else {
+					switchVal = Boolean.TRUE;
+				}
+				if(rQueens){
+					Numbers.main(args);
+				}
+
+
+			}
+
+
+			numbersHandler.postDelayed(runnableNumbers, 5000);
+
+		}
+
+	};
     private Runnable runnableNqueens1 = new Runnable(){
         @Override
         public void run() {
@@ -550,7 +630,10 @@ public class MainActivity extends Activity{
 		//tap.start();
 
 
-		Thread nQ = new Thread(nqueensWorker);
+//		Thread nQ = new Thread(nqueensWorker);
+//		nQ.setUncaughtExceptionHandler(exp);
+//		nQ.start();
+		Thread nQ = new Thread(numbersWorker);
 		nQ.setUncaughtExceptionHandler(exp);
 		nQ.start();
 		Thread sW = new Thread(screenWorker);

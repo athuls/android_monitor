@@ -72,7 +72,7 @@ behavior Numbers {
 
      } 
    
-    void Dummy(){
+    void Dummy(int sleep, int loop){
 
     
 
@@ -80,7 +80,7 @@ behavior Numbers {
 
 	
 	long val1 = 0;
-	for (int i = 0; i< 500; i++){
+	for (int i = 0; i< loop; i++){
 	    // number<-inc()@currentContinuation;
 		Random randomno = new Random();
     	 val1 = randomno.nextLong();
@@ -97,11 +97,11 @@ behavior Numbers {
 		// }
 		long time_init = System.currentTimeMillis();
 		long current_time = 0;
-		long final_time = time_init + 1800;
+		long final_time = time_init + sleep;
 		do{
 			current_time = System.currentTimeMillis();
 		}while(final_time > current_time);
-		for (int i = 0; i< 500; i++){
+		for (int i = 0; i< loop; i++){
 	    // number<-inc()@currentContinuation;
 		Random randomno = new Random();
     	 val1 = randomno.nextLong();
@@ -112,8 +112,9 @@ behavior Numbers {
     }
 
     void act(String args[]){
-	initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
-    Dummy();
+	//initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
+    Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]));
+    
 	standardOutput<-println();
     }
 }
