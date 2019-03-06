@@ -108,8 +108,8 @@ public class MainActivity extends Activity{
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
-	private String num_heavy = "1000";
-	private String num_light = "200";
+	private String num_heavy = "4000";
+	private String num_light = "600";
 	private String num_arg;
 
 	private long finalTime;
@@ -415,7 +415,7 @@ public class MainActivity extends Activity{
 			}
 
 
-			numbersHandler.postDelayed(runnableNumbers, 5000);
+			numbersHandler.postDelayed(runnableNumbers, 1000);
 
 		}
 
