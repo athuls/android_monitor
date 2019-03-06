@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/heat.jar:unspecified@jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/heat.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
