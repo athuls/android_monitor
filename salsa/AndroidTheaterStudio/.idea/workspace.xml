@@ -15,25 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/EchoAgent.salsa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/HCSB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/HCSB.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/HCSB_full.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/HCSB_full.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/Ping.salsa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/commands_ping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/commands_ping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/ping/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +64,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="376" column="67" lean-forward="true" selection-start-line="376" selection-start-column="67" selection-end-line="376" selection-end-column="67" />
+            <state relative-caret-position="-2168">
+              <caret line="397" column="59" selection-start-line="397" selection-start-column="59" selection-end-line="397" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2118,8 +2101,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MyExceptionHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/AndroidTheaterService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2491,7 +2474,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32971507" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49367088" weight="0.32943678" />
@@ -2931,8 +2913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="376" column="67" lean-forward="true" selection-start-line="376" selection-start-column="67" selection-end-line="376" selection-end-column="67" />
+        <state relative-caret-position="-2168">
+          <caret line="397" column="59" selection-start-line="397" selection-start-column="59" selection-end-line="397" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

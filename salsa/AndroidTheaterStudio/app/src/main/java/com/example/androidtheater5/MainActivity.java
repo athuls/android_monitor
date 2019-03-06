@@ -395,7 +395,7 @@ public class MainActivity extends Activity{
             }
 
 
-            nqueensHandler1.postDelayed(runnableNqueens1, 3000);
+            nqueensHandler1.postDelayed(runnableNqueens1, 5000);
 
         }
 
