@@ -108,7 +108,7 @@ public class MainActivity extends Activity{
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
-	private String num_heavy = "40000";
+	private String num_heavy = "60000";
 	private String num_light = "2000";
 	private String num_arg_ct="2";
 	private String num_arg;
@@ -242,17 +242,17 @@ public class MainActivity extends Activity{
                 double rVal = Math.random();
 				if(rVal > 0.7) {
 					// This is low energy mode
-					sleep1 = generator.nextInt(20000);
+					sleep1 = generator.nextInt(200000);
 					brightnessApp = high_brightness;
 					//sleep2 = 0;
 				} else if( rVal > 0.1) {
 					//sleep1 = 20000;
                     brightnessApp = low_brightness;
-					sleep1 = generator.nextInt(20000)+10000;
+					sleep1 = generator.nextInt(200000);
 				}
 				else{
 					brightnessApp = 10;
-					sleep1 = 0;
+					sleep1 = generator.nextInt(200000);
 				}
 
 
@@ -328,7 +328,7 @@ public class MainActivity extends Activity{
 	private Runnable runnableNqueens = new Runnable(){
         @Override
         public void run() {
-            waitUntilTheaterStarted();
+			waitUntilTheaterStarted();
             synchronized (oneAppSyncToken) {
                 // The host name osl-server1.cs.illinois.edu is where the nameserver is running
                 System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
@@ -375,21 +375,21 @@ public class MainActivity extends Activity{
 
 				if(switchVal){
 					double Rval = Math.random();
-					if(Rval > 0.4){
+					if(Rval > 0.55){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						// Get a time till which it will run
 						Random r = new Random();
-						int RTime =  generator.nextInt(300000)+100000;
+						long RTime =  generator.nextInt(300000)+100000;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
 					}
-					else if (Rval > 0.1){
+					else if (Rval > 0.15){
 						num_arg = num_light;
-						num_arg_ct = "2";
+						num_arg_ct = "3";
 						Random r = new Random();
-						int RTime = generator.nextInt(300000)+100000;
+						long RTime = generator.nextInt(300000)+100000;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
@@ -397,7 +397,7 @@ public class MainActivity extends Activity{
 					else{
 						num_arg = num_light;
 						Random r = new Random();
-						int RTime = generator.nextInt(20000)+10000;
+						int RTime = generator.nextInt(20000)+50000;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.FALSE;
