@@ -181,8 +181,8 @@ public class Numbers extends UniversalActor  {
 		}
 	}
 
-	public UniversalActor construct() {
-		Object[] __arguments = { };
+	public UniversalActor construct () {
+		Object[] __arguments = {  };
 		this.send( new Message(this, this, "construct", __arguments, null, null) );
 		return this;
 	}
@@ -215,8 +215,6 @@ public class Numbers extends UniversalActor  {
 			addClassName( "examples.numbers.Numbers$State" );
 			addMethodsForClasses();
 		}
-
-		public void construct() {}
 
 		public void process(Message message) {
 			Method[] matches = getMatches(message.getMethodName());
@@ -276,6 +274,8 @@ public class Numbers extends UniversalActor  {
 		ContentResolver cResolver;
 		Window window;
 		LayoutParams layoutpars;
+		public void construct(){
+		}
 		public void initSetting() {
 			cResolver = AndroidProxy.ContentResolverCall();
 			window = AndroidProxy.WindowCall();
@@ -391,12 +391,16 @@ do {
 			}
 		}
 		public void act(String args[]) {
-			{
-				// Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
+			Numbers[] actors = new Numbers[Integer.parseInt(args[2])];
+			for (int i = 0; i<actors.length; i++){
+				actors[i] = ((Numbers)new Numbers(this).construct());
 				{
-					Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
-					Message message = new Message( self, self, "Dummy", _arguments, null, null );
-					__messages.add( message );
+					// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
+					{
+						Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
+						Message message = new Message( self, actors[i], "Dummy", _arguments, null, null );
+						__messages.add( message );
+					}
 				}
 			}
 			{

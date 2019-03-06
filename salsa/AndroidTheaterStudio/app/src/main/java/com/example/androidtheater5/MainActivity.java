@@ -108,8 +108,9 @@ public class MainActivity extends Activity{
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
-	private String num_heavy = "4000";
-	private String num_light = "600";
+	private String num_heavy = "40000";
+	private String num_light = "2000";
+	private String num_arg_ct="2";
 	private String num_arg;
 
 	private long finalTime;
@@ -376,17 +377,19 @@ public class MainActivity extends Activity{
 					double Rval = Math.random();
 					if(Rval > 0.4){
 						num_arg = num_heavy;
+						num_arg_ct = "7";
 						// Get a time till which it will run
 						Random r = new Random();
-						int RTime =  generator.nextInt(20000)+10000;
+						int RTime =  generator.nextInt(300000)+100000;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
 					}
 					else if (Rval > 0.1){
 						num_arg = num_light;
+						num_arg_ct = "2";
 						Random r = new Random();
-						int RTime = generator.nextInt(20000)+10000;
+						int RTime = generator.nextInt(300000)+100000;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
@@ -400,7 +403,7 @@ public class MainActivity extends Activity{
 						rQueens = Boolean.FALSE;
 					}
 				}
-				String[] args = {num_arg,"500"};
+				String[] args = {num_arg,"500",num_arg_ct};
 				if(System.currentTimeMillis() < finalTime){
 					switchVal = Boolean.FALSE;
 				}

@@ -13,6 +13,11 @@ behavior Numbers {
    	private ContentResolver cResolver;
     private Window window;
     private LayoutParams layoutpars;
+
+    public Numbers(){
+
+    }
+
     void initSetting(){
         cResolver = AndroidProxy.ContentResolverCall();
         window = AndroidProxy.WindowCall();
@@ -113,7 +118,12 @@ behavior Numbers {
 
     void act(String args[]){
 	//initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
-    Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]));
+    Numbers[] actors=new Numbers[Integer.parseInt(args[2])];
+    for(int i = 0; i< actors.length; i++){
+        actors[i] = new Numbers();
+        actors[i]<-Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]));
+    }
+    
     
 	standardOutput<-println();
     }

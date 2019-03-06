@@ -15,12 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/examples/numbers/Numbers.salsa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa1.1.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../SalsaSourceFiles/salsa_heat/salsa_heat.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTheaterStudio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTheaterStudio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/salsa_heat.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/salsa_heat.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,12 +71,10 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="417" column="57" selection-start-line="417" selection-start-column="57" selection-end-line="417" selection-end-column="57" />
+            <state relative-caret-position="-1672">
+              <caret line="391" column="65" selection-start-line="391" selection-start-column="65" selection-end-line="391" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10461#12159#0" expanded="true" />
-                <element signature="e#12158#12159#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2593,8 +2594,6 @@
           <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10461#12159#0" expanded="true" />
-            <element signature="e#12158#12159#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2612,8 +2611,6 @@
           <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10461#12159#0" expanded="true" />
-            <element signature="e#12158#12159#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2658,8 +2655,6 @@
         <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10461#12159#0" expanded="true" />
-            <element signature="e#12158#12159#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2696,8 +2691,6 @@
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10461#12159#0" expanded="true" />
-            <element signature="e#12158#12159#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2929,12 +2922,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="417" column="57" selection-start-line="417" selection-start-column="57" selection-end-line="417" selection-end-column="57" />
+        <state relative-caret-position="-1672">
+          <caret line="391" column="65" selection-start-line="391" selection-start-column="65" selection-end-line="391" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10461#12159#0" expanded="true" />
-            <element signature="e#12158#12159#0" expanded="true" />
           </folding>
         </state>
       </provider>
