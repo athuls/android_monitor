@@ -201,19 +201,10 @@ public class EchoAgent extends UniversalActor  implements ActorService {
 		}
 		public void hello(String pingMessage) {
 			{
-				// standardOutput<-println("Hello from ping with message length "+pingMessage.length())
+				// standardOutput<-println("Hello from ping with message length "+pingMessage.getBytes().length)
 				{
-					Object _arguments[] = { "Hello from ping with message length "+pingMessage.length() };
+					Object _arguments[] = { "Hello from ping with message length "+pingMessage.getBytes().length };
 					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
-					__messages.add( message );
-				}
-			}
-			Ping pingAgent = (Ping)Ping.getReferenceByName(new UAN(pingAgentName));
-			{
-				// pingAgent<-pong("Pong right back at you Ping")
-				{
-					Object _arguments[] = { "Pong right back at you Ping" };
-					Message message = new Message( self, pingAgent, "pong", _arguments, null, null );
 					__messages.add( message );
 				}
 			}

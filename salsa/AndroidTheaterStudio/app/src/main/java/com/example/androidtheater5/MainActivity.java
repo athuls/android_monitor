@@ -39,10 +39,13 @@ import examples.testapp.TestApp;
 import examples.numbers.Numbers;
 import salsa.language.UniversalActor;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.lang.*;
 import java.util.Date;
@@ -83,6 +86,9 @@ public class MainActivity extends Activity{
 	public String[] heavy = {"13","13","10"};
 	public String[] appTime = {"10000"};
 	public String[] nqueensArgs;
+	private String network_data_heavy = "";
+	private String network_data_light = "";
+	private String network_data="";
 
 	private Random generator = new Random();
 	public TensorFlowInferenceInterface nqueenPredict;
@@ -95,18 +101,22 @@ public class MainActivity extends Activity{
 	public int numbers1Count = 0;
 	public int modeCount = 0;
 	private boolean switchVal = Boolean.TRUE;
+	private boolean pswitchVal = Boolean.TRUE;
 	private int initialWaitNqueens = 0;
 	private int initialWaitSampleScreen = 10000;
 	private Thread prev_threadNQ;
 	private  Thread prev_threadSc;
 
 	private long finalTime;
+	private long pfinalTime;
 	private boolean rQueens = Boolean.TRUE;
+	private boolean rPing = Boolean.TRUE;
 
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
 	private Handler batteryHandler;
 	private Handler screenHandler;
+	private Handler pingHandler;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -187,7 +197,7 @@ public class MainActivity extends Activity{
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
 
-	private String mobileIpAddress = "10.195.8.44";
+	private String mobileIpAddress = "10.194.109.237";
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -212,6 +222,7 @@ public class MainActivity extends Activity{
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneScreenSyncToken) {
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+				//System.setProperty("uan", "uan://10.193.66.174:3030/mydip1");
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
@@ -282,6 +293,16 @@ public class MainActivity extends Activity{
 				screenHandler.postDelayed(runnableSampleScreen, initialWaitSampleScreen);
 				Looper.loop();
 			}
+		}
+	};
+
+	private Runnable pingWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			pingHandler = new Handler();
+			pingHandler.post(runnablePing);
+			Looper.loop();
 		}
 	};
 
@@ -359,26 +380,121 @@ public class MainActivity extends Activity{
                         rQueens = Boolean.FALSE;
                     }
                 }
-                else{
-                    if(System.currentTimeMillis() < finalTime){
-                        switchVal = Boolean.FALSE;
-                    }
-                    else {
-                        switchVal = Boolean.TRUE;
-                    }
-                    if(rQueens){
-                        Nqueens.main(nqueensArgs);
-                    }
-                }
+
+				if(System.currentTimeMillis() < finalTime){
+					switchVal = Boolean.FALSE;
+				}
+				else {
+					switchVal = Boolean.TRUE;
+				}
+				if(rQueens){
+					Nqueens.main(nqueensArgs);
+				}
+
 
             }
 
 
-            nqueensHandler1.postDelayed(runnableNqueens1, 1000);
+            nqueensHandler1.postDelayed(runnableNqueens1, 3000);
 
         }
 
     };
+
+	private void read_initial_in(){
+		String fileName = "HCSB_full.txt";
+		String inputFile = "";
+		try {
+			InputStream is = Ping.class.getResourceAsStream(fileName);
+			BufferedReader in = new BufferedReader(new InputStreamReader(is));
+			if (in==null) {
+				System.err.println("[Custom] The file cannot be found");
+			}
+			else {
+				String line;
+				while ((line = in.readLine()) != null) {
+					inputFile = inputFile + line;
+				}
+				in.close();
+			}
+
+		} catch (IOException ioe) {
+			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
+		}
+		network_data_light = inputFile;
+		for (int i = 0; i < 3; i++) {
+			network_data_heavy += inputFile;
+		}
+	}
+	private Runnable runnablePing = new Runnable(){
+		@Override
+		public void run() {
+
+			waitUntilTheaterStarted();
+
+			synchronized (oneAppSyncToken) {
+				// Ping program
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc");
+
+				System.clearProperty("netif");
+				System.clearProperty("port");
+				//System.clearProperty("nodie");
+
+				//String  network_data = "";
+
+				if(pswitchVal){
+					double Rval = Math.random();
+					if(Rval > 0.8){
+						network_data = network_data_light;
+						// Get a time till which it will run
+						//Random r = new Random();
+						int RTime =  generator.nextInt(10000)+10000;
+						pfinalTime = System.currentTimeMillis() + RTime;
+						pswitchVal = Boolean.FALSE;
+						rPing = Boolean.TRUE;
+					}
+					else if (Rval > 0.5){
+						network_data = network_data_light;
+						//Random r = new Random();
+						int RTime = generator.nextInt(10000)+10000;
+						pfinalTime = System.currentTimeMillis() + RTime;
+						pswitchVal = Boolean.FALSE;
+						rPing = Boolean.TRUE;
+					}
+					else{
+						//Random r = new Random();
+						network_data = "";
+						int RTime = generator.nextInt(20000)+10000;
+						pfinalTime = System.currentTimeMillis() + RTime;
+						pswitchVal = Boolean.FALSE;
+						rPing = Boolean.FALSE;
+					}
+				}
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
+
+				if(System.currentTimeMillis() < pfinalTime){
+					pswitchVal = Boolean.FALSE;
+				}
+				else {
+					pswitchVal = Boolean.TRUE;
+				}
+				if(rPing){
+					Ping.main(args);
+				}
+
+				//Ping.main(args);
+			}
+
+			pingHandler.postDelayed(runnablePing, 1000);
+		}
+
+	};
 
 	private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
@@ -417,8 +533,8 @@ public class MainActivity extends Activity{
 		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
-		System.setProperty( "nodie", "theater" );
-		System.setProperty("nogc", "theater");
+		//System.setProperty( "nodie", "theater" );
+		//System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
@@ -426,7 +542,7 @@ public class MainActivity extends Activity{
 		if (CheckPerm() == false ) {
 			AskPerm();
 		}
-
+		read_initial_in();
 		new Thread(batteryWorker).start();
 		//SampleScreen();
 
@@ -434,8 +550,14 @@ public class MainActivity extends Activity{
 		//tap.start();
 
 
-		new Thread(screenWorker).start();
-		new Thread(nqueensWorker).start();
+		Thread nQ = new Thread(nqueensWorker);
+		nQ.setUncaughtExceptionHandler(exp);
+		nQ.start();
+		Thread sW = new Thread(screenWorker);
+		sW.setUncaughtExceptionHandler(exp);
+		sW.start();
+		//new Thread(nqueensWorker).start();
+		//new Thread(pingWorker).start();
 
 
 

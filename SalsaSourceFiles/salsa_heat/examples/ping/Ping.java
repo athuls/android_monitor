@@ -274,7 +274,7 @@ public class Ping extends UniversalActor  {
 
 		long startTime;
 		String inputFile;
-		public void ping(String remoteUAN) {
+		public void ping(String networkData, String remoteUAN) {
 			UniversalActor ref = (UniversalActor)UniversalActor.getReferenceByName(remoteUAN);
 			{
 				// standardOutput<-println("Sending PING to remote service at "+remoteUAN)
@@ -301,15 +301,15 @@ public class Ping extends UniversalActor  {
 					Message message = new Message( self, self, "startTime", _arguments, null, token_2_0 );
 					__messages.add( message );
 				}
-				// standardOutput<-println("Sending echo message")
+				// standardOutput<-println("Sending echo message of size "+networkData.getBytes().length)
 				{
-					Object _arguments[] = { "Sending echo message" };
+					Object _arguments[] = { "Sending echo message of size "+networkData.getBytes().length };
 					Message message = new Message( self, standardOutput, "println", _arguments, token_2_0, token_2_1 );
 					__messages.add( message );
 				}
-				// ref<-hello(inputFile)
+				// ref<-hello(networkData)
 				{
-					Object _arguments[] = { inputFile };
+					Object _arguments[] = { networkData };
 					Message message = new Message( self, ref, "hello", _arguments, token_2_1, null );
 					__messages.add( message );
 				}
@@ -402,31 +402,10 @@ public class Ping extends UniversalActor  {
 			try {
 				UniversalActor self_ref = (UniversalActor)UniversalActor.getReferenceByName(args[2]);
 				{
-					Token token_3_0 = new Token();
-					Token token_3_1 = new Token();
-					Token token_3_2 = new Token();
-					// standardOutput<-println("Ping full name is "+((Ping)self))
+					// ping(args[0], args[1])
 					{
-						Object _arguments[] = { "Ping full name is "+((Ping)self) };
-						Message message = new Message( self, standardOutput, "println", _arguments, null, token_3_0 );
-						__messages.add( message );
-					}
-					// standardOutput<-println("Self ping actor full name is "+self_ref)
-					{
-						Object _arguments[] = { "Self ping actor full name is "+self_ref };
-						Message message = new Message( self, standardOutput, "println", _arguments, token_3_0, token_3_1 );
-						__messages.add( message );
-					}
-					// read_initial_in(args[0])
-					{
-						Object _arguments[] = { args[0] };
-						Message message = new Message( self, self, "read_initial_in", _arguments, token_3_1, token_3_2 );
-						__messages.add( message );
-					}
-					// ping(args[1])
-					{
-						Object _arguments[] = { args[1] };
-						Message message = new Message( self, self, "ping", _arguments, token_3_2, null );
+						Object _arguments[] = { args[0], args[1] };
+						Message message = new Message( self, self, "ping", _arguments, null, null );
 						__messages.add( message );
 					}
 				}

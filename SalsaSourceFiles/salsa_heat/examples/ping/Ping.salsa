@@ -15,15 +15,33 @@ behavior Ping {
     long startTime;
     String inputFile;
 
-    void ping(String remoteUAN){
+    void ping(String networkData, String remoteUAN){
 	UniversalActor ref=(UniversalActor)UniversalActor.getReferenceByName(remoteUAN);
         standardOutput <- println("Sending PING to remote service at "+remoteUAN);
 	standardOutput <- println(ref);
+	
+	/*
+	String appendedInputFile = "";
+ 	for (int i = 0; i < 1; i++) { 
+		appendedInputFile += inputFile;	
+	}
+	*/
 
 	startTime()@
-	standardOutput <- println("Sending echo message")@
-	// ref<-echo(self);
-	ref<-hello(inputFile);
+	standardOutput <- println("Sending echo message of size " + networkData.getBytes().length)@
+	ref<-hello(networkData);
+	// ref<-echo(self);	
+	/*
+	try {
+		while(true) {
+			ref<-hello(appendedInputFile);
+			Thread.sleep(1000);
+   		}
+	} catch (Exception e) {
+		standardOutput<-println("There was an error with generating network load");	
+	}
+	*/
+        //@standardOutput <- println("Done sending message to echo agent");
     }
 
     void startTime() {
@@ -57,7 +75,6 @@ behavior Ping {
            String line;
 	   inputFile="";
            while ((line = in.readLine()) != null) {
-             //this.report("ExternalSort: just read: "+line);
              inputFile = inputFile + line;
            }
            in.close();
@@ -70,14 +87,14 @@ behavior Ping {
         System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
       }
     }
-
+ 
     void act(String args[]){
 	try {
 		UniversalActor self_ref = (UniversalActor) UniversalActor.getReferenceByName(args[2]);
-		standardOutput<-println("Ping full name is " + self)@
-		standardOutput<-println("Self ping actor full name is " + self_ref)@
-		read_initial_in(args[0])@
-		ping(args[1]);
+		// standardOutput<-println("Ping full name is " + self)@
+		// standardOutput<-println("Self ping actor full name is " + self_ref)@
+		// read_initial_in(args[0])@
+		ping(args[0], args[1]);
 	} 
         catch (Exception e) {
 		standardOutput<-println("Usage: java examples.ping.Ping <remote_uan of service>");

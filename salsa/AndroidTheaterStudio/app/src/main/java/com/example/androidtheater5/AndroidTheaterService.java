@@ -49,8 +49,8 @@ public class AndroidTheaterService extends Service {
 	}
 	
 	protected void createTheater() {
-		System.setProperty("nogc", "theater");
-	    System.setProperty( "nodie", "theater" );
+		//System.setProperty("nogc", "theater");
+//	    System.setProperty( "nodie", "theater" );
 	    System.setProperty( "netif", NETWORK_INTERFACE );
 	    System.setProperty( "port", THEATER_PORT );
 	    System.setProperty("output", STDOUT_CLASS);
