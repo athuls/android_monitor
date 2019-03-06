@@ -24,19 +24,21 @@ from sklearn.decomposition import PCA
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_nqueens.txt'
+g_train_file_name='log_actor_interaction_1_actor_3.762MB_full.txt'
 g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="nqueens_train_f.txt"
-g_test_out_file="nqueens_test_f.txt"
+g_train_out_file="actor_interaction_1_actor_3.762MB_full_train_f.txt"
+g_test_out_file="actor_interaction_1_actor_3.762MB_full_test_f.txt"
 LEN = 24
-g_time_format = "%a %b %d %H:%M:%S PDT %Y"
+g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 # g_time_format = "%b %d,%Y %H:%M:%S"
 
 def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
-    sys_eqns_lhs = []
+    sys_eqns_lhs = {}
     sys_eqns_rhs = []
     curr_timestamp_marker = 0
     check = 0
+    for a in actor_names:
+        sys_eqns_lhs[a] = []
     for batteryDropInterval in full_data:
         check += len(batteryDropInterval)
 
@@ -47,96 +49,108 @@ def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
         batteryDropIntervalLength = datetime.timedelta.total_seconds(time_diff)
         curr_timestamp_marker = curr_timestamp_marker + len(batteryDropInterval)
 
-        exec_observation = []
-
-        # Need to run pca on samples within battery drop interval
+        curr_eqn = {}
+        for a in actor_names:
+            curr_eqn[a] = {}
         for sample in batteryDropInterval:
-            segment = []
             for actor_name in actor_names:
                 if actor_name in sample:
-                    segment.append(sample[actor_name])
+                    if sample[actor_name] in curr_eqn[actor_name]:
+                        curr_eqn[actor_name][sample[actor_name]] += 1
+                    else:
+                        curr_eqn[actor_name][sample[actor_name]] = 1
                 else:
-                    segment.append(0)
-            exec_observation.append(segment)
-
-        sys_eqns_lhs.append(exec_observation)
+                    if 0 in curr_eqn[actor_name]:
+                        curr_eqn[actor_name][0] += 1
+                    else:
+                        curr_eqn[actor_name][0] = 1
+        for actor_name in curr_eqn:
+            sys_eqns_lhs[actor_name].append(curr_eqn[actor_name])
         sys_eqns_rhs.append(batteryDropIntervalLength)
-
-        # zero-padding
-        max_dim = 0
-        for obs in sys_eqns_lhs:
-            if max_dim < len(obs):
-                max_dim = len(obs)
-
-        for obs in sys_eqns_lhs:
-            while(len(obs) < max_dim):
-                segment = []
-                for act_name in actor_names:
-                    segment.append(0)
-                obs.append(segment)
 
     return sys_eqns_lhs, sys_eqns_rhs
 
 # def create_sys_of_eqns(actor_names, full_data, timestamp_logs):
-#     sys_eqns_lhs = {}
+#     sys_eqns_lhs = []
 #     sys_eqns_rhs = []
 #     curr_timestamp_marker = 0
 #     check = 0
-#     for a in actor_names:
-#         sys_eqns_lhs[a] = []
 #     for batteryDropInterval in full_data:
 #         check += len(batteryDropInterval)
-# 
+#
 #         # Get the time duration for a battery drop interval
 #         interval_end_time = datetime.datetime.strptime(timestamp_logs[curr_timestamp_marker + len(batteryDropInterval) - 1], g_time_format)
 #         interval_start_time = datetime.datetime.strptime(timestamp_logs[curr_timestamp_marker], g_time_format)
 #         time_diff = interval_end_time - interval_start_time
 #         batteryDropIntervalLength = datetime.timedelta.total_seconds(time_diff)
 #         curr_timestamp_marker = curr_timestamp_marker + len(batteryDropInterval)
-# 
-#         curr_eqn = {}
-#         for a in actor_names:
-#             curr_eqn[a] = {}
+#
+#         exec_observation = []
+#
+#         # Need to run pca on samples within battery drop interval
 #         for sample in batteryDropInterval:
+#             segment = []
 #             for actor_name in actor_names:
 #                 if actor_name in sample:
-#                     if sample[actor_name] in curr_eqn[actor_name]:
-#                         curr_eqn[actor_name][sample[actor_name]] += 1
-#                     else:
-#                         curr_eqn[actor_name][sample[actor_name]] = 1
+#                     segment.append(sample[actor_name])
 #                 else:
-#                     if 0 in curr_eqn[actor_name]:
-#                         curr_eqn[actor_name][0] += 1
-#                     else:
-#                         curr_eqn[actor_name][0] = 1
-#         for actor_name in curr_eqn:
-#             sys_eqns_lhs[actor_name].append(curr_eqn[actor_name])
+#                     segment.append(0)
+#             exec_observation.append(segment)
+#
+#         sys_eqns_lhs.append(exec_observation)
 #         sys_eqns_rhs.append(batteryDropIntervalLength)
-# 
+#
+#         # zero-padding
+#         max_dim = 0
+#         for obs in sys_eqns_lhs:
+#             if max_dim < len(obs):
+#                 max_dim = len(obs)
+#
+#         for obs in sys_eqns_lhs:
+#             while(len(obs) < max_dim):
+#                 segment = []
+#                 for act_name in actor_names:
+#                     segment.append(0)
+#                 obs.append(segment)
+#
 #     return sys_eqns_lhs, sys_eqns_rhs
 
 def getTrainingTestingSeperateData(actor_names, eqns, eqns_test):
     return 0
 
 def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
-    X_vals = []
+    X_vals = {}
 
-    # Add data to the matrix
-    for drainInterval in sys_eqns_lhs:
-        obs = []
-        for segment in drainInterval:
-            for actorCount in segment:
-                obs.append(segment[0])
-        X_vals.append(obs)
+    for actor_name in actor_names:
+        current_eqn = sys_eqns_lhs[actor_name]
+        feats = np.zeros((len(current_eqn), LEN))
 
-    # # right side of linear system
+        # Add data to the matrix
+        for i in range(len(current_eqn)):
+            const_dict = current_eqn[i]
+            for key in const_dict:
+                if key >= LEN:
+                    feats[i][LEN-1] += const_dict[key]
+                # We are dropping features where the actor count is 0
+                elif key > 0:
+                    feats[i][key - 1] += const_dict[key]
+
+        X_vals[actor_name] = feats
+
+    # right side of linear system
     Y_vals = np.asarray(sys_eqns_rhs)
-
     print("length is " + str(len(Y_vals)))
 
     test_ind = int(len(sys_eqns_rhs) * (1 - test_prop))
     X_training = {}
     X_testing = {}
+
+    for key in X_vals:
+        X_training[key] = X_vals[key][0:test_ind]
+        X_testing[key] = X_vals[key][test_ind:]
+
+    Y_training = Y_vals[0:test_ind]
+    Y_testing = Y_vals[test_ind:]
 
     ############ Shuffle so that test sets generated each time are different ########
     # test_data_count = int(len(sys_eqns_rhs) * test_prop)
@@ -170,16 +184,11 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
     #     X_testing[key] = X_vals[key][test_ind:]
     # Non-shuffle
 
-    X_training = X_vals[0:test_ind]
-    X_testing = X_vals[test_ind:]
-
+    # Non-shuffle
     # for test_idx in test_indices:
     #     Y_testing.append(Y_vals[test_idx])
     # for train_idx in train_indices:
     #     Y_training.append(Y_vals[train_idx])
-    # Non-shuffle
-    Y_training = Y_vals[0:test_ind]
-    Y_testing = Y_vals[test_ind:]
     # Non-shuffle
     ##################################
 
@@ -188,26 +197,74 @@ def getTrainingTesting(actor_names, sys_eqns_lhs, sys_eqns_rhs, test_prop=0.10):
     train_f = open(g_train_out_file, "w")
     count = 1
 
+    for actor_name_f in X_training:
+        for val in X_training[actor_name_f][0]:
+            train_f.write(actor_name_f + "_" + str(count) + ",")
+            count += 1
+        count = 1
+    train_f.write("BatteryDropTime\n")
+
     # Now add training values
     data_point_idx = 0
+    data_set = []
+    data_set_points = []
+    for actor_name_f in X_training:
+        for data_point in X_training[actor_name_f]:
+            if(len(data_set) > data_point_idx):
+                data_set_points=data_set[data_point_idx]
 
-    for data_set_iter in X_training:
+            for feat_val in data_point:
+                data_set_points.append(feat_val)
+
+            if(len(data_set) <= data_point_idx):
+                data_set.append(data_set_points)
+                data_set_points=[]
+            data_point_idx += 1
+
+        data_point_idx = 0
+
+    for data_set_iter in data_set:
         for data_point_iter in data_set_iter:
             train_f.write(str(data_point_iter) + ",")
         train_f.write(str(Y_training[data_point_idx]) + "\n")
         data_point_idx += 1
 
     # Capture test data
+    # First add the header row for test dataset
+    test_f = open(g_test_out_file, "w")
+    count = 1
+    for actor_name_f in X_testing:
+        for val in X_testing[actor_name_f][0]:
+            test_f.write(actor_name_f + "_" + str(count) + ",")
+            count += 1
+        count = 1
+    test_f.write("BatteryDropTime\n")
+
     # Now add test values
     data_point_idx = 0
     data_set = []
     data_set_points = []
-    for data_set_iter in X_test:
+    for actor_name_f in X_testing:
+        for data_point in X_testing[actor_name_f]:
+            if(len(data_set) > data_point_idx):
+                data_set_points=data_set[data_point_idx]
+
+            for feat_val in data_point:
+                data_set_points.append(feat_val)
+            #                train_f.write(str(feat_val) + ",")
+            #            train_f.write(str(Y_training[data_point_idx]) + "\n")
+            if(len(data_set) <= data_point_idx):
+                data_set.append(data_set_points)
+                data_set_points=[]
+            data_point_idx += 1
+
+        data_point_idx = 0
+
+    for data_set_iter in data_set:
         for data_point_iter in data_set_iter:
             test_f.write(str(data_point_iter) + ",")
         test_f.write(str(Y_testing[data_point_idx]) + "\n")
         data_point_idx += 1
-
 
     return (X_training, Y_training), (X_testing, Y_testing)
 

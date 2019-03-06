@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" ></uses-permission>
-    
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" ></uses-permission>
+
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />

@@ -8,6 +8,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -414,6 +416,7 @@ public class MainActivity extends Activity{
 			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 		}
 
+		// 3.762 MB of data for i = 3
 		for (int i = 0; i < 3; i++) {
 			network_data += inputFile;
 		}
@@ -488,7 +491,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler.postDelayed(runnableNumbers, 1000);
+//			numsHandler.postDelayed(runnableNumbers, 1100);
 		}
 
 	};
@@ -506,7 +509,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler1.postDelayed(runnableNumbers1, 1000);
+//			numsHandler1.postDelayed(runnableNumbers1, 1100);
 		}
 
 	};
@@ -524,7 +527,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler2.postDelayed(runnableNumbers2, 1000);
+//			numsHandler2.postDelayed(runnableNumbers2, 1100);
 		}
 
 	};
@@ -542,7 +545,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler3.postDelayed(runnableNumbers3, 1000);
+//			numsHandler3.postDelayed(runnableNumbers3, 1100);
 		}
 
 	};
@@ -560,7 +563,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler4.postDelayed(runnableNumbers4, 1000);
+//			numsHandler4.postDelayed(runnableNumbers4, 1100);
 		}
 
 	};
@@ -578,7 +581,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler5.postDelayed(runnableNumbers5, 1000);
+//			numsHandler5.postDelayed(runnableNumbers5, 1100);
 		}
 
 	};
@@ -596,7 +599,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler6.postDelayed(runnableNumbers6, 1000);
+//			numsHandler6.postDelayed(runnableNumbers6, 1100);
 		}
 
 	};
@@ -614,7 +617,7 @@ public class MainActivity extends Activity{
 				Numbers1.main(args);
 			}
 
-//			numsHandler7.postDelayed(runnableNumbers7, 1000);
+//			numsHandler7.postDelayed(runnableNumbers7, 1100);
 		}
 
 	};
@@ -855,7 +858,7 @@ public class MainActivity extends Activity{
 		System.err.println("After creating TF inference");
 		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty("nodie", "theater");
-//		System.setProperty("nogc", "theater");
+		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
@@ -890,9 +893,9 @@ public class MainActivity extends Activity{
 		new Thread(pingWorker).start();
 		new Thread(pingWorker1).start();
 		new Thread(pingWorker2).start();
-//		new Thread(pingWorker3).start();
-//		new Thread(pingWorker4).start();
-//		new Thread(pingWorker5).start();
+		new Thread(pingWorker3).start();
+		new Thread(pingWorker4).start();
+		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
 		new Thread(batteryWorker).start();
 
@@ -904,6 +907,7 @@ public class MainActivity extends Activity{
 		super.onStart();
 		AssetManager assetMgr = this.getAssets();
 		debugPrint("onStart() is called");
+		appendLog("Wifi signal strength is " + getWifiSignalStrength());
 	}
 
 	@Override
@@ -933,7 +937,15 @@ public class MainActivity extends Activity{
 		super.onDestroy();
 		debugPrint("onDestroy() is called");
 	}
-	
+
+	private int getWifiSignalStrength() {
+		int numberOfLevels=5;
+		WifiManager wifiManager = (WifiManager) this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+		int level=WifiManager.calculateSignalLevel(wifiInfo.getRssi(), numberOfLevels);
+		return level;
+	}
+
 	protected void debugPrint( String str ) {
 		Log.i(TAG, str);
 		showTextOnUI(str + "\n");
@@ -997,6 +1009,8 @@ public class MainActivity extends Activity{
 			System.err.println("Error in network reading");
 		}
 
+		old_net = netVal;
+
 		if(cpuUsage) {
 			try {
 				double cpuUsageVal = readUsage();
@@ -1021,8 +1035,6 @@ public class MainActivity extends Activity{
 			}
 			appendLog("\n");
 		}
-
-		old_net = netVal;
 	}
 
 	protected void showTextOnUI( final String str ) {
