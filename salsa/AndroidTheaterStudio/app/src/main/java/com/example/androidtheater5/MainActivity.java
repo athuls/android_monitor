@@ -352,7 +352,7 @@ public class MainActivity extends Activity{
             synchronized (oneScreenSyncToken) {
                 //if (numbersCount > 0) {
                 //	numbersCount -= 1;
-                nqueensHandler.postDelayed(runnableNqueens, 2000);
+                nqueensHandler1.postDelayed(runnableNqueens1, 1000);
                 //}
             }
         }
@@ -420,6 +420,7 @@ public class MainActivity extends Activity{
 		}
 
 	};
+
     private Runnable runnableNqueens1 = new Runnable(){
         @Override
         public void run() {
