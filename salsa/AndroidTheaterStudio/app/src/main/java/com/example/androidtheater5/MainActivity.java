@@ -475,7 +475,7 @@ public class MainActivity extends Activity{
             }
 
 
-            nqueensHandler1.postDelayed(runnableNqueens1, 5000);
+            nqueensHandler1.postDelayed(runnableNqueens1, 1000);
 
         }
 
@@ -610,7 +610,7 @@ public class MainActivity extends Activity{
 		MyExceptionHandler exp = new MyExceptionHandler(this, this.getApplicationContext());
 		Thread.setDefaultUncaughtExceptionHandler(exp);
 
-		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
+//		nqueenPredict = new TensorFlowInferenceInterface(assetMgr, "nqueens_model.pb");
 
 		System.setProperty( "netif", AndroidTheaterService.NETWORK_INTERFACE);
 		//System.setProperty( "nodie", "theater" );
