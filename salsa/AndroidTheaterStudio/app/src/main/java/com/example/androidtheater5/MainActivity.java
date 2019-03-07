@@ -214,7 +214,9 @@ public class MainActivity extends Activity{
 			batteryHandler.postDelayed(runnableSampleBattery, 1000);
 		}
 	};
-	
+
+	private int runnableScreenInstCount = 0;
+
 	private Runnable runnableSampleScreen = new Runnable(){
 		@Override
 		public void run() {
@@ -230,13 +232,14 @@ public class MainActivity extends Activity{
 
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneScreenSyncToken) {
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mydip");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myscreen" + runnableScreenInstCount);
 				//System.setProperty("uan", "uan://10.193.66.174:3030/mydip1");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mydiploc");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/myscreenloc" + runnableScreenInstCount);
 				// System.setProperty("nogc", "theater");
 
+				runnableScreenInstCount++;
 				// Generate wait time before invoking actor
                 int brightnessApp = 10 ;
                 int low_brightness = 150;
@@ -265,7 +268,7 @@ public class MainActivity extends Activity{
 				TestApp.main(args);
 			}
 
-			screenHandler.postDelayed(runnableSampleScreen, sleep1  + 10000);
+			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 10000);
 		}
 	};
 
@@ -338,7 +341,6 @@ public class MainActivity extends Activity{
 
                 // Note that the IP address is the IP address of the smartphone
                 System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-                System.setProperty("nogc", "theater");
                 Numbers.main(heavy);
 
             }
@@ -362,28 +364,31 @@ public class MainActivity extends Activity{
 
     };
 
+	private int runnableNumbersInstCount = 0;
+
 	private Runnable runnableNumbers = new Runnable(){
 		@Override
 		public void run() {
 			waitUntilTheaterStarted();
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens" + runnableNumbersInstCount );
 				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-				System.setProperty("nogc", "theater");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc" + runnableNumbersInstCount );
+				runnableNumbersInstCount ++;
+//				System.setProperty("nogc", "theater");
 
 				if(switchVal){
 					double Rval = Math.random();
-					if(Rval > 0.0){
+					if(Rval > 0.55){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
 						// Get a time till which it will run
 						Random r = new Random();
-						long RTime =  generator.nextInt(30000)+10000;
+						long RTime =  generator.nextInt(300000)+100000;
 						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
@@ -394,7 +399,7 @@ public class MainActivity extends Activity{
 						num_arg_ct = "3";
 						num_state = "low";
 						Random r = new Random();
-						long RTime = generator.nextInt(30000)+10000;
+						long RTime = generator.nextInt(300000)+100000;
 						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
@@ -404,7 +409,7 @@ public class MainActivity extends Activity{
 						num_arg = num_light;
 						num_state = "none";
 						Random r = new Random();
-						int RTime = generator.nextInt(2000)+5000;
+						int RTime = generator.nextInt(20000)+50000;
 						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
@@ -419,11 +424,10 @@ public class MainActivity extends Activity{
 				else {
 					switchVal = Boolean.TRUE;
 				}
+
 				if(rQueens){
 					Numbers.main(args);
 				}
-
-
 			}
 
 
@@ -444,7 +448,7 @@ public class MainActivity extends Activity{
 
                 // Note that the IP address is the IP address of the smartphone
                 System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
-                System.setProperty("nogc", "theater");
+//                System.setProperty("nogc", "theater");
 
                 if(switchVal){
                     double Rval = Math.random();
@@ -580,8 +584,6 @@ public class MainActivity extends Activity{
 				if(rPing){
 					Ping.main(args);
 				}
-
-				//Ping.main(args);
 			}
 
 			pingHandler.postDelayed(runnablePing, 1000);
@@ -639,19 +641,15 @@ public class MainActivity extends Activity{
 		new Thread(batteryWorker).start();
 		//SampleScreen();
 
-		//tap.setUncaughtExceptionHandler(exp);
-		//tap.start();
-
-
 //		Thread nQ = new Thread(nqueensWorker);
 //		nQ.setUncaughtExceptionHandler(exp);
 //		nQ.start();
 		Thread nQ = new Thread(numbersWorker);
 		nQ.setUncaughtExceptionHandler(exp);
 		nQ.start();
-//		Thread sW = new Thread(screenWorker);
-//		sW.setUncaughtExceptionHandler(exp);
-//		sW.start();
+		Thread sW = new Thread(screenWorker);
+		sW.setUncaughtExceptionHandler(exp);
+		sW.start();
 		//new Thread(nqueensWorker).start();
 		//new Thread(pingWorker).start();
 
