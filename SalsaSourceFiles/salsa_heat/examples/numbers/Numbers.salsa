@@ -81,37 +81,38 @@ behavior Numbers {
 
     
 
-	// Number number = new Number(0);
+    	// Number number = new Number(0);
 
-	
-	long val1 = 0;
-	for (int i = 0; i< loop; i++){
-	    // number<-inc()@currentContinuation;
-		Random randomno = new Random();
-    	 val1 = randomno.nextLong();
-	}
+    	
+    	long val1 = 0;
+    	for (int i = 0; i< loop; i++){
+    	    // number<-inc()@currentContinuation;
+    		Random randomno = new Random();
+        	 val1 = randomno.nextLong();
+    	}
 
-	standardOutput<-println("Thread 0 first part done");
+    	//standardOutput<-println("Thread 0 first part done");
 
-	// Adder adder = new Adder(number);
-	// Printer printer = new Printer(number);
+    	// Adder adder = new Adder(number);
+    	// Printer printer = new Printer(number);
 
-		// for (int i = 0 ; i<5; i++){
-	   	 // adder<-go();
-	   	 // printer<-go();
-		// }
-		long time_init = System.currentTimeMillis();
-		long current_time = 0;
-		long final_time = time_init + sleep;
-		do{
-			current_time = System.currentTimeMillis();
-		}while(final_time > current_time);
-		for (int i = 0; i< loop; i++){
-	    // number<-inc()@currentContinuation;
-		Random randomno = new Random();
-    	 val1 = randomno.nextLong();
-	}
-	standardOutput<-println("Thread 0 Done");
+    		// for (int i = 0 ; i<5; i++){
+    	   	 // adder<-go();
+    	   	 // printer<-go();
+    		// }
+    		long time_init = System.currentTimeMillis();
+    		long current_time = 0;
+    		long final_time = time_init + sleep;
+    		do{
+    			current_time = System.currentTimeMillis();
+    		}while(final_time > current_time);
+    		for (int i = 0; i< loop; i++){
+    	    // number<-inc()@currentContinuation;
+    		Random randomno = new Random();
+        	 val1 = randomno.nextLong();
+    	}
+    	//standardOutput<-println("Thread 0 Done");
+
 		
 
     }
@@ -119,12 +120,17 @@ behavior Numbers {
     void act(String args[]){
 	//initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
     Numbers[] actors=new Numbers[Integer.parseInt(args[2])];
+    standardOutput<-println("Time to sleep "+ args[3]+"State "+args[4])@
+    join{
     for(int i = 0; i< actors.length; i++){
         actors[i] = new Numbers();
         actors[i]<-Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]));
     }
-    
-    
-	standardOutput<-println();
+    } @ 
+    join{
+        for(int i=0 ; i<actors.length; i++){
+            actors[i] = null;
+        }
+    }@standardOutput<-println();
     }
 }

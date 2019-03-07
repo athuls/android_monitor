@@ -362,14 +362,6 @@ public class Numbers extends UniversalActor  {
 				Random randomno = new Random();
 				val1 = randomno.nextLong();
 			}
-			{
-				// standardOutput<-println("Thread 0 first part done")
-				{
-					Object _arguments[] = { "Thread 0 first part done" };
-					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
-					__messages.add( message );
-				}
-			}
 			long time_init = System.currentTimeMillis();
 			long current_time = 0;
 			long final_time = time_init+sleep;
@@ -381,33 +373,43 @@ do {
 				Random randomno = new Random();
 				val1 = randomno.nextLong();
 			}
-			{
-				// standardOutput<-println("Thread 0 Done")
-				{
-					Object _arguments[] = { "Thread 0 Done" };
-					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
-					__messages.add( message );
-				}
-			}
 		}
 		public void act(String args[]) {
 			Numbers[] actors = new Numbers[Integer.parseInt(args[2])];
-			for (int i = 0; i<actors.length; i++){
-				actors[i] = ((Numbers)new Numbers(this).construct());
+			{
+				Token token_2_0 = new Token();
+				Token token_2_1 = new Token();
+				Token token_2_2 = new Token();
+				// standardOutput<-println("Time to sleep "+args[3]+"State "+args[4])
 				{
-					// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
+					Object _arguments[] = { "Time to sleep "+args[3]+"State "+args[4] };
+					Message message = new Message( self, standardOutput, "println", _arguments, null, token_2_0 );
+					__messages.add( message );
+				}
+				// join block
+				token_2_1.setJoinDirector();
+				for (int i = 0; i<actors.length; i++){
+					actors[i] = ((Numbers)new Numbers(this).construct());
 					{
-						Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
-						Message message = new Message( self, actors[i], "Dummy", _arguments, null, null );
-						__messages.add( message );
+						// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
+						{
+							Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
+							Message message = new Message( self, actors[i], "Dummy", _arguments, token_2_0, token_2_1 );
+							__messages.add( message );
+						}
 					}
 				}
-			}
-			{
+				addJoinToken(token_2_1);
+				// join block
+				token_2_2.setJoinDirector();
+				for (int i = 0; i<actors.length; i++){
+					actors[i] = null;
+				}
+				addJoinToken(token_2_2);
 				// standardOutput<-println()
 				{
 					Object _arguments[] = {  };
-					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+					Message message = new Message( self, standardOutput, "println", _arguments, token_2_2, null );
 					__messages.add( message );
 				}
 			}

@@ -89,6 +89,7 @@ public class MainActivity extends Activity{
 	private String network_data_heavy = "";
 	private String network_data_light = "";
 	private String network_data="";
+	private String num_state = "Low";
 
 	private Random generator = new Random();
 	public TensorFlowInferenceInterface nqueenPredict;
@@ -115,6 +116,7 @@ public class MainActivity extends Activity{
 
 	private long finalTime;
 	private long pfinalTime;
+	private long numSleep;
 	private boolean rQueens = Boolean.TRUE;
 	private boolean rPing = Boolean.TRUE;
 
@@ -375,12 +377,14 @@ public class MainActivity extends Activity{
 
 				if(switchVal){
 					double Rval = Math.random();
-					if(Rval > 0.55){
+					if(Rval > 0.0){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
+						num_state = "high";
 						// Get a time till which it will run
 						Random r = new Random();
-						long RTime =  generator.nextInt(300000)+100000;
+						long RTime =  generator.nextInt(30000)+10000;
+						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
@@ -388,22 +392,27 @@ public class MainActivity extends Activity{
 					else if (Rval > 0.15){
 						num_arg = num_light;
 						num_arg_ct = "3";
+						num_state = "low";
 						Random r = new Random();
-						long RTime = generator.nextInt(300000)+100000;
+						long RTime = generator.nextInt(30000)+10000;
+						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.TRUE;
 					}
 					else{
 						num_arg = num_light;
+						num_state = "none";
 						Random r = new Random();
-						int RTime = generator.nextInt(20000)+50000;
+						int RTime = generator.nextInt(2000)+5000;
+						numSleep = RTime;
 						finalTime = System.currentTimeMillis() + RTime;
 						switchVal = Boolean.FALSE;
 						rQueens = Boolean.FALSE;
 					}
 				}
-				String[] args = {num_arg,"500",num_arg_ct};
+				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state};
+
 				if(System.currentTimeMillis() < finalTime){
 					switchVal = Boolean.FALSE;
 				}
@@ -640,9 +649,9 @@ public class MainActivity extends Activity{
 		Thread nQ = new Thread(numbersWorker);
 		nQ.setUncaughtExceptionHandler(exp);
 		nQ.start();
-		Thread sW = new Thread(screenWorker);
-		sW.setUncaughtExceptionHandler(exp);
-		sW.start();
+//		Thread sW = new Thread(screenWorker);
+//		sW.setUncaughtExceptionHandler(exp);
+//		sW.start();
 		//new Thread(nqueensWorker).start();
 		//new Thread(pingWorker).start();
 
@@ -837,7 +846,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
@@ -856,7 +865,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + " actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + "Time Sleep "+ numSleep+" Actor state "+num_state+" actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
