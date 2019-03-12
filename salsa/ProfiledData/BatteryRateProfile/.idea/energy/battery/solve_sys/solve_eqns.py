@@ -23,10 +23,10 @@ from tensorflow.python.ops import parsing_ops
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_actor_interaction_3_actors_3.762MB_full.txt'
+g_train_file_name='log_var_workload_CPU_display.txt'
 g_actor_list_name='examples.nqueens.Nqueens,examples.ping.Ping'
-g_train_out_file="actor_interaction_3_actors_3.762MB_full_train_f.txt"
-g_test_out_file="actor_interaction_3_actors_3.762MB_full_test_f.txt"
+g_train_out_file="var_workload_CPU_display_train_f.txt"
+g_test_out_file="var_workload_CPU_display_test_f.txt"
 LEN = 24
 g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 
