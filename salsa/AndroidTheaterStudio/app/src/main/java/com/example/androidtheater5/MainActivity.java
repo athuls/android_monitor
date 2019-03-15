@@ -257,7 +257,7 @@ public class MainActivity extends Activity{
 					rScrn = Boolean.TRUE;
 					//rScrnF = Boolean.FALSE;
 					//sleep2 = 0;
-				} else if( rVal > 0.5) {
+				} else if( rVal > 0.3) {
 					//sleep1 = 20000;
                     brightnessApp = low_brightness;
 					sleep1 = generator.nextInt(100000)+100000;
@@ -413,7 +413,7 @@ public class MainActivity extends Activity{
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
 					}
-					else if (Rval > 0.35){
+					else if (Rval > 0.25){
 						num_arg = num_light;
 						num_arg_ct = "3";
 						num_state = "low";
@@ -668,15 +668,15 @@ public class MainActivity extends Activity{
 //		Thread nQ = new Thread(nqueensWorker);
 //		nQ.setUncaughtExceptionHandler(exp);
 //		nQ.start();
-//		Thread nW = new Thread(numbersWorker);
-//		nW.setUncaughtExceptionHandler(exp);
-//		nW.start();
+		Thread nW = new Thread(numbersWorker);
+		nW.setUncaughtExceptionHandler(exp);
+		nW.start();
 		Thread sW = new Thread(screenWorker);
 		sW.setUncaughtExceptionHandler(exp);
 		sW.start();
-		Thread nP = new Thread(pingWorker);
-		nP.setUncaughtExceptionHandler(exp);
-		nP.start();
+//		Thread nP = new Thread(pingWorker);
+//		nP.setUncaughtExceptionHandler(exp);
+//		nP.start();
 		//new Thread(nqueensWorker).start();
 		//new Thread(pingWorker).start();
 

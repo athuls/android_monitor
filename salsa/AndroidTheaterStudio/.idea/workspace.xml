@@ -15,12 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTheaterStudio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTheaterStudio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <ignored path="AndroidTheater5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +63,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1573">
-              <caret line="482" column="39" selection-start-line="482" selection-start-column="39" selection-end-line="482" selection-end-column="39" />
+            <state relative-caret-position="368">
+              <caret line="681" lean-forward="true" selection-start-line="681" selection-end-line="681" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2497,10 +2492,10 @@
       <window_info id="Captures" order="2" sideWeight="0.4989899" weight="0.24964234" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.841785" visible="true" weight="0.20886981" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.53290415" visible="true" weight="0.3310719" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85481685" visible="true" weight="0.20886981" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.53290415" visible="true" weight="0.0" />
       <window_info anchor="right" id="Gradle" order="8" weight="0.023605151" />
-      <window_info id="Structure" order="1" sideWeight="0.15821502" side_tool="true" visible="true" weight="0.20886981" />
+      <window_info id="Structure" order="1" sideWeight="0.14518318" side_tool="true" visible="true" weight="0.20886981" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49587232" weight="0.3995749" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -2921,8 +2916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1573">
-          <caret line="482" column="39" selection-start-line="482" selection-start-column="39" selection-end-line="482" selection-end-column="39" />
+        <state relative-caret-position="368">
+          <caret line="681" lean-forward="true" selection-start-line="681" selection-end-line="681" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
