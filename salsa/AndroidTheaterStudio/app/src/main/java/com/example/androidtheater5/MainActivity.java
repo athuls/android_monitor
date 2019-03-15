@@ -103,6 +103,7 @@ public class MainActivity extends Activity{
 	public int modeCount = 0;
 	private boolean switchVal = Boolean.TRUE;
 	private boolean pswitchVal = Boolean.TRUE;
+	private boolean nswitchVal = Boolean.TRUE;
 	private int initialWaitNqueens = 0;
 	private int initialWaitSampleScreen = 10000;
 	private int initialWaitNumbers = 0;
@@ -116,9 +117,13 @@ public class MainActivity extends Activity{
 
 	private long finalTime;
 	private long pfinalTime;
+	private long nfinalTime;
 	private long numSleep;
 	private boolean rQueens = Boolean.TRUE;
 	private boolean rPing = Boolean.TRUE;
+	private boolean rNum = Boolean.TRUE;
+	private boolean rScrn = Boolean.TRUE;
+	private boolean rScrnF = Boolean.TRUE;
 
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
@@ -232,11 +237,11 @@ public class MainActivity extends Activity{
 
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneScreenSyncToken) {
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myscreen" + runnableScreenInstCount);
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myscreen"+runnableScreenInstCount);
 				//System.setProperty("uan", "uan://10.193.66.174:3030/mydip1");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/myscreenloc" + runnableScreenInstCount);
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/myscreenloc"+runnableScreenInstCount );
 				// System.setProperty("nogc", "theater");
 
 				runnableScreenInstCount++;
@@ -245,30 +250,44 @@ public class MainActivity extends Activity{
                 int low_brightness = 150;
                 int high_brightness = 255;
                 double rVal = Math.random();
-				if(rVal > 0.7) {
+				if(rVal > 0.75) {
 					// This is low energy mode
-					sleep1 = generator.nextInt(200000);
+					sleep1 = generator.nextInt(100000)+10000;
 					brightnessApp = high_brightness;
+					rScrn = Boolean.TRUE;
+					//rScrnF = Boolean.FALSE;
 					//sleep2 = 0;
-				} else if( rVal > 0.1) {
+				} else if( rVal > 0.5) {
 					//sleep1 = 20000;
                     brightnessApp = low_brightness;
-					sleep1 = generator.nextInt(200000);
+					sleep1 = generator.nextInt(100000)+100000;
+					rScrn = Boolean.TRUE;
+					//rScrnF = Boolean.FALSE;
 				}
 				else{
 					brightnessApp = 10;
-					sleep1 = generator.nextInt(200000);
+					sleep1 = generator.nextInt(100000)+100000;
+					rScrn = Boolean.FALSE;
+					if(rScrnF){
+						rScrnF = Boolean.FALSE;
+						String[] args = {Integer.toString(1000),
+								Integer.toString(brightnessApp),
+						};
+						TestApp.main(args);
+					}
 				}
 
 
-
-				String[] args = {Integer.toString(sleep1),
-								Integer.toString(brightnessApp),
-								};
-				TestApp.main(args);
+				if(rScrn) {
+					//rScrnF = Boolean.FALSE;
+					String[] args = {Integer.toString(sleep1),
+							Integer.toString(brightnessApp),
+					};
+					TestApp.main(args);
+				}
 			}
 
-			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 10000);
+			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 5000);
 		}
 	};
 
@@ -380,9 +399,9 @@ public class MainActivity extends Activity{
 				runnableNumbersInstCount ++;
 //				System.setProperty("nogc", "theater");
 
-				if(switchVal){
+				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.55){
+					if(Rval > 0.75){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
@@ -390,20 +409,20 @@ public class MainActivity extends Activity{
 						Random r = new Random();
 						long RTime =  generator.nextInt(300000)+100000;
 						numSleep = RTime;
-						finalTime = System.currentTimeMillis() + RTime;
-						switchVal = Boolean.FALSE;
-						rQueens = Boolean.TRUE;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
 					}
-					else if (Rval > 0.15){
+					else if (Rval > 0.35){
 						num_arg = num_light;
 						num_arg_ct = "3";
 						num_state = "low";
 						Random r = new Random();
 						long RTime = generator.nextInt(300000)+100000;
 						numSleep = RTime;
-						finalTime = System.currentTimeMillis() + RTime;
-						switchVal = Boolean.FALSE;
-						rQueens = Boolean.TRUE;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
 					}
 					else{
 						num_arg = num_light;
@@ -411,21 +430,21 @@ public class MainActivity extends Activity{
 						Random r = new Random();
 						int RTime = generator.nextInt(20000)+50000;
 						numSleep = RTime;
-						finalTime = System.currentTimeMillis() + RTime;
-						switchVal = Boolean.FALSE;
-						rQueens = Boolean.FALSE;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.FALSE;
 					}
 				}
 				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state};
 
-				if(System.currentTimeMillis() < finalTime){
-					switchVal = Boolean.FALSE;
+				if(System.currentTimeMillis() < nfinalTime){
+					nswitchVal = Boolean.FALSE;
 				}
 				else {
-					switchVal = Boolean.TRUE;
+					nswitchVal = Boolean.TRUE;
 				}
 
-				if(rQueens){
+				if(rNum){
 					Numbers.main(args);
 				}
 			}
@@ -436,42 +455,42 @@ public class MainActivity extends Activity{
 		}
 
 	};
-
+	private int runnableNqInstCount = 0;
     private Runnable runnableNqueens1 = new Runnable(){
         @Override
         public void run() {
             waitUntilTheaterStarted();
             synchronized (oneAppSyncToken) {
                 // The host name osl-server1.cs.illinois.edu is where the nameserver is running
-                System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens");
+                System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens"+runnableNqInstCount);
                 //System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
 
                 // Note that the IP address is the IP address of the smartphone
-                System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc");
+                System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc"+runnableNqInstCount);
 //                System.setProperty("nogc", "theater");
-
+				runnableNqInstCount++;
                 if(switchVal){
                     double Rval = Math.random();
-                    if(Rval > 0.4){
+                    if(Rval > 0.7){
                         nqueensArgs = heavy;
                         // Get a time till which it will run
                         Random r = new Random();
-                        int RTime =  generator.nextInt(20000)+10000;
+                        int RTime =  generator.nextInt(200000)+100000;
                         finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.TRUE;
                     }
-                    else if (Rval > 0.1){
+                    else if (Rval > 0.2){
                         nqueensArgs = light;
                         Random r = new Random();
-                        int RTime = generator.nextInt(20000)+10000;
+                        int RTime = generator.nextInt(200000)+100000;
                         finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.TRUE;
                     }
                     else{
                         Random r = new Random();
-                        int RTime = generator.nextInt(20000)+10000;
+                        int RTime = generator.nextInt(200000)+100000;
                         finalTime = System.currentTimeMillis() + RTime;
                         switchVal = Boolean.FALSE;
                         rQueens = Boolean.FALSE;
@@ -523,6 +542,8 @@ public class MainActivity extends Activity{
 			network_data_heavy += inputFile;
 		}
 	}
+
+	private int runnablePingInstCount = 0;
 	private Runnable runnablePing = new Runnable(){
 		@Override
 		public void run() {
@@ -534,11 +555,11 @@ public class MainActivity extends Activity{
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping"+runnablePingInstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc");
-
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc"+runnablePingInstCount);
+				runnablePingInstCount++;
 				System.clearProperty("netif");
 				System.clearProperty("port");
 				//System.clearProperty("nodie");
@@ -547,19 +568,21 @@ public class MainActivity extends Activity{
 
 				if(pswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.8){
-						network_data = network_data_light;
+					if(Rval > 0.7){
+						network_data = network_data_heavy;
+						num_state="high";
 						// Get a time till which it will run
 						//Random r = new Random();
-						int RTime =  generator.nextInt(10000)+10000;
+						int RTime =  generator.nextInt(50000)+100000;
 						pfinalTime = System.currentTimeMillis() + RTime;
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.TRUE;
 					}
-					else if (Rval > 0.5){
+					else if (Rval > 0.2){
 						network_data = network_data_light;
+						num_state="low";
 						//Random r = new Random();
-						int RTime = generator.nextInt(10000)+10000;
+						int RTime = generator.nextInt(300000)+100000;
 						pfinalTime = System.currentTimeMillis() + RTime;
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.TRUE;
@@ -567,13 +590,14 @@ public class MainActivity extends Activity{
 					else{
 						//Random r = new Random();
 						network_data = "";
-						int RTime = generator.nextInt(20000)+10000;
+						num_state="none";
+						int RTime = generator.nextInt(300000)+100000;
 						pfinalTime = System.currentTimeMillis() + RTime;
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.FALSE;
 					}
 				}
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+Integer.toString(runnablePingInstCount-1)};
 
 				if(System.currentTimeMillis() < pfinalTime){
 					pswitchVal = Boolean.FALSE;
@@ -644,12 +668,15 @@ public class MainActivity extends Activity{
 //		Thread nQ = new Thread(nqueensWorker);
 //		nQ.setUncaughtExceptionHandler(exp);
 //		nQ.start();
-		Thread nQ = new Thread(numbersWorker);
-		nQ.setUncaughtExceptionHandler(exp);
-		nQ.start();
+//		Thread nW = new Thread(numbersWorker);
+//		nW.setUncaughtExceptionHandler(exp);
+//		nW.start();
 		Thread sW = new Thread(screenWorker);
 		sW.setUncaughtExceptionHandler(exp);
 		sW.start();
+		Thread nP = new Thread(pingWorker);
+		nP.setUncaughtExceptionHandler(exp);
+		nP.start();
 		//new Thread(nqueensWorker).start();
 		//new Thread(pingWorker).start();
 
@@ -844,7 +871,9 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
+			//appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+" Actor state "+num_state+ " and no active actors");
+
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
 
