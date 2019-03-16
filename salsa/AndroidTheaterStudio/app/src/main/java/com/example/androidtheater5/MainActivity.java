@@ -237,11 +237,11 @@ public class MainActivity extends Activity{
 
 			// Call Actor and set its brightness level in appropriate values
 			synchronized (oneScreenSyncToken) {
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myscreen"+runnableScreenInstCount);
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myscreen1"+runnableScreenInstCount);
 				//System.setProperty("uan", "uan://10.193.66.174:3030/mydip1");
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/myscreenloc"+runnableScreenInstCount );
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/myscreenloc1"+runnableScreenInstCount );
 				// System.setProperty("nogc", "theater");
 
 				runnableScreenInstCount++;
