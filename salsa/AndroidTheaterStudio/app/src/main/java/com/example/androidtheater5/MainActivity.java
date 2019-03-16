@@ -537,8 +537,11 @@ public class MainActivity extends Activity{
 		} catch (IOException ioe) {
 			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 		}
-		network_data_light = inputFile;
-		for (int i = 0; i < 3; i++) {
+		//network_data_light = inputFile;
+		for (int i = 0; i < 7; i++) {
+			if(i < 3){
+				network_data_light += inputFile;
+			}
 			network_data_heavy += inputFile;
 		}
 	}
