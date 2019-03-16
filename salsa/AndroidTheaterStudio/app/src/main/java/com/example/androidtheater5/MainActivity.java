@@ -227,8 +227,8 @@ public class MainActivity extends Activity{
 		public void run() {
 
 			//Switch the brightness level
-			if(brightness_val < 50) brightness_val = 255;
-			else brightness_val = 255;
+			//if(brightness_val < 50) brightness_val = 255;
+			//else brightness_val = 255;
 
 			waitUntilTheaterStarted();
 
@@ -250,14 +250,14 @@ public class MainActivity extends Activity{
                 int low_brightness = 150;
                 int high_brightness = 255;
                 double rVal = Math.random();
-				if(rVal > 0.75) {
+				if(rVal > 0.4) {
 					// This is low energy mode
 					sleep1 = generator.nextInt(100000)+10000;
 					brightnessApp = high_brightness;
 					rScrn = Boolean.TRUE;
 					//rScrnF = Boolean.FALSE;
 					//sleep2 = 0;
-				} else if( rVal > 0.3) {
+				} else if( rVal > 0.5) {
 					//sleep1 = 20000;
                     brightnessApp = low_brightness;
 					sleep1 = generator.nextInt(100000)+100000;
@@ -401,7 +401,7 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.75){
+					if(Rval > 0.6){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
@@ -413,7 +413,7 @@ public class MainActivity extends Activity{
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
 					}
-					else if (Rval > 0.25){
+					else if (Rval > 0.5){
 						num_arg = num_light;
 						num_arg_ct = "3";
 						num_state = "low";
@@ -538,7 +538,7 @@ public class MainActivity extends Activity{
 			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 		}
 		//network_data_light = inputFile;
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 3; i++) {
 			if(i < 3){
 				network_data_light += inputFile;
 			}
@@ -571,7 +571,7 @@ public class MainActivity extends Activity{
 
 				if(pswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.7){
+					if(Rval > 0.4){
 						network_data = network_data_heavy;
 						num_state="high";
 						// Get a time till which it will run
@@ -581,7 +581,7 @@ public class MainActivity extends Activity{
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.TRUE;
 					}
-					else if (Rval > 0.2){
+					else if (Rval > 0.5){
 						network_data = network_data_light;
 						num_state="low";
 						//Random r = new Random();
@@ -613,7 +613,7 @@ public class MainActivity extends Activity{
 				}
 			}
 
-			pingHandler.postDelayed(runnablePing, 1000);
+			pingHandler.postDelayed(runnablePing, 2000);
 		}
 
 	};
