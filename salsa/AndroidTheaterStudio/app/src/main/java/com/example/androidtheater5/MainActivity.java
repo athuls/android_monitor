@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
+import android.net.TrafficStats;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
@@ -63,6 +64,8 @@ import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 import android.content.Intent;
 public class MainActivity extends Activity{
 
+	private String mobileIpAddress = "10.194.161.141";
+
     private final String TAG = "AndroidTheater";
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -74,7 +77,10 @@ public class MainActivity extends Activity{
 	public boolean isLight = false;
 	public boolean isBreak = false;
 	public String[] light = {"7","7", "7"};
-	public String[] heavy = {"13","13", "10"};
+	public String[] heavy = {"13","13", "10", "uan://osl-server1.cs.illinois.edu:3030",
+							"rmsp://"+mobileIpAddress+":4040"};
+	public String[] medium = {"13","7", "10", "uan://osl-server1.cs.illinois.edu:3030",
+							"rmsp://"+mobileIpAddress+":4040"};
 
 	public TensorFlowInferenceInterface modelPredict;
 	public double[] feature = new double[25];
@@ -102,6 +108,8 @@ public class MainActivity extends Activity{
 	private Handler numsHandler9;
 	private Handler numsHandler10;
 
+	private Handler nqueensHandler;
+
 
 	private String network_data = "";
 	private Handler batteryHandler;
@@ -112,6 +120,9 @@ public class MainActivity extends Activity{
 
 	////////////////// Hardware resource usage code /////////////////////////////////
 	private long old_net = 0;
+	private CpuUsage previousCpuUsage=null;
+	private double currentCpu0Freq;
+	private double currentCpu1Freq;
 
 	private void askPerm(){
 		Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
@@ -128,6 +139,12 @@ public class MainActivity extends Activity{
 			return true;
 		}
 		return false;
+	}
+
+	private long getNetworkDataOld(){
+		long totalRxBytes = TrafficStats.getTotalRxBytes();
+		long totalTxBytes = TrafficStats.getTotalTxBytes();
+		return totalRxBytes+totalTxBytes;
 	}
 
 	@TargetApi(Build.VERSION_CODES.M)
@@ -184,9 +201,61 @@ public class MainActivity extends Activity{
 
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
-	/////////////////////////////////////////////////////////////////////////////////
 
-	private String mobileIpAddress = "10.194.109.237";
+	@TargetApi(Build.VERSION_CODES.M)
+	private double readUsageActual() {
+		try {
+			RandomAccessFile reader = new RandomAccessFile("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq", "r");
+			currentCpu0Freq = Double.parseDouble(reader.readLine().split(" +")[0]);
+			reader = new RandomAccessFile("/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq", "r");
+			currentCpu1Freq = Double.parseDouble(reader.readLine().split(" +")[0]);
+
+			int pid = android.os.Process.myPid();
+			RandomAccessFile uptimeReader = new RandomAccessFile("/proc/uptime", "r");
+			reader = new RandomAccessFile("/proc/"+ pid +"/stat", "r");
+			String loadUptime = uptimeReader.readLine();
+			String load = reader.readLine();
+
+			String[] toks = load.split(" +");  // Split on one or more spaces
+			String[] toksUptime = loadUptime.split(" +");
+
+			double upTime = Double.parseDouble(toksUptime[0]);
+			double total_time = Double.parseDouble(toks[13]) + Double.parseDouble(toks[14])
+					+ Double.parseDouble(toks[15]) + Double.parseDouble(toks[16]);
+			double startTime = Double.parseDouble(toks[21]);
+
+			// Note that we are fixing the frequency to 100 which seems to be fixed for device side calculation
+			double timeSinceStart = upTime - (startTime/100);
+
+
+
+			if(previousCpuUsage == null) {
+				previousCpuUsage = new CpuUsage();
+				previousCpuUsage.totalLifeTime=timeSinceStart;
+				previousCpuUsage.totalCpuTime=total_time/100;
+				return 100 * ((total_time/100)/timeSinceStart);
+			} else {
+				double segmentCpuTime = (total_time/100)-previousCpuUsage.totalCpuTime;
+				double segmentTotalTime = timeSinceStart - previousCpuUsage.totalLifeTime;
+				previousCpuUsage.totalCpuTime = (total_time/100);
+				previousCpuUsage.totalLifeTime = timeSinceStart;
+				return 100 * segmentCpuTime/segmentTotalTime;
+			}
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+
+		return 0;
+	}
+
+	public int getVoltage()
+	{
+		IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent b = this.registerReceiver(null, ifilter);
+		return b.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
+	}
+	/////////////////////////////////////////////////////////////////////////////////
 
 	// Training data
 	private ArrayList<double[]> trainingInput;
@@ -395,6 +464,16 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	private Runnable nqueensWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			nqueensHandler = new Handler();
+			nqueensHandler.post(runnableNqueens);
+			Looper.loop();
+		}
+	};
+
 	private void read_initial_in(){
 		String fileName = "HCSB_full.txt";
 		String inputFile = "";
@@ -478,38 +557,65 @@ public class MainActivity extends Activity{
 
 	};
 
+	private long nqueensInstCount = 0;
+
+	private Runnable runnableNqueens = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/nqueens" + nqueensInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/nqueensloc" + nqueensInstCount);
+				String[] args = {"1"};
+				Nqueens.main(heavy);
+				nqueensInstCount++;
+			}
+
+			nqueensHandler.postDelayed(runnableNqueens, 1000);
+		}
+
+	};
+
+	private long numbersInstCount = 0;
+
 	private Runnable runnableNumbers = new Runnable(){
 		@Override
 		public void run() {
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers"+numbersInstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc");
-				String[] args = {""};
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc"+numbersInstCount);
+				numbersInstCount++;
+				String[] args = {"1"};
 				Numbers1.main(args);
 			}
 
-//			numsHandler.postDelayed(runnableNumbers, 1100);
+//			numsHandler.postDelayed(runnableNumbers, 1200);
 		}
 
 	};
+
+	private long numbers1InstCount = 0;
 
 	private Runnable runnableNumbers1 = new Runnable(){
 		@Override
 		public void run() {
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers1");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers1"+numbers1InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc1");
-				String[] args = {""};
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc1"+numbers1InstCount);
+				numbers1InstCount++;
+				String[] args = {"10"};
 				Numbers1.main(args);
 			}
 
-//			numsHandler1.postDelayed(runnableNumbers1, 1100);
+//			numsHandler1.postDelayed(runnableNumbers1, 1200);
 		}
 
 	};
@@ -523,7 +629,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc2");
-				String[] args = {""};
+				String[] args = {"10"};
 				Numbers1.main(args);
 			}
 
@@ -849,28 +955,29 @@ public class MainActivity extends Activity{
 		AssetManager assetMgr = this.getAssets();
 		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
 		System.err.println("Before creating TF inference");
-		try {
-			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.err.println("Exception is " + e.getStackTrace());
-		}
+//		try {
+//			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.err.println("Exception is " + e.getStackTrace());
+//		}
 		System.err.println("After creating TF inference");
 		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
 		System.setProperty("nodie", "theater");
-		System.setProperty("nogc", "theater");
+//		System.setProperty("nogc", "theater");
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
 		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
-		if(checkPerm() == false) {
-			askPerm();
-		}
+//		if(checkPerm() == false) {
+//			askPerm();
+//		}
 
 		generator = new Random();
 
-		cpuUsage = false;
+		cpuUsage = true;
+		new Thread(nqueensWorker).start();
 //		new Thread(numsWorker).start();
 //		new Thread(numsWorker1).start();
 //		new Thread(numsWorker2).start();
@@ -883,19 +990,19 @@ public class MainActivity extends Activity{
 //		new Thread(numsWorker9).start();
 //		new Thread(numsWorker10).start();
 
-		read_initial_in();
+//		read_initial_in();
 
 		// Reduce the size of the network data
 //		int mid_network_data = network_data.length()/2;
 //		network_data = network_data.substring(0, mid_network_data);
 		// Reduce the size of the network data
 
-		new Thread(pingWorker).start();
-		new Thread(pingWorker1).start();
-		new Thread(pingWorker2).start();
-		new Thread(pingWorker3).start();
-		new Thread(pingWorker4).start();
-		new Thread(pingWorker5).start();
+//		new Thread(pingWorker).start();
+//		new Thread(pingWorker1).start();
+//		new Thread(pingWorker2).start();
+//		new Thread(pingWorker3).start();
+//		new Thread(pingWorker4).start();
+//		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
 		new Thread(batteryWorker).start();
 
@@ -990,6 +1097,13 @@ public class MainActivity extends Activity{
 	}
 
 	protected void SampleBattery() {
+
+		final Runtime runtime = Runtime.getRuntime();
+		final long usedMemInMB=(runtime.totalMemory() - runtime.freeMemory()) / 1048576L;
+		if(usedMemInMB > 42) {
+			throw new OutOfMemoryError();
+		}
+
 		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 		Intent batteryStatus = this.registerReceiver(null, iFilter);
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
@@ -998,23 +1112,25 @@ public class MainActivity extends Activity{
 
 		///////////////// Hardware resource usage code ////////////////////////////////
 		ContentResolver cResolver = this.getContentResolver();
-		long netVal = 0;
-		long currNetVal = 0;
-		try {
-			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
-			netVal = getNetworkData();
-			currNetVal = netVal - old_net;
-			appendLog("Network usage: " + currNetVal);
-		}catch( Exception e){
-			System.err.println("Error in network reading");
-		}
+//		long netVal = 0;
+//		long currNetVal = 0;
+//		try {
+//			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+//			netVal = getNetworkDataOld();
+//			currNetVal = netVal - old_net;
+//			appendLog("Network usage: " + currNetVal);
+//		}catch( Exception e){
+//			System.err.println("Error in network reading");
+//		}
 
-		old_net = netVal;
+//		old_net = netVal;
 
 		if(cpuUsage) {
 			try {
-				double cpuUsageVal = readUsage();
-				appendLog("CPU usage: " + cpuUsageVal);
+				double cpuUsageVal = readUsageActual();
+				int voltageVal = getVoltage();
+				appendLog("CPU usage: " + cpuUsageVal + ", CPU freq= " + currentCpu0Freq + " " + currentCpu1Freq
+						+ ", Voltage= " + voltageVal);
 			} catch (Exception e) {
 				System.err.println("Error in CPU reading");
 			}
