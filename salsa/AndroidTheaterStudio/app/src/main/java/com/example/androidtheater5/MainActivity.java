@@ -69,6 +69,7 @@ public class MainActivity extends Activity{
 	private float last_battery  = (float)1.00;
 	private int brightness_val = 0;
 	private long old_net = 0;
+	private long counter_num = 0;
 
 	private ScrollView scrollView = null;
 	private TextView textView = null;
@@ -221,6 +222,12 @@ public class MainActivity extends Activity{
 	};
 
 	private int runnableScreenInstCount = 0;
+
+
+	private void ScreenCapture(){ // This function is a test for gathering the frames from the mobile camera for basic modification
+
+
+	}
 
 	private Runnable runnableSampleScreen = new Runnable(){
 		@Override
@@ -401,7 +408,7 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.6){
+					if(Rval > 0.0){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
@@ -446,6 +453,7 @@ public class MainActivity extends Activity{
 
 				if(rNum){
 					Numbers.main(args);
+					counter_num++;
 				}
 			}
 
@@ -875,7 +883,7 @@ public class MainActivity extends Activity{
 //				}
 //			}
 			//appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+" Actor state "+num_state+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+" Actor state "+num_state+ " Num_counter "+ counter_num+ " and no active actors");
 
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
@@ -895,7 +903,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + "Time Sleep "+ numSleep+" Actor state "+num_state+" actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + "Time Sleep "+ numSleep+" Actor state "+num_state+ " Num_counter "+ counter_num+" actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////

@@ -77,12 +77,12 @@ behavior Numbers {
 
      } 
    
-    void Dummy(int sleep, int loop){
+    void Dummy(int sleep, int loop, int myargs){
 
     
 
     	// Number number = new Number(0);
-
+        long myOld_time = System.currentTimeMillis();
     	
     	long val1 = 0;
     	for (int i = 0; i< loop; i++){
@@ -111,26 +111,40 @@ behavior Numbers {
     		Random randomno = new Random();
         	 val1 = randomno.nextLong();
     	}
-    	//standardOutput<-println("Thread 0 Done");
+        long myDelta_time = System.currentTimeMillis() - myOld_time;
+        if(myargs == 0){
+        standardOutput<-println("Thread time"+myDelta_time);
+        }
 
 		
 
     }
 
+
+
+
+
+
     void act(String args[]){
 	//initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
     Numbers[] actors=new Numbers[Integer.parseInt(args[2])];
+    Random actGen = new Random();
+    //long old_time =  System.currentTimeMillis();
     standardOutput<-println("Time to sleep "+ args[3]+"State "+args[4])@
     join{
     for(int i = 0; i< actors.length; i++){
-        actors[i] = new Numbers();
-        actors[i]<-Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]));
+        //actors[i] = new Numbers();
+        int actorId = actGen.nextInt(2000);
+        actors[i]=new Numbers() at (new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://10.194.109.237:4040"+"/nqchildloc"+actorId));
+        actors[i]<-Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]),i);
     }
-    } @ 
-    join{
-        for(int i=0 ; i<actors.length; i++){
-            actors[i] = null;
-        }
-    }@standardOutput<-println();
+    } @ standardOutput<-println();
+    //join{
+      //  long delta_time = System.currentTimeMillis() - old_time;
+        //standardOutput<-println("Time to run actors "+ delta_time);
+       // for(int i=0 ; i<actors.length; i++){
+       //     actors[i] = null;
+       // }
+    //}@standardOutput<-println();
     }
 }

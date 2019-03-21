@@ -356,7 +356,8 @@ public class Numbers extends UniversalActor  {
 			}
 
 		}
-		public void Dummy(int sleep, int loop) {
+		public void Dummy(int sleep, int loop, int myargs) {
+			long myOld_time = System.currentTimeMillis();
 			long val1 = 0;
 			for (int i = 0; i<loop; i++){
 				Random randomno = new Random();
@@ -373,13 +374,24 @@ do {
 				Random randomno = new Random();
 				val1 = randomno.nextLong();
 			}
-		}
+			long myDelta_time = System.currentTimeMillis()-myOld_time;
+			if (myargs==0) {{
+				{
+					// standardOutput<-println("Thread time"+myDelta_time)
+					{
+						Object _arguments[] = { "Thread time"+myDelta_time };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+			}
+}		}
 		public void act(String args[]) {
 			Numbers[] actors = new Numbers[Integer.parseInt(args[2])];
+			Random actGen = new Random();
 			{
 				Token token_2_0 = new Token();
 				Token token_2_1 = new Token();
-				Token token_2_2 = new Token();
 				// standardOutput<-println("Time to sleep "+args[3]+"State "+args[4])
 				{
 					Object _arguments[] = { "Time to sleep "+args[3]+"State "+args[4] };
@@ -389,27 +401,22 @@ do {
 				// join block
 				token_2_1.setJoinDirector();
 				for (int i = 0; i<actors.length; i++){
-					actors[i] = ((Numbers)new Numbers(this).construct());
+					int actorId = actGen.nextInt(2000);
+					actors[i] = ((Numbers)new Numbers(new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://10.194.109.237:4040"+"/nqchildloc"+actorId),this).construct());
 					{
-						// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]))
+						// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]), i)
 						{
-							Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]) };
+							Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]), i };
 							Message message = new Message( self, actors[i], "Dummy", _arguments, token_2_0, token_2_1 );
 							__messages.add( message );
 						}
 					}
 				}
 				addJoinToken(token_2_1);
-				// join block
-				token_2_2.setJoinDirector();
-				for (int i = 0; i<actors.length; i++){
-					actors[i] = null;
-				}
-				addJoinToken(token_2_2);
 				// standardOutput<-println()
 				{
 					Object _arguments[] = {  };
-					Message message = new Message( self, standardOutput, "println", _arguments, token_2_2, null );
+					Message message = new Message( self, standardOutput, "println", _arguments, token_2_1, null );
 					__messages.add( message );
 				}
 			}
