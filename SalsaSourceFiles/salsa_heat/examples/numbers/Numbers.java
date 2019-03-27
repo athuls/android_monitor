@@ -402,7 +402,7 @@ do {
 				token_2_1.setJoinDirector();
 				for (int i = 0; i<actors.length; i++){
 					int actorId = actGen.nextInt(2000);
-					actors[i] = ((Numbers)new Numbers(new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://10.194.109.237:4040"+"/nqchildloc"+actorId),this).construct());
+					actors[i] = ((Numbers)new Numbers(new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://"+args[5]+":4040/nqchildloc"+actorId),this).construct());
 					{
 						// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]), i)
 						{

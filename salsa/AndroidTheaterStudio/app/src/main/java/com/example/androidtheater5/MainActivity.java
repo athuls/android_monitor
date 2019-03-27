@@ -125,6 +125,7 @@ public class MainActivity extends Activity{
 	private boolean rNum = Boolean.TRUE;
 	private boolean rScrn = Boolean.TRUE;
 	private boolean rScrnF = Boolean.TRUE;
+	private boolean noIdle = Boolean.FALSE;
 
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
@@ -213,6 +214,10 @@ public class MainActivity extends Activity{
 	} // reads usage but waits 360 ms, need to fix that
 
 	private String mobileIpAddress = "10.194.109.237";
+
+	private void ImageCapture(){
+
+	}
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
 		public void run() {
@@ -258,6 +263,7 @@ public class MainActivity extends Activity{
                 int high_brightness = 255;
                 double rVal = Math.random();
 				if(rVal > 0.4) {
+					noIdle = Boolean.FALSE;
 					// This is low energy mode
 					sleep1 = generator.nextInt(100000)+10000;
 					brightnessApp = high_brightness;
@@ -272,6 +278,7 @@ public class MainActivity extends Activity{
 					//rScrnF = Boolean.FALSE;
 				}
 				else{
+					noIdle = Boolean.TRUE;
 					brightnessApp = 10;
 					sleep1 = generator.nextInt(100000)+100000;
 					rScrn = Boolean.FALSE;
@@ -294,7 +301,7 @@ public class MainActivity extends Activity{
 				}
 			}
 
-			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 5000);
+			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 1000);
 		}
 	};
 
@@ -408,7 +415,7 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.0){
+					if(Rval > 0.4 || noIdle){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
@@ -435,14 +442,14 @@ public class MainActivity extends Activity{
 						num_arg = num_light;
 						num_state = "none";
 						Random r = new Random();
-						int RTime = generator.nextInt(20000)+50000;
+						int RTime = generator.nextInt(100000)+100000;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.FALSE;
 					}
 				}
-				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state};
+				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
 
 				if(System.currentTimeMillis() < nfinalTime){
 					nswitchVal = Boolean.FALSE;

@@ -96,12 +96,12 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/heat.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/ProjectX/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJILCore.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.tensorflow:tensorflow-android-1.13.1" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/trap.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/ProjectX/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJIL-J2SE.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.google.guava:guava:15.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/salsa_heat.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJILCore.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/MobiSys/android_monitor/salsa/AndroidTheaterStudio/app/libs/JJIL-J2SE.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/ProjectX/android_monitor/salsa/AndroidTheaterStudio/app/libs/salsa_heat.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/ProjectX/android_monitor/salsa/AndroidTheaterStudio/app/libs/heat.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:/Users/dmukherjee/UIUC/ProjectX/android_monitor/salsa/AndroidTheaterStudio/app/libs/trap.jar:unspecified@jar" level="project" />
   </component>
 </module>
