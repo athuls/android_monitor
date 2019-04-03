@@ -319,7 +319,7 @@ public class TestApp extends UniversalActor  {
 			}
 
 			try {
-				val = 10;
+				val = bright;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;

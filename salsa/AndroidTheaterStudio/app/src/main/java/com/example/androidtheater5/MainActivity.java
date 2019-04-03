@@ -126,6 +126,7 @@ public class MainActivity extends Activity{
 	private boolean rScrn = Boolean.TRUE;
 	private boolean rScrnF = Boolean.TRUE;
 	private volatile boolean noIdle = Boolean.FALSE;
+	private long sequenceCounter = 0;
 
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
@@ -133,6 +134,9 @@ public class MainActivity extends Activity{
 	private Handler screenHandler;
 	private Handler pingHandler;
 	private Handler numbersHandler;
+	private Handler combinedHandler;
+
+	private volatile long sCounter = 0;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -259,36 +263,54 @@ public class MainActivity extends Activity{
 				runnableScreenInstCount++;
 				// Generate wait time before invoking actor
                 int brightnessApp = 10 ;
-                int low_brightness = 150;
+                int low_brightness = 10;
                 int high_brightness = 255;
-                double rVal = Math.random();
-				if(rVal > 0.4) {
-					noIdle = Boolean.FALSE;
-					// This is low energy mode
-					sleep1 = generator.nextInt(100000)+10000;
+//                double rVal = Math.random();
+//				if(rVal > 0.4) {
+//					noIdle = Boolean.FALSE;
+//					// This is low energy mode
+//					sleep1 = generator.nextInt(100000)+100000;
+//					brightnessApp = high_brightness;
+//					rScrn = Boolean.TRUE;
+//					//rScrnF = Boolean.FALSE;
+//					//sleep2 = 0;
+//				} else if( rVal > 0.5) {
+//					//sleep1 = 20000;
+//                    brightnessApp = low_brightness;
+//					sleep1 = generator.nextInt(100000)+100000;
+//					rScrn = Boolean.TRUE;
+//					//rScrnF = Boolean.FALSE;
+//				}
+//				else{
+//					noIdle = Boolean.TRUE;
+//					brightnessApp = 10;
+//					sleep1 = generator.nextInt(100000)+100000;
+//					rScrn = Boolean.FALSE;
+//					if(rScrnF){
+//						rScrnF = Boolean.FALSE;
+//						String[] args = {Integer.toString(1000),
+//								Integer.toString(brightnessApp),
+//						};
+//						TestApp.main(args);
+//					}
+//				}
+				if(sCounter == 1){
+					rScrn = Boolean.TRUE;
 					brightnessApp = high_brightness;
-					rScrn = Boolean.TRUE;
-					//rScrnF = Boolean.FALSE;
-					//sleep2 = 0;
-				} else if( rVal > 0.5) {
-					//sleep1 = 20000;
-                    brightnessApp = low_brightness;
-					sleep1 = generator.nextInt(100000)+100000;
-					rScrn = Boolean.TRUE;
-					//rScrnF = Boolean.FALSE;
+					sleep1 = 5000;
+
 				}
 				else{
-					noIdle = Boolean.TRUE;
-					brightnessApp = 10;
-					sleep1 = generator.nextInt(100000)+100000;
-					rScrn = Boolean.FALSE;
-					if(rScrnF){
-						rScrnF = Boolean.FALSE;
-						String[] args = {Integer.toString(1000),
-								Integer.toString(brightnessApp),
-						};
-						TestApp.main(args);
+					rScrn = Boolean.TRUE;
+					if(sequenceCounter == 0){
+						brightnessApp = low_brightness;
 					}
+					else{
+						brightnessApp = high_brightness;
+					}
+					sequenceCounter = (sequenceCounter+1)%2;
+					sleep1 = 5000;
+
 				}
 
 
@@ -301,7 +323,7 @@ public class MainActivity extends Activity{
 				}
 			}
 
-			screenHandler.postDelayed(runnableSampleScreen, sleep1 + 1000);
+			screenHandler.postDelayed(runnableSampleScreen, sleep1);
 		}
 	};
 
@@ -363,6 +385,20 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	private Runnable combinedWorker = new Runnable() {
+		@Override
+		public void run() {
+			//synchronized (oneScreenSyncToken) {
+			Looper.prepare();
+			combinedHandler = new Handler();
+			combinedHandler.postDelayed(runnableCombined, initialWaitNumbers);
+			Looper.loop();
+			//}
+		}
+	};
+
+
+
 	private Runnable runnableNqueens = new Runnable(){
         @Override
         public void run() {
@@ -415,7 +451,7 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.4 || noIdle){
+					if(Rval > 0.4){
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
@@ -426,6 +462,7 @@ public class MainActivity extends Activity{
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
+
 					}
 					else if (Rval > 0.5){
 						num_arg = num_light;
@@ -437,6 +474,7 @@ public class MainActivity extends Activity{
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
+
 					}
 					else{
 						num_arg = num_light;
@@ -447,6 +485,7 @@ public class MainActivity extends Activity{
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.FALSE;
+
 					}
 				}
 				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
@@ -466,6 +505,104 @@ public class MainActivity extends Activity{
 
 
 			numbersHandler.postDelayed(runnableNumbers, 1000);
+
+		}
+
+	};
+
+	private Runnable runnableCombined = new Runnable(){
+		@Override
+		public void run() {
+			waitUntilTheaterStarted();
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens" + runnableNumbersInstCount );
+				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc" + runnableNumbersInstCount );
+				runnableNumbersInstCount ++;
+//				System.setProperty("nogc", "theater");
+				int brightnessApp = 10 ;
+				int low_brightness = 150;
+				int high_brightness = 255;
+				int RTime = 10;
+				if(nswitchVal){
+					double Rval = Math.random();
+					if(Rval > 0.4){
+						num_arg = num_heavy;
+						brightnessApp = high_brightness;
+						num_arg_ct = "7";
+						num_state = "high";
+						// Get a time till which it will run
+						Random r = new Random();
+						RTime =  generator.nextInt(300000)+100000;
+						numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						rScrn = Boolean.TRUE;
+					}
+					else if (Rval > 0.5){
+						num_arg = num_light;
+						num_arg_ct = "3";
+						num_state = "low";
+						brightnessApp = low_brightness;
+						Random r = new Random();
+						RTime = generator.nextInt(300000)+100000;
+						numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						rScrn = Boolean.TRUE;
+					}
+					else{
+						num_arg = num_light;
+						brightnessApp = 10;
+						num_state = "none";
+						Random r = new Random();
+						RTime = generator.nextInt(100000)+100000;
+						numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.FALSE;
+						rScrn = Boolean.FALSE;
+						if(rScrnF){
+							rScrnF = Boolean.FALSE;
+							String[] sargs = {Integer.toString(1000),
+									Integer.toString(brightnessApp),
+							};
+							TestApp.main(sargs);
+						}
+
+					}
+				}
+				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
+
+
+				if(System.currentTimeMillis() < nfinalTime){
+					nswitchVal = Boolean.FALSE;
+				}
+				else {
+					nswitchVal = Boolean.TRUE;
+				}
+				if(rScrn) {
+					//rScrnF = Boolean.FALSE;
+					rScrn = Boolean.FALSE;
+					String[] Sargs = {Integer.toString(RTime),
+							Integer.toString(brightnessApp),
+					};
+					TestApp.main(Sargs);
+				}
+
+				if(rNum){
+					Numbers.main(args);
+					counter_num++;
+				}
+			}
+
+
+			combinedHandler.postDelayed(runnableCombined, 1000);
 
 		}
 
@@ -686,9 +823,12 @@ public class MainActivity extends Activity{
 //		Thread nQ = new Thread(nqueensWorker);
 //		nQ.setUncaughtExceptionHandler(exp);
 //		nQ.start();
-		Thread nW = new Thread(numbersWorker);
-		nW.setUncaughtExceptionHandler(exp);
-		nW.start();
+//		Thread nW = new Thread(numbersWorker);
+//		nW.setUncaughtExceptionHandler(exp);
+//		nW.start();
+//		Thread cW = new Thread(combinedWorker);
+//		cW.setUncaughtExceptionHandler(exp);
+//		cW.start();
 		Thread sW = new Thread(screenWorker);
 		sW.setUncaughtExceptionHandler(exp);
 		sW.start();
@@ -845,12 +985,18 @@ public class MainActivity extends Activity{
 		long currNetVal = 0;
 		try {
 			brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
-			netVal = getNetworkData();
+			//netVal = getNetworkData();
 			//netVal = getNetworkDataOld(); // Test for older phones
 			currNetVal = netVal - old_net;
 		}catch( Exception e){
 			System.err.println("Error in brightness");
 		}
+
+		if(Math.abs(last_battery - batteryPct) > 0.009) {
+			last_battery = batteryPct;
+			sCounter = (sCounter+1)%2;
+		}
+
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 
 //		setInitialWaitTimes(batteryPct);
@@ -925,7 +1071,7 @@ public class MainActivity extends Activity{
 			appendLog("\n");
 		}
 
-		old_net = netVal;
+		//old_net = netVal;
 
 		/////////////////////// PREDICTION MODE ///////////////////////
 //		count += 1;
