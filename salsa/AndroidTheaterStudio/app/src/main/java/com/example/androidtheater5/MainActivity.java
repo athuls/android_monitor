@@ -125,7 +125,7 @@ public class MainActivity extends Activity{
 	private boolean rNum = Boolean.TRUE;
 	private boolean rScrn = Boolean.TRUE;
 	private boolean rScrnF = Boolean.TRUE;
-	private boolean noIdle = Boolean.FALSE;
+	private volatile boolean noIdle = Boolean.FALSE;
 
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
