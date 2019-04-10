@@ -8,6 +8,8 @@ import java.io.*;
 import java.nio.file.*;
 import java.nio.file.Files;
 import android.os.Environment;
+import android.view.Window;
+import android.content.ContentResolver;
 
 public class AndroidProxy {
 	private static Activity context = null;
@@ -19,6 +21,14 @@ public class AndroidProxy {
 	public static void setTextViewContext( Activity context, TextView textView ) {
 		AndroidProxy.context = context;
 		AndroidProxy.textView = textView;
+	}
+
+	// To be called from Salsa Apps
+	public static Window WindowCall(){
+			return context.getWindow();
+	}
+	public static ContentResolver ContentResolverCall(){
+			return context.getContentResolver();
 	}
 
 	// to be called from Salsa Apps

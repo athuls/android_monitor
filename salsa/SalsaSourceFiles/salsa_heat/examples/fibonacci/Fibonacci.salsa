@@ -1,35 +1,54 @@
 
 module examples.fibonacci;
+import java.util.Random;
+import java.lang.Math;
 
 behavior Fibonacci {
     
 	int n;
+	Random randomIdGen = new Random();
+	String uanPrefix;
+	String ualPrefix;
+	int originalSeedId;
     
-	Fibonacci(int n) {
+	Fibonacci(int n, String uanPrefix, String ualPrefix, int originalSeedId) {
 		this.n = n;
+		this.uanPrefix = uanPrefix;
+		this.ualPrefix = ualPrefix;
+		this.originalSeedId = originalSeedId;
 	}
 
 	int add(int x, int y) {
 		return x + y;
 	}
 
-	int compute() {
+	int compute(int parentId, int currentDepth) {
 		if (n == 0) 		return 0;
 		else if (n <= 2) 	return 1;
 		else {
-			Fibonacci fib1 = new Fibonacci(n-1);
-			Fibonacci fib2 = new Fibonacci(n-2);
+			// compute my IDs
+			int firstId = (int)Math.pow(2,currentDepth) - 2;
+			int parentFirstId = (int) Math.pow(2, currentDepth-1) - 2;
+			int offsetParent = parentId - parentFirstId;
+			int offset = firstId + (2 * offsetParent);
 
-			token x = fib1<-compute();
-			token y = fib2<-compute();
+			int firstFibId = originalSeedId+offset;
+			int secondFibId = originalSeedId+offset+1;
+			Fibonacci fib1 = new Fibonacci(n-1, uanPrefix, ualPrefix, originalSeedId) at (new UAN(this.uanPrefix+"/fibChild"+firstFibId), new UAL(this.ualPrefix+"/fibChild"+firstFibId));
+			Fibonacci fib2 = new Fibonacci(n-2, uanPrefix, ualPrefix, originalSeedId) at (new UAN(this.uanPrefix+"/fibChild"+secondFibId), new UAL(this.ualPrefix+"/fibChild"+secondFibId));
 
+			token x = fib1<-compute(offset, currentDepth+1);
+			token y = fib2<-compute(offset+1, currentDepth+1);
+			
 			add(x, y) @ currentContinuation;
 		}
 	}
 
 	void act(String args[]) {
 		n = Integer.parseInt(args[0]);
-
-		compute() @ standardOutput<-println(token);
+		originalSeedId = randomIdGen.nextInt(1000000);
+		uanPrefix=args[1];
+		ualPrefix=args[2];
+		compute(-1, 1) @ standardOutput<-println(token);
 	}
 }

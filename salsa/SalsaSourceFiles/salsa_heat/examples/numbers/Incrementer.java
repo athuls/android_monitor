@@ -285,10 +285,10 @@ public class Incrementer extends UniversalActor  {
 					Message message = new Message( self, number, "inc", _arguments, token_2_0, token_2_1 );
 					__messages.add( message );
 				}
-				// this<-go()
+				// ((Incrementer)self)<-go()
 				{
 					Object _arguments[] = {  };
-					Message message = new Message( self, this, "go", _arguments, token_2_1, null );
+					Message message = new Message( self, ((Incrementer)self), "go", _arguments, token_2_1, null );
 					__messages.add( message );
 				}
 			}

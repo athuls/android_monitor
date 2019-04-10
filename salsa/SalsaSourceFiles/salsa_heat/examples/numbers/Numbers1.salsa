@@ -1,0 +1,49 @@
+module examples.numbers;
+import java.lang.*;
+import java.util.*;
+import androidsalsa.resources.AndroidProxy;
+
+behavior Numbers1 {
+
+    void act(String args[]){
+	long val1 = 0;
+
+	Random randomno = new Random();
+	//long currentTime = 0;
+	//long finalTime = System.currentTimeMillis() + 1000;
+	do {
+		val1 += randomno.nextLong();
+    		//currentTime=System.currentTimeMillis();
+	} while(true);
+	//while(finalTime > currentTime);
+
+	/*for (int i = 0; i< 250; i++){
+		try {
+			Thread.sleep(Integer.parseInt(args[0]));
+		} catch (Exception e) {
+			standardOutput<-println("Thread sleep error");
+		}
+
+		Random randomno = new Random();
+    		val1 += randomno.nextLong();
+	}
+
+	try{
+		long current_time = 0;
+		long final_time = System.currentTimeMillis() + 1000;
+		do{
+			current_time = System.currentTimeMillis();
+			Random randomno = new Random();
+	    		val1 += randomno.nextLong();
+		} while(final_time > current_time);
+	} catch(Exception e){
+		standardOutput<-println("Thread sleep error");
+	}
+
+	for (int i = 0; i< 250; i++){
+		Random randomno = new Random();
+		val1 += randomno.nextLong();
+	}*/
+
+    }
+}

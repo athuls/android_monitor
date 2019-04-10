@@ -1,0 +1,5344 @@
+Network usage: 423116942
+[Thu Feb 07 14:23:19 GMT+05:30 2019] Battery level is 1.0 and no active actors
+Network usage: 1361
+[Thu Feb 07 14:23:21 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 804
+[Thu Feb 07 14:23:22 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 201
+[Thu Feb 07 14:23:23 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 414271
+[Thu Feb 07 14:23:24 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1281447
+[Thu Feb 07 14:23:25 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1325311
+[Thu Feb 07 14:23:26 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1278078
+[Thu Feb 07 14:23:27 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1301553
+[Thu Feb 07 14:23:28 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1289432
+[Thu Feb 07 14:23:29 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1258786
+[Thu Feb 07 14:23:30 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1301239
+[Thu Feb 07 14:23:31 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1327288
+[Thu Feb 07 14:23:32 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1278028
+[Thu Feb 07 14:23:33 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1300390
+[Thu Feb 07 14:23:34 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1280325
+[Thu Feb 07 14:23:35 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1205026
+[Thu Feb 07 14:23:36 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1293998
+[Thu Feb 07 14:23:37 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1253337
+[Thu Feb 07 14:23:39 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1301316
+[Thu Feb 07 14:23:40 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1285567
+[Thu Feb 07 14:23:41 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1295766
+[Thu Feb 07 14:23:42 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1276535
+[Thu Feb 07 14:23:43 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1288567
+[Thu Feb 07 14:23:44 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1274872
+[Thu Feb 07 14:23:45 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 450466384
+[Thu Feb 07 14:23:47 GMT+05:30 2019] Battery level is 1.0 and no active actors
+Network usage: 1345
+[Thu Feb 07 14:23:48 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 558346
+[Thu Feb 07 14:23:49 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1256247
+[Thu Feb 07 14:23:50 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1294647
+[Thu Feb 07 14:23:51 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1275720
+[Thu Feb 07 14:23:52 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1300486
+[Thu Feb 07 14:23:54 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1285387
+[Thu Feb 07 14:23:55 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1255017
+[Thu Feb 07 14:23:56 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1283538
+[Thu Feb 07 14:23:57 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1303210
+[Thu Feb 07 14:23:58 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1285855
+[Thu Feb 07 14:23:59 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1305004
+[Thu Feb 07 14:24:00 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1284255
+[Thu Feb 07 14:24:01 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1303292
+[Thu Feb 07 14:24:02 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1263640
+[Thu Feb 07 14:24:03 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1311348
+[Thu Feb 07 14:24:04 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1296907
+[Thu Feb 07 14:24:05 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1277354
+[Thu Feb 07 14:24:06 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1284436
+[Thu Feb 07 14:24:07 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1289144
+[Thu Feb 07 14:24:08 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1282688
+[Thu Feb 07 14:24:09 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1233780
+[Thu Feb 07 14:24:10 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 477921108
+[Thu Feb 07 14:24:13 GMT+05:30 2019] Battery level is 1.0 and no active actors
+Network usage: 1345
+[Thu Feb 07 14:24:14 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 551353
+[Thu Feb 07 14:24:15 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1275407
+[Thu Feb 07 14:24:16 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1276593
+[Thu Feb 07 14:24:17 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1292983
+[Thu Feb 07 14:24:18 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1294231
+[Thu Feb 07 14:24:19 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1292309
+[Thu Feb 07 14:24:20 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1294471
+[Thu Feb 07 14:24:21 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1295202
+[Thu Feb 07 14:24:22 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1300991
+[Thu Feb 07 14:24:23 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1274952
+[Thu Feb 07 14:24:24 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1296201
+[Thu Feb 07 14:24:25 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1278787
+[Thu Feb 07 14:24:26 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1292937
+[Thu Feb 07 14:24:27 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1308112
+[Thu Feb 07 14:24:28 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1298815
+[Thu Feb 07 14:24:30 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1287642
+[Thu Feb 07 14:24:31 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1317925
+[Thu Feb 07 14:24:32 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1287784
+[Thu Feb 07 14:24:33 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1291059
+[Thu Feb 07 14:24:34 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1285099
+[Thu Feb 07 14:24:35 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1292928
+[Thu Feb 07 14:24:36 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 505205078
+[Thu Feb 07 14:24:38 GMT+05:30 2019] Battery level is 1.0 and no active actors
+Network usage: 1498
+[Thu Feb 07 14:24:39 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 389334
+[Thu Feb 07 14:24:40 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1317468
+[Thu Feb 07 14:24:41 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1288346
+[Thu Feb 07 14:24:42 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1311912
+[Thu Feb 07 14:24:43 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1300977
+[Thu Feb 07 14:24:44 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1279188
+[Thu Feb 07 14:24:45 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1318343
+[Thu Feb 07 14:24:46 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1295136
+[Thu Feb 07 14:24:48 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1280702
+[Thu Feb 07 14:24:49 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1292903
+[Thu Feb 07 14:24:50 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1304083
+[Thu Feb 07 14:24:51 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1270217
+[Thu Feb 07 14:24:52 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1297773
+[Thu Feb 07 14:24:53 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1270160
+[Thu Feb 07 14:24:54 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1332311
+[Thu Feb 07 14:24:55 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1293278
+[Thu Feb 07 14:24:56 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1295456
+[Thu Feb 07 14:24:57 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1287167
+[Thu Feb 07 14:24:58 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1288712
+[Thu Feb 07 14:24:59 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1297675
+[Thu Feb 07 14:25:00 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1270339
+[Thu Feb 07 14:25:01 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 532681010
+[Thu Feb 07 14:25:03 GMT+05:30 2019] Battery level is 1.0 and no active actors
+Network usage: 1208
+[Thu Feb 07 14:25:05 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 368026
+[Thu Feb 07 14:25:06 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1322201
+[Thu Feb 07 14:25:07 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1231319
+[Thu Feb 07 14:25:08 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1336260
+[Thu Feb 07 14:25:09 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1302136
+[Thu Feb 07 14:25:10 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1295280
+[Thu Feb 07 14:25:11 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1302147
+[Thu Feb 07 14:25:12 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1295801
+[Thu Feb 07 14:25:13 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1290714
+[Thu Feb 07 14:25:14 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1307465
+[Thu Feb 07 14:25:15 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1294014
+[Thu Feb 07 14:25:16 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1304275
+[Thu Feb 07 14:25:17 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1291388
+[Thu Feb 07 14:25:18 GMT+05:30 2019] Battery level is 1.0 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1313078
+[Thu Feb 07 14:25:19 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1227907
+[Thu Feb 07 14:25:21 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1314171
+[Thu Feb 07 14:25:22 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1304732
+[Thu Feb 07 14:25:23 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1300913
+[Thu Feb 07 14:25:24 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1289240
+[Thu Feb 07 14:25:25 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1270521
+[Thu Feb 07 14:25:26 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1295890
+[Thu Feb 07 14:25:27 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 560108882
+[Thu Feb 07 14:26:29 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 2363
+[Thu Feb 07 14:27:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1119
+[Thu Feb 07 14:27:25 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 533376
+[Thu Feb 07 14:27:41 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1313624
+[Thu Feb 07 14:27:42 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1274397
+[Thu Feb 07 14:27:43 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1267970
+[Thu Feb 07 14:27:44 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1314104
+[Thu Feb 07 14:27:45 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1312591
+[Thu Feb 07 14:27:46 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1287231
+[Thu Feb 07 14:27:47 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1284498
+[Thu Feb 07 14:27:48 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1289240
+[Thu Feb 07 14:27:49 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1267872
+[Thu Feb 07 14:27:50 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1252506
+[Thu Feb 07 14:27:51 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 486632
+[Thu Feb 07 14:27:52 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 342763
+[Thu Feb 07 14:27:54 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 332575
+[Thu Feb 07 14:27:55 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 326359
+[Thu Feb 07 14:27:56 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 319736
+[Thu Feb 07 14:27:57 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 321128
+[Thu Feb 07 14:27:58 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 324076
+[Thu Feb 07 14:27:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 326679
+[Thu Feb 07 14:28:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 327168
+[Thu Feb 07 14:28:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 322634
+[Thu Feb 07 14:28:02 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 577160631
+[Thu Feb 07 14:29:41 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1530
+[Thu Feb 07 14:29:42 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 459
+[Thu Feb 07 14:29:43 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1240
+[Thu Feb 07 14:29:44 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1361
+[Thu Feb 07 14:29:45 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 347093
+[Thu Feb 07 14:29:46 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 320664
+[Thu Feb 07 14:29:47 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 13011
+[Thu Feb 07 14:29:48 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:49 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:50 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:51 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:52 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:53 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:55 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:56 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:57 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:58 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 0
+[Thu Feb 07 14:29:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: -573818339
+[Thu Feb 07 14:30:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 189890
+[Thu Feb 07 14:30:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 316130
+[Thu Feb 07 14:30:02 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 312037
+[Thu Feb 07 14:30:03 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 322538
+[Thu Feb 07 14:30:04 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 322490
+[Thu Feb 07 14:30:05 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 321505
+[Thu Feb 07 14:30:06 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 324188
+[Thu Feb 07 14:30:07 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 6230637
+[Thu Feb 07 14:30:10 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1208
+[Thu Feb 07 14:30:11 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 150200
+[Thu Feb 07 14:30:12 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 341650
+[Thu Feb 07 14:30:13 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 319222
+[Thu Feb 07 14:30:14 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 323948
+[Thu Feb 07 14:30:15 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 314416
+[Thu Feb 07 14:30:16 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 325397
+[Thu Feb 07 14:30:17 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 323203
+[Thu Feb 07 14:30:19 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 333400
+[Thu Feb 07 14:30:20 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 319142
+[Thu Feb 07 14:30:21 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 311657
+[Thu Feb 07 14:30:22 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 327040
+[Thu Feb 07 14:30:23 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 328345
+[Thu Feb 07 14:30:24 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 327721
+[Thu Feb 07 14:30:25 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 312590
+[Thu Feb 07 14:30:26 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 319366
+[Thu Feb 07 14:30:27 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 333896
+[Thu Feb 07 14:30:28 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 319318
+[Thu Feb 07 14:30:29 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 327328
+[Thu Feb 07 14:30:30 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 323171
+[Thu Feb 07 14:30:31 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 322442
+[Thu Feb 07 14:30:32 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 319494
+[Thu Feb 07 14:30:33 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 327929
+[Thu Feb 07 14:30:34 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 13347712
+[Thu Feb 07 14:30:36 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1345
+[Thu Feb 07 14:30:37 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 141582
+[Thu Feb 07 14:30:38 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 324885
+[Thu Feb 07 14:30:39 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 325454
+[Thu Feb 07 14:30:40 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 323980
+[Thu Feb 07 14:30:41 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 320792
+[Thu Feb 07 14:30:42 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 332422
+[Thu Feb 07 14:30:43 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 323331
+[Thu Feb 07 14:30:44 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 322266
+[Thu Feb 07 14:30:46 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 321601
+[Thu Feb 07 14:30:47 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 320191
+[Thu Feb 07 14:30:48 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 324645
+[Thu Feb 07 14:30:49 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 325093
+[Thu Feb 07 14:30:50 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 324396
+[Thu Feb 07 14:30:51 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 322327
+[Thu Feb 07 14:30:52 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 322634
+[Thu Feb 07 14:30:53 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 319462
+[Thu Feb 07 14:30:54 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 316955
+[Thu Feb 07 14:30:55 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 319366
+[Thu Feb 07 14:30:56 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 320712
+[Thu Feb 07 14:30:57 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 327424
+[Thu Feb 07 14:30:58 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 322369
+[Thu Feb 07 14:30:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 324805
+[Thu Feb 07 14:31:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 20481618
+[Thu Feb 07 14:31:02 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1361
+[Thu Feb 07 14:31:03 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 111944
+[Thu Feb 07 14:31:04 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 330484
+[Thu Feb 07 14:31:05 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 324076
+[Thu Feb 07 14:31:06 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 335002
+[Thu Feb 07 14:31:07 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 317684
+[Thu Feb 07 14:31:08 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 326743
+[Thu Feb 07 14:31:09 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 323459
+[Thu Feb 07 14:31:10 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 320664
+[Thu Feb 07 14:31:12 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 316875
+[Thu Feb 07 14:31:13 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 327232
+[Thu Feb 07 14:31:14 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 322330
+[Thu Feb 07 14:31:15 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 321064
+[Thu Feb 07 14:31:16 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 320303
+[Thu Feb 07 14:31:17 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 166319
+[Thu Feb 07 14:31:18 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1365
+[Thu Feb 07 14:31:31 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 156238
+[Thu Feb 07 14:31:56 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 328025
+[Thu Feb 07 14:31:57 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 331814
+[Thu Feb 07 14:31:58 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 328863
+[Thu Feb 07 14:31:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 325662
+[Thu Feb 07 14:32:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 324428
+[Thu Feb 07 14:32:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 322394
+[Thu Feb 07 14:32:02 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 320728
+[Thu Feb 07 14:32:03 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 27349236
+[Thu Feb 07 14:32:25 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1361
+[Thu Feb 07 14:32:26 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1945
+[Thu Feb 07 14:32:35 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 369046
+[Thu Feb 07 14:32:36 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 323692
+[Thu Feb 07 14:32:37 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 322330
+[Thu Feb 07 14:32:38 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 324316
+[Thu Feb 07 14:32:39 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 319142
+[Thu Feb 07 14:32:40 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 324492
+[Thu Feb 07 14:32:41 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 319078
+[Thu Feb 07 14:32:42 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 332895
+[Thu Feb 07 14:32:43 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 327072
+[Thu Feb 07 14:32:44 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 319302
+[Thu Feb 07 14:32:45 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 338743
+[Thu Feb 07 14:32:47 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 335450
+[Thu Feb 07 14:32:48 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 229718
+[Thu Feb 07 14:32:49 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1505
+[Thu Feb 07 14:32:50 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 136027
+[Thu Feb 07 14:32:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 327408
+[Thu Feb 07 14:33:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 331942
+[Thu Feb 07 14:33:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 325326
+[Thu Feb 07 14:33:02 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 318932
+[Thu Feb 07 14:33:03 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 335884
+[Thu Feb 07 14:33:05 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 328214
+[Thu Feb 07 14:33:06 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 332671
+[Thu Feb 07 14:33:07 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 34318914
+[Thu Feb 07 14:34:07 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 153
+[Thu Feb 07 14:34:08 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:09 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:22 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 137
+[Thu Feb 07 14:34:23 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:24 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:25 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:27 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:34:54 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:34:57 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:35:43 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:36:07 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:36:31 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:36:53 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:37:17 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 431
+[Thu Feb 07 14:37:44 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 810
+[Thu Feb 07 14:38:26 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:39:12 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:39:36 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:39:55 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:39:56 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:40:15 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:40:52 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 411
+[Thu Feb 07 14:41:25 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 257
+[Thu Feb 07 14:41:43 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 455
+[Thu Feb 07 14:42:11 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:42:42 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:42:43 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 3058
+[Thu Feb 07 14:42:44 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 3769
+[Thu Feb 07 14:42:45 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 11637
+[Thu Feb 07 14:42:46 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 380395
+[Thu Feb 07 14:42:47 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 333368
+[Thu Feb 07 14:42:48 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 315209
+[Thu Feb 07 14:42:50 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 332246
+[Thu Feb 07 14:42:51 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 320808
+[Thu Feb 07 14:42:52 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 316274
+[Thu Feb 07 14:42:53 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 334273
+[Thu Feb 07 14:42:54 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 325758
+[Thu Feb 07 14:42:55 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 324060
+[Thu Feb 07 14:42:56 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 328754
+[Thu Feb 07 14:42:57 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 328962
+[Thu Feb 07 14:42:58 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 326679
+[Thu Feb 07 14:42:59 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 329885
+[Thu Feb 07 14:43:00 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 21746
+[Thu Feb 07 14:43:01 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 342077
+[Thu Feb 07 14:43:02 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 332831
+[Thu Feb 07 14:43:03 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 322049
+[Thu Feb 07 14:43:04 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 319526
+[Thu Feb 07 14:43:05 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 322065
+[Thu Feb 07 14:43:06 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 329787
+[Thu Feb 07 14:43:08 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 319414
+[Thu Feb 07 14:43:09 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 323811
+[Thu Feb 07 14:43:10 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 41683297
+[Thu Feb 07 14:43:13 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1413
+[Thu Feb 07 14:43:14 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 166181
+[Thu Feb 07 14:43:15 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 332150
+[Thu Feb 07 14:43:16 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 318317
+[Thu Feb 07 14:43:17 GMT+05:30 2019] Battery level is 0.99 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 42748529
+[Thu Feb 07 14:45:49 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 1623
+[Thu Feb 07 14:46:29 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 52
+[Thu Feb 07 14:47:17 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:48:02 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:48:05 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:48:29 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 194
+[Thu Feb 07 14:49:12 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 374
+[Thu Feb 07 14:49:36 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:50:15 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:50:40 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:51:01 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:51:43 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:52:08 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 246
+[Thu Feb 07 14:52:29 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:52:53 GMT+05:30 2019] Battery level is 0.99 and no active actors
+Network usage: 0
+[Thu Feb 07 14:53:32 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 194
+[Thu Feb 07 14:54:09 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 52
+[Thu Feb 07 14:54:51 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:55:12 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 14:55:37 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:56:22 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 14:57:03 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:57:29 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 9663
+[Thu Feb 07 14:57:43 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 8087
+[Thu Feb 07 14:57:44 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:57:45 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:57:46 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:57:47 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 14:57:48 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 918
+[Thu Feb 07 14:57:49 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1208
+[Thu Feb 07 14:57:50 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 748785
+[Thu Feb 07 14:57:51 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1349492
+[Thu Feb 07 14:57:52 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1278988
+[Thu Feb 07 14:57:53 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1140661
+[Thu Feb 07 14:57:54 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 321610
+[Thu Feb 07 14:57:56 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 85590
+[Thu Feb 07 14:57:57 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1364175
+[Thu Feb 07 14:57:58 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1288241
+[Thu Feb 07 14:57:59 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1249142
+[Thu Feb 07 14:58:00 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 437029
+[Thu Feb 07 14:58:01 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 183895
+[Thu Feb 07 14:58:02 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1389542
+[Thu Feb 07 14:58:03 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1310516
+[Thu Feb 07 14:58:04 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1199768
+[Thu Feb 07 14:58:05 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 399454
+[Thu Feb 07 14:58:06 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1356005
+[Thu Feb 07 14:58:07 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1299990
+[Thu Feb 07 14:58:08 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1190997
+[Thu Feb 07 14:58:09 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 766984
+[Thu Feb 07 14:58:10 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1035582
+[Thu Feb 07 14:58:11 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1328839
+[Thu Feb 07 14:58:12 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1228028
+[Thu Feb 07 14:58:13 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1113107
+[Thu Feb 07 14:58:14 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 48155
+[Thu Feb 07 14:58:15 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1158584
+[Thu Feb 07 14:58:16 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1280069
+[Thu Feb 07 14:58:18 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 68392459
+[Thu Feb 07 15:13:18 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 986
+[Thu Feb 07 15:13:48 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:14:18 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 600
+[Thu Feb 07 15:15:01 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 153
+[Thu Feb 07 15:15:16 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:15:17 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 153
+[Thu Feb 07 15:15:25 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 18585
+[Thu Feb 07 15:15:40 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 39302
+[Thu Feb 07 15:15:41 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1223862
+[Thu Feb 07 15:15:42 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1570579
+[Thu Feb 07 15:15:43 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1297170
+[Thu Feb 07 15:15:44 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 355245
+[Thu Feb 07 15:15:45 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 138486
+[Thu Feb 07 15:15:46 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1407805
+[Thu Feb 07 15:15:47 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1287222
+[Thu Feb 07 15:15:48 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1239041
+[Thu Feb 07 15:15:50 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 507782
+[Thu Feb 07 15:15:51 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1377649
+[Thu Feb 07 15:15:52 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1307824
+[Thu Feb 07 15:15:53 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1152853
+[Thu Feb 07 15:15:54 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 430955
+[Thu Feb 07 15:15:55 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1105165
+[Thu Feb 07 15:15:56 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1303258
+[Thu Feb 07 15:15:57 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1263192
+[Thu Feb 07 15:15:58 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1013840
+[Thu Feb 07 15:15:59 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 577173
+[Thu Feb 07 15:16:00 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1360345
+[Thu Feb 07 15:16:01 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1345040
+[Thu Feb 07 15:16:02 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1135503
+[Thu Feb 07 15:16:03 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 130012
+[Thu Feb 07 15:16:04 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 558582
+[Thu Feb 07 15:16:05 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1329724
+[Thu Feb 07 15:16:06 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1278828
+[Thu Feb 07 15:16:07 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 967213
+[Thu Feb 07 15:16:09 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 95983123
+[Thu Feb 07 15:16:16 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 1836
+[Thu Feb 07 15:16:17 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 734077
+[Thu Feb 07 15:16:18 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1283369
+[Thu Feb 07 15:16:19 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1293150
+[Thu Feb 07 15:16:20 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 100067746
+[Thu Feb 07 15:24:06 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 335
+[Thu Feb 07 15:24:45 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:25:13 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 1164
+[Thu Feb 07 15:25:55 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:26:37 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:27:14 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:27:50 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:28:30 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:29:15 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:29:16 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:29:39 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: -100069551
+[Thu Feb 07 15:30:05 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 555
+[Thu Feb 07 15:30:22 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 335
+[Thu Feb 07 15:30:46 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 431
+[Thu Feb 07 15:31:19 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:20 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 930
+[Thu Feb 07 15:31:21 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 26482
+[Thu Feb 07 15:31:22 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 2672
+[Thu Feb 07 15:31:24 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 3693
+[Thu Feb 07 15:31:25 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 2366
+[Thu Feb 07 15:31:26 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:27 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:28 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:29 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:30 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:31 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:32 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:33 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:31:34 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 1208
+[Thu Feb 07 15:31:35 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1514
+[Thu Feb 07 15:31:36 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1115649
+[Thu Feb 07 15:31:37 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1337478
+[Thu Feb 07 15:31:38 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1294519
+[Thu Feb 07 15:31:39 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 415860
+[Thu Feb 07 15:31:40 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1372642
+[Thu Feb 07 15:31:42 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1266604
+[Thu Feb 07 15:31:43 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1225281
+[Thu Feb 07 15:31:44 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 927944
+[Thu Feb 07 15:31:45 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 752273
+[Thu Feb 07 15:31:46 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1215308
+[Thu Feb 07 15:31:47 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1330981
+[Thu Feb 07 15:31:48 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1088476
+[Thu Feb 07 15:31:49 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1679
+[Thu Feb 07 15:31:50 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 631762
+[Thu Feb 07 15:31:51 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1294567
+[Thu Feb 07 15:31:52 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1293166
+[Thu Feb 07 15:31:53 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1144434
+[Thu Feb 07 15:31:54 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 638931
+[Thu Feb 07 15:31:55 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1333481
+[Thu Feb 07 15:31:56 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 477061
+[Thu Feb 07 15:32:28 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 20204136
+[Thu Feb 07 15:42:42 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 153
+[Thu Feb 07 15:42:43 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 283
+[Thu Feb 07 15:43:13 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 52
+[Thu Feb 07 15:43:48 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:44:09 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:44:58 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:45:22 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:46:01 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:46:47 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:47:08 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:47:35 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:48:27 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 584
+[Thu Feb 07 15:49:12 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:49:37 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:50:19 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:50:46 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 194
+[Thu Feb 07 15:51:13 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 52
+[Thu Feb 07 15:51:47 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:52:14 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:52:57 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:53:18 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:53:54 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:54:37 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:55:01 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 785
+[Thu Feb 07 15:55:34 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:56:11 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 15:56:35 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:57:23 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 3311
+[Thu Feb 07 15:57:42 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 7299
+[Thu Feb 07 15:57:43 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 138400
+[Thu Feb 07 15:57:44 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1378152
+[Thu Feb 07 15:57:46 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1290208
+[Thu Feb 07 15:57:47 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1245241
+[Thu Feb 07 15:57:48 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 369628
+[Thu Feb 07 15:57:49 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1029526
+[Thu Feb 07 15:57:50 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1292549
+[Thu Feb 07 15:57:51 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1273773
+[Thu Feb 07 15:57:52 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1175722
+[Thu Feb 07 15:57:53 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 115663
+[Thu Feb 07 15:57:54 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1091796
+[Thu Feb 07 15:57:55 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1296073
+[Thu Feb 07 15:57:56 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1262303
+[Thu Feb 07 15:57:57 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 778054
+[Thu Feb 07 15:57:58 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1029030
+[Thu Feb 07 15:57:59 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1299613
+[Thu Feb 07 15:58:00 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1248653
+[Thu Feb 07 15:58:01 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 823513
+[Thu Feb 07 15:58:02 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 409923
+[Thu Feb 07 15:58:03 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1312678
+[Thu Feb 07 15:58:04 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1294912
+[Thu Feb 07 15:58:05 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1180896
+[Thu Feb 07 15:58:06 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 285123
+[Thu Feb 07 15:58:07 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1168260
+[Thu Feb 07 15:58:09 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1301608
+[Thu Feb 07 15:58:10 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1289969
+[Thu Feb 07 15:58:11 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 636637
+[Thu Feb 07 15:58:12 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 800659
+[Thu Feb 07 15:58:13 GMT+05:30 2019] Battery level is 0.98 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 48288349
+[Thu Feb 07 15:58:23 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 153
+[Thu Feb 07 15:58:48 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 335
+[Thu Feb 07 15:59:31 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 15:59:58 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:00:40 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:01:26 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:02:08 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:02:36 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:03:07 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:03:08 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:03:15 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:03:42 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 720
+[Thu Feb 07 16:04:35 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:04:46 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 455
+[Thu Feb 07 16:05:05 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:05:31 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:06:14 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:06:56 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:07:23 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:07:57 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:08:09 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:08:10 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:08:24 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:08:31 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:08:51 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:09:34 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:10:16 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:11:02 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:11:47 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:12:11 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 246
+[Thu Feb 07 16:12:39 GMT+05:30 2019] Battery level is 0.98 and no active actors
+Network usage: 0
+[Thu Feb 07 16:13:06 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:13:33 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:13:34 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 338
+[Thu Feb 07 16:13:35 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:14:08 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:14:19 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:15:01 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:15:41 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:15:50 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:16:38 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:17:09 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:17:15 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:17:36 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:18:15 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:18:43 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:19:49 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:20:32 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:21:17 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:21:42 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:21:47 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:22:06 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 668
+[Thu Feb 07 16:22:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 455
+[Thu Feb 07 16:23:09 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:23:52 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:23:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:24:40 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:25:23 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:25:50 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:26:51 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:27:18 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:28:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:28:03 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:28:46 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:29:28 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: -48296885
+[Thu Feb 07 16:30:14 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:30:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:31:20 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 668
+[Thu Feb 07 16:31:45 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 455
+[Thu Feb 07 16:32:27 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:32:53 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 700
+[Thu Feb 07 16:33:31 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 403
+[Thu Feb 07 16:33:55 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 1038
+[Thu Feb 07 16:34:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 492
+[Thu Feb 07 16:34:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:35:44 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:36:08 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:36:32 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:36:57 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:37:18 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:38:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:38:03 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:38:46 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:39:10 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:39:50 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:40:17 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 668
+[Thu Feb 07 16:40:47 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 403
+[Thu Feb 07 16:41:08 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:41:51 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:42:15 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:42:57 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:43:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:44:04 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:44:28 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:45:11 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 858
+[Thu Feb 07 16:45:56 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 201
+[Thu Feb 07 16:45:57 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:45:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:45:59 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:46:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 21156
+[Thu Feb 07 16:46:02 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 1381
+[Thu Feb 07 16:46:24 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 335
+[Thu Feb 07 16:47:09 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:47:54 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 16:48:28 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:48:43 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:49:10 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 2134
+[Thu Feb 07 16:49:56 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 544
+[Thu Feb 07 16:50:38 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 5392
+[Thu Feb 07 16:50:42 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 3216
+[Thu Feb 07 16:51:05 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 459
+[Thu Feb 07 16:51:45 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 335
+[Thu Feb 07 16:52:12 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 1002
+[Thu Feb 07 16:52:51 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 403
+[Thu Feb 07 16:53:13 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:53:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 54824
+[Thu Feb 07 16:53:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 42515
+[Thu Feb 07 16:53:50 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1399024
+[Thu Feb 07 16:53:51 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1345462
+[Thu Feb 07 16:53:52 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1905817
+[Thu Feb 07 16:53:54 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 444961
+[Thu Feb 07 16:53:55 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 2316634
+[Thu Feb 07 16:53:58 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1570333
+[Thu Feb 07 16:53:59 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 520600
+[Thu Feb 07 16:54:00 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 62959
+[Thu Feb 07 16:54:01 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1433625
+[Thu Feb 07 16:54:02 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1306729
+[Thu Feb 07 16:54:03 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1230726
+[Thu Feb 07 16:54:04 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 633743
+[Thu Feb 07 16:54:05 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1272621
+[Thu Feb 07 16:54:06 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1235933
+[Thu Feb 07 16:54:07 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1276289
+[Thu Feb 07 16:54:08 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 720318
+[Thu Feb 07 16:54:09 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1102681
+[Thu Feb 07 16:54:10 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1311421
+[Thu Feb 07 16:54:11 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1264785
+[Thu Feb 07 16:54:12 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1318167
+[Thu Feb 07 16:54:13 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 163492
+[Thu Feb 07 16:54:14 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1067460
+[Thu Feb 07 16:54:15 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1323860
+[Thu Feb 07 16:54:16 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1247921
+[Thu Feb 07 16:54:18 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 28276699
+[Thu Feb 07 16:57:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 8665
+[Thu Feb 07 16:57:38 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 689130
+[Thu Feb 07 16:57:39 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1288785
+[Thu Feb 07 16:57:40 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1259963
+[Thu Feb 07 16:57:41 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1001712
+[Thu Feb 07 16:57:42 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1345
+[Thu Feb 07 16:57:43 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 641527
+[Thu Feb 07 16:57:44 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1308889
+[Thu Feb 07 16:57:45 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1276433
+[Thu Feb 07 16:57:46 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1097976
+[Thu Feb 07 16:57:47 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 72065
+[Thu Feb 07 16:57:48 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1326447
+[Thu Feb 07 16:57:49 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1324806
+[Thu Feb 07 16:57:50 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1257170
+[Thu Feb 07 16:57:52 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1118822
+[Thu Feb 07 16:57:53 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 691631
+[Thu Feb 07 16:57:54 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1288440
+[Thu Feb 07 16:57:55 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1303767
+[Thu Feb 07 16:57:56 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1274431
+[Thu Feb 07 16:57:57 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 473050
+[Thu Feb 07 16:57:58 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1374559
+[Thu Feb 07 16:57:59 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1283849
+[Thu Feb 07 16:58:00 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1266389
+[Thu Feb 07 16:58:01 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1023948
+[Thu Feb 07 16:58:02 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 742268
+[Thu Feb 07 16:58:03 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1268359
+[Thu Feb 07 16:58:04 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1317084
+[Thu Feb 07 16:58:05 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1189219
+[Thu Feb 07 16:58:06 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 56448592
+[Thu Feb 07 16:58:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 463
+[Thu Feb 07 16:59:16 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 16:59:34 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 529
+[Thu Feb 07 17:00:17 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 792
+[Thu Feb 07 17:00:41 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 704
+[Thu Feb 07 17:00:53 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 338
+[Thu Feb 07 17:01:39 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 648
+[Thu Feb 07 17:02:21 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 403
+[Thu Feb 07 17:02:43 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:02:46 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:02:47 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 338
+[Thu Feb 07 17:02:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:02:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:02:59 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:03:07 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 157
+[Thu Feb 07 17:03:31 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:04:13 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 399
+[Thu Feb 07 17:04:17 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:04:18 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:04:56 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:05:23 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:06:09 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:06:51 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 194
+[Thu Feb 07 17:07:33 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 52
+[Thu Feb 07 17:07:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:08:22 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:09:04 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:09:50 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:09:54 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:10:32 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:11:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:11:39 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 338
+[Thu Feb 07 17:12:03 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:12:28 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:13:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:13:13 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:13:52 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:14:41 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:14:42 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:15:08 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:15:41 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:15:42 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:15:57 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:17:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:17:43 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:18:28 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:18:55 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:19:38 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:20:02 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:20:41 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 668
+[Thu Feb 07 17:21:06 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 455
+[Thu Feb 07 17:21:27 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 194
+[Thu Feb 07 17:21:51 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 52
+[Thu Feb 07 17:22:15 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:22:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:22:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:22:59 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:23:16 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:23:19 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:24:01 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:24:56 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:25:20 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:26:03 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:26:27 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:27:06 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:27:34 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:28:13 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:28:17 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:28:55 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:29:20 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: -56459538
+[Thu Feb 07 17:30:05 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:30:48 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:31:12 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:31:32 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:31:57 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:33:00 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:33:04 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:33:46 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:34:29 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:35:11 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:35:38 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:36:18 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:36:45 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:37:31 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:37:55 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 194
+[Thu Feb 07 17:38:19 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 720
+[Thu Feb 07 17:38:58 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:39:02 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 455
+[Thu Feb 07 17:39:26 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:39:50 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:40:29 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:41:12 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:41:36 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:42:22 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:42:46 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:43:10 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 194
+[Thu Feb 07 17:43:49 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 52
+[Thu Feb 07 17:43:52 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:44:38 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:44:59 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:45:23 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:46:06 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:46:33 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:47:12 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:47:16 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:47:37 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 668
+[Thu Feb 07 17:48:01 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:48:19 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 455
+[Thu Feb 07 17:48:43 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:49:29 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:50:14 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:50:54 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:51:15 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 0
+[Thu Feb 07 17:51:42 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 246
+[Thu Feb 07 17:52:21 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 11028
+[Thu Feb 07 18:54:03 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 39528
+[Thu Feb 07 18:54:05 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 239921
+[Thu Feb 07 18:54:06 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1466691
+[Thu Feb 07 18:54:07 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1274247
+[Thu Feb 07 18:54:08 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1129762
+[Thu Feb 07 18:54:09 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 562593
+[Thu Feb 07 18:54:10 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 27929
+[Thu Feb 07 18:54:11 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 935997
+[Thu Feb 07 18:54:12 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 522301
+[Thu Feb 07 18:54:13 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 742116
+[Thu Feb 07 18:54:15 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 994799
+[Thu Feb 07 18:54:16 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 986727
+[Thu Feb 07 18:54:17 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 77208
+[Thu Feb 07 18:54:18 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 657476
+[Thu Feb 07 18:54:19 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1315550
+[Thu Feb 07 18:54:20 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1300543
+[Thu Feb 07 18:54:21 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 931473
+[Thu Feb 07 18:54:22 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 423262
+[Thu Feb 07 18:54:23 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1326111
+[Thu Feb 07 18:54:25 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1282448
+[Thu Feb 07 18:54:26 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1280526
+[Thu Feb 07 18:54:27 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 73796
+[Thu Feb 07 18:54:28 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1085372
+[Thu Feb 07 18:54:29 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1291347
+[Thu Feb 07 18:54:30 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1237832
+[Thu Feb 07 18:54:31 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1307015
+[Thu Feb 07 18:54:32 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 633428
+[Thu Feb 07 18:54:33 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 23817546
+[Thu Feb 07 18:54:36 GMT+05:30 2019] Battery level is 0.97 and no active actors
+Network usage: 4591
+[Thu Feb 07 18:54:37 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 779351
+[Thu Feb 07 18:54:38 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1298324
+[Thu Feb 07 18:54:39 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1277130
+[Thu Feb 07 18:54:40 GMT+05:30 2019] Battery level is 0.97 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 18657
+[Thu Feb 07 21:24:35 GMT+05:30 2019] Battery level is 0.96 and no active actors
+Network usage: 2755
+[Thu Feb 07 21:24:37 GMT+05:30 2019] Battery level is 0.96 and no active actors
+Network usage: 41372
+[Thu Feb 07 21:24:38 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 36511
+[Thu Feb 07 21:24:39 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 611889
+[Thu Feb 07 21:24:40 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1326661
+[Thu Feb 07 21:24:41 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 2567014
+[Thu Feb 07 21:24:44 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1551994
+[Thu Feb 07 21:24:45 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1289994
+[Thu Feb 07 21:24:46 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1357689
+[Thu Feb 07 21:24:48 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 683286
+[Thu Feb 07 21:24:49 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1243186
+[Thu Feb 07 21:24:50 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1359689
+[Thu Feb 07 21:24:51 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1265939
+[Thu Feb 07 21:24:52 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 926818
+[Thu Feb 07 21:24:53 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 2988
+[Thu Feb 07 21:24:54 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1217514
+[Thu Feb 07 21:24:55 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1249561
+[Thu Feb 07 21:24:56 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1316811
+[Thu Feb 07 21:24:57 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 593849
+[Thu Feb 07 21:24:58 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1255129
+[Thu Feb 07 21:24:59 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1435404
+[Thu Feb 07 21:25:00 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1247604
+[Thu Feb 07 21:25:01 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 469085
+[Thu Feb 07 21:25:03 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 835711
+[Thu Feb 07 21:25:04 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1269808
+[Thu Feb 07 21:25:05 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1284459
+[Thu Feb 07 21:25:06 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 989872
+[Thu Feb 07 21:25:07 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 9237
+[Thu Feb 07 21:25:08 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 27465876
+[Thu Feb 07 21:25:10 GMT+05:30 2019] Battery level is 0.96 and no active actors
+Network usage: 1361
+[Thu Feb 07 21:25:11 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 318940
+[Thu Feb 07 21:25:12 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1355164
+[Thu Feb 07 21:25:13 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1240556
+[Thu Feb 07 21:25:14 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1291050
+[Thu Feb 07 21:25:15 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 224416
+[Thu Feb 07 21:25:16 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1208
+[Thu Feb 07 21:25:17 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1214542
+[Thu Feb 07 21:25:18 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1316117
+[Thu Feb 07 21:25:19 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1264449
+[Thu Feb 07 21:25:20 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 599576
+[Thu Feb 07 21:25:21 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1054550
+[Thu Feb 07 21:25:22 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1255189
+[Thu Feb 07 21:25:23 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1315402
+[Thu Feb 07 21:25:25 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1299206
+[Thu Feb 07 21:25:26 GMT+05:30 2019] Battery level is 0.96 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 478882
+[Thu Feb 07 21:25:27 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1404385
+[Thu Feb 07 21:25:28 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1290028
+[Thu Feb 07 21:25:29 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1255157
+[Thu Feb 07 21:25:30 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 253958
+[Thu Feb 07 21:25:31 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 913524
+[Thu Feb 07 21:25:32 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1270841
+[Thu Feb 07 21:25:33 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1301669
+[Thu Feb 07 21:25:34 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 919994
+[Thu Feb 07 21:25:35 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 121513
+[Thu Feb 07 21:25:36 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1368668
+[Thu Feb 07 21:25:37 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1331806
+[Thu Feb 07 21:25:38 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1186346
+[Thu Feb 07 21:25:39 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 54779471
+[Thu Feb 07 21:25:41 GMT+05:30 2019] Battery level is 0.95 and no active actors
+Network usage: 1361
+[Thu Feb 07 21:25:42 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 406611
+[Thu Feb 07 21:25:43 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1309387
+[Thu Feb 07 21:25:44 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1271979
+[Thu Feb 07 21:25:45 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1183684
+[Thu Feb 07 21:25:47 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 679027
+[Thu Feb 07 21:25:48 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1126306
+[Thu Feb 07 21:25:49 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1311044
+[Thu Feb 07 21:25:50 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1258907
+[Thu Feb 07 21:25:51 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 704458
+[Thu Feb 07 21:25:52 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 617168
+[Thu Feb 07 21:25:53 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1303223
+[Thu Feb 07 21:25:54 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1284297
+[Thu Feb 07 21:25:55 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1221115
+[Thu Feb 07 21:25:56 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1642
+[Thu Feb 07 21:25:57 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 730172
+[Thu Feb 07 21:25:58 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1292236
+[Thu Feb 07 21:25:59 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1300319
+[Thu Feb 07 21:26:00 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1258811
+[Thu Feb 07 21:26:01 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 646196
+[Thu Feb 07 21:26:02 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1297851
+[Thu Feb 07 21:26:03 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1275020
+[Thu Feb 07 21:26:04 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1256727
+[Thu Feb 07 21:26:05 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 600655
+[Thu Feb 07 21:26:07 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1115810
+[Thu Feb 07 21:26:08 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1305013
+[Thu Feb 07 21:26:09 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1287341
+[Thu Feb 07 21:26:10 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 82589049
+[Thu Feb 07 21:26:12 GMT+05:30 2019] Battery level is 0.95 and no active actors
+Network usage: 1208
+[Thu Feb 07 21:26:13 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 389149
+[Thu Feb 07 21:26:14 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1287743
+[Thu Feb 07 21:26:15 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1250392
+[Thu Feb 07 21:26:16 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1134422
+[Thu Feb 07 21:26:17 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 297249
+[Thu Feb 07 21:26:18 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 674881
+[Thu Feb 07 21:26:19 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1334409
+[Thu Feb 07 21:26:20 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1278083
+[Thu Feb 07 21:26:21 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1207714
+[Thu Feb 07 21:26:22 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 461989
+[Thu Feb 07 21:26:23 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1326721
+[Thu Feb 07 21:26:24 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1313672
+[Thu Feb 07 21:26:26 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1216798
+[Thu Feb 07 21:26:27 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 171493
+[Thu Feb 07 21:26:28 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1202551
+[Thu Feb 07 21:26:29 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1360498
+[Thu Feb 07 21:26:30 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1264458
+[Thu Feb 07 21:26:31 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 833564
+[Thu Feb 07 21:26:32 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 821595
+[Thu Feb 07 21:26:33 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1317104
+[Thu Feb 07 21:26:34 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1298998
+[Thu Feb 07 21:26:35 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1214787
+[Thu Feb 07 21:26:36 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 226797
+[Thu Feb 07 21:26:37 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1382933
+[Thu Feb 07 21:26:38 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1305791
+[Thu Feb 07 21:26:39 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1234219
+[Thu Feb 07 21:26:40 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 335971
+[Thu Feb 07 21:26:41 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 110785545
+[Thu Feb 07 21:26:45 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1410060
+[Thu Feb 07 21:26:47 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1298547
+[Thu Feb 07 21:26:48 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1157867
+[Thu Feb 07 21:26:49 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 988836
+[Thu Feb 07 21:26:50 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 551150
+[Thu Feb 07 21:26:51 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1322539
+[Thu Feb 07 21:26:52 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1289729
+[Thu Feb 07 21:26:53 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1221275
+[Thu Feb 07 21:26:54 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 563505
+[Thu Feb 07 21:26:55 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1155300
+[Thu Feb 07 21:26:56 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1294864
+[Thu Feb 07 21:26:57 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1245794
+[Thu Feb 07 21:26:58 GMT+05:30 2019] Battery level is 0.95 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 672884
+[Thu Feb 07 21:26:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1502
+[Thu Feb 07 21:27:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1267054
+[Thu Feb 07 21:27:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1290970
+[Thu Feb 07 21:27:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1207593
+[Thu Feb 07 21:27:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 490098
+[Thu Feb 07 21:27:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1373270
+[Thu Feb 07 21:27:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1346128
+[Thu Feb 07 21:27:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1250561
+[Thu Feb 07 21:27:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 434271
+[Thu Feb 07 21:27:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 717463
+[Thu Feb 07 21:27:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1303411
+[Thu Feb 07 21:27:22 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1332391
+[Thu Feb 07 21:27:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 138215846
+[Thu Feb 07 21:28:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 1683
+[Thu Feb 07 21:28:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 2142
+[Thu Feb 07 21:29:02 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1250259
+[Thu Feb 07 21:29:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1271826
+[Thu Feb 07 21:29:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1272587
+[Thu Feb 07 21:29:05 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 601274
+[Thu Feb 07 21:29:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 646072
+[Thu Feb 07 21:29:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1276216
+[Thu Feb 07 21:29:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1280011
+[Thu Feb 07 21:29:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1100748
+[Thu Feb 07 21:29:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 562346
+[Thu Feb 07 21:29:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1287807
+[Thu Feb 07 21:29:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1331790
+[Thu Feb 07 21:29:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1242759
+[Thu Feb 07 21:29:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 618519
+[Thu Feb 07 21:29:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 801919
+[Thu Feb 07 21:29:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1279500
+[Thu Feb 07 21:29:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1290844
+[Thu Feb 07 21:29:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1231961
+[Thu Feb 07 21:29:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 359802
+[Thu Feb 07 21:29:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 906266
+[Thu Feb 07 21:29:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1293694
+[Thu Feb 07 21:29:24 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1248013
+[Thu Feb 07 21:29:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 938151
+[Thu Feb 07 21:29:27 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 109633
+[Thu Feb 07 21:29:47 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 0
+[Thu Feb 07 21:29:49 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 2425914
+[Thu Feb 07 21:33:13 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 938
+[Thu Feb 07 21:34:13 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:34:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 399
+[Thu Feb 07 21:34:50 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 1055
+[Thu Feb 07 21:34:51 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 314367
+[Thu Feb 07 21:34:52 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1320192
+[Thu Feb 07 21:34:53 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1126629
+[Thu Feb 07 21:34:54 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1151356
+[Thu Feb 07 21:34:55 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 566540
+[Thu Feb 07 21:34:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 457752
+[Thu Feb 07 21:34:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1323083
+[Thu Feb 07 21:34:58 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1298100
+[Thu Feb 07 21:34:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1240531
+[Thu Feb 07 21:35:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 66707
+[Thu Feb 07 21:35:02 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 662136
+[Thu Feb 07 21:35:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1289921
+[Thu Feb 07 21:35:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1274991
+[Thu Feb 07 21:35:05 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1284395
+[Thu Feb 07 21:35:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 668135
+[Thu Feb 07 21:35:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1311405
+[Thu Feb 07 21:35:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1242334
+[Thu Feb 07 21:35:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1114238
+[Thu Feb 07 21:35:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 499797
+[Thu Feb 07 21:35:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1339320
+[Thu Feb 07 21:35:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1308121
+[Thu Feb 07 21:35:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1265114
+[Thu Feb 07 21:35:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 491575
+[Thu Feb 07 21:35:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 974032
+[Thu Feb 07 21:35:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1333376
+[Thu Feb 07 21:35:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1327137
+[Thu Feb 07 21:35:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 754896
+[Thu Feb 07 21:35:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 313915
+[Thu Feb 07 21:35:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 30846831
+[Thu Feb 07 21:42:43 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 620
+[Thu Feb 07 21:43:13 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 178
+[Thu Feb 07 21:43:56 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:44:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 21:45:30 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:46:15 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 584
+[Thu Feb 07 21:46:40 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:46:41 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:47:25 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 21:47:44 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 10707
+[Thu Feb 07 21:47:45 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 2394
+[Thu Feb 07 21:47:46 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:47:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:47:48 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 1224
+[Thu Feb 07 21:47:49 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1208
+[Thu Feb 07 21:47:50 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 856631
+[Thu Feb 07 21:47:51 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1266668
+[Thu Feb 07 21:47:52 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1270907
+[Thu Feb 07 21:47:53 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1202755
+[Thu Feb 07 21:47:54 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 309242
+[Thu Feb 07 21:47:55 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1345
+[Thu Feb 07 21:47:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 819470
+[Thu Feb 07 21:47:58 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1286717
+[Thu Feb 07 21:47:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1302714
+[Thu Feb 07 21:48:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 889282
+[Thu Feb 07 21:48:01 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 996853
+[Thu Feb 07 21:48:02 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1292204
+[Thu Feb 07 21:48:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1294455
+[Thu Feb 07 21:48:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 810215
+[Thu Feb 07 21:48:05 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 333660
+[Thu Feb 07 21:48:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1257305
+[Thu Feb 07 21:48:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1318133
+[Thu Feb 07 21:48:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1214282
+[Thu Feb 07 21:48:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 305714
+[Thu Feb 07 21:48:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 648881
+[Thu Feb 07 21:48:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1324977
+[Thu Feb 07 21:48:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1286982
+[Thu Feb 07 21:48:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1110028
+[Thu Feb 07 21:48:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 693856
+[Thu Feb 07 21:48:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1256327
+[Thu Feb 07 21:48:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1296466
+[Thu Feb 07 21:48:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1265139
+[Thu Feb 07 21:48:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 58152110
+[Thu Feb 07 21:55:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 258
+[Thu Feb 07 21:55:54 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 105
+[Thu Feb 07 21:55:55 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:55:56 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 365
+[Thu Feb 07 21:55:57 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:55:59 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:56:00 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 89
+[Thu Feb 07 21:56:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:56:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 157
+[Thu Feb 07 21:56:50 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:56:52 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:57:37 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 21:58:20 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 21:59:18 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 21:59:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:00:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:00:45 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:01:31 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:01:32 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:02:01 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:02:45 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:03:05 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:03:32 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:03:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:04:36 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:04:39 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 338
+[Thu Feb 07 22:04:41 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 925
+[Thu Feb 07 22:04:48 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 2289
+[Thu Feb 07 22:04:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:04:50 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:04:51 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:04:52 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:04:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 1208
+[Thu Feb 07 22:04:54 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 2503
+[Thu Feb 07 22:04:55 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 1201011
+[Thu Feb 07 22:04:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1333424
+[Thu Feb 07 22:04:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1244432
+[Thu Feb 07 22:04:58 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 724043
+[Thu Feb 07 22:04:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1482
+[Thu Feb 07 22:05:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 839391
+[Thu Feb 07 22:05:01 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1293774
+[Thu Feb 07 22:05:02 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1309593
+[Thu Feb 07 22:05:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1152019
+[Thu Feb 07 22:05:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 458417
+[Thu Feb 07 22:05:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1330613
+[Thu Feb 07 22:05:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1314328
+[Thu Feb 07 22:05:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1274038
+[Thu Feb 07 22:05:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1016911
+[Thu Feb 07 22:05:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 734459
+[Thu Feb 07 22:05:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1280133
+[Thu Feb 07 22:05:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1307751
+[Thu Feb 07 22:05:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1171268
+[Thu Feb 07 22:05:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 585368
+[Thu Feb 07 22:05:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1300415
+[Thu Feb 07 22:05:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1305774
+[Thu Feb 07 22:05:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1268742
+[Thu Feb 07 22:05:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 156883
+[Thu Feb 07 22:05:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1244452
+[Thu Feb 07 22:05:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1275471
+[Thu Feb 07 22:05:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1318069
+[Thu Feb 07 22:05:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 125555
+[Thu Feb 07 22:05:45 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 178
+[Thu Feb 07 22:06:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:06:49 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:07:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:07:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:08:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:08:44 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:09:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:09:26 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:10:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:10:22 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:10:33 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:10:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1027
+[Thu Feb 07 22:11:24 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 201
+[Thu Feb 07 22:11:40 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:11:43 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 335
+[Thu Feb 07 22:12:01 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:12:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:12:50 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:13:32 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:14:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:14:42 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:15:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:15:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:15:24 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:15:30 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 620
+[Thu Feb 07 22:16:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 492
+[Thu Feb 07 22:16:37 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:16:58 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:17:41 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 700
+[Thu Feb 07 22:18:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 338
+[Thu Feb 07 22:18:38 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:18:53 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 544
+[Thu Feb 07 22:19:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:20:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 584
+[Thu Feb 07 22:20:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:20:26 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:20:42 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:21:28 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 194
+[Thu Feb 07 22:21:52 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 52
+[Thu Feb 07 22:22:31 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:22:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:23:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:23:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:23:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:24:02 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:24:38 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 306
+[Thu Feb 07 22:24:39 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:24:40 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:25:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 335
+[Thu Feb 07 22:25:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:25:27 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:25:28 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:25:51 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 246
+[Thu Feb 07 22:25:55 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:26:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 0
+[Thu Feb 07 22:26:28 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 7128
+[Thu Feb 07 22:26:50 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 85761963
+[Thu Feb 07 22:26:54 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 28950
+[Thu Feb 07 22:26:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 378603
+[Thu Feb 07 22:26:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1577920
+[Thu Feb 07 22:26:58 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1682618
+[Thu Feb 07 22:26:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 788495
+[Thu Feb 07 22:27:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 775839
+[Thu Feb 07 22:27:01 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1259531
+[Thu Feb 07 22:27:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 1298069
+[Thu Feb 07 22:27:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1183259
+[Thu Feb 07 22:27:05 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 483624
+[Thu Feb 07 22:27:06 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1414342
+[Thu Feb 07 22:27:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 1276737
+[Thu Feb 07 22:27:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 1246402
+[Thu Feb 07 22:27:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 312457
+[Thu Feb 07 22:27:10 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 11910
+[Thu Feb 07 22:27:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1356558
+[Thu Feb 07 22:27:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1318766
+[Thu Feb 07 22:27:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1231488
+[Thu Feb 07 22:27:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 834453
+[Thu Feb 07 22:27:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 958965
+[Thu Feb 07 22:27:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1283305
+[Thu Feb 07 22:27:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1285732
+[Thu Feb 07 22:27:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 824432
+[Thu Feb 07 22:27:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 466872
+[Thu Feb 07 22:27:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1336596
+[Thu Feb 07 22:27:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 1271026
+[Thu Feb 07 22:27:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1249903
+[Thu Feb 07 22:27:24 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 60900
+[Thu Feb 07 22:27:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 770352
+[Thu Feb 07 22:27:26 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 114167943
+[Thu Feb 07 22:27:30 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:27:35 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:28:20 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:28:21 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:28:38 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 335
+[Thu Feb 07 22:29:06 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:29:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 720
+[Thu Feb 07 22:29:25 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:29:30 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 317
+[Thu Feb 07 22:29:55 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: -114169423
+[Thu Feb 07 22:30:29 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:30:30 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:30:52 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 169
+[Thu Feb 07 22:30:55 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 322
+[Thu Feb 07 22:31:16 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:31:40 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:32:22 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:32:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:33:08 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:33:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:33:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:34:15 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:34:51 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:35:21 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:36:04 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:36:06 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:36:07 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:36:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 194
+[Thu Feb 07 22:37:38 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 52
+[Thu Feb 07 22:38:17 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:38:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 185
+[Thu Feb 07 22:38:25 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 153
+[Thu Feb 07 22:38:32 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:39:15 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:39:36 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:39:51 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:40:00 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:40:46 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:41:09 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:41:10 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:41:31 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:41:56 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:42:38 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:43:00 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:43:01 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:43:23 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:44:06 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:44:46 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:45:15 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 194
+[Thu Feb 07 22:46:04 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 52
+[Thu Feb 07 22:46:19 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:46:59 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:47:23 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:47:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 338
+[Thu Feb 07 22:47:26 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 157
+[Thu Feb 07 22:47:43 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:47:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 89
+[Thu Feb 07 22:48:09 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:48:33 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:49:12 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:49:39 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:50:25 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:51:07 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:51:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:52:14 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:52:38 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:53:00 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:53:01 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:53:17 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:53:45 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:54:24 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:54:51 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:55:31 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:55:58 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 431
+[Thu Feb 07 22:56:26 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 153
+[Thu Feb 07 22:57:02 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:57:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:58:15 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 22:58:34 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:58:50 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 22:59:40 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:00:08 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:00:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:01:14 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:01:57 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:02:29 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:02:40 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:03:03 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:03:49 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:03:53 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:04:13 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:04:55 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 411
+[Thu Feb 07 23:05:26 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 712
+[Thu Feb 07 23:06:02 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:06:26 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:07:06 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:07:33 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:07:39 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:08:18 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:08:46 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:09:28 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:10:32 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 194
+[Thu Feb 07 23:11:20 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 52
+[Thu Feb 07 23:12:03 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:12:48 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:13:12 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:13:34 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:14:07 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 584
+[Thu Feb 07 23:14:26 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:14:27 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:14:50 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:15:14 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 0
+[Thu Feb 07 23:15:56 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:16:42 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 246
+[Thu Feb 07 23:16:47 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 16122
+[Thu Feb 07 23:19:55 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 14802
+[Thu Feb 07 23:19:56 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 1, 
+
+
+Network usage: 32997
+[Thu Feb 07 23:19:57 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1946232
+[Thu Feb 07 23:19:59 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1304474
+[Thu Feb 07 23:20:00 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1240387
+[Thu Feb 07 23:20:01 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 447138
+[Thu Feb 07 23:20:03 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 5, 
+
+
+Network usage: 720060
+[Thu Feb 07 23:20:04 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 6, 
+
+
+Network usage: 1268061
+[Thu Feb 07 23:20:05 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 7, 
+
+
+Network usage: 2233216
+[Thu Feb 07 23:20:07 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 8, 
+
+
+Network usage: 600158
+[Thu Feb 07 23:20:08 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 9, 
+
+
+Network usage: 1363823
+[Thu Feb 07 23:20:09 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 10, 
+
+
+Network usage: 1328746
+[Thu Feb 07 23:20:11 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 1218896
+[Thu Feb 07 23:20:12 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 11, 
+
+
+Network usage: 527854
+[Thu Feb 07 23:20:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 12, 
+
+
+Network usage: 1317767
+[Thu Feb 07 23:20:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 1279228
+[Thu Feb 07 23:20:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 1336525
+[Thu Feb 07 23:20:16 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 13, 
+
+
+Network usage: 421576
+[Thu Feb 07 23:20:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 14, 
+
+
+Network usage: 520150
+[Thu Feb 07 23:20:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 15, 
+
+
+Network usage: 1324196
+[Thu Feb 07 23:20:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 16, 
+
+
+Network usage: 1274358
+[Thu Feb 07 23:20:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 1247844
+[Thu Feb 07 23:20:21 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 17, 
+
+
+Network usage: 13745
+[Thu Feb 07 23:20:22 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 18, 
+
+
+Network usage: 743150
+[Thu Feb 07 23:20:23 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 19, 
+
+
+Network usage: 1239418
+[Thu Feb 07 23:20:24 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 20, 
+
+
+Network usage: 1327630
+[Thu Feb 07 23:20:25 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 21, 
+
+
+Network usage: 26624699
+[Thu Feb 07 23:20:38 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 2565
+[Thu Feb 07 23:20:39 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 764149
+[Thu Feb 07 23:20:40 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 1384704
+[Thu Feb 07 23:20:41 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1248326
+[Thu Feb 07 23:20:42 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 1289432
+[Thu Feb 07 23:20:43 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 31884401
+[Thu Feb 07 23:23:12 GMT+05:30 2019] Battery level is 0.94 and no active actors
+Network usage: 1876
+[Thu Feb 07 23:23:13 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 902
+[Thu Feb 07 23:23:14 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 322
+[Thu Feb 07 23:23:15 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 6115
+[Thu Feb 07 23:23:17 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 2, 
+
+
+Network usage: 2139826
+[Thu Feb 07 23:23:18 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+
+Network usage: 1317959
+[Thu Feb 07 23:23:19 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 4, 
+
+
+Network usage: 712838
+[Thu Feb 07 23:23:20 GMT+05:30 2019] Battery level is 0.94 actor counts- 
+examples.ping.Ping$State: 3, 
+
+

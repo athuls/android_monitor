@@ -1,0 +1,10 @@
+examples.nqueens.Nqueens_1,examples.nqueens.Nqueens_2,examples.nqueens.Nqueens_3,examples.nqueens.Nqueens_4,examples.nqueens.Nqueens_5,examples.nqueens.Nqueens_6,examples.nqueens.Nqueens_7,examples.nqueens.Nqueens_8,examples.nqueens.Nqueens_9,examples.nqueens.Nqueens_10,examples.nqueens.Nqueens_11,examples.nqueens.Nqueens_12,examples.nqueens.Nqueens_13,examples.nqueens.Nqueens_14,examples.nqueens.Nqueens_15,examples.nqueens.Nqueens_16,examples.nqueens.Nqueens_17,examples.nqueens.Nqueens_18,examples.nqueens.Nqueens_19,examples.nqueens.Nqueens_20,examples.nqueens.Nqueens_21,examples.nqueens.Nqueens_22,examples.nqueens.Nqueens_23,examples.nqueens.Nqueens_24,BatteryDropTime
+7.0,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,301.0
+12.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,239.0
+12.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,474.0
+17.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,529.0
+15.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,396.0
+9.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,286.0
+19.0,0.0,2.0,0.0,2.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,517.0
+13.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,300.0
+15.0,1.0,0.0,2.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,440.0

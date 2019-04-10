@@ -31,6 +31,15 @@ import salsa.resources.ActorService;
 
 // End SALSA compiler generated import delcarations.
 
+import android.content.Intent;
+import android.view.Window;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.view.WindowManager.LayoutParams;
+import android.provider.Settings;
+import androidsalsa.resources.AndroidProxy;
+import java.lang.*;
+import java.util.*;
 
 public class TestApp extends UniversalActor  {
 	public static void main(String args[]) {
@@ -264,43 +273,142 @@ public class TestApp extends UniversalActor  {
 			}
 		}
 
-		public void hello() {
-			{
-				// standardOutput<-print("Hello ")
+		int brightness;
+		ContentResolver cResolver;
+		Window window;
+		LayoutParams layoutpars;
+		public void initSetting() {
+			cResolver = AndroidProxy.ContentResolverCall();
+			window = AndroidProxy.WindowCall();
+		}
+		public void SystemFun() {
+			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+		}
+		public void PrintBright(int current_brightness, int low_brightness, int high_brightness, long sleep1, long sleep2) {
+			AndroidProxy.postText("Current brightness is "+current_brightness+" \n");
+			AndroidProxy.postText("Sleep 1 phase is "+sleep1+" \n");
+			AndroidProxy.postText("Sleep 2 phase is "+sleep2+" \n");
+			try {
+				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, low_brightness);
+				layoutpars = window.getAttributes();
+				layoutpars.screenBrightness = low_brightness/(float)255;
+				window.setAttributes(layoutpars);
+			}
+			catch (Exception e) {
+				AndroidProxy.postText("Couldn't set the screen brightness to low before sleep "+"\n");
+			}
+
+			try {
+				Thread.sleep(sleep1);
+			}
+			catch (Exception e) {
+				AndroidProxy.postText("Thread Sleep 1 Error "+"\n");
+			}
+
+			if (sleep2>0) {{
+				try {
+					Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, high_brightness);
+					layoutpars = window.getAttributes();
+					layoutpars.screenBrightness = high_brightness/(float)255;
+					window.setAttributes(layoutpars);
+				}
+				catch (Exception e) {
+					AndroidProxy.postText("Couldn't set screen brightness to high "+"\n");
+				}
+
+				try {
+					Thread.sleep(sleep2);
+				}
+				catch (Exception e) {
+					AndroidProxy.postText("Thread Sleep 2 Error "+"\n");
+				}
+
+			}
+}			try {
+				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, current_brightness);
+				layoutpars = window.getAttributes();
+				layoutpars.screenBrightness = current_brightness/(float)255;
+				window.setAttributes(layoutpars);
+			}
+			catch (Exception e) {
+				AndroidProxy.postText("Couldn't reset screen brightness "+"\n");
+			}
+
+		}
+		public int Bright() {
+			try {
+				return Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			}
+			catch (Exception e) {
 				{
-					Object _arguments[] = { "Hello " };
-					Message message = new Message( self, standardOutput, "print", _arguments, null, null );
+					// standardOutput<-println("Brightness error")
+					{
+						Object _arguments[] = { "Brightness error" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
+				}
+				return -1;
+			}
+
+		}
+		public long getDiffTime(long initTime) {
+			return System.currentTimeMillis()-initTime;
+		}
+		public void Dummy() {
+			GenRandom Inst = ((GenRandom)new GenRandom(this).construct());
+			{
+				// Inst<-RandTest()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, Inst, "RandTest", _arguments, null, null );
 					__messages.add( message );
 				}
 			}
 		}
-		public void world() {
-			{
-				// standardOutput<-println("World!")
+		public void act(String[] args) {
+			try {
 				{
-					Object _arguments[] = { "World!" };
-					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
-					__messages.add( message );
+					Token token_3_0 = new Token();
+					Token token_3_1 = new Token();
+					Token token_3_2 = new Token();
+					// initSetting()
+					{
+						Object _arguments[] = {  };
+						Message message = new Message( self, self, "initSetting", _arguments, null, token_3_0 );
+						__messages.add( message );
+					}
+					// SystemFun()
+					{
+						Object _arguments[] = {  };
+						Message message = new Message( self, self, "SystemFun", _arguments, token_3_0, token_3_1 );
+						__messages.add( message );
+					}
+					// Bright()
+					{
+						Object _arguments[] = {  };
+						Message message = new Message( self, self, "Bright", _arguments, token_3_1, token_3_2 );
+						__messages.add( message );
+					}
+					// PrintBright(token, Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]))
+					{
+						Object _arguments[] = { token_3_2, Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]) };
+						Message message = new Message( self, self, "PrintBright", _arguments, token_3_2, null );
+						__messages.add( message );
+					}
 				}
 			}
-		}
-		public void act(String arguments[]) {
-			{
-				// hello()
+			catch (Exception e) {
 				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "hello", _arguments, null, null );
-					__messages.add( message );
+					// standardOutput<-println("Usage: java examples.testapp.TestApp <#time>")
+					{
+						Object _arguments[] = { "Usage: java examples.testapp.TestApp <#time>" };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+						__messages.add( message );
+					}
 				}
 			}
-			{
-				// world()
-				{
-					Object _arguments[] = {  };
-					Message message = new Message( self, self, "world", _arguments, null, null );
-					__messages.add( message );
-				}
-			}
+
 		}
 	}
 }

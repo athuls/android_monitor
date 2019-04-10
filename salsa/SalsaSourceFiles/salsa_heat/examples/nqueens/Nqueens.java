@@ -31,6 +31,7 @@ import salsa.resources.ActorService;
 
 // End SALSA compiler generated import delcarations.
 
+import java.util.Random;
 
 public class Nqueens extends UniversalActor  {
 	public static void main(String args[]) {
@@ -263,6 +264,7 @@ public class Nqueens extends UniversalActor  {
 		}
 
 		int COUNT = 0;
+		Random randomIdGen = new Random();
 		public void construct(){
 			COUNT = 0;
 		}
@@ -296,8 +298,10 @@ public class Nqueens extends UniversalActor  {
 		public void act(String args[]) {
 			try {
 				Nqueens[] actors = new Nqueens[Integer.parseInt(args[1])];
+				int randomIdSeed = randomIdGen.nextInt(100000);
 				for (int i = 0; i<actors.length; i++){
-					actors[i] = ((Nqueens)new Nqueens(this).construct());
+					int actorId = randomIdSeed+i;
+					actors[i] = ((Nqueens)new Nqueens(new UAN(args[3]+"/nqchild"+actorId), new UAL(args[4]+"/nqchildloc"+actorId),this).construct());
 				}
 				int computingLevel = 2;
 				if (args.length>2) {{
@@ -337,7 +341,6 @@ public class Nqueens extends UniversalActor  {
 						Token token_4_0 = new Token();
 						Token token_4_1 = new Token();
 						Token token_4_2 = new Token();
-						Token token_4_3 = new Token();
 						// join block
 						token_4_0.setJoinDirector();
 						while (bitmap>0) {
@@ -385,13 +388,7 @@ public class Nqueens extends UniversalActor  {
 						// ((Nqueens)self)<-getCount()
 						{
 							Object _arguments[] = {  };
-							Message message = new Message( self, ((Nqueens)self), "getCount", _arguments, token_4_2, token_4_3 );
-							__messages.add( message );
-						}
-						// standardOutput<-println(token)
-						{
-							Object _arguments[] = { token_4_3 };
-							Message message = new Message( self, standardOutput, "println", _arguments, token_4_3, null );
+							Message message = new Message( self, ((Nqueens)self), "getCount", _arguments, token_4_2, null );
 							__messages.add( message );
 						}
 					}

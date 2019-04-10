@@ -1,18 +1,117 @@
 module examples.testapp;
+import android.content.Intent;
+import android.view.Window;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.view.WindowManager.LayoutParams;
+import android.provider.Settings;
+import androidsalsa.resources.AndroidProxy;
+import java.lang.*;
+import java.util.*;
 
 behavior TestApp {
-    void hello(){
-        standardOutput <- print("Hello ");
-    }
-    void world(){
-        standardOutput <- println("World!");
-    }
-       
-    void act(String arguments[]){
-	//migrate(arguments[0]);
-	// standardOutput <- println("Hello World!");
+    private int brightness;
+    private ContentResolver cResolver;
+    private Window window;
+    private LayoutParams layoutpars;
 
-	hello();
-	world();
+    void initSetting(){
+        cResolver = AndroidProxy.ContentResolverCall();
+        window = AndroidProxy.WindowCall();
+    }
+     void SystemFun(){
+        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+     }
+      
+     void PrintBright(int current_brightness, int low_brightness, int high_brightness, long sleep1, long sleep2){
+    	AndroidProxy.postText("Current brightness is " + current_brightness + " \n");
+    	AndroidProxy.postText("Sleep 1 phase is " + sleep1 + " \n");
+    	AndroidProxy.postText("Sleep 2 phase is " + sleep2 + " \n"); 
+     	try{
+		Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, low_brightness);
+     	   	layoutpars = window.getAttributes();
+     	   	layoutpars.screenBrightness = low_brightness / (float)255;
+     	   	window.setAttributes(layoutpars);
+     	 } catch (Exception e){
+     	       AndroidProxy.postText("Couldn't set the screen brightness to low before sleep " + "\n");
+     	 }
+     	
+     	 try{
+     	 	Thread.sleep(sleep1);
+     	 } catch (Exception e){
+     	 	AndroidProxy.postText("Thread Sleep 1 Error " + "\n");
+     	 }
+     	 
+	 if(sleep2 > 0) {
+     	 	try{
+     	 	  	Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, high_brightness);
+     	 	  	layoutpars = window.getAttributes();
+     	 	  	layoutpars.screenBrightness = high_brightness / (float)255;
+     	 	  	window.setAttributes(layoutpars);
+     	 	
+     	 	} catch (Exception e){
+     	 	      AndroidProxy.postText("Couldn't set screen brightness to high " + "\n");
+     	 	}
+		
+		try{
+                	Thread.sleep(sleep2);
+	        } catch (Exception e){
+        	        AndroidProxy.postText("Thread Sleep 2 Error " + "\n");
+         	}
+
+	 } 
+
+	try{
+        	Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, current_brightness);
+                layoutpars = window.getAttributes();
+                layoutpars.screenBrightness = current_brightness / (float)255;
+                window.setAttributes(layoutpars);
+        } catch (Exception e){
+                AndroidProxy.postText("Couldn't reset screen brightness " + "\n");
+        }
+     }
+
+     int Bright(){
+        try{
+         
+        return Settings.System.getInt(cResolver,Settings.System.SCREEN_BRIGHTNESS);
+         
+         }
+         catch(Exception e){
+           standardOutput<-println("Brightness error");
+           return -1;
+         }
+
+
+     } 
+
+    long getDiffTime(long initTime){
+        return System.currentTimeMillis() - initTime; 
+    }
+    void Dummy(){
+        GenRandom Inst = new GenRandom();
+        Inst<-RandTest();
+    }
+
+    
+       
+    void act(String[] args){
+
+    	try{
+    	   // GenRandom Inst = new GenRandom();
+    	    //Inst<-RandTest();
+    	    initSetting() @ SystemFun()@ Bright() @ PrintBright(token, 
+    	    						Integer.parseInt(args[0]), 
+    	    						Integer.parseInt(args[1]), 
+    	    						Integer.parseInt(args[2]), 
+    	    						Integer.parseInt(args[3]));
+    	    
+    	} catch (Exception e){
+    	    standardOutput<-println("Usage: java examples.testapp.TestApp <#time>");
+    	}
+
+
+	
     }
 }
+

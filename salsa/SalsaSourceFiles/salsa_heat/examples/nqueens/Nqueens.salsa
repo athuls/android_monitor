@@ -1,8 +1,11 @@
 module examples.nqueens;
+import java.util.Random;
 
 behavior Nqueens {
     
   int COUNT=0;
+ 
+  Random randomIdGen = new Random();
 
   public Nqueens() {
     COUNT=0;
@@ -39,7 +42,15 @@ behavior Nqueens {
   void act(String args[]) {
     try{
 	Nqueens[] actors=new Nqueens[Integer.parseInt(args[1])];
-	for (int i=0;i<actors.length;i++) {actors[i]=new Nqueens();}
+	
+	int randomIdSeed = randomIdGen.nextInt(100000);	
+	for (int i=0;i<actors.length;i++) 
+	{
+		int actorId = randomIdSeed+i;
+		actors[i]=new Nqueens() at (new UAN(args[3]+"/nqchild"+actorId), 
+					new UAL(args[4]+"/nqchildloc"+actorId));
+	}
+
 		int computingLevel=2;
 		if (args.length>2) { computingLevel=Integer.parseInt(args[2]);}
         int SIZE = Integer.parseInt(args[0]);   /*  <- N  */
@@ -71,7 +82,8 @@ behavior Nqueens {
 			for (int i=0;i<actors.length;i++) {
 			  actors[i]<-getCount();
 			}
-		} @self<-add(token) @self<-getCount()@standardOutput<-println(token);;
+		// } @self<-add(token) @self<-getCount()@standardOutput<-println(token);;
+		} @self<-add(token) @self<-getCount();;
           }
         } catch (Exception e) {System.err.println("USAGE:java examples.nqueens.Nqueens <N> <# of actors>");}
 

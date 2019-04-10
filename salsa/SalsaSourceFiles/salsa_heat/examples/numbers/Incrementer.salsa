@@ -12,7 +12,7 @@ behavior Incrementer {
 
     void go(){
 	if ((i++)==100)	return;
-	number<-print() @ number<-inc() @ this<-go();
+	number<-print() @ number<-inc() @ self<-go();
     }
 
 }

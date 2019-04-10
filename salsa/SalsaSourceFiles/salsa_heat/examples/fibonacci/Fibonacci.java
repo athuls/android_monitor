@@ -31,6 +31,8 @@ import salsa.resources.ActorService;
 
 // End SALSA compiler generated import delcarations.
 
+import java.util.Random;
+import java.lang.Math;
 
 public class Fibonacci extends UniversalActor  {
 	public static void main(String args[]) {
@@ -172,8 +174,8 @@ public class Fibonacci extends UniversalActor  {
 		}
 	}
 
-	public UniversalActor construct (int n) {
-		Object[] __arguments = { new Integer(n) };
+	public UniversalActor construct (int n, String uanPrefix, String ualPrefix, int originalSeedId) {
+		Object[] __arguments = { new Integer(n), uanPrefix, ualPrefix, new Integer(originalSeedId) };
 		this.send( new Message(this, this, "construct", __arguments, null, null) );
 		return this;
 	}
@@ -271,32 +273,45 @@ public class Fibonacci extends UniversalActor  {
 		}
 
 		int n;
-		void construct(int n){
+		Random randomIdGen = new Random();
+		String uanPrefix;
+		String ualPrefix;
+		int originalSeedId;
+		void construct(int n, String uanPrefix, String ualPrefix, int originalSeedId){
 			this.n = n;
+			this.uanPrefix = uanPrefix;
+			this.ualPrefix = ualPrefix;
+			this.originalSeedId = originalSeedId;
 		}
 		public int add(int x, int y) {
 			return x+y;
 		}
-		public int compute() {
+		public int compute(int parentId, int currentDepth) {
 			if (n==0) {			return 0;
 }			else {if (n<=2) {			return 1;
 }			else {{
-				Fibonacci fib1 = ((Fibonacci)new Fibonacci(this).construct(n-1));
-				Fibonacci fib2 = ((Fibonacci)new Fibonacci(this).construct(n-2));
+				int firstId = (int)Math.pow(2, currentDepth)-2;
+				int parentFirstId = (int)Math.pow(2, currentDepth-1)-2;
+				int offsetParent = parentId-parentFirstId;
+				int offset = firstId+(2*offsetParent);
+				int firstFibId = originalSeedId+offset;
+				int secondFibId = originalSeedId+offset+1;
+				Fibonacci fib1 = ((Fibonacci)new Fibonacci(new UAN(this.uanPrefix+"/fibChild"+firstFibId), new UAL(this.ualPrefix+"/fibChild"+firstFibId),this).construct(n-1, uanPrefix, ualPrefix, originalSeedId));
+				Fibonacci fib2 = ((Fibonacci)new Fibonacci(new UAN(this.uanPrefix+"/fibChild"+secondFibId), new UAL(this.ualPrefix+"/fibChild"+secondFibId),this).construct(n-2, uanPrefix, ualPrefix, originalSeedId));
 				Token x = new Token("x");
 				{
-					// token x = fib1<-compute()
+					// token x = fib1<-compute(offset, currentDepth+1)
 					{
-						Object _arguments[] = {  };
+						Object _arguments[] = { offset, currentDepth+1 };
 						Message message = new Message( self, fib1, "compute", _arguments, null, x );
 						__messages.add( message );
 					}
 				}
 				Token y = new Token("y");
 				{
-					// token y = fib2<-compute()
+					// token y = fib2<-compute(offset+1, currentDepth+1)
 					{
-						Object _arguments[] = {  };
+						Object _arguments[] = { offset+1, currentDepth+1 };
 						Message message = new Message( self, fib2, "compute", _arguments, null, y );
 						__messages.add( message );
 					}
@@ -314,11 +329,14 @@ public class Fibonacci extends UniversalActor  {
 }}		}
 		public void act(String args[]) {
 			n = Integer.parseInt(args[0]);
+			originalSeedId = randomIdGen.nextInt(1000000);
+			uanPrefix = args[1];
+			ualPrefix = args[2];
 			{
 				Token token_2_0 = new Token();
-				// compute()
+				// compute(-1, 1)
 				{
-					Object _arguments[] = {  };
+					Object _arguments[] = { new Integer(-1), new Integer(1) };
 					Message message = new Message( self, self, "compute", _arguments, null, token_2_0 );
 					__messages.add( message );
 				}
