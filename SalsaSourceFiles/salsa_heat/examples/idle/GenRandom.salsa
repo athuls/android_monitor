@@ -1,0 +1,22 @@
+module examples.idle;
+import java.util.*;
+behavior GenRandom{
+  
+   long GRandom(){
+        Random randomno = new Random();
+        return randomno.nextLong();
+
+    }
+    long CalcRand(long value){
+        Random randomno = new Random();
+        int val1 = randomno.nextInt(10);
+        return value*val1;
+    }
+
+    void RandTest(){
+        for(int i = 0; i< 100000;i++){
+            GRandom() @ standardOutput<-println(token);
+        }
+        return;
+    }
+}

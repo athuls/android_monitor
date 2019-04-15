@@ -37,6 +37,8 @@ import examples.ping.Ping;
 import examples.nqueens.Nqueens;
 import examples.testapp.TestApp;
 import examples.numbers.Numbers;
+import examples.idle.Idle;
+import examples.display.Display;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedReader;
@@ -120,12 +122,17 @@ public class MainActivity extends Activity{
 	private long pfinalTime;
 	private long nfinalTime;
 	private long numSleep;
+	private int disp_state = 0;
+	private  int disp_state_check = 0;
+	private int sleepTime = 0;
 	private boolean rQueens = Boolean.TRUE;
 	private boolean rPing = Boolean.TRUE;
 	private boolean rNum = Boolean.TRUE;
 	private boolean rScrn = Boolean.TRUE;
 	private boolean rScrnF = Boolean.TRUE;
 	private volatile boolean noIdle = Boolean.FALSE;
+	private volatile boolean SnoIdle= Boolean.FALSE;
+	private volatile boolean PnoIdle= Boolean.FALSE;
 	private long sequenceCounter = 0;
 
 	private Handler nqueensHandler;
@@ -137,6 +144,8 @@ public class MainActivity extends Activity{
 	private Handler combinedHandler;
 
 	private volatile long sCounter = 0;
+	private volatile long nCounter = 0;
+	private volatile long pCounter = 0;
 
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
@@ -217,7 +226,7 @@ public class MainActivity extends Activity{
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
 
-	private String mobileIpAddress = "10.194.109.237";
+	private String mobileIpAddress = "10.193.120.29";
 
 	private void ImageCapture(){
 
@@ -265,53 +274,72 @@ public class MainActivity extends Activity{
                 int brightnessApp = 10 ;
                 int low_brightness = 10;
                 int high_brightness = 255;
-//                double rVal = Math.random();
-//				if(rVal > 0.4) {
-//					noIdle = Boolean.FALSE;
-//					// This is low energy mode
-//					sleep1 = generator.nextInt(100000)+100000;
+                if(switchVal) {
+					double rVal = Math.random();
+					if (rVal > 0.4 || PnoIdle) {
+						noIdle = Boolean.FALSE;
+						// This is low energy mode
+						sleep1 = generator.nextInt(100000);
+						brightnessApp = high_brightness;
+						rScrn = Boolean.TRUE;
+						//rScrnF = Boolean.FALSE;
+						//sleep2 = 0;
+					} else if (rVal > 0.5) {
+						//sleep1 = 20000;
+						brightnessApp = low_brightness;
+						sleep1 = generator.nextInt(100000) + 100000;
+						rScrn = Boolean.TRUE;
+						//rScrnF = Boolean.FALSE;
+					} else {
+						noIdle = Boolean.TRUE;
+						brightnessApp = 10;
+						long RTime = generator.nextInt(10000) + 5000;
+						finalTime = System.currentTimeMillis()+RTime;
+						sleep1 = 1000;
+						rScrn = Boolean.FALSE;
+						String[] args = {Integer.toString(1000),
+									Integer.toString(brightnessApp),
+							};
+						TestApp.main(args);
+
+//						if (rScrnF) {
+//							rScrnF = Boolean.FALSE;
+//							String[] args = {Integer.toString(1000),
+//									Integer.toString(brightnessApp),
+//							};
+//							TestApp.main(args);
+//						}
+					}
+				}
+//				if(sCounter == 1){
+//					rScrn = Boolean.TRUE;
 //					brightnessApp = high_brightness;
-//					rScrn = Boolean.TRUE;
-//					//rScrnF = Boolean.FALSE;
-//					//sleep2 = 0;
-//				} else if( rVal > 0.5) {
-//					//sleep1 = 20000;
-//                    brightnessApp = low_brightness;
-//					sleep1 = generator.nextInt(100000)+100000;
-//					rScrn = Boolean.TRUE;
-//					//rScrnF = Boolean.FALSE;
+//					sleep1 = 100000;
+//
 //				}
 //				else{
-//					noIdle = Boolean.TRUE;
-//					brightnessApp = 10;
-//					sleep1 = generator.nextInt(100000)+100000;
-//					rScrn = Boolean.FALSE;
-//					if(rScrnF){
-//						rScrnF = Boolean.FALSE;
-//						String[] args = {Integer.toString(1000),
-//								Integer.toString(brightnessApp),
-//						};
-//						TestApp.main(args);
-//					}
+//					rScrn = Boolean.TRUE;
+//					brightnessApp = low_brightness;
+////					if(sequenceCounter == 0){
+////						brightnessApp = low_brightness;
+////					}
+////					else{
+////						brightnessApp = high_brightness;
+////					}
+////					sequenceCounter = (sequenceCounter+1)%2;
+//					sleep1 = 25000;
+//
 //				}
-				if(sCounter == 1){
-					rScrn = Boolean.TRUE;
-					brightnessApp = high_brightness;
-					sleep1 = 5000;
+//
+//				sCounter = (sCounter+1)%2;
 
-				}
-				else{
-					rScrn = Boolean.TRUE;
-					if(sequenceCounter == 0){
-						brightnessApp = low_brightness;
+					if (System.currentTimeMillis() < finalTime) {
+						switchVal = Boolean.FALSE;
+						sleep1 = 1000;
+						if (PnoIdle && noIdle) switchVal = Boolean.TRUE;
+					} else {
+						switchVal = Boolean.TRUE;
 					}
-					else{
-						brightnessApp = high_brightness;
-					}
-					sequenceCounter = (sequenceCounter+1)%2;
-					sleep1 = 5000;
-
-				}
 
 
 				if(rScrn) {
@@ -451,36 +479,40 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.4){
+					//nCounter = (nCounter+1)%2;
+					if(Rval > 0.4 || noIdle){
+						SnoIdle = Boolean.FALSE;
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
 						// Get a time till which it will run
 						Random r = new Random();
-						long RTime =  generator.nextInt(300000)+100000;
+						long RTime =  generator.nextInt(100000);
+						//long RTime = 80000;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
 
 					}
-					else if (Rval > 0.5){
-						num_arg = num_light;
-						num_arg_ct = "3";
-						num_state = "low";
-						Random r = new Random();
-						long RTime = generator.nextInt(300000)+100000;
-						numSleep = RTime;
-						nfinalTime = System.currentTimeMillis() + RTime;
-						nswitchVal = Boolean.FALSE;
-						rNum = Boolean.TRUE;
-
-					}
+//					else if (Rval > 0.5){
+//						num_arg = num_light;
+//						num_arg_ct = "3";
+//						num_state = "low";
+//						Random r = new Random();
+//						long RTime = generator.nextInt(300000)+100000;
+//						numSleep = RTime;
+//						nfinalTime = System.currentTimeMillis() + RTime;
+//						nswitchVal = Boolean.FALSE;
+//						rNum = Boolean.TRUE;
+//
+//					}
 					else{
 						num_arg = num_light;
+						SnoIdle = Boolean.TRUE;
 						num_state = "none";
 						Random r = new Random();
-						int RTime = generator.nextInt(100000)+100000;
+						int RTime = generator.nextInt(10000)+5000;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
@@ -492,6 +524,7 @@ public class MainActivity extends Activity{
 
 				if(System.currentTimeMillis() < nfinalTime){
 					nswitchVal = Boolean.FALSE;
+					if(noIdle && SnoIdle) nswitchVal = Boolean.TRUE;
 				}
 				else {
 					nswitchVal = Boolean.TRUE;
@@ -526,30 +559,36 @@ public class MainActivity extends Activity{
 				int brightnessApp = 10 ;
 				int low_brightness = 150;
 				int high_brightness = 255;
+				int idle_brightness = 10;
+
 				int RTime = 10;
 				if(nswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.4){
+					if(disp_state == 0){
+						disp_state_check = 0;
 						num_arg = num_heavy;
 						brightnessApp = high_brightness;
 						num_arg_ct = "7";
 						num_state = "high";
 						// Get a time till which it will run
 						Random r = new Random();
-						RTime =  generator.nextInt(300000)+100000;
+						RTime =  generator.nextInt(10000)+15000;
+						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
 						rScrn = Boolean.TRUE;
 					}
-					else if (Rval > 0.5){
+					else if (disp_state == 1){
+						disp_state_check = 1;
 						num_arg = num_light;
 						num_arg_ct = "3";
 						num_state = "low";
 						brightnessApp = low_brightness;
 						Random r = new Random();
-						RTime = generator.nextInt(300000)+100000;
+						RTime = generator.nextInt(10000)+10000;
+						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
@@ -557,27 +596,27 @@ public class MainActivity extends Activity{
 						rScrn = Boolean.TRUE;
 					}
 					else{
+						disp_state_check = 2;
 						num_arg = num_light;
-						brightnessApp = 10;
+						brightnessApp = idle_brightness;
 						num_state = "none";
 						Random r = new Random();
-						RTime = generator.nextInt(100000)+100000;
+						RTime = generator.nextInt(10000)+5000;
+						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.FALSE;
-						rScrn = Boolean.FALSE;
-						if(rScrnF){
-							rScrnF = Boolean.FALSE;
-							String[] sargs = {Integer.toString(1000),
-									Integer.toString(brightnessApp),
-							};
-							TestApp.main(sargs);
-						}
+						rScrn = Boolean.TRUE;
 
 					}
+
+					disp_state = (disp_state+1)%3;
 				}
-				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
+				//String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
+				String[] args = {Integer.toString(1000),
+						Integer.toString(brightnessApp),
+				};
 
 
 				if(System.currentTimeMillis() < nfinalTime){
@@ -588,21 +627,30 @@ public class MainActivity extends Activity{
 				}
 				if(rScrn) {
 					//rScrnF = Boolean.FALSE;
-					rScrn = Boolean.FALSE;
-					String[] Sargs = {Integer.toString(RTime),
-							Integer.toString(brightnessApp),
-					};
-					TestApp.main(Sargs);
+					//rScrn = Boolean.FALSE;
+					if(disp_state_check == 0){
+						TestApp.main(args);
+					}
+					else if (disp_state_check == 1){
+						Display.main(args);
+					}
+					else if(disp_state_check == 2){
+						Idle.main(args);
+					}
+//					String[] Sargs = {Integer.toString(RTime),
+//							Integer.toString(brightnessApp),
+//					};
+//					TestApp.main(Sargs);
 				}
 
-				if(rNum){
-					Numbers.main(args);
-					counter_num++;
-				}
+//				if(rNum){
+//					Numbers.main(args);
+//					counter_num++;
+//				}
 			}
 
 
-			combinedHandler.postDelayed(runnableCombined, 1000);
+			combinedHandler.postDelayed(runnableCombined, 1000  );
 
 		}
 
@@ -723,30 +771,33 @@ public class MainActivity extends Activity{
 
 				if(pswitchVal){
 					double Rval = Math.random();
-					if(Rval > 0.4){
+					//pCounter = (pCounter+1)%2;
+					if(Rval> 0.4 || noIdle ){
+						PnoIdle = Boolean.FALSE;
 						network_data = network_data_heavy;
 						num_state="high";
 						// Get a time till which it will run
 						//Random r = new Random();
-						int RTime =  generator.nextInt(50000)+100000;
+						long RTime =  generator.nextInt(100000);
 						pfinalTime = System.currentTimeMillis() + RTime;
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.TRUE;
 					}
-					else if (Rval > 0.5){
-						network_data = network_data_light;
-						num_state="low";
-						//Random r = new Random();
-						int RTime = generator.nextInt(300000)+100000;
-						pfinalTime = System.currentTimeMillis() + RTime;
-						pswitchVal = Boolean.FALSE;
-						rPing = Boolean.TRUE;
-					}
+//					else if (Rval > 0.5){
+//						network_data = network_data_light;
+//						num_state="low";
+//						//Random r = new Random();
+//						int RTime = generator.nextInt(300000)+100000;
+//						pfinalTime = System.currentTimeMillis() + RTime;
+//						pswitchVal = Boolean.FALSE;
+//						rPing = Boolean.TRUE;
+//					}
 					else{
 						//Random r = new Random();
+						PnoIdle = Boolean.TRUE;
 						network_data = "";
 						num_state="none";
-						int RTime = generator.nextInt(300000)+100000;
+						int RTime = generator.nextInt(10000)+5000;
 						pfinalTime = System.currentTimeMillis() + RTime;
 						pswitchVal = Boolean.FALSE;
 						rPing = Boolean.FALSE;
@@ -756,6 +807,7 @@ public class MainActivity extends Activity{
 
 				if(System.currentTimeMillis() < pfinalTime){
 					pswitchVal = Boolean.FALSE;
+					if(noIdle && PnoIdle) pswitchVal = Boolean.TRUE;
 				}
 				else {
 					pswitchVal = Boolean.TRUE;
@@ -826,12 +878,12 @@ public class MainActivity extends Activity{
 //		Thread nW = new Thread(numbersWorker);
 //		nW.setUncaughtExceptionHandler(exp);
 //		nW.start();
-//		Thread cW = new Thread(combinedWorker);
-//		cW.setUncaughtExceptionHandler(exp);
-//		cW.start();
-		Thread sW = new Thread(screenWorker);
-		sW.setUncaughtExceptionHandler(exp);
-		sW.start();
+		Thread cW = new Thread(combinedWorker);
+		cW.setUncaughtExceptionHandler(exp);
+		cW.start();
+//		Thread sW = new Thread(screenWorker);
+//		sW.setUncaughtExceptionHandler(exp);
+//		sW.start();
 //		Thread nP = new Thread(pingWorker);
 //		nP.setUncaughtExceptionHandler(exp);
 //		nP.start();
@@ -992,10 +1044,10 @@ public class MainActivity extends Activity{
 			System.err.println("Error in brightness");
 		}
 
-		if(Math.abs(last_battery - batteryPct) > 0.009) {
-			last_battery = batteryPct;
-			sCounter = (sCounter+1)%2;
-		}
+//		if(Math.abs(last_battery - batteryPct) > 0.009) {
+//			last_battery = batteryPct;
+//			sCounter = (sCounter+1)%2;
+//		}
 
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 

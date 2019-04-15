@@ -1,0 +1,102 @@
+module examples.display;
+import android.content.Intent;
+import android.view.Window;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.view.WindowManager.LayoutParams;
+import android.provider.Settings;
+import androidsalsa.resources.AndroidProxy;
+import java.lang.*;
+import java.util.*;
+
+behavior Display {
+    private int brightness;
+    private ContentResolver cResolver;
+    private Window window;
+    private LayoutParams layoutpars;
+
+    void initSetting(){
+        cResolver = AndroidProxy.ContentResolverCall();
+        window = AndroidProxy.WindowCall();
+    }
+     void SystemFun(){
+        Settings.System.putInt(cResolver,
+                Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+     }
+      
+     void PrintBright(int val, int tsleep, int bright){
+        long time_init;
+        try{
+        val = bright;
+        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+        layoutpars = window.getAttributes();
+        layoutpars.screenBrightness = val / (float)255;
+        window.setAttributes(layoutpars);
+        
+        } catch (Exception e){
+            standardOutput<-println("Thread Sleep Error Test");
+        }
+        try{
+           Thread.sleep(tsleep);
+        }catch (Exception e){
+           standardOutput<-println("Thread Sleep Error test 0");
+       }
+      try{
+        val = bright;
+        Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
+        layoutpars = window.getAttributes();
+        layoutpars.screenBrightness = val / (float)255;
+        window.setAttributes(layoutpars);
+      
+       }catch (Exception e){
+            standardOutput<-println("Thread Sleep Error Test 1");
+       }
+
+
+     }
+     int Bright(){
+        try{
+         
+        return Settings.System.getInt(cResolver,Settings.System.SCREEN_BRIGHTNESS);
+         
+         }
+         catch(Exception e){
+           standardOutput<-println("Brightness error");
+           return -1;
+         }
+
+
+     } 
+
+    long getDiffTime(long initTime){
+        return System.currentTimeMillis() - initTime; 
+    }
+    void Dummy(){
+        GenRandom Inst = new GenRandom();
+        Inst<-RandTest();
+    }
+
+    
+       
+    void act(String[] args){
+
+    try{
+       // GenRandom Inst = new GenRandom();
+        //Inst<-RandTest();
+        initSetting() @ SystemFun()@ Bright() @ PrintBright(token,Integer.parseInt(args[0]),Integer.parseInt(args[1]));
+        
+        
+        
+        
+         
+        
+
+    } catch (Exception e){
+        standardOutput<-println("Usage: java examples.display.Display <#time>");
+    }
+
+
+	
+    }
+    }
+
