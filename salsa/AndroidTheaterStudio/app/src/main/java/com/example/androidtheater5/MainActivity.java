@@ -122,9 +122,9 @@ public class MainActivity extends Activity{
 	private long pfinalTime;
 	private long nfinalTime;
 	private long numSleep;
-	private int disp_state = 0;
-	private  int disp_state_check = 0;
-	private int sleepTime = 0;
+	private volatile int disp_state = 0;
+	private volatile int disp_state_check = 0;
+	private volatile int sleepTime = 0;
 	private boolean rQueens = Boolean.TRUE;
 	private boolean rPing = Boolean.TRUE;
 	private boolean rNum = Boolean.TRUE;
@@ -557,7 +557,7 @@ public class MainActivity extends Activity{
 				runnableNumbersInstCount ++;
 //				System.setProperty("nogc", "theater");
 				int brightnessApp = 10 ;
-				int low_brightness = 150;
+				int low_brightness = 200;
 				int high_brightness = 255;
 				int idle_brightness = 10;
 
@@ -576,7 +576,7 @@ public class MainActivity extends Activity{
 						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
-						nswitchVal = Boolean.FALSE;
+						nswitchVal = Boolean.TRUE;
 						rNum = Boolean.TRUE;
 						rScrn = Boolean.TRUE;
 					}
@@ -591,7 +591,7 @@ public class MainActivity extends Activity{
 						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
-						nswitchVal = Boolean.FALSE;
+						nswitchVal = Boolean.TRUE;
 						rNum = Boolean.TRUE;
 						rScrn = Boolean.TRUE;
 					}
@@ -605,7 +605,7 @@ public class MainActivity extends Activity{
 						sleepTime = RTime;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
-						nswitchVal = Boolean.FALSE;
+						nswitchVal = Boolean.TRUE;
 						rNum = Boolean.FALSE;
 						rScrn = Boolean.TRUE;
 
@@ -614,17 +614,18 @@ public class MainActivity extends Activity{
 					disp_state = (disp_state+1)%3;
 				}
 				//String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
-				String[] args = {Integer.toString(1000),
+				String[] args = {Integer.toString(sleepTime),
 						Integer.toString(brightnessApp),
 				};
 
 
-				if(System.currentTimeMillis() < nfinalTime){
-					nswitchVal = Boolean.FALSE;
-				}
-				else {
-					nswitchVal = Boolean.TRUE;
-				}
+//				if(System.currentTimeMillis() < nfinalTime){
+//					nswitchVal = Boolean.FALSE;
+//				}
+//				else {
+//					nswitchVal = Boolean.TRUE;
+//				}
+
 				if(rScrn) {
 					//rScrnF = Boolean.FALSE;
 					//rScrn = Boolean.FALSE;
@@ -650,7 +651,7 @@ public class MainActivity extends Activity{
 			}
 
 
-			combinedHandler.postDelayed(runnableCombined, 1000  );
+			combinedHandler.postDelayed(runnableCombined, sleepTime  );
 
 		}
 
