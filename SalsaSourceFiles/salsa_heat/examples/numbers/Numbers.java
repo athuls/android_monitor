@@ -271,6 +271,7 @@ public class Numbers extends UniversalActor  {
 			}
 		}
 
+		int brightness;
 		ContentResolver cResolver;
 		Window window;
 		LayoutParams layoutpars;
@@ -283,12 +284,10 @@ public class Numbers extends UniversalActor  {
 		public void SystemFun() {
 			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
 		}
-		public void PrintBright(int val, long initSec, int life) {
+		public void PrintBright(int val, int tsleep, int bright) {
 			long time_init;
-			Random randomno = new Random();
 			try {
-				val = randomno.nextInt(253)+3;
-				time_init = System.currentTimeMillis()-initSec;
+				val = bright;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;
@@ -296,9 +295,9 @@ public class Numbers extends UniversalActor  {
 			}
 			catch (Exception e) {
 				{
-					// standardOutput<-println("Thread Sleep Error")
+					// standardOutput<-println("Thread Sleep Error Test")
 					{
-						Object _arguments[] = { "Thread Sleep Error" };
+						Object _arguments[] = { "Thread Sleep Error Test" };
 						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 						__messages.add( message );
 					}
@@ -306,13 +305,13 @@ public class Numbers extends UniversalActor  {
 			}
 
 			try {
-				Thread.sleep(life);
+				Thread.sleep(tsleep);
 			}
 			catch (Exception e) {
 				{
-					// standardOutput<-println("Thread Sleep Error0")
+					// standardOutput<-println("Thread Sleep Error test 0")
 					{
-						Object _arguments[] = { "Thread Sleep Error0" };
+						Object _arguments[] = { "Thread Sleep Error test 0" };
 						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 						__messages.add( message );
 					}
@@ -320,8 +319,7 @@ public class Numbers extends UniversalActor  {
 			}
 
 			try {
-				time_init = System.currentTimeMillis()-initSec;
-				val = randomno.nextInt(253)+3;
+				val = bright;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;
@@ -329,9 +327,9 @@ public class Numbers extends UniversalActor  {
 			}
 			catch (Exception e) {
 				{
-					// standardOutput<-println("Thread Sleep Error 1")
+					// standardOutput<-println("Thread Sleep Error Test 1")
 					{
-						Object _arguments[] = { "Thread Sleep Error 1" };
+						Object _arguments[] = { "Thread Sleep Error Test 1" };
 						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 						__messages.add( message );
 					}
@@ -355,6 +353,9 @@ public class Numbers extends UniversalActor  {
 				return -1;
 			}
 
+		}
+		public long getDiffTime(long initTime) {
+			return System.currentTimeMillis()-initTime;
 		}
 		public void Dummy(int sleep, int loop, int myargs) {
 			long myOld_time = System.currentTimeMillis();
@@ -387,6 +388,35 @@ do {
 			}
 }		}
 		public void act(String args[]) {
+			{
+				Token token_2_0 = new Token();
+				Token token_2_1 = new Token();
+				Token token_2_2 = new Token();
+				// initSetting()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "initSetting", _arguments, null, token_2_0 );
+					__messages.add( message );
+				}
+				// SystemFun()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "SystemFun", _arguments, token_2_0, token_2_1 );
+					__messages.add( message );
+				}
+				// Bright()
+				{
+					Object _arguments[] = {  };
+					Message message = new Message( self, self, "Bright", _arguments, token_2_1, token_2_2 );
+					__messages.add( message );
+				}
+				// PrintBright(token, Integer.parseInt(args[6]), Integer.parseInt(args[7]))
+				{
+					Object _arguments[] = { token_2_2, Integer.parseInt(args[6]), Integer.parseInt(args[7]) };
+					Message message = new Message( self, self, "PrintBright", _arguments, token_2_2, null );
+					__messages.add( message );
+				}
+			}
 			Numbers[] actors = new Numbers[Integer.parseInt(args[2])];
 			Random actGen = new Random();
 			{

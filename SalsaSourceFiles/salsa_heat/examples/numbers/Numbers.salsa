@@ -10,7 +10,8 @@ import java.lang.*;
 import java.util.*;
 
 behavior Numbers {
-   	private ContentResolver cResolver;
+   private int brightness;
+    private ContentResolver cResolver;
     private Window window;
     private LayoutParams layoutpars;
 
@@ -26,48 +27,42 @@ behavior Numbers {
         Settings.System.putInt(cResolver,
                 Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
      }
-     void PrintBright(int val, long initSec, int life){
+      
+     void PrintBright(int val, int tsleep, int bright){
         long time_init;
-        Random randomno = new Random();
         try{
-        //this.brightness = val;
-        
-    	val = randomno.nextInt(253)+3;
-        time_init = System.currentTimeMillis()  - initSec;
-        //val = 3;
+        val = bright;
         Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
         layoutpars = window.getAttributes();
         layoutpars.screenBrightness = val / (float)255;
         window.setAttributes(layoutpars);
-        //standardOutput<-println("Bright "+ val + " Time "+time_init+" Life :"+life);
         
         } catch (Exception e){
-            standardOutput<-println("Thread Sleep Error");
+            standardOutput<-println("Thread Sleep Error Test");
         }
         try{
-        Thread.sleep(life);
+           Thread.sleep(tsleep);
         }catch (Exception e){
-            standardOutput<-println("Thread Sleep Error0");
-        }
-        try{
-        time_init = System.currentTimeMillis() - initSec;
-        val = randomno.nextInt(253)+3;
+           standardOutput<-println("Thread Sleep Error test 0");
+       }
+      try{
+        val = bright;
         Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
         layoutpars = window.getAttributes();
         layoutpars.screenBrightness = val / (float)255;
         window.setAttributes(layoutpars);
-        //standardOutput<-println("Bright "+ val + " Time "+time_init+" Life :"+life);
-        }catch (Exception e){
-            standardOutput<-println("Thread Sleep Error 1");
-        }
+      
+       }catch (Exception e){
+            standardOutput<-println("Thread Sleep Error Test 1");
+       }
 
 
      }
      int Bright(){
         try{
-         //this.brightness = Settings.System.getInt(cResolver,Settings.System.SCREEN_BRIGHTNESS);
+         
         return Settings.System.getInt(cResolver,Settings.System.SCREEN_BRIGHTNESS);
-         //return 3;
+         
          }
          catch(Exception e){
            standardOutput<-println("Brightness error");
@@ -76,6 +71,11 @@ behavior Numbers {
 
 
      } 
+
+    long getDiffTime(long initTime){
+        return System.currentTimeMillis() - initTime; 
+    }
+  
    
     void Dummy(int sleep, int loop, int myargs){
 
@@ -126,7 +126,7 @@ behavior Numbers {
 
 
     void act(String args[]){
-	//initSetting() @ SystemFun()@ Bright() @ PrintBright(token,0,1500);
+	initSetting() @ SystemFun()@ Bright() @ PrintBright(token,Integer.parseInt(args[6]),Integer.parseInt(args[7]));
     Numbers[] actors=new Numbers[Integer.parseInt(args[2])];
     Random actGen = new Random();
     //long old_time =  System.currentTimeMillis();

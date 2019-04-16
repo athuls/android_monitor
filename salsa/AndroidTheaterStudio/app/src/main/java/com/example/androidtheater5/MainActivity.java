@@ -5,6 +5,7 @@ import android.app.AppOpsManager;
 import android.app.usage.NetworkStats;
 import android.app.usage.NetworkStatsManager;
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ContentResolver;
@@ -147,6 +148,8 @@ public class MainActivity extends Activity{
 	private volatile long nCounter = 0;
 	private volatile long pCounter = 0;
 
+	private BroadcastReceiver mReceiver;
+
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 	private Object oneScreenSyncToken = new Object();
@@ -225,6 +228,12 @@ public class MainActivity extends Activity{
 
 		return 0;
 	} // reads usage but waits 360 ms, need to fix that
+	public int getVoltage()
+	{
+		IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent b = this.registerReceiver(null, ifilter);
+		return b.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
+	}
 
 	private String mobileIpAddress = "10.193.120.29";
 
@@ -476,58 +485,69 @@ public class MainActivity extends Activity{
 				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc" + runnableNumbersInstCount );
 				runnableNumbersInstCount ++;
 //				System.setProperty("nogc", "theater");
+				int high_brightness = 255;
+				int low_brightness = 150;
+				int brightness_app = 10;
 
 				if(nswitchVal){
 					double Rval = Math.random();
 					//nCounter = (nCounter+1)%2;
-					if(Rval > 0.4 || noIdle){
+					if(disp_state == 0){
 						SnoIdle = Boolean.FALSE;
 						num_arg = num_heavy;
 						num_arg_ct = "7";
 						num_state = "high";
 						// Get a time till which it will run
 						Random r = new Random();
-						long RTime =  generator.nextInt(100000);
-						//long RTime = 80000;
+						//long RTime =  generator.nextInt(100000);
+						long RTime = 1000000;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
+						brightness_app = high_brightness;
 
 					}
-//					else if (Rval > 0.5){
-//						num_arg = num_light;
-//						num_arg_ct = "3";
-//						num_state = "low";
-//						Random r = new Random();
-//						long RTime = generator.nextInt(300000)+100000;
-//						numSleep = RTime;
-//						nfinalTime = System.currentTimeMillis() + RTime;
-//						nswitchVal = Boolean.FALSE;
-//						rNum = Boolean.TRUE;
-//
-//					}
-					else{
-						num_arg = num_light;
-						SnoIdle = Boolean.TRUE;
-						num_state = "none";
+					else if (disp_state == 1){
+						num_arg = num_heavy;
+						num_arg_ct = "7";
+						num_state = "low";
 						Random r = new Random();
-						int RTime = generator.nextInt(10000)+5000;
+						//long RTime = generator.nextInt(300000)+100000;
+						long RTime = 60000;
 						numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
-						rNum = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						brightness_app = low_brightness;
+
+					}
+					else if(disp_state == 2){
+						num_arg = num_heavy;
+						num_arg_ct = "7";
+						SnoIdle = Boolean.TRUE;
+						num_state = "none";
+						Random r = new Random();
+						//int RTime = generator.nextInt(10000)+5000;
+						int RTime = 30000;
+						numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						brightness_app = 10;
 
 					}
 				}
-				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress};
+				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress,Integer.toString(1000),Integer.toString(brightness_app)};
 
 				if(System.currentTimeMillis() < nfinalTime){
-					nswitchVal = Boolean.FALSE;
-					if(noIdle && SnoIdle) nswitchVal = Boolean.TRUE;
+//					nswitchVal = Boolean.FALSE;
+//					if(noIdle && SnoIdle) nswitchVal = Boolean.TRUE;
+					rNum = Boolean.TRUE;
 				}
 				else {
-					nswitchVal = Boolean.TRUE;
+					//nswitchVal = Boolean.TRUE;
+					rNum = Boolean.FALSE;
 				}
 
 				if(rNum){
@@ -837,6 +857,20 @@ public class MainActivity extends Activity{
 
 	}
 
+	private class BatteryBroadcastReceiver extends BroadcastReceiver {
+		private final static String BATTERY_LEVEL = "level";
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			int currentLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+			int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+			float batteryPct = currentLevel / (float)scale;
+
+			Date currentTime = Calendar.getInstance().getTime();
+			appendLog("[DEBUG_BATTERY_LEVEL] " + currentTime.toString() + " " + batteryPct);
+		}
+	}
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -845,6 +879,7 @@ public class MainActivity extends Activity{
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		mReceiver = new BatteryBroadcastReceiver();
 
 		if (scrollView == null) {
 			scrollView = new ScrollView( this );
@@ -876,12 +911,12 @@ public class MainActivity extends Activity{
 //		Thread nQ = new Thread(nqueensWorker);
 //		nQ.setUncaughtExceptionHandler(exp);
 //		nQ.start();
-//		Thread nW = new Thread(numbersWorker);
-//		nW.setUncaughtExceptionHandler(exp);
-//		nW.start();
-		Thread cW = new Thread(combinedWorker);
-		cW.setUncaughtExceptionHandler(exp);
-		cW.start();
+		Thread nW = new Thread(numbersWorker);
+		nW.setUncaughtExceptionHandler(exp);
+		nW.start();
+//		Thread cW = new Thread(combinedWorker);
+//		cW.setUncaughtExceptionHandler(exp);
+//		cW.start();
 //		Thread sW = new Thread(screenWorker);
 //		sW.setUncaughtExceptionHandler(exp);
 //		sW.start();
@@ -901,6 +936,7 @@ public class MainActivity extends Activity{
 		super.onStart();
 		AssetManager assetMgr = this.getAssets();
 		debugPrint("onStart() is called");
+		registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 	}
 
 	@Override
@@ -923,6 +959,7 @@ public class MainActivity extends Activity{
 		super.onStop();
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint( "onStop() is called" );
+		unregisterReceiver(mReceiver);
 	}
 
 	@Override
@@ -1028,11 +1065,12 @@ public class MainActivity extends Activity{
 	}
 
 	protected void SampleBattery() {
-		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-		Intent batteryStatus = this.registerReceiver(null, iFilter);
+		IntentFilter iFilter1 = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent batteryStatus = this.registerReceiver(null, iFilter1);
 		ContentResolver cResolver = this.getContentResolver();
 		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+		int voltage = getVoltage();
 		float batteryPct = level / (float)scale;
 		long netVal = 0;
 		long currNetVal = 0;
@@ -1045,10 +1083,11 @@ public class MainActivity extends Activity{
 			System.err.println("Error in brightness");
 		}
 
-//		if(Math.abs(last_battery - batteryPct) > 0.009) {
-//			last_battery = batteryPct;
-//			sCounter = (sCounter+1)%2;
-//		}
+		if(Math.abs(last_battery - batteryPct) > 0.009) {
+			last_battery = batteryPct;
+			disp_state = (disp_state+1)%3;
+			nswitchVal = Boolean.TRUE;
+		}
 
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 
@@ -1089,7 +1128,7 @@ public class MainActivity extends Activity{
 //				}
 //			}
 			//appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+" Actor state "+num_state+ " Num_counter "+ counter_num+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+" Actor state "+num_state+ " Num_counter "+ counter_num+ " and no active actors");
 
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
@@ -1109,7 +1148,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val + "Time Sleep "+ numSleep+" Actor state "+num_state+ " Num_counter "+ counter_num+" actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " Num_counter "+ counter_num+" actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////
