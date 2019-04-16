@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.usage.NetworkStats;
 import android.app.usage.NetworkStatsManager;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -27,9 +28,12 @@ import androidsalsa.resources.AndroidProxy;
 //import demo1.Nqueens;
 //import demo1.Nqueens2;
 //import demo1.Fibonacci;
+import examples.fibonacci.Fibonacci;
 import examples.nqueens.Nqueens;
 import examples.numbers.Numbers;
 import examples.numbers.Numbers1;
+import examples.numbers.SequentialNumbers;
+import examples.numbers.UniqueNumbers;
 import examples.ping.Ping;
 import examples.testapp.TestApp;
 import salsa.language.UniversalActor;
@@ -64,7 +68,7 @@ import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 import android.content.Intent;
 public class MainActivity extends Activity{
 
-	private String mobileIpAddress = "10.194.161.141";
+	private String mobileIpAddress = "10.194.109.237";
 
     private final String TAG = "AndroidTheater";
 	private ScrollView scrollView = null;
@@ -107,9 +111,11 @@ public class MainActivity extends Activity{
 	private Handler numsHandler8;
 	private Handler numsHandler9;
 	private Handler numsHandler10;
+	private Handler seqNumsHandler;
+	private Handler uniqNumsHandler;
+	private Handler fibHandler;
 
-	private Handler nqueensHandler;
-
+	private BroadcastReceiver mReceiver;
 
 	private String network_data = "";
 	private Handler batteryHandler;
@@ -130,42 +136,43 @@ public class MainActivity extends Activity{
 		return;
 	} // to ask for permission PACKAGE_USAGE_STAT
 
-	@TargetApi(Build.VERSION_CODES.M)
-	private boolean checkPerm(){
-		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
-		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
-				android.os.Process.myUid(), getPackageName());
-		if (mode == AppOpsManager.MODE_ALLOWED) {
-			return true;
-		}
-		return false;
-	}
+//	@TargetApi(Build.VERSION_CODES.M)
+//	private boolean checkPerm(){
+//		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+//		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
+//				android.os.Process.myUid(), getPackageName());
+//		if (mode == AppOpsManager.MODE_ALLOWED) {
+//			return true;
+//		}
+//		return false;
+//	}
 
 	private long getNetworkDataOld(){
-		long totalRxBytes = TrafficStats.getTotalRxBytes();
+//		long totalRxBytes = TrafficStats.getTotalRxBytes();
 		long totalTxBytes = TrafficStats.getTotalTxBytes();
-		return totalRxBytes+totalTxBytes;
+//		return totalRxBytes+totalTxBytes;
+		return totalTxBytes;
 	}
 
-	@TargetApi(Build.VERSION_CODES.M)
-	private long getNetworkData(){
-		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
-		NetworkStats.Bucket bucket;
-		try {
-			bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_WIFI,
-					"",
-					System.currentTimeMillis()-1000,
-// 					0,
-					System.currentTimeMillis());
-		} catch (Exception e) {
-			return -1;
-		}
-//		long rcv_bt = bucket.getRxBytes();
-		long snt_bt = bucket.getTxBytes();
-//		return rcv_bt+snt_bt;
-//		appendLog("Received bytes is " + bucket.getRxBytes());
-		return snt_bt;
-	}
+//	@TargetApi(Build.VERSION_CODES.M)
+//	private long getNetworkData(){
+//		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
+//		NetworkStats.Bucket bucket;
+//		try {
+//			bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_WIFI,
+//					"",
+//					System.currentTimeMillis()-1000,
+//// 					0,
+//					System.currentTimeMillis());
+//		} catch (Exception e) {
+//			return -1;
+//		}
+////		long rcv_bt = bucket.getRxBytes();
+//		long snt_bt = bucket.getTxBytes();
+////		return rcv_bt+snt_bt;
+////		appendLog("Received bytes is " + bucket.getRxBytes());
+//		return snt_bt;
+//	}
 
 	@TargetApi(Build.VERSION_CODES.M)
 	private float readUsage() {
@@ -265,6 +272,38 @@ public class MainActivity extends Activity{
 	private String m_model_file = "nqueens_model_original.pb";
 
 	private int brightness_val = 3;
+
+
+	private Runnable numbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			numsHandler = new Handler();
+			numsHandler.post(runnableNumbers);
+			Looper.loop();
+		}
+	};
+
+	private Runnable seqNumbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			seqNumsHandler = new Handler();
+			seqNumsHandler.post(runnableSeqNumbers);
+			Looper.loop();
+		}
+	};
+
+	private Runnable uniqNumbersWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			uniqNumsHandler = new Handler();
+			uniqNumsHandler.post(runnableUniqNumbers);
+			Looper.loop();
+		}
+	};
+
 
 	private Runnable runnableSampleBattery = new Runnable(){
 		@Override
@@ -464,12 +503,12 @@ public class MainActivity extends Activity{
 		}
 	};
 
-	private Runnable nqueensWorker = new Runnable() {
+	private Runnable fibWorker = new Runnable() {
 		@Override
 		public void run() {
 			Looper.prepare();
-			nqueensHandler = new Handler();
-			nqueensHandler.post(runnableNqueens);
+			fibHandler = new Handler();
+			fibHandler.post(runnableFib);
 			Looper.loop();
 		}
 	};
@@ -501,6 +540,7 @@ public class MainActivity extends Activity{
 		}
 	}
 
+	private int pingInstCount = 0;
 	private Runnable runnablePing = new Runnable(){
 		@Override
 		public void run() {
@@ -510,13 +550,14 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc"+pingInstCount);
+				pingInstCount++;
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -524,11 +565,12 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler.postDelayed(runnablePing, 1000);
+			pingHandler.postDelayed(runnablePing, 2000);
 		}
 
 	};
 
+	int ping1InstCount=0;
 	private Runnable runnablePing1 = new Runnable(){
 		@Override
 		public void run() {
@@ -538,13 +580,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho1", "uan://osl-server1.cs.illinois.edu:3030/myping1"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho1", "uan://osl-server1.cs.illinois.edu:3030/myping1"+ping1InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping1");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping1"+ping1InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc1");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc1"+ping1InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -557,47 +599,49 @@ public class MainActivity extends Activity{
 
 	};
 
-	private long nqueensInstCount = 0;
+	private long fibInstCount = 0;
 
-	private Runnable runnableNqueens = new Runnable(){
+	private Runnable runnableFib = new Runnable(){
 		@Override
 		public void run() {
 			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/nqueens" + nqueensInstCount);
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/fib" + fibInstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/nqueensloc" + nqueensInstCount);
-				String[] args = {"1"};
-				Nqueens.main(heavy);
-				nqueensInstCount++;
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/fibloc" + fibInstCount);
+				String[] args = {"10","uan://osl-server1.cs.illinois.edu:3030",
+						"rmsp://"+mobileIpAddress+":4040"};
+				Fibonacci.main(args);
+//				Nqueens.main(heavy);
+				fibInstCount++;
 			}
 
-			nqueensHandler.postDelayed(runnableNqueens, 1000);
+			fibHandler.postDelayed(runnableFib, 2000);
 		}
 
 	};
 
 	private long numbersInstCount = 0;
 
-	private Runnable runnableNumbers = new Runnable(){
-		@Override
-		public void run() {
-			synchronized (oneAppSyncToken) {
-				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers"+numbersInstCount);
-
-				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc"+numbersInstCount);
-				numbersInstCount++;
-				String[] args = {"1"};
-				Numbers1.main(args);
-			}
-
-//			numsHandler.postDelayed(runnableNumbers, 1200);
-		}
-
-	};
+//	private Runnable runnableNumbers = new Runnable(){
+//		@Override
+//		public void run() {
+//			synchronized (oneAppSyncToken) {
+//				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+//				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers"+numbersInstCount);
+//
+//				// Note that the IP address is the IP address of the smartphone
+//				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc"+numbersInstCount);
+//				numbersInstCount++;
+//				String[] args = {"1"};
+//				Numbers1.main(args);
+//			}
+//
+////			numsHandler.postDelayed(runnableNumbers, 1200);
+//		}
+//
+//	};
 
 	private long numbers1InstCount = 0;
 
@@ -782,6 +826,7 @@ public class MainActivity extends Activity{
 
 	};
 
+	int ping2InstCount = 0;
 	private Runnable runnablePing2 = new Runnable(){
 		@Override
 		public void run() {
@@ -791,13 +836,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho2", "uan://osl-server1.cs.illinois.edu:3030/myping2"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho2", "uan://osl-server1.cs.illinois.edu:3030/myping2"+ping2InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping2");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping2"+ping2InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc2");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc2"+ping2InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -810,6 +855,7 @@ public class MainActivity extends Activity{
 
 	};
 
+	int ping3InstCount = 0;
 	private Runnable runnablePing3 = new Runnable(){
 		@Override
 		public void run() {
@@ -819,13 +865,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho3", "uan://osl-server1.cs.illinois.edu:3030/myping3"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho3", "uan://osl-server1.cs.illinois.edu:3030/myping3"+ping3InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping3");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping3"+ping3InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc3");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc3"+ping3InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -838,6 +884,7 @@ public class MainActivity extends Activity{
 
 	};
 
+	int ping4InstCount = 0;
 	private Runnable runnablePing4 = new Runnable(){
 		@Override
 		public void run() {
@@ -847,13 +894,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho4", "uan://osl-server1.cs.illinois.edu:3030/myping4"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho4", "uan://osl-server1.cs.illinois.edu:3030/myping4"+ping4InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping4");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping4"+ping4InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc4");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc4"+ping4InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -866,6 +913,7 @@ public class MainActivity extends Activity{
 
 	};
 
+	int ping5InstCount = 0;
 	private Runnable runnablePing5 = new Runnable(){
 		@Override
 		public void run() {
@@ -875,13 +923,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho5", "uan://osl-server1.cs.illinois.edu:3030/myping5"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho5", "uan://osl-server1.cs.illinois.edu:3030/myping5"+ping5InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping5");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping5"+ping5InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc5");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc5"+ping5InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -894,6 +942,7 @@ public class MainActivity extends Activity{
 
 	};
 
+	int ping6InstCount = 0;
 	private Runnable runnablePing6 = new Runnable(){
 		@Override
 		public void run() {
@@ -903,13 +952,13 @@ public class MainActivity extends Activity{
 			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho6", "uan://osl-server1.cs.illinois.edu:3030/myping6"};
+				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho6", "uan://osl-server1.cs.illinois.edu:3030/myping6"+ping6InstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping6");
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping6"+ping6InstCount);
 
 				// Note that the IP address is the IP address of the smartphone
-				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc6");
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc6"+ping6InstCount);
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -918,6 +967,69 @@ public class MainActivity extends Activity{
 			}
 
 			pingHandler6.postDelayed(runnablePing6, 1000);
+		}
+
+	};
+
+	private Runnable runnableNumbers = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers"+numbersInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc"+numbersInstCount);
+				numbersInstCount++;
+
+				String[] args = {""};
+				Numbers.main(args);
+			}
+
+			numsHandler.postDelayed(runnableNumbers, 400);
+		}
+
+	};
+
+	private int seqInstCount=0;
+
+	private Runnable runnableSeqNumbers = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myseqnumbers"+seqInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myseqnumbersloc"+seqInstCount);
+
+				seqInstCount++;
+				String[] args = {""};
+				SequentialNumbers.main(args);
+			}
+
+			seqNumsHandler.postDelayed(runnableSeqNumbers, 400);
+		}
+
+	};
+
+	private int uniqInstCount=0;
+	private Runnable runnableUniqNumbers = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myuniqnumbers"+uniqInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/myuniqnumbersloc"+uniqInstCount);
+				uniqInstCount++;
+
+				String[] args = {""};
+				UniqueNumbers.main(args);
+			}
+
+			uniqNumsHandler.postDelayed(runnableUniqNumbers, 400);
 		}
 
 	};
@@ -936,6 +1048,23 @@ public class MainActivity extends Activity{
 
 	}
 
+
+	private class BatteryBroadcastReceiver extends BroadcastReceiver {
+		private final static String BATTERY_LEVEL = "level";
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			int currentLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+			int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+			float batteryPct = currentLevel / (float)scale;
+
+			Date currentTime = Calendar.getInstance().getTime();
+			appendLog("[DEBUG_BATTERY_LEVEL] " + currentTime.toString() + " " + batteryPct);
+		}
+	}
+
+
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -944,6 +1073,8 @@ public class MainActivity extends Activity{
 		StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+		mReceiver = new BatteryBroadcastReceiver();
 
 		if (scrollView == null) {
 			scrollView = new ScrollView( this );
@@ -977,7 +1108,10 @@ public class MainActivity extends Activity{
 		generator = new Random();
 
 		cpuUsage = true;
-		new Thread(nqueensWorker).start();
+		new Thread(numbersWorker).start();
+		new Thread(seqNumbersWorker).start();
+		new Thread(uniqNumbersWorker).start();
+//		new Thread(fibWorker).start();
 //		new Thread(numsWorker).start();
 //		new Thread(numsWorker1).start();
 //		new Thread(numsWorker2).start();
@@ -1005,7 +1139,6 @@ public class MainActivity extends Activity{
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
 		new Thread(batteryWorker).start();
-
 	}
 
 	@Override
@@ -1015,6 +1148,7 @@ public class MainActivity extends Activity{
 		AssetManager assetMgr = this.getAssets();
 		debugPrint("onStart() is called");
 		appendLog("Wifi signal strength is " + getWifiSignalStrength());
+		registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 	}
 
 	@Override
@@ -1036,6 +1170,7 @@ public class MainActivity extends Activity{
 		super.onStop();
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint( "onStop() is called" );
+		unregisterReceiver(mReceiver);
 	}
 
 	@Override
@@ -1096,22 +1231,31 @@ public class MainActivity extends Activity{
 		}
 	}
 
-	protected void SampleBattery() {
 
+	private double previousMemInMB = 0;
+
+	protected void SampleBattery() {
+		float batteryPct=0;
 		final Runtime runtime = Runtime.getRuntime();
-		final long usedMemInMB=(runtime.totalMemory() - runtime.freeMemory()) / 1048576L;
-		if(usedMemInMB > 42) {
+		final double usedMemInMB=(runtime.totalMemory() - runtime.freeMemory()) / (double) 1048576;
+		double segmentMemory = 0;
+		if(previousMemInMB > 0) {
+			segmentMemory = usedMemInMB - previousMemInMB;
+		}
+
+		previousMemInMB = usedMemInMB;
+		if(usedMemInMB > 100) {
 			throw new OutOfMemoryError();
 		}
 
-		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-		Intent batteryStatus = this.registerReceiver(null, iFilter);
-		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-		float batteryPct = level / (float)scale;
+//		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+//		Intent batteryStatus = this.registerReceiver(null, iFilter);
+//		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+//		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+//		float batteryPct = level / (float)scale;
 
 		///////////////// Hardware resource usage code ////////////////////////////////
-		ContentResolver cResolver = this.getContentResolver();
+//		ContentResolver cResolver = this.getContentResolver();
 //		long netVal = 0;
 //		long currNetVal = 0;
 //		try {
@@ -1122,15 +1266,16 @@ public class MainActivity extends Activity{
 //		}catch( Exception e){
 //			System.err.println("Error in network reading");
 //		}
-
+//
 //		old_net = netVal;
 
 		if(cpuUsage) {
 			try {
-				double cpuUsageVal = readUsageActual();
+//				double cpuUsageVal = readUsageActual();
 				int voltageVal = getVoltage();
-				appendLog("CPU usage: " + cpuUsageVal + ", CPU freq= " + currentCpu0Freq + " " + currentCpu1Freq
-						+ ", Voltage= " + voltageVal);
+//				appendLog("CPU usage: " + cpuUsageVal + ", CPU freq= " + currentCpu0Freq + " " + currentCpu1Freq
+//						+ ", Voltage= " + voltageVal + ", Mem= " + segmentMemory);
+				appendLog("Voltage= " + voltageVal + ", Mem= " + segmentMemory);
 			} catch (Exception e) {
 				System.err.println("Error in CPU reading");
 			}

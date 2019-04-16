@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="trap">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/trap.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

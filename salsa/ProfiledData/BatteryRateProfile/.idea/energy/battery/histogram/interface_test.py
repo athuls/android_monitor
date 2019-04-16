@@ -4,8 +4,8 @@ import collections
 from .histogram_to_list import *
 from itertools import groupby
 import matplotlib.pyplot as plt
-import plotly as py
-py.tools.set_credentials_file(username='sandur2', api_key='67gqBp1eOw7nzF3kO7RU')
+#import plotly as py
+#py.tools.set_credentials_file(username='sandur2', api_key='67gqBp1eOw7nzF3kO7RU')
 
 HistPowerProfile = collections.namedtuple('HistPowerProfile', ['histchange','powerchange','size'])
 
