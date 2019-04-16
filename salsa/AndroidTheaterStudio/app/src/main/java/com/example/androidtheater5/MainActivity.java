@@ -1108,9 +1108,9 @@ public class MainActivity extends Activity{
 		generator = new Random();
 
 		cpuUsage = true;
-		new Thread(numbersWorker).start();
-		new Thread(seqNumbersWorker).start();
-		new Thread(uniqNumbersWorker).start();
+//		new Thread(numbersWorker).start();
+//		new Thread(seqNumbersWorker).start();
+//		new Thread(uniqNumbersWorker).start();
 //		new Thread(fibWorker).start();
 //		new Thread(numsWorker).start();
 //		new Thread(numsWorker1).start();
