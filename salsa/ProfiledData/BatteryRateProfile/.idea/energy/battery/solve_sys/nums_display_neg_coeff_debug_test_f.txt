@@ -1,0 +1,7 @@
+examples.numbers.Numbers_1,examples.numbers.Numbers_2,examples.numbers.Numbers_3,examples.numbers.Numbers_4,examples.numbers.Numbers_5,examples.numbers.Numbers_6,examples.numbers.Numbers_7,examples.numbers.Numbers_8,examples.numbers.Numbers_9,examples.numbers.Numbers_10,examples.numbers.Numbers_11,examples.numbers.Numbers_12,examples.numbers.Numbers_13,examples.numbers.Numbers_14,examples.numbers.Numbers_15,examples.numbers.Numbers_16,examples.numbers.Numbers_17,examples.numbers.Numbers_18,examples.numbers.Numbers_19,examples.numbers.Numbers_20,examples.numbers.Numbers_21,examples.numbers.Numbers_22,examples.numbers.Numbers_23,examples.numbers.Numbers_24,BatteryDropTime
+3.0,0.0,3.0,1.0,4.0,2.0,3.0,2.0,0.0,2.0,1.0,0.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,420.0
+8.0,3.0,1.0,0.0,2.0,1.0,1.0,3.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,180.0
+5.0,1.0,3.0,1.0,2.0,3.0,10.0,3.0,1.0,0.0,0.0,0.0,3.0,0.0,1.0,2.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,59.0
+8.0,0.0,2.0,1.0,1.0,0.0,1.0,5.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,359.0
+3.0,2.0,2.0,0.0,3.0,1.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,60.0
+17.0,9.0,7.0,7.0,0.0,6.0,3.0,7.0,2.0,5.0,1.0,0.0,1.0,0.0,4.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,1.0,39.0,113.0
