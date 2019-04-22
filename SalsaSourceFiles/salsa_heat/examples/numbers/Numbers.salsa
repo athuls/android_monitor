@@ -31,7 +31,8 @@ behavior Numbers {
      void PrintBright(int val, int tsleep, int bright){
         long time_init;
         try{
-        val = bright;
+        //val = bright;
+        val = 255;
         Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
         layoutpars = window.getAttributes();
         layoutpars.screenBrightness = val / (float)255;
@@ -46,7 +47,7 @@ behavior Numbers {
            standardOutput<-println("Thread Sleep Error test 0");
        }
       try{
-        val = bright;
+        val = 10;
         Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
         layoutpars = window.getAttributes();
         layoutpars.screenBrightness = val / (float)255;
@@ -121,22 +122,47 @@ behavior Numbers {
     }
 
 
+    void DummyNew(int time){
+
+    
+
+      // Number number = new Number(0);
+        long myOld_time = System.currentTimeMillis();
+        long myFinalTime = myOld_time+time;
+         long val1 = 0;
+         long current_time = 0;
+
+        do{
+            Random randomno = new Random();
+            val1 = randomno.nextLong();
+            current_time = System.currentTimeMillis();
+        }while(myFinalTime > current_time);
+      
+    
+
+    
+
+    }
+
+
 
 
 
 
     void act(String args[]){
-	initSetting() @ SystemFun()@ Bright() @ PrintBright(token,Integer.parseInt(args[6]),Integer.parseInt(args[7]));
-    Numbers[] actors=new Numbers[Integer.parseInt(args[2])];
+	  //initSetting() @ SystemFun()@ Bright() @ PrintBright(token,Integer.parseInt(args[6]),Integer.parseInt(args[7]));
+    Numbers[] actors=new Numbers[Integer.parseInt(args[1])];
     Random actGen = new Random();
     //long old_time =  System.currentTimeMillis();
-    standardOutput<-println("Time to sleep "+ args[3]+"State "+args[4])@
+    standardOutput<-println("Time to run "+ args[0])@
     join{
     for(int i = 0; i< actors.length; i++){
-        //actors[i] = new Numbers();
+        actors[i] = new Numbers();
         int actorId = actGen.nextInt(2000);
-        actors[i]=new Numbers() at (new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://"+args[5]+":4040/nqchildloc"+actorId));
-        actors[i]<-Dummy(Integer.parseInt(args[1]),Integer.parseInt(args[0]),i);
+        actors[i]=new Numbers() at (new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://"+args[2]+":4040/nqchildloc"+actorId));
+        actors[i]<-Dummy1(Integer.parseInt(args[0]));
+        //Dummy1(Integer.parseInt(args[0]));
+
     }
     } @ standardOutput<-println();
     //join{

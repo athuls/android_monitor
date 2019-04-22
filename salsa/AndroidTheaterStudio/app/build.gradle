@@ -24,5 +24,5 @@ dependencies {
     compile files('libs/heat.jar')
     compile files('libs/JJIL-J2SE.jar')
     compile files('libs/JJILCore.jar')
-    compile files('libs/salsa_heat.jar')
+    implementation files('libs/salsa_heat.jar')
 }
