@@ -51,6 +51,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.lang.*;
+import java.sql.Time;
 import java.util.Date;
 import java.util.HashMap;
 import android.os.Handler;
@@ -135,8 +136,8 @@ public class MainActivity extends Activity{
 	private volatile boolean SnoIdle= Boolean.FALSE;
 	private volatile boolean PnoIdle= Boolean.FALSE;
 	private long sequenceCounter = 0;
-	private int [] Time = {10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110};
-
+	//private int [] Time = {10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110};
+	private double [] TimePerc = {0.5,0.6,0.7,0.75,0.8,0.9,0.98};
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
 	private Handler batteryHandler;
@@ -154,6 +155,8 @@ public class MainActivity extends Activity{
 	public static Object theaterSyncToken = new Object();
 	private Object oneAppSyncToken = new Object();
 	private Object oneScreenSyncToken = new Object();
+
+	private long TimeInterval =  10000;
 
 	/* to ask for permission PACKAGE_USAGE_STAT*/
 	private void AskPerm(){
@@ -473,97 +476,6 @@ public class MainActivity extends Activity{
 
 	private int runnableNumbersInstCount = 0;
 
-//	private Runnable runnableNumbers = new Runnable(){
-//		@Override
-//		public void run() {
-//			waitUntilTheaterStarted();
-//			synchronized (oneAppSyncToken) {
-//				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-//				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens" + runnableNumbersInstCount );
-//				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
-//
-//				// Note that the IP address is the IP address of the smartphone
-//				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc" + runnableNumbersInstCount );
-//				runnableNumbersInstCount ++;
-////				System.setProperty("nogc", "theater");
-//				int high_brightness = 255;
-//				int low_brightness = 150;
-//				int brightness_app = 10;
-//
-//				if(nswitchVal){
-//					double Rval = Math.random();
-//					//nCounter = (nCounter+1)%2;
-//					if(disp_state == 0){
-//						SnoIdle = Boolean.FALSE;
-//						num_arg = num_heavy;
-//						num_arg_ct = "7";
-//						num_state = "high";
-//						// Get a time till which it will run
-//						Random r = new Random();
-//						//long RTime =  generator.nextInt(100000);
-//						long RTime = 1000000;
-//						numSleep = RTime;
-//						nfinalTime = System.currentTimeMillis() + RTime;
-//						nswitchVal = Boolean.FALSE;
-//						rNum = Boolean.TRUE;
-//						brightness_app = high_brightness;
-//
-//					}
-//					else if (disp_state == 1){
-//						num_arg = num_heavy;
-//						num_arg_ct = "7";
-//						num_state = "low";
-//						Random r = new Random();
-//						//long RTime = generator.nextInt(300000)+100000;
-//						long RTime = 60000;
-//						numSleep = RTime;
-//						nfinalTime = System.currentTimeMillis() + RTime;
-//						nswitchVal = Boolean.FALSE;
-//						rNum = Boolean.TRUE;
-//						brightness_app = 255;
-//
-//					}
-//					else if(disp_state == 2){
-//						num_arg = num_heavy;
-//						num_arg_ct = "7";
-//						SnoIdle = Boolean.TRUE;
-//						num_state = "none";
-//						Random r = new Random();
-//						//int RTime = generator.nextInt(10000)+5000;
-//						int RTime = 30000;
-//						numSleep = RTime;
-//						nfinalTime = System.currentTimeMillis() + RTime;
-//						nswitchVal = Boolean.FALSE;
-//						rNum = Boolean.TRUE;
-//						brightness_app = 10;
-//
-//					}
-//				}
-//				String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress,Integer.toString(1000),Integer.toString(brightness_app)};
-//
-//				if(System.currentTimeMillis() < nfinalTime){
-////					nswitchVal = Boolean.FALSE;
-////					if(noIdle && SnoIdle) nswitchVal = Boolean.TRUE;
-//					rNum = Boolean.TRUE;
-//				}
-//				else {
-//					//nswitchVal = Boolean.TRUE;
-//					rNum = Boolean.FALSE;
-//				}
-//
-//				if(rNum){
-//					Numbers.main(args);
-//					counter_num++;
-//				}
-//			}
-//
-//
-//			numbersHandler.postDelayed(runnableNumbers, 1000);
-//
-//		}
-//
-//	};
-
 	private Runnable runnableNumbers = new Runnable(){
 		@Override
 		public void run() {
@@ -580,29 +492,66 @@ public class MainActivity extends Activity{
 				int high_brightness = 255;
 				int low_brightness = 150;
 				int brightness_app = 10;
-				long TimetoRun = 0;
-				if(nswitchVal) {
+
+				if(nswitchVal){
+					double Rval = Math.random();
 					Random randomno = new Random();
 					double id_bef = randomno.nextGaussian();
-					id_bef = (id_bef * 4.0) + 10.0;
-					if (id_bef > 20.0 || id_bef < 0.0) {
+					id_bef = (id_bef * 2.0) + 3.0;
+					if (id_bef > 6.0 || id_bef < 0.0) {
 						if (id_bef < 0.0) id_bef = 0.0;
-						else id_bef = 20.0;
+						else id_bef = 6.0;
 					}
 					int index = (int) Math.round(Math.floor(id_bef));
-					TimetoRun = Time[index];
-					num_arg_ct = "7";
-					nfinalTime = System.currentTimeMillis() + (TimetoRun * 1000);
-					nswitchVal = Boolean.FALSE;
-					rNum = Boolean.TRUE;
-				}
-				else{
-					nfinalTime = 1000;
-				}
+					numSleep = (long)(TimePerc[index]*TimeInterval);
+					//nCounter = (nCounter+1)%2;
+					if(disp_state == 0){
+						SnoIdle = Boolean.FALSE;
+						num_arg = num_heavy;
+						num_arg_ct = "7";
+						num_state = "high";
+						// Get a time till which it will run
+						Random r = new Random();
+						//long RTime =  generator.nextInt(100000);
+						long RTime = 1000000;
+						//numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						brightness_app = high_brightness;
 
-				String[] args = {Long.toString((long)(TimetoRun*1000)),num_arg_ct,mobileIpAddress};
+					}
+					else if (disp_state == 1){
+						num_arg = num_heavy;
+						num_arg_ct = "7";
+						num_state = "low";
+						Random r = new Random();
+						//long RTime = generator.nextInt(300000)+100000;
+						long RTime = 60000;
+						//numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						brightness_app = low_brightness;
 
-				//String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress,Integer.toString(1000),Integer.toString(brightness_app)};
+					}
+					else if(disp_state == 2){
+						num_arg = num_heavy;
+						num_arg_ct = "7";
+						SnoIdle = Boolean.TRUE;
+						num_state = "none";
+						Random r = new Random();
+						//int RTime = generator.nextInt(10000)+5000;
+						int RTime = 30000;
+						//numSleep = RTime;
+						nfinalTime = System.currentTimeMillis() + RTime;
+						nswitchVal = Boolean.FALSE;
+						rNum = Boolean.TRUE;
+						brightness_app = 10;
+
+					}
+				}
+				String[] args = {num_arg,Long.toString(numSleep),num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress,Integer.toString(1000),Integer.toString(brightness_app)};
 
 //				if(System.currentTimeMillis() < nfinalTime){
 ////					nswitchVal = Boolean.FALSE;
@@ -611,22 +560,86 @@ public class MainActivity extends Activity{
 //				}
 //				else {
 //					//nswitchVal = Boolean.TRUE;
-//					rNum = Boolean.FALSE;
+//					rNum = Boolean.TRUE;
 //				}
 
 				if(rNum){
-					rNum = Boolean.FALSE;
 					Numbers.main(args);
 					counter_num++;
 				}
 			}
 
 
-			numbersHandler.postDelayed(runnableNumbers, nfinalTime);
+			numbersHandler.postDelayed(runnableNumbers, TimeInterval);
 
 		}
 
 	};
+//
+//	private Runnable runnableNumbers = new Runnable(){
+//		@Override
+//		public void run() {
+//			waitUntilTheaterStarted();
+//			synchronized (oneAppSyncToken) {
+//				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+//				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynqueens" + runnableNumbersInstCount );
+//				//System.setProperty("uan", "uan://192.168.0.102:3030/mynqueens");
+//
+//				// Note that the IP address is the IP address of the smartphone
+//				System.setProperty("ual", "rmsp://" + mobileIpAddress +":4040/mynqueensloc" + runnableNumbersInstCount );
+//				runnableNumbersInstCount ++;
+////				System.setProperty("nogc", "theater");
+//				int high_brightness = 255;
+//				int low_brightness = 150;
+//				int brightness_app = 10;
+//				long TimetoRun = 0;
+//				//if(nswitchVal) {
+//					Random randomno = new Random();
+//					double id_bef = randomno.nextGaussian();
+//					id_bef = (id_bef * 2.0) + 3.0;
+//					if (id_bef > 6.0 || id_bef < 0.0) {
+//						if (id_bef < 0.0) id_bef = 0.0;
+//						else id_bef = 6.0;
+//					}
+//					int index = (int) Math.round(Math.floor(id_bef));
+//					TimetoRun = (long)(TimePerc[index]*TimeInterval);
+//					num_arg_ct = "5";
+//					nfinalTime = System.currentTimeMillis() + TimetoRun;
+//					numSleep = TimetoRun;
+//					nswitchVal = Boolean.TRUE;
+//					rNum = Boolean.TRUE;
+//				//}
+////				else{
+////					nfinalTime = 1000;
+////				}
+//
+//				String[] args = {Long.toString((long)(TimetoRun)),num_arg_ct,mobileIpAddress};
+//
+//				//String[] args = {num_arg,"500",num_arg_ct,Long.toString(numSleep),num_state,mobileIpAddress,Integer.toString(1000),Integer.toString(brightness_app)};
+//
+////				if(System.currentTimeMillis() < nfinalTime){
+//////					nswitchVal = Boolean.FALSE;
+//////					if(noIdle && SnoIdle) nswitchVal = Boolean.TRUE;
+////					rNum = Boolean.TRUE;
+////				}
+////				else {
+////					//nswitchVal = Boolean.TRUE;
+////					rNum = Boolean.FALSE;
+////				}
+//
+//				//if(rNum){
+//					//rNum = Boolean.FALSE;
+//					Numbers.main(args);
+//					counter_num++;
+//				//}
+//			}
+//
+//
+//			numbersHandler.postDelayed(runnableNumbers, TimeInterval);
+//
+//		}
+//
+//	};
 
 	private Runnable runnableCombined = new Runnable(){
 		@Override
@@ -1152,7 +1165,6 @@ public class MainActivity extends Activity{
 			last_battery = batteryPct;
 			disp_state = (disp_state+1)%3;
 			nswitchVal = Boolean.TRUE;
-			rNum = Boolean.TRUE;
 		}
 
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();

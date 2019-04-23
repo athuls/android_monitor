@@ -287,7 +287,7 @@ public class Numbers extends UniversalActor  {
 		public void PrintBright(int val, int tsleep, int bright) {
 			long time_init;
 			try {
-				val = 255;
+				val = bright;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;
@@ -319,7 +319,7 @@ public class Numbers extends UniversalActor  {
 			}
 
 			try {
-				val = 10;
+				val = bright;
 				Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, val);
 				layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = val/(float)255;
@@ -359,69 +359,58 @@ public class Numbers extends UniversalActor  {
 		}
 		public void Dummy(int sleep, int loop, int myargs) {
 			long myOld_time = System.currentTimeMillis();
+			Random randomno = new Random();
 			long val1 = 0;
-			for (int i = 0; i<loop; i++){
-				Random randomno = new Random();
+			for (int i = 0; i<1; i++){
+				randomno = new Random();
 				val1 = randomno.nextLong();
 			}
 			long time_init = System.currentTimeMillis();
 			long current_time = 0;
 			long final_time = time_init+sleep;
 do {
+				val1 = randomno.nextLong();
 				current_time = System.currentTimeMillis();
 			}
  while (final_time>current_time);
-			for (int i = 0; i<loop; i++){
-				Random randomno = new Random();
+			for (int i = 0; i<1; i++){
+				randomno = new Random();
 				val1 = randomno.nextLong();
 			}
 			long myDelta_time = System.currentTimeMillis()-myOld_time;
 			if (myargs==0) {{
 				{
-					// standardOutput<-println("Thread time"+myDelta_time)
+					// standardOutput<-println("Thread time"+myDelta_time+"Current time"+System.currentTimeMillis())
 					{
-						Object _arguments[] = { "Thread time"+myDelta_time };
+						Object _arguments[] = { "Thread time"+myDelta_time+"Current time"+System.currentTimeMillis() };
 						Message message = new Message( self, standardOutput, "println", _arguments, null, null );
 						__messages.add( message );
 					}
 				}
 			}
 }		}
-		public void DummyNew(int time) {
-			long myOld_time = System.currentTimeMillis();
-			long myFinalTime = myOld_time+time;
-			long val1 = 0;
-			long current_time = 0;
-do {
-				Random randomno = new Random();
-				val1 = randomno.nextLong();
-				current_time = System.currentTimeMillis();
-			}
- while (myFinalTime>current_time);
-		}
 		public void act(String args[]) {
-			Numbers[] actors = new Numbers[Integer.parseInt(args[1])];
+			Numbers[] actors = new Numbers[Integer.parseInt(args[2])];
 			Random actGen = new Random();
 			{
 				Token token_2_0 = new Token();
 				Token token_2_1 = new Token();
-				// standardOutput<-println("Time to run "+args[0])
+				// standardOutput<-println("Time to sleep "+args[3]+"State "+args[4])
 				{
-					Object _arguments[] = { "Time to run "+args[0] };
+					Object _arguments[] = { "Time to sleep "+args[3]+"State "+args[4] };
 					Message message = new Message( self, standardOutput, "println", _arguments, null, token_2_0 );
 					__messages.add( message );
 				}
 				// join block
 				token_2_1.setJoinDirector();
 				for (int i = 0; i<actors.length; i++){
-					actors[i] = ((Numbers)new Numbers(this).construct());
 					int actorId = actGen.nextInt(2000);
-					actors[i] = ((Numbers)new Numbers(new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://"+args[2]+":4040/nqchildloc"+actorId),this).construct());
+					actors[i] = ((Numbers)new Numbers(new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/nqchild"+actorId), new UAL("rmsp://"+args[5]+":4040/nqchildloc"+actorId),this).construct());
 					{
-						// actors[i]<-Dummy1(Integer.parseInt(args[0]))
+						// actors[i]<-Dummy(Integer.parseInt(args[1]), Integer.parseInt(args[0]), i)
 						{
-							Object _arguments[] = { Integer.parseInt(args[0]) };
-							Message message = new Message( self, actors[i], "Dummy1", _arguments, token_2_0, token_2_1 );
+							Object _arguments[] = { Integer.parseInt(args[1]), Integer.parseInt(args[0]), i };
+							Message message = new Message( self, actors[i], "Dummy", _arguments, token_2_0, token_2_1 );
 							__messages.add( message );
 						}
 					}
