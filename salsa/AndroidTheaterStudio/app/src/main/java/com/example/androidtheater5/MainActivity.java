@@ -137,7 +137,32 @@ public class MainActivity extends Activity{
 	private volatile boolean PnoIdle= Boolean.FALSE;
 	private long sequenceCounter = 0;
 	//private int [] Time = {10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110};
-	private double [] TimePerc = {0.5,0.6,0.7,0.75,0.8,0.9,0.98};
+	private double [] TimePerc = {0.9,0.3};
+	private int [] PingCount = {4,5,6,7,8,9,10};
+	private double [] distIndex = {0.70001249,  4.28778577,  7.12328841,  3.98642274,  4.29424288,
+			1.25490907,  3.44078152,  5.27260265,  2.99518674, -0.70949075,
+			0.31993197,  0.3125703 ,  6.47096514,  1.13652367,  4.03811611,
+			1.65591131,  0.69307615,  0.77855567,  5.27965519,  1.58126642,
+			4.18895235,  2.56729302,  5.73636298,  1.44208478,  1.24276656,
+			-1.9843178 ,  2.71257743,  5.73486635,  3.13103753,  4.4309824 ,
+			4.4106711 ,  2.45934523,  4.13241321,  4.31038005,  2.72413633,
+			3.97242694,  0.02067076,  5.03211059,  2.30193363, -0.85687362,
+			3.46296946,  3.20303026,  2.02633277,  4.43912895,  5.79411322,
+			3.0548448 ,  4.57407142,  3.85045362,  2.05102831,  2.62276617,
+			1.93030442,  0.94817261,  0.73575945,  3.65960683,  2.06578411,
+			3.31189428,  2.83745021,  4.1486193 ,  2.22569277,  2.98170065,
+			3.43559913,  2.05406653, -0.17419841,  2.20549265,  0.15633107,
+			2.71627138,  3.93220362,  3.15561509,  3.69619041,  2.97241276,
+			0.99495413,  5.20721549,  2.83516141,  3.09748096,  7.56976079,
+			4.98659683,  6.85389226,  4.01766159,  3.59828314, -0.132756  ,
+			1.16829472,  3.45252798,  2.07753199,  3.16292651,  3.26527833,
+			1.81587889,  5.3791143 ,  5.22708516,  4.73564594,  2.00116188,
+			2.98830199,  3.64959495,  0.53396836,  3.1443545 ,  3.1906332 ,
+			4.75221323,  0.32224557,  2.75260182,  0.69807919,  2.17487954};
+	private volatile double batteryLevel = 1.0;
+	private volatile int PingLoadCount = 0;
+	private volatile int PingLoadThresh = 0;
+	private volatile int PingWorkCount= 0;
 	private Handler nqueensHandler;
     private Handler nqueensHandler1;
 	private Handler batteryHandler;
@@ -495,15 +520,15 @@ public class MainActivity extends Activity{
 
 				if(nswitchVal){
 					double Rval = Math.random();
-					Random randomno = new Random();
-					double id_bef = randomno.nextGaussian();
-					id_bef = (id_bef * 2.0) + 3.0;
-					if (id_bef > 6.0 || id_bef < 0.0) {
-						if (id_bef < 0.0) id_bef = 0.0;
-						else id_bef = 6.0;
-					}
-					int index = (int) Math.round(Math.floor(id_bef));
-					numSleep = (long)(TimePerc[index]*TimeInterval);
+//					Random randomno = new Random();
+//					double id_bef = randomno.nextGaussian();
+//					id_bef = (id_bef * 2.0) + 3.0;
+//					if (id_bef > 6.0 || id_bef < 0.0) {
+//						if (id_bef < 0.0) id_bef = 0.0;
+//						else id_bef = 6.0;
+//					}
+//					int index = (int) Math.round(Math.floor(id_bef));
+//					numSleep = (long)(TimePerc[index]*TimeInterval);
 					//nCounter = (nCounter+1)%2;
 					if(disp_state == 0){
 						SnoIdle = Boolean.FALSE;
@@ -514,6 +539,7 @@ public class MainActivity extends Activity{
 						Random r = new Random();
 						//long RTime =  generator.nextInt(100000);
 						long RTime = 1000000;
+						numSleep = (long)(TimePerc[disp_state]*TimeInterval);
 						//numSleep = RTime;
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
@@ -529,10 +555,11 @@ public class MainActivity extends Activity{
 						//long RTime = generator.nextInt(300000)+100000;
 						long RTime = 60000;
 						//numSleep = RTime;
+						numSleep = (long)(TimePerc[disp_state]*TimeInterval);
 						nfinalTime = System.currentTimeMillis() + RTime;
 						nswitchVal = Boolean.FALSE;
 						rNum = Boolean.TRUE;
-						brightness_app = low_brightness;
+						brightness_app = high_brightness;
 
 					}
 					else if(disp_state == 2){
@@ -867,56 +894,84 @@ public class MainActivity extends Activity{
 				//System.clearProperty("nodie");
 
 				//String  network_data = "";
+				int batteryIndex = (int)Math.round(batteryLevel*100)-1;
+				if(batteryIndex < 0) batteryIndex = 0;
+				double id_bef = distIndex[batteryIndex];
+				if (id_bef > 6.0 || id_bef < 0.0) {
+					if (id_bef < 0.0) id_bef = 0.0;
+					else id_bef = 6.0;
+				}
+				int index = (int) Math.round(Math.floor(id_bef));
+				PingLoadThresh = PingCount[index];
 
-				if(pswitchVal){
-					double Rval = Math.random();
-					//pCounter = (pCounter+1)%2;
-					if(Rval> 0.4 || noIdle ){
-						PnoIdle = Boolean.FALSE;
-						network_data = network_data_heavy;
-						num_state="high";
-						// Get a time till which it will run
-						//Random r = new Random();
-						long RTime =  generator.nextInt(100000);
-						pfinalTime = System.currentTimeMillis() + RTime;
-						pswitchVal = Boolean.FALSE;
-						rPing = Boolean.TRUE;
-					}
-//					else if (Rval > 0.5){
-//						network_data = network_data_light;
-//						num_state="low";
+//				if(pswitchVal){
+//					double Rval = Math.random();
+//					Random randomno = new Random();
+//					double id_bef = randomno.nextGaussian();
+//					id_bef = (id_bef * 2.0) + 3.0;
+//					if (id_bef > 6.0 || id_bef < 0.0) {
+//						if (id_bef < 0.0) id_bef = 0.0;
+//						else id_bef = 6.0;
+//					}
+//					int index = (int) Math.round(Math.floor(id_bef));
+//					PingLoadThresh = PingCount[index];
+//					//pCounter = (pCounter+1)%2;
+//					if(Boolean.TRUE ){
+//						PnoIdle = Boolean.FALSE;
+//						//network_data = network_data_heavy;
+//						num_state="high";
+//						// Get a time till which it will run
 //						//Random r = new Random();
-//						int RTime = generator.nextInt(300000)+100000;
+//						long RTime =  generator.nextInt(100000);
 //						pfinalTime = System.currentTimeMillis() + RTime;
 //						pswitchVal = Boolean.FALSE;
 //						rPing = Boolean.TRUE;
+//						PingLoadCount = 0;
+//						PingWorkCount = 0;
 //					}
-					else{
-						//Random r = new Random();
-						PnoIdle = Boolean.TRUE;
-						network_data = "";
-						num_state="none";
-						int RTime = generator.nextInt(10000)+5000;
-						pfinalTime = System.currentTimeMillis() + RTime;
-						pswitchVal = Boolean.FALSE;
-						rPing = Boolean.FALSE;
-					}
-				}
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+Integer.toString(runnablePingInstCount-1)};
+////					else if (Rval > 0.5){
+////						network_data = network_data_light;
+////						num_state="low";
+////						//Random r = new Random();
+////						int RTime = generator.nextInt(300000)+100000;
+////						pfinalTime = System.currentTimeMillis() + RTime;
+////						pswitchVal = Boolean.FALSE;
+////						rPing = Boolean.TRUE;
+////					}
+//					else{
+//						//Random r = new Random();
+//						PnoIdle = Boolean.TRUE;
+//						network_data = "";
+//						num_state="none";
+//						int RTime = generator.nextInt(10000)+5000;
+//						pfinalTime = System.currentTimeMillis() + RTime;
+//						pswitchVal = Boolean.FALSE;
+//						rPing = Boolean.FALSE;
+//					}
+//				}
+				String[] args = {network_data_heavy, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+Integer.toString(runnablePingInstCount-1),Integer.toString(PingLoadThresh)};
 
-				if(System.currentTimeMillis() < pfinalTime){
-					pswitchVal = Boolean.FALSE;
-					if(noIdle && PnoIdle) pswitchVal = Boolean.TRUE;
-				}
-				else {
-					pswitchVal = Boolean.TRUE;
+//				if(System.currentTimeMillis() < pfinalTime){
+//					pswitchVal = Boolean.FALSE;
+//					if(noIdle && PnoIdle) pswitchVal = Boolean.TRUE;
+//				}
+//				else {
+//					pswitchVal = Boolean.TRUE;
+//				}
+
+				PingWorkCount = (PingWorkCount+1)%10;
+				if(PingWorkCount == 0){
+					PingLoadCount = 0;
+					rPing = Boolean.TRUE;
 				}
 				if(rPing){
+					PingLoadCount += 1;
+					if(PingLoadCount >= PingLoadThresh) rPing = Boolean.FALSE;
 					Ping.main(args);
 				}
 			}
 
-			pingHandler.postDelayed(runnablePing, 2000);
+			pingHandler.postDelayed(runnablePing, 1000);
 		}
 
 	};
@@ -1150,6 +1205,7 @@ public class MainActivity extends Activity{
 		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 		int voltage = getVoltage();
 		float batteryPct = level / (float)scale;
+		batteryLevel = (double)batteryPct;
 		long netVal = 0;
 		long currNetVal = 0;
 		try {
@@ -1163,8 +1219,9 @@ public class MainActivity extends Activity{
 
 		if(Math.abs(last_battery - batteryPct) > 0.009) {
 			last_battery = batteryPct;
-			disp_state = (disp_state+1)%3;
+			disp_state = (disp_state+1)%2;
 			nswitchVal = Boolean.TRUE;
+			pswitchVal = Boolean.TRUE;
 		}
 
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
@@ -1206,7 +1263,7 @@ public class MainActivity extends Activity{
 //				}
 //			}
 			//appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " and no active actors");
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+" Actor state "+num_state+ " Num_counter "+ counter_num+ " and no active actors");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+" Actor state "+num_state+" Ping Threshold"+PingLoadThresh +" Num_counter "+ counter_num+ " and no active actors");
 
 			feature[0] += 1;
 			// Use battery switch to turn on or off the brightness if empty set low
@@ -1226,7 +1283,7 @@ public class MainActivity extends Activity{
 //					TestApp.main(newBright);
 //				}
 //			}
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+ "Time Sleep "+ numSleep+" Actor state "+num_state+ " Num_counter "+ counter_num+" actor counts- ");
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + ", brightness=" + brightness_val+", Voltage= "+voltage+ "Ping Threshold "+ PingLoadThresh+" Actor state "+num_state+ " Num_counter "+ counter_num+" actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
 				/////////////////////// PREDICTION MODE ///////////////////////

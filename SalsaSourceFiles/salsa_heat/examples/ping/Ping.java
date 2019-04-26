@@ -399,6 +399,14 @@ public class Ping extends UniversalActor  {
 
 		}
 		public void act(String args[]) {
+			{
+				// standardOutput<-println("Ping Load Val"+args[3]+"Current Time :"+System.currentTimeMillis())
+				{
+					Object _arguments[] = { "Ping Load Val"+args[3]+"Current Time :"+System.currentTimeMillis() };
+					Message message = new Message( self, standardOutput, "println", _arguments, null, null );
+					__messages.add( message );
+				}
+			}
 			try {
 				UniversalActor self_ref = (UniversalActor)UniversalActor.getReferenceByName(args[2]);
 				{

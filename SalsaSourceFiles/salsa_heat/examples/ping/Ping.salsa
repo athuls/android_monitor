@@ -89,6 +89,7 @@ behavior Ping {
     }
  
     void act(String args[]){
+    standardOutput<-println("Ping Load Val"+args[3]+"Current Time :"+System.currentTimeMillis());
 	try {
 		UniversalActor self_ref = (UniversalActor) UniversalActor.getReferenceByName(args[2]);
 		// standardOutput<-println("Ping full name is " + self)@
