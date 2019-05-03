@@ -1,0 +1,40 @@
+module examples.numbersDebugVarWld;
+import java.lang.*;
+import java.util.*;
+import androidsalsa.resources.AndroidProxy;
+
+behavior NumbersDebug2 {
+
+    void createCompute(int duration) {
+	//int duration = 0;
+	//duration = 60000;
+
+	long finalTime = System.currentTimeMillis() + duration;
+	long currentTime = 0;
+	long val1 = 0;
+	Random randomno = new Random();
+	do {
+		val1 += randomno.nextLong();
+    		currentTime = System.currentTimeMillis();
+	} while(finalTime > currentTime);
+    }
+
+    void act(String args[]) {
+	Random actorIdGen = new Random();
+	int numActors = Integer.parseInt(args[0]);
+	int duration = Integer.parseInt(args[1]);
+
+	NumbersDebug2[] actorList = new NumbersDebug2[numActors];
+	join {
+		for(int i = 0; i < numActors; i++) {
+			int actorId = actorIdGen.nextInt(2000000);
+			actorList[i] = new NumbersDebug2() at (new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/numsFdchild"+actorId), new UAL("rmsp://"+args[2]+":4040/numsFdChildLoc"+actorId));
+			actorList[i]<-createCompute(duration);
+		}
+	} @ standardOutput<-println("Config mode is low and #actors is " + numActors);
+	
+
+
+	// Do we need to allocate 11.33 - 13 MB of memory too?
+    }
+}

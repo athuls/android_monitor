@@ -1,0 +1,52 @@
+module examples.offloadDebugApp;
+import java.lang.*;
+import java.util.*;
+import androidsalsa.resources.AndroidProxy;
+
+behavior NumbersFaceDetect {
+
+    void createCompute(String mode) {
+	int duration = 0;
+	
+	/*
+	if(mode.equals("low")) {
+		duration = 2154;
+	} else {
+		duration = 4000;
+	}*/
+	duration = 4000;
+
+	long finalTime = System.currentTimeMillis() + duration;
+	long currentTime = 0;
+	long val1 = 0;
+	Random randomno = new Random();
+	do {
+		val1 += randomno.nextLong();
+    		currentTime = System.currentTimeMillis();
+	} while(finalTime > currentTime);
+    }
+
+    void act(String args[]) {
+	Random actorIdGen = new Random();
+	String mode = args[0];
+	int numActors = 0;
+	if(mode.equals("low")) {
+		numActors = 4;
+	} else {
+		numActors = 8;
+	}
+
+	NumbersFaceDetect[] actorList = new NumbersFaceDetect[numActors];
+	join {
+		for(int i = 0; i < numActors; i++) {
+			int actorId = actorIdGen.nextInt(2000);
+			actorList[i] = new NumbersFaceDetect() at (new UAN("uan://osl-server1.cs.illinois.edu:3030"+"/numsFdchild"+actorId), new UAL("rmsp://"+args[1]+":4040/numsFdChildLoc"+actorId));
+			actorList[i]<-createCompute(mode);
+		}
+	} @ standardOutput<-println("Config mode is " + mode + " and #actors is " + numActors);
+	
+
+
+	// Do we need to allocate 11.33 - 13 MB of memory too?
+    }
+}

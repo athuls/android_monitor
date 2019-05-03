@@ -73,16 +73,25 @@ import gc.*;
 import gc.message.*;
 
 import java.util.HashMap; 
+import java.util.concurrent.ConcurrentHashMap; 
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock; 
+import java.util.concurrent.locks.ReentrantReadWriteLock; 
 import java.util.*;
 import java.util.logging.Level; 
 import java.util.logging.Logger;
 
+import java.lang.*;
+
 public class UniversalActor implements ActorReference, java.io.Serializable {
 
 	private static HashMap<String, Integer> activeActorList = new HashMap<String, Integer>();
-	private static Lock actorListLock = new ReentrantLock();
+	// private static Map<String, Integer> activeActorList = new ConcurrentHashMap<String, Integer>();
+	// private static Lock actorListLock = new ReentrantLock();
+	private static ReadWriteLock actorListLock = new ReentrantReadWriteLock();
+	private static Lock actorListWriteLock = actorListLock.writeLock();
+	private static Lock actorListReadLock = actorListLock.readLock();
 	
 
 	/**
@@ -226,8 +235,9 @@ public class UniversalActor implements ActorReference, java.io.Serializable {
         public static HashMap<String, Integer> getActiveActors()
         {
                 HashMap<String, Integer> actorsMap = new HashMap<String, Integer>();
-                actorListLock.lock();
+                // actorListLock.lock();
                 try {
+                	actorListReadLock.lock();
                         Iterator<String> it = activeActorList.keySet().iterator();
                         while(it.hasNext())
                         {
@@ -236,7 +246,7 @@ public class UniversalActor implements ActorReference, java.io.Serializable {
                         }
                 }
                 finally {
-                        actorListLock.unlock();
+                        actorListReadLock.unlock();
                 }
 
                 return actorsMap;
@@ -864,23 +874,27 @@ public abstract class State extends Thread implements Actor, java.io.Serializabl
                         }
 
                         String targetName = this.getClass().getName();
+			long currentThreadId = Thread.currentThread().getId();
+
                         if(id != null && !id.contains("StandardOutput") && !id.contains("StandardError") && !id.contains("StandardInput"))
                         {
                                 //System.out.println(this.getClass().getName() + " AND3 " + currentMessage.getMethodName() + " AND4 ");
-                                actorListLock.lock();
                                 try {
+                                	actorListWriteLock.lock();
                                         if(activeActorList.containsKey(targetName))
                                         {
                                                 Integer count = activeActorList.get(targetName);
                                                 activeActorList.put(targetName, ++count);
+						// System.err.println("[Thread id:" + currentThreadId + "] Adding actor " + targetName + " " + count);
                                         }
                                         else
                                         {
                                                 activeActorList.put(targetName, 1);
+						// System.err.println("[Thread id:" + currentThreadId + "] Adding actor " + targetName + " 1");
                                         }
                                 }
                                 finally {
-                                        actorListLock.unlock();
+                                        actorListWriteLock.unlock();
                                 }
                         }
 
@@ -892,21 +906,23 @@ public abstract class State extends Thread implements Actor, java.io.Serializabl
 			// System.err.println("[Custom] Message method is " + currentMessage.getMethodName());
 
 			// Remove the actor active for this message
-			actorListLock.lock();
 			try {
+				actorListWriteLock.lock();
 				if(activeActorList.containsKey(targetName))
 				{
 					Integer count = activeActorList.get(targetName);
 					if(count == 1) {
 						activeActorList.remove(targetName);
+						// System.err.println("[Thread id:" + currentThreadId + "] Removing actor " + targetName);
 					}
 					else {
 						activeActorList.put(targetName, --count);
+						// System.err.println("[Thread id:" + currentThreadId + "] Reducinng actor count " + targetName + " " + count);
 					}
 				}
 			}
 			finally {
-				actorListLock.unlock();
+				actorListWriteLock.unlock();
 			}
 
                         currentMessage=null;

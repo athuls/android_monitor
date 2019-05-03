@@ -40,6 +40,9 @@ first_mem_usage_entry=True
 cpu_usage_temp=[]
 
 
+currentPowerState = None
+powerStateList = []
+
 with open(fileName) as fp:
 	for line in fp:
 		battery_text="Battery level is "
@@ -62,8 +65,8 @@ with open(fileName) as fp:
 				# We overcounted on the actual samples and undercounted on expected (because we took time difference)
 				error = (interval_length + 1) - (num_samples - 1)
 				percent_error = error/(interval_length+1)
-				print(str(prev_bat) + " expected samples: " + str(interval_length + 1) + " actual samples: " + str(num_samples - 1) + " error= " + str(error)+" percent error="+str(percent_error))   
-				#print(str(interval_length + 1))   
+				# print(str(prev_bat) + " expected samples: " + str(interval_length + 1) + " actual samples: " + str(num_samples - 1) + " error= " + str(error)+" percent error="+str(percent_error))   
+				print(str(interval_length + 1))   
 				#print(str(numpy.mean(cpu_usage_temp)) + "," + str(numpy.std(cpu_usage_temp)))
 				expected_interval_size.append(interval_length+1)		
 					
@@ -80,6 +83,7 @@ with open(fileName) as fp:
 				mem_usage.append(-100)
 				cpu_freq_full_arr.append(-100)
 				network_data_full_list.append(-100)
+				powerStateList.append(currentPowerState)
 
 				voltages=[]
 				cpu_freq_arr=[]
@@ -93,9 +97,10 @@ with open(fileName) as fp:
 					total_actor_count=sum(network_actor_count)
 					expected_network_data=(total_actor_count)*int(sys.argv[2])*3762000
 					#expected_network_data=(total_actor_count)*int(sys.argv[2])*10033856
-					if(expected_network_data > 1900000*total_actor_count):
-					#if(expected_network_data > 7780615*total_actor_count):
-						expected_network_data=1900000*total_actor_count
+					#if(expected_network_data > 1900000*total_actor_count):
+					if(expected_network_data > 7780615*total_actor_count):
+						expected_network_data=7780615*total_actor_count
+						#expected_network_data=1900000*total_actor_count
 					#expected_network_data=(total_actor_count)*int(sys.argv[2])*6659
 
 					#print("network data mean is: " + str(numpy.mean(network_data_arr)) + "network data std is: " + str(numpy.std(network_data_arr)))
@@ -163,13 +168,13 @@ with open(fileName) as fp:
 			cpu_freq_arr.append(num)
 			cpu_freq_full_arr.append(num)
 
-		text="Voltage= "
+		#text="Voltage= "
 		#text="Voltage: "
-		state_ind=line.find(text)
-		if(state_ind != -1):
-			next_a=line.find(", Mem", state_ind)
-			num=float(line[state_ind+9:next_a])
-			voltages.append(num)
+		#state_ind=line.find(text)
+		#if(state_ind != -1):
+		#	next_a=line.find(", Mem", state_ind)
+		#	num=float(line[state_ind+9:next_a])
+		#	voltages.append(num)
 	
 		text="Mem= "
 		state_ind=line.find(text)
@@ -184,6 +189,13 @@ with open(fileName) as fp:
 		#	next_a_letter=line.find("a", state_ind)
 		#	num=int(line[state_ind+11:next_a_letter])
 		#	screen_brightness_vals.append(num)
+	
+		text="Actor state "
+		state_ind=line.find(text)
+		if(state_ind != -1):
+			nextDelim = line.find("Num_counter", state_ind)
+			currentPowerState = line[state_ind + 12 : nextDelim]
+			
 
 print("Mean in actor counts per segment: " + str(numpy.mean(counts_arr)))
 print("Std in actor counts per segment: " + str(numpy.std(counts_arr)))
@@ -232,7 +244,9 @@ if(len(network_data_full_list)>0):
 		drain_network+=network_data_full_list[i]
                 num_segments+=1
 
+print(powerStateList)
 
+sys.exit(0)
 if(len(cpu_usage) > 0):
 	print("The cpu usages are")
 	cpu_usage = numpy.nan_to_num(numpy.array(cpu_usage,dtype=numpy.float32))
@@ -272,3 +286,5 @@ if(len(cpu_usage) > 0):
 		drain_network+=network_data_full_list[i]
 		num_segments+=1
 	print(str(numpy.mean(power_errors))+","+str(numpy.std(power_errors)))
+
+
