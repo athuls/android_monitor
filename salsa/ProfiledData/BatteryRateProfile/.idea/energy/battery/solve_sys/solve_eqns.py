@@ -24,10 +24,10 @@ from sklearn.decomposition import PCA
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_brightness_3_states_neg_coeff_check.txt'
+g_train_file_name='log_var_wld_cpu_6cores_idle2cores_110_70seconds.txt'
 g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="brightness_3_states_neg_coeff_check_train_f.txt"
-g_test_out_file="brightness_3_states_neg_coeff_check_test_f.txt"
+g_train_out_file="var_wld_cpu_6cores_idle2cores_110_70seconds_train_f.txt"
+g_test_out_file="var_wld_cpu_6cores_idle2cores_110_70seconds_test_f.txt"
 LEN = 24
 g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 # g_time_format = "%b %d,%Y %H:%M:%S"

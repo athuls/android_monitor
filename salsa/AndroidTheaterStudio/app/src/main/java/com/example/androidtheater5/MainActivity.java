@@ -2,13 +2,9 @@ package com.example.androidtheater5;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.usage.NetworkStats;
-import android.app.usage.NetworkStatsManager;
 import android.content.BroadcastReceiver;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.net.TrafficStats;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -19,7 +15,6 @@ import android.os.Looper;
 import android.os.StrictMode;
 import android.provider.Settings;
 import android.util.Log;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -29,13 +24,12 @@ import androidsalsa.resources.AndroidProxy;
 //import demo1.Nqueens2;
 //import demo1.Fibonacci;
 import examples.fibonacci.Fibonacci;
-import examples.nqueens.Nqueens;
 import examples.numbers.Numbers;
 import examples.numbers.Numbers1;
 import examples.numbers.SequentialNumbers;
 import examples.numbers.UniqueNumbers;
 import examples.ping.Ping;
-import examples.testapp.TestApp;
+import examples.numbersDebugVarWld.*;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedReader;
@@ -51,7 +45,6 @@ import java.util.ArrayList;
 
 import android.os.Handler;
 
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -66,9 +59,10 @@ import android.content.res.AssetManager;
 
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 import android.content.Intent;
+
 public class MainActivity extends Activity{
 
-	private String mobileIpAddress = "10.194.109.237";
+	private String mobileIpAddress = "10.193.120.29";
 
     private final String TAG = "AndroidTheater";
 	private ScrollView scrollView = null;
@@ -100,6 +94,10 @@ public class MainActivity extends Activity{
 	private Handler pingHandler4;
 	private Handler pingHandler5;
 	private Handler pingHandler6;
+
+	private Handler numbersFdHandler;
+	private Handler numbersIdleHandler;
+
 	private Handler numsHandler;
 	private Handler numsHandler1;
 	private Handler numsHandler2;
@@ -136,16 +134,16 @@ public class MainActivity extends Activity{
 		return;
 	} // to ask for permission PACKAGE_USAGE_STAT
 
-//	@TargetApi(Build.VERSION_CODES.M)
-//	private boolean checkPerm(){
-//		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
-//		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
-//				android.os.Process.myUid(), getPackageName());
-//		if (mode == AppOpsManager.MODE_ALLOWED) {
-//			return true;
-//		}
-//		return false;
-//	}
+	@TargetApi(Build.VERSION_CODES.M)
+	private boolean checkPerm(){
+		AppOpsManager appOps = (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+		int mode = appOps.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
+				android.os.Process.myUid(), getPackageName());
+		if (mode == AppOpsManager.MODE_ALLOWED) {
+			return true;
+		}
+		return false;
+	}
 
 	private long getNetworkDataOld(){
 //		long totalRxBytes = TrafficStats.getTotalRxBytes();
@@ -273,6 +271,26 @@ public class MainActivity extends Activity{
 
 	private int brightness_val = 3;
 
+
+	private Runnable numbersFdWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			numbersFdHandler = new Handler();
+			numbersFdHandler.post(runnableNumbersFaceDetect);
+			Looper.loop();
+		}
+	};
+
+	private Runnable numbersIdleWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			numbersIdleHandler = new Handler();
+			numbersIdleHandler.post(runnableNumbersIdle);
+			Looper.loop();
+		}
+	};
 
 	private Runnable numbersWorker = new Runnable() {
 		@Override
@@ -643,8 +661,52 @@ public class MainActivity extends Activity{
 //
 //	};
 
-	private long numbers1InstCount = 0;
 
+	private long numbersFaceDetectInstCount = 0;
+	private Runnable runnableNumbersFaceDetect = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbersnewfd"+numbersFaceDetectInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumberslocnewfd"+numbersFaceDetectInstCount);
+				numbersFaceDetectInstCount++;
+				String[] args = {"6", Integer.toString(durationActorRunInSec * 1000), mobileIpAddress};
+				NumbersDebug1.main(args);
+//				if(numbersFdConfig.equals("high")) {
+//					String[] args = {"6", "100000", mobileIpAddress};
+//					NumbersDebug1.main(args);
+//				} else {
+//					String[] args = {"6", "70000", mobileIpAddress};
+//					NumbersDebug1.main(args);
+//				}
+			}
+//			numbersFdHandler.postDelayed(runnableNumbersFaceDetect, 6000);
+		}
+	};
+
+	private long numbersIdleInstCount = 0;
+	private Runnable runnableNumbersIdle = new Runnable(){
+		@Override
+		public void run() {
+			synchronized (oneAppSyncToken) {
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbersnewidle"+numbersIdleInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersnewidleloc"+numbersIdleInstCount);
+				numbersIdleInstCount++;
+				String[] args = {"2", "18000000", mobileIpAddress};
+				NumbersDebug2.main(args);
+			}
+//			numbersIdleHandler.postDelayed(runnableNumbersIdle, 5000);
+		}
+	};
+
+
+	private long numbers1InstCount = 0;
 	private Runnable runnableNumbers1 = new Runnable(){
 		@Override
 		public void run() {
@@ -1108,6 +1170,9 @@ public class MainActivity extends Activity{
 		generator = new Random();
 
 		cpuUsage = true;
+
+		new Thread(numbersFdWorker).start();
+		new Thread(numbersIdleWorker).start();
 //		new Thread(numbersWorker).start();
 //		new Thread(seqNumbersWorker).start();
 //		new Thread(uniqNumbersWorker).start();
@@ -1162,14 +1227,14 @@ public class MainActivity extends Activity{
 	protected void onPause() {
 		super.onPause();
 		// Another activity is taking focus (this activity is about to be "paused").
-		debugPrint( "onPause() is called" );
+		debugPrint("onPause() is called");
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
 		// The activity is no longer visible (it is now "stopped")
-		debugPrint( "onStop() is called" );
+		debugPrint("onStop() is called");
 		unregisterReceiver(mReceiver);
 	}
 
@@ -1233,9 +1298,16 @@ public class MainActivity extends Activity{
 
 
 	private double previousMemInMB = 0;
+//	private volatile int durationActorRunInSec = 110;
+	private volatile int durationActorRunInSec = 110;
+	private int reqFdInstCount = durationActorRunInSec;
+	private int currentFdInstCount = 0;
+	private long timeSinceLastFd = 0;
+	private volatile String numbersFdConfig = "high";
+	private float previousBattLevel = -1;
+
 
 	protected void SampleBattery() {
-		float batteryPct=0;
 		final Runtime runtime = Runtime.getRuntime();
 		final double usedMemInMB=(runtime.totalMemory() - runtime.freeMemory()) / (double) 1048576;
 		double segmentMemory = 0;
@@ -1248,11 +1320,11 @@ public class MainActivity extends Activity{
 			throw new OutOfMemoryError();
 		}
 
-//		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-//		Intent batteryStatus = this.registerReceiver(null, iFilter);
-//		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-//		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-//		float batteryPct = level / (float)scale;
+		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		Intent batteryStatus = this.registerReceiver(null, iFilter);
+		int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+		int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+		float batteryPct = level / (float)scale;
 
 		///////////////// Hardware resource usage code ////////////////////////////////
 //		ContentResolver cResolver = this.getContentResolver();
@@ -1282,20 +1354,60 @@ public class MainActivity extends Activity{
 		}
 		///////////////////////////////////////////////////////////////////////////////
 
+		boolean noNumbersDebug1ActorsRunning = true;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
-
 		Date currentTime = Calendar.getInstance().getTime();
-		if(hashList.isEmpty()) {
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " and no active actors");
+		if (hashList.isEmpty()) {
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " config: " +
+					numbersFdConfig + " and no active actors");
 			feature[0] += 1;
-		}
-		else {
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " actor counts- ");
+		} else {
+			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " config: " +
+					numbersFdConfig + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
+				if(actor.contains("NumbersDebug1")) {
+					noNumbersDebug1ActorsRunning = false;
+				}
 			}
 			appendLog("\n");
 		}
+
+		if ((previousBattLevel != -1) && (previousBattLevel > batteryPct)) {
+			synchronized (oneAppSyncToken) {
+				if (numbersFdConfig.equals("low")) {
+					numbersFdConfig = "high";
+//					durationActorRunInSec = 110;
+					durationActorRunInSec = 110;
+					reqFdInstCount = durationActorRunInSec;
+				} else {
+					numbersFdConfig = "low";
+					durationActorRunInSec = 70;
+					reqFdInstCount = durationActorRunInSec;
+				}
+			}
+
+//			currentFdInstCount = 1;
+//			timeSinceLastFd = 0;
+		}
+//		else {
+//			System.err.println("rime since last fd " + timeSinceLastFd + " current fd count : " + currentFdInstCount
+//					+ " reqd fd count: " + reqFdInstCount);
+//			if ((timeSinceLastFd % 1 == 0) && (currentFdInstCount < reqFdInstCount)) {
+//				System.err.println("Going to schedule fd");
+//				numbersFdHandler.post(runnableNumbersFaceDetect);
+//				currentFdInstCount++;
+//			}
+//		}
+//
+//		timeSinceLastFd++;
+		if((previousBattLevel != -1) && noNumbersDebug1ActorsRunning && durationActorRunInSec > 0) {
+			numbersFdHandler.post(runnableNumbersFaceDetect);
+		} else {
+			durationActorRunInSec--;
+		}
+
+		previousBattLevel = batteryPct;
 	}
 
 	protected void showTextOnUI( final String str ) {
