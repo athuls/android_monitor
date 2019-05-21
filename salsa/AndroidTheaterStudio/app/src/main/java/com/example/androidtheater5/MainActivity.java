@@ -2,15 +2,20 @@ package com.example.androidtheater5;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.usage.NetworkStats;
+import android.app.usage.NetworkStatsManager;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.net.TrafficStats;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Looper;
 import android.os.StrictMode;
 import android.provider.Settings;
@@ -29,12 +34,14 @@ import examples.numbers.Numbers1;
 import examples.numbers.SequentialNumbers;
 import examples.numbers.UniqueNumbers;
 import examples.ping.Ping;
+import examples.ping.PingReader;
 import examples.numbersDebugVarWld.*;
 import salsa.language.UniversalActor;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -62,7 +69,7 @@ import android.content.Intent;
 
 public class MainActivity extends Activity{
 
-	private String mobileIpAddress = "10.193.120.29";
+	private String mobileIpAddress = "192.17.150.248";
 
     private final String TAG = "AndroidTheater";
 	private ScrollView scrollView = null;
@@ -88,6 +95,7 @@ public class MainActivity extends Activity{
 	public long possiblePred = 0;
 
 	private Handler pingHandler;
+	private Handler pingReaderHandler;
 	private Handler pingHandler1;
 	private Handler pingHandler2;
 	private Handler pingHandler3;
@@ -127,6 +135,7 @@ public class MainActivity extends Activity{
 	private CpuUsage previousCpuUsage=null;
 	private double currentCpu0Freq;
 	private double currentCpu1Freq;
+	NetworkStatsManager networkStatsManager;
 
 	private void askPerm(){
 		Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
@@ -152,25 +161,32 @@ public class MainActivity extends Activity{
 		return totalTxBytes;
 	}
 
-//	@TargetApi(Build.VERSION_CODES.M)
-//	private long getNetworkData(){
-//		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(Context.NETWORK_STATS_SERVICE);
-//		NetworkStats.Bucket bucket;
-//		try {
-//			bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_WIFI,
-//					"",
-//					System.currentTimeMillis()-1000,
-//// 					0,
-//					System.currentTimeMillis());
-//		} catch (Exception e) {
-//			return -1;
-//		}
-////		long rcv_bt = bucket.getRxBytes();
-//		long snt_bt = bucket.getTxBytes();
-////		return rcv_bt+snt_bt;
-////		appendLog("Received bytes is " + bucket.getRxBytes());
-//		return snt_bt;
-//	}
+	@TargetApi(Build.VERSION_CODES.M)
+	private long getNetworkData(){
+		NetworkStatsManager networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(
+				Context.NETWORK_STATS_SERVICE);
+		NetworkStats.Bucket bucket;
+		try {
+			bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_WIFI,
+					"",
+					System.currentTimeMillis()-1000,
+// 					0,
+					System.currentTimeMillis());
+		} catch (Exception e) {
+			return -1;
+		}
+//		long rcv_bt = bucket.getRxBytes();
+		long snt_bt = bucket.getTxBytes();
+//		return rcv_bt+snt_bt;
+//		appendLog("Received bytes is " + bucket.getRxBytes());
+		return snt_bt;
+	}
+
+	@TargetApi(Build.VERSION_CODES.M)
+	private void initializeNetworkStats() {
+		networkStatsManager = (NetworkStatsManager) getApplicationContext().getSystemService(
+				Context.NETWORK_STATS_SERVICE);
+	}
 
 	@TargetApi(Build.VERSION_CODES.M)
 	private float readUsage() {
@@ -347,6 +363,16 @@ public class MainActivity extends Activity{
 			Looper.prepare();
 			pingHandler = new Handler();
 			pingHandler.post(runnablePing);
+			Looper.loop();
+		}
+	};
+
+	private Runnable pingReaderWorker = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			pingReaderHandler = new Handler();
+			pingReaderHandler.post(runnablePingReader);
 			Looper.loop();
 		}
 	};
@@ -531,6 +557,33 @@ public class MainActivity extends Activity{
 		}
 	};
 
+	public static final String VIRUS_FOLDER_TO_SCAN = "/VirusScanFolder/filesToScan/filesToScan";
+	private void readVirusFolder(String virusFolder){
+		File folderToScan = new File(Environment.getExternalStorageDirectory(),
+				VIRUS_FOLDER_TO_SCAN);
+		File[] filesToScan = folderToScan.listFiles();
+		try {
+			for (File virusFile : filesToScan) {
+				int fileLength = (int) virusFile.length();
+				char[] fileBuffer = new char[fileLength];
+				FileReader currentFile = new FileReader(virusFile);
+				int totalRead = 0;
+				int read = 0;
+				do {
+					totalRead += read;
+					read = currentFile.read(fileBuffer, totalRead, fileLength - totalRead);
+				} while (read > 0);
+				currentFile.close();
+
+				if (totalRead > 0) {
+					String uploadString = new String(fileBuffer);
+				}
+			}
+		} catch (IOException ex) {
+			System.err.println("File scan failed with exception: " + ex.toString());
+		}
+	}
+
 	private void read_initial_in(){
 		String fileName = "HCSB_full.txt";
 		String inputFile = "";
@@ -539,8 +592,7 @@ public class MainActivity extends Activity{
 			BufferedReader in = new BufferedReader(new InputStreamReader(is));
 			if (in==null) {
 				System.err.println("[Custom] The file cannot be found");
-			}
-			else {
+			} else {
 				String line;
 				while ((line = in.readLine()) != null) {
 					inputFile = inputFile + line;
@@ -552,8 +604,13 @@ public class MainActivity extends Activity{
 			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 		}
 
+//		// 3.762 MB of data for i = 3
+//		for (int i = 0; i < 3; i++) {
+//			network_data += inputFile;
+//		}
+
 		// 3.762 MB of data for i = 3
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 20; i++) {
 			network_data += inputFile;
 		}
 	}
@@ -565,10 +622,11 @@ public class MainActivity extends Activity{
 
 			waitUntilTheaterStarted();
 
-			synchronized (oneAppSyncToken) {
+//			synchronized (oneAppSyncToken) {
 				// Ping program
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
-				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount};
+//				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount};
+				String[] args = {VIRUS_FOLDER_TO_SCAN, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount};
 
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount);
@@ -581,9 +639,41 @@ public class MainActivity extends Activity{
 				System.clearProperty("port");
 				System.clearProperty("nodie");
 				Ping.main(args);
-			}
+//			}
 
-			pingHandler.postDelayed(runnablePing, 2000);
+//			pingHandler.postDelayed(runnablePing, 5000);
+		}
+
+	};
+
+	private int pingReaderInstCount = 0;
+	private Runnable runnablePingReader = new Runnable(){
+		@Override
+		public void run() {
+
+			waitUntilTheaterStarted();
+
+//			synchronized (oneAppSyncToken) {
+				// Ping program
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+//				String[] args = {network_data, "uan://osl-server1.cs.illinois.edu:3030/myecho", "uan://osl-server1.cs.illinois.edu:3030/myping"+pingInstCount};
+				String[] args = {VIRUS_FOLDER_TO_SCAN, "uan://osl-server1.cs.illinois.edu:3030/myping"+(pingInstCount-1),
+						"uan://osl-server1.cs.illinois.edu:3030/myecho"};
+
+				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
+				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mypingreader"+pingReaderInstCount);
+
+				// Note that the IP address is the IP address of the smartphone
+				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingreaderloc"+pingReaderInstCount);
+				pingReaderInstCount++;
+
+				System.clearProperty("netif");
+				System.clearProperty("port");
+				System.clearProperty("nodie");
+				PingReader.main(args);
+//			}
+
+//			pingHandler.postDelayed(runnablePing, 5000);
 		}
 
 	};
@@ -631,11 +721,11 @@ public class MainActivity extends Activity{
 				String[] args = {"10","uan://osl-server1.cs.illinois.edu:3030",
 						"rmsp://"+mobileIpAddress+":4040"};
 				Fibonacci.main(args);
-//				Nqueens.main(heavy);
 				fibInstCount++;
 			}
 
-			fibHandler.postDelayed(runnableFib, 2000);
+
+			fibHandler.postDelayed(runnableFib, 1000);
 		}
 
 	};
@@ -698,7 +788,7 @@ public class MainActivity extends Activity{
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersnewidleloc"+numbersIdleInstCount);
 				numbersIdleInstCount++;
-				String[] args = {"2", "18000000", mobileIpAddress};
+				String[] args = {"2", "180000000", mobileIpAddress};
 				NumbersDebug2.main(args);
 			}
 //			numbersIdleHandler.postDelayed(runnableNumbersIdle, 5000);
@@ -1171,8 +1261,9 @@ public class MainActivity extends Activity{
 
 		cpuUsage = true;
 
-		new Thread(numbersFdWorker).start();
+//		new Thread(numbersFdWorker).start();
 		new Thread(numbersIdleWorker).start();
+//		new Thread(fibWorker).start();
 //		new Thread(numbersWorker).start();
 //		new Thread(seqNumbersWorker).start();
 //		new Thread(uniqNumbersWorker).start();
@@ -1190,6 +1281,7 @@ public class MainActivity extends Activity{
 //		new Thread(numsWorker10).start();
 
 //		read_initial_in();
+//		initializeNetworkStats();
 
 		// Reduce the size of the network data
 //		int mid_network_data = network_data.length()/2;
@@ -1316,7 +1408,7 @@ public class MainActivity extends Activity{
 		}
 
 		previousMemInMB = usedMemInMB;
-		if(usedMemInMB > 100) {
+		if(usedMemInMB > 500) {
 			throw new OutOfMemoryError();
 		}
 
@@ -1332,7 +1424,7 @@ public class MainActivity extends Activity{
 //		long currNetVal = 0;
 //		try {
 //			//brightness_val = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
-//			netVal = getNetworkDataOld();
+//			netVal = getNetworkData();
 //			currNetVal = netVal - old_net;
 //			appendLog("Network usage: " + currNetVal);
 //		}catch( Exception e){
@@ -1373,23 +1465,25 @@ public class MainActivity extends Activity{
 			appendLog("\n");
 		}
 
-		if ((previousBattLevel != -1) && (previousBattLevel > batteryPct)) {
-			synchronized (oneAppSyncToken) {
-				if (numbersFdConfig.equals("low")) {
-					numbersFdConfig = "high";
+        ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
+//		if ((previousBattLevel != -1) && (previousBattLevel > batteryPct)) {
+//			synchronized (oneAppSyncToken) {
+//				if (numbersFdConfig.equals("low")) {
+//					numbersFdConfig = "high";
 //					durationActorRunInSec = 110;
-					durationActorRunInSec = 110;
-					reqFdInstCount = durationActorRunInSec;
-				} else {
-					numbersFdConfig = "low";
-					durationActorRunInSec = 70;
-					reqFdInstCount = durationActorRunInSec;
-				}
-			}
+//					reqFdInstCount = durationActorRunInSec;
+//				} else {
+//					numbersFdConfig = "low";
+//					durationActorRunInSec = 70;
+//					reqFdInstCount = durationActorRunInSec;
+//				}
+//			}
+//
+////			currentFdInstCount = 1;
+////			timeSinceLastFd = 0;
+//		}
+        ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
 
-//			currentFdInstCount = 1;
-//			timeSinceLastFd = 0;
-		}
 //		else {
 //			System.err.println("rime since last fd " + timeSinceLastFd + " current fd count : " + currentFdInstCount
 //					+ " reqd fd count: " + reqFdInstCount);
@@ -1401,11 +1495,14 @@ public class MainActivity extends Activity{
 //		}
 //
 //		timeSinceLastFd++;
-		if((previousBattLevel != -1) && noNumbersDebug1ActorsRunning && durationActorRunInSec > 0) {
-			numbersFdHandler.post(runnableNumbersFaceDetect);
-		} else {
-			durationActorRunInSec--;
-		}
+
+        ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
+//		if((previousBattLevel != -1) && noNumbersDebug1ActorsRunning && durationActorRunInSec > 0) {
+//			numbersFdHandler.post(runnableNumbersFaceDetect);
+//		} else {
+//			durationActorRunInSec--;
+//		}
+        ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
 
 		previousBattLevel = batteryPct;
 	}
