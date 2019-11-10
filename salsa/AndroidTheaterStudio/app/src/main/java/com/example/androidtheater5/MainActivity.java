@@ -20,6 +20,7 @@ import android.os.Looper;
 import android.os.StrictMode;
 import android.provider.Settings;
 import android.util.Log;
+import android.util.Pair;
 import android.view.WindowManager;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -69,7 +70,7 @@ import android.content.Intent;
 
 public class MainActivity extends Activity{
 
-	private String mobileIpAddress = "192.17.150.248";
+	private String mobileIpAddress = "10.195.212.37";
 
     private final String TAG = "AndroidTheater";
 	private ScrollView scrollView = null;
@@ -247,8 +248,6 @@ public class MainActivity extends Activity{
 
 			// Note that we are fixing the frequency to 100 which seems to be fixed for device side calculation
 			double timeSinceStart = upTime - (startTime/100);
-
-
 
 			if(previousCpuUsage == null) {
 				previousCpuUsage = new CpuUsage();
@@ -604,13 +603,8 @@ public class MainActivity extends Activity{
 			System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 		}
 
-//		// 3.762 MB of data for i = 3
-//		for (int i = 0; i < 3; i++) {
-//			network_data += inputFile;
-//		}
-
 		// 3.762 MB of data for i = 3
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 6; i++) {
 			network_data += inputFile;
 		}
 	}
@@ -695,6 +689,7 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mypingloc1"+ping1InstCount);
+				ping1InstCount++;
 
 				System.clearProperty("netif");
 				System.clearProperty("port");
@@ -702,7 +697,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler1.postDelayed(runnablePing1, 1000);
+			pingHandler1.postDelayed(runnablePing1, 4000);
 		}
 
 	};
@@ -718,14 +713,14 @@ public class MainActivity extends Activity{
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/fibloc" + fibInstCount);
-				String[] args = {"10","uan://osl-server1.cs.illinois.edu:3030",
+				String[] args = {"11","uan://osl-server1.cs.illinois.edu:3030",
 						"rmsp://"+mobileIpAddress+":4040"};
 				Fibonacci.main(args);
 				fibInstCount++;
 			}
 
 
-			fibHandler.postDelayed(runnableFib, 1000);
+//			fibHandler.postDelayed(runnableFib, 1000);
 		}
 
 	};
@@ -1002,7 +997,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler2.postDelayed(runnablePing2, 1000);
+			pingHandler2.postDelayed(runnablePing2, 4000);
 		}
 
 	};
@@ -1031,7 +1026,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler3.postDelayed(runnablePing3, 1000);
+			pingHandler3.postDelayed(runnablePing3, 4000);
 		}
 
 	};
@@ -1060,7 +1055,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler4.postDelayed(runnablePing4, 1000);
+			pingHandler4.postDelayed(runnablePing4, 4000);
 		}
 
 	};
@@ -1089,7 +1084,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler5.postDelayed(runnablePing5, 1000);
+			pingHandler5.postDelayed(runnablePing5, 3000);
 		}
 
 	};
@@ -1118,7 +1113,7 @@ public class MainActivity extends Activity{
 				Ping.main(args);
 			}
 
-			pingHandler6.postDelayed(runnablePing6, 1000);
+			pingHandler6.postDelayed(runnablePing6, 3000);
 		}
 
 	};
@@ -1251,7 +1246,8 @@ public class MainActivity extends Activity{
 		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
 		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
+		// Turning off AndroidTheaterService so that we can run app without network access
+//		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 //		if(checkPerm() == false) {
 //			askPerm();
@@ -1262,7 +1258,9 @@ public class MainActivity extends Activity{
 		cpuUsage = true;
 
 //		new Thread(numbersFdWorker).start();
-		new Thread(numbersIdleWorker).start();
+
+//		new Thread(numbersIdleWorker).start();
+
 //		new Thread(fibWorker).start();
 //		new Thread(numbersWorker).start();
 //		new Thread(seqNumbersWorker).start();
@@ -1289,12 +1287,14 @@ public class MainActivity extends Activity{
 		// Reduce the size of the network data
 
 //		new Thread(pingWorker).start();
+
 //		new Thread(pingWorker1).start();
 //		new Thread(pingWorker2).start();
 //		new Thread(pingWorker3).start();
 //		new Thread(pingWorker4).start();
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
+
 		new Thread(batteryWorker).start();
 	}
 
@@ -1304,7 +1304,7 @@ public class MainActivity extends Activity{
 		super.onStart();
 		AssetManager assetMgr = this.getAssets();
 		debugPrint("onStart() is called");
-		appendLog("Wifi signal strength is " + getWifiSignalStrength());
+//		appendLog("Wifi signal strength is " + getWifiSignalStrength());
 		registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 	}
 
@@ -1391,7 +1391,7 @@ public class MainActivity extends Activity{
 
 	private double previousMemInMB = 0;
 //	private volatile int durationActorRunInSec = 110;
-	private volatile int durationActorRunInSec = 110;
+	private volatile int durationActorRunInSec = 120;
 	private int reqFdInstCount = durationActorRunInSec;
 	private int currentFdInstCount = 0;
 	private long timeSinceLastFd = 0;
@@ -1409,6 +1409,7 @@ public class MainActivity extends Activity{
 
 		previousMemInMB = usedMemInMB;
 		if(usedMemInMB > 500) {
+			appendLog("Duration and power mode are: " + durationActorRunInSec + "," + numbersFdConfig);
 			throw new OutOfMemoryError();
 		}
 
@@ -1435,10 +1436,11 @@ public class MainActivity extends Activity{
 
 		if(cpuUsage) {
 			try {
-//				double cpuUsageVal = readUsageActual();
+//				double cpuUsageVal = readUsage();
 				int voltageVal = getVoltage();
 //				appendLog("CPU usage: " + cpuUsageVal + ", CPU freq= " + currentCpu0Freq + " " + currentCpu1Freq
 //						+ ", Voltage= " + voltageVal + ", Mem= " + segmentMemory);
+//				appendLog("CPU usage: " + cpuUsageVal + ", Voltage= " + voltageVal + ", Mem= " + segmentMemory);
 				appendLog("Voltage= " + voltageVal + ", Mem= " + segmentMemory);
 			} catch (Exception e) {
 				System.err.println("Error in CPU reading");
@@ -1446,7 +1448,7 @@ public class MainActivity extends Activity{
 		}
 		///////////////////////////////////////////////////////////////////////////////
 
-		boolean noNumbersDebug1ActorsRunning = true;
+		boolean noFibActorsRunning = true;
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 		Date currentTime = Calendar.getInstance().getTime();
 		if (hashList.isEmpty()) {
@@ -1458,10 +1460,11 @@ public class MainActivity extends Activity{
 					numbersFdConfig + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
-				if(actor.contains("NumbersDebug1")) {
-					noNumbersDebug1ActorsRunning = false;
-				}
+//				if(actor.contains("Ping")) {
+//					noFibActorsRunning = false;
+//				}
 			}
+
 			appendLog("\n");
 		}
 
@@ -1470,17 +1473,25 @@ public class MainActivity extends Activity{
 //			synchronized (oneAppSyncToken) {
 //				if (numbersFdConfig.equals("low")) {
 //					numbersFdConfig = "high";
-//					durationActorRunInSec = 110;
+//					durationActorRunInSec = 120;
+//
 //					reqFdInstCount = durationActorRunInSec;
 //				} else {
 //					numbersFdConfig = "low";
-//					durationActorRunInSec = 70;
+//					durationActorRunInSec = 10;
 //					reqFdInstCount = durationActorRunInSec;
 //				}
 //			}
 //
+//			checkpointCount(Integer.toString(durationActorRunInSec), numbersFdConfig);
 ////			currentFdInstCount = 1;
 ////			timeSinceLastFd = 0;
+//		} else if(previousBattLevel == -1) {
+//			Pair<Integer, String> checkpointInfo = readCheckpointCount();
+//			if (checkpointInfo.first > 0) {
+//				durationActorRunInSec = checkpointInfo.first;
+//				numbersFdConfig = checkpointInfo.second;
+//			}
 //		}
         ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
 
@@ -1497,10 +1508,14 @@ public class MainActivity extends Activity{
 //		timeSinceLastFd++;
 
         ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
-//		if((previousBattLevel != -1) && noNumbersDebug1ActorsRunning && durationActorRunInSec > 0) {
-//			numbersFdHandler.post(runnableNumbersFaceDetect);
+//		if((previousBattLevel != -1) && noFibActorsRunning  && durationActorRunInSec > 0) {
+//			pingHandler1.post(runnablePing1);
 //		} else {
 //			durationActorRunInSec--;
+//			System.err.println(durationActorRunInSec);
+//			if(durationActorRunInSec % 5 == 0) {
+//				checkpointCount(Integer.toString(durationActorRunInSec), numbersFdConfig);
+//			}
 //		}
         ///////////////////////////////CODE for aligning actor run durations with battery drop sizes////////////////////////////
 
@@ -1518,6 +1533,60 @@ public class MainActivity extends Activity{
 			}
 		});
     }
+
+	protected Pair<Integer, String> readCheckpointCount()
+	{
+		File logFile = new File("sdcard/countCheckpoint.txt");
+
+		int count = 0;
+		String powerMode = "";
+		try
+		{
+			//BufferedWriter for performance, true to set append to file flag
+			BufferedReader buf = new BufferedReader(new FileReader(logFile));
+			String line = buf.readLine();
+			String[] countAndMode = line.split(",");
+			count = Integer.parseInt(countAndMode[0].trim());
+			powerMode = countAndMode[1].trim();
+			buf.close();
+		}
+		catch (IOException e)
+		{
+			System.err.println("File doesn't exist: " + e.toString());
+		}
+
+		return new Pair(count, powerMode);
+	}
+
+	protected void checkpointCount(String durationCount, String powerMode)
+	{
+		File logFile = new File("sdcard/countCheckpoint.txt");
+		if (!logFile.exists())
+		{
+			try
+			{
+				logFile.createNewFile();
+			}
+			catch (IOException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		try
+		{
+			//BufferedWriter for performance, true to set append to file flag
+			BufferedWriter buf = new BufferedWriter(new FileWriter(logFile));
+			buf.append(durationCount + "," + powerMode);
+			buf.newLine();
+			buf.close();
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	protected void appendLog(String text)
 	{

@@ -24,10 +24,10 @@ from sklearn.decomposition import PCA
 # from sknn.mlp import Regressor, Layer
 import tensorflow as tf
 
-g_train_file_name='log_virusscan_network_idle2cores_lowpower2MBps.txt'
+g_train_file_name='log_4G_LTE_virus_networkmon-30chunks-2s-gap.txt'
 g_actor_list_name='examples.nqueens.Nqueens'
-g_train_out_file="virusscan_network_idle2cores_lowpower2MBps_train_f.txt"
-g_test_out_file="virusscan_network_idle2cores_lowpower2MBps_test_f.txt"
+g_train_out_file="4G_LTE_virus_netowkrmon-30chunks-2s-gap_train_f.txt"
+g_test_out_file="4G_LTE_virus_netowkrmon-30chunks-2s-gap_test_f.txt"
 LEN = 24
 g_time_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
 # g_time_format = "%b %d,%Y %H:%M:%S"
@@ -341,6 +341,8 @@ def nn(training, testing):
       )
       , model_dir="model_folder"
     )
+
+    sys.exit(0)
 
     # Train the model.
     STEPS = 200
