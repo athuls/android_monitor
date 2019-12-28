@@ -1,0 +1,426 @@
+2019-12-27 13:43:36.525 11968-12370/? D/ClClient: Not sending keepalive.  Current connection state=STOPPED
+    
+    --------- beginning of system
+2019-12-27 13:43:38.904 2702-3118/? D/BatteryService: uevent={POWER_SUPPLY_VOLTAGE_NOW=4351628, POWER_SUPPLY_CHARGE_RATE=Normal, POWER_SUPPLY_HEALTH=Good, POWER_SUPPLY_CURRENT_NOW=-185240, POWER_SUPPLY_PRESENT=1, SUBSYSTEM=power_supply, POWER_SUPPLY_TEMP=310, SEQNUM=145094, ACTION=change, POWER_SUPPLY_NAME=battery, POWER_SUPPLY_STATUS=Charging, POWER_SUPPLY_CHARGE_COUNTER=2738057, POWER_SUPPLY_CAPACITY=95, DEVPATH=/devices/soc/qpnp-smbcharger-17/power_supply/battery}
+2019-12-27 13:43:42.756 15309-15310/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.050 15303-15303/? D/AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+2019-12-27 13:43:43.059 15303-15303/? W/app_process: Could not reserve sentinel fault page
+2019-12-27 13:43:43.190 15311-15311/? D/AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+2019-12-27 13:43:43.191 15303-15303/? I/app_process: The ClassLoaderContext is a special shared library.
+2019-12-27 13:43:43.199 15311-15311/? W/app_process: Could not reserve sentinel fault page
+2019-12-27 13:43:43.242 15303-15303/? D/AndroidRuntime: Calling main entry com.android.commands.wm.Wm
+2019-12-27 13:43:43.242 15303-15318/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.257 2702-5945/? W/WindowManager: Permission Denial: dismissKeyguard from pid=15303, uid=2000 requires android.permission.CONTROL_KEYGUARD
+2019-12-27 13:43:43.258 15303-15303/? D/AndroidRuntime: Shutting down VM
+2019-12-27 13:43:43.270 4240-4240/? W/drawable: Bad element under <shape>: selector
+2019-12-27 13:43:43.273 4240-4240/? W/StaticLayout: maxLineHeight should not be -1.  maxLines:3 lineCount:3
+2019-12-27 13:43:43.274 4240-4240/? I/chatty: uid=10043(com.android.launcher3) identical 1 line
+2019-12-27 13:43:43.274 4240-4240/? W/StaticLayout: maxLineHeight should not be -1.  maxLines:3 lineCount:3
+2019-12-27 13:43:43.346 15311-15311/? I/app_process: The ClassLoaderContext is a special shared library.
+2019-12-27 13:43:43.397 15311-15311/? D/AndroidRuntime: Calling main entry com.android.commands.pm.Pm
+2019-12-27 13:43:43.398 15311-15326/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.402 15311-15311/? I/app_process: System.exit called, status: 0
+2019-12-27 13:43:43.402 15311-15311/? I/AndroidRuntime: VM exiting with result code 0.
+2019-12-27 13:43:43.548 15331-15332/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.549 2702-5945/? I/ActivityManager: Force stopping com.example.android.kotlincoroutines appid=10270 user=0: from pid 15331
+2019-12-27 13:43:43.553 4180-4180/? D/RegisteredServicesCache: Intent action: android.intent.action.PACKAGE_RESTARTED
+2019-12-27 13:43:43.557 3697-3697/? D/CarrierSvcBindHelper: No carrier app for: 0
+2019-12-27 13:43:43.558 3697-3697/? D/CarrierSvcBindHelper: No carrier app for: 1
+2019-12-27 13:43:43.561 4180-4180/? D/NxpApduServiceInfo: No com.nxp.nfc.extensions meta-data
+2019-12-27 13:43:43.561 4180-4180/? D/NxpApduServiceInfo: No com.gsma.services.nfc.extensions meta-data
+2019-12-27 13:43:43.561 4180-4180/? E/NxpApduServiceInfo: SE extension not present, Setting default offhost seID
+2019-12-27 13:43:43.563 4180-4180/? E/RegisteredServicesCache: Next Tag=services
+2019-12-27 13:43:43.563 4180-4180/? E/RegisteredServicesCache: 1invalidateCache:WriteServiceStateToFile
+2019-12-27 13:43:43.563 4180-4180/? E/RegisteredServicesCache:  Writing service state Data Always
+2019-12-27 13:43:43.565 4180-4180/? D/CardEmulationManager: Current default: ComponentInfo{com.google.android.gms/com.google.android.gms.tapandpay.hce.service.TpHceService}
+2019-12-27 13:43:43.568 4180-4180/? D/NxpExtns: find found DEFAULT_AID_ROUTE=(0x2)
+2019-12-27 13:43:43.568 4180-4180/? D/NxpExtns: find found DEFAULT_AID_PWR_STATE=(0x19)
+2019-12-27 13:43:43.569 4180-4180/? D/NxpExtns: find found DEFAULT_AID_ROUTE=(0x2)
+2019-12-27 13:43:43.569 4180-4180/? D/NxpExtns: find found DEFAULT_AID_PWR_STATE=(0x19)
+2019-12-27 13:43:43.570 4180-4180/? E/RegisteredServicesCache: 3updateStatusOfServices:WriteServiceStateToFile
+2019-12-27 13:43:43.570 4180-4180/? E/RegisteredServicesCache:  Writing service state Data Always
+2019-12-27 13:43:43.573 4180-4180/? D/RegisteredNfcFServicesCache: Service unchanged, not updating
+2019-12-27 13:43:43.573 4180-4180/? E/NfcService: applyRouting -9
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_DESFIRE_ROUTE=(0x2)
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_DESFIRE_PWR_STATE=(0x1b)
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_AID_ROUTE=(0x2)
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_AID_PWR_STATE=(0x19)
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_MIFARE_CLT_ROUTE=(0x2)
+2019-12-27 13:43:43.573 4180-4180/? D/NxpExtns: find found DEFAULT_MIFARE_CLT_PWR_STATE=(0x1b)
+2019-12-27 13:43:43.573 4180-4180/? I/BrcmNfcNfa: NFA_StopRfDiscovery ()
+2019-12-27 13:43:43.573 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0110
+2019-12-27 13:43:43.573 4180-4416/? I/BrcmNfcNfa: nfa_dm_evt_hdlr event: NFA_DM_API_STOP_RF_DISCOVERY_EVT (0x10)
+2019-12-27 13:43:43.573 4180-4416/? I/BrcmNfcNfa: NFC_Deactivate 4 (IDLE) deactivate_type:0
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::setDefaultRoute: enter; defaultRoute:0x219 protoRoute:0x21B TechRoute:0xA1B HostListenMask:0x7
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::extractRouteLocationAndPowerStates:mDefaultIso7816SeID:0x200 mDefaultIsoDepSeID:0x200 mDefaultTechASeID 0x200
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::extractRouteLocationAndPowerStates:mDefaultIso7816SeID:0x402 mDefaultIso7816Powerstate:0x19
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::extractRouteLocationAndPowerStates:mDefaultIsoDepSeID:0x402 mDefaultIsoDepPowerstate:0x1B
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::extractRouteLocationAndPowerStates:mDefaultTechASeID:0x402 mDefaultTechAPowerstate:0x1B
+2019-12-27 13:43:43.584 4180-4180/? I/BrcmNfcNfa: NFA_CeSetIsoDepListenTech (): 0x3
+2019-12-27 13:43:43.584 4180-4180/? I/BrcmNfcNfa: NFA_CeRegisterAidOnDH ()
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::checkProtoSeID: enter
+2019-12-27 13:43:43.584 4180-4180/? D/NxpExtns: find found NXP_CHECK_DEFAULT_PROTO_SE_ID=(0x1)
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::checkProtoSeID: CHECK_DEFAULT_PROTO_SE_ID - 0x 1 
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::checkProtoSeID: count : 0
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::checkProtoSeID:isDefaultIsoDepSeIDPresent:0x0
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::checkProtoSeID: exit
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::initialiseTableEntries: enter
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::initialiseTableEntries: exit; mTechSupportedByEse:0x0 mTechSupportedByUicc1:0x0 mTechSupportedByUicc2:0x0
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::compileProtoEntries: enter
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: GCF: mDefaultIsoDepSeID: 0x400 , mCeRouteStrictDisable: 0x1 , mDefaultIsoDepPowerstate: 0x9
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: --------------------Proto Table Entries------------------
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: |Index=0|RouteLoc=0x400|Proto=0x04|Power=0x01|Enable=0x1|
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: |Index=1|RouteLoc=0x400|Proto=0x08|Power=0x09|Enable=0x1|
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: |Index=2|RouteLoc=0x400|Proto=0x20|Power=0x09|Enable=0x1|
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: ---------------------------------------------------------
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::compileProtoEntries: exit
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: RoutingManager::consolidateProtoEntries: enter
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: ----------------------------------------Lmrt Proto Entries------------------------------------
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: |Index=0|nfceeID=0x400|SWTCH-ON=0x2C|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x28|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.584 4180-4180/? D/BrcmNfcJni: |Index=1|nfceeID=0x4C0|SWTCH-ON=0x00|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x00|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=2|nfceeID=0x402|SWTCH-ON=0x00|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x00|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: ----------------------------------------------------------------------------------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::consolidateProtoEntries: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: nfceeID:0x400
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: Clear Proto Routing Entries for nfceeID:0x400
+2019-12-27 13:43:43.585 4180-4180/? I/BrcmNfcNfa: NFA_EeSetDefaultProtoRouting(): handle:<0x400>protocol_mask:<0x0>/<0x0>/<0x0><0x0><0x0>
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0603
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: nfa_ce_handle_event event: NFA_CE_API_CFG_ISODEP_TECH_EVT (0x603), flags: 00000000
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0601
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: nfa_ce_handle_event event: NFA_CE_API_REG_LISTEN_EVT (0x601), flags: 00000000
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: CE_T4tRegisterAID (): registering callback for wildcard AID 
+2019-12-27 13:43:43.585 4180-4416/? E/BrcmNfcNfa: CE_T4tRegisterAID (): only one wildcard AID can be registered at time.
+2019-12-27 13:43:43.585 4180-4416/? E/BrcmNfcNfa: Unable to register AID
+2019-12-27 13:43:43.585 4180-4416/? D/BrcmNfcJni: RoutingManager::stackCallback: event=0x15
+2019-12-27 13:43:43.585 4180-4416/? D/BrcmNfcJni: RoutingManager::stackCallback: NFA_CE_REGISTERED_EVT; status=0x3; h=0xFFFF
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0205
+2019-12-27 13:43:43.585 4180-4416/? D/BrcmNfcJni: RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+2019-12-27 13:43:43.585 4180-4180/? I/BrcmNfcNfa: NFA_EeSetDefaultProtoRouting(): handle:<0x400>protocol_mask:<0x2c>/<0x0>/<0x0><0x28><0x0>
+2019-12-27 13:43:43.585 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0205
+2019-12-27 13:43:43.585 4180-4416/? D/BrcmNfcJni: RoutingManager::nfaEeCallback: NFA_EE_SET_PROTO_CFG_EVT; status=0x0
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: nfceeID:0x4C0
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: nfceeID:0x402
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: nfceeID:0x481
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setProtoRouting: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::compileTechEntries: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: --------------------Tech Table Entries------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=0|RouteLoc=0x402|Tech=0x01|Power=0x1B|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=1|RouteLoc=0x402|Tech=0x02|Power=0x1B|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=2|RouteLoc=0x402|Tech=0x04|Power=0x3F|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: --------------------------------------------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::processTechEntriesForFwdfunctionality: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: --------------------Tech Table Entries------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=0|RouteLoc=0x402|Tech=0x01|Power=0x1B|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=1|RouteLoc=0x402|Tech=0x02|Power=0x1B|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=2|RouteLoc=0x402|Tech=0x04|Power=0x3F|Enable=0x0|
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: --------------------------------------------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::processTechEntriesForFwdfunctionality: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::compileTechEntries: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::consolidateTechEntries: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: -----------------------------------------Lmrt Tech Entries------------------------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=0|nfceeID=0x400|SWTCH-ON=0x00|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x00|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=1|nfceeID=0x4C0|SWTCH-ON=0x00|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x00|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: |Index=2|nfceeID=0x402|SWTCH-ON=0x00|SWTCH-OFF=0x00|BAT-OFF=0x00|SCRN-LOCK=0x00|SCRN-OFF=0x00|SCRN-OFF_LOCK=0x00
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: ----------------------------------------------------------------------------------------------
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::consolidateTechEntries: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setTechRouting: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setTechRouting: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::configureOffHostNfceeTechMask: enter
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::configureOffHostNfceeTechMask: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::setDefaultRoute: exit
+2019-12-27 13:43:43.585 4180-4180/? D/BrcmNfcJni: RoutingManager::commitRouting
+2019-12-27 13:43:43.586 4180-4180/? I/BrcmNfcNfa: NFA_EeUpdateNow()
+2019-12-27 13:43:43.586 4180-4416/? I/BrcmNfcNfa: NFA got event 0x0209
+2019-12-27 13:43:43.602 4180-4416/? D/BrcmNfcJni: RoutingManager::nfaEeCallback: NFA_EE_UPDATED_EVT
+2019-12-27 13:43:43.602 4180-4180/? I/BrcmNfcNfa: NFA_StartRfDiscovery ()
+2019-12-27 13:43:43.602 4180-4416/? I/BrcmNfcNfa: NFA got event 0x010F
+2019-12-27 13:43:43.602 4180-4416/? I/BrcmNfcNfa: nfa_dm_evt_hdlr event: NFA_DM_API_START_RF_DISCOVERY_EVT (0x0f)
+2019-12-27 13:43:43.602 4180-4416/? I/BrcmNfcNfa: LLCP_GetDiscoveryConfig ()
+2019-12-27 13:43:43.603 4180-4416/? I/BrcmNfcNfa: NFC_DiscoveryStart
+2019-12-27 13:43:43.603 4180-4416/? I/BrcmNfcNfa: NFC_DiscoveryStart status: 0xe3
+2019-12-27 13:43:43.608 4180-4180/? D/NfcService: Discovery configuration equal, not updating.
+2019-12-27 13:43:43.726 15338-15339/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.729 870-1031/? E/ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+2019-12-27 13:43:43.730 2702-4234/? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.android.kotlincoroutines/.main.MainActivity} from uid 2000
+2019-12-27 13:43:43.748 15341-15341/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:43.748 2702-5945/? I/ActivityManager: Start proc 15341:com.example.android.kotlincoroutines/u0a270 for activity com.example.android.kotlincoroutines/.main.MainActivity
+2019-12-27 13:43:43.753 15341-15341/? I/zygote: Late-enabling -Xcheck:jni
+2019-12-27 13:43:43.822 15341-15348/? I/zygote: Debugger is no longer active
+2019-12-27 13:43:43.865 11194-11284/? I/MicroDetectionState: Should stop hotword detection immediately - false
+2019-12-27 13:43:43.909 15341-15341/? D/NetworkSecurityConfig: No Network Security Config specified, using platform default
+2019-12-27 13:43:44.026 15341-15341/? I/zygote: Rejecting re-init on previously-failed class java.lang.Class<androidx.core.view.ViewCompat$2>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote: Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/base.apk"],nativeLibraryDirectories=[/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/lib/arm, /system/lib, /system/vendor/lib]]
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.026 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote: Rejecting re-init on previously-failed class java.lang.Class<androidx.core.view.ViewCompat$2>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote: Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/base.apk"],nativeLibraryDirectories=[/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/lib/arm, /system/lib, /system/vendor/lib]]
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.028 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote: Rejecting re-init on previously-failed class java.lang.Class<androidx.core.view.ViewCompat$2>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.029 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote: Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/base.apk"],nativeLibraryDirectories=[/data/app/com.example.android.kotlincoroutines-Hs1IyrZr6NBt46p10PjUZw==/lib/arm, /system/lib, /system/vendor/lib]]
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void androidx.core.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2559)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void androidx.appcompat.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:63)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.view.ViewGroup androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:749)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:659)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:552)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void androidx.appcompat.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:161)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void com.example.android.kotlincoroutines.main.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:47)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7032)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7023)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1236)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2814)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2943)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1630)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.os.Looper.loop() (Looper.java:164)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6626)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
+2019-12-27 13:43:44.030 15341-15341/? I/zygote:     at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:811)
+2019-12-27 13:43:44.191 15341-15369/? D/OpenGLRenderer: HWUI GL Pipeline
+2019-12-27 13:43:44.199 2702-2711/? I/zygote: Background concurrent copying GC freed 178977(7MB) AllocSpace objects, 27(912KB) LOS objects, 42% free, 23MB/40MB, paused 178us total 208.475ms
+2019-12-27 13:43:44.251 15341-15369/? I/Adreno: QUALCOMM build                   : 908a5ce, I77d3059488
+    Build Date                       : 06/07/18
+    OpenGL ES Shader Compiler Version: EV031.22.00.01_06
+    Local Branch                     : 
+    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.5.R1.08.01.00.312.086
+    Remote Branch                    : NONE
+    Reconstruct Branch               : NOTHING
+2019-12-27 13:43:44.252 15341-15369/? D/vndksupport: Loading /vendor/lib/hw/gralloc.msm8953.so from current namespace instead of sphal namespace.
+2019-12-27 13:43:44.256 15341-15369/? I/Adreno: PFP: 0x005ff087, ME: 0x005ff063
+2019-12-27 13:43:44.263 15341-15369/? I/zygote: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+2019-12-27 13:43:44.263 15341-15369/? I/OpenGLRenderer: Initialized EGL, version 1.4
+2019-12-27 13:43:44.264 15341-15369/? D/OpenGLRenderer: Swap behavior 2
+2019-12-27 13:43:44.305 15341-15369/? D/vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+2019-12-27 13:43:44.305 15341-15369/? D/vndksupport: Loading /vendor/lib/hw/gralloc.msm8953.so from current namespace instead of sphal namespace.
+2019-12-27 13:43:44.324 2702-2740/? I/LaunchCheckinHandler: Displayed com.example.android.kotlincoroutines/.main.MainActivity,cp,ca,586
+2019-12-27 13:43:44.324 2702-2740/? I/ActivityManager: Displayed com.example.android.kotlincoroutines/.main.MainActivity: +582ms
+2019-12-27 13:43:44.335 15360-15360/? D/AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+2019-12-27 13:43:44.340 11194-14874/? I/PBSessionCacheImpl: Deleted sessionId[49233310116453656] from persistence.
+2019-12-27 13:43:44.345 15360-15360/? W/app_process: Could not reserve sentinel fault page
+2019-12-27 13:43:44.351 2702-4234/? I/WifiService: getWifiEnabledState uid=10071
+2019-12-27 13:43:44.367 11194-11284/? W/SearchServiceCore: Abort, client detached.
+2019-12-27 13:43:44.370 11194-11284/? I/StreamController: cleanUpControllerScope(nowcards-15-5c078d26-3fec)
+2019-12-27 13:43:44.479 15360-15360/? I/app_process: The ClassLoaderContext is a special shared library.
+2019-12-27 13:43:44.525 15360-15360/? D/AndroidRuntime: Calling main entry com.android.commands.pm.Pm
+2019-12-27 13:43:44.525 15360-15378/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:44.539 15360-15360/? I/app_process: System.exit called, status: 0
+2019-12-27 13:43:44.539 15360-15379/? W/MessageQueue: Handler (android.os.Handler) {faad187} sending message to a Handler on a dead thread
+    java.lang.IllegalStateException: Handler (android.os.Handler) {faad187} sending message to a Handler on a dead thread
+        at android.os.MessageQueue.enqueueMessage(MessageQueue.java:547)
+        at android.os.Handler.enqueueMessage(Handler.java:662)
+        at android.os.Handler.sendMessageAtTime(Handler.java:631)
+        at android.os.Handler.sendMessageDelayed(Handler.java:601)
+        at android.os.Handler.post(Handler.java:357)
+        at android.os.ResultReceiver$MyResultReceiver.send(ResultReceiver.java:57)
+        at com.android.internal.os.IResultReceiver$Stub.onTransact(IResultReceiver.java:58)
+        at android.os.Binder.execTransact(Binder.java:697)
+2019-12-27 13:43:44.539 15360-15360/? I/AndroidRuntime: VM exiting with result code 0.
+2019-12-27 13:43:44.989 15382-15382/? D/AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+2019-12-27 13:43:44.997 15382-15382/? W/app_process: Could not reserve sentinel fault page
+2019-12-27 13:43:45.127 15382-15382/? I/app_process: The ClassLoaderContext is a special shared library.
+2019-12-27 13:43:45.173 15382-15382/? D/AndroidRuntime: Calling main entry com.android.commands.pm.Pm
+2019-12-27 13:43:45.173 15382-15389/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+2019-12-27 13:43:45.178 15382-15390/? W/MessageQueue: Handler (android.os.Handler) {faad187} sending message to a Handler on a dead thread
+    java.lang.IllegalStateException: Handler (android.os.Handler) {faad187} sending message to a Handler on a dead thread
+        at android.os.MessageQueue.enqueueMessage(MessageQueue.java:547)
+        at android.os.Handler.enqueueMessage(Handler.java:662)
+        at android.os.Handler.sendMessageAtTime(Handler.java:631)
+        at android.os.Handler.sendMessageDelayed(Handler.java:601)
+        at android.os.Handler.post(Handler.java:357)
+        at android.os.ResultReceiver$MyResultReceiver.send(ResultReceiver.java:57)
+        at com.android.internal.os.IResultReceiver$Stub.onTransact(IResultReceiver.java:58)
+        at android.os.Binder.execTransact(Binder.java:697)
+2019-12-27 13:43:45.178 15382-15382/? I/app_process: System.exit called, status: 0
+2019-12-27 13:43:45.178 15382-15382/? I/AndroidRuntime: VM exiting with result code 0.
+2019-12-27 13:43:45.866 885-885/? I/SFPerfTracer:      triggers: (rate: 22:2555) (compose: 0:4) (post: 0:19) (render: 0:22) (76:280960 frames) (77:320448)
+2019-12-27 13:43:45.866 885-885/? D/SFPerfTracer:        layers: (3:10) (StatusBar#0 (0xb2c3c000): 0:63124) (com.android.systemui.ImageWallpaper#0 (0xb29da000): 0:310)* (DimLayerController/Stack=0#0 (0xb295b000): 0:1334)* (NavigationBar#0 (0xb2ad7000): 77:6553) (Sprite#0 (0xb2965000): 0:2)* (com.android.launcher3/com.android.launcher3.CustomizationPanelLauncher#0 (0xb2a33000): 0:39)- (com.android.launcher3/com.android.launcher3.CustomizationPanelLauncher#1 (0xb2a52000): 0:34)- (Splash Screen com.example.android.kotlincoroutines#0 (0xb2c3a000): 0:35)- (animation background stackId=1#0 (0xb2a6d000): 0:2)* (com.example.android.kotlincoroutines/com.example.android.kotlincoroutines.main.MainActivity#0 (0xb29f4000): 0:4) 
+2019-12-27 13:43:46.524 11968-12370/? D/ClClient: Not sending keepalive.  Current connection state=STOPPED
+2019-12-27 13:43:48.288 870-1031/? E/ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+2019-12-27 13:43:48.299 885-1188/? I/SFPerfTracer:      triggers: (rate: 0:0) (25954 sw vsyncs) (0 skipped) (90:287775 vsyncs) (92:351473)
+2019-12-27 13:43:48.372 15341-15341/com.example.android.kotlincoroutines I/System.out: [Atul] Builder.Common :launching coroutine
+2019-12-27 13:43:48.374 15341-15341/com.example.android.kotlincoroutines I/System.out: [Atul] common:src:AbstractCoroutine
+2019-12-27 13:43:48.376 15341-15341/com.example.android.kotlincoroutines I/System.out: [Atul] intrinsic:Cancellable:runSafely
+2019-12-27 13:43:48.380 15341-15341/com.example.android.kotlincoroutines I/System.out: [Atul] common:src:internal:DispatchedTask:run
+2019-12-27 13:43:48.930 2702-3118/? D/BatteryService: uevent={POWER_SUPPLY_VOLTAGE_NOW=4351323, POWER_SUPPLY_CHARGE_RATE=Normal, POWER_SUPPLY_HEALTH=Good, POWER_SUPPLY_CURRENT_NOW=-186919, POWER_SUPPLY_PRESENT=1, SUBSYSTEM=power_supply, POWER_SUPPLY_TEMP=310, SEQNUM=145096, ACTION=change, POWER_SUPPLY_NAME=battery, POWER_SUPPLY_STATUS=Charging, POWER_SUPPLY_CHARGE_COUNTER=2738415, POWER_SUPPLY_CAPACITY=95, DEVPATH=/devices/soc/qpnp-smbcharger-17/power_supply/battery}
+2019-12-27 13:43:48.967 15341-15395/com.example.android.kotlincoroutines I/System.out: [Atul] common:src:internal:DispatchedTask:dispatch
+2019-12-27 13:43:48.967 15341-15341/com.example.android.kotlincoroutines I/System.out: [Atul] common:src:internal:DispatchedTask:run
+2019-12-27 13:43:49.417 844-844/? I/MotoSensors: Sensorhub hal setDelay: 1 - 20
+2019-12-27 13:43:49.418 844-844/? I/MotoSensors: Sensorhub hal setdelay: 1 - 20
+2019-12-27 13:43:49.418 844-844/? I/MotoSensors: HubSensors::updateAccelRate 200
+2019-12-27 13:43:49.418 844-844/? I/MotoSensors: Sensorhub hal enable: 1 - 1
+2019-12-27 13:43:49.418 844-844/? I/MotoSensors: HubSensors::updateAccelRate 20
+2019-12-27 13:43:49.428 25231-9128/? I/Places: ?: PlacesBleScanner stop()
+2019-12-27 13:43:49.429 25231-25231/? I/BeaconBle: Scan canceled successfully.
+2019-12-27 13:43:49.434 25231-9128/? I/PlaceInferenceEngine: [anon] Changed inference mode: 0
+2019-12-27 13:43:49.434 25231-9128/? I/PlaceInferenceEngine: [account#1926783330] Changed inference mode: 0
+2019-12-27 13:43:49.946 844-844/? I/MotoSensors: Sensorhub hal enable: 1 - 0
+2019-12-27 13:43:50.144 25231-25242/? I/zygote: Background concurrent copying GC freed 353865(15MB) AllocSpace objects, 81(4MB) LOS objects, 50% free, 12MB/25MB, paused 326us total 179.580ms
+2019-12-27 13:43:56.525 11968-12370/? D/ClClient: Not sending keepalive.  Current connection state=STOPPED
