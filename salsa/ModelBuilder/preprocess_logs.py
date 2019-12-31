@@ -6,6 +6,7 @@ import datetime
 import random
 
 g_datetime_format = "%a %b %d %H:%M:%S GMT+05:30 %Y"
+#g_datetime_format = "%b %d,%Y %H:%M:%S"
 
 if(len(sys.argv) != 4):
 	print("Input arguments should be: <name of log file> <actor load> <NET if network logs processing, else BASIC>")
@@ -65,8 +66,8 @@ with open(fileName) as fp:
 				# We overcounted on the actual samples and undercounted on expected (because we took time difference)
 				error = (interval_length + 1) - (num_samples - 1)
 				percent_error = error/(interval_length+1)
-				# print(str(prev_bat) + " expected samples: " + str(interval_length + 1) + " actual samples: " + str(num_samples - 1) + " error= " + str(error)+" percent error="+str(percent_error))   
-				print(str(interval_length + 1))   
+				print(str(prev_bat) + " expected samples: " + str(interval_length + 1) + " actual samples: " + str(num_samples - 1) + " error= " + str(error)+" percent error="+str(percent_error))   
+				#print(str(interval_length + 1))   
 				#print(str(numpy.mean(cpu_usage_temp)) + "," + str(numpy.std(cpu_usage_temp)))
 				expected_interval_size.append(interval_length+1)		
 					

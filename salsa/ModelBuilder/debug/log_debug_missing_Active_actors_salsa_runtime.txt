@@ -1,0 +1,298 @@
+Voltage= 4360, Mem= 0.0
+Wifi signal strength is 4
+[Sun Apr 28 11:24:58 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+[DEBUG_BATTERY_LEVEL] Sun Apr 28 11:24:58 GMT+05:30 2019 1.0
+Voltage= 4360, Mem= -0.3203887939453125
+[Sun Apr 28 11:24:59 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 10, 
+
+
+Voltage= 4360, Mem= 0.12511444091796875
+[Sun Apr 28 11:25:00 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 10, 
+
+
+Voltage= 4360, Mem= 0.140716552734375
+[Sun Apr 28 11:25:01 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 10, 
+
+
+Voltage= 4360, Mem= 0.109466552734375
+[Sun Apr 28 11:25:02 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 10, 
+
+
+Voltage= 4360, Mem= 0.140716552734375
+[Sun Apr 28 11:25:03 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 10, 
+
+
+Voltage= 4360, Mem= 0.5635452270507812
+[Sun Apr 28 11:25:04 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 4, 
+
+
+Voltage= 4360, Mem= 0.187591552734375
+[Sun Apr 28 11:25:05 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:06 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:07 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:08 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= -1.1463851928710938
+[Sun Apr 28 11:25:09 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 1, 
+
+
+Voltage= 4360, Mem= 0.1251068115234375
+[Sun Apr 28 11:25:10 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 1, 
+
+
+Voltage= 4360, Mem= 0.140716552734375
+[Sun Apr 28 11:25:11 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:12 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:13 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.38288116455078125
+[Sun Apr 28 11:25:14 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.1016082763671875
+[Sun Apr 28 11:25:15 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:16 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:17 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:18 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+[DEBUG_BATTERY_LEVEL] Sun Apr 28 11:25:19 GMT+05:30 2019 1.0
+Voltage= 4360, Mem= 0.449310302734375
+[Sun Apr 28 11:25:19 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:20 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= -1.74151611328125
+[Sun Apr 28 11:25:21 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474853515625
+[Sun Apr 28 11:25:22 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07036590576171875
+[Sun Apr 28 11:25:23 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.49225616455078125
+[Sun Apr 28 11:25:24 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 5, 
+
+
+Voltage= 4360, Mem= 0.125091552734375
+[Sun Apr 28 11:25:25 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 5, 
+
+
+Voltage= 4360, Mem= 0.156341552734375
+[Sun Apr 28 11:25:26 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 2, 
+
+
+Voltage= 4360, Mem= 0.125091552734375
+[Sun Apr 28 11:25:27 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 2, 
+
+
+Voltage= 4360, Mem= 0.109466552734375
+[Sun Apr 28 11:25:28 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 2, 
+
+
+Voltage= 4360, Mem= 0.43761444091796875
+[Sun Apr 28 11:25:29 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 5, 
+
+
+Voltage= 4360, Mem= -1.5997314453125
+[Sun Apr 28 11:25:30 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07037353515625
+[Sun Apr 28 11:25:31 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07036590576171875
+[Sun Apr 28 11:25:32 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:33 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.5235061645507812
+[Sun Apr 28 11:25:34 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:35 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:36 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:37 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:38 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.36725616455078125
+[Sun Apr 28 11:25:39 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 5, 
+
+
+Voltage= 4360, Mem= -1.2363739013671875
+[Sun Apr 28 11:25:40 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474853515625
+[Sun Apr 28 11:25:41 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474090576171875
+[Sun Apr 28 11:25:42 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:43 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.5235061645507812
+[Sun Apr 28 11:25:44 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:45 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:46 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:47 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:49 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.36725616455078125
+[Sun Apr 28 11:25:50 GMT+05:30 2019] Battery level is 1.0 config: high actor counts- 
+examples.numbersDebugVarWld.NumbersDebug1$State: 5, 
+
+
+Voltage= 4360, Mem= -1.3946762084960938
+[Sun Apr 28 11:25:51 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07037353515625
+[Sun Apr 28 11:25:52 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474090576171875
+[Sun Apr 28 11:25:53 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:54 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.5235061645507812
+[Sun Apr 28 11:25:55 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:56 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:25:57 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:58 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:25:59 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.08600616455078125
+[Sun Apr 28 11:26:00 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:01 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:02 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:03 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:04 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:05 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= -1.5225448608398438
+[Sun Apr 28 11:26:06 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+[DEBUG_BATTERY_LEVEL] Sun Apr 28 11:26:07 GMT+05:30 2019 1.0
+Voltage= 4360, Mem= 0.121185302734375
+[Sun Apr 28 11:26:07 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:08 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:09 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:10 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:11 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:12 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:13 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:14 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:15 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:16 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:17 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:18 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:19 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:20 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:21 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:22 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:23 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:24 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:25 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:26 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:27 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:28 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:29 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= -1.676788330078125
+[Sun Apr 28 11:26:30 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07037353515625
+[Sun Apr 28 11:26:31 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474090576171875
+[Sun Apr 28 11:26:32 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:33 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:34 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:35 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:36 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:37 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:38 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:39 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:40 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:41 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:42 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:43 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:44 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:45 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:46 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:47 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:48 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:49 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:50 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:51 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:52 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= -1.5448684692382812
+[Sun Apr 28 11:26:53 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.07037353515625
+[Sun Apr 28 11:26:54 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.05474090576171875
+[Sun Apr 28 11:26:55 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:56 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:57 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:26:58 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0547332763671875
+[Sun Apr 28 11:26:59 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.0703582763671875
+[Sun Apr 28 11:27:01 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors
+Voltage= 4360, Mem= 0.11746978759765625
+[Sun Apr 28 11:27:02 GMT+05:30 2019] Battery level is 1.0 config: high and no active actors

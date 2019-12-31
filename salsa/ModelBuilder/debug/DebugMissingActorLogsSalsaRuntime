@@ -1,0 +1,516 @@
+04-28 11:24:58.207 25717-25717/? E/SchedPolicy: open of /dev/cpuctl/bg_non_interactive/tasks failed: No such file or directory
+04-28 11:24:58.211 25717-25717/? I/zygote: Late-enabling -Xcheck:jni
+04-28 11:24:58.271 25717-25724/? E/zygote: Failed sending reply to debugger: Broken pipe
+04-28 11:24:58.271 25717-25724/? I/zygote: Debugger is no longer active
+04-28 11:24:58.382 25717-25717/? I/AndroidTheater: onCreate() is called
+04-28 11:24:58.399 25717-25717/? W/System.err: Before creating TF inference
+04-28 11:24:58.399 25717-25717/? W/System.err: After creating TF inference
+04-28 11:24:58.477 25717-25744/? W/System.err: The applet is false and the class name is androidsalsa.resources.StandardOutput
+04-28 11:24:58.497 25717-25744/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.497 25717-25744/? W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:24:58.498 25717-25744/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.509 25717-25744/? W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:24:58.510 25717-25744/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.512 25717-25717/? I/AndroidTheater: onStart() is called
+04-28 11:24:58.524 25717-25748/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.524 25717-25748/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.549 25717-25717/? I/AndroidTheater: onResume() is called
+04-28 11:24:58.552 25717-25750/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.552 25717-25750/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.564 25717-25739/? W/System.err: rime since last fd 0 current fd count : 0 reqd fd count: 12
+04-28 11:24:58.565 25717-25739/? W/System.err: Going to schedule fd
+04-28 11:24:58.565 25717-25751/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.567 25717-25751/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.574 25717-25753/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.574 25717-25753/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.574 25717-25752/? D/OpenGLRenderer: HWUI GL Pipeline
+04-28 11:24:58.574 25717-25753/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.579 25717-25754/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.579 25717-25754/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.582 25717-25753/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:24:58.582 25717-25753/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.584 25717-25717/? I/SalsaTheaterService: AndroidTheaterService onCreate() is called
+04-28 11:24:58.585 25717-25717/? I/SalsaTheaterService: Theater listening on: rmsp://10.193.120.29:4040/
+04-28 11:24:58.586 25717-25717/? I/SalsaTheaterService: onStart() is called
+04-28 11:24:58.598 25717-25756/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.599 25717-25757/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:24:58.599 25717-25756/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.599 25717-25757/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.620 25717-25758/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.620 25717-25758/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.621 25717-25759/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.621 25717-25759/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:24:58.629 25717-25748/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:24:58.629 25717-25752/? I/Adreno: QUALCOMM build                   : 908a5ce, I77d3059488
+04-28 11:24:58.629 25717-25752/? I/Adreno: Build Date                       : 06/07/18
+04-28 11:24:58.629 25717-25752/? I/Adreno: OpenGL ES Shader Compiler Version: EV031.22.00.01_06
+04-28 11:24:58.629 25717-25752/? I/Adreno: Local Branch                     : 
+04-28 11:24:58.629 25717-25752/? I/Adreno: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.5.R1.08.01.00.312.086
+04-28 11:24:58.629 25717-25752/? I/Adreno: Remote Branch                    : NONE
+04-28 11:24:58.629 25717-25752/? I/Adreno: Reconstruct Branch               : NOTHING
+04-28 11:24:58.630 25717-25752/? D/vndksupport: Loading /vendor/lib/hw/gralloc.msm8953.so from current namespace instead of sphal namespace.
+04-28 11:24:58.634 25717-25750/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:24:58.635 25717-25751/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:24:58.637 25717-25744/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:24:58.638 25717-25754/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:24:58.638 25717-25758/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:24:58.640 25717-25756/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:24:58.660 25717-25760/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:24:58.660 25717-25760/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:24:58.682 25717-25752/? I/Adreno: PFP: 0x005ff087, ME: 0x005ff063
+04-28 11:24:58.688 25717-25752/? I/zygote: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+04-28 11:24:58.689 25717-25752/? I/OpenGLRenderer: Initialized EGL, version 1.4
+04-28 11:24:58.689 25717-25752/? D/OpenGLRenderer: Swap behavior 2
+04-28 11:24:58.708 25717-25761/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:24:58.708 25717-25761/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:24:58.732 25717-25752/? D/vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+04-28 11:24:58.733 25717-25752/? D/vndksupport: Loading /vendor/lib/hw/gralloc.msm8953.so from current namespace instead of sphal namespace.
+04-28 11:24:58.738 25717-25757/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:24:58.778 25717-25759/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:24:58.778 25717-25763/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 10
+04-28 11:24:58.778 25717-25763/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:24:58.779 25717-25761/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 10
+04-28 11:24:58.780 25717-25760/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 11
+04-28 11:24:58.787 25717-25763/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 12
+04-28 11:24:58.787 25717-25753/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 11
+04-28 11:24:58.790 25717-25762/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 12
+04-28 11:24:58.791 25717-25762/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 11
+04-28 11:24:58.791 25717-25762/? W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 12
+04-28 11:24:58.858 25717-25753/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 11
+04-28 11:24:58.858 25717-25744/? W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 10
+04-28 11:24:59.012 25717-25728/? I/zygote: Background concurrent copying GC freed 9555(856KB) AllocSpace objects, 4(80KB) LOS objects, 49% free, 1772KB/3MB, paused 335us total 281.539ms
+04-28 11:24:59.577 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 1 current fd count : 1 reqd fd count: 12
+04-28 11:25:00.587 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 2 current fd count : 1 reqd fd count: 12
+04-28 11:25:01.597 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 3 current fd count : 1 reqd fd count: 12
+04-28 11:25:02.606 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 4 current fd count : 1 reqd fd count: 12
+04-28 11:25:03.616 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 5 current fd count : 1 reqd fd count: 12
+04-28 11:25:03.616 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:03.641 25717-25751/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:25:03.642 25717-25758/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:25:03.644 25717-25756/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:25:03.646 25717-25748/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.647 25717-25839/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:25:03.647 25717-25839/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.647 25717-25750/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.648 25717-25839/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.651 25717-25839/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.651 25717-25839/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.658 25717-25754/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.659 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:03.661 25717-25840/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.661 25717-25840/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.682 25717-25841/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.682 25717-25841/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.694 25717-25842/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.694 25717-25842/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.698 25717-25843/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.698 25717-25843/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.710 25717-25844/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.711 25717-25844/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.722 25717-25845/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.722 25717-25845/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.728 25717-25840/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.728 25717-25843/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:25:03.733 25717-25841/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:25:03.736 25717-25842/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:25:03.743 25717-25757/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:25:03.744 25717-25844/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:25:03.744 25717-25839/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:25:03.745 25717-25845/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 9
+04-28 11:25:03.782 25717-25759/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 8
+04-28 11:25:03.784 25717-25760/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 7
+04-28 11:25:03.784 25717-25761/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:03.791 25717-25763/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:03.795 25717-25762/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:03.799 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:04.626 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 6 current fd count : 2 reqd fd count: 12
+04-28 11:25:05.425 25717-25839/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:05.426 25717-25754/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:05.426 25717-25748/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:05.447 25717-25762/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:05.635 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 7 current fd count : 2 reqd fd count: 12
+04-28 11:25:06.642 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 8 current fd count : 2 reqd fd count: 12
+04-28 11:25:07.651 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 9 current fd count : 2 reqd fd count: 12
+04-28 11:25:08.659 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 10 current fd count : 2 reqd fd count: 12
+04-28 11:25:08.659 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:08.687 25717-25915/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.687 25717-25915/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.687 25717-25915/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.690 25717-25915/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.691 25717-25915/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.699 25717-25916/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:08.699 25717-25916/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.720 25717-25917/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:08.720 25717-25917/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.732 25717-25918/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:08.733 25717-25918/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.742 25717-25840/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.751 25717-25919/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.752 25717-25919/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.764 25717-25922/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.764 25717-25922/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.768 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:08.785 25717-25923/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.785 25717-25923/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.815 25717-25916/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.815 25717-25841/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.816 25717-25918/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.822 25717-25917/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:08.824 25717-25844/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.824 25717-25919/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:08.824 25717-25843/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.825 25717-25845/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.849 25717-25922/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:08.864 25717-25915/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:08.865 25717-25923/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:09.669 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 11 current fd count : 3 reqd fd count: 12
+04-28 11:25:10.679 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 12 current fd count : 3 reqd fd count: 12
+04-28 11:25:10.938 25717-25915/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:11.687 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 13 current fd count : 3 reqd fd count: 12
+04-28 11:25:12.695 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 14 current fd count : 3 reqd fd count: 12
+04-28 11:25:13.702 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 15 current fd count : 3 reqd fd count: 12
+04-28 11:25:13.703 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:13.724 25717-25992/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.725 25717-25992/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:13.725 25717-25992/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.728 25717-25992/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:13.728 25717-25992/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.752 25717-25996/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.752 25717-25996/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.753 25717-25722/com.example.androidtheater5 I/zygote: Do partial code cache collection, code=29KB, data=29KB
+04-28 11:25:13.759 25717-25722/com.example.androidtheater5 I/zygote: After code cache collection, code=29KB, data=29KB
+04-28 11:25:13.759 25717-25722/com.example.androidtheater5 I/zygote: Increasing code cache capacity to 128KB
+04-28 11:25:13.762 25717-25997/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.762 25717-25997/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.765 25717-25995/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.765 25717-25995/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.771 25717-25998/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.772 25717-25998/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.781 25717-25999/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.782 25717-25999/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.790 25717-26000/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.790 25717-26000/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.796 25717-25996/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.797 25717-25995/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:13.810 25717-25997/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:13.811 25717-25999/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:13.811 25717-25992/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:13.813 25717-26000/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:13.819 25717-25916/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:13.819 25717-25998/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:13.844 25717-25918/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:13.858 25717-25917/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:13.858 25717-25919/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:13.859 25717-25922/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:13.868 25717-25923/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:13.869 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:14.710 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 16 current fd count : 4 reqd fd count: 12
+04-28 11:25:15.718 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 17 current fd count : 4 reqd fd count: 12
+04-28 11:25:16.726 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 18 current fd count : 4 reqd fd count: 12
+04-28 11:25:17.733 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 19 current fd count : 4 reqd fd count: 12
+04-28 11:25:18.741 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 20 current fd count : 4 reqd fd count: 12
+04-28 11:25:18.741 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:18.762 25717-26068/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.763 25717-26068/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.763 25717-26068/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.766 25717-26068/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.766 25717-26068/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.773 25717-26069/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:18.773 25717-26069/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.782 25717-26070/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:18.782 25717-26070/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.799 25717-25996/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.800 25717-26071/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.801 25717-26071/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.804 25717-26072/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.804 25717-26072/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.812 25717-26073/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.813 25717-26073/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.822 25717-26074/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.822 25717-26074/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:18.825 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:18.827 25717-26069/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:18.827 25717-26070/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:18.828 25717-26071/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:18.828 25717-26068/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:18.834 25717-26072/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:18.853 25717-26074/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:18.854 25717-26073/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:19.424 25717-25997/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:19.425 25717-26000/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:19.425 25717-25999/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:19.451 25717-25998/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:19.451 25717-25995/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:19.749 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 21 current fd count : 5 reqd fd count: 12
+04-28 11:25:20.759 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 22 current fd count : 5 reqd fd count: 12
+04-28 11:25:21.767 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 23 current fd count : 5 reqd fd count: 12
+04-28 11:25:22.775 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 24 current fd count : 5 reqd fd count: 12
+04-28 11:25:23.783 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 25 current fd count : 5 reqd fd count: 12
+04-28 11:25:23.783 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:23.805 25717-26147/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.805 25717-26147/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.805 25717-26147/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.808 25717-26147/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.808 25717-26147/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.830 25717-26148/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:23.831 25717-26148/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.833 25717-26069/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.834 25717-26149/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.834 25717-26149/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.846 25717-26150/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.846 25717-26150/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.856 25717-26151/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.856 25717-26151/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.873 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:23.877 25717-26152/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.877 25717-26152/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.885 25717-26153/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.886 25717-26153/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:23.891 25717-26148/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.891 25717-26150/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:23.891 25717-26147/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:23.892 25717-26152/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:23.893 25717-26153/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:23.904 25717-26151/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:23.916 25717-26149/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:24.797 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 26 current fd count : 6 reqd fd count: 12
+04-28 11:25:25.807 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 27 current fd count : 6 reqd fd count: 12
+04-28 11:25:25.970 25717-26074/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:25.970 25717-26073/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:25.971 25717-26147/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:26.818 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 28 current fd count : 6 reqd fd count: 12
+04-28 11:25:27.829 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 29 current fd count : 6 reqd fd count: 12
+04-28 11:25:28.840 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 30 current fd count : 6 reqd fd count: 12
+04-28 11:25:28.841 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:28.872 25717-26223/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.872 25717-26223/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:28.872 25717-26223/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.875 25717-26223/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:28.875 25717-26223/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.882 25717-26224/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:28.882 25717-26224/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.894 25717-26225/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:28.897 25717-26225/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.898 25717-26148/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:28.898 25717-26150/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.898 25717-26152/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:28.901 25717-26226/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.901 25717-26226/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:28.910 25717-26227/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.910 25717-26227/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:28.918 25717-26228/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.918 25717-26228/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:28.921 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:28.925 25717-26229/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.926 25717-26229/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:28.931 25717-26224/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:28.932 25717-26225/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:28.932 25717-26227/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.932 25717-26223/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:28.932 25717-26226/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:28.936 25717-26228/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:28.957 25717-26229/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:29.851 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 31 current fd count : 7 reqd fd count: 12
+04-28 11:25:30.257 25717-26148/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:30.257 25717-26151/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:30.262 25717-26149/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:30.268 25717-26150/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:30.269 25717-26153/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:30.859 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 32 current fd count : 7 reqd fd count: 12
+04-28 11:25:31.866 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 33 current fd count : 7 reqd fd count: 12
+04-28 11:25:32.874 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 34 current fd count : 7 reqd fd count: 12
+04-28 11:25:33.882 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 35 current fd count : 7 reqd fd count: 12
+04-28 11:25:33.882 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:33.902 25717-26302/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.903 25717-26302/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.903 25717-26302/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.906 25717-26302/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.906 25717-26302/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.912 25717-26303/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:33.912 25717-26303/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.933 25717-26304/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:33.933 25717-26304/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.939 25717-26224/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.944 25717-26305/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.944 25717-26305/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.948 25717-26306/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.948 25717-26306/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.956 25717-26307/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.956 25717-26307/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.960 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:33.965 25717-26308/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.965 25717-26308/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:33.970 25717-26303/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.970 25717-26304/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:33.971 25717-26302/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:33.971 25717-26307/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:33.971 25717-26308/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:33.972 25717-26306/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:33.976 25717-26305/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:34.508 25717-26224/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:34.508 25717-26226/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:34.508 25717-26225/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:34.529 25717-26228/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:34.530 25717-26302/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:34.890 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 36 current fd count : 8 reqd fd count: 12
+04-28 11:25:35.898 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 37 current fd count : 8 reqd fd count: 12
+04-28 11:25:36.905 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 38 current fd count : 8 reqd fd count: 12
+04-28 11:25:37.459 25717-25722/com.example.androidtheater5 I/zygote: Do partial code cache collection, code=57KB, data=61KB
+04-28 11:25:37.460 25717-25722/com.example.androidtheater5 I/zygote: After code cache collection, code=57KB, data=61KB
+04-28 11:25:37.460 25717-25722/com.example.androidtheater5 I/zygote: Increasing code cache capacity to 256KB
+04-28 11:25:37.913 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 39 current fd count : 8 reqd fd count: 12
+04-28 11:25:38.920 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 40 current fd count : 8 reqd fd count: 12
+04-28 11:25:38.921 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:38.941 25717-26382/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.942 25717-26382/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:38.942 25717-26382/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.944 25717-26382/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:38.944 25717-26382/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.958 25717-26384/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:38.958 25717-26384/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.963 25717-26383/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:38.964 25717-26383/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.965 25717-26385/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:38.966 25717-26385/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.979 25717-26304/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:38.982 25717-26386/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.982 25717-26308/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:38.987 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:38.995 25717-26387/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:38.995 25717-26387/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:39.015 25717-26388/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:39.015 25717-26388/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:39.020 25717-26383/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:39.020 25717-26385/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:39.021 25717-26388/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:39.021 25717-26386/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:39.023 25717-26387/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:39.038 25717-26384/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:39.039 25717-26382/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:39.934 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 41 current fd count : 9 reqd fd count: 12
+04-28 11:25:39.975 25717-26308/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:39.979 25717-26306/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:39.979 25717-26303/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:39.980 25717-26382/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:39.988 25717-26305/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:40.942 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 42 current fd count : 9 reqd fd count: 12
+04-28 11:25:41.949 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 43 current fd count : 9 reqd fd count: 12
+04-28 11:25:42.956 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 44 current fd count : 9 reqd fd count: 12
+04-28 11:25:43.964 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 45 current fd count : 9 reqd fd count: 12
+04-28 11:25:43.964 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:43.970 25717-26457/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:43.970 25717-26457/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:43.970 25717-26457/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:43.974 25717-26457/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:43.975 25717-26457/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:43.991 25717-26460/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:43.991 25717-26460/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.003 25717-26461/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.003 25717-26461/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.009 25717-26463/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.010 25717-26463/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.017 25717-26464/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.017 25717-26464/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.021 25717-26462/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.022 25717-26462/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.028 25717-26385/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:44.033 25717-26460/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.033 25717-26462/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.034 25717-26461/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:44.034 25717-26465/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:44.034 25717-26465/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:44.034 25717-26465/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:44.035 25717-26457/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:44.041 25717-26383/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.041 25717-26384/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.042 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:44.042 25717-26464/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.043 25717-26463/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:44.344 25717-26385/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:44.344 25717-26386/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:44.345 25717-26383/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:44.972 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 46 current fd count : 10 reqd fd count: 12
+04-28 11:25:45.979 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 47 current fd count : 10 reqd fd count: 12
+04-28 11:25:46.987 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 48 current fd count : 10 reqd fd count: 12
+04-28 11:25:47.995 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 49 current fd count : 10 reqd fd count: 12
+04-28 11:25:49.003 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 50 current fd count : 10 reqd fd count: 12
+04-28 11:25:49.003 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:49.025 25717-26538/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.025 25717-26538/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.025 25717-26538/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.028 25717-26538/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.028 25717-26538/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.041 25717-26460/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.042 25717-26539/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.042 25717-26539/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.047 25717-26540/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.048 25717-26540/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.049 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:49.055 25717-26541/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.055 25717-26541/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.063 25717-26542/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.063 25717-26542/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.072 25717-26543/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.072 25717-26543/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.081 25717-26544/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.081 25717-26544/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:49.085 25717-26539/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:49.086 25717-26541/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:49.087 25717-26542/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:49.088 25717-26540/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:49.091 25717-26543/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:49.096 25717-26544/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 6
+04-28 11:25:49.097 25717-26538/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:50.013 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 51 current fd count : 11 reqd fd count: 12
+04-28 11:25:50.697 25717-26465/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:50.697 25717-26461/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:50.697 25717-26464/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:50.718 25717-26460/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:50.725 25717-26538/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:51.022 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 52 current fd count : 11 reqd fd count: 12
+04-28 11:25:52.029 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 53 current fd count : 11 reqd fd count: 12
+04-28 11:25:53.036 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 54 current fd count : 11 reqd fd count: 12
+04-28 11:25:54.044 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 55 current fd count : 11 reqd fd count: 12
+04-28 11:25:54.044 25717-25739/com.example.androidtheater5 W/System.err: Going to schedule fd
+04-28 11:25:54.070 25717-26617/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.071 25717-26617/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.071 25717-26617/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.073 25717-26617/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.073 25717-26617/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.085 25717-26618/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:54.085 25717-26618/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.092 25717-26542/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.092 25717-26619/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.093 25717-26619/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.101 25717-26620/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.102 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:25:54.102 25717-26620/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.110 25717-26621/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.110 25717-26621/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.118 25717-26622/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.119 25717-26622/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.127 25717-26623/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.127 25717-26623/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:54.132 25717-26618/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.132 25717-26619/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:54.132 25717-26622/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:54.132 25717-26617/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:54.133 25717-26623/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:54.136 25717-26620/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:54.150 25717-26621/com.example.androidtheater5 W/System.err: Adding actor examples.numbersDebugVarWld.NumbersDebug1$State 5
+04-28 11:25:54.954 25717-26540/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 4
+04-28 11:25:54.955 25717-26541/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 3
+04-28 11:25:54.955 25717-26542/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 2
+04-28 11:25:54.977 25717-26544/com.example.androidtheater5 W/System.err: Reducinng actor count examples.numbersDebugVarWld.NumbersDebug1$State 1
+04-28 11:25:54.980 25717-26617/com.example.androidtheater5 W/System.err: Removing actor examples.numbersDebugVarWld.NumbersDebug1$State
+04-28 11:25:55.051 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 56 current fd count : 12 reqd fd count: 12
+04-28 11:25:56.058 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 57 current fd count : 12 reqd fd count: 12
+04-28 11:25:57.066 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 58 current fd count : 12 reqd fd count: 12
+04-28 11:25:58.073 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 59 current fd count : 12 reqd fd count: 12
+04-28 11:25:59.080 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 60 current fd count : 12 reqd fd count: 12
+04-28 11:25:59.153 25717-25745/com.example.androidtheater5 W/System.err: Posting text using postText from SALSA apps
+04-28 11:26:00.088 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 61 current fd count : 12 reqd fd count: 12
+04-28 11:26:01.106 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 62 current fd count : 12 reqd fd count: 12
+04-28 11:26:02.126 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 63 current fd count : 12 reqd fd count: 12
+04-28 11:26:03.145 25717-25739/com.example.androidtheater5 W/System.err: rime since last fd 64 current fd count : 12 reqd fd count: 12
+

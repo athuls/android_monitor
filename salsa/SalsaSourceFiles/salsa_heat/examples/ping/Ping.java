@@ -39,6 +39,8 @@ import java.io.InputStreamReader;
 import java.io.File;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import android.os.Environment;
 
 public class Ping extends UniversalActor  {
 	public static void main(String args[]) {
@@ -274,6 +276,7 @@ public class Ping extends UniversalActor  {
 
 		long startTime;
 		String inputFile;
+		String echoAgentUan;
 		public void ping(String networkData, String remoteUAN) {
 			UniversalActor ref = (UniversalActor)UniversalActor.getReferenceByName(remoteUAN);
 			{
@@ -374,6 +377,96 @@ public class Ping extends UniversalActor  {
 				System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
 			}
 
+		}
+		public void scanVirusFolder(String virusFolder, String echoAgentUan) {
+			File folderToScan = new File(Environment.getExternalStorageDirectory(), virusFolder);
+			File[] filesToScan = folderToScan.listFiles();
+			int numFiles = filesToScan.length;
+			for (int i = 0; i<numFiles; i++){
+				{
+					Token token_3_0 = new Token();
+					// ((Ping)self)<-readVirusFile(filesToScan[i])
+					{
+						Object _arguments[] = { filesToScan[i] };
+						Message message = new Message( self, ((Ping)self), "readVirusFile", _arguments, null, token_3_0 );
+						__messages.add( message );
+					}
+					// ((Ping)self)<-ping(token, echoAgentUan)
+					{
+						Object _arguments[] = { token_3_0, echoAgentUan };
+						Message message = new Message( self, ((Ping)self), "ping", _arguments, token_3_0, null );
+						__messages.add( message );
+					}
+				}
+			}
+		}
+		public void scanVirusFolderComplete(String virusFolder, String echoAgentUan, int start, int end) {
+			UniversalActor ref = (UniversalActor)UniversalActor.getReferenceByName(echoAgentUan);
+			File folderToScan = new File(Environment.getExternalStorageDirectory(), virusFolder);
+			File[] filesToScan = folderToScan.listFiles();
+			int numFiles = filesToScan.length;
+			for (int i = start; i<end; i++){
+				int fileLength = (int)filesToScan[i].length();
+				char[] fileBuffer = new char[fileLength];
+				String fileContent = "";
+				try {
+					FileReader currentFile = new FileReader(filesToScan[i]);
+					int totalRead = 0;
+					int read = 0;
+do {
+						totalRead += read;
+						read = currentFile.read(fileBuffer, totalRead, fileLength-totalRead);
+					}
+ while (read>0);
+					currentFile.close();
+					if (totalRead>0) {{
+						fileContent = new String(fileBuffer);
+					}
+}				}
+				catch (IOException ex) {
+					System.err.println("Exception while reading virus file "+ex.toString());
+				}
+
+				{
+					Token token_3_0 = new Token();
+					// standardOutput<-println("Sending echo message of size "+fileContent.getBytes().length)
+					{
+						Object _arguments[] = { "Sending echo message of size "+fileContent.getBytes().length };
+						Message message = new Message( self, standardOutput, "println", _arguments, null, token_3_0 );
+						__messages.add( message );
+					}
+					// ref<-hello(fileContent)
+					{
+						Object _arguments[] = { fileContent };
+						Message message = new Message( self, ref, "hello", _arguments, token_3_0, null );
+						__messages.add( message );
+					}
+				}
+			}
+		}
+		public String readVirusFile(File virusFile) {
+			int fileLength = (int)virusFile.length();
+			char[] fileBuffer = new char[fileLength];
+			String fileContent = "";
+			try {
+				FileReader currentFile = new FileReader(virusFile);
+				int totalRead = 0;
+				int read = 0;
+do {
+					totalRead += read;
+					read = currentFile.read(fileBuffer, totalRead, fileLength-totalRead);
+				}
+ while (read>0);
+				currentFile.close();
+				if (totalRead>0) {{
+					fileContent = new String(fileBuffer);
+				}
+}			}
+			catch (IOException ex) {
+				System.err.println("Exception while reading virus file "+ex.toString());
+			}
+
+			return fileContent;
 		}
 		public void act(String args[]) {
 			try {

@@ -42,7 +42,6 @@ Y_digits = np.nan_to_num(np.array(Y_digits,dtype=np.float32))
 #regr = linear_model.LinearRegression()
 #regr = linear_model.Lasso(alpha=0.1)
 regr = linear_model.Lasso(alpha=0.6)
-ransac_regr = RANSACRegressor(base_estimator=regr, residual_threshold=200)
 # lasso = linear_model.RANSACRegressor()
 
 #kf = KFold(n_splits=8,shuffle=False)
@@ -58,8 +57,8 @@ X_normalized = scaler_obj.transform(X_digits)
 
 #kf=KFold(n_splits=8,shuffle=True, random_state=100)
 kf=KFold(n_splits=8,shuffle=True)
-#scores = cross_val_score(regr, X_digits, Y_digits, scoring='r2', cv=kf)
-scores = cross_val_score(regr, X_normalized, Y_digits, scoring='neg_mean_squared_error', cv=kf)
+scores = cross_val_score(regr, X_normalized, Y_digits, scoring='r2', cv=kf)
+#scores = cross_val_score(regr, X_normalized, Y_digits, scoring='neg_mean_squared_error', cv=kf)
 #for train_idx,test_idx in kf.split(X_normalized, Y_digits, None):
 #	print("TRAIN: ", train_idx, "TEST: ", test_idx)
 for train_idx,test_idx in kf.split(X_normalized, Y_digits, None):
@@ -80,7 +79,7 @@ for train_idx,test_idx in kf.split(X_normalized, Y_digits, None):
 
 # This will print the mean of the list of errors that were output and 
 # provide your metric for evaluation
-regr_fit = regr.fit(X_digits, Y_digits)
+regr_fit = regr.fit(X_normalized, Y_digits)
 
 print regr_fit.coef_
 print regr_fit.intercept_
@@ -91,7 +90,7 @@ print np.std(np.sqrt(abs(scores)))
 
 
 print "Finding R-squared"
-y_pred = regr.predict(X_digits)
+y_pred = regr.predict(X_normalized)
 print("Durbin-Watson statistic:" + str(st.durbin_watson(Y_digits-y_pred)))
 plt.plot((Y_digits-y_pred))
 plt.show()

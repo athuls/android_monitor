@@ -1,0 +1,181 @@
+module examples.ping;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import java.io.File;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+
+import android.os.Environment;
+
+
+behavior PingReader {
+    long startTime;
+    String inputFile;
+    String echoAgentUan;
+
+    void ping(String networkData, String remoteUAN){
+	UniversalActor ref=(UniversalActor)UniversalActor.getReferenceByName(remoteUAN);
+        //standardOutput <- println("Sending PING to remote service at "+remoteUAN);
+	//standardOutput <- println(ref);
+	
+	/*
+	String appendedInputFile = "";
+ 	for (int i = 0; i < 1; i++) { 
+		appendedInputFile += inputFile;	
+	}
+	*/
+
+	//startTime()@
+	standardOutput <- println("Sending echo message of size " + networkData.getBytes().length)@
+	ref<-hello(networkData);
+	// ref<-echo(self);	
+	/*
+	try {
+		while(true) {
+			ref<-hello(appendedInputFile);
+			Thread.sleep(1000);
+   		}
+	} catch (Exception e) {
+		standardOutput<-println("There was an error with generating network load");	
+	}
+	*/
+        //@standardOutput <- println("Done sending message to echo agent");
+    }
+
+    void startTime() {
+	startTime = System.currentTimeMillis();
+	standardOutput<-println("start timimg!") @ currentContinuation;
+    }
+    
+    void pong(String pongMessage) {
+	long roundTrip = System.currentTimeMillis()-startTime;
+	standardOutput<-println("Received ECHO within "+
+				String.valueOf(roundTrip)+" ms." + " with message: " + pongMessage)@
+	    standardOutput<-println("Message sending avg time: "+
+				    String.valueOf(roundTrip/2)+" ms.");
+	}
+
+   /*
+    * This method reads in a file that has been placed in the source folder together with project files on BOTH LAPTOP/PHONE:
+    * The file will be compiled as part of the project and transferred with it. Usually used for initial reading of the file.
+    */
+    void read_initial_in(String fileName){
+      try {
+	standardOutput<-println("Starting to read");
+        // InputStream is =this.getClass().getResourceAsStream(fileName);
+        InputStream is = Ping.class.getResourceAsStream(fileName);
+        BufferedReader in = new BufferedReader(new InputStreamReader(is));
+        if (in==null) {
+              standardOutput<-println("Ping: [ERROR] Can't find the file "+fileName+" in project folder.");
+              System.err.println("[Custom] The file cannot be found");
+        }
+        else {
+           String line;
+	   inputFile="";
+           while ((line = in.readLine()) != null) {
+             inputFile = inputFile + line;
+           }
+           in.close();
+        }
+	
+	standardOutput<-println("Done reading");
+	
+      } catch (IOException ioe) {
+        standardOutput<-println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
+        System.err.println("Ping: [ERROR] Can't open the file "+fileName+" for reading.");
+      }
+    }
+
+    void scanVirusFolder(String virusFolder, String echoAgentUan){
+	File folderToScan = new File(Environment.getExternalStorageDirectory(),
+				virusFolder);
+	File[] filesToScan = folderToScan.listFiles();
+	int numFiles = filesToScan.length;
+
+	for(int i = 0; i < numFiles; i++) {
+		self<-readVirusFile(filesToScan[i])@
+		self<-ping(token, echoAgentUan); 
+	}
+    }
+
+    void scanVirusFolderComplete(String virusFolder, String pingAgentUan, String echoAgentUan){
+	UniversalActor pingRef=(UniversalActor)UniversalActor.getReferenceByName(pingAgentUan);
+	File folderToScan = new File(Environment.getExternalStorageDirectory(),
+				virusFolder);
+	File[] filesToScan = folderToScan.listFiles();
+	int numFiles = filesToScan.length;
+	for(int i = 0; i < numFiles; i++) {
+		int fileLength = (int) filesToScan[i].length();
+		char[] fileBuffer = new char[fileLength];
+		String fileContent = "";
+		try {
+			FileReader currentFile = new FileReader(filesToScan[i]);
+			int totalRead = 0;
+			int read = 0;
+			do {
+				totalRead += read;
+				read = currentFile.read(fileBuffer, totalRead, fileLength - totalRead);
+			} while (read > 0);
+			currentFile.close();
+	
+			if(totalRead > 0) {
+				fileContent = new String(fileBuffer);
+			}
+		} catch (IOException ex) {
+			System.err.println("Exception while reading virus file " + ex.toString());
+		}
+
+		standardOutput <- println("Sending echo message of size " + fileContent.getBytes().length)@
+		pingRef<-ping(fileContent, echoAgentUan);
+	}
+    }
+
+    String readVirusFile(File virusFile) {
+	int fileLength = (int) virusFile.length();
+	char[] fileBuffer = new char[fileLength];
+	String fileContent = "";
+	try {
+		FileReader currentFile = new FileReader(virusFile);
+		int totalRead = 0;
+		int read = 0;
+		do {
+			totalRead += read;
+			read = currentFile.read(fileBuffer, totalRead, fileLength - totalRead);
+		} while (read > 0);
+		currentFile.close();
+
+		if(totalRead > 0) {
+			fileContent = new String(fileBuffer);
+		}
+	} catch (IOException ex) {
+		System.err.println("Exception while reading virus file " + ex.toString());
+	}
+
+	return fileContent;
+    }
+ 
+    void act(String args[]){
+	try {
+		UniversalActor self_ref = (UniversalActor) UniversalActor.getReferenceByName(args[2]);
+		// standardOutput<-println("Ping full name is " + self)@
+		// standardOutput<-println("Self ping actor full name is " + self_ref)@
+
+		//read_initial_in(args[2])@
+		//ping(args[0], args[1]);
+	
+		String virusFolder = args[0];
+		String pingAgentUan = args[1];
+		String echoAgentUan = args[2];
+		scanVirusFolderComplete(virusFolder, pingAgentUan, echoAgentUan);
+	} 
+        catch (Exception e) {
+		standardOutput<-println("Usage: java examples.ping.Ping <remote_uan of service>");
+        }
+    }
+}
