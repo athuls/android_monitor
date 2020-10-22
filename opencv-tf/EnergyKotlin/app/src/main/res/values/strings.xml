@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EnergyKotlin</string>
+    <string name="clickme">ClickMe!!</string>
+    <string name="monitoring_energy">Monitoring Energy</string>
+</resources>

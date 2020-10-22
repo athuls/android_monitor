@@ -1,0 +1,3 @@
+include ':app',
+        rootProject.name = 'EnergyKotlin', ':openCVLibrary343', ':ImageApp'
+//project(':ImageApp').projectDir = new File('app/libs/ImageApp/')
