@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="JJILCore">
+  <library name="Gradle: ./app/libs/heat.jar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/JJILCore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/heat.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

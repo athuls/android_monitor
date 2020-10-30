@@ -803,7 +803,17 @@ public class MainActivity extends Activity{
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc1"+numbers1InstCount);
 				numbers1InstCount++;
 				String[] args = {"10"};
-				Numbers1.main(args);
+
+				// Commented because I want to run actor locally but it is trying to create SALSA actor with
+				// WWCNamingService and so it fails
+//				Numbers1.main(args);
+
+				Random randomno = new Random();
+				long val1 = 0;
+				do {
+					val1 += randomno.nextLong();
+					//currentTime=System.currentTimeMillis();
+				} while(true);
 			}
 
 //			numsHandler1.postDelayed(runnableNumbers1, 1200);
@@ -821,7 +831,14 @@ public class MainActivity extends Activity{
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc2");
 				String[] args = {"10"};
-				Numbers1.main(args);
+//				Numbers1.main(args);
+
+				Random randomno = new Random();
+				long val1 = 0;
+				do {
+					val1 += randomno.nextLong();
+					//currentTime=System.currentTimeMillis();
+				} while(true);
 			}
 
 //			numsHandler2.postDelayed(runnableNumbers2, 1100);
@@ -1181,7 +1198,14 @@ public class MainActivity extends Activity{
 
 	};
 
-	private void waitUntilTheaterStarted() {
+    private Runnable workloadGen = new Runnable() {
+        @Override
+        public void run() {
+            initWorklad();
+        }
+    };
+
+    private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
 			try {
 				if(!AndroidTheaterService.theaterCreated) {
@@ -1194,7 +1218,6 @@ public class MainActivity extends Activity{
 		}
 
 	}
-
 
 	private class BatteryBroadcastReceiver extends BroadcastReceiver {
 		private final static String BATTERY_LEVEL = "level";
@@ -1210,52 +1233,50 @@ public class MainActivity extends Activity{
 		}
 	}
 
-
-
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		debugPrint("onCreate() is called");
-		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		StrictMode.setThreadPolicy(policy);
-		super.onCreate(savedInstanceState);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        debugPrint("onCreate() is called");
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-		mReceiver = new BatteryBroadcastReceiver();
+        mReceiver = new BatteryBroadcastReceiver();
 
-		if (scrollView == null) {
-			scrollView = new ScrollView( this );
-			textView = new TextView( this );
-			scrollView.addView( textView );
-			scrollView.setKeepScreenOn(true);
-			AndroidProxy.setTextViewContext((Activity) this, textView);
-		}
-		AssetManager assetMgr = this.getAssets();
-		Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
-		System.err.println("Before creating TF inference");
+        if (scrollView == null) {
+            scrollView = new ScrollView(this);
+            textView = new TextView(this);
+            scrollView.addView(textView);
+            scrollView.setKeepScreenOn(true);
+            AndroidProxy.setTextViewContext((Activity) this, textView);
+        }
+        AssetManager assetMgr = this.getAssets();
+        Thread.setDefaultUncaughtExceptionHandler(new MyExceptionHandler(this, this.getApplicationContext()));
+        System.err.println("Before creating TF inference");
 //		try {
 //			modelPredict = new TensorFlowInferenceInterface(assetMgr, m_model_file);
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //			System.err.println("Exception is " + e.getStackTrace());
 //		}
-		System.err.println("After creating TF inference");
-		System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
-		System.setProperty("nodie", "theater");
+        System.err.println("After creating TF inference");
+        System.setProperty("netif", AndroidTheaterService.NETWORK_INTERFACE);
+        System.setProperty("nodie", "theater");
 //		System.setProperty("nogc", "theater");
-		System.setProperty("port", AndroidTheaterService.THEATER_PORT);
-		System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
+        System.setProperty("port", AndroidTheaterService.THEATER_PORT);
+        System.setProperty("output", AndroidTheaterService.STDOUT_CLASS);
 
-		// Turning off AndroidTheaterService so that we can run app without network access
+        // Turning off AndroidTheaterService so that we can run app without network access
 //		startService(new Intent(MainActivity.this, AndroidTheaterService.class));
 
 //		if(checkPerm() == false) {
 //			askPerm();
 //		}
 
-		generator = new Random();
+        generator = new Random();
 
-		cpuUsage = true;
+        cpuUsage = true;
 
 //		new Thread(numbersFdWorker).start();
 
@@ -1267,8 +1288,9 @@ public class MainActivity extends Activity{
 //		new Thread(uniqNumbersWorker).start();
 //		new Thread(fibWorker).start();
 //		new Thread(numsWorker).start();
-//		new Thread(numsWorker1).start();
-//		new Thread(numsWorker2).start();
+
+        new Thread(initWorkload).start();
+
 //		new Thread(numsWorker3).start();
 //		new Thread(numsWorker4).start();
 //		new Thread(numsWorker5).start();
@@ -1281,10 +1303,10 @@ public class MainActivity extends Activity{
 //		read_initial_in();
 //		initializeNetworkStats();
 
-		// Reduce the size of the network data
+        // Reduce the size of the network data
 //		int mid_network_data = network_data.length()/2;
 //		network_data = network_data.substring(0, mid_network_data);
-		// Reduce the size of the network data
+        // Reduce the size of the network data
 
 //		new Thread(pingWorker).start();
 
@@ -1294,9 +1316,19 @@ public class MainActivity extends Activity{
 //		new Thread(pingWorker4).start();
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
+    }
 
-		new Thread(batteryWorker).start();
-	}
+    private void initWorkload() {
+        new Thread(batteryWorker).start();
+        new Thread(numsWorker1).start();
+        try {
+            Thread.sleep(100);
+        } catch (Exception ex) {
+            System.err.println("Exception thrown: " + ex.toString());
+        }
+
+        new Thread(numsWorker2).start();
+    }
 
 	@Override
 	protected void onStart() {

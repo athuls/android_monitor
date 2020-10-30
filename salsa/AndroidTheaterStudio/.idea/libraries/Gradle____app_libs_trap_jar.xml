@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="trap">
+  <library name="Gradle: ./app/libs/trap.jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/trap.jar!/" />
     </CLASSES>

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="salsa_heat">
+  <library name="Gradle: ./app/libs/salsa_heat.jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/salsa_heat.jar!/" />
     </CLASSES>

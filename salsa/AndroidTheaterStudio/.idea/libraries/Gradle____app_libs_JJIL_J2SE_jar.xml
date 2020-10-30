@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="JJIL-J2SE">
+  <library name="Gradle: ./app/libs/JJIL-J2SE.jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/JJIL-J2SE.jar!/" />
     </CLASSES>
