@@ -30,7 +30,7 @@ import org.tensorflow.lite.examples.classification.tflite.Classifier
 import java.io.IOException
 import kotlinx.coroutines.*
 import kotlin.concurrent.thread
-import  kotlinx.coroutines.TheatreMap
+import kotlinx.coroutines.TheatreMap
 
 class ClassifierActivity : CameraActivity(), OnImageAvailableListener {
     private var rgbFrameBitmap: Bitmap? = null
