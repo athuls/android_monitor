@@ -792,10 +792,11 @@ public class MainActivity extends Activity{
 
 
 	private long numbers1InstCount = 0;
+	volatile boolean thread1RunFlag = false;
 	private Runnable runnableNumbers1 = new Runnable(){
 		@Override
 		public void run() {
-			synchronized (oneAppSyncToken) {
+//			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers1"+numbers1InstCount);
 
@@ -813,18 +814,19 @@ public class MainActivity extends Activity{
 				do {
 					val1 += randomno.nextLong();
 					//currentTime=System.currentTimeMillis();
-				} while(true);
-			}
+				} while(thread1RunFlag);
+//			}
 
 //			numsHandler1.postDelayed(runnableNumbers1, 1200);
 		}
 
 	};
 
+	volatile boolean thread2RunFlag = false;
 	private Runnable runnableNumbers2 = new Runnable(){
 		@Override
 		public void run() {
-			synchronized (oneAppSyncToken) {
+//			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers2");
 
@@ -838,8 +840,8 @@ public class MainActivity extends Activity{
 				do {
 					val1 += randomno.nextLong();
 					//currentTime=System.currentTimeMillis();
-				} while(true);
-			}
+				} while(thread2RunFlag);
+//			}
 
 //			numsHandler2.postDelayed(runnableNumbers2, 1100);
 		}
@@ -1198,13 +1200,6 @@ public class MainActivity extends Activity{
 
 	};
 
-    private Runnable workloadGen = new Runnable() {
-        @Override
-        public void run() {
-            initWorklad();
-        }
-    };
-
     private void waitUntilTheaterStarted() {
 		synchronized (MainActivity.theaterSyncToken) {
 			try {
@@ -1278,6 +1273,9 @@ public class MainActivity extends Activity{
 
         cpuUsage = true;
 
+
+
+
 //		new Thread(numbersFdWorker).start();
 
 //		new Thread(numbersIdleWorker).start();
@@ -1288,8 +1286,6 @@ public class MainActivity extends Activity{
 //		new Thread(uniqNumbersWorker).start();
 //		new Thread(fibWorker).start();
 //		new Thread(numsWorker).start();
-
-        new Thread(initWorkload).start();
 
 //		new Thread(numsWorker3).start();
 //		new Thread(numsWorker4).start();
@@ -1316,19 +1312,53 @@ public class MainActivity extends Activity{
 //		new Thread(pingWorker4).start();
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
+
+		BroadcastReceiver batteryReceiver = new BroadcastReceiver() {
+			int scale = -1;
+			int level = -1;
+			int voltage = -1;
+			int temp = -1;
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+				scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+				temp = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
+				voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
+				appendLog("[Test] BatteryManager: level is "+level+"/"+scale+", temp is "+temp+", voltage is "+voltage);
+			}
+		};
+		IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		registerReceiver(batteryReceiver, filter);
+
+		//		new Thread(batteryWorker).start();
+		new Thread(initWorkload).start();
     }
 
-    private void initWorkload() {
-        new Thread(batteryWorker).start();
-        new Thread(numsWorker1).start();
-        try {
-            Thread.sleep(100);
-        } catch (Exception ex) {
-            System.err.println("Exception thrown: " + ex.toString());
-        }
-
-        new Thread(numsWorker2).start();
-    }
+	private Runnable initWorkload = new Runnable(){
+		@Override
+		public void run() {
+			try {
+				appendLog("sleeping to delay load 1");
+				Thread.sleep(5000);
+				thread1RunFlag = true;
+				thread2RunFlag = true;
+				appendLog("Starting numsWorker1");
+				Thread t1 = new Thread(runnableNumbers1);
+				Thread t2 = new Thread(runnableNumbers2);
+				t1.start();
+//		new Thread(runnableNumbers1).start();
+				Thread.sleep(40000);
+				appendLog("Sleep done, starting numsWorker2");
+				t2.start();
+//		new Thread(runnableNumbers2).start();
+				Thread.sleep(40000);
+				appendLog("Sleep done, stopping numsWorker1");
+				thread1RunFlag=false;
+			} catch (Exception ex) {
+				System.err.println("Exception thrown: " + ex.toString());
+			}
+		}
+	};
 
 	@Override
 	protected void onStart() {
@@ -1337,7 +1367,7 @@ public class MainActivity extends Activity{
 		AssetManager assetMgr = this.getAssets();
 		debugPrint("onStart() is called");
 //		appendLog("Wifi signal strength is " + getWifiSignalStrength());
-		registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+//		registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 	}
 
 	@Override
@@ -1359,7 +1389,7 @@ public class MainActivity extends Activity{
 		super.onStop();
 		// The activity is no longer visible (it is now "stopped")
 		debugPrint("onStop() is called");
-		unregisterReceiver(mReceiver);
+//		unregisterReceiver(mReceiver);
 	}
 
 	@Override
@@ -1484,11 +1514,11 @@ public class MainActivity extends Activity{
 		HashMap<String, Integer> hashList = UniversalActor.getActiveActors();
 		Date currentTime = Calendar.getInstance().getTime();
 		if (hashList.isEmpty()) {
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " config: " +
+			appendLog("Battery level is " + batteryPct + " config: " +
 					numbersFdConfig + " and no active actors");
 			feature[0] += 1;
 		} else {
-			appendLog("[" + currentTime.toString() + "] Battery level is " + batteryPct + " config: " +
+			appendLog("Battery level is " + batteryPct + " config: " +
 					numbersFdConfig + " actor counts- ");
 			for (String actor : hashList.keySet()) {
 				appendLog(actor + ": " + hashList.get(actor) + ", ");
@@ -1622,6 +1652,8 @@ public class MainActivity extends Activity{
 
 	protected void appendLog(String text)
 	{
+		Date currentTime = Calendar.getInstance().getTime();
+
 		File logFile = new File("sdcard/log.txt");
 		if (!logFile.exists())
 		{
@@ -1639,7 +1671,7 @@ public class MainActivity extends Activity{
 		{
 			//BufferedWriter for performance, true to set append to file flag
 			BufferedWriter buf = new BufferedWriter(new FileWriter(logFile, true));
-			buf.append(text);
+			buf.append("[" + currentTime.toString() + "] " + text);
 			buf.newLine();
 			buf.close();
 		}
