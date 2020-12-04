@@ -20,7 +20,7 @@ import java.util.*
 class OpenCVORB {
     private var w = 0
     private var h = 0
-   // private var mOpenCvCameraView: CameraBridgeViewBase? = null
+    // private var mOpenCvCameraView: CameraBridgeViewBase? = null
     var tvName: TextView? = null
     var RED = Scalar(255.00, 0.00, 0.00)
     var GREEN = Scalar(0.00, 255.00, 0.00)
@@ -55,21 +55,21 @@ class OpenCVORB {
 //    }
 
 
-     fun Basic(AInp1 : Bitmap): Boolean{
-      //  mOpenCvCameraView!!.enableView()
+    fun Basic(AInp1 : Bitmap): Boolean{
+        //  mOpenCvCameraView!!.enableView()
         detector = FeatureDetector.create(FeatureDetector.ORB)
         descriptor = DescriptorExtractor.create(DescriptorExtractor.ORB)
         matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE_HAMMING)
-       // var fileName = "/sdcard/a.jpg"
+        // var fileName = "/sdcard/a.jpg"
         //var AInp1 = BitmapFactory.decodeFile(fileName)
         img1 = Mat()
         var aInputFrame : Mat? = null
         aInputFrame = Mat()
         bitmapToMat(AInp1,img1 )
-       // Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY)
-       // val assetManager = assets
+        // Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY)
+        // val assetManager = assets
 
-       // Utils.bitmapToMat(bitmap, img1)
+        // Utils.bitmapToMat(bitmap, img1)
         Imgproc.cvtColor(img1, img1, Imgproc.COLOR_RGB2GRAY)
         img1!!.convertTo(img1, 0) //converting the image to match with the type of the cameras image
         descriptors1 = Mat()
@@ -90,12 +90,12 @@ class OpenCVORB {
 
 
 
-     fun onCameraViewStarted(width: Int, height: Int) {
+    fun onCameraViewStarted(width: Int, height: Int) {
         w = width
         h = height
     }
 
-     fun recognize(inp1: Bitmap): Boolean {
+    fun recognize(inp1: Bitmap): Boolean {
         var aInputFrame : Mat? = null
         aInputFrame = Mat()
         bitmapToMat(inp1,aInputFrame )

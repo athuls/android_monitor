@@ -7,15 +7,15 @@ import androidx.core.content.ContextCompat.startActivity
 import org.tensorflow.lite.examples.classification.CameraActivity
 
 
-//class SampleViewModel (){
-//    fun onSampleViewClicked(){
-//        // Get an instance of PackageManager
-//       // val launchIntent: Intent =
-//            //this. getPackageManager().getLaunchIntentForPackage("com.google.android.youtube")
-//        //var intent: Context = null
+//object Fractions{
+//    init {
 //
-//        var intent = Intent(this,"or")
-//        startActivity(intent)
-//
+//    }
+//    var fraction = 0.5
+//    fun setVal(fract:Double){
+//        fraction = fract
+//    }
+//    fun getVal():Double{
+//        return fraction
 //    }
 //}

@@ -1,5 +1,6 @@
 package com.example.energykotlin
 
+
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -9,12 +10,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-
-
 import kotlinx.coroutines.TheatreMap
 import org.tensorflow.lite.examples.classification.ClassifierActivity
+import org.tensorflow.lite.examples.classification.SharedObject
+//import sun.jvm.hotspot.utilities.IntArray
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private var previousBattLevel = -1f
     private var mReceiver: BroadcastReceiver? = null
     private var batteryHandler: Handler? = null
-
+    private var timerCount : Int = 0
     private val runnableSampleBattery: Runnable = object : Runnable {
         override fun run() {
             SampleBattery()
@@ -69,11 +71,21 @@ class MainActivity : AppCompatActivity() {
         val level = batteryStatus!!.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
         val scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
         val batteryPct = level / scale.toFloat()
+        timerCount += 1
 
+        if (timerCount%60 == 0){
+            timerCount = 0
+            var Usage = SharedObject.getVal()
+            if (Usage == 0.5){
+                SharedObject.setVal(1.0)
+            }else{
+                SharedObject.setVal(0.5)
+            }
+        }
         //val noFibActorsRunning = true
         //val hashList: HashMap<String, Int> = UniversalActor.getActiveActors()
         val currentTime = Calendar.getInstance().time
-        appendLog("["+currentTime.toString()+"] Battery level is ${batteryPct} Segment ${TheatreMap.getSegment()} " )
+        appendLog("["+currentTime.toString()+"] Battery level is ${batteryPct} TFlow : ${SharedObject.getVal()} Segment ${TheatreMap.getSegment()} " )
 
         appendLog("\n")
         //println("RUSKY Time [${currentTime}] Battery is ${batteryPct} Segment is ${TheatreMap.getSegment()}")
@@ -109,11 +121,42 @@ class MainActivity : AppCompatActivity() {
                 android.Manifest.permission.WRITE_SETTINGS),
             0)
 
-        mReceiver = BatteryBroadcastReceiver()
+        mReceiver =
+            object : BroadcastReceiver() {
+                var scale = -1
+                var level = -1
+                var voltage = -1
+                var temp = -1
+                override fun onReceive(
+                    context: Context,
+                    intent: Intent
+                ) {
+                    level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+                    scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+                    temp = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1)
+                    voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1)
+                    appendLog("[Test] BatteryManager: level is $level/$scale, temp is $temp, voltage is $voltage \n")
+                }
+            }
+        val filter =
+            IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        registerReceiver(mReceiver, filter)
+      // mReceiver = BatteryBroadcastReceiver()
+
         val btn_click_me = findViewById(R.id.button) as Button
 
         btn_click_me.setOnClickListener{
-            val intent = Intent(this, ClassifierActivity::class.java)
+            val Tflowfrac = findViewById<EditText>(R.id.TflowFrac)
+            var Tfrac = Tflowfrac.text.toString()
+            SharedObject.setVal(Tfrac.toDouble())
+            val OpCVElem = findViewById<EditText>(R.id.editText4)
+            var OpCV = OpCVElem.text.toString()
+            var myOutStr = Tfrac+","+OpCV
+//            val intent = Intent(this, ClassifierActivity::class.java).apply {
+////                putExtra(EXTRA_MESSAGE, myOutStr)
+////            }
+           var intent = Intent(this, ClassifierActivity::class.java)
+            intent.putExtra("EXTRA_STRING",myOutStr)
             startActivity(intent)
             println("[Dipayan Output] : ${TheatreMap.getSegment()} ")
             Thread(batteryWorker).start()
@@ -125,10 +168,10 @@ class MainActivity : AppCompatActivity() {
         val assetMgr = this.assets
         //debugPrint("onStart() is called")
         //		appendLog("Wifi signal strength is " + getWifiSignalStrength());
-        registerReceiver(
-            mReceiver,
-            IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        )
+//        registerReceiver(
+//            mReceiver,
+//            IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+//        )
     }
     override fun onStop() {
         super.onStop()
@@ -136,21 +179,21 @@ class MainActivity : AppCompatActivity() {
         //debugPrint("onStop() is called")
         unregisterReceiver(mReceiver)
     }
-
-    private class BatteryBroadcastReceiver : BroadcastReceiver() {
-        override fun onReceive(
-            context: Context,
-            intent: Intent
-        ) {
-            val currentLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
-            val scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
-            val batteryPct = currentLevel / scale.toFloat()
-            val currentTime = Calendar.getInstance().time
-            //appendLog("[DEBUG_BATTERY_LEVEL] $currentTime $batteryPct")
-        }
-
-        companion object {
-            private const val BATTERY_LEVEL = "level"
-        }
-    }
+//
+//    private class BatteryBroadcastReceiver : BroadcastReceiver() {
+//        override fun onReceive(
+//            context: Context,
+//            intent: Intent
+//        ) {
+//            val currentLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0)
+//            val scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+//            val batteryPct = currentLevel / scale.toFloat()
+//            val currentTime = Calendar.getInstance().time
+//            //appendLog("[DEBUG_BATTERY_LEVEL] $currentTime $batteryPct")
+//        }
+//
+//        companion object {
+//            private const val BATTERY_LEVEL = "level"
+//        }
+//    }
 }

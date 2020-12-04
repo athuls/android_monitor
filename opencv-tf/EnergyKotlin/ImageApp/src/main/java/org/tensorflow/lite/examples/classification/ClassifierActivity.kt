@@ -23,14 +23,14 @@ import android.os.SystemClock
 import android.util.Size
 import android.util.TypedValue
 import android.widget.Toast
-import kotlinx.android.synthetic.main.tfe_ic_layout_bottom_sheet.*
 import org.tensorflow.lite.examples.classification.env.BorderedText
 import org.tensorflow.lite.examples.classification.env.Logger
 import org.tensorflow.lite.examples.classification.tflite.Classifier
 import java.io.IOException
 import kotlinx.coroutines.*
 import kotlin.concurrent.thread
-import kotlinx.coroutines.TheatreMap
+import  kotlinx.coroutines.TheatreMap
+import kotlin.random.Random
 
 class ClassifierActivity : CameraActivity(), OnImageAvailableListener {
     private var rgbFrameBitmap: Bitmap? = null
@@ -86,37 +86,23 @@ class ClassifierActivity : CameraActivity(), OnImageAvailableListener {
         }
         return true
     }
-
-    private suspend fun OPCVCodes(inp1 : Bitmap):Boolean{
-        var objCV = OpenCVORB()
-        var jobV =  GlobalScope.launch {
-            objCV.Basic(inp1)
-            objCV.recognize(inp1)
-        }
-        jobV.join()
-        return true
-    }
-    private suspend fun TSFlow(cropSize: Int):Boolean{
-
-        var jobV = GlobalScope.launch{
-            runGPU(cropSize)
-        }
-        jobV.join()
-        return true
-    }
     override fun processImage() {
         rgbFrameBitmap!!.setPixels(rgbBytes, 0, previewWidth, 0, 0, previewWidth, previewHeight)
         val cropSize = Math.min(previewWidth, previewHeight)
         runInBackground {
             // [Dip] Add coroutine here
-           // var objCV = OpenCVORB()
+            var objCV = OpenCVORB()
+            var myRand = Random.nextDouble()
+            var RandLimit = SharedObject.getVal()
             runBlocking {
-                var out = async { OPCVCodes(rgbFrameBitmap!!)  }
-
-                var three = async { runGPU(cropSize) }
-                var two = out.await()
-                var four = three.await()
-
+                var zero = async { objCV.Basic(rgbFrameBitmap!!) }
+                var chk = zero.await()
+                var one = async { objCV.recognize(rgbFrameBitmap!!) }
+                val tot = one.await()
+                if (myRand < RandLimit) {
+                    var two = async { runGPU(cropSize) }
+                    var totN = two.await()
+                }
 
             }
             //IntentFilter

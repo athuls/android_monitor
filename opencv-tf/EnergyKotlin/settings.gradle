@@ -1,3 +1,4 @@
 include ':app',
-        rootProject.name = 'EnergyKotlin', ':openCVLibrary343', ':ImageApp'
+        rootProject.name = 'EnergyKotlin', ':openCVLibrary343', ':ImageApp1'
 //project(':ImageApp').projectDir = new File('app/libs/ImageApp/')
+project(':ImageApp1').projectDir = new File('ImageApp')
