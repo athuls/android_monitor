@@ -848,21 +848,28 @@ public class MainActivity extends Activity{
 
 	};
 
+	volatile boolean thread3RunFlag = false;
 	private Runnable runnableNumbers3 = new Runnable(){
 		@Override
 		public void run() {
-			synchronized (oneAppSyncToken) {
+//			synchronized (oneAppSyncToken) {
 				// The host name osl-server1.cs.illinois.edu is where the nameserver is running
 				System.setProperty("uan", "uan://osl-server1.cs.illinois.edu:3030/mynumbers3");
 
 				// Note that the IP address is the IP address of the smartphone
 				System.setProperty("ual", "rmsp://" + mobileIpAddress + ":4040/mynumbersloc3");
 				String[] args = {""};
-				Numbers1.main(args);
+//				Numbers1.main(args);
+				Random randomno = new Random();
+				long val1 = 0;
+				do {
+					val1 += randomno.nextLong();
+					//currentTime=System.currentTimeMillis();
+				} while(thread3RunFlag);
 			}
 
 //			numsHandler3.postDelayed(runnableNumbers3, 1100);
-		}
+//		}
 
 	};
 
@@ -1340,20 +1347,30 @@ public class MainActivity extends Activity{
 			try {
 				appendLog("sleeping to delay load 1");
 				Thread.sleep(5000);
-				thread1RunFlag = true;
-				thread2RunFlag = true;
-				appendLog("Starting numsWorker1");
-				Thread t1 = new Thread(runnableNumbers1);
-				Thread t2 = new Thread(runnableNumbers2);
-				t1.start();
+				while(true) {
+					thread1RunFlag = true;
+					thread2RunFlag = true;
+					thread3RunFlag = true;
+					Thread t1 = new Thread(runnableNumbers1);
+					Thread t2 = new Thread(runnableNumbers2);
+					Thread t3 = new Thread(runnableNumbers3);
+					appendLog("3 threads starting");
+					t1.start();
+					t2.start();
+					t3.start();
 //		new Thread(runnableNumbers1).start();
-				Thread.sleep(40000);
-				appendLog("Sleep done, starting numsWorker2");
-				t2.start();
+//					Thread.sleep(60000);
+
+//					t2.start();
 //		new Thread(runnableNumbers2).start();
-				Thread.sleep(40000);
-				appendLog("Sleep done, stopping numsWorker1");
-				thread1RunFlag=false;
+					Thread.sleep(60000);
+//					appendLog("Sleep done, stopping numsWorker1");
+					appendLog("Switching off 3 threads");
+					thread1RunFlag = false;
+					thread2RunFlag = false;
+					thread3RunFlag = false;
+					Thread.sleep(60000);
+				}
 			} catch (Exception ex) {
 				System.err.println("Exception thrown: " + ex.toString());
 			}

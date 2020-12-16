@@ -11,18 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d143efb9-d0f9-447c-b636-e7e0b765ba70" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/EnergyKotlin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/modules/EnergyKotlin/EnergyKotlin-EnergyKotlin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/modules/ImageApp/ImageApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/modules/app/app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/modules/openCVLibrary343/openCVLibrary343.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/app/.idea/modules/-1055654950/EnergyKotlin-EnergyKotlin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/app/.idea/modules/-416594850/EnergyKotlin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/app/.idea/modules/-989830907/openCVLibrary343.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/app/.idea/modules/929472887/ImageApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/app/.idea/modules/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/androidtheater5/MainActivity.java" afterDir="false" />
@@ -447,12 +435,12 @@
       <screen x="61" y="24" width="1859" height="1056" />
     </state>
     <state x="361" y="83" key="SettingsEditor/61.24.1859.1056@61.24.1859.1056" timestamp="1604190370769" />
-    <state x="577" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1604190476085">
+    <state x="577" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1607923305707">
       <screen x="61" y="24" width="1859" height="1056" />
     </state>
     <state x="2453" y="323" key="com.intellij.ide.util.TipDialog/61.24.1859.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603318101589" />
     <state x="577" y="340" key="com.intellij.ide.util.TipDialog/61.24.1859.1056/1920.0.1920.1080@61.24.1859.1056" timestamp="1604000518772" />
-    <state x="577" y="340" key="com.intellij.ide.util.TipDialog/61.24.1859.1056@61.24.1859.1056" timestamp="1604190476085" />
+    <state x="577" y="340" key="com.intellij.ide.util.TipDialog/61.24.1859.1056@61.24.1859.1056" timestamp="1607923305707" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
