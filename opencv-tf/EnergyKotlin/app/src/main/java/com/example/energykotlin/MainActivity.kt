@@ -68,8 +68,10 @@ class MainActivity : AppCompatActivity() {
         val iFilter =
             IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         val batteryStatus = this.registerReceiver(null, iFilter)
-        val level = batteryStatus!!.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
-        val scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+        var level = batteryStatus!!.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+        var scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+        var tempN = batteryStatus.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1)
+        var voltage = batteryStatus.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1)
         val batteryPct = level / scale.toFloat()
         timerCount += 1
 
@@ -85,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         //val noFibActorsRunning = true
         //val hashList: HashMap<String, Int> = UniversalActor.getActiveActors()
         val currentTime = Calendar.getInstance().time
-        appendLog("["+currentTime.toString()+"] Battery level is ${batteryPct} TFlow : ${SharedObject.getVal()} Segment ${TheatreMap.getSegment()} " )
+        appendLog("["+currentTime.toString()+"] Battery level is ${batteryPct}, Voltage is ${voltage} and Temperature:${tempN} TFlow : ${SharedObject.getVal()} Segment ${TheatreMap.getSegment()} " )
 
         appendLog("\n")
         //println("RUSKY Time [${currentTime}] Battery is ${batteryPct} Segment is ${TheatreMap.getSegment()}")
@@ -135,7 +137,7 @@ class MainActivity : AppCompatActivity() {
                     scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
                     temp = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1)
                     voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1)
-                    appendLog("[Test] BatteryManager: level is $level/$scale, temp is $temp, voltage is $voltage \n")
+                   // appendLog("[Test] BatteryManager: level is $level/$scale, temp is $temp, voltage is $voltage \n")
                 }
             }
         val filter =
