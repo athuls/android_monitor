@@ -7,34 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eac7f02-3345-490b-847c-6fe0c4de0fe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____home_athuls89_Desktop_OSL_osl_MobileCloud_android_monitor_salsa_AndroidTheaterStudio_app_libs_JJILCore_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____home_athuls89_Desktop_OSL_osl_MobileCloud_android_monitor_salsa_AndroidTheaterStudio_app_libs_JJIL_J2SE_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____home_athuls89_Desktop_OSL_osl_MobileCloud_android_monitor_salsa_AndroidTheaterStudio_app_libs_heat_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____home_athuls89_Desktop_OSL_osl_MobileCloud_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____home_athuls89_Desktop_OSL_osl_MobileCloud_android_monitor_salsa_AndroidTheaterStudio_app_libs_trap_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ImageLoader/ImageLoader.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ImageLoader/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/ImageApp/src/main/java/org/tensorflow/lite/examples/classification/ClassifierActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencv-tf/EnergyKotlin/ImageApp/src/main/java/org/tensorflow/lite/examples/classification/ClassifierActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_JJILCore_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_JJIL_J2SE_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_heat_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_salsa_heat_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_jars____Users_dmukherjee_UIUC_MobiSys_android_monitor_salsa_AndroidTheaterStudio_app_libs_trap_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_15_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_15_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTheaterStudio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTheaterStudio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salsa_RSH_2/salsa_RSH_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salsa_RSH_2/salsa_RSH_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salsa_heat/salsa_heat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salsa_heat/salsa_heat.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,10 +119,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="725" y="237" key="FileChooserDialogImpl" timestamp="1604183057627">
+    <state x="725" y="237" key="FileChooserDialogImpl" timestamp="1608087025797">
       <screen x="61" y="24" width="1859" height="1056" />
     </state>
-    <state x="725" y="237" key="FileChooserDialogImpl/61.24.1859.1056@61.24.1859.1056" timestamp="1604183057627" />
+    <state x="725" y="237" key="FileChooserDialogImpl/61.24.1859.1056@61.24.1859.1056" timestamp="1608087025797" />
     <state x="564" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1604047900620">
       <screen x="61" y="24" width="1859" height="1056" />
     </state>
