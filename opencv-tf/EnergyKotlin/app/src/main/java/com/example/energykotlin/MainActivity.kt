@@ -78,10 +78,10 @@ class MainActivity : AppCompatActivity() {
         if (timerCount%60 == 0){
             timerCount = 0
             var Usage = SharedObject.getVal()
-            if (Usage == 0.5){
+            if (Usage == 0.0){
                 SharedObject.setVal(1.0)
             }else{
-                SharedObject.setVal(0.5)
+                SharedObject.setVal(0.0)
             }
         }
         //val noFibActorsRunning = true
