@@ -332,7 +332,11 @@ public abstract class CameraActivity extends AppCompatActivity
   public synchronized void onResume() {
     LOGGER.d("onResume " + this);
     super.onResume();
-
+    if (hasPermission()) {
+      setFragment();
+    } else {
+      requestPermission();
+    }
     handlerThread = new HandlerThread("inference");
     handlerThread.start();
     handler = new Handler(handlerThread.getLooper());
