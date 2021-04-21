@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TfBenchmark</string>
+    <string name="model_file">mobilenet_v2_1.0_224.tflite</string>
+</resources>
