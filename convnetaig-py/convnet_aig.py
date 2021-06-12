@@ -50,12 +50,12 @@ class Sequential_ext(nn.Module):
     def __len__(self):
         return len(self._modules)
 
-    def forward(self, input, layers):
+    def forward(self, input, layers = None):
         gate_activations = []
         for i, module in enumerate(self.children()):
-            input, gate_activation = module(input, layers[i])
+            input, gate_activation = module(input, None if layers is None else layers[i])
             gate_activations.append(gate_activation)
-        assert i == len(layers) - 1
+        if layers is not None: assert i == len(layers) - 1
         return input, gate_activations
 
 
@@ -87,7 +87,7 @@ class BasicBlock(nn.Module):
         self.fc2.bias.data[0] = 0.1
         self.fc2.bias.data[1] = 2
         self.gs = GumbleSoftmax()
-        self.gs.cuda()
+        #self.gs.cuda()
 
         self.block_id = BasicBlock.blocks_created
         BasicBlock.blocks_created += 1
@@ -143,26 +143,26 @@ class Bottleneck(nn.Module):
         self.fc2.bias.data[1] = 2
 
         self.gs = GumbleSoftmax()
-        self.gs.cuda()
+        #self.gs.cuda()
 
-    def forward(self, x, execute):
+    def forward(self, x, force_execute = None):
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
         w = self.fc2(w)
         # Sample from Gumble Module
         w = self.gs(w, force_hard=True)
+
         should_do = w[:,1]
+        if force_execute is not None:
+            should_do = force_execute
 
-        # TODO: For fast inference, check decision of gate and jump right 
-        #       to the next layer if needed.
         out = self.shortcut(x)
-
-        if execute:
+        if self.training or should_do:
             x = F.relu(self.bn1(self.conv1(x)), inplace=True)
             x = F.relu(self.bn2(self.conv2(x)), inplace=True)
             x = self.bn3(self.conv3(x))
-            out += x
+            out = out + x
 
         out = F.relu(out, inplace=True)
         # Return output of layer and the value of the gate
@@ -208,18 +208,18 @@ class ResNet_ImageNet(nn.Module):
             self.in_planes = planes * block.expansion
         return Sequential_ext(*layers)
 
-    def forward(self, out, layers):
-        assert len(layers) == self.layercount[3]
+    def forward(self, out, layers = None):
+        if layers is not None: assert len(layers) == self.layercount[3]
         gate_activations = []
         out = self.relu(self.bn1(self.conv1(out)))
         out = self.maxpool(out)
-        out, a = self.layer1(out, layers[:self.layercount[0]])
+        out, a = self.layer1(out, None if layers is None else layers[:self.layercount[0]])
         gate_activations.extend(a)
-        out, a = self.layer2(out, layers[self.layercount[0]:self.layercount[1]])
+        out, a = self.layer2(out, None if layers is None else layers[self.layercount[0]:self.layercount[1]])
         gate_activations.extend(a)
-        out, a = self.layer3(out, layers[self.layercount[1]:self.layercount[2]])
+        out, a = self.layer3(out, None if layers is None else layers[self.layercount[1]:self.layercount[2]])
         gate_activations.extend(a)
-        out, a = self.layer4(out, layers[self.layercount[2]:])
+        out, a = self.layer4(out, None if layers is None else layers[self.layercount[2]:])
         gate_activations.extend(a)
         out = self.avgpool(out)
         out = out.view(out.size(0), -1)

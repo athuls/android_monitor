@@ -17,9 +17,9 @@ import torchvision.datasets as datasets
 
 from convnet_aig import *
 import math
-#from visdom import Visdom
 import numpy as np
 
+DEVICE = torch.device('cpu')
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch CIFAR Example')
@@ -28,7 +28,7 @@ parser.add_argument('data', metavar='DIR',
 parser.add_argument('--batch-size', type=int, default=256, metavar='N',
                     help='input batch size for training (default: 256)')
 parser.add_argument('--epochs', type=int, default=100, metavar='N',
-                    help='number of epochs to train (default: 200)')
+                    help='number of epochs to train (default: 100)')
 parser.add_argument('--lrdecay', default=30, type=int,
                     help='epochs to decay lr')
 parser.add_argument('--start_epoch', type=int, default=1, metavar='N',
@@ -39,14 +39,13 @@ parser.add_argument('--lrfact', default=1, type=float,
                     help='learning rate factor')
 parser.add_argument('--lossfact', default=1, type=float,
                     help='loss factor')
-parser.add_argument('--target', default=0.7, type=float, help='target rate')
+parser.add_argument('--target', type=str, required=True,
+                    help='target rate (1 float or 16 comma-separated floats)')
 parser.add_argument('--momentum', default=0.9, type=float, help='momentum')
 parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
                     help='weight decay (default: 1e-4)')
 parser.add_argument('--seed', type=int, default=1, metavar='S',
                     help='random seed (default: 1)')
-parser.add_argument('--no-cuda', action='store_true', default=False,
-                    help='enables CUDA training')
 parser.add_argument('--log-interval', type=int, default=20, metavar='N',
                     help='how many batches to wait before logging training status')
 parser.add_argument('--resume', default='', type=str,
@@ -54,15 +53,15 @@ parser.add_argument('--resume', default='', type=str,
 parser.add_argument('--pretrained', default='', type=str,
                     help='path to pretrained checkpoint (default: none)')
 parser.add_argument('--save', default='', type=str, metavar='PATH',
-                    help='folder path to save checkpoint (default: none)')
+                    help='folder path to save checkpoint (default: "")')
 parser.add_argument('--test', dest='test', action='store_true',
                     help='To only run inference on test set')
 parser.add_argument('--visdom', dest='visdom', action='store_true',
                     help='Use visdom to track and plot')
 parser.add_argument('--print-freq', '-p', default=50, type=int,
-                    help='print frequency (default: 10)')
-parser.add_argument('--expname', default='give_me_a_name', type=str, metavar='n',
-                    help='name of experiment (default: test')
+                    help='print frequency (default: 50)')
+parser.add_argument('--expname', default='my_experiment', type=str, metavar='n',
+                    help='name of experiment (default: my_experiment)')
 parser.set_defaults(test=False)
 parser.set_defaults(visdom=False)
 
@@ -81,7 +80,7 @@ def main():
         
     # set the target rates for each layer
     # the default is to use the same target rate for each layer
-    target_rates_list = [args.target] * 16
+    target_rates_list = [float(i) for i in args.target.split(",")] if "," in args.target else [float(args.target)] * 16
     target_rates = {i:target_rates_list[i] for i in range(len(target_rates_list))}
 
     model = ResNet50_ImageNet()
@@ -109,12 +108,11 @@ def main():
         else:
             print("=> no checkpoint found at '{}'".format(latest_checkpoint))
     
-    model = torch.nn.DataParallel(model).cuda()
+    model = torch.nn.DataParallel(model).to(DEVICE)
 
     # ImageNet Data loading code
-    #traindir = os.path.join(args.data, 'train')
-    #valdir = os.path.join(args.data, 'val')
-    traindir = valdir = args.data
+    traindir = os.path.join(args.data, 'train')
+    valdir = os.path.join(args.data, 'val')
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.229, 0.224, 0.225])
 
@@ -158,7 +156,7 @@ def main():
     cudnn.benchmark = True
 
     # define loss function (criterion) and pptimizer
-    criterion = nn.CrossEntropyLoss().cuda()
+    criterion = nn.CrossEntropyLoss().to(DEVICE)
     optimizer = optim.SGD([{'params': [param for name, param in model.named_parameters() if 'fc' in name],
                             'lr': args.lrfact * args.lr, 'weight_decay': args.weight_decay},
                             {'params': [param for name, param in model.named_parameters() if 'fc' not in name],
@@ -204,27 +202,23 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
     top5 = AverageMeter()
     activations = AverageMeter()
 
-    # Temperature of Gumble Softmax 
-    # We simply keep it fixed
-    temp = 1
-
     # switch to train mode
     model.train()
 
     end = time.time()
 
     ttt = torch.FloatTensor(33).fill_(0)
-    ttt = ttt.cuda()
+    ttt = ttt.to(DEVICE)
     ttt = torch.autograd.Variable(ttt, requires_grad=False)
 
     for i, (input, target) in enumerate(train_loader):
-        target = target.cuda(non_blocking=True)
-        input = input.cuda()
+        target = target.to(DEVICE, non_blocking=True)
+        input = input.to(DEVICE)
         input_var = torch.autograd.Variable(input)
         target_var = torch.autograd.Variable(target)
 
         # compute output
-        output, activation_rates = model(input_var, temperature=temp)
+        output, activation_rates = model(input_var)
 
         # classification loss
         loss_classify = criterion(output, target_var)
@@ -301,21 +295,17 @@ def validate(val_loader, model, criterion, epoch, target_rates):
     accumulator = ActivationAccum_img(epoch)
     activations = AverageMeter()
 
-    # Temperature of Gumble Softmax 
-    # We simply keep it fixed
-    temp = 1
-
     # switch to evaluate mode
     model.eval()
 
     end = time.time()
     with torch.no_grad():
         for i, (input, target) in enumerate(val_loader):
-            target = target.cuda(non_blocking=True)
-            input = input.cuda()
+            target = target.to(DEVICE, non_blocking=True)
+            input = input.to(DEVICE)
 
             # compute output
-            output, activation_rates = model(input, temperature=temp)
+            output, activation_rates = model(input)
 
             # classification loss
             loss = criterion(output, target)
@@ -401,6 +391,7 @@ def save_checkpoint(state, is_best, filename='checkpoint.pth.tar'):
 class VisdomLinePlotter(object):
     """Plots to Visdom"""
     def __init__(self, env_name='main'):
+        from visdom import Visdom
         self.viz = Visdom()
         self.env = env_name
         self.plots = {}
