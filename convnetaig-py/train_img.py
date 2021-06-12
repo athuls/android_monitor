@@ -17,7 +17,7 @@ import torchvision.datasets as datasets
 
 from convnet_aig import *
 import math
-from visdom import Visdom
+#from visdom import Visdom
 import numpy as np
 
 
@@ -112,8 +112,9 @@ def main():
     model = torch.nn.DataParallel(model).cuda()
 
     # ImageNet Data loading code
-    traindir = os.path.join(args.data, 'train')
-    valdir = os.path.join(args.data, 'val')
+    #traindir = os.path.join(args.data, 'train')
+    #valdir = os.path.join(args.data, 'val')
+    traindir = valdir = args.data
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.229, 0.224, 0.225])
 
@@ -127,7 +128,7 @@ def main():
                 normalize,
             ])),
         batch_size=args.batch_size, shuffle=True,
-        num_workers=10, pin_memory=True)
+        num_workers=2, pin_memory=True)
 
     val_loader = torch.utils.data.DataLoader(
         datasets.ImageFolder(valdir, transforms.Compose([
@@ -137,7 +138,7 @@ def main():
             normalize,
         ])),
         batch_size=args.batch_size, shuffle=False,
-        num_workers=10, pin_memory=True)
+        num_workers=2, pin_memory=True)
 
 
     # optionally resume from a checkpoint
@@ -217,7 +218,7 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
     ttt = torch.autograd.Variable(ttt, requires_grad=False)
 
     for i, (input, target) in enumerate(train_loader):
-        target = target.cuda(async=True)
+        target = target.cuda(non_blocking=True)
         input = input.cuda()
         input_var = torch.autograd.Variable(input)
         target_var = torch.autograd.Variable(target)
@@ -248,7 +249,7 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
         # Sometimes this value is nan 
         # If someone can find out why, please add a pull request
         # For now, we skip the batch and move on
-        if math.isnan(acts_plot.data[0]):
+        if math.isnan(acts_plot.item()):
             print(activation_rates)
             optimizer.zero_grad()
             loss.backward()
@@ -256,13 +257,13 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
 
         # measure accuracy and record loss
         prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
-        losses.update(loss.data[0], input.size(0))
-        losses_c.update(loss_classify.data[0], input.size(0))
-        losses_t.update(act_loss.data[0], input.size(0))
+        losses.update(loss.item(), input.size(0))
+        losses_c.update(loss_classify.item(), input.size(0))
+        losses_t.update(act_loss.item(), input.size(0))
 
-        top1.update(prec1[0], input.size(0))
-        top5.update(prec5[0], input.size(0))
-        activations.update(acts_plot.data[0], 1)
+        top1.update(prec1.item(), input.size(0))
+        top5.update(prec5.item(), input.size(0))
+        activations.update(acts_plot.item(), 1)
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
@@ -308,54 +309,53 @@ def validate(val_loader, model, criterion, epoch, target_rates):
     model.eval()
 
     end = time.time()
-    for i, (input, target) in enumerate(val_loader):
-        target = target.cuda(async=True)
-        input = input.cuda()
-        input_var = torch.autograd.Variable(input, volatile=True)
-        target_var = torch.autograd.Variable(target, volatile=True)
+    with torch.no_grad():
+        for i, (input, target) in enumerate(val_loader):
+            target = target.cuda(non_blocking=True)
+            input = input.cuda()
 
-        # compute output
-        output, activation_rates = model(input_var, temperature=temp)
+            # compute output
+            output, activation_rates = model(input, temperature=temp)
 
-        # classification loss
-        loss = criterion(output, target_var)
+            # classification loss
+            loss = criterion(output, target)
 
-        acts = 0
-        for j, act in enumerate(activation_rates):
-            if target_rates[j] < 1:
-                acts += torch.mean(act)
-            else:
-                acts += 1
-        # this is important when using data DataParallel
-        acts = torch.mean(acts / len(activation_rates))
- 
-        # see above
-        if math.isnan(acts.data[0]):
-             continue
+            acts = 0
+            for j, act in enumerate(activation_rates):
+                if target_rates[j] < 1:
+                    acts += torch.mean(act)
+                else:
+                    acts += 1
+            # this is important when using data DataParallel
+            acts = torch.mean(acts / len(activation_rates))
+    
+            # see above
+            if math.isnan(acts.item()):
+                continue
 
-        # accumulate statistics over eval set
-        accumulator.accumulate(activation_rates, target_var, target_rates)
+            # accumulate statistics over eval set
+            accumulator.accumulate(activation_rates, target, target_rates)
 
-        # measure accuracy and record loss
-        prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
-        losses.update(loss.data[0], input.size(0))
-        top1.update(prec1[0], input.size(0))
-        top5.update(prec5[0], input.size(0))
-        activations.update(acts.data[0], 1)
+            # measure accuracy and record loss
+            prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
+            losses.update(loss.item(), input.size(0))
+            top1.update(prec1.item(), input.size(0))
+            top5.update(prec5.item(), input.size(0))
+            activations.update(acts.item(), 1)
 
-        # measure elapsed time
-        batch_time.update(time.time() - end)
-        end = time.time()
+            # measure elapsed time
+            batch_time.update(time.time() - end)
+            end = time.time()
 
-        if i % args.print_freq == 0:
-            print('Test: [{0}/{1}]\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
-                  'Prec@5 {top5.val:.3f} ({top5.avg:.3f})\t'
-                  'Activations: {act.val:.3f} ({act.avg:.3f})'.format(
-                      i, len(val_loader), batch_time=batch_time, loss=losses,
-                      top1=top1, top5=top5, act=activations))
+            if i % args.print_freq == 0:
+                print('Test: [{0}/{1}]\t'
+                      'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
+                      'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
+                      'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
+                      'Prec@5 {top5.val:.3f} ({top5.avg:.3f})\t'
+                      'Activations: {act.val:.3f} ({act.avg:.3f})'.format(
+                          i, len(val_loader), batch_time=batch_time, loss=losses,
+                          top1=top1, top5=top5, act=activations))
 
     activ_output = accumulator.getoutput()
 
@@ -463,7 +463,7 @@ def accuracy(output, target, topk=(1,)):
 
     res = []
     for k in topk:
-        correct_k = correct[:k].view(-1).float().sum(0)
+        correct_k = correct[:k].reshape(-1).float().sum(0)
         res.append(correct_k.mul_(100.0 / batch_size))
     return res
 

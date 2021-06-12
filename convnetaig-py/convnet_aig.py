@@ -42,7 +42,7 @@ class Sequential_ext(nn.Module):
             raise IndexError('index {} is out of range'.format(idx))
         if idx < 0:
             idx += len(self)
-        it = iter(self._modules.values())
+        it = iter(self.modules())
         for i in range(idx):
             next(it)
         return next(it)
@@ -50,16 +50,19 @@ class Sequential_ext(nn.Module):
     def __len__(self):
         return len(self._modules)
 
-    def forward(self, input, temperature=1, openings=None):
+    def forward(self, input, layers):
         gate_activations = []
-        for i, module in enumerate(self._modules.values()):
-            input, gate_activation = module(input, temperature)
+        for i, module in enumerate(self.children()):
+            input, gate_activation = module(input, layers[i])
             gate_activations.append(gate_activation)
+        assert i == len(layers) - 1
         return input, gate_activations
 
 
 class BasicBlock(nn.Module):
     expansion = 1
+
+    blocks_created = 0
 
     def __init__(self, in_planes, planes, stride=1):
         super(BasicBlock, self).__init__()
@@ -77,7 +80,7 @@ class BasicBlock(nn.Module):
 
         # Gate layers
         self.fc1 = nn.Conv2d(in_planes, 16, kernel_size=1)
-        self.fc1bn = nn.BatchNorm1d(16)
+        self.fc1bn = nn.BatchNorm2d(16)
         self.fc2 = nn.Conv2d(16, 2, kernel_size=1)
         # initialize the bias of the last fc for 
         # initial opening rate of the gate of about 85%
@@ -86,21 +89,29 @@ class BasicBlock(nn.Module):
         self.gs = GumbleSoftmax()
         self.gs.cuda()
 
-    def forward(self, x, temperature=1):
+        self.block_id = BasicBlock.blocks_created
+        BasicBlock.blocks_created += 1
+
+    def forward(self, x, temperature: int=1):
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
         w = self.fc2(w)
         # Sample from Gumble Module
         w = self.gs(w, temp=temperature, force_hard=True)
+        should_do = w[:,1]
 
-        out = F.relu(self.bn1(self.conv1(x)))
-        out = self.bn2(self.conv2(out))
-        out = self.shortcut(x) + out * w[:,1].unsqueeze(1)
+        out = self.shortcut(x)
+
+        if should_do:
+          x = F.relu(self.bn1(self.conv1(x)))
+          x = self.bn2(self.conv2(x))
+          out += x
+
         out = F.relu(out)
         # Return output of layer and the value of the gate
         # The value of the gate will be used in the target rate loss
-        return out, w[:, 1]
+        return out, should_do
 
 
 class Bottleneck(nn.Module):
@@ -124,7 +135,7 @@ class Bottleneck(nn.Module):
 
         # Gate layers
         self.fc1 = nn.Conv2d(in_planes, 16, kernel_size=1)
-        self.fc1bn = nn.BatchNorm1d(16)
+        self.fc1bn = nn.BatchNorm2d(16)
         self.fc2 = nn.Conv2d(16, 2, kernel_size=1)
         # initialize the bias of the last fc for 
         # initial opening rate of the gate of about 85%
@@ -134,25 +145,29 @@ class Bottleneck(nn.Module):
         self.gs = GumbleSoftmax()
         self.gs.cuda()
 
-    def forward(self, x, temperature=1):
+    def forward(self, x, execute):
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
         w = self.fc2(w)
         # Sample from Gumble Module
-        w = self.gs(w, temp=temperature, force_hard=True)
+        w = self.gs(w, force_hard=True)
+        should_do = w[:,1]
 
         # TODO: For fast inference, check decision of gate and jump right 
         #       to the next layer if needed.
+        out = self.shortcut(x)
 
-        out = F.relu(self.bn1(self.conv1(x)), inplace=True)
-        out = F.relu(self.bn2(self.conv2(out)), inplace=True)
-        out = self.bn3(self.conv3(out))
-        out = self.shortcut(x) + out * w[:,1].unsqueeze(1)
+        if execute:
+            x = F.relu(self.bn1(self.conv1(x)), inplace=True)
+            x = F.relu(self.bn2(self.conv2(x)), inplace=True)
+            x = self.bn3(self.conv3(x))
+            out += x
+
         out = F.relu(out, inplace=True)
         # Return output of layer and the value of the gate
         # The value of the gate will be used in the target rate loss
-        return out, w[:, 1]
+        return out, should_do
 
     
 class ResNet_ImageNet(nn.Module):
@@ -171,6 +186,8 @@ class ResNet_ImageNet(nn.Module):
         self.layer4 = self._make_layer(block, 512, layers[3], stride=2)
         self.avgpool = nn.AvgPool2d(7, stride=1)
         self.linear = nn.Linear(512 * block.expansion, num_classes)
+
+        self.layercount = layers.cumsum(0)
 
         for k, m in self.named_modules():
             if isinstance(m, nn.Conv2d):
@@ -191,17 +208,18 @@ class ResNet_ImageNet(nn.Module):
             self.in_planes = planes * block.expansion
         return Sequential_ext(*layers)
 
-    def forward(self, out, temperature=1):
+    def forward(self, out, layers):
+        assert len(layers) == self.layercount[3]
         gate_activations = []
         out = self.relu(self.bn1(self.conv1(out)))
         out = self.maxpool(out)
-        out, a = self.layer1(out, temperature)
+        out, a = self.layer1(out, layers[:self.layercount[0]])
         gate_activations.extend(a)
-        out, a = self.layer2(out, temperature)
+        out, a = self.layer2(out, layers[self.layercount[0]:self.layercount[1]])
         gate_activations.extend(a)
-        out, a = self.layer3(out, temperature)
+        out, a = self.layer3(out, layers[self.layercount[1]:self.layercount[2]])
         gate_activations.extend(a)
-        out, a = self.layer4(out, temperature)
+        out, a = self.layer4(out, layers[self.layercount[2]:])
         gate_activations.extend(a)
         out = self.avgpool(out)
         out = out.view(out.size(0), -1)
@@ -234,7 +252,7 @@ class ResNet_cifar(nn.Module):
             self.in_planes = planes * block.expansion
         return Sequential_ext(*layers)
 
-    def forward(self, x, temperature=1, openings=None):
+    def forward(self, x, temperature: int=1):
         gate_activations = []
         out = F.relu(self.bn1(self.conv1(x)))
         out, a = self.layer1(out, temperature)
@@ -252,7 +270,7 @@ def ResNet110_cifar(nclass=10):
     return ResNet_cifar(BasicBlock, [18,18,18], num_classes=nclass)
 
 def ResNet50_ImageNet():
-    return ResNet_ImageNet(Bottleneck, [3,4,6,3])
+    return ResNet_ImageNet(Bottleneck, torch.tensor([3,4,6,3]))
 
 def ResNet101_ImageNet():
     return ResNet_ImageNet(Bottleneck, [3,4,23,3])
@@ -270,7 +288,7 @@ class ActivationAccum():
         self.epoch = epoch
 
         if self.epoch % 25 == 0:
-            self.heatmap = torch.cuda.FloatTensor(len(self.classes), len(self.gates))
+            self.heatmap = torch.FloatTensor(len(self.classes), len(self.gates))
             self.heatmap[:, :] = 0
 
     def accumulate(self, actives, targets):
@@ -280,17 +298,17 @@ class ActivationAccum():
             if self.epoch % 25 == 0:
                 for k in range(10):
                     self.classes[k] += torch.sum(act[targets==k])
-                    self.heatmap[k, j] += torch.sum(act[targets==k]).data[0]
+                    self.heatmap[k, j] += torch.sum(act[targets==k]).item()
 
             self.numbatches += 1
             
     def getoutput(self):
         if self.epoch % 25 == 0:
-            return([{k: self.gates[k].data.cpu().numpy()[0] / 10000 for k in self.gates},
-                {k: self.classes[k].data.cpu().numpy()[0] / 1000 / np.sum(self.numblocks) for k in self.classes},
+            return([{k: self.gates[k].item() / 10000 for k in self.gates},
+                {k: self.classes[k].item() / 1000 / np.sum(self.numblocks) for k in self.classes},
                 self.heatmap.cpu().numpy() / 1000])
         else:
-            return([{k: self.gates[k].data.cpu().numpy()[0] / 10000 for k in self.gates}])
+            return([{k: self.gates[k].item() / 10000 for k in self.gates}])
 
 
 class ActivationAccum_img():
@@ -302,7 +320,7 @@ class ActivationAccum_img():
         self.epoch = epoch
 
         if epoch in [30, 60, 99,149]:
-            self.heatmap = torch.cuda.FloatTensor(len(self.classes), len(self.gates))
+            self.heatmap = torch.FloatTensor(len(self.classes), len(self.gates))
             self.heatmap[:, :] = 0
 
     def accumulate(self, actives, targets, target_rates):
@@ -315,17 +333,17 @@ class ActivationAccum_img():
             if self.epoch in [30, 60, 99, 149]:
                 for k in range(1000):
                     if target_rates[j] < 1:
-                        self.classes[k] += torch.sum(act[targets==k]).data[0]
-                        self.heatmap[k, j] += torch.sum(act[targets==k]).data[0]
+                        self.classes[k] += torch.sum(act[targets==k]).item()
+                        self.heatmap[k, j] += torch.sum(act[targets==k]).item()
                     else:
-                        self.classes[k] += torch.sum(targets==k).data[0]
-                        self.heatmap[k, j] += torch.sum(targets==k).data[0]
+                        self.classes[k] += torch.sum(targets==k).item()
+                        self.heatmap[k, j] += torch.sum(targets==k).item()
 
             self.numbatches += 1
     def getoutput(self):
         for k in list(self.gates.keys()):
             if type(self.gates[k]) != int:
-                self.gates[k] = self.gates[k].data.cpu().numpy()[0]
+                self.gates[k] = self.gates[k].item()
         
         if self.epoch in [30, 60, 99, 149]:
             return([{k: self.gates[k] / 50000 for k in self.gates},

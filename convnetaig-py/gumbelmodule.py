@@ -21,30 +21,30 @@ class GumbleSoftmax(torch.nn.Module):
     def cpu(self):
         self.gpu = False
         
-    def sample_gumbel(self, shape, eps=1e-10):
+    def sample_gumbel(self, shape, eps: float=1e-10):
         """Sample from Gumbel(0, 1)"""
         noise = torch.rand(shape)
         noise.add_(eps).log_().neg_()
         noise.add_(eps).log_().neg_()
         if self.gpu:
-            return Variable(noise).cuda()
+            return noise.cuda()
         else:
-            return Variable(noise)
+            return noise
 
-    def sample_gumbel_like(self, template_tensor, eps=1e-10):
+    def sample_gumbel_like(self, template_tensor, eps: float=1e-10):
         uniform_samples_tensor = template_tensor.clone().uniform_()
         gumble_samples_tensor = - torch.log(eps - torch.log(uniform_samples_tensor + eps))
         return gumble_samples_tensor
 
-    def gumbel_softmax_sample(self, logits, temperature):
+    def gumbel_softmax_sample(self, logits, temperature: int):
         """ Draw a sample from the Gumbel-Softmax distribution"""
         dim = logits.size(-1)
         gumble_samples_tensor = self.sample_gumbel_like(logits.data)
-        gumble_trick_log_prob_samples = logits + Variable(gumble_samples_tensor)
+        gumble_trick_log_prob_samples = logits + gumble_samples_tensor
         soft_samples = F.softmax(gumble_trick_log_prob_samples / temperature, dim)
         return soft_samples
     
-    def gumbel_softmax(self, logits, temperature, hard=False):
+    def gumbel_softmax(self, logits, temperature: int, hard: bool=False):
         """Sample from the Gumbel-Softmax distribution and optionally discretize.
         Args:
         logits: [batch_size, n_class] unnormalized log-probs
@@ -59,10 +59,10 @@ class GumbleSoftmax(torch.nn.Module):
         if hard:
             _, max_value_indexes = y.data.max(1, keepdim=True)
             y_hard = logits.data.clone().zero_().scatter_(1, max_value_indexes, 1)
-            y = Variable(y_hard - y.data) + y
+            y = (y_hard - y.data) + y
         return y
         
-    def forward(self, logits, temp=1, force_hard=False):
+    def forward(self, logits, temp: int=1, force_hard: bool=False):
         samplesize = logits.size()
 
         if self.training and not force_hard:
