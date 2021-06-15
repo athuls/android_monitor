@@ -88,7 +88,7 @@ class BasicBlock(nn.Module):
         self.fc2.bias.data[0] = 0.1
         self.fc2.bias.data[1] = 2
         self.gs = GumbleSoftmax()
-        #self.gs.cuda()
+        self.gs.cuda()
 
         self.block_id = BasicBlock.blocks_created
         BasicBlock.blocks_created += 1
@@ -146,9 +146,10 @@ class Bottleneck(nn.Module):
         self.fc2.bias.data[1] = 2
 
         self.gs = GumbleSoftmax()
-        #self.gs.cuda()
+        self.gs.cuda()
 
     def forward(self, x, force_execute: Optional[torch.Tensor] = None):
+        assert force_execute is None
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
@@ -157,15 +158,12 @@ class Bottleneck(nn.Module):
         w = self.gs(w, force_hard=True)
 
         should_do = w[:,1]
-        if force_execute is not None:
-            should_do = force_execute
 
         out = self.shortcut(x)
-        if self.training or should_do:
-            x = F.relu(self.bn1(self.conv1(x)), inplace=True)
-            x = F.relu(self.bn2(self.conv2(x)), inplace=True)
-            x = self.bn3(self.conv3(x))
-            out = out + x
+        x = F.relu(self.bn1(self.conv1(x)), inplace=True)
+        x = F.relu(self.bn2(self.conv2(x)), inplace=True)
+        x = self.bn3(self.conv3(x))
+        out = out + x
 
         out = F.relu(out, inplace=True)
         # Return output of layer and the value of the gate

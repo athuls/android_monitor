@@ -19,7 +19,7 @@ from convnet_aig import *
 import math
 import numpy as np
 
-DEVICE = torch.device('cpu')
+DEVICE = torch.device('cuda:0')
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch CIFAR Example')
@@ -108,7 +108,7 @@ def main():
         else:
             print("=> no checkpoint found at '{}'".format(latest_checkpoint))
     
-    model = torch.nn.DataParallel(model).to(DEVICE)
+    model = torch.nn.DataParallel(model)
 
     # ImageNet Data loading code
     traindir = os.path.join(args.data, 'train')
@@ -206,10 +206,6 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
     model.train()
 
     end = time.time()
-
-    ttt = torch.FloatTensor(33).fill_(0)
-    ttt = ttt.to(DEVICE)
-    ttt = torch.autograd.Variable(ttt, requires_grad=False)
 
     for i, (input, target) in enumerate(train_loader):
         target = target.to(DEVICE, non_blocking=True)
