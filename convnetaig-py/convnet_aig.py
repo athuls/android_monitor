@@ -14,6 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 import numpy as np
+from typing import Optional
 from torch.autograd import Variable
 
 from gumbelmodule import GumbleSoftmax
@@ -50,7 +51,7 @@ class Sequential_ext(nn.Module):
     def __len__(self):
         return len(self._modules)
 
-    def forward(self, input, layers = None):
+    def forward(self, input, layers: Optional[torch.Tensor] = None):
         gate_activations = []
         for i, module in enumerate(self.children()):
             input, gate_activation = module(input, None if layers is None else layers[i])
@@ -92,18 +93,20 @@ class BasicBlock(nn.Module):
         self.block_id = BasicBlock.blocks_created
         BasicBlock.blocks_created += 1
 
-    def forward(self, x, temperature: int=1):
+    def forward(self, x, force_execute: Optional[torch.Tensor] = None):
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
         w = self.fc2(w)
         # Sample from Gumble Module
-        w = self.gs(w, temp=temperature, force_hard=True)
+        w = self.gs(w, force_hard=True)
+
         should_do = w[:,1]
+        if force_execute is not None:
+            should_do = force_execute
 
         out = self.shortcut(x)
-
-        if should_do:
+        if self.training or should_do:
           x = F.relu(self.bn1(self.conv1(x)))
           x = self.bn2(self.conv2(x))
           out += x
@@ -145,7 +148,7 @@ class Bottleneck(nn.Module):
         self.gs = GumbleSoftmax()
         #self.gs.cuda()
 
-    def forward(self, x, force_execute = None):
+    def forward(self, x, force_execute: Optional[torch.Tensor] = None):
         # Compute relevance score
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
@@ -208,7 +211,7 @@ class ResNet_ImageNet(nn.Module):
             self.in_planes = planes * block.expansion
         return Sequential_ext(*layers)
 
-    def forward(self, out, layers = None):
+    def forward(self, out, layers: Optional[torch.Tensor] = None):
         if layers is not None: assert len(layers) == self.layercount[3]
         gate_activations = []
         out = self.relu(self.bn1(self.conv1(out)))
@@ -238,6 +241,8 @@ class ResNet_cifar(nn.Module):
         self.layer3 = self._make_layer(block, 64, num_blocks[2], stride=2)
         self.linear = nn.Linear(64*block.expansion, num_classes)
 
+        self.layercount = num_blocks.cumsum(0)
+
         for k, m in self.named_modules():
             if isinstance(m, nn.Conv2d):
                 if 'fc2' in str(k):
@@ -252,14 +257,15 @@ class ResNet_cifar(nn.Module):
             self.in_planes = planes * block.expansion
         return Sequential_ext(*layers)
 
-    def forward(self, x, temperature: int=1):
+    def forward(self, x, layers: Optional[torch.Tensor] = None):
+        if layers is not None: assert len(layers) == self.layercount[2]
         gate_activations = []
         out = F.relu(self.bn1(self.conv1(x)))
-        out, a = self.layer1(out, temperature)
+        out, a = self.layer1(out, None if layers is None else layers[:self.layercount[0]])
         gate_activations.extend(a)
-        out, a = self.layer2(out, temperature)
+        out, a = self.layer2(out, None if layers is None else layers[self.layercount[0]:self.layercount[1]])
         gate_activations.extend(a)
-        out, a = self.layer3(out, temperature)
+        out, a = self.layer3(out, None if layers is None else layers[self.layercount[1]:])
         gate_activations.extend(a)
         out = F.avg_pool2d(out, 8)
         out = out.view(out.size(0), -1)
@@ -267,7 +273,7 @@ class ResNet_cifar(nn.Module):
         return out, gate_activations
 
 def ResNet110_cifar(nclass=10):
-    return ResNet_cifar(BasicBlock, [18,18,18], num_classes=nclass)
+    return ResNet_cifar(BasicBlock, torch.tensor([18,18,18]), num_classes=nclass)
 
 def ResNet50_ImageNet():
     return ResNet_ImageNet(Bottleneck, torch.tensor([3,4,6,3]))

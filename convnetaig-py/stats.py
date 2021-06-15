@@ -2,6 +2,8 @@ import torch
 import convnet_aig
 import time
 
+NUM_LAYERS = 16
+
 def timer(N, module, layers):
   data = torch.empty(N)
   for i in range(N):
@@ -16,10 +18,13 @@ model.eval()
 script = torch.jit.script(model)
 
 def onesFromTo(start, end):
-    return torch.tensor([False] * start + [True] * (end - start) + [False] * (16 - end))
+  return torch.tensor([False] * start + [True] * (end - start) + [False] * (NUM_LAYERS - end))
 
-# for start in (0, 4, 8, 12, 0):
-#     end = start + 4
-#     timer(100, script, onesFromTo(start, end))
-#     print(f"[{start:02d}, {end:02d}):", timer(900, script, onesFromTo(start, end)))
-script.save("imagenet.pt")
+def zerosFromTo(start, end):
+  return torch.tensor([True] * start + [False] * (end - start) + [True] * (NUM_LAYERS - end))
+
+timer(1000, script, torch.ones(NUM_LAYERS))
+for start in range(0, 16, 4):
+  end = start + 4
+  timer(100, script, onesFromTo(start, end))
+  print(f"[{start:02d}, {end:02d}):", timer(900, script, onesFromTo(start, end)))
