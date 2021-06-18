@@ -108,7 +108,7 @@ def main():
         else:
             print("=> no checkpoint found at '{}'".format(latest_checkpoint))
     
-    model = torch.nn.DataParallel(model)
+    model = torch.nn.DataParallel(model).to(DEVICE)
 
     # ImageNet Data loading code
     traindir = os.path.join(args.data, 'train')

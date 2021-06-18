@@ -1,6 +1,7 @@
 #!/bin/bash
-#SBATCH --gpus=2
+#SBATCH --time=04:00:00
+#SBATCH --gres=gpu:V100:2
 
-module load python/3
-export PYTHONPATH=/scratch/users/$USER/pytorch-venv:${PYTHONPATH}
-python3 -u train_img.py --resume runs/my_experiment/checkpoint.pth.tar /scratch/users/$USER/trimmed_imagenet
+module load anaconda/3
+source activate python-env
+python3 -u train_img.py --expname 0.6 --resume runs/0.6/checkpoint.pth.tar --batch-size 64 --target 0.6 /scratch/trimmed_imagenet
