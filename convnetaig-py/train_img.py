@@ -3,7 +3,6 @@ from __future__ import print_function
 
 import argparse
 import os
-import sys
 import time
 import shutil
 import torch
@@ -58,12 +57,15 @@ parser.add_argument('--test', dest='test', action='store_true',
                     help='To only run inference on test set')
 parser.add_argument('--visdom', dest='visdom', action='store_true',
                     help='Use visdom to track and plot')
+parser.add_argument('--convert_torchscript', action='store_true',
+                    help='don\'t train or test, just convert model to torchscipt')
 parser.add_argument('--print-freq', '-p', default=50, type=int,
                     help='print frequency (default: 50)')
 parser.add_argument('--expname', default='my_experiment', type=str, metavar='n',
                     help='name of experiment (default: my_experiment)')
 parser.set_defaults(test=False)
 parser.set_defaults(visdom=False)
+parser.set_defaults(convert_torchscript=False)
 
 best_prec1 = 0
 
@@ -141,7 +143,6 @@ def main():
 
     # optionally resume from a checkpoint
     if args.resume:
-        latest_checkpoint = os.path.join(args.resume, 'checkpoint.pth.tar')
         if os.path.isfile(args.resume):
             print("=> loading checkpoint '{}'".format(args.resume))
             checkpoint = torch.load(args.resume)
@@ -169,27 +170,29 @@ def main():
 
     if args.test:
         test_acc = validate(val_loader, model, criterion, 60, target_rates)
-        sys.exit()
+    elif args.convert_torchscript:
+        script = torch.jit.script(model.module)
+        script.save("runs/%s/model.pt" % args.expname)
+    else:
+        for epoch in range(args.start_epoch, args.epochs):
+            adjust_learning_rate(optimizer, epoch)
 
-    for epoch in range(args.start_epoch, args.epochs):
-        adjust_learning_rate(optimizer, epoch)
+            # train for one epoch
+            train(train_loader, model, criterion, optimizer, epoch, target_rates)
 
-        # train for one epoch
-        train(train_loader, model, criterion, optimizer, epoch, target_rates)
+            # evaluate on validation set
+            prec1 = validate(val_loader, model, criterion, epoch, target_rates)
 
-        # evaluate on validation set
-        prec1 = validate(val_loader, model, criterion, epoch, target_rates)
-
-        # remember best prec@1 and save checkpoint
-        is_best = prec1 > best_prec1
-        best_prec1 = max(prec1, best_prec1)
-        save_checkpoint({
-            'epoch': epoch + 1,
-            'state_dict': model.state_dict(),
-            'best_prec1': best_prec1,
-            'optimizer' : optimizer.state_dict(),
-        }, is_best)
-    print('Best accuracy: ', best_prec1)
+            # remember best prec@1 and save checkpoint
+            is_best = prec1 > best_prec1
+            best_prec1 = max(prec1, best_prec1)
+            save_checkpoint({
+                'epoch': epoch + 1,
+                'state_dict': model.state_dict(),
+                'best_prec1': best_prec1,
+                'optimizer' : optimizer.state_dict(),
+            }, is_best)
+        print('Best accuracy: ', best_prec1)
 
 
 def train(train_loader, model, criterion, optimizer, epoch, target_rates):

@@ -160,10 +160,11 @@ class Bottleneck(nn.Module):
         should_do = w[:,1]
 
         out = self.shortcut(x)
-        x = F.relu(self.bn1(self.conv1(x)), inplace=True)
-        x = F.relu(self.bn2(self.conv2(x)), inplace=True)
-        x = self.bn3(self.conv3(x))
-        out = out + x
+        if self.training or x.shape[0] > 1 or should_do:
+            x = F.relu(self.bn1(self.conv1(x)), inplace=True)
+            x = F.relu(self.bn2(self.conv2(x)), inplace=True)
+            x = self.bn3(self.conv3(x))
+            out = out + x
 
         out = F.relu(out, inplace=True)
         # Return output of layer and the value of the gate
