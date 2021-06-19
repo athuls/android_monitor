@@ -1338,7 +1338,7 @@ public class MainActivity extends Activity{
 		registerReceiver(batteryReceiver, filter);
 
 		//		new Thread(batteryWorker).start();
-		new Thread(initWorkload).start();
+//		new Thread(initWorkload).start();
     }
 
 	private Runnable initWorkload = new Runnable(){
