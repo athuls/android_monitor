@@ -291,7 +291,7 @@ def validate(val_loader, model, criterion, epoch, target_rates):
     losses = AverageMeter()
     top1 = AverageMeter()
     top5 = AverageMeter()
-    accumulator = ActivationAccum_img(epoch)
+    accumulator = ActivationAccum_img(epoch, model.module.layercount[-1])
     activations = AverageMeter()
 
     # switch to evaluate mode

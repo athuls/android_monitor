@@ -164,7 +164,7 @@ class Bottleneck(nn.Module):
             x = F.relu(self.bn1(self.conv1(x)), inplace=True)
             x = F.relu(self.bn2(self.conv2(x)), inplace=True)
             x = self.bn3(self.conv3(x))
-            out = out + x
+            out = out + should_do.unsqueeze(1) * x
 
         out = F.relu(out, inplace=True)
         # Return output of layer and the value of the gate
@@ -317,9 +317,9 @@ class ActivationAccum():
 
 
 class ActivationAccum_img():
-    def __init__(self, epoch):
-        self.numblocks = [3,4,23,3]
-        self.gates = {i: 0 for i in range(np.sum(self.numblocks))}
+    def __init__(self, epoch, numlayers):
+        self.numlayers = numlayers
+        self.gates = {i: 0 for i in range(self.numlayers)}
         self.classes = {i: 0 for i in range(1000)}
         self.numbatches = 0
         self.epoch = epoch
@@ -344,7 +344,7 @@ class ActivationAccum_img():
                         self.classes[k] += torch.sum(targets==k).item()
                         self.heatmap[k, j] += torch.sum(targets==k).item()
 
-            self.numbatches += 1
+        self.numbatches += targets.size(0)
     def getoutput(self):
         for k in list(self.gates.keys()):
             if type(self.gates[k]) != int:
@@ -352,7 +352,7 @@ class ActivationAccum_img():
         
         if self.epoch in [30, 60, 99, 149]:
             return([{k: self.gates[k] / 50000 for k in self.gates},
-                   {k: self.classes[k] / 50 / np.sum(self.numblocks) for k in self.classes},
+                   {k: self.classes[k] / 50 / self.numlayers for k in self.classes},
                    self.heatmap.cpu().numpy() / 50])
         else:
-            return([{k: self.gates[k] / 50000 for k in self.gates}])
+            return([{k: self.gates[k] / self.numbatches for k in self.gates}])
