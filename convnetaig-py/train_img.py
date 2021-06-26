@@ -18,8 +18,6 @@ from convnet_aig import *
 import math
 import numpy as np
 
-DEVICE = torch.device('cuda:0')
-
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch CIFAR Example')
 parser.add_argument('data', metavar='DIR',
@@ -45,6 +43,8 @@ parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
                     help='weight decay (default: 1e-4)')
 parser.add_argument('--seed', type=int, default=1, metavar='S',
                     help='random seed (default: 1)')
+parser.add_argument('--no-cuda', action='store_true', default=False,
+                    help='allows running on devices with no GPU')
 parser.add_argument('--log-interval', type=int, default=20, metavar='N',
                     help='how many batches to wait before logging training status')
 parser.add_argument('--resume', default='', type=str,
@@ -110,7 +110,9 @@ def main():
         else:
             print("=> no checkpoint found at '{}'".format(latest_checkpoint))
     
-    model = torch.nn.DataParallel(model).to(DEVICE)
+    model = torch.nn.DataParallel(model)
+    if not args.no_cuda:
+        model.cuda()
 
     # ImageNet Data loading code
     traindir = os.path.join(args.data, 'train')
@@ -145,7 +147,10 @@ def main():
     if args.resume:
         if os.path.isfile(args.resume):
             print("=> loading checkpoint '{}'".format(args.resume))
-            checkpoint = torch.load(args.resume)
+            if args.no_cuda:
+                checkpoint = torch.load(args.resume, map_location='cpu')
+            else:
+                checkpoint = torch.load(args.resume)
             args.start_epoch = checkpoint['epoch']
             best_prec1 = checkpoint['best_prec1']
             model.load_state_dict(checkpoint['state_dict'])
@@ -157,7 +162,9 @@ def main():
     cudnn.benchmark = True
 
     # define loss function (criterion) and pptimizer
-    criterion = nn.CrossEntropyLoss().to(DEVICE)
+    criterion = nn.CrossEntropyLoss()
+    if not args.no_cuda:
+        criterion.cuda()
     optimizer = optim.SGD([{'params': [param for name, param in model.named_parameters() if 'fc' in name],
                             'lr': args.lrfact * args.lr, 'weight_decay': args.weight_decay},
                             {'params': [param for name, param in model.named_parameters() if 'fc' not in name],
@@ -211,8 +218,9 @@ def train(train_loader, model, criterion, optimizer, epoch, target_rates):
     end = time.time()
 
     for i, (input, target) in enumerate(train_loader):
-        target = target.to(DEVICE, non_blocking=True)
-        input = input.to(DEVICE)
+        if not args.no_cuda:
+            target = target.cuda(non_blocking=True)
+            input = input.cuda()
         input_var = torch.autograd.Variable(input)
         target_var = torch.autograd.Variable(target)
 
@@ -300,8 +308,9 @@ def validate(val_loader, model, criterion, epoch, target_rates):
     end = time.time()
     with torch.no_grad():
         for i, (input, target) in enumerate(val_loader):
-            target = target.to(DEVICE, non_blocking=True)
-            input = input.to(DEVICE)
+            if not args.no_cuda:
+                target = target.cuda(non_blocking=True)
+                input = input.cuda()
 
             # compute output
             output, activation_rates = model(input)
