@@ -154,10 +154,13 @@ class Bottleneck(nn.Module):
         w = F.avg_pool2d(x, x.size(2))
         w = F.relu(self.fc1bn(self.fc1(w)))
         w = self.fc2(w)
-        # Sample from Gumble Module
-        w = self.gs(w, force_hard=True)
 
-        should_do = w[:,1]
+        # Compute decision
+        if self.training:
+            w = self.gs(w, force_hard=True)
+            should_do = w[:,1]
+        else:
+            should_do = w.argmax(1).type_as(w)
 
         out = self.shortcut(x)
         if self.training or x.shape[0] > 1 or should_do:
@@ -351,7 +354,7 @@ class ActivationAccum_img():
                 self.gates[k] = self.gates[k].item()
         
         if self.epoch in [30, 60, 99, 149]:
-            return([{k: self.gates[k] / 50000 for k in self.gates},
+            return([{k: self.gates[k] / self.numbatches for k in self.gates},
                    {k: self.classes[k] / 50 / self.numlayers for k in self.classes},
                    self.heatmap.cpu().numpy() / 50])
         else:
