@@ -178,8 +178,11 @@ def main():
     if args.test:
         test_acc = validate(val_loader, model, criterion, 60, target_rates)
     elif args.convert_torchscript:
+        from torch.utils.mobile_optimizer import optimize_for_mobile
+        model.eval()
         script = torch.jit.script(model.module)
-        script.save("runs/%s/model.pt" % args.expname)
+        script = optimize_for_mobile(script)
+        script._save_for_lite_interpreter("runs/%s/model.ptl" % args.expname)
     else:
         for epoch in range(args.start_epoch, args.epochs):
             adjust_learning_rate(optimizer, epoch)
