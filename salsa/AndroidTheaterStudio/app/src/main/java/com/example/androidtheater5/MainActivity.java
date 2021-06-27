@@ -8,6 +8,9 @@ import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.net.ConnectivityManager;
 import android.net.TrafficStats;
 import android.net.wifi.WifiInfo;
@@ -18,6 +21,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
 import android.os.StrictMode;
+import android.os.Trace;
 import android.provider.Settings;
 import android.util.Log;
 import android.util.Pair;
@@ -53,6 +57,7 @@ import java.util.ArrayList;
 
 import android.os.Handler;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -60,11 +65,19 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.app.AppOpsManager;
 
 
 import android.content.res.AssetManager;
 
+import org.pytorch.IValue;
+import org.pytorch.LiteModuleLoader;
+import org.pytorch.Module;
+import org.pytorch.Tensor;
+import org.pytorch.torchvision.TensorImageUtils;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 import android.content.Intent;
 
@@ -1221,6 +1234,109 @@ public class MainActivity extends Activity{
 
 	}
 
+	private class PytorchWorkload {
+    	private static final String MODEL_FILE_NAME = "/sdcard/model.ptl";
+    	private static final String IMAGE_FOLDER = "/sdcard/images";
+		private static final int FRAME_RATE = 3;
+		private static final int BATTERY_LEVEL_DROP_COUNT = 5;
+
+    	private static final int IMAGE_SIZE = 224;
+
+    	private Timer timerThread;
+		private Bitmap[] images;
+		private Module model;
+		private int imageIndex = 0;
+		private boolean hasCompletedInferenceForImage = false;
+		private int initialBatteryLevel = -1;
+
+		private class InferenceTask extends TimerTask {
+			@Override
+			public void run() {
+				Trace.beginSection("input");
+				if (imageIndex >= images.length) {
+					cancel(); // cancel the TimerTask
+					String message = "Done. Processed all " + imageIndex + " images.";
+					appendLog(message);
+					debugPrint(message);
+					return;
+				}
+				if (System.currentTimeMillis() - scheduledExecutionTime() > 1000 / FRAME_RATE) {
+					debugPrint("[saturation] Falling behind!");
+				}
+
+				Tensor tensor = TensorImageUtils.bitmapToFloat32Tensor(images[imageIndex],
+						TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB);
+				IValue imgData = IValue.from(tensor);
+				Trace.endSection(); // input
+
+				Trace.beginSection("inference");
+				IValue output = model.forward(imgData);
+				Trace.endSection();
+
+				Trace.beginSection("output");
+				if (!hasCompletedInferenceForImage) {
+					IValue[] outputTuple = output.toTuple();
+					assert outputTuple.length == 2;
+					Tensor classLogits = outputTuple[0].toTensor();
+					Tensor[] layers = outputTuple[1].toTensorList();
+					int[] layerInts = new int[layers.length];
+
+					for (int i = 0; i < layerInts.length; i++) {
+						Tensor t = layers[i];
+						assert Arrays.equals(t.shape(), new long[]{1});
+						float[] data = t.getDataAsFloatArray();
+						layerInts[i] = data[0] > 0.5 ? 1 : 0;
+					}
+					appendLog("New set of layers: " + Arrays.toString(layerInts));
+					hasCompletedInferenceForImage = true;
+				}
+				Trace.endSection(); // output
+			}
+		}
+
+		private class IncrementTask extends TimerTask {
+			@Override
+			public void run() {
+				imageIndex++;
+				hasCompletedInferenceForImage = false;
+				debugPrint("New imageIndex: " + imageIndex);
+			}
+		}
+
+		public PytorchWorkload() {
+			model = LiteModuleLoader.load(MODEL_FILE_NAME);
+			loadImages();
+			start();
+		}
+
+		public void onBatteryLevelUpdate(int level) {
+			if (initialBatteryLevel == -1) {
+				initialBatteryLevel = level;
+			} else if (initialBatteryLevel - level >= BATTERY_LEVEL_DROP_COUNT) {
+				initialBatteryLevel = level;
+				timerThread.schedule(new IncrementTask(), 0);
+			}
+		}
+
+		private void loadImages() {
+			File dir = new File(IMAGE_FOLDER);
+			File[] imageNames = dir.listFiles();
+			int numImages = imageNames.length;
+			images = new Bitmap[numImages];
+			for (int i = 0; i < numImages; i++) {
+				Bitmap b = BitmapFactory.decodeFile(imageNames[i].getPath());
+				images[i] = ThumbnailUtils.extractThumbnail(b, IMAGE_SIZE, IMAGE_SIZE,
+						ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
+			}
+		}
+
+		private void start() {
+			// run inference
+			timerThread = new Timer("ScheduledInference");
+			timerThread.scheduleAtFixedRate(new InferenceTask(), 1000, 1000 / FRAME_RATE);
+		}
+	}
+
 	private class BatteryBroadcastReceiver extends BroadcastReceiver {
 		private final static String BATTERY_LEVEL = "level";
 
@@ -1320,6 +1436,8 @@ public class MainActivity extends Activity{
 //		new Thread(pingWorker5).start();
 //		new Thread(pingWorker6).start();
 
+		final PytorchWorkload pytorchWorkload = new PytorchWorkload();
+
 		BroadcastReceiver batteryReceiver = new BroadcastReceiver() {
 			int scale = -1;
 			int level = -1;
@@ -1332,6 +1450,7 @@ public class MainActivity extends Activity{
 				temp = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
 				voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, -1);
 				appendLog("[Test] BatteryManager: level is "+level+"/"+scale+", temp is "+temp+", voltage is "+voltage);
+				pytorchWorkload.onBatteryLevelUpdate(level);
 			}
 		};
 		IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);

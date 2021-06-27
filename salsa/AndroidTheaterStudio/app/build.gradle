@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 26
+    compileSdkVersion 30
     buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.example.androidtheater5"
-        minSdkVersion 9
-        targetSdkVersion 17
+        minSdkVersion 21
+        targetSdkVersion 30
     }
 
     buildTypes {
@@ -23,6 +23,8 @@ dependencies {
 
     implementation 'org.tensorflow:tensorflow-android:1.6.0'
     implementation 'com.google.guava:guava:15.0'
+    implementation 'org.pytorch:pytorch_android_lite:1.9.0'
+    implementation 'org.pytorch:pytorch_android_torchvision:1.9.0'
     compile files('libs/trap.jar')
     compile files('libs/heat.jar')
     compile files('libs/JJIL-J2SE.jar')
