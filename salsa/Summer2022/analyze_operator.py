@@ -1,34 +1,33 @@
 import re
 import sys
 import numpy as np
+import preprocess_logs as ppl
 
 fileName = str(sys.argv[1])
+train_file=str(sys.argv[2])
 
-print(fileName)
+print("raw file: "+fileName)
+
 #stringtoCheck = "detectInImage"
 stringtoCheck = "processLatestImage"
 initBat = 1.0
-if len(sys.argv) > 2:
-	stringtoCheck = str(sys.argv[2])
-
-if len(sys.argv) > 3:
-	initBat = float(sys.argv[3])
 
 myList= []
 myTots = []
 dataVal = []
-
+operator_durations={}
 
 def processList(bat):
 	if len(myList) == 0:
-		dataVal.append((bat,-1.0,-1.0, -1.0, -1.0))
+		dataVal.append((bat,-1.0,-1.0,-1.0, -1.0, -1.0))
 		#return
 	else:
 		avg = np.mean(myList)
 		mstd = np.std(myList)
 		mymax = max(myList)
 		mymin = min(myList)
-		dataVal.append((bat,avg,mstd, mymin,mymax))
+		mysum = sum(myList)
+		dataVal.append((bat,mysum,avg,mstd, mymin,mymax))
 	myList.clear()
 
 
@@ -73,4 +72,14 @@ totstd = np.std(myTots)
 print("Total data avg :"+str(totavg)+",std :"+str(totstd) +",min :"+ str (min(myTots)) + ",max :"+ str ( max(myTots)))
 
 for val in dataVal:
-	print("bat :" + str(val[0])+ ",mean :"+str(val[1])+ ",std :"+str(val[2])+",min :"+str(val[3])+",max :"+str(val[4]))
+	operator_durations[val[0]]=val[1]
+	print("bat :" + str(val[0])+ ",sum :"+str(val[1])+ ",mean :"+str(val[2])+",std :"+str(val[3])+",min :"+str(val[4])+", max:"+str(val[5]))
+
+interval_durs=ppl.extract_battery_interval_durations(fileName)
+print(interval_durs)
+
+# open training file in append mode
+with open(train_file,"a") as train_fp:
+	for key in interval_durs:
+		print("bat:" + str(key)+", interval duration:" + str(interval_durs[key])+", operator_duration:"+str(operator_durations[key]))
+		train_fp.write(str(key)+","+str(interval_durs[key])+","+str(operator_durations[key])+"\n")
