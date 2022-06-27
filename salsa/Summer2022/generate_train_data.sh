@@ -10,7 +10,7 @@ arg_c=1
 num_inputs=$#
 
 for filename in "$raw_data_dir"/*; do
-	python3 analyze_operator.py $filename $train_file
+	python3 analyze_operator.py $filename $train_file True True
 done 
 
 #for var in "$@"

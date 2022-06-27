@@ -6,6 +6,7 @@ from sklearn.preprocessing import StandardScaler
 # from pygam import LinearGAM
 import numpy as np
 import sys
+from scipy.stats import pearsonr
 
 if len(sys.argv) != 3:
 	print("Arguments: training input file name, x_label_index")
@@ -22,6 +23,7 @@ for line in file_ptr:
 	x.append(line.split(',')[:x_end_index])
 	y.append(line.split(',')[label_index].strip('"'))
 
+print(x)
 X_digits = np.array(x)
 print(X_digits)
 X_digits = np.nan_to_num(np.array(X_digits,dtype=np.float32))
@@ -33,9 +35,9 @@ Y_digits = np.nan_to_num(np.array(Y_digits,dtype=np.float32))
 # loo = LeaveOneOut(len(Y_digits))
 #print(workload_data)
 
-#regr = linear_model.LinearRegression()
+regr = linear_model.LinearRegression()
 #regr = linear_model.Lasso(alpha=0.1)
-regr = linear_model.Lasso(alpha=0.5)
+#regr = linear_model.Lasso(alpha=0.5)
 # lasso = linear_model.RANSACRegressor()
 
 #kf = KFold(n_splits=8,shuffle=False)
@@ -64,6 +66,9 @@ scores = cross_val_score(regr, X_digits, Y_digits, scoring='neg_mean_squared_err
 # This will print the mean of the list of errors that were output and 
 # provide your metric for evaluation
 regr_fit = regr.fit(X_digits, Y_digits)
+print(X_digits)
+print(Y_digits)
+
 print regr_fit.coef_
 print regr_fit.intercept_
 print "Scores:"
